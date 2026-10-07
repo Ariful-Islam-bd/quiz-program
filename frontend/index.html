@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>কুইজ প্রোগ্রাম</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/dark-mode.css" />
+    <link rel="stylesheet" href="css/welcome.css" />
+    <link rel="stylesheet" href="css/academia.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/auth.css" /> <!-- ✅ নতুন -->
+
+    <link rel="stylesheet" href="katex/katex.min.css" />
+    <script defer src="katex/katex.min.js"></script>
+    <script defer src="katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+    <header id="mainHeader" class="main-header" style="display: none;">
+        <div class="header-content">
+            <button id="menuToggle" class="menu-btn" aria-label="মেনু">
+                <span class="hamburger-icon">☰</span>
+            </button>
+
+            <div class="header-center">
+                <div id="scoreBoard">স্কোর: <strong>0</strong>/<span id="totalMarks">0</span></div>
+                <div id="timerBlock">⏱️ <strong id="time">00:00</strong></div>
+                <div id="metaInfo">প্রশ্ন: <strong id="currentQ">0</strong>/<span id="totalQ">0</span></div>
+            </div>
+
+            <div id="userAvatar" class="avatar-btn" title="প্রোফাইল">
+                <span id="avatarInitials" class="avatar-initials">A</span>
+                <img id="avatarImg" src="" alt="" style="display:none"/>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress" id="progressBar" style="width: 0%;"></div>
+        </div>
+    </header>
+
+    <!-- ✅ অথেন্টিকেশন মডাল -->
+    <div id="authModal" class="auth-modal-overlay" style="display: none;">
+        <div class="auth-modal-content" id="authModalContent">
+            <!-- ডায়নামিক কন্টেন্ট এখানে লোড হবে -->
+        </div>
+    </div>
+
+    <!-- ✅ সাইড মেনু -->
+    <nav id="sideMenu" class="side-menu" aria-hidden="true">
+        <div class="menu-header">
+            <h3>📋 মেনু</h3>
+            <button id="menuClose" class="close-btn">✕</button>
+        </div>
+        <div class="menu-content">
+            <div class="menu-item" id="menuHome">
+                <span class="menu-icon">🏠</span>
+                <span>হোম</span>
+            </div>
+
+            <!-- ✅ অথেন্টিকেশন মেনু আইটেম -->
+            <div class="menu-item" id="menuAuth">
+                <span class="menu-icon" id="authMenuIcon">🔐</span>
+                <span id="authMenuLabel">লগইন করুন</span>
+            </div>
+
+            <div class="menu-item" id="menuDarkToggleItem">
+                <span class="menu-icon">🌓</span>
+                <span>ডার্ক মোড</span>
+                <label class="toggle-switch" style="margin-left: auto;">
+                    <input type="checkbox" id="menuDarkToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="menu-item" id="menuSettings">
+                <span class="menu-icon">⚙️</span>
+                <span>সেটিংস</span>
+            </div>
+
+            <div id="settingsBlock" class="settings-block" style="display: none;">
+                <div class="setting-group">
+                    <div class="setting-header">
+                        <span class="setting-icon">⏱️</span>
+                        <span class="setting-label">প্রতি প্রশ্নের সময়</span>
+                    </div>
+                    <div class="time-display">
+                        <span class="time-number" id="sliderVal">60</span>
+                        <span class="time-unit">সেকেন্ড</span>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="timeSlider" min="10" max="90" step="5" value="60">
+                    </div>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-time="30">৩০সে</button>
+                        <button class="preset-btn active" data-time="60">৬০সে</button>
+                        <button class="preset-btn" data-time="90">৯০সে</button>
+                    </div>
+                </div>
+
+                <div class="setting-divider"></div>
+
+                <div class="setting-group toggle-group">
+                    <div class="toggle-row">
+                        <div class="toggle-left">
+                            <span class="toggle-icon">⏳</span>
+                            <div>
+                                <div class="toggle-title">ফুল কুইজ টাইমার</div>
+                                <div class="toggle-desc">পুরো কুইজের জন্য মোট সময়</div>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="fullTimerCheckbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-divider"></div>
+
+                <div class="setting-group toggle-group">
+                    <div class="setting-header" style="margin-bottom: 12px;">
+                        <span class="setting-icon">🔔</span>
+                        <span class="setting-label">নোটিফিকেশন সেটিংস</span>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-left">
+                            <span class="toggle-icon">💬</span>
+                            <div>
+                                <div class="toggle-title">টোস্ট নোটিফিকেশন</div>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="toastToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-left">
+                            <span class="toggle-icon">🔊</span>
+                            <div>
+                                <div class="toggle-title">সাউন্ড নোটিফিকেশন</div>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="soundToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="toggle-row">
+                        <div class="toggle-left">
+                            <span class="toggle-icon">📳</span>
+                            <div>
+                                <div class="toggle-title">ভাইব্রেশন</div>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="vibrationToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="menuKeys">
+                <span class="menu-icon">⌨️</span>
+                <span>কী-বাইন্ডস ও হেল্প</span>
+            </div>
+            <div class="menu-item" id="menuFAQ">
+                <span class="menu-icon">❓</span>
+                <span>FAQ</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ প্রোফাইল বক্স -->
+    <div id="profileBox" class="profile-box" aria-hidden="true">
+        <div class="profile-header">
+            <div class="user-info">
+                <div class="user-name" id="topUserName">অতিথি</div>
+                <div class="user-org" id="topUserOrg">প্রতিষ্ঠান</div>
+            </div>
+            <button id="profileCloseBtn" class="close-btn" title="বন্ধ করুন">✕</button>
+        </div>
+        <div class="profile-content">
+            <div class="avatar-section">
+                <div class="avatar-large" id="profileAvatarPreview">
+                    <div class="avatar-placeholder"></div>
+                </div>
+            </div>
+
+            <div class="profile-info-display">
+                <div class="info-row">
+                    <span class="info-label">👤 নাম</span>
+                    <span class="info-value" id="profileBoxNameDisplay">অতিথি</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📧 ইমেইল</span>
+                    <span class="info-value" id="profileBoxEmailDisplay">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">🏫 প্রতিষ্ঠান</span>
+                    <span class="info-value" id="profileBoxOrgDisplay">প্রতিষ্ঠান</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📚 শ্রেণি</span>
+                    <span class="info-value" id="profileBoxClassDisplay">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📂 বিভাগ</span>
+                    <span class="info-value" id="profileBoxSectionDisplay">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📋 বোর্ড</span>
+                    <span class="info-value" id="profileBoxBoardDisplay">—</span>
+                </div>
+            </div>
+            
+            <div class="profile-progress">
+                <div class="progress-label">
+                    <span>📈 প্রগ্রেস:</span>
+                    <strong id="profileProgressPct">0%</strong>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress" id="profileProgressBar"></div>
+                </div>
+                <div class="progress-stats" id="profileProgressText">
+                    ০/০ — ১০০% করা হয়েছে: <span id="profileTimesHundred">0</span> বার
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ কনফার্মেশন মডাল -->
+    <div id="confirmOverlay" class="modal-overlay" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <h3 id="confirmTitle" class="modal-title">নিশ্চিতকরণ</h3>
+            <p id="confirmMessage" class="modal-message"></p>
+            <div class="modal-actions">
+                <button id="confirmCancel" class="btn btn-secondary">বাতিল</button>
+                <button id="confirmOk" class="btn btn-primary">ঠিক আছে</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ মেইন অ্যাপ কন্টেন্ট -->
+    <main id="appContent">
+        <!-- ✅ ওয়েলকাম পেজ -->
+        <section id="welcomePage" class="page active welcome-page">
+            <div class="welcome-container">
+                <div class="welcome-header">
+                    <div class="welcome-user-info">
+                        <div class="welcome-avatar-wrapper" id="welcomeAvatarWrapper">
+                            <img id="welcomeUserAvatar" src="" alt="Avatar" style="display:none">
+                            <span id="welcomeAvatarInitials" class="welcome-avatar-initials">A</span>
+                        </div>
+                        <div class="welcome-user-text">
+                            <h1>👋 স্বাগতম, <span id="welcomeUserName">অতিথি</span>!</h1>
+                            <p id="welcomeUserOrg">আপনার শিক্ষা যাত্রাকে আরও মজাদার করুন</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="welcome-grid">
+                    <div class="welcome-card" data-page="academia">
+                        <span class="card-icon">📖</span>
+                        <h2>Academia</h2>
+                        <p>শ্রেণি ও বিষয়ভিত্তিক শিক্ষামূলক কন্টেন্ট</p>
+                        <button class="btn btn-primary">এক্সপ্লোর করুন</button>
+                    </div>
+                    <div class="welcome-card" data-page="quiz">
+                        <span class="card-icon">🧠</span>
+                        <h2>Quiz</h2>
+                        <p>ইন্টারেক্টিভ কুইজ ও মক টেস্ট</p>
+                        <button class="btn btn-success">কুইজ শুরু করুন</button>
+                    </div>
+                    <div class="welcome-card" data-page="profile">
+                        <span class="card-icon">👤</span>
+                        <h2>My Profile</h2>
+                        <p>আপনার অগ্রগতি ও প্রোফাইল দেখুন</p>
+                        <button class="btn btn-secondary">প্রোফাইল দেখুন</button>
+                    </div>
+                </div>
+
+                <div class="welcome-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalQuizzes">0</span>
+                        <span class="stat-label">মোট কুইজ</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="avgScore">0%</span>
+                        <span class="stat-label">গড় স্কোর</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalQuestions">0</span>
+                        <span class="stat-label">প্রশ্ন সমাধান</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ✅ একাডেমিয়া পেজ -->
+        <section id="academiaPage" class="page" style="display: none;">
+            <div id="academiaContent"></div>
+        </section>
+
+        <!-- ✅ প্রোফাইল পেজ -->
+        <section id="profilePageWrapper" class="page" style="display: none;">
+            <div class="profile-header-section">
+                <div class="profile-top-bar">
+                    <button id="profileHomeBtn" class="home-btn" title="হোমে ফিরে যান">
+                        <span class="home-icon">🏠</span>
+                        হোম
+                    </button>
+                    <button id="profileCloseBtn" class="close-btn" title="বন্ধ করুন" style="display: none;">
+                        ✕
+                    </button>
+                </div>
+                <div class="profile-cover" id="profileCover">
+                    <div class="cover-overlay"></div>
+                    <div class="cover-actions">
+                        <button class="cover-btn" id="changeCoverBtn" title="কভার পরিবর্তন করুন">
+                            <span class="btn-icon">📷</span>
+                            <span class="btn-text">কভার পরিবর্তন</span>
+                        </button>
+                        <button class="cover-btn danger" id="removeCoverBtn" title="কভার রিমুভ করুন" style="display: none;">
+                            <span class="btn-icon">🗑️</span>
+                            <span class="btn-text">রিমুভ</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar-wrapper" id="profileAvatarWrapper">
+                        <img id="profileAvatarImg" src="" alt="Avatar" style="display: none;">
+                        <span id="profileAvatarInitials" class="profile-avatar-initials">A</span>
+                        <div class="avatar-edit-badge" id="profileAvatarEditBtn">
+                            <span>✏️</span>
+                        </div>
+                    </div>
+                    <div class="profile-name-title">
+                        <h1 id="profileDisplayName">অতিথি</h1>
+                        <p id="profileDisplayOrg">প্রতিষ্ঠান</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content-area">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="info">📋 তথ্য</button>
+                    <button class="tab-btn" data-tab="stats">📊 পরিসংখ্যান</button>
+                    <button class="tab-btn" data-tab="activity">📜 কার্যকলাপ</button>
+                    <button class="tab-btn" data-tab="avatar">🖼️ অ্যাভাটার</button>
+                    <button class="tab-btn" data-tab="security">🔒 সিকিউরিটি</button>
+                </div>
+
+<!-- ============================================ -->
+<!-- ✅ ট্যাব ১: তথ্য (ডিফল্ট ওপেন) -->
+<!-- ============================================ -->
+<div class="tab-content active" id="tab-info">
+    <!-- ✅ মোড ইন্ডিকেটর -->
+    <div class="profile-mode-indicator readonly" id="profileModeIndicator">
+        <span class="mode-icon">🔒</span>
+        <span class="mode-text" id="modeText">রিড-অনলি মোড</span>
+        <span class="mode-badge readonly" id="modeBadge">দেখার জন্য</span>
+    </div>
+
+    <div class="profile-form readonly" id="profileForm">
+        
+        <!-- ========================================================== -->
+        <!-- ১. ব্যক্তিগত তথ্য -->
+        <!-- ========================================================== -->
+        <div class="profile-section">
+            <h4 class="section-title">
+                <span class="section-icon">📋</span>
+                ব্যক্তিগত তথ্য
+            </h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileFullName">👤 পূর্ণ নাম <span class="required">*</span></label>
+                    <input type="text" id="profileFullName" class="form-control" 
+                           placeholder="আপনার পূর্ণ নাম" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileDob">🎂 জন্ম তারিখ</label>
+                    <input type="date" id="profileDob" class="form-control" 
+                           readonly disabled />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileGender">⚥ লিঙ্গ</label>
+                    <select id="profileGender" class="form-control" disabled>
+                        <option value="">নির্বাচন করুন</option>
+                        <option value="male">পুরুষ</option>
+                        <option value="female">নারী</option>
+                        <option value="other">অন্যান্য</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="profileNationality">🌍 জাতীয়তা</label>
+                    <input type="text" id="profileNationality" class="form-control" 
+                           placeholder="জাতীয়তা" readonly disabled />
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ২. যোগাযোগের তথ্য -->
+        <!-- ========================================================== -->
+        <div class="profile-section">
+            <h4 class="section-title">
+                <span class="section-icon">📞</span>
+                যোগাযোগের তথ্য
+            </h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profilePhone">📱 মোবাইল</label>
+                    <input type="tel" id="profilePhone" class="form-control" 
+                        placeholder="+880 1712 345678" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileAltEmail">📧 বিকল্প ইমেইল</label>
+                    <input type="email" id="profileAltEmail" class="form-control" 
+                        placeholder="বিকল্প ইমেইল" readonly disabled />
+                    <div class="alt-email-status" id="altEmailStatus">
+                        <span class="status-badge status-unverified" id="altEmailBadge">⏳ ভেরিফাই হয়নি</span>
+                        <button class="btn btn-sm btn-primary" id="verifyAltEmailBtn" style="display: none;">
+                            📧 ভেরিফাই করুন
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileAddress">🏠 ঠিকানা</label>
+                    <input type="text" id="profileAddress" class="form-control" 
+                        placeholder="ঠিকানা" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileDistrict">📍 জেলা</label>
+                    <select id="profileDistrict" class="form-control" disabled>
+                        <option value="">নির্বাচন করুন</option>
+                        <!-- জেলালিস্ট JS দ্বারা পপুলেট হবে -->
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ৩. শিক্ষাগত তথ্য -->
+        <!-- ========================================================== -->
+        <div class="profile-section">
+            <h4 class="section-title">
+                <span class="section-icon">🎓</span>
+                শিক্ষাগত তথ্য
+            </h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileOrg">🏫 প্রতিষ্ঠান</label>
+                    <input type="text" id="profileOrg" class="form-control" 
+                           placeholder="প্রতিষ্ঠানের নাম" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileClass">📚 শ্রেণি/বিভাগ</label>
+                    <input type="text" id="profileClass" class="form-control" 
+                           placeholder="শ্রেণি/বিভাগ" readonly disabled />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileSection">📋 সেকশন</label>
+                    <input type="text" id="profileSection" class="form-control" 
+                           placeholder="সেকশন" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileBoard">📖 বোর্ড</label>
+                    <input type="text" id="profileBoard" class="form-control" 
+                           placeholder="বোর্ড" readonly disabled />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileEducationYear">📅 শিক্ষাবর্ষ</label>
+                    <input type="text" id="profileEducationYear" class="form-control" 
+                           placeholder="২০২৪-২০২৫" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileRollNumber">🔢 রোল নম্বর</label>
+                    <input type="text" id="profileRollNumber" class="form-control" 
+                           placeholder="রোল নম্বর" readonly disabled />
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ৪. সামাজিক যোগাযোগ -->
+        <!-- ========================================================== -->
+        <div class="profile-section">
+            <h4 class="section-title">
+                <span class="section-icon">🔗</span>
+                সামাজিক যোগাযোগ
+            </h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileFacebook">📘 Facebook</label>
+                    <input type="url" id="profileFacebook" class="form-control" 
+                           placeholder="https://facebook.com/username" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileLinkedin">🔗 LinkedIn</label>
+                    <input type="url" id="profileLinkedin" class="form-control" 
+                           placeholder="https://linkedin.com/in/username" readonly disabled />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileGithub">💻 GitHub</label>
+                    <input type="url" id="profileGithub" class="form-control" 
+                           placeholder="https://github.com/username" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profileYoutube">🎥 YouTube</label>
+                    <input type="url" id="profileYoutube" class="form-control" 
+                           placeholder="https://youtube.com/@channel" readonly disabled />
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ৫. পছন্দ/আগ্রহ -->
+        <!-- ========================================================== -->
+        <div class="profile-section">
+            <h4 class="section-title">
+                <span class="section-icon">⚙️</span>
+                পছন্দ/আগ্রহ
+            </h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileFavoriteSubjects">📖 পছন্দের বিষয়</label>
+                    <input type="text" id="profileFavoriteSubjects" class="form-control" 
+                           placeholder="গণিত, বিজ্ঞান, প্রোগ্রামিং" readonly disabled />
+                </div>
+                <div class="form-group">
+                    <label for="profilePreferredLanguage">🌐 পছন্দের ভাষা</label>
+                    <select id="profilePreferredLanguage" class="form-control" disabled>
+                        <option value="bn">বাংলা</option>
+                        <option value="en">ইংরেজি</option>
+                        <option value="both">উভয়</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profileQuizType">🧠 কুইজের ধরন</label>
+                    <select id="profileQuizType" class="form-control" disabled>
+                        <option value="all">সব</option>
+                        <option value="mcq">MCQ</option>
+                        <option value="blank">ব্লাঙ্ক</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="profileStudyGoal">🎯 অধ্যয়নের উদ্দেশ্য</label>
+                    <input type="text" id="profileStudyGoal" class="form-control" 
+                           placeholder="SSC/HSC/ভর্তি/চাকরি" readonly disabled />
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ✅ অ্যাকশন বাটনসমূহ -->
+        <!-- ========================================================== -->
+        <div class="profile-actions">
+            <button type="button" class="btn btn-primary" id="profileEditBtn">
+                ✏️ এডিট করুন
+            </button>
+            <button type="button" class="btn btn-success" id="profileSaveBtn" 
+                    style="display: none;">
+                💾 প্রোফাইল সংরক্ষণ করুন
+            </button>
+            <button type="button" class="btn btn-secondary" id="profileCancelBtn" 
+                    style="display: none;">
+                ✖️ বাতিল
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ✅ ট্যাব ২: পরিসংখ্যান -->
+<!-- ============================================ -->
+<div class="tab-content" id="tab-stats">
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-number" id="statTotalQuizzes">0</div>
+            <div class="stat-label">মোট কুইজ</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-number" id="statAvgScore">0%</div>
+            <div class="stat-label">গড় স্কোর</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-number" id="statCorrect">0</div>
+            <div class="stat-label">সঠিক উত্তর</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">❌</div>
+            <div class="stat-number" id="statWrong">0</div>
+            <div class="stat-label">ভুল উত্তর</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⏭️</div>
+            <div class="stat-number" id="statSkipped">0</div>
+            <div class="stat-label">স্কিপ</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number" id="statHundredCount">0</div>
+            <div class="stat-label">১০০% করা হয়েছে</div>
+        </div>
+    </div>
+    
+    <div class="profile-progress-section">
+        <div class="progress-label">
+            <span>📈 সামগ্রিক অগ্রগতি</span>
+            <strong id="profileProgressPct">0%</strong>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress" id="profileProgressBar" style="width: 0%;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ✅ ট্যাব ৩: কার্যকলাপ -->
+<!-- ============================================ -->
+<div class="tab-content" id="tab-activity">
+    <div class="activity-list" id="activityList">
+        <p class="empty-activity">📭 এখনও কোনো কার্যকলাপ নেই</p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ✅ ট্যাব ৪: অ্যাভাটার -->
+<!-- ============================================ -->
+<div class="tab-content" id="tab-avatar">
+    <div class="avatar-management">
+        <div class="avatar-preview-large">
+            <div class="avatar-large-wrapper" id="avatarLargePreview">
+                <img id="avatarLargeImg" src="" alt="Avatar" style="display: none;">
+                <span id="avatarLargeInitials" class="avatar-large-initials">A</span>
+            </div>
+        </div>
+        
+        <div class="avatar-actions-grid">
+            <button id="uploadAvatarBtn" class="btn btn-primary">
+                📤 ছবি আপলোড করুন
+            </button>
+            <button id="cropAvatarBtn" class="btn btn-secondary" disabled>
+                ✂️ ক্রপ করুন
+            </button>
+            <button id="resetAvatarBtn" class="btn btn-danger">
+                🔄 ডিফল্ট অ্যাভাটার
+            </button>
+        </div>
+
+        <div class="emoji-gallery">
+            <h4>ইমোজি অ্যাভাটার</h4>
+            <div class="emoji-grid" id="emojiGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ✅ ট্যাব ৫: সিকিউরিটি (পাসওয়ার্ড ব্যবস্থাপনা) -->
+<!-- ============================================ -->
+<div class="tab-content" id="tab-security">
+    <div class="security-section">
+        <!-- ✅ পাসওয়ার্ড ব্যবস্থাপনা -->
+        <div class="password-management-section">
+            <h4 class="section-title">
+                <span class="section-icon">🔒</span>
+                পাসওয়ার্ড ব্যবস্থাপনা
+            </h4>
+            
+            <!-- ✅ ✅ ✅ ফর্ম যোগ করা হয়েছে ✅ ✅ ✅ -->
+            <form id="passwordChangeForm" class="password-change-form" autocomplete="on">
+                <input type="email" id="passwordChangeUsername" name="username" autocomplete="username" tabindex="-1" aria-hidden="true" readonly style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;"/>
+                <div class="form-group">
+                    <label for="currentPassword">🔐 বর্তমান পাসওয়ার্ড <span class="required">*</span></label>
+                    <div class="input-wrapper password-input-wrapper">
+                        <span class="input-icon">🔐</span>
+                        <input type="password" id="currentPassword" class="form-control" placeholder="বর্তমান পাসওয়ার্ড লিখুন" autocomplete="current-password" required />
+                        <button type="button" class="toggle-password-btn" data-target="currentPassword">👁️</button>
+                    </div>
+                    <div class="error-text" id="currentPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="newPassword">🔑 নতুন পাসওয়ার্ড <span class="required">*</span></label>
+                    <div class="input-wrapper password-input-wrapper">
+                        <span class="input-icon">🔑</span>
+                        <input 
+                            type="password" 
+                            id="newPassword" 
+                            class="form-control" 
+                            placeholder="নতুন পাসওয়ার্ড লিখুন (৬+ অক্ষর)"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        />
+                        <button type="button" class="toggle-password-btn" data-target="newPassword">
+                            👁️
+                        </button>
+                    </div>
+                    <!-- Password Strength Meter -->
+                    <div class="password-strength-meter">
+                        <div class="strength-bar-container">
+                            <div class="strength-bar" id="newPasswordStrength"></div>
+                        </div>
+                        <div class="strength-text" id="newPasswordStrengthText"></div>
+                    </div>
+                    <div class="error-text" id="newPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">✅ পাসওয়ার্ড নিশ্চিত করুন <span class="required">*</span></label>
+                    <div class="input-wrapper password-input-wrapper">
+                        <span class="input-icon">✅</span>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            class="form-control" 
+                            placeholder="আবার নতুন পাসওয়ার্ড লিখুন"
+                            autocomplete="new-password"
+                            required
+                        />
+                        <button type="button" class="toggle-password-btn" data-target="confirmPassword">
+                            👁️
+                        </button>
+                    </div>
+                    <div class="error-text" id="confirmPasswordError"></div>
+                </div>
+
+                <div class="password-actions">
+                    <button type="submit" class="btn btn-primary" id="changePasswordBtn">
+                        🔄 পাসওয়ার্ড পরিবর্তন করুন
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="forgotPasswordBtn">
+                        🔑 পাসওয়ার্ড ভুলে গেছেন?
+                    </button>
+                </div>
+
+                <!-- Response Message -->
+                <div id="passwordChangeMessage" class="password-message hidden"></div>
+            </form>
+            <!-- ✅ ✅ ✅ ফর্ম শেষ ✅ ✅ ✅ -->
+        </div>
+
+        <!-- ✅ সেশন ম্যানেজমেন্ট -->
+        <div class="session-management-section">
+            <h4 class="section-title">
+                <span class="section-icon">🕐</span>
+                সেশন ব্যবস্থাপনা
+            </h4>
+            <div class="session-info" id="sessionInfo">
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    📱 বর্তমানে <strong style="color: var(--text);">১টি</strong> ডিভাইসে লগইন করা আছেন
+                </p>
+                <button type="button" class="btn btn-danger" id="logoutAllBtn" style="margin-top: 10px;">
+                    🚪 সব ডিভাইস থেকে লগআউট করুন
+                </button>
+                <div id="sessionMessage" class="password-message hidden"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ✅ ক্রপ মডাল -->
+            <div id="cropModal" class="modal-overlay" style="display: none;">
+                <div class="modal-content crop-modal">
+                    <div class="modal-header">
+                        <h3>✂️ অ্যাভাটার ক্রপ করুন</h3>
+                        <button id="cropModalClose" class="close-btn" title="বন্ধ করুন">✕</button>
+                    </div>
+                    
+                    <div class="crop-container">
+                        <div class="crop-viewport-wrapper" id="cropViewport">
+                            <div class="crop-image-container">
+                                <img id="cropImage" src="" alt="Crop Image">
+                            </div>
+                            <div class="crop-overlay-mask shape-circle" id="cropOverlayMask"></div>
+                        </div>
+                        
+                        <div class="crop-preview-section">
+                            <div class="crop-preview-label">
+                                <span>📸 প্রিভিউ</span>
+                                <span class="preview-size" id="previewSize">400x400</span>
+                            </div>
+                            <div class="crop-preview-wrapper">
+                                <div class="crop-preview-circle" id="cropPreview">
+                                    <div class="preview-placeholder">⭕</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="crop-controls">
+                        <div class="crop-slider-group">
+                            <label>🔍 জুম</label>
+                            <input type="range" id="cropZoom" min="0.3" max="3.0" step="0.05" value="1.0">
+                            <span id="cropZoomVal">100%</span>
+                        </div>
+                        
+                        <div class="crop-slider-group">
+                            <label>🔄 রোটেশন</label>
+                            <input type="range" id="cropRotate" min="0" max="360" step="1" value="0">
+                            <span id="cropRotateVal">0°</span>
+                        </div>
+                        
+                        <div class="crop-shape-group">
+                            <button class="shape-btn active" data-shape="circle">⭕ বৃত্ত</button>
+                            <button class="shape-btn" data-shape="square">⬜ বর্গ</button>
+                            <button class="shape-btn" data-shape="rounded">🔲 গোলাকার</button>
+                        </div>
+                        
+                        <div class="crop-actions">
+                            <button id="cropReset" class="btn btn-secondary">🔄 রিসেট</button>
+                            <button id="cropUndo" class="btn btn-secondary" disabled>↩️ আন্ডো</button>
+                            <button id="cropRedo" class="btn btn-secondary" disabled>↪️ রিডু</button>
+                        </div>
+                        
+                        <div class="crop-filter-group">
+                            <button class="filter-btn active" data-filter="none">⚪ আসল</button>
+                            <button class="filter-btn" data-filter="grayscale">⚫ গ্রেস্কেল</button>
+                            <button class="filter-btn" data-filter="sepia">🟫 সেপিয়া</button>
+                            <button class="filter-btn" data-filter="bright">☀️ ব্রাইট</button>
+                            <button class="filter-btn" data-filter="vintage">📜 ভিনটেজ</button>
+                            <button class="filter-btn" data-filter="blur">🌫️ ব্লার</button>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button id="cropCancel" class="btn btn-secondary">বাতিল</button>
+                        <button id="cropSave" class="btn btn-primary">✅ সেভ করুন</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="live-avatar-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="liveAvatarToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span>✨ লাইভ অ্যাভাটার</span>
+            </div>
+
+            <input type="file" id="hiddenCoverInput" accept="image/*" style="display: none;">
+            <input type="file" id="hiddenFileInput" accept="image/*" style="display: none;">
+        </section>
+
+        <!-- ✅ কুইজ ফিল্টার পেজ -->
+        <section id="quizFilter" class="quiz-filter-page" style="display: none;">
+            <div class="filter-content">
+                <h1>কুইজ ফিল্টার</h1>
+                <p>অনুশীলন শুরু করতে নিচের অপশনগুলো থেকে নির্বাচন করুন:</p>
+                <div class="filter-section">
+                    <select id="boardSelect" class="filter-select">
+                        <option value="all">-- বোর্ড/লেভেল নির্বাচন করুন --</option>
+                    </select>
+                    <select id="classSelect" class="filter-select" disabled>
+                        <option value="all">-- শ্রেণি নির্বাচন করুন --</option>
+                    </select>
+                    <select id="subjectSelect" class="filter-select" disabled>
+                        <option value="all">-- বিষয় নির্বাচন করুন --</option>
+                    </select>
+                    <select id="chapterSelect" class="filter-select" disabled>
+                        <option value="all">-- অধ্যায়/টপিক নির্বাচন করুন --</option>
+                    </select>
+                    <select id="exerciseSelect" class="filter-select" disabled>
+                        <option value="all">-- অনুশীলনী/সাব-টপিক নির্বাচন করুন --</option>
+                    </select>
+                </div>
+                <button id="startQuizBtn" class="btn btn-primary" disabled>কুইজ শুরু করুন</button>
+            </div>
+        </section>
+
+        <!-- ✅ কুইজ কন্টেইনার -->
+        <div class="app-wrapper" id="appWrap">
+            <div id="quiz-container" class="quiz-container" style="display: none;"></div>
+
+            <div class="controls" style="display: none;">
+                <div class="left-controls">
+                    <button id="quitBtn" class="btn btn-danger">কুইট</button>
+                    <button id="skipBtn" class="btn btn-primary">স্কিপ</button>
+                </div>
+                <div class="right-controls">
+                    <button id="nextBtn" class="btn btn-success" style="display: none;">পরবর্তী</button>
+                    <button id="restartBtn" class="btn btn-secondary">পুনঃ খেলুন</button>
+                </div>
+            </div>
+
+            <div id="quizResult" class="result-panel" style="display: none;">
+                <h2>কুইজ রেজাল্ট</h2>
+                <div class="result-stats">
+                    <div class="stat-row"><span class="stat-label">মোট প্রশ্ন:</span><span id="totalQuestionsResult" class="stat-value">0</span></div>
+                    <div class="stat-row"><span class="stat-label">মোট নম্বর:</span><span id="totalMarksResult" class="stat-value">0</span></div>
+                    <div class="stat-row"><span class="stat-label">প্রাপ্ত নম্বর:</span><span id="scoreObtainedResult" class="stat-value">0</span></div>
+                    <div class="stat-row"><span class="stat-label">চেষ্টা করেছেন:</span><span id="attemptedQuestionsResult" class="stat-value">0</span></div>
+                    <div class="stat-row"><span class="stat-label">সঠিক উত্তর:</span><span id="correctAnswersResult" class="stat-value correct">0</span></div>
+                    <div class="stat-row"><span class="stat-label">ভুল উত্তর:</span><span id="wrongAnswersResult" class="stat-value wrong">0</span></div>
+                    <div class="stat-row"><span class="stat-label">স্কিপ করেছেন:</span><span id="skippedQuestionsResult" class="stat-value">0</span></div>
+                    <div class="stat-row"><span class="stat-label">সময় শেষ:</span><span id="timedOutQuestionsResult" class="stat-value">0</span></div>
+                    <div class="stat-row highlight"><span class="stat-label">শতকরা নম্বর:</span><span id="percentageScoreResult" class="stat-value">0%</span></div>
+                </div>
+
+                <div class="result-actions">
+                    <div class="save-score-section">
+                        <input type="text" id="saveName" class="form-control" placeholder="তোমার নাম লিখে সেভ করতে পারো">
+                        <button id="saveScoreBtn" class="btn btn-primary">স্কোর সেভ</button>
+                    </div>
+                    <div class="leaderboard-section">
+                        <h3>লিডারবোর্ড (শীর্ষ ৫)</h3>
+                        <ol id="leaderboardList" class="leaderboard-list"></ol>
+                    </div>
+                    <div class="result-buttons">
+                        <button id="resultQuitBtn" class="btn btn-danger">কুইট</button>
+                        <button id="reviewBtn" class="btn btn-primary">রিভিউ</button>
+                        <button id="resultRestartBtn" class="btn btn-success">পুনঃ খেলুন</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="quizReview" class="review-panel" style="display: none;">
+                <h2>কুইজ রিভিউ</h2>
+                <div id="reviewContent" class="review-content"></div>
+                <div class="review-actions">
+                    <button id="reviewPageQuitBtn" class="btn btn-danger">কুইট</button>
+                    <button id="reviewPageResultBtn" class="btn btn-primary">রেজাল্ট</button>
+                    <button id="reviewPageRestartBtn" class="btn btn-success">পুনঃ খেলুন</button>
+                </div>
+            </div>
+
+            <div id="thanksGiving" class="thanks-panel" style="display: none;">
+                <div class="thanks-container">
+                    <div class="thanks-content">
+                        <div class="thanks-icon">🎉</div>
+                        <h2 class="thanks-title">কুইজ সম্পূর্ণ!</h2>
+                        <p class="thanks-message">আপনার অংশগ্রহণের জন্য ধন্যবাদ।</p>
+                        <div class="thanks-actions">
+                            <button id="thanksHomeBtn" class="btn btn-secondary">🏠 হোম</button>
+                            <button id="thanksNewQuizBtn" class="btn btn-primary">✨ নতুন কুইজ খেলুন</button>
+                            <button id="thanksRestartBtn" class="btn btn-success">🔄 পুনঃ খেলুন</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ✅ ফ্লোটিং বাটন -->
+    <div class="floating-buttons">
+        <button id="darkToggleFloat" class="floating-btn" title="ডার্ক/লাইট টগল">🌓</button>
+        <button id="helpBtn" class="floating-btn" title="কী-বাইন্ডস ও হেল্প">❔</button>
+    </div>
+
+    <!-- ✅ টোস্ট কন্টেইনার -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ✅ JavaScript -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

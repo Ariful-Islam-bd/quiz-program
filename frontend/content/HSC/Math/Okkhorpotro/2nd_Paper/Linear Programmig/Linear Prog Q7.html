@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSC Differ 9C</title>
+    
+    <link rel="stylesheet" href="../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../katex/katex.min.css" />
+    <script defer src="../../../katex/katex.min.js"></script>
+    <script defer src="../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (i) $A$ এবং $B$ দুই ধরনের খাদ্যে প্রতি কিলোতে প্রোটিন ও ফ্যাট নিম্নরূপ:
+    <table>
+      <thead>
+        <tr>
+          <th>খাদ্য</th>
+          <th>প্রোটিন</th>
+          <th>ফ্যাট</th>
+          <th>কিলো প্রতি মূল্য</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$A$</td>
+          <td>$1$</td>
+          <td>$3$</td>
+          <td>$2$ টাকা</td>
+        </tr>
+        <tr>
+          <td>$B$</td>
+          <td>$3$</td>
+          <td>$2$</td>
+          <td>$3$ টাকা</td>
+        </tr>
+        <tr>
+          <td>দৈনিক ন্যূনতম প্রয়োজন</td>
+          <td>$9$</td>
+          <td>$12$</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    সবচেয়ে কম খরচে দৈনিক খাদ্যের প্রয়োজন কিভাবে মেটানো যাবে তা নির্ণয় কর। সমস্যাটি যোগাশ্রয়ী প্রোগ্রাম সমস্যায় প্রকাশ করে লেখচিত্রের সাহায্যে এর সমাধান কর।
+  </div>
+  <div class="solution-title">সমাধান (৭-i):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক খাদ্যের প্রয়োজনে $A$ ধরনের খাদ্য কেনা হয় $x$ কেজি এবং $B$ ধরনের খাদ্য কেনা হয় $y$ কেজি। যেহেতু খাদ্যের পরিমাণ ঋণাত্মক হতে পারে না, তাই অবয়ব শর্ত:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের মূল উদ্দেশ্য হলো মোট খরচ সর্বনিম্ন করা। $A$ খাদ্যের প্রতি কেজির মূল্য ২ টাকা এবং $B$ খাদ্যের প্রতি কেজির মূল্য ৩ টাকা। সুতরাং, মোট খরচ বা অভিষ্ট ফাংশন (Objective Function) $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 2x + 3y$</div>
+
+  <div class="step-explain">এখন পুষ্টির চাহিদাসংক্রান্ত সীমাবদ্ধতার শর্তসমূহ বা অসমতাগুলো গঠন করি:</div>
+  <div class="step-explain">১. প্রোটিনের শর্ত (দৈনিক ন্যূনতম প্রয়োজন ৯ একক, অর্থাৎ ৯ বা তার বেশি হতে হবে):</div>
+  <div class="step">$1\cdot x + 3\cdot y \ge 9 \implies x + 3y \ge 9 \quad \text{--- (১)}$</div>
+
+  <div class="step-explain">২. ফ্যাটের শর্ত (দৈনিক ন্যূনতম প্রয়োজন ১২ একক, অর্থাৎ ১২ বা তার বেশি হতে হবে):</div>
+  <div class="step">$3\cdot x + 2\cdot y \ge 12 \implies 3x + 2y \ge 12 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে রেখাচিত্রের জন্য অক্ষদ্বয়ের ছেদবিন্দুসমূহ নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 9$</div>
+  <div class="step">বা, $\frac{x}{9} + \frac{3y}{9} = 1$ [উভয়পক্ষকে ৯ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{9} + \frac{y}{3} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(9, 0)$ এবং Y-অক্ষকে $B(0, 3)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$3x + 2y = 12$</div>
+  <div class="step">বা, $\frac{3x}{12} + \frac{2y}{12} = 1$ [উভয়পক্ষকে ১২ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{4} + \frac{y}{6} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(4, 0)$ এবং Y-অক্ষকে $D(0, 6)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয় করি:</div>
+  <div class="step-explain">(৩) নং সমীকরণকে ২ দ্বারা এবং (৪) নং সমীকরণকে ৩ দ্বারা গুণ করে বিয়োগ করি:</div>
+  <div class="step">$3\cdot\left(3x + 2y\right) - 2\cdot\left(x + 3y\right) = 3\cdot12 - 2\cdot9$</div>
+  <div class="step">বা, $9x + 6y - 2x - 6y = 36 - 18$</div>
+  <div class="step">বা, $7x = 18 \implies x = \frac{18}{7} \approx 2.57$ [৭ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$\frac{18}{7} + 3y = 9 \implies 3y = 9 - \frac{18}{7} \implies 3y = \frac{63 - 18}{7}$ [লসাগু করে]</div>
+  <div class="step">বা, $3y = \frac{45}{7} \implies y = \frac{15}{7} \approx 2.14$ [৩ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">সুতরাং, রেখা দুটির ছেদবিন্দু হলো $P\left(\frac{18}{7}, \frac{15}{7}\right)$ বা $P(2.57, 2.14)$।</div>
+
+  <div class="step-explain">যেহেতু উভয় অসমতাতেই '$\ge$' চিহ্ন রয়েছে, তাই অনুকূল এলাকাটি হবে মূলবিন্দুর বিপরীত বা বাইরের খোলা অংশ (Unbounded Region)। শর্তসমূহ বিশ্লেষণ করে প্রাপ্ত সম্ভাব্য সমাধান এলাকার কৌণিক বা প্রান্তিক বিন্দুসমূহ হলো: $A(9, 0)$, $P\left(\frac{18}{7}, \frac{15}{7}\right)$ এবং $D(0, 6)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="365" y1="350" x2="50" y2="245" stroke="red" stroke-width="2" />
+    <line x1="190" y1="350" x2="50" y2="140" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,20 50,140 140,275 365,350 480,350 480,20" fill="rgba(255, 165, 0, 0.15)" stroke="none" />
+
+    <circle cx="365" cy="350" r="4" fill="black" />
+    <circle cx="140" cy="275" r="4" fill="black" />
+    <circle cx="50" cy="140" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="355" y="335" font-size="10">A(9,0)</text>
+    <text x="145" y="270" font-size="10">P(2.57,2.14)</text>
+    <text x="55" y="135" font-size="10">D(0,6)</text>
+    <text x="280" y="260" font-size="11" fill="red">x+3y=9</text>
+    <text x="130" y="180" font-size="11" fill="blue">3x+2y=12</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 2x + 3y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $A(9, 0) \implies Z = 2\cdot9 + 3\cdot0 = 18$ টাকা</div>
+  <div class="step">বিন্দু $D(0, 6) \implies Z = 2\cdot0 + 3\cdot6 = 18$ টাকা</div>
+  <div class="step">বিন্দু $P\left(\frac{18}{7}, \frac{15}{7}\right) \implies Z = 2\cdot\left(\frac{18}{7}\right) + 3\cdot\left(\frac{15}{7}\right) = \frac{36}{7} + \frac{45}{7} = \frac{81}{7} \approx 11.57$ টাকা</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P\left(\frac{18}{7}, \frac{15}{7}\right)$ বিন্দুতে মোট খরচের পরিমাণ সর্বনিম্ন এবং তা হলো $11.57$ টাকা বা $11\frac{4}{7}$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সবচেয়ে কম খরচে দৈনিক পুষ্টির চাহিদা মেটাতে $A$ ধরনের খাদ্য $\frac{18}{7}$ কেজি (প্রায় $2.57$ কেজি) এবং $B$ ধরনের খাদ্য $\frac{15}{7}$ কেজি (প্রায় $2.14$ কেজি) মিশ্রিত করতে হবে। এতে সর্বনিম্ন খরচ হবে $11.57$ টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (ii) $F_1$ ও $F_2$ দুই ধরনের খাদ্যের প্রতি কিলোতে ভিটামিন $C$ ও $D$ পাওয়া যায় নিম্নরূপ:
+    <table>
+      <thead>
+        <tr>
+          <th>খাদ্য</th>
+          <th>ভিটামিন $C$</th>
+          <th>ভিটামিন $D$</th>
+          <th>কিলো প্রতি মূল্য</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$F_1$</td>
+          <td>$2$</td>
+          <td>$3$</td>
+          <td>$5$ টাকা</td>
+        </tr>
+        <tr>
+          <td>$F_2$</td>
+          <td>$5$</td>
+          <td>$6$</td>
+          <td>$3$ টাকা</td>
+        </tr>
+        <tr>
+          <td>দৈনিক ন্যূনতম প্রয়োজন</td>
+          <td>$50$</td>
+          <td>$60$</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    সবচেয়ে কম খরচে দৈনিক ভিটামিন $C$ ও $D$ এর চাহিদা কিভাবে মেটানো যাবে তা নির্ণয়ের জন্য একটি যোগাশ্রয়ী প্রোগ্রাম সমস্যা তৈরি কর এবং লেখচিত্রের সাহায্যে সমাধান কর।
+  </div>
+  <div class="solution-title">সমাধান (৭-ii):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক চাহিদা মেটানোর জন্য $F_1$ ধরনের খাদ্য কেনা হয় $x$ কেজি এবং $F_2$ ধরনের খাদ্য কেনা হয় $y$ কেজি। খাদ্যের পরিমাণ ঋণাত্মক হতে পারে না, তাই:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">উদ্দেশ্য হলো মোট খরচ সর্বনিম্ন করা। প্রতি কেজি $F_1$-এর মূল্য ৫ টাকা এবং $F_2$-এর মূল্য ৩ টাকা। সুতরাং, অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বнизীকরণ করতে হবে: $Z = 5x + 3y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ (ন্যূনতম প্রয়োজন অর্থাৎ '$\ge$' চিহ্ন যুক্ত হবে):</div>
+  <div class="step-explain">১. ভিটামিন $C$-এর শর্ত:</div>
+  <div class="step">$2x + 5y \ge 50 \quad \text{--- (১)}$</div>
+
+  <div class="step-explain">২. ভিটামিন $D$-এর শর্ত:</div>
+  <div class="step">$3x + 6y \ge 60$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৩ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 2y \ge 20 \quad \text{--- (২)}$ [৩ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">এখন অসমতাগুলোর অনুরূপ সমীকরণসমূহ এবং অক্ষদ্বয়ের ছেদবিন্দু নির্ণয় করি:</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + 5y = 50 \implies \frac{2x}{50} + \frac{5y}{50} = 1 \implies \frac{x}{25} + \frac{y}{10} = 1 \quad \text{--- (৩)}$</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(25, 0)$ এবং Y-অক্ষকে $B(0, 10)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 2y = 20 \implies \frac{x}{20} + \frac{2y}{20} = 1 \implies \frac{x}{20} + \frac{y}{10} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(20, 0)$ এবং Y-অক্ষকে $D(0, 10)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন সমীকরণদ্বয়ের পারস্পরিক সম্পর্ক ও ছেদবিন্দু বিশ্লেষণ করি:</div>
+  <div class="step-explain">দেখা যাচ্ছে যে, উভয় রেখাই Y-অক্ষকে $(0, 10)$ বিন্দুতে ছেদ করে। সুতরাং $B$ এবং $D$ আসলে একই বিন্দু, অর্থাৎ তাদের সাধারণ ছেদবিন্দু $B(0, 10)$।</div>
+  <div class="step-explain">তবুও নিশ্চিত হওয়ার জন্য বীজগাণিতিকভাবে সমাধান করি: (৪) নং সমীকরণকে ২ দ্বারা গুণ করে তা থেকে (৩) নং বিয়োগ করি:</div>
+  <div class="step">$2\cdot\left(x + 2y\right) - \left(2x + 5y\right) = 2\cdot20 - 50$</div>
+  <div class="step">বা, $2x + 4y - 2x - 5y = 40 - 50 \implies -y = -10 \implies y = 10$ [বিয়োগ করে]</div>
+  <div class="step-explain">$y$-এর মান (৪) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$x + 2\cdot10 = 20 \implies x + 20 = 20 \implies x = 0$ [মান বসিয়ে]</div>
+  <div class="step-explain">অতএব, রেখা দুটির ছেদবিন্দু হলো $B(0, 10)$।</div>
+
+  <div class="step-explain">যেহেতু শর্তগুলো '$\ge$' সম্বলিত, তাই সমাধান অঞ্চলটি হবে রেখাগুলোর উপরের দিকের উন্মুক্ত অংশ। এই অনুকূল অঞ্চলের কৌণিক প্রান্তবিন্দুসমূহ হলো: $A(25, 0)$ এবং $B(0, 10)$। [$C(20,0)$ বিন্দুটি সমাধান অঞ্চলের ভেতরে পড়ে না, কারণ তা অসমতা (১) কে সিদ্ধ করে না]। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="400" y1="350" x2="50" y2="210" stroke="red" stroke-width="2" />
+    <line x1="330" y1="350" x2="50" y2="210" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,20 50,210 400,350 480,350 480,20" fill="rgba(0, 255, 0, 0.12)" stroke="none" />
+
+    <circle cx="400" cy="350" r="4" fill="black" />
+    <circle cx="50" cy="210" r="4" fill="black" />
+    <circle cx="330" cy="350" r="4" fill="gray" /> <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="385" y="335" font-size="10">A(25,0)</text>
+    <text x="315" y="335" font-size="10" fill="gray">C(20,0)</text>
+    <text x="55" y="205" font-size="10">B(0,10)</text>
+    <text x="250" y="230" font-size="11" fill="red">2x+5y=50</text>
+    <text x="180" y="275" font-size="11" fill="blue">x+2y=20</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 5x + 3y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $A(25, 0) \implies Z = 5\cdot25 + 3\cdot0 = 125$ টাকা</div>
+  <div class="step">বিন্দু $B(0, 10) \implies Z = 5\cdot0 + 3\cdot10 = 30$ টাকা</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $B(0, 10)$ বিন্দুতে দৈনিক খরচের পরিমাণ সবচেয়ে কম, যা মাত্র $30$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সবচেয়ে কম খরচে ভিটামিনের চাহিদা মেটাতে হলে প্রতিদিন $F_1$ ধরনের খাদ্য ০ কেজি এবং $F_2$ ধরনের খাদ্য ১০ কেজি কিনতে হবে। এতে সর্বনিম্ন দৈনিক খরচ হবে ৩০ টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (iii) এক ব্যক্তি $A$ ও $B$ দুই রকমের খাদ্য গ্রহণ করেন, যাতে তিন প্রকারের পুষ্টি $N_1, N_2, N_3$ এর পরিমাণ, খাদ্যের দাম ও দৈনিক ন্যূনতম পুষ্টির প্রয়োজন দেওয়া হলো তা নিম্নরূপ:
+    <table>
+      <thead>
+        <tr>
+          <th>দাম (প্রতি একক)</th>
+          <th>$A$<br>$1.00$ টাকা</th>
+          <th>$B$<br>$3.00$ টাকা</th>
+          <th>দৈনিক ন্যূনতম প্রয়োজন</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$N_1$</td>
+          <td>$30$</td>
+          <td>$12$</td>
+          <td>$60$</td>
+        </tr>
+        <tr>
+          <td>$N_2$</td>
+          <td>$15$</td>
+          <td>$15$</td>
+          <td>$60$</td>
+        </tr>
+        <tr>
+          <td>$N_3$</td>
+          <td>$6$</td>
+          <td>$18$</td>
+          <td>$36$</td>
+        </tr>
+      </tbody>
+    </table>
+    সর্বনিম্ন খরচে খাদ্যের দৈনিক প্রয়োজন কীভাবে মেটানো যায় তা যোগাশ্রয়ী প্রোগ্রামের দ্বারা লেখচিত্রের সাহায্যে সমাধান কর।
+  </div>
+  <div class="solution-title">সমাধান (৭-iii):</div>
+
+  <div class="step-explain">মনে করি, ব্যক্তিটি দৈনিক $A$ প্রকারের খাদ্য গ্রহণ করেন $x$ একক এবং $B$ প্রকারের খাদ্য গ্রহণ করেন $y$ একক। যেহেতু খাদ্যের একক ঋণাত্মক হতে পারে না, সেহেতু অবয়ব শর্ত:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মূল উদ্দেশ্য হলো মোট খরচ সর্বনিম্ন করা। প্রতি একক $A$ খাদ্যের মূল্য $1.00$ টাকা এবং $B$ খাদ্যের মূল্য $3.00$ টাকা। সুতরাং, অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 1x + 3y \implies Z = x + 3y$</div>
+
+  <div class="step-explain">উদ্দীপকের ছক থেকে পুষ্টি উপাদানসমূহের ন্যূনতম চাহিদার অসমতাগুলো গঠন করি:</div>
+  <div class="step-explain">১. $N_1$ পুষ্টির শর্ত (ন্যূনতম প্রয়োজন ৬০):</div>
+  <div class="step">$30x + 12y \ge 60$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৬ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$5x + 2y \ge 10 \quad \text{--- (১)}$ [৬ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. $N_2$ পুষ্টির শর্ত (ন্যূনতম প্রয়োজন ৬০):</div>
+  <div class="step">$15x + 15y \ge 60$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ১৫ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + y \ge 4 \quad \text{--- (২)}$ [১৫ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">৩. $N_3$ পুষ্টির শর্ত (ন্যূনতম প্রয়োজন ৩৬):</div>
+  <div class="step">$6x + 18y \ge 36$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৬ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 3y \ge 6 \quad \text{--- (৩)}$ [৬ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে অক্ষদ্বয়ের ছেদবিন্দু নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$5x + 2y = 10 \implies \frac{5x}{10} + \frac{2y}{10} = 1 \implies \frac{x}{2} + \frac{y}{5} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(2, 0)$ এবং Y-অক্ষকে $B(0, 5)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + y = 4 \implies \frac{x}{4} + \frac{y}{4} = 1 \quad \text{--- (৫)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(4, 0)$ এবং Y-অক্ষকে $D(0, 4)$ বিন্দুতে ছেদ করে。</div>
+
+  <div class="step-explain">(৩) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 6 \implies \frac{x}{6} + \frac{3y}{6} = 1 \implies \frac{x}{6} + \frac{y}{2} = 1 \quad \text{--- (৬)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $E(6, 0)$ এবং Y-অক্ষকে $F(0, 2)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন রেখাগুলোর পারস্পরিক ছেদবিন্দুসমূহ বের করি:</div>
+  <div class="step-explain">রেখা (৪) ও (৫) এর ছেদবিন্দু $P$ নির্ণয়: (৫) নং সমীকরণকে ২ দ্বারা গুণ করে (৪) নং থেকে বিয়োগ করি:</div>
+  <div class="step">$\left(5x + 2y\right) - 2\cdot\left(x + y\right) = 10 - 2\cdot4 \implies 3x = 2 \implies x = \frac{2}{3}$</div>
+  <div class="step-explain">$x$ এর মান (৫) নং এ বসিয়ে পাই:</div>
+  <div class="step">$\frac{2}{3} + y = 4 \implies y = 4 - \frac{2}{3} = \frac{10}{3}$ [লসাগু করে]</div>
+  <div class="step-explain">সুতরাং একটি ছেদবিন্দু $P\left(\frac{2}{3}, \frac{10}{3}\right) \approx P(0.67, 3.33)$।</div>
+
+  <div class="step-explain">রেখা (৫) ও (৬) এর ছেদবিন্দু $Q$ নির্ণয়: (৫) নং সমীকরণ থেকে (৬) নং বিয়োগ করি:</div>
+  <div class="step">$\left(x + y\right) - \left(x + 3y\right) = 4 - 6 \implies -2y = -2 \implies y = 1$</div>
+  <div class="step-explain">$y$ এর মান (৫) নং এ বসিয়ে পাই:</div>
+  <div class="step">$x + 1 = 4 \implies x = 3$</div>
+  <div class="step-explain">সুতরাং অপর ছেদবিন্দুটি $Q(3, 1)$।</div>
+
+  <div class="step-explain">যেহেতু সমস্ত অসমতা '$\ge$' চিহ্নবিশিষ্ট, তাই সমাধান এলাকাটি হবে বাহ্যিক উন্মুক্ত অঞ্চল (Unbounded Region)। এই অনুকূল অঞ্চলের কৌণিক প্রান্তবিন্দুগুলো হলো $B(0, 5)$, $P\left(\frac{2}{3}, \frac{10}{3}\right)$, $Q(3, 1)$ এবং $E(6, 0)$। নিচে এর নিখুঁত গ্রাফ চিত্রায়িত করা হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="150" y1="350" x2="50" y2="100" stroke="red" stroke-width="2" />
+    <line x1="250" y1="350" x2="50" y2="150" stroke="blue" stroke-width="2" />
+    <line x1="350" y1="350" x2="50" y2="250" stroke="green" stroke-width="2" />
+
+    <polygon points="50,20 50,100 83,183 200,300 350,350 480,350 480,20" fill="rgba(255, 165, 0, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="100" r="4" fill="black" />
+    <circle cx="83" cy="183" r="4" fill="black" />
+    <circle cx="200" cy="300" r="4" fill="black" />
+    <circle cx="350" cy="350" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="55" y="95" font-size="10">B(0,5)</text>
+    <text x="90" y="180" font-size="10">P(0.67,3.33)</text>
+    <text x="205" y="295" font-size="10">Q(3,1)</text>
+    <text x="340" y="340" font-size="10">E(6,0)</text>
+    
+    <text x="120" y="160" font-size="11" fill="red" transform="rotate(-21,120,160)">5x+2y=10</text>
+    <text x="170" y="210" font-size="11" fill="blue" transform="rotate(-21,170,210)">x+y=4</text>
+    <text x="260" y="290" font-size="11" fill="green" transform="rotate(-7,260,290)">x+3y=6</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + 3y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $B(0, 5) \implies Z = 0 + 3\cdot5 = 15$ টাকা</div>
+  <div class="step">বিন্দু $P\left(\frac{2}{3}, \frac{10}{3}\right) \implies Z = \frac{2}{3} + 3\cdot\left(\frac{10}{3}\right) = \frac{2}{3} + 10 = \frac{32}{3} \approx 10.67$ টাকা [লসাগু করে]</div>
+  <div class="step">বিন্দু $Q(3, 1) \implies Z = 3 + 3\cdot1 = 6$ টাকা</div>
+  <div class="step">বিন্দু $E(6, 0) \implies Z = 6 + 3\cdot0 = 6$ টাকা</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $Q(3, 1)$ এবং $E(6, 0)$ উভয় বিন্দুতেই সর্বনিম্ন খরচ সমান এবং তা হলো $6$ টাকা। এই দুই বিন্দুর সংযোগকারী রেখাংশের যেকোনো বিন্দুর জন্যই খরচ সর্বনিম্ন হবে। বাস্তবতার নিরিখে মিশ্র খাদ্য হিসেবে $Q(3, 1)$ বিন্দুটি গ্রহণ করা যুক্তিযুক্ত।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বনিম্ন দৈনিক খরচ হবে $6.00$ টাকা। এর জন্য ব্যক্তিটিকে প্রতিদিন $A$ খাদ্য ৩ একক এবং $B$ খাদ্য ১ একক গ্রহণ করতে হবে।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (iv) নিচের প্রদত্ত তালিকা থেকে সর্বনিম্ন ব্যয়ে প্রয়োজনীয় পুষ্টি সমন্বিত খাদ্যের সর্বোচ্চটুকু সরবরাহ করে রৈখিক প্রোগ্রাম ও লেখচিত্রের সাহায্যে সমাধান করঃ
+    <table>
+      <thead>
+        <tr>
+          <th>প্রতি একক খাদ্যের মূল্য</th>
+          <th>খাদ্য-$A$ <br> মূল্য ১.০০ টাকা</th>
+          <th>খাদ্য-$B$ <br> মূল্য ২.০০ টাকা</th>
+          <th>ন্যূনতম প্রয়োজন</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>পুষ্টি I</td>
+          <td>20</td>
+          <td>8</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>পুষ্টি II</td>
+          <td>10</td>
+          <td>10</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>পুষ্টি III</td>
+          <td>4</td>
+          <td>12</td>
+          <td>24</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="solution-title">সমাধান (৭-iv):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক খাদ্য তালিকায় খাদ্য-$A$ অন্তর্ভুক্ত করা হয় $x$ একক এবং খাদ্য-$B$ অন্তর্ভুক্ত করা হয় $y$ একক। খাদ্যের পরিমাণ ঋণাত্মক অসম্ভব হওয়ায়:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">উদ্দেশ্য হলো মোট ব্যয় সর্বনিম্ন করা। প্রতি একক খাদ্য-$A$ এর মূল্য ১.০০ টাকা এবং খাদ্য-$B$ এর মূল্য ২.০০ টাকা। অতএব, অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 1x + 2y \implies Z = x + 2y$</div>
+
+  <div class="step-explain">পুষ্টি উপাদানের ন্যূনতম প্রয়োজনীয়তার অসমতাগুলো নিচে গঠন করা হলো:</div>
+  <div class="step-explain">১. পুষ্টি I এর শর্ত (ন্যূনতম ৪০):</div>
+  <div class="step">$20x + 8y \ge 40$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৪ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$5x + 2y \ge 10 \quad \text{--- (১)}$ [৪ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. পুষ্টি II এর শর্ত (ন্যূনতম ৪০):</div>
+  <div class="step">$10x + 10y \ge 40$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ১০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + y \ge 4 \quad \text{--- (২)}$ [১০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">৩. পুষ্টি III এর শর্ত (ন্যূনতম ২৪):</div>
+  <div class="step">$4x + 12y \ge 24$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৪ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 3y \ge 6 \quad \text{--- (৩)}$ [৪ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">লক্ষণীয় যে, এই অসমতাগুলো পূর্ববর্তী প্রশ্ন ৭(iii) এর অবিকল অনুরূপ। অতএব এদের অনুরূপ সরলরেখা এবং অক্ষদ্বয়ের ছেদবিন্দুসমূহ যথাক্রমে হবে:</div>
+  <div class="step-explain">(১) নং থেকে: $5x + 2y = 10 \implies \frac{x}{2} + \frac{y}{5} = 1 \implies A(2,0), B(0,5)$</div>
+  <div class="step-explain">(২) নং থেকে: $x + y = 4 \implies \frac{x}{4} + \frac{y}{4} = 1 \implies C(4,0), D(0,4)$</div>
+  <div class="step-explain">(৩) নং থেকে: $x + 3y = 6 \implies \frac{x}{6} + \frac{y}{2} = 1 \implies E(6,0), F(0,2)$</div>
+
+  <div class="step-explain">রেখাসমূহের পারস্পরিক ছেদবিন্দু পূর্বের ন্যায় যথাক্রমে $P\left(\frac{2}{3}, \frac{10}{3}\right) \approx P(0.67, 3.33)$ এবং $Q(3, 1)$।</div>
+  <div class="step-explain">যেহেতু সমস্ত অসমতা '$\ge$' সম্বলিত, তাই অনুকূল সমাধান অঞ্চলটি মূলবিন্দুর বাইরের দিকে উন্মুক্ত (Unbounded)। এর প্রান্তিক বিন্দুসমূহ হলো $B(0, 5)$, $P\left(\frac{2}{3}, \frac{10}{3}\right)$, $Q(3, 1)$ এবং $E(6, 0)$। নিচে এর নিখুঁত স্কেল-সঠিক লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="150" y1="350" x2="50" y2="100" stroke="red" stroke-width="2" />
+    <line x1="250" y1="350" x2="50" y2="150" stroke="blue" stroke-width="2" />
+    <line x1="350" y1="350" x2="50" y2="250" stroke="green" stroke-width="2" />
+
+    <polygon points="50,20 50,100 83,183 200,300 350,350 480,350 480,20" fill="rgba(0, 150, 255, 0.12)" stroke="none" />
+
+    <circle cx="50" cy="100" r="4" fill="black" />
+    <circle cx="83" cy="183" r="4" fill="black" />
+    <circle cx="200" cy="300" r="4" fill="black" />
+    <circle cx="350" cy="350" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="55" y="95" font-size="10">B(0,5)</text>
+    <text x="90" y="180" font-size="10">P(0.67,3.33)</text>
+    <text x="205" y="295" font-size="10">Q(3,1)</text>
+    <text x="340" y="340" font-size="10">E(6,0)</text>
+    
+    <text x="120" y="160" font-size="11" fill="red" transform="rotate(-21,120,160)">5x+2y=10</text>
+    <text x="170" y="210" font-size="11" fill="blue" transform="rotate(-21,170,210)">x+y=4</text>
+    <text x="260" y="290" font-size="11" fill="green" transform="rotate(-7,260,290)">x+3y=6</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + 2y$-এর মান পরীক্ষা করি:</div>
+  <div class="step">বিন্দু $B(0, 5) \implies Z = 0 + 2\cdot5 = 10$ টাকা</div>
+  <div class="step">বিন্দু $P\left(\frac{2}{3}, \frac{10}{3}\right) \implies Z = \frac{2}{3} + 2\cdot\left(\frac{10}{3}\right) = \frac{2}{3} + \frac{20}{3} = \frac{22}{3} \approx 7.33$ টাকা [যোগ করে]</div>
+  <div class="step">বিন্দু $Q(3, 1) \implies Z = 3 + 2\cdot1 = 5$ টাকা</div>
+  <div class="step">বিন্দু $E(6, 0) \implies Z = 6 + 2\cdot0 = 6$ টাকা</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $Q(3, 1)$ বিন্দুতে খরচ সবচেয়ে কম এবং তা হলো $5$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বনিম্ন ব্যয়ে পুষ্টির চাহিদা মেটাতে খাদ্য-$A$ নিতে হবে ৩ একক এবং খাদ্য-$B$ নিতে হবে ১ একক। এতে সর্বনিম্ন ব্যয় হবে ৫ টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (v) একটি পানীয় তৈরির কারখানায় দুটি শাখা $I$ এবং $II$ এর উভয়েই কোকাকোলা, ফান্টা এবং স্প্রাইট বোতলজাত করে। শাখা দুটির দৈনিক উৎপাদন ক্ষমতা নিম্নরূপঃ
+    <table>
+      <thead>
+        <tr>
+          <th>শাখা</th>
+          <th>কোকাকোলা</th>
+          <th>ফান্টা</th>
+          <th>স্প্রাইট</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$I$</td>
+          <td>3000</td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>$II$</td>
+          <td>1000</td>
+          <td>1000</td>
+          <td>6000</td>
+        </tr>
+      </tbody>
+    </table>
+    কোকাকোলা, ফান্টা, স্প্রাইটের মাসিক চাহিদা যথাক্রমে ২৪০০০, ১৬০০০ ও ৪৮০০০ বোতল। $I$ ও $II$ শাখার দৈনিক কার্যপরিচালনার ব্যয় যথাক্রমে ৬০০ টাকা ও ৪০০ টাকা। মাসে কোন শাখা কতদিন চালু রাখলে তা সর্বনিম্ন কার্যপরিচালনা ব্যয়ে পানীয়ের মাসিক চাহিদা পূরণ করতে পারবে? সর্বনিম্ন ব্যয় কত হবে?
+  </div>
+  <div class="solution-title">সমাধান (৭-v):</div>
+
+  <div class="step-explain">মনে করি, ফ্যাক্টরির মাসিক চাহিদা পূরণের জন্য $I$ শাখাটি মাসে $x$ দিন এবং $II$ শাখাটি মাসে $y$ দিন চালু রাখা হয়। যেহেতু কার্যদিবসের সংখ্যা ঋণাত্মক হতে পারে না, সেহেতু অঋণাত্মকতার শর্ত বা অবয়ব শর্ত হবে:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের মূল উদ্দেশ্য হলো মাসিক মোট কার্যপরিচালনা ব্যয় সর্বনিম্ন করা। $I$ শাখার দৈনিক ব্যয় ৬০০ টাকা এবং $II$ শাখার দৈনিক ব্যয় ৪০০ টাকা। সুতরাং, মোট খরচের অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 600x + 400y$</div>
+
+  <div class="step-explain">এখন পানীয়সমূহের মাসিক চাহিদাসংক্রান্ত সীমাবদ্ধতার শর্তসমূহ বা অসমতাগুলো গঠন করি (চাহিদা পূরণ করতে হলে উৎপাদন চাহিদার সমান বা বেশি হতে হবে):</div>
+  
+  <div class="step-explain">১. কোকাকোলা উৎপাদনের সীমাবদ্ধতা সংক্রান্ত শর্ত (মাসিক চাহিদা ন্যূনতম ২৪০০০ বোতল):</div>
+  <div class="step">$3000x + 1000y \ge 24000$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ১০০০ দ্বারা ভাগ করে সরল আকারে পাই:</div>
+  <div class="step">$3x + y \ge 24 \quad \text{--- (১)}$ [১০০০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. ফান্টা উৎপাদনের সীমাবদ্ধতা সংক্রান্ত শর্ত (মাসিক চাহিদা ন্যূনতম ১৬০০০ বোতল):</div>
+  <div class="step">$1000x + 1000y \ge 16000$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ১০০০ দ্বারা ভাগ করে সরল আকারে পাই:</div>
+  <div class="step">$x + y \ge 16 \quad \text{--- (২)}$ [১০০০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">৩. স্প্রাইট উৎপাদনের সীমাবদ্ধতা সংক্রান্ত শর্ত (মাসিক চাহিদা ন্যূনতম ৪৮০০০ বোতল):</div>
+  <div class="step">$2000x + 6000y \ge 48000$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২০০০ দ্বারা ভাগ করে সরল আকারে পাই:</div>
+  <div class="step">$x + 3y \ge 24 \quad \text{--- (৩)}$ [২০০০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">এখন এই অসমতাগুলোকে সমীকরণে রূপান্তর করে লেখচিত্র অঙ্কনের সুবিধার্থে অক্ষদ্বয়ের ছেদবিন্দুসমূহ নির্ণয় করি।</div>
+  
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$3x + y = 24 \implies \frac{3x}{24} + \frac{y}{24} = 1 \implies \frac{x}{8} + \frac{y}{24} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(8, 0)$ এবং Y-অক্ষকে $B(0, 24)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + y = 16 \implies \frac{x}{16} + \frac{y}{16} = 1 \quad \text{--- (৫)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(16, 0)$ এবং Y-অক্ষকে $D(0, 16)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(৩) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 24 \implies \frac{x}{24} + \frac{3y}{24} = 1 \implies \frac{x}{24} + \frac{y}{8} = 1 \quad \text{--- (৬)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $E(24, 0)$ এবং Y-অক্ষকে $F(0, 8)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন রেখাসমূহের পারস্পরিক ছেদবিন্দুসমূহ বীজগাণিতিক উপায়ে নির্ণয় করি:</div>
+  
+  <div class="step-explain">রেখা (৪) ও (৫) এর ছেদবিন্দু $P$ নির্ণয়: (৪) নং সমীকরণ থেকে (৫) নং বিয়োগ করে পাই:</div>
+  <div class="step">$\left(3x + y\right) - \left(x + y\right) = 24 - 16 \implies 2x = 8 \implies x = 4$ [বিয়োগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৫) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$4 + y = 16 \implies y = 12$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং, একটি ছেদবিন্দু হলো $P(4, 12)$।</div>
+
+  <div class="step-explain">রেখা (৫) ও (৬) এর ছেদবিন্দু $Q$ নির্ণয়: (৫) নং সমীকরণকে ৩ দ্বারা গুণ করে তা থেকে (৬) নং বিয়োগ করি:</div>
+  <div class="step">$3\cdot\left(x + y\right) - \left(x + 3y\right) = 3\cdot16 - 24$</div>
+  <div class="step">বা, $3x + 3y - x - 3y = 48 - 24$</div>
+  <div class="step">বা, $2x = 24 \implies x = 12$ [২ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৫) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$12 + y = 16 \implies y = 4$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং, অপর ছেদবিন্দুটি হলো $Q(12, 4)$。</div>
+
+  <div class="step-explain">যেহেতু প্রতিটি শর্তে '$\ge$' চিহ্ন রয়েছে, সেহেতু সমাধান এলাকা বা অনুকূল অঞ্চলটি হবে মূলবিন্দুর বিপরীত দিকে অবস্থিত একটি ঊর্ধ্বমুখী অসীম বা উন্মুক্ত অঞ্চল (Unbounded Region)। এই অনুকূল অঞ্চলের কৌণিক প্রান্তবিন্দুগুলো হলো: $B(0, 24)$, $P(4, 12)$, $Q(12, 4)$ এবং $E(24, 0)$। নিচে এর নিখুঁত স্কেল-সঠিক লেখচিত্র প্রদর্শন করা হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 70 L 500 70 M 50 130 L 500 130 M 50 190 L 500 190 M 50 250 L 500 250 M 50 310 L 500 310" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 110 0 L 110 370 M 170 0 L 170 370 M 230 0 L 230 370 M 290 0 L 290 370 M 350 0 L 350 370 M 410 0 L 410 370" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="50" y1="370" x2="480" y2="370" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="370" stroke="#333" stroke-width="2" />
+    <path d="M 480 365 L 490 370 L 480 375 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="170" y1="370" x2="50" y2="10" stroke="red" stroke-width="2" />
+    <line x1="290" y1="370" x2="50" y2="130" stroke="blue" stroke-width="2" />
+    <line x1="410" y1="370" x2="50" y2="250" stroke="green" stroke-width="2" />
+
+    <polygon points="50,10 110,190 230,310 410,370 480,370 480,10" fill="rgba(255, 165, 0, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="10" r="4" fill="black" />
+    <circle cx="110" cy="190" r="4" fill="black" />
+    <circle cx="230" cy="310" r="4" fill="black" />
+    <circle cx="410" cy="370" r="4" fill="black" />
+
+    <text x="35" y="385" font-size="12">O</text>
+    <text x="475" y="390" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="55" y="20" font-size="10">B(0,24)</text>
+    <text x="115" y="185" font-size="10">P(4,12)</text>
+    <text x="235" y="305" font-size="10">Q(12,4)</text>
+    <text x="395" y="360" font-size="10">E(24,0)</text>
+    
+    <text x="135" y="100" font-size="11" fill="red" transform="rotate(-63,135,100)">3x+y=24</text>
+    <text x="190" y="220" font-size="11" fill="blue" transform="rotate(-45,190,220)">x+y=16</text>
+    <text x="310" y="330" font-size="11" fill="green" transform="rotate(-18,310,330)">x+3y=24</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক প্রান্তবিন্দুসমূহে অভিষ্ট ফাংশন $Z = 600x + 400y$-এর মান হিসাব করে পরীক্ষা করি:</div>
+  <div class="step">বিন্দু $B(0, 24) \implies Z = 600\cdot0 + 400\cdot24 = 0 + 9600 = 9600$ টাকা</div>
+  <div class="step">বিন্দু $P(4, 12) \implies Z = 600\cdot4 + 400\cdot12 = 2400 + 4800 = 7200$ টাকা</div>
+  <div class="step">বিন্দু $Q(12, 4) \implies Z = 600\cdot12 + 400\cdot4 = 7200 + 1600 = 8800$ টাকা</div>
+  <div class="step">বিন্দু $E(24, 0) \implies Z = 600\cdot24 + 400\cdot0 = 14400 + 0 = 14400$ টাকা</div>
+
+  <div class="step-explain">গাণিতিক বিশ্লেষণ থেকে দেখা যাচ্ছে যে, কৌণিক বিন্দু $P(4, 12)$-তে মাসিক কার্যপরিচালনা ব্যয়ের মান সর্বনিম্ন এবং তা হলো $7200$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> কারখানার সর্বনিম্ন পরিচালনা ব্যয়ে চাহিদা পূরণ করতে হলে $I$ শাখা ৪ দিন এবং $II$ শাখা ১২ দিন চালু রাখতে হবে। এতে সর্বমোট সর্বনিম্ন পরিচালনা ব্যয় হবে ৭২০০ টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (vi) $F_1$ ও $F_2$ খাদ্যের প্রতি কেজিতে ভিটামিন $C$ ও $D$-এর পরিমাণ ও তাদের মূল্যের একটি ছকঃ
+    <table>
+      <thead>
+        <tr>
+          <th>খাদ্য</th>
+          <th>ভিটামিন $C$</th>
+          <th>ভিটামিন $D$</th>
+          <th>প্রতি কেজির মূল্য</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$F_1$</td>
+          <td>6</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>$F_2$</td>
+          <td>3</td>
+          <td>5</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+    দৈনিক ভিটামিন $C$ ও ভিটামিন $D$ এর ন্যূনতম চাহিদা যথাক্রমে ৬০ একক ও ৫০ একক হলে কম খরচে দৈনিক ভিটামিন চাহিদা মেটানোর একটি রৈখিক প্রোগ্রাম গঠন কর এবং লেখচিত্রের সাহায্যে প্রাপ্ত রৈখিক প্রোগ্রামটি সমাধান করে দৈনিক সর্বনিম্ন খরচ নির্ণয় কর।
+  </div>
+  <div class="solution-title">সমাধান (৭-vi):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক ভিটামিনের চাহিদা মেটানোর উদ্দেশ্যে $F_1$ খাদ্য কেনা হয় $x$ কেজি এবং $F_2$ খাদ্য কেনা হয় $y$ কেজি। খাদ্যের পরিমাণ কখনো ঋণাত্মক হতে পারে না, তাই অঋণাত্মকতার শর্ত:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মূল লক্ষ্য হলো দৈনিক মোট খরচ সর্বনিম্ন করা। প্রতি কেজি $F_1$-এর দাম ৩ টাকা এবং $F_2$-এর দাম ৫ টাকা। অতএব, খরচ নির্দেশক অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 3x + 5y$</div>
+
+  <div class="step-explain">এখন পুষ্টির ন্যূনতম চাহিদার প্রেক্ষিতে সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করি:</div>
+  
+  <div class="step-explain">১. ভিটামিন $C$ এর ক্ষেত্রে শর্ত (ন্যূনতম ৬০ একক প্রয়োজন):</div>
+  <div class="step">$6x + 3y \ge 60$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৩ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + y \ge 20 \quad \text{--- (১)}$ [৩ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২.  ভিটামিন $D$ এর ক্ষেত্রে শর্ত (ন্যূনতম ৫০ একক প্রয়োজন):</div>
+  <div class="step">$2x + 5y \ge 50 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে অক্ষদ্বয়ের ছেদবিন্দুসমূহ বের করি:</div>
+  
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + y = 20 \implies \frac{2x}{20} + \frac{y}{20} = 1 \implies \frac{x}{10} + \frac{y}{20} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(10, 0)$ এবং Y-অক্ষকে $B(0, 20)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + 5y = 50 \implies \frac{2x}{50} + \frac{5y}{50} = 1 \implies \frac{x}{25} + \frac{y}{10} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(25, 0)$ এবং Y-অক্ষকে $D(0, 10)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণের পারস্পরিক ছেদবিন্দু $P$ নির্ণয় করি:</div>
+  <div class="step-explain">(৩) নং সমীকরণ থেকে (৪) নং সমীকরণ সরাসরি বিয়োগ করে পাই:</div>
+  <div class="step">$\left(2x + y\right) - \left(2x + 5y\right) = 20 - 50$</div>
+  <div class="step">বা, $-4y = -30 \implies y = \frac{30}{4} = \frac{15}{2} = 7.5$ [৪ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$y$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$2x + 7.5 = 20 \implies 2x = 12.5 \implies x = \frac{12.5}{2} = 6.25$ [২ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">সুতরাং, রেখাদ্বয়ের ছেদবিন্দু হলো $P(6.25, 7.5)$।</div>
+
+  <div class="step-explain">যেহেতু উভয় সীমাবদ্ধতাই '$\ge$' সম্বলিত, তাই অনুকূল সমাধান অঞ্চলটি মূলবিন্দুর বাইরের দিকে একটি উন্মুক্ত অঞ্চল হবে। এই অঞ্চলের কৌণিক প্রান্তবিন্দুসমূহ হলো: $B(0, 20)$, $P(6.25, 7.5)$ এবং $C(25, 0)$। নিচে এর নিখুঁত স্কেল-সঠিক গ্রাফ চিত্রায়িত করা হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 60 L 500 60 M 50 120 L 500 120 M 50 180 L 500 180 M 50 240 L 500 240 M 50 300 L 500 300" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 110 0 L 110 360 M 170 0 L 170 360 M 230 0 L 230 360 M 290 0 L 290 360 M 350 0 L 350 360 M 410 0 L 410 360" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="50" y1="360" x2="480" y2="360" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="360" stroke="#333" stroke-width="2" />
+    <path d="M 480 355 L 490 360 L 480 365 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="200" y1="360" x2="50" y2="60" stroke="red" stroke-width="2" />
+    <line x1="425" y1="360" x2="50" y2="210" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,20 50,60 144,248 425,360 480,360 480,20" fill="rgba(0, 150, 255, 0.12)" stroke="none" />
+
+    <circle cx="50" cy="60" r="4" fill="black" />
+    <circle cx="144" cy="248" r="4" fill="black" />
+    <circle cx="425" cy="360" r="4" fill="black" />
+
+    <text x="35" y="375" font-size="12">O</text>
+    <text x="475" y="380" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="55" y="55" font-size="10">B(0,20)</text>
+    <text x="150" y="243" font-size="10">P(6.25,7.5)</text>
+    <text x="410" y="350" font-size="10">C(25,0)</text>
+    
+    <text x="130" y="180" font-size="11" fill="red" transform="rotate(-63,130,180)">2x+y=20</text>
+    <text x="270" y="310" font-size="11" fill="blue" transform="rotate(-21,270,310)">2x+5y=50</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক প্রান্তবিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 3x + 5y$-এর মান হিসাব করে যাচাই করি:</div>
+  <div class="step">বিন্দু $B(0, 20) \implies Z = 3\cdot0 + 5\cdot20 = 0 + 100 = 100$ টাকা</div>
+  <div class="step">বিন্দু $C(25, 0) \implies Z = 3\cdot25 + 5\cdot0 = 75 + 0 = 75$ টাকা</div>
+  <div class="step">বিন্দু $P(6.25, 7.5) \implies Z = 3\cdot6.25 + 5\cdot7.5 = 18.75 + 37.5 = 56.25$ টাকা [যোগ করে]</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(6.25, 7.5)$ বিন্দুতে দৈনিক খরচের পরিমাণ সবচেয়ে কম এবং তা হলো $56.25$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> দৈনিক সর্বনিম্ন খরচে ভিটামিনের চাহিদা পূরণ করতে হলে $F_1$ খাদ্য $6.25$ কেজি এবং $F_2$ খাদ্য $7.5$ কেজি ক্রয় করতে হবে। এতে দৈনিক সর্বনিম্ন খরচ হবে $56.25$ টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (vii) $M$ ও $N$ দুই প্রকার খাদ্যের প্রতি কেজিতে নিচের ছক অনুযায়ী প্রোটিন ও ফ্যাট আছে।
+    <table>
+      <thead>
+        <tr>
+          <th>খাবার</th>
+          <th>প্রোটিন</th>
+          <th>ফ্যাট</th>
+          <th>প্রতি কেজির মূল্য</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$M$</td>
+          <td>2</td>
+          <td>4</td>
+          <td>২০ টাকা</td>
+        </tr>
+        <tr>
+          <td>$N$</td>
+          <td>6</td>
+          <td>3</td>
+          <td>৩০ টাকা</td>
+        </tr>
+        <tr>
+          <td>দৈনিক ন্যূনতম প্রয়োজন</td>
+          <td>36</td>
+          <td>48</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    সর্বোচ্চ কম খরচে কীভাবে দৈনিক ন্যূনতম প্রয়োজন মেটানো সম্ভব?
+  </div>
+  <div class="solution-title">সমাধান (৭-vii):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক ন্যূনতম প্রয়োজন মেটানোর জন্য $M$ প্রকারের খাদ্য কেনা হয় $x$ কেজি এবং $N$ প্রকারের খাদ্য কেনা হয় $y$ কেজি। যেহেতু খাদ্যের পরিমাণ ঋণাত্মক হতে পারে না, সেহেতু অঋণাত্মকতার শর্ত বা অবয়ব শর্ত:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মূল উদ্দেশ্য হলো দৈনিক মোট খরচ সর্বনিম্ন করা। প্রতি কেজি $M$ খাদ্যের মূল্য ২০ টাকা এবং $N$ খাদ্যের মূল্য ৩০ টাকা। অতএব, মোট খরচের অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 20x + 30y$</div>
+
+  <div class="step-explain">উদ্দীপকের ছক অনুসারে প্রোটিন ও ফ্যাটের পুষ্টিগত চাহিদার সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করি (ন্যূনতম প্রয়োজন মানে শর্তটি অবশ্যই চিহ্নের দিক থেকে বড় বা সমান '$\ge$' হবে):</div>
+  
+  <div class="step-explain">১. প্রোটিনের সীমাবদ্ধতা সংক্রান্ত শর্ত (ন্যূনতম ৩৬ একক প্রয়োজন):</div>
+  <div class="step">$2x + 6y \ge 36$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 3y \ge 18 \quad \text{--- (১)}$ [২ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. ফ্যাটের সীমাবদ্ধতা সংক্রান্ত শর্ত (ন্যূনতম ৪৮ একক প্রয়োজন):</div>
+  <div class="step">$4x + 3y \ge 48 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে সরলরেখাগুলোর অক্ষদ্বয়ের ছেদবিন্দুসমূহ নির্ণয় করি:</div>
+  
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 18$</div>
+  <div class="step">বা, $\frac{x}{18} + \frac{3y}{18} = 1$ [উভয়পক্ষকে ১৮ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{18} + \frac{y}{6} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(18, 0)$ এবং Y-অক্ষকে $B(0, 6)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$4x + 3y = 48$</div>
+  <div class="step">বা, $\frac{4x}{48} + \frac{3y}{48} = 1$ [উভয়পক্ষকে ৪৮ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{12} + \frac{y}{16} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(12, 0)$ এবং Y-অক্ষকে $D(0, 16)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণের পারস্পরিক ছেদবিন্দু $P$ নির্ণয় করি:</div>
+  <div class="step-explain">(৪) নং সমীকরণ থেকে (৩) নং সমীকরণ সরাসরি বিয়োগ করে পাই:</div>
+  <div class="step">$\left(4x + 3y\right) - \left(x + 3y\right) = 48 - 18$</div>
+  <div class="step">বা, $3x = 30 \implies x = 10$ [৩ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$10 + 3y = 18 \implies 3y = 18 - 10 \implies 3y = 8 \implies y = \frac{8}{3} \approx 2.67$ [মান বসিয়ে ও ৩ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">সুতরাং, রেখাদ্বয়ের সাধারণ ছেদবিন্দু হলো $P\left(10, \frac{8}{3}\right)$ বা $P(10, 2.67)$।</div>
+
+  <div class="step-explain">যেহেতু শর্তগুলোতে '$\ge$' চিহ্ন আছে, তাই অনুকূল সমাধান অঞ্চলটি মূলবিন্দুর বিপরীত দিকের খোলা বা অসীম অঞ্চল (Unbounded Region) হবে। এই অনুকূল অঞ্চলের কৌণিক বা প্রান্তিক বিন্দুসমূহ হলো: $D(0, 16)$, $P\left(10, \frac{8}{3}\right)$ এবং $A(18, 0)$। নিচে এর নিখুঁত স্কেল-সঠিক লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 40 L 500 40 M 50 80 L 500 80 M 50 120 L 500 120 M 50 160 L 500 160 M 50 200 L 500 200 M 50 240 L 500 240 M 50 280 L 500 280 M 50 320 L 500 320" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 90 0 L 90 360 M 130 0 L 130 360 M 170 0 L 170 360 M 210 0 L 210 360 M 250 0 L 250 360 M 290 0 L 290 360 M 330 0 L 330 360 M 370 0 L 370 360 M 410 0 L 410 360 M 450 0 L 450 360" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="50" y1="360" x2="480" y2="360" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="360" stroke="#333" stroke-width="2" />
+    <path d="M 480 355 L 490 360 L 480 365 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="410" y1="360" x2="50" y2="252" stroke="red" stroke-width="2" />
+    <line x1="290" y1="360" x2="50" y2="72" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,20 50,72 250,312 410,360 480,360 480,20" fill="rgba(255, 165, 0, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="72" r="4" fill="black" />
+    <circle cx="250" cy="312" r="4" fill="black" />
+    <circle cx="410" cy="360" r="4" fill="black" />
+
+    <text x="35" y="375" font-size="12">O</text>
+    <text x="475" y="380" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="55" y="68" font-size="10">D(0,16)</text>
+    <text x="260" y="308" font-size="10">P(10, 2.67)</text>
+    <text x="395" y="350" font-size="10">A(18,0)</text>
+    <text x="200" y="270" font-size="11" fill="red" transform="rotate(-15,200,270)">x+3y=18</text>
+    <text x="130" y="180" font-size="11" fill="blue" transform="rotate(-40,130,180)">4x+3y=48</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 20x + 30y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $D(0, 16) \implies Z = 20\cdot0 + 30\cdot16 = 0 + 480 = 480$ টাকা</div>
+  <div class="step">বিন্দু $A(18, 0) \implies Z = 20\cdot18 + 30\cdot0 = 360 + 0 = 360$ টাকা</div>
+  <div class="step">বিন্দু $P\left(10, \frac{8}{3}\right) \implies Z = 20\cdot10 + 30\cdot\left(\frac{8}{3}\right) = 200 + 80 = 280$ টাকা [কাটাকাটি করে ও যোগ করে]</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P\left(10, \frac{8}{3}\right)$ বিন্দুতে দৈনিক খরচের পরিমাণ সর্বনিম্ন এবং তা হলো $280$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বোচ্চ কম খরচে দৈনিক ন্যূনতম প্রয়োজন মেটাতে $M$ খাবার ১০ কেজি এবং $N$ খাবার $\frac{8}{3}$ কেজি (বা প্রায় $2.67$ কেজি) মিশ্রিত করতে হবে। এতে দৈনিক সর্বনিম্ন খরচ হবে ২৮翻 টাকা।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৭. (viii) $A$ ও $B$ দুই ধরনের খাবার আছে যার মধ্যে প্রোটিন ও শ্বেতসারের নিম্নরূপঃ
+    <table>
+      <thead>
+        <tr>
+          <th>খাবার</th>
+          <th>প্রোটিন</th>
+          <th>শ্বেতসার</th>
+          <th>প্রতি এককের দাম</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$A$</td>
+          <td>4</td>
+          <td>5</td>
+          <td>৪০ টাকা</td>
+        </tr>
+        <tr>
+          <td>$B$</td>
+          <td>6</td>
+          <td>3</td>
+          <td>৫০ টাকা</td>
+        </tr>
+        <tr>
+          <td>দৈনিক ন্যূনতম প্রয়োজন</td>
+          <td>16</td>
+          <td>11</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    সমস্যাটির একটি রৈখিক প্রোগ্রাম গঠন কর এবং লেখচিত্রের সাহায্যে রৈখিক প্রোগ্রামটির সমাধান কর।
+  </div>
+  <div class="solution-title">সমাধান (৭-viii):</div>
+
+  <div class="step-explain">মনে করি, দৈনিক খাদ্য তালিকায় $A$ ধরনের খাবার অন্তর্ভুক্ত করা হয় $x$ একক এবং $B$ ধরনের খাবার অন্তর্ভুক্ত করা হয় $y$ একক। খাবারের পরিমাণ ঋণাত্মক হতে পারে না, তাই অঋণাত্মকতার শর্ত:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">উদ্দেশ্য হলো দৈনিক মোট ব্যয় সর্বনিম্ন করা। প্রতি একক $A$ খাবারের দাম ৪০ টাকা এবং $B$ খাবারের দাম ৫০ টাকা। অতএব, অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 40x + 50y$</div>
+
+  <div class="step-explain">এখন পুষ্টি উপাদানসমূহের ন্যূনতম চাহিদার শর্ত থেকে সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করি:</div>
+  
+  <div class="step-explain">১. প্রোটিনের সীমাবদ্ধতা সংক্রান্ত শর্ত (ন্যূনতম ১৬ একক প্রয়োজন):</div>
+  <div class="step">$4x + 6y \ge 16$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + 3y \ge 8 \quad \text{--- (১)}$ [২ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. শ্বেতসারের সীমাবদ্ধতা সংক্রান্ত শর্ত (ন্যূনতম ১১ একক প্রয়োজন):</div>
+  <div class="step">$5x + 3y \ge 11 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে সরলরেখাগুলোর অক্ষদ্বয়ের ছেদবিন্দুসমূহ বের করি:</div>
+  
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + 3y = 8 \implies \frac{2x}{8} + \frac{3y}{8} = 1 \implies \frac{x}{4} + \frac{y}{\frac{8}{3}} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(4, 0)$ এবং Y-অক্ষকে $B\left(0, \frac{8}{3}\right)$ বা $B(0, 2.67)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$5x + 3y = 11 \implies \frac{5x}{11} + \frac{3y}{11} = 1 \implies \frac{x}{\frac{11}{5}} + \frac{y}{\frac{11}{3}} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে প্রকাশ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C\left(\frac{11}{5}, 0\right)$ বা $C(2.2, 0)$ এবং Y-অক্ষকে $D\left(0, \frac{11}{3}\right)$ বা $D(0, 3.67)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণের পারস্পরিক ছেদবিন্দু $P$ নির্ণয় করি:</div>
+  <div class="step-explain">(৪) নং সমীকরণ থেকে (৩) নং সমীকরণ সরাসরি বিয়োগ করে পাই:</div>
+  <div class="step">$\left(5x + 3y\right) - \left(2x + 3y\right) = 11 - 8$</div>
+  <div class="step">বা, $3x = 3 \implies x = 1$ [৩ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$x = 1$ এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$2\cdot1 + 3y = 8 \implies 3y = 8 - 2 \implies 3y = 6 \implies y = 2$ [মান বসিয়ে ও ৩ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">সুতরাং, সরলরেখাদ্বয়ের পারস্পরিক ছেদবিন্দু হলো $P(1, 2)$。</div>
+
+  <div class="step-explain">যেহেতু সমস্ত অসমতা '$\ge$' সম্বলিত, তাই অনুকূল সমাধান অঞ্চলটি হবে মূলবিন্দুর বিপরীত দিকে অবস্থিত একটি ঊর্ধ্বমুখী অসীম অঞ্চল। এই অঞ্চলের প্রান্তিক কৌণিক বিন্দুসমূহ হলো: $D\left(0, \frac{11}{3}\right)$, $P(1, 2)$ এবং $A(4, 0)$। নিচে এর নিখুঁত স্কেল-সঠিক গ্রাফ চিত্রায়িত করা হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 60 70 L 500 70 M 60 150 L 500 150 M 60 230 L 500 230 M 60 310 L 500 310" stroke="#f0f0f0" stroke-width="1" />
+    <path d="M 140 0 L 140 350 M 220 0 L 220 350 M 300 0 L 300 350 M 380 0 L 380 350 M 460 0 L 460 350" stroke="#f0f0f0" stroke-width="1" />
+    
+    <line x1="60" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="60" y1="20" x2="60" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 55 20 L 60 10 L 65 20 Z" fill="#333" />
+    
+    <line x1="380" y1="350" x2="60" y2="136" stroke="red" stroke-width="2" />
+    <line x1="236" y1="350" x2="60" y2="56" stroke="blue" stroke-width="2" />
+
+    <polygon points="60,20 60,56 140,190 380,350 480,350 480,20" fill="rgba(0, 150, 255, 0.12)" stroke="none" />
+
+    <circle cx="60" cy="56" r="4" fill="black" />
+    <circle cx="140" cy="190" r="4" fill="black" />
+    <circle cx="380" cy="350" r="4" fill="black" />
+
+    <text x="45" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="35" y="25" font-size="12">Y</text>
+    <text x="65" y="52" font-size="10">D(0, 3.67)</text>
+    <text x="150" y="185" font-size="10">P(1, 2)</text>
+    <text x="375" y="340" font-size="10">A(4,0)</text>
+    
+    <text x="240" y="240" font-size="11" fill="red" transform="rotate(-30,240,240)">2x+3y=8</text>
+    <text x="110" y="120" font-size="11" fill="blue" transform="rotate(-53,110,120)">5x+3y=11</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক প্রান্তবিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 40x + 50y$-এর মান হিসাব করে যাচাই করি:</div>
+  <div class="step">বিন্দু $A(4, 0) \implies Z = 40\cdot4 + 50\cdot0 = 160 + 0 = 160$ টাকা</div>
+  <div class="step">বিন্দু $D\left(0, \frac{11}{3}\right) \implies Z = 40\cdot0 + 50\cdot\left(\frac{11}{3}\right) = 0 + \frac{550}{3} \approx 183.33$ টাকা</div>
+  <div class="step">বিন্দু $P(1, 2) \implies Z = 40\cdot1 + 50\cdot2 = 40 + 100 = 140$ টাকা [যোগ করে]</div>
+
+  <div class="step-explain">গাণিতিক বিশ্লেষণ থেকে স্পষ্ট যে, কৌণিক বিন্দু $P(1, 2)$-তে দৈনিক ব্যয়ের পরিমাণ সর্বনিম্ন এবং তা হলো $140$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বনিম্ন ব্যয়ে দৈনিক পুষ্টির প্রয়োজন মেটাতে হলে $A$ ধরনের খাবার ১ একক এবং $B$ ধরনের খাবার ২ একক গ্রহণ করতে হবে। এতে সর্বনিম্ন দৈনিক খরচ হবে ১৪০ টাকা।</div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

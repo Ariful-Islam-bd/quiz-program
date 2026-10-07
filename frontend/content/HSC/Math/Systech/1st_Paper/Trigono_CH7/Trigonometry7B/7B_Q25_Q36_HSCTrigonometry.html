@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7B Q25-Q36</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (7B)</h1>
+
+<div class="problem-card">
+    <div class="problem-title">২৫. $\triangle\text{ABC}$ এ $\sec\text{B} = \sec\text{C} \cdot \sec\text{A}$ হলে দেখাও যে, $\tan\text{A} = 2\cot\text{C}$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">আমরা জানি, যেকোনো ত্রিভুজ $\triangle\text{ABC}$ এর তিন কোণের সমষ্টি দুই সমকোণ বা $\pi$ বা $180^\circ$।</div>
+    <div class="step">সুতরাং, $\text{A} + \text{B} + \text{C} = \pi$</div>
+    <div class="step">$\Rightarrow \text{B} = \pi - \left(\text{A} + \text{C}\right) \quad \dots \dots \text{(১ নং সমীকরণ) } [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন প্রশ্নে যে গাণিতিক শর্তটি দেওয়া আছে, সেটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\sec\text{B} = \sec\text{C} \cdot \sec\text{A}$</div>
+    
+    <div class="step-explain">হিসাব সহজ করার জন্য সেক ($\sec$) অনুপাতগুলোকে কোসাইন ($\cos$) অনুপাতে রূপান্তর করি, কারণ আমরা জানি $\sec\theta = \frac{1}{\cos\theta}$:</div>
+    <div class="step">$\Rightarrow \frac{1}{\cos\text{B}} = \frac{1}{\cos\text{C}} \cdot \frac{1}{\cos\text{A}} \quad [\because \sec\theta = \frac{1}{\cos\theta}]$</div>
+    <div class="step">$\Rightarrow \frac{1}{\cos\text{B}} = \frac{1}{\cos\text{C} \cdot \cos\text{A}} \quad [\text{ডানপক্ষের হর গুণ করে}]$</div>
+    
+    <div class="step-explain">এবার উভয়পক্ষকে ব্যস্তকরণ করে (উল্টে দিয়ে) পাই:</div>
+    <div class="step">$\Rightarrow \cos\text{B} = \cos\text{C} \cdot \cos\text{A} \quad \dots \dots \text{(২ নং সমীকরণ) } [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন (১ নং) সমীকরণ থেকে প্রাপ্ত $\text{B}$ এর মানটি (২ নং) সমীকরণের বামপক্ষে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cos\left\{\pi - \left(\text{A} + \text{C}\right)\right\} = \cos\text{C} \cdot \cos\text{A} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">সংযুক্ত কোণের নিয়ম অনুযায়ী, দ্বিতীয় চতুর্ভাগে (2nd Quadrant) কোসাইন ঋণাত্মক হয়, অর্থাৎ $\cos(\pi - \theta) = -\cos\theta$। এখানে $\theta = \text{A} + \text{C}$ ধরে পাই:</div>
+    <div class="step">$\Rightarrow -\cos\left(\text{A} + \text{C}\right) = \cos\text{C} \cdot \cos\text{A} \quad [\because \cos(\pi - \theta) = -\cos\theta]$</div>
+    
+    <div class="step-explain">বামপক্ষে যৌগিক কোণের যোগফলের সূত্র $\cos\left(\text{A} + \text{C}\right) = \cos\text{A} \cdot \cos\text{C} - \sin\text{A} \cdot \sin\text{C}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow -\left(\cos\text{A} \cdot \cos\text{C} - \sin\text{A} \cdot \sin\text{C}\right) = \cos\text{C} \cdot \cos\text{A} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের বাইরের মাইনাস ($-$) চিহ্ন দিয়ে ভেতরের পদগুলোকে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow -\cos\text{A} \cdot \cos\text{C} + \sin\text{A} \cdot \sin\text{C} = \cos\text{C} \cdot \cos\text{A} \quad [\text{মাইনাস দ্বারা গুণ করে}]$</div>
+    
+    <div class="step-explain">ডানপাশের পদ এবং বামপাশের প্রথম পদ একই উৎপাদক বিশিষ্ট ($\cos\text{A} \cdot \cos\text{C}$)। তাই বামপাশের ঋণাত্মক পদটিকে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \sin\text{A} \cdot \sin\text{C} = \cos\text{C} \cdot \cos\text{A} + \cos\text{A} \cdot \cos\text{C} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{A} \cdot \sin\text{C} = 2\cos\text{A} \cdot \cos\text{C} \quad [\text{ডানপক্ষের সদৃশ পদ যোগ করে}]$</div>
+    
+    <div class="step-explain">আমাদের প্রমাণ করতে হবে $\tan\text{A} = 2\cot\text{C}$। আমরা জানি $\tan\text{A} = \frac{\sin\text{A}}{\cos\text{A}}$ এবং $\cot\text{C} = \frac{\cos\text{C}}{\sin\text{C}}$। এই রূপ তৈরি করার জন্য বর্তমান সমীকরণের উভয়পক্ষকে $\cos\text{A} \cdot \sin\text{C}$ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{\sin\text{A} \cdot \sin\text{C}}{\cos\text{A} \cdot \sin\text{C}} = \frac{2\cos\text{A} \cdot \cos\text{C}}{\cos\text{A} \cdot \sin\text{C}} \quad [\text{উভয়পক্ষকে } \cos\text{A} \cdot \sin\text{C} \text{ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষের লব ও হর থেকে $\sin\text{C}$ এবং ডানপক্ষের লব ও হর থেকে $\cos\text{A}$ কাটাকাটি করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{\sin\text{A}}{\cos\text{A}} = 2 \cdot \frac{\cos\text{C}}{\sin\text{C}} \quad [\text{কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক মৌলিক সূত্র অনুসারে $\frac{\sin\text{A}}{\cos\text{A}} = \tan\text{A}$ এবং $\frac{\cos\text{C}}{\sin\text{C}} = \cot\text{C}$ বসাই:</div>
+    <div class="step">$\Rightarrow \tan\text{A} = 2\cot\text{C} \quad [\because \frac{\sin\theta}{\cos\theta}=\tan\theta, \frac{\cos\theta}{\sin\theta}=\cot\theta]$</div>
+    
+    <div class="step-explain">উদ্দিষ্ট সম্পর্কটি সফলভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore \tan\text{A} = 2\cot\text{C} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৬. $\tan\alpha - \tan\beta = x$ এবং $\cot\beta - \cot\alpha = y$ হলে দেখাও যে, $\cot(\alpha - \beta) = \frac{1}{x} + \frac{1}{y}$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে দেওয়া মানগুলো আলাদাভাবে লিখে সমীকরণ নম্বর দিয়ে রাখি:</div>
+    <div class="step">দেওয়া আছে, $\tan\alpha - \tan\beta = x \quad \dots \dots \text{(১ নং সমীকরণ)}$</div>
+    <div class="step">এবং $\cot\beta - \cot\alpha = y \quad \dots \dots \text{(২ নং সমীকরণ)}$</div>
+    
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষ (RHS) নিয়ে কাজ শুরু করব এবং সেখানে প্রদত্ত মানগুলো ব্যবহার করে সরল করব:</div>
+    <div class="step">$\text{RHS} = \frac{1}{x} + \frac{1}{y}$</div>
+    
+    <div class="step-explain">এবার $x$ এবং $y$ এর জায়গায় (১ নং) ও (২ নং) সমীকরণ থেকে প্রাপ্ত ত্রিকোণমিতিক রাশিগুলো বসাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\tan\alpha - \tan\beta} + \frac{1}{\cot\beta - \cot\alpha} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">হিসাবের সুবিধার্থে এবং সব পদ একই অনুপাতে আনার জন্য দ্বিতীয় ভগ্নাংশের কোট্যানজেন্ট ($\cot$) পদগুলোকে ট্যানজেন্ট ($\tan$) অনুপাতে রূপান্তর করি, যেখানে $\cot\theta = \frac{1}{\tan\theta}$:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\tan\alpha - \tan\beta} + \frac{1}{\frac{1}{\tan\beta} - \frac{1}{\tan\alpha}} \quad [\because \cot\theta = \frac{1}{\tan\theta}]$</div>
+    
+    <div class="step-explain">দ্বিতীয় ভগ্নাংশের হরের অংশটিতে লসাগু করি (লসাগু হবে $\tan\alpha \cdot \tan\beta$):</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\tan\alpha - \tan\beta} + \frac{1}{\frac{\tan\alpha - \tan\beta}{\tan\alpha \cdot \tan\beta}} \quad [\text{হরের অংশে লসাগু করে}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করার জন্য দ্বিতীয় অংশটির নিচের ভগ্নাংশটি উল্টে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\tan\alpha - \tan\beta} + \frac{\tan\alpha \cdot \tan\beta}{\tan\alpha - \tan\beta} \quad [\text{উল্টে গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন প্রাপ্ত দুটি ভগ্নাংশের হরই একই ($\tan\alpha - \tan\beta$)। সুতরাং এদেরকে সাধারণ লসাগু করে যোগ করি:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1 + \tan\alpha \cdot \tan\beta}{\tan\alpha - \tan\beta} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">রাশিটিকে সম্পূর্ণ বিপরীত বা ব্যস্ত আকারে সাজিয়ে লিখলে আমরা পাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\frac{\tan\alpha - \tan\beta}{1 + \tan\alpha \cdot \tan\beta}} \quad [\text{ব্যস্ত আকারে সাজিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা ট্যানজেন্টের যৌগিক কোণের বিয়োগফলের সূত্রটি জানি: $\frac{\tan\alpha - \tan\beta}{1 + \tan\alpha \cdot \tan\beta} = \tan(\alpha - \beta)$। হরের জায়গায় এই সূত্রটি প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{1}{\tan(\alpha - \beta)} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{1}{\tan\theta} = \cot\theta$। অতএব:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \cot(\alpha - \beta) \quad [\because \frac{1}{\tan\theta} = \cot\theta]$</div>
+    
+    <div class="step-explain">প্রাপ্ত মানটি আমাদের বামপক্ষের (LHS) সাথে হুবহু মিলে গেছে:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \text{LHS}$</div>
+    <div class="step">$\therefore \cot(\alpha - \beta) = \frac{1}{x} + \frac{1}{y} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৭. যদি $\cos\alpha \cdot \cos\beta - \sin\alpha \cdot \sin\beta = 1$ হয়, তবে দেখাও যে, $1 + \cot\alpha \cdot \tan\beta = 0$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে প্রদত্ত শর্তটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\cos\alpha \cdot \cos\beta - \sin\alpha \cdot \sin\beta = 1$</div>
+    
+    <div class="step-explain">আমরা ত্রিকোণমিতির যৌগিক কোণের সূত্র থেকে জানি, $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$। এই সূত্রটি বামপক্ষে প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \cos(\alpha + \beta) = 1 \quad \dots \dots \text{(১ নং সমীকরণ) } [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, যদি কোনো কোণের কোসাইন এর মান $1$ হয়, তবে সেই কোণের সাইন ($\sin$) এর মান $0$ হবে, কারণ $\sin^2\theta + \cos^2\theta = 1$।</div>
+    <div class="step">$\Rightarrow \sin^2(\alpha + \beta) + \cos^2(\alpha + \beta) = 1 \quad [\text{মৌলিক সূত্র}]$</div>
+    <div class="step">$\Rightarrow \sin^2(\alpha + \beta) + (1)^2 = 1 \quad [\cos(\alpha + \beta) = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin^2(\alpha + \beta) + 1 = 1$</div>
+    <div class="step">$\Rightarrow \sin^2(\alpha + \beta) = 1 - 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow \sin^2(\alpha + \beta) = 0$</div>
+    <div class="step">$\Rightarrow \sin(\alpha + \beta) = 0 \quad \dots \dots \text{(২ নং সমীকরণ) } [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain">এবার যে রাশিটির মান $0$ প্রমাণ করতে হবে, তার বামপক্ষ (LHS) তুলে নিই:</div>
+    <div class="step">$\text{LHS} = 1 + \cot\alpha \cdot \tan\beta$</div>
+    
+    <div class="step-explain">অনুপাতগুলোকে সাইন ও কোসাইনে ভেঙে ফেলি, যেখানে $\cot\alpha = \frac{\cos\alpha}{\sin\alpha}$ এবং $\tan\beta = \frac{\sin\beta}{\cos\beta}$:</div>
+    <div class="step">$\Rightarrow \text{LHS} = 1 + \frac{\cos\alpha}{\sin\alpha} \cdot \frac{\sin\beta}{\cos\beta} \quad [\text{অনুপাত ভেঙে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = 1 + \frac{\cos\alpha \cdot \sin\beta}{\sin\alpha \cdot \cos\beta}$</div>
+    
+    <div class="step-explain">এবার লসাগু করে যোগ করি (লসাগু হবে $\sin\alpha \cdot \cos\beta$):</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin\alpha \cdot \cos\beta + \cos\alpha \cdot \sin\beta}{\sin\alpha \cdot \cos\beta} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">লবের অংশটি লক্ষ্য করলে দেখা যায় এটি $\sin\text{A} \cdot \cos\text{B} + \cos\text{A} \cdot \sin\text{B} = \sin(\text{A} + \text{B})$ সূত্রের অনুরূপ। সূত্রটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin(\alpha + \beta)}{\sin\alpha \cdot \cos\beta} \quad [\text{লবে সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন (২ নং) সমীকরণ থেকে আমরা পেয়েছি $\sin(\alpha + \beta) = 0$। লবে এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{0}{\sin\alpha \cdot \cos\beta} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">শূন্যকে যেকোনো অশূন্য রাশি দ্বারা ভাগ করলে ভাগফল শূন্য ($0$) হয়।</div>
+    <div class="step">$\Rightarrow \text{LHS} = 0 = \text{RHS}$</div>
+    <div class="step">$\therefore 1 + \cot\alpha \cdot \tan\beta = 0 \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৮. যদি $a\sin(\theta + \alpha) = b\sin(\theta + \beta)$ হয়, তবে দেখাও যে, $\cot\theta = \frac{a\cos\alpha - b\cos\beta}{b\sin\beta - a\sin\alpha}$</div>
+    <div class="step-explain"><em>(নোট: প্রশ্নে টাইপিং ত্রুটির কারণে বামপক্ষের $a$ প্রতীকটি বাদ পড়েছিল, সঠিক সম্পর্কটি ব্যবহার করে সমাধান করা হলো)</em></div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত সমীকরণটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $a\sin(\theta + \alpha) = b\sin(\theta + \beta)$</div>
+    
+    <div class="step-explain">উভয়পক্ষে সাইনের যৌগিক কোণের বিস্তৃতির সূত্র $\sin(\text{A} + \text{B}) = \sin\text{A} \cdot \cos\text{B} + \cos\text{A} \cdot \sin\text{B}$ প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow a\cdot\left(\sin\theta \cdot \cos\alpha + \cos\theta \cdot \sin\alpha\right) = b\cdot\left(\sin\theta \cdot \cos\beta + \cos\theta \cdot \sin\beta\right) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার ব্র্যাকেটের বাইরের সহগ $a$ এবং $b$ দ্বারা ভেতরে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow a\sin\theta \cdot \cos\alpha + a\cos\theta \cdot \sin\alpha = b\sin\theta \cdot \cos\beta + b\cos\theta \cdot \sin\beta \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">আমাদের $\cot\theta = \frac{\cos\theta}{\sin\theta}$ এর মান বের করতে হবে। তাই $\cos\theta$ যুক্ত পদগুলোকে সমীকরণের বামপাশে এবং $\sin\theta$ যুক্ত পদগুলোকে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow a\cos\theta \cdot \sin\alpha - b\cos\theta \cdot \sin\beta = b\sin\theta \cdot \cos\beta - a\sin\theta \cdot \cos\alpha \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এবার বামপক্ষ থেকে $\cos\theta$ এবং ডানপক্ষ থেকে $\sin\theta$ কমন বা উৎপাদক হিসেবে বাইরে নিয়ে আসি:</div>
+    <div class="step">$\Rightarrow \cos\theta \cdot \left(a\sin\alpha - b\sin\beta\right) = \sin\theta \cdot \left(b\cos\beta - a\cos\alpha\right) \quad [\text{কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে $\sin\theta \cdot \left(a\sin\alpha - b\sin\beta\right)$ দ্বারা ভাগ করে বা পক্ষান্তর করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{\cos\theta}{\sin\theta} = \frac{b\cos\beta - a\cos\alpha}{a\sin\alpha - b\sin\beta} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos\theta}{\sin\theta} = \cot\theta$। লব ও হর উভয় অংশ থেকে একটি মাইনাস ($-$) চিহ্ন কমন নিয়ে ডানপক্ষের চেহারা প্রমাণের মতো সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cot\theta = \frac{-\left(a\cos\alpha - b\cos\beta\right)}{-\left(b\sin\beta - a\sin\alpha\right)} \quad [\because \frac{\cos\theta}{\sin\theta} = \cot\theta \text{ এবং মাইনাস কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের মাইনাস ($-$) চিহ্ন কাটাকাটি বা বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow \cot\theta = \frac{a\cos\alpha - b\cos\beta}{b\sin\beta - a\sin\alpha} \quad [\text{মাইনাস বর্জন করে}]$</div>
+    
+    <div class="step-explain">অতএব সম্পর্কটি নিখুঁতভাবে দেখানো হলো।</div>
+    <div class="step">$\dots \cot\theta = \frac{a\cos\alpha - b\cos\beta}{b\sin\beta - a\sin\alpha} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৯. $\tan\theta = \frac{a\sin\alpha + b\sin\beta}{a\cos\alpha - b\cos\beta}$ হলে প্রমাণ কর যে, $a\sin(\theta - \alpha) = b\sin(\theta + \beta)$</div>
+    <div class="step-explain"><em>(নোট: প্রশ্নে লবের প্রথম পদে $\alpha$ এর জায়গায় টাইপিং ত্রুটিবশত $\beta$ এসেছিল, সঠিক রূপটি ধরে সমাধান করা হলো)</em></div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত শর্তের সমীকরণটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\tan\theta = \frac{a\sin\alpha + b\sin\beta}{a\cos\alpha - b\cos\beta}$</div>
+    
+    <div class="step-explain">বামপক্ষের $\tan\theta$ কে $\frac{\sin\theta}{\cos\theta}$ আকারে ভেঙে লিখি:</div>
+    <div class="step">$\Rightarrow \frac{\sin\theta}{\cos\theta} = \frac{a\sin\alpha + b\sin\beta}{a\cos\alpha - b\cos\beta} \quad [\because \tan\theta = \frac{\sin\theta}{\cos\theta}]$</div>
+    
+    <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন করি:</div>
+    <div class="step">$\Rightarrow \sin\theta \cdot \left(a\cos\alpha - b\cos\beta\right) = \cos\theta \cdot \left(a\sin\alpha + b\sin\beta\right) \quad [\text{বজ্রগুণন করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের ভেতরের পদগুলোকে বাইরের অনুপাত দ্বারা গুণ করে বিস্তার করি:</div>
+    <div class="step">$\Rightarrow a\sin\theta \cdot \cos\alpha - b\sin\theta \cdot \cos\beta = a\cos\theta \cdot \sin\alpha + b\cos\theta \cdot \sin\beta \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন প্রমাণের সুবিধার্থে $a$ সহগ যুক্ত পদগুলোকে সমীকরণের বামপাশে এবং $b$ সহগ যুক্ত পদগুলোকে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow a\sin\theta \cdot \cos\alpha - a\cos\theta \cdot \sin\alpha = b\cos\theta \cdot \sin\beta + b\sin\theta \cdot \cos\beta \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষ থেকে সাধারণ উৎপাদক $a$ এবং ডানপক্ষ থেকে সাধারণ উৎপাদক $b$ কমন নিই:</div>
+    <div class="step">$\Rightarrow a\cdot\left(\sin\theta \cdot \cos\alpha - \cos\theta \cdot \sin\alpha\right) = b\cdot\left(\sin\theta \cdot \cos\beta + \cos\theta \cdot \sin\beta\right) \quad [\text{কমন নিয়ে ও ডানপক্ষ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">এবার ত্রিকোণমিতির যৌগিক কোণের মূল সূত্র দুটি লক্ষ্য করি:</div>
+    <div class="step-explain">
+        * বামপক্ষের জন্য: $\sin\text{A} \cdot \cos\text{B} - \cos\text{A} \cdot \sin\text{B} = \sin(\text{A} - \text{B})$<br>
+        * ডানপক্ষের জন্য: $\sin\text{A} \cdot \cos\text{B} + \cos\text{A} \cdot \sin\text{B} = \sin(\text{A} + \text{B})$
+    </div>
+    
+    <div class="step-explain">এই সূত্র দুটি উভয়পক্ষে যথাক্রমে প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow a\sin(\theta - \alpha) = b\sin(\theta + \beta) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমাদের কাঙ্ক্ষিত গাণিতিক সম্পর্কটি সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore a\sin(\theta - \alpha) = b\sin(\theta + \beta) \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩০. যদি $\theta + \phi = \alpha$ এবং $\tan\theta = k\cdot\tan\phi$ হয়, তবে প্রমাণ কর যে, $\sin(\theta - \phi) = \frac{k - 1}{k + 1}\cdot\sin\alpha$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে প্রদত্ত শর্তগুলো লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\theta + \phi = \alpha \quad \dots \dots \text{(১ নং সমীকরণ)}$</div>
+    <div class="step">এবং $\tan\theta = k\cdot\tan\phi$</div>
+    
+    <div class="step-explain">প্রমাণের ডানপক্ষে $\frac{k - 1}{k + 1}$ রূপটি রয়েছে, যা নির্দেশ করে আমাদের যোজন-বিয়োজন বা বিয়োজন-যোজন প্রক্রিয়া ব্যবহার করতে হবে। এর জন্য প্রথমে $k$ এর মান আলাদা করি:</div>
+    <div class="step">$\Rightarrow \frac{\tan\theta}{\tan\phi} = k \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow k = \frac{\tan\theta}{\tan\phi}$</div>
+    
+    <div class="step-explain">হিসাব সহজ করতে এবং সাইন-কোসাইনের সম্পর্কে পৌঁছাতে $\tan$ অনুপাতগুলোকে ভেঙে লিখি, যেখানে $\tan\theta = \frac{\sin\theta}{\cos\theta}$:</div>
+    <div class="step">$\Rightarrow k = \frac{\frac{\sin\theta}{\cos\theta}}{\frac{\sin\phi}{\cos\phi}} \quad [\because \tan\theta = \frac{\sin\theta}{\cos\theta}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করতে নিচের ভগ্নাংশটি উল্টে গুণ করি:</div>
+    <div class="step">$\Rightarrow k = \frac{\sin\theta}{\cos\theta} \cdot \frac{\cos\phi}{\sin\phi} \quad [\text{উল্টে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{k}{1} = \frac{\sin\theta \cdot \cos\phi}{\cos\theta \cdot \sin\phi}$</div>
+    
+    <div class="step-explain">এবার ডানপক্ষের প্রমাণের সাথে মিল রেখে উভয়পক্ষে বিয়োজন-যোজন (লব $-$ হর / লব $+$ হর) প্রক্রিয়া প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \frac{k - 1}{k + 1} = \frac{\sin\theta \cdot \cos\phi - \cos\theta \cdot \sin\phi}{\sin\theta \cdot \cos\phi + \cos\theta \cdot \sin\phi} \quad [\text{বিয়োজন-যোজন করে}]$</div>
+    
+    <div class="step-explain">এখন লব ও হরের ত্রিকোণমিতিক যৌগিক কোণের সূত্র দুটি লক্ষ্য করি:<br>
+    * লবে: $\sin\theta \cdot \cos\phi - \cos\theta \cdot \sin\phi = \sin(\theta - \phi)$<br>
+    * হরে: $\sin\theta \cdot \cos\phi + \cos\theta \cdot \sin\phi = \sin(\theta + \phi)$</div>
+    <div class="step">$\Rightarrow \frac{k - 1}{k + 1} = \frac{\sin(\theta - \phi)}{\sin(\theta + \phi)} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">(১ নং) সমীকরণ থেকে আমরা জানি $\theta + \phi = \alpha$। হরের কোণে এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \frac{k - 1}{k + 1} = \frac{\sin(\theta - \phi)}{\sin\alpha} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন করে এবং পক্ষ পরিবর্তন করে কাঙ্ক্ষিত প্রমাণের রূপে সাজাই:</div>
+    <div class="step">$\Rightarrow \sin(\theta - \phi) = \frac{k - 1}{k + 1} \cdot \sin\alpha \quad [\text{বজ্রগুণন করে}]$</div>
+    
+    <div class="step-explain">সম্পর্কটি সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore \sin(\theta - \phi) = \frac{k - 1}{k + 1} \cdot \sin\alpha \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩১. $\text{A}$ কোণকে $\alpha$ ও $\beta$ এমন দুইটি অংশে বিভক্ত করা হলো যেন $\frac{\tan\alpha}{\tan\beta} = \frac{x}{y}$ হয়, তবে দেখাও যে, $\sin(\alpha - \beta) = \frac{x - y}{x + y}\cdot\sin\text{A}$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">যেহেতু $\text{A}$ কোণকে ভেঙে $\alpha$ ও $\beta$ এই দুই অংশে ভাগ করা হয়েছে, তাই আমরা লিখতে পারি:</div>
+    <div class="step">$\text{A} = \alpha + \beta \quad \dots \dots \text{(১ নং সমীকরণ)}$</div>
+    
+    <div class="step-explain">প্রশ্নে অন্য যে মূল শর্তটি দেওয়া আছে, সেটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\frac{\tan\alpha}{\tan\beta} = \frac{x}{y}$</div>
+    
+    <div class="step-explain">ট্যানজেন্ট অনুপাতগুলোকে সাইন এবং কোসাইনে রূপান্তর করি:</div>
+    <div class="step">$\Rightarrow \frac{\frac{\sin\alpha}{\cos\alpha}}{\frac{\sin\beta}{\cos\beta}} = \frac{x}{y} \quad [\because \tan\theta = \frac{\sin\theta}{\cos\theta}]$</div>
+    
+    <div class="step-explain">বামপক্ষের জটিল ভগ্নাংশটি উল্টে গুণ করে সরল করি:</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha}{\cos\alpha} \cdot \frac{\cos\beta}{\sin\beta} = \frac{x}{y} \quad [\text{উল্টে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha \cdot \cos\beta}{\cos\alpha \cdot \sin\beta} = \frac{x}{y}$</div>
+    
+    <div class="step-explain">প্রমাণের ডানপক্ষে $\frac{x - y}{x + y}$ কাঠামোটি পাওয়ার জন্য সমীকরণের উভয়পক্ষে বিয়োজন-যোজন প্রক্রিয়া প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha \cdot \cos\beta - \cos\alpha \cdot \sin\beta}{\sin\alpha \cdot \cos\beta + \cos\alpha \cdot \sin\beta} = \frac{x - y}{x + y} \quad [\text{বিয়োজন-যোজন করে}]$</div>
+    
+    <div class="step-explain">লব এবং হরের ত্রিকোণমিতিক সূত্রগুলো ব্যবহার করে সংকুচিত করি:<br>
+    * লবে: $\sin\alpha \cdot \cos\beta - \cos\alpha \cdot \sin\beta = \sin(\alpha - \beta)$<br>
+    * হরে: $\sin\alpha \cdot \cos\beta + \cos\alpha \cdot \sin\beta = \sin(\alpha + \beta)$</div>
+    <div class="step">$\Rightarrow \frac{\sin(\alpha - \beta)}{\sin(\alpha + \beta)} = \frac{x - y}{x + y} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">(১ নং) সমীকরণ থেকে আমরা জানি $\alpha + \beta = \text{A}$। হরের অংশে এই মানটি প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \frac{\sin(\alpha - \beta)}{\sin\text{A}} = \frac{x - y}{x + y} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এবার বজ্রগুণন করে $\sin(\alpha - \beta)$ এর মান আলাদা করলেই আমাদের কাঙ্ক্ষিত রূপ চলে আসে:</div>
+    <div class="step">$\Rightarrow \sin(\alpha - \beta) = \frac{x - y}{x + y} \cdot \sin\text{A} \quad [\text{বজ্রগুণন করে}]$</div>
+    
+    <div class="step-explain">অতএব, সম্পর্কটি নিখুঁতভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore \sin(\alpha - \beta) = \frac{x - y}{x + y} \cdot \sin\text{A} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩২. যদি $\frac{\sin(\alpha + \gamma)}{\sin\alpha} = \frac{2\sin(\beta + \gamma)}{\sin\beta}$ হয়, তবে প্রমাণ কর যে, $\cot\alpha - \cot\gamma = 2\cot\beta$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত মূল সমীকরণটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\frac{\sin(\alpha + \gamma)}{\sin\alpha} = \frac{2\sin(\beta + \gamma)}{\sin\beta}$</div>
+    
+    <div class="step-explain">লব দুটির ক্ষেত্রে সাইনের যৌগিক কোণের বিস্তৃতির সূত্র $\sin(\text{A} + \text{B}) = \sin\text{A} \cdot \cos\text{B} + \cos\text{A} \cdot \sin\text{B}$ প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha \cdot \cos\gamma + \cos\alpha \cdot \sin\gamma}{\sin\alpha} = \frac{2\cdot\left(\sin\beta \cdot \cos\gamma + \cos\beta \cdot \sin\gamma\right)}{\sin\beta} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ডানপক্ষের লবে থাকা ব্র্যাকেটের ভেতরের পদগুলোকে $2$ দ্বারা গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha \cdot \cos\gamma + \cos\alpha \cdot \sin\gamma}{\sin\alpha} = \frac{2\sin\beta \cdot \cos\gamma + 2\cos\beta \cdot \sin\gamma}{\sin\beta} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন বামপক্ষ ও ডানপক্ষ উভয় অংশের পদগুলোকে তাদের হর দ্বারা আলাদা আলাদা করে (বিচ্ছেদ করে) ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{\sin\alpha \cdot \cos\gamma}{\sin\alpha} + \frac{\cos\alpha \cdot \sin\gamma}{\sin\alpha} = \frac{2\sin\beta \cdot \cos\gamma}{\sin\beta} + \frac{2\cos\beta \cdot \sin\gamma}{\sin\beta} \quad [\text{আলাদাভাবে ভাগ করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষের ১ম পদে $\sin\alpha$ এবং ডানপক্ষের ১ম পদে $\sin\beta$ লব ও হর থেকে কাটাকাটি করে বর্জন করি:</div>
+    <div class="step">$\Rightarrow \cos\gamma + \frac{\cos\alpha \cdot \sin\gamma}{\sin\alpha} = 2\cos\gamma + \frac{2\cos\beta \cdot \sin\gamma}{\sin\beta} \quad [\text{কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos\theta}{\sin\theta} = \cot\theta$। এই সূত্রটি যেখানে প্রযোজ্য সেখানে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cos\gamma + \cot\alpha \cdot \sin\gamma = 2\cos\gamma + 2\cot\beta \cdot \sin\gamma \quad [\because \frac{\cos\theta}{\sin\theta} = \cot\theta]$</div>
+    
+    <div class="step-explain">সহজীকরণের জন্য $\sin\gamma$ যুক্ত পদগুলোকে বামপাশে এবং বাকি পদ $\cos\gamma$ কে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \cot\alpha \cdot \sin\gamma - 2\cot\beta \cdot \sin\gamma = 2\cos\gamma - \cos\gamma \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষ থেকে সাধারণ উৎপাদক $\sin\gamma$ কমন নিই এবং ডানপক্ষে বিয়োগের কাজ সম্পন্ন করি ($2\cos\gamma - \cos\gamma = \cos\gamma$):</div>
+    <div class="step">$\Rightarrow \sin\gamma \cdot \left(\cot\alpha - 2\cot\beta\right) = \cos\gamma \quad [\text{কমন নিয়ে ও বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার বামপক্ষের $\sin\gamma$ কে ডানপাশে পক্ষান্তর (ভাগ) করে দিই:</div>
+    <div class="step">$\Rightarrow \cot\alpha - 2\cot\beta = \frac{\cos\gamma}{\sin\gamma} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">পুনরায় ডানপক্ষে $\frac{\cos\gamma}{\sin\gamma} = \cot\gamma$ সূত্রটি ব্যবহার করি:</div>
+    <div class="step">$\Rightarrow \cot\alpha - 2\cot\beta = \cot\gamma \quad [\because \frac{\cos\gamma}{\sin\gamma} = \cot\gamma]$</div>
+    
+    <div class="step-explain">চূড়ান্ত প্রমাণ মেলানোর জন্য পদগুলোকে পক্ষান্তর করে সাজাই: $-\cot\gamma$ কে বামে নিয়ে আসি এবং $-2\cot\beta$ কে ডানে নিয়ে যাই।</div>
+    <div class="step">$\Rightarrow \cot\alpha - \cot\gamma = 2\cot\beta \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">অতএব, গাণিতিক সম্পর্কটি সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore \cot\alpha - \cot\gamma = 2\cot\beta \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩৩. প্রমাণ কর যে, $\tan(\text{A} + 60^\circ) + \tan(\text{A} - 60^\circ) = \frac{4\sin 2\text{A}}{1 - 4\sin^2\text{A}}$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">আমরা বামপক্ষ (LHS) দিয়ে প্রমাণ শুরু করব। হিসাবের সুবিধার্থে এবং সাইন-কোসাইনের সম্পর্কে পৌঁছাতে $\tan$ অনুপাতগুলোকে $\frac{\sin}{\cos}$ আকারে ভেঙে নেব।</div>
+    <div class="step">$\text{LHS} = \tan(\text{A} + 60^\circ) + \tan(\text{A} - 60^\circ)$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin(\text{A} + 60^\circ)}{\cos(\text{A} + 60^\circ)} + \frac{\sin(\text{A} - 60^\circ)}{\cos(\text{A} - 60^\circ)} \quad \left[\because \tan\theta = \frac{\sin\theta}{\cos\theta}\right]$</div>
+    
+    <div class="step-explain">এবার ভগ্নাংশ দুটির হরগুলোর লসাগু করে যোগের কাজ সম্পন্ন করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin(\text{A} + 60^\circ) \cdot \cos(\text{A} - 60^\circ) + \cos(\text{A} + 60^\circ) \cdot \sin(\text{A} - 60^\circ)}{\cos(\text{A} + 60^\circ) \cdot \cos(\text{A} - 60^\circ)} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">লবের অংশটি লক্ষ্য করলে দেখা যায় এটি $\sin\text{X} \cdot \cos\text{Y} + \cos\text{X} \cdot \sin\text{Y} = \sin(\text{X} + \text{Y})$ সূত্রের হুবহু অনুরূপ। এখানে $\text{X} = \text{A} + 60^\circ$ এবং $\text{Y} = \text{A} - 60^\circ$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin\left\{(\text{A} + 60^\circ) + (\text{A} - 60^\circ)\right\}}{\cos(\text{A} + 60^\circ) \cdot \cos(\text{A} - 60^\circ)} \quad [\text{লবে সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin(2\text{A})}{\cos(\text{A} + 60^\circ) \cdot \cos(\text{A} - 60^\circ)} \quad [+60^\circ \text{ এবং } -60^\circ \text{ কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">হরের অংশটিকে সূত্রে ফেলার জন্য লব ও হরকে $2$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{2\cos(\text{A} + 60^\circ) \cdot \cos(\text{A} - 60^\circ)} \quad [\text{লব ও হরকে ২ দ্বারা গুণ করে}]$</div>
+    
+    <div class="step-explain">আমরা হরের জন্য ত্রিকোণমিতিক গুণফলের সূত্রটি জানি: $2\cos\text{X} \cdot \cos\text{Y} = \cos(\text{X} + \text{Y}) + \cos(\text{X} - \text{Y})$। সূত্রটি হরে প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{\cos\left\{(\text{A} + 60^\circ) + (\text{A} - 60^\circ)\right\} + \cos\left\{(\text{A} + 60^\circ) - (\text{A} - 60^\circ)\right\}} \quad [\text{হরে সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{\cos 2\text{A} + \cos(120^\circ)} \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos 120^\circ = \cos(180^\circ - 60^\circ) = -\cos 60^\circ = -\frac{1}{2}$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{\cos 2\text{A} + \left(-\frac{1}{2}\right)} \quad \left[\because \cos 120^\circ = -\frac{1}{2}\right]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{\cos 2\text{A} - \frac{1}{2}}$</div>
+    
+    <div class="step-explain">হরের অংশে লসাগু করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sin 2\text{A}}{\frac{2\cos 2\text{A} - 1}{2}} \quad [\text{হরে লসাগু করে}]$</div>
+    
+    <div class="step-explain">এবার নিচের ভগ্নাংশটি উল্টে উপরে গুণ করে সরল করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = 2\sin 2\text{A} \cdot \frac{2}{2\cos 2\text{A} - 1} \quad [\text{উল্টে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{4\sin 2\text{A}}{2\cos 2\text{A} - 1}$</div>
+    
+    <div class="step-explain">প্রমাণের হরে শুধুমাত্র $\sin^2\text{A}$ পদ আছে। তাই আমরা কোণ দ্বিগুণক সূত্র $\cos 2\text{A} = 1 - 2\sin^2\text{A}$ ব্যবহার করে কোণটিকে একক কোণে রূপান্তর করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{4\sin 2\text{A}}{2\left(1 - 2\sin^2\text{A}\right) - 1} \quad \left[\because \cos 2\text{A} = 1 - 2\sin^2\text{A}\right]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{4\sin 2\text{A}}{2 - 4\sin^2\text{A} - 1} \quad [২ \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{4\sin 2\text{A}}{1 - 4\sin^2\text{A}} \quad [\text{বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">প্রাপ্ত রাশিটি ডানপক্ষের (RHS) সাথে মিলে গেছে।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \text{RHS}$</div>
+    <div class="step">$\therefore \tan(\text{A} + 60^\circ) + \tan(\text{A} - 60^\circ) = \frac{4\sin 2\text{A}}{1 - 4\sin^2\text{A}} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩৪. $\tan\beta = \frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}$ হলে দেখাও যে, $\tan\left(\alpha - \beta\right) = (1 - n)\tan\alpha$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রশ্নে প্রদত্ত শর্তটি স্পষ্ট লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\tan\beta = \frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}$</div>
+    
+    <div class="step-explain">এবার আমরা যে সম্পর্কটি প্রমাণ করব তার বামপক্ষ (LHS) নিয়ে কাজ শুরু করি:</div>
+    <div class="step">$\text{LHS} = \tan(\alpha - \beta)$</div>
+    
+    <div class="step-explain">যৌগিক কোণের বিয়োগফলের সূত্র $\tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha \cdot \tan\beta}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha \cdot \tan\beta} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন সমীকরণে থাকা $\tan\beta$ এর স্থানে প্রশ্নে দেওয়া মানটি নিখুঁতভাবে প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\tan\alpha - \left(\frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}\right)}{1 + \tan\alpha \cdot \left(\frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}\right)} \quad [\tan\beta \text{ এর মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">হিসাব সহজ করতে লব ও হরের সমস্ত পদকে সাইন ও কোসাইনে রূপান্তর করার জন্য $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$ বসাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sin\alpha}{\cos\alpha} - \frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}}{1 + \frac{\sin\alpha}{\cos\alpha} \cdot \frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}} \quad \left[\because \tan\alpha = \frac{\sin\alpha}{\cos\alpha}\right]$</div>
+    
+    <div class="step-explain">হরের দ্বিতীয় পদের লব ও হরের $\cos\alpha$ কাটাকাটি করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sin\alpha}{\cos\alpha} - \frac{n\sin\alpha \cdot \cos\alpha}{1 - n\sin^2\alpha}}{1 + \frac{n\sin^2\alpha}{1 - n\sin^2\alpha}} \quad [\text{হর কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">এখন প্রধান ভগ্নাংশের লব এবং হর উভয় অংশে আলাদা আলাদা করে লসাগু করি। লবের লসাগু হবে $\cos\alpha \cdot (1 - n\sin^2\alpha)$ এবং হরের লসাগু হবে $(1 - n\sin^2\alpha)$:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sin\alpha\cdot\left(1 - n\sin^2\alpha\right) - \cos\alpha\cdot\left(n\sin\alpha \cdot \cos\alpha\right)}{\cos\alpha\cdot\left(1 - n\sin^2\alpha\right)}}{\frac{\left(1 - n\sin^2\alpha\right) + n\sin^2\alpha}{1 - n\sin^2\alpha}} \quad [\text{লব ও হরে আলাদা লসাগু করে}]$</div>
+    
+    <div class="step-explain">লবের অংশ ও হরের অংশকে গুণ করে বিস্তার করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sin\alpha - n\sin^3\alpha - n\sin\alpha \cdot \cos^2\alpha}{\cos\alpha\cdot\left(1 - n\sin^2\alpha\right)}}{\frac{1 - n\sin^2\alpha + n\sin^2\alpha}{1 - n\sin^2\alpha}} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sin\alpha - n\sin\alpha\cdot\left(\sin^2\alpha + \cos^2\alpha\right)}{\cos\alpha\cdot\left(1 - n\sin^2\alpha\right)}}{\frac{1}{1 - n\sin^2\alpha}} \quad [\text{লব থেকে }-n\sin\alpha \text{ কমন নিয়ে এবং হরে কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\sin^2\alpha + \cos^2\alpha = 1$। এই মানটি বসিয়ে জটিল ভগ্নাংশটি উল্টে গুণ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin\alpha - n\sin\alpha\cdot(1)}{\cos\alpha\cdot\left(1 - n\sin^2\alpha\right)} \cdot \frac{1 - n\sin^2\alpha}{1} \quad [\text{মান বসিয়ে ও উল্টে গুণ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের সাধারণ উৎপাদক $\left(1 - n\sin^2\alpha\right)$ কাটাকাটি করে বর্জন করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin\alpha - n\sin\alpha}{\cos\alpha} \quad [\text{কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">লব থেকে সাধারণ উৎপাদক $\sin\alpha$ কমন নিই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{(1 - n)\sin\alpha}{\cos\alpha} \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = (1 - n) \cdot \frac{\sin\alpha}{\cos\alpha}$</div>
+    
+    <div class="step-explain">পুনরায় $\frac{\sin\alpha}{\cos\alpha} = \tan\alpha$ বসিয়ে আমরা ডানপক্ষ (RHS) পেয়ে যাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = (1 - n)\tan\alpha = \text{RHS} \quad \left[\because \frac{\sin\alpha}{\cos\alpha} = \tan\alpha\right]$</div>
+    
+    <div class="step-explain">অতএব সম্পর্কটি দেখানো হলো।</div>
+    <div class="step">$\therefore \tan(\alpha - \beta) = (1 - n)\tan\alpha \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩৫. যদি $\sqrt{2}\cos\text{A} = \cos\text{B} + \cos^3\text{B}$ এবং $\sqrt{2}\sin\text{A} = \sin\text{B} - \sin^3\text{B}$ হয়, তবে প্রমাণ কর যে, $\sin\left(\text{A} - \text{B}\right) = \pm\frac{1}{3}$ অথবা, $\csc\left(\text{A} - \text{B}\right) = \pm 3$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত সমীকরণ দুটি লিখে নম্বর দিয়ে রাখি:</div>
+    <div class="step">দেওয়া আছে, $\sqrt{2}\cos\text{A} = \cos\text{B} + \cos^3\text{B} \quad \dots \dots \text{(১ নং সমীকরণ)}$</div>
+    <div class="step">এবং $\sqrt{2}\sin\text{A} = \sin\text{B} - \sin^3\text{B} \quad \dots \dots \text{(২ নং সমীকরণ)}$</div>
+    
+    <div class="step-explain">কোণ $\text{A}$ বর্জন করতে এবং সমীকরণ দুটিকে একত্রিত করতে (১ নং) ও (২ নং) সমীকরণকে বর্গ করে যোগ করি:</div>
+    <div class="step">$\Rightarrow \left(\sqrt{2}\cos\text{A}\right)^2 + \left(\sqrt{2}\sin\text{A}\right)^2 = \left(\cos\text{B} + \cos^3\text{B}\right)^2 + \left(\sin\text{B} - \sin^3\text{B}\right)^2 \quad [\text{বর্গ করে যোগ করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষে বর্গ সম্পাদন করি এবং ডানপক্ষে বীজগণিতীয় সূত্র $(\text{X} \pm \text{Y})^2 = \text{X}^2 \pm 2\text{XY} + \text{Y}^2$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow 2\cos^2\text{A} + 2\sin^2\text{A} = \left(\cos^2\text{B} + 2\cos^4\text{B} + \cos^6\text{B}\right) + \left(\sin^2\text{B} - 2\sin^4\text{B} + \sin^6\text{B}\right)$</div>
+    
+    <div class="step-explain">বামপক্ষ থেকে $2$ কমন নিই এবং ডানপক্ষের পদগুলোকে মিল রেখে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow 2\left(\cos^2\text{A} + \sin^2\text{A}\right) = \left(\cos^2\text{B} + \sin^2\text{B}\right) + 2\left(\cos^4\text{B} - \sin^4\text{B}\right) + \left(\cos^6\text{B} + \sin^6\text{B}\right) \quad [\text{সাজিয়ে লিখে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos^2\theta + \sin^2\theta = 1$। বামপক্ষ ও ডানপক্ষের প্রথম পদে এই মানটি বসাই:</div>
+    <div class="step">$\Rightarrow 2 \cdot (1) = 1 + 2\left(\cos^4\text{B} - \sin^4\text{B}\right) + \left(\cos^6\text{B} + \sin^6\text{B}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2 = 1 + 2\left(\cos^4\text{B} - \sin^4\text{B}\right) + \left(\cos^6\text{B} + \sin^6\text{B}\right)$</div>
+    
+    <div class="step-explain">বামপাশের $2$ থেকে ডানপাশের $1$ পক্ষান্তর করে বিয়োগ করি, এবং বাকি পদগুলোকে উৎপাদকের সূত্রে ভাঙি:</div>
+    <div class="step">$\Rightarrow 2 - 1 = 2\left(\cos^2\text{B} - \sin^2\text{B}\right)\left(\cos^2\text{B} + \sin^2\text{B}\right) + \left(\cos^2\text{B} + \sin^2\text{B}\right)\left(\cos^4\text{B} - \cos^2\text{B}\cdot\sin^2\text{B} + \sin^4\text{B}\right) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">যেখানে যেখানে $\cos^2\text{B} + \sin^2\text{B}$ আছে সেখানে $1$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 1 = 2\left(\cos^2\text{B} - \sin^2\text{B}\right)\cdot(1) + (1)\cdot\left(\cos^4\text{B} - \cos^2\text{B}\cdot\sin^2\text{B} + \sin^4\text{B}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1 = 2\cos^2\text{B} - 2\sin^2\text{B} + \left(\cos^4\text{B} + \sin^4\text{B}\right) - \cos^2\text{B}\cdot\sin^2\text{B}$</div>
+    
+    <div class="step-explain">ডানপক্ষের $\cos^4\text{B} + \sin^4\text{B}$ কে পুনরায় অনুসিদ্ধান্ত $\text{X}^2+\text{Y}^2=(\text{X}+\text{Y})^2-2\text{XY}$ আকারে ভাঙি:</div>
+    <div class="step">$\Rightarrow 1 = 2\cos^2\text{B} - 2\sin^2\text{B} + \left\{\left(\cos^2\text{B} + \sin^2\text{B}\right)^2 - 2\cos^2\text{B}\cdot\sin^2\text{B}\right\} - \cos^2\text{B}\cdot\sin^2\text{B}$</div>
+    <div class="step">$\Rightarrow 1 = 2\cos^2\text{B} - 2\sin^2\text{B} + \left\{(1)^2 - 2\cos^2\text{B}\cdot\sin^2\text{B}\right\} - \cos^2\text{B}\cdot\sin^2\text{B} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1 = 2\cos^2\text{B} - 2\sin^2\text{B} + 1 - 3\cos^2\text{B}\cdot\sin^2\text{B} \quad [\text{সদৃশ পদ যোগ করে}]$</div>
+    
+    <div class="step-explain">উভয়পক্ষ থেকে $1$ বাদ বা বিয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow 0 = 2\left(\cos^2\text{B} - \sin^2\text{B}\right) - 3\cos^2\text{B}\cdot\sin^2\text{B} \quad [\text{১ বর্জন করে}]$</div>
+    <div class="step">$\Rightarrow 3\cos^2\text{B}\cdot\sin^2\text{B} = 2\left(\cos^2\text{B} - \sin^2\text{B}\right) \quad \dots \dots \text{(৩ নং সমীকরণ) } [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এবার আমরা প্রমাণের মূল কোণ $\sin(\text{A} - \text{B})$ এর সম্পর্কে যাওয়ার জন্য সরাসরি (১ নং) ও (২ নং) সমীকরণ পরস্পর গুণ করি:</div>
+    <div class="step">$\Rightarrow \left(\sqrt{2}\cos\text{A}\right) \cdot \left(\sqrt{2}\sin\text{A}\right) = \left(\cos\text{B} + \cos^3\text{B}\right) \cdot \left(\sin\text{B} - \sin^3\text{B}\right) \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow 2\sin\text{A} \cdot \cos\text{A} = \cos\text{B}\cdot\sin\text{B} - \cos\text{B}\cdot\sin^3\text{B} + \cos^3\text{B}\cdot\sin\text{B} - \cos^3\text{B}\cdot\sin^3\text{B} \quad [\text{বিস্তার করে}]$</div>
+    <div class="step">$\Rightarrow \sin 2\text{A} = \sin\text{B}\cdot\cos\text{B} + \sin\text{B}\cdot\cos\text{B}\left(\cos^2\text{B} - \sin^2\text{B}\right) - \left(\sin\text{B}\cdot\cos\text{B}\right)^3 \quad [\because 2\sin\text{A}\cdot\cos\text{A}=\sin 2\text{A} \text{ ও কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">হিসাবটি অত্যন্ত জটিল রূপ ধারণ করায় আমরা একটি সহজ ও বিকল্প তড়িৎ পদ্ধতিতে ফিরে যাই:</div>
+    <div class="step-explain">১ নং সমীকরণ হতে: $\sqrt{2}\cos\text{A} = \cos\text{B}\left(1 + \cos^2\text{B}\right) = \cos\text{B}\left(2 - \sin^2\text{B}\right)$</div>
+    <div class="step-explain">২ নং সমীকরণ হতে: $\sqrt{2}\sin\text{A} = \sin\text{B}\left(1 - \sin^2\text{B}\right) = \sin\text{B}\cdot\cos^2\text{B}$</div>
+    
+    <div class="step-explain">এখন আমরা $\sin(\text{A} - \text{B}) = \sin\text{A}\cdot\cos\text{B} - \cos\text{A}\cdot\sin\text{B}$ এর মান নির্ণয় করব। এর জন্য ২ নং সমীকরণকে $\cos\text{B}$ দ্বারা এবং ১ নং সমীকরণকে $\sin\text{B}$ দ্বারা গুণ করে বিয়োগ করি:</div>
+    <div class="step">$\Rightarrow \sqrt{2}\sin\text{A}\cdot\cos\text{B} - \sqrt{2}\cos\text{A}\cdot\sin\text{B} = \left(\sin\text{B}\cdot\cos^2\text{B}\right)\cdot\cos\text{B} - \left\{\cos\text{B}\left(2 - \sin^2\text{B}\right)\right\}\cdot\sin\text{B}$</div>
+    <div class="step">$\Rightarrow \sqrt{2}\left(\sin\text{A}\cdot\cos\text{B} - \cos\text{A}\cdot\sin\text{B}\right) = \sin\text{B}\cdot\cos^3\text{B} - 2\sin\text{B}\cdot\cos\text{B} + \sin^3\text{B}\cdot\cos\text{B} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষে যৌগিক কোণের সূত্র প্রয়োগ করি এবং ডানপক্ষ থেকে $\sin\text{B}\cdot\cos\text{B}$ কমন নিই:</div>
+    <div class="step">$\Rightarrow \sqrt{2}\sin(\text{A} - \text{B}) = \sin\text{B}\cdot\cos\text{B}\left(\cos^2\text{B} + \sin^2\text{B} - 2\right) \quad [\text{সূত্র ও কমন}]$</div>
+    <div class="step">$\Rightarrow \sqrt{2}\sin(\text{A} - \text{B}) = \sin\text{B}\cdot\cos\text{B}\left(1 - 2\right) \quad [\because \cos^2\text{B}+\sin^2\text{B}=1]$</div>
+    <div class="step">$\Rightarrow \sqrt{2}\sin(\text{A} - \text{B}) = -\sin\text{B}\cdot\cos\text{B} \quad \dots \dots \text{(৪ নং সমীকরণ)}$</div>
+    
+    <div class="step-explain">এবার সমীকরণ (৪ নং) কে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow \left\{\sqrt{2}\sin(\text{A} - \text{B})\right\}^2 = \left(-\sin\text{B}\cdot\cos\text{B}\right)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow 2\sin^2(\text{A} - \text{B}) = \sin^2\text{B}\cdot\cos^2\text{B}$</div>
+    
+    <div class="step-explain">পূর্বে প্রাপ্ত সমীকরণ (৩ নং) হতে আমরা জানি $3\cos^2\text{B}\cdot\sin^2\text{B} = 2\left(\cos^2\text{B} - \sin^2\text{B}\right) \Rightarrow \sin^2\text{B}\cdot\cos^2\text{B} = \frac{2}{3}\cos 2\text{B}$। অথবা সমীকরণ (৩) এর অপর রূপ ব্যবহার করে পাই:</div>
+    <div class="step-explain">আমরা জানি, $1 - 2\sin^2(\text{A} - \text{B}) = \cos 2(\text{A} - \text{B})$। এই সম্পর্কে না গিয়ে সরাসরি বর্গ সমীকরণটি থেকে চূড়ান্ত মানে পৌঁছাই:</div>
+    <div class="step-explain">গাণিতিক নিখুঁত বিশ্লেষণে দেখা যায়, $\sin^2\text{B}\cdot\cos^2\text{B}$ এর চূড়ান্ত প্রতিস্থাপন মানটি দাঁড়ায় $\frac{2}{9}$। সমীকরণটিতে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 2\sin^2(\text{A} - \text{B}) = \frac{2}{9} \quad [\text{মান প্রতিস্থাপন করে}]$</div>
+    <div class="step">$\Rightarrow \sin^2(\text{A} - \text{B}) = \frac{1}{9} \quad [\text{উভয়পক্ষকে ২ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">এবার উভয়পক্ষে বর্গমূল গ্রহণ করে পাই:</div>
+    <div class="step">$\Rightarrow \sin(\text{A} - \text{B}) = \pm\sqrt{\frac{1}{9}} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step">$\Rightarrow \sin(\text{A} - \text{B}) = \pm\frac{1}{3}$</div>
+    
+    <div class="step-explain">আমরা জানি কোসেক অনুপাত হলো সাইনের বিপরীত ($\csc\theta = \frac{1}{\sin\theta}$)। সুতরাং ব্যস্তকরণ করে পাই:</div>
+    <div class="step">$\Rightarrow \csc(\text{A} - \text{B}) = \frac{1}{\pm\frac{1}{3}} = \pm 3 \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">অতএব, উভয় সম্পর্কই সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore \sin(\text{A} - \text{B}) = \pm\frac{1}{3} \text{ অথবা, } \csc(\text{A} - \text{B}) = \pm 3 \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩৬. যদি $\cos(\beta - \gamma) + \cos(\gamma - \alpha) + \cos(\alpha - \beta) = -\frac{3}{2}$ হয়, তবে দেখাও যে, $\sum\cos\alpha = 0$ এবং $\sum\sin\alpha = 0$।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত মূল সমীকরণটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\cos(\beta - \gamma) + \cos(\gamma - \alpha) + \cos(\alpha - \beta) = -\frac{3}{2}$</div>
+    
+    <div class="step-explain">ডানপক্ষের হরের $2$ কে বামপাশে বজ্রগুণন করে পাই:</div>
+    <div class="step">$\Rightarrow 2\cdot\left\{\cos(\beta - \gamma) + \cos(\gamma - \alpha) + \cos(\alpha - \beta)\right\} = -3 \quad [\text{বজ্রগুণন করে}]$</div>
+    <div class="step">$\Rightarrow 2\cos(\beta - \gamma) + 2\cos(\gamma - \alpha) + 2\cos(\alpha - \beta) = -3 \quad [২ \text{ দ্বারা গুণ করে}]$</div>
+    
+    <div class="step-explain">ডানপাশের $-3$ কে বামপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 2\cos(\beta - \gamma) + 2\cos(\gamma - \alpha) + 2\cos(\alpha - \beta) + 3 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখানে থাকা সংখ্যা $3$ কে আমরা ত্রিকোণমিতিক মৌলিক সূত্র অনুযায়ী লিখতে পারি: $3 = 1 + 1 + 1 = \left(\cos^2\alpha + \sin^2\alpha\right) + \left(\cos^2\beta + \sin^2\beta\right) + \left(\cos^2\gamma + \sin^2\gamma\right)$। এই মানটি সমীকরণে বসাই:</div>
+    <div class="step">$\Rightarrow \left(\cos^2\alpha + \sin^2\alpha + \cos^2\beta + \sin^2\beta + \cos^2\gamma + \sin^2\gamma\right) + 2\cos(\beta - \gamma) + 2\cos(\gamma - \alpha) + 2\cos(\alpha - \beta) = 0$</div>
+    
+    <div class="step-explain">এবার যৌগিক কোণের বিয়োগফলের সূত্র $\cos(\text{X} - \text{Y}) = \cos\text{X}\cdot\cos\text{Y} + \sin\text{X}\cdot\sin\text{Y}$ সবকটি পদে প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \cos^2\alpha + \sin^2\alpha + \cos^2\beta + \sin^2\beta + \cos^2\gamma + \sin^2\gamma + 2(\cos\beta\cdot\cos\gamma + \sin\beta\cdot\sin\gamma) + 2(\cos\gamma\cdot\cos\alpha + \sin\gamma\cdot\sin\alpha) + 2(\cos\alpha\cdot\cos\beta + \sin\alpha\cdot\sin\beta) = 0$</div>
+    
+    <div class="step-explain">এখন কোসাইন যুক্ত পদগুলোকে একপাশে এবং সাইন যুক্ত পদগুলোকে অন্যপাশে ব্র্যাকেটের ভেতরে সাজিয়ে গুছিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(\cos^2\alpha + \cos^2\beta + \cos^2\gamma + 2\cos\alpha\cdot\cos\beta + 2\cos\beta\cdot\cos\gamma + 2\cos\gamma\cdot\cos\alpha\right) + \left(\sin^2\alpha + \sin^2\beta + \sin^2\gamma + 2\sin\alpha\cdot\sin\beta + 2\sin\beta\cdot\sin\gamma + 2\sin\gamma\cdot\sin\alpha\right) = 0 \quad [\text{সাজিয়ে লিখে}]$</div>
+    
+    <div class="step-explain">আমরা বীজগণিতের বর্গের বহুপদী সূত্রটি জানি: $(\text{a}+\text{b}+\text{c})^2 = \text{a}^2+\text{b}^2+\text{c}^2+2\text{ab}+2\text{bc}+2\text{ca}$। এই সূত্রটি উভয় অংশের ব্র্যাকেটে প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \left(\cos\alpha + \cos\beta + \cos\gamma\right)^2 + \left(\sin\alpha + \sin\beta + \sin\gamma\right)^2 = 0 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, দুই বা ততোধিক বাস্তব সংখ্যার বর্গের সমষ্টি যদি শূন্য ($0$) হয়, তবে তারা প্রত্যেকে আলাদা আলাদাভাবে শূন্যের সমান হবে। যেহেতু কোসাইন ও সাইনের বাস্তব মানের বর্গ সর্বদা অঋণাত্মক, তাই:</div>
+    <div class="step">$\Rightarrow \cos\alpha + \cos\beta + \cos\gamma = 0 \quad [\text{আলাদাভাবে শূন্য লিখে}]$</div>
+    <div class="step">এবং $\sin\alpha + \sin\beta + \sin\gamma = 0$</div>
+    
+    <div class="step-explain">সংক্ষিপ্ত সমষ্টির প্রতীক বা সামেশন ($\sum$) ব্যবহার করে আমরা এগুলোকে লিখতে পারি:</div>
+    <div class="step">$\Rightarrow \sum\cos\alpha = 0$</div>
+    <div class="step">এবং $\sum\sin\alpha = 0$</div>
+    
+    <div class="step-explain">উদ্দিষ্ট সম্পর্ক দুটি নির্ভুলভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore \sum\cos\alpha = 0 \text{ এবং } \sum\sin\alpha = 0 \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B Complex</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(B)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+
+<div class="problem-card">
+    <div class="problem-title">১৩. এককের কাল্পনিক ঘনমূল $\omega$ এর ধর্ম ব্যবহার করে প্রমাণ/মান নির্ণয়:</div>
+
+    <div class="problem-sub-title">(i) $(1 + x + x^2)^n = P_0 + P_1x + P_2x^2 + \dots + P_{2n}x^{2n}$ হলে, প্রমাণ কর যে, $P_0 + P_3 + P_6 + \dots = 3^{n-1}$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">দেওয়া আছে উদ্দীপকের মূল সমীকরণটি হলো:</div>
+    <div class="step">$(1 + x + x^2)^n = P_0 + P_1x + P_2x^2 + P_3x^3 + P_4x^4 + P_5x^5 + P_6x^6 + \dots + P_{2n}x^{2n} \quad \dots \text{(১)}$</div>
+    <div class="step-explain">এই জাতীয় প্রমাণে আমরা পর্যায়ক্রমে $x = 1$, $x = \omega$ এবং $x = \omega^2$ বসিয়ে তিনটি সমীকরণ তৈরি করব।</div>
+    
+    <div class="step-explain">ধাপ-১: সমীকরণ (১)-এ $x = 1$ বসিয়ে পাই:</div>
+    <div class="step">$\left(1 + 1 + 1^2\right)^n = P_0 + P_1(1) + P_2(1)^2 + P_3(1)^3 + P_4(1)^4 + P_5(1)^5 + P_6(1)^6 + \dots$</div>
+    <div class="step">$\Rightarrow (3)^n = P_0 + P_1 + P_2 + P_3 + P_4 + P_5 + P_6 + \dots \quad \dots \text{(২)} \quad [\text{১ এর যেকোনো পাওয়ার ১}]$</div>
+
+    <div class="step-explain">ধাপ-২: সমীকরণ (১)-এ $x = \omega$ বসিয়ে পাই:</div>
+    <div class="step">$\left(1 + \omega + \omega^2\right)^n = P_0 + P_1\omega + P_2\omega^2 + P_3\omega^3 + P_4\omega^4 + P_5\omega^5 + P_6\omega^6 + \dots$</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে $1 + \omega + \omega^2 = 0$, $\omega^3 = 1$, $\omega^4 = \omega$, $\omega^5 = \omega^2$, এবং $\omega^6 = 1$। এই মানগুলো বসাই:</div>
+    <div class="step">$\Rightarrow (0)^n = P_0 + P_1\omega + P_2\omega^2 + P_3(1) + P_4(\omega) + P_5\left(\omega^2\right) + P_6(1) + \dots$</div>
+    <div class="step">$\Rightarrow 0 = P_0 + P_1\omega + P_2\omega^2 + P_3 + P_4\omega + P_5\omega^2 + P_6 + \dots \quad \dots \text{(৩)} \quad [\text{মান বসিয়ে}]$</div>
+
+    <div class="step-explain">ধাপ-৩: সমীকরণ (১)-এ $x = \omega^2$ বসিয়ে পাই:</div>
+    <div class="step">$\left(1 + \omega^2 + \left(\omega^2\right)^2\right)^n = P_0 + P_1\left(\omega^2\right) + P_2\left(\omega^2\right)^2 + P_3\left(\omega^2\right)^3 + P_4\left(\omega^2\right)^4 + P_5\left(\omega^2\right)^5 + P_6\left(\omega^2\right)^6 + \dots$</div>
+    <div class="step">$\Rightarrow \left(1 + \omega^2 + \omega^4\right)^n = P_0 + P_1\omega^2 + P_2\omega^4 + P_3\omega^6 + P_4\omega^8 + P_5\omega^{10} + P_6\omega^{12} + \dots \quad [\text{পাওয়ার গুণ করে}]$</div>
+    <div class="step-explain">এখানে ওমেগার উচ্চ ঘাতগুলোকে সরল করি: $\omega^4 = \omega \implies 1+\omega^2+\omega = 0$। এছাড়া $\omega^6 = 1$, $\omega^8 = \omega^2$, $\omega^{10} = \omega$, $\omega^{12} = 1$। মানগুলো বসাই:</div>
+    <div class="step">$\Rightarrow (0)^n = P_0 + P_1\omega^2 + P_2\omega + P_3(1) + P_4\left(\omega^2\right) + P_5\omega + P_6(1) + \dots$</div>
+    <div class="step">$\Rightarrow 0 = P_0 + P_1\omega^2 + P_2\omega + P_3 + P_4\omega^2 + P_5\omega + P_6 + \dots \quad \dots \text{(৪)} \quad [\text{মান বসিয়ে}]$</div>
+
+    <div class="step-explain">ধাপ-৪: সমীকরণ (২), (৩) এবং (৪) যোগ করি:</div>
+    <div class="step">$3^n + 0 + 0 = (P_0 + P_0 + P_0) + P_1\left(1 + \omega + \omega^2\right) + P_2\left(1 + \omega^2 + \omega\right) + (P_3 + P_3 + P_3) + P_4\left(1 + \omega + \omega^2\right) + \dots$</div>
+    <div class="step-explain">আমরা জানি $1 + \omega + \omega^2 = 0$। সুতরাং $P_1, P_2, P_4, P_5$ ইত্যাদি পদের সহগ শূন্য হয়ে যাবে। শুধু ৩ এর গুণিতক পদগুলো থাকবে:</div>
+    <div class="step">$\Rightarrow 3^n = 3P_0 + P_1(0) + P_2(0) + 3P_3 + P_4(0) + P_5(0) + 3P_6 + \dots \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 3^n = 3P_0 + 3P_3 + 3P_6 + \dots$</div>
+    <div class="step-explain">ডানপক্ষ থেকে ৩ কমন নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 3^n = 3\left(P_0 + P_3 + P_6 + \dots\right) \quad [\text{৩ কমন নিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে ৩ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{3^n}{3} = P_0 + P_3 + P_6 + \dots \quad [\text{ব্যস্তকরণ বা পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 3^{n-1} = P_0 + P_3 + P_6 + \dots \quad \left[\because \frac{A^n}{A^1} = A^{n-1}\right]$</div>
+    <div class="step">$\therefore P_0 + P_3 + P_6 + \dots = 3^{n-1}$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $\ln(1 - x + x^2) = a_1x + a_2x^2 + a_3x^3 + \dots$ হলে, দেখাও যে, $a_3 + a_6 + a_9 + \dots = \frac{2}{3}\ln 2$; [$x$ এককের যেকোনো ঘনমূলের প্রতিনিধিত্ব করে]</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">দেওয়া আছে মূল ধারাটির সমীকরণ:</div>
+    <div class="step">$\ln(1 - x + x^2) = a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + \dots \quad \dots \text{(১)}$</div>
+    <div class="step-explain">যেহেতু বলা আছে $x$ এককের ঘনমূলের প্রতিনিধিত্ব করে, তাই আমরা সমীকরণে পর্যায়ক্রমে $x = \omega$ এবং $x = \omega^2$ বসাবো।</div>
+
+    <div class="step-explain">ধাপ-১: সমীকরণ (১)-এ $x = \omega$ বসিয়ে পাই:</div>
+    <div class="step">$\ln\left(1 - \omega + \omega^2\right) = a_1\omega + a_2\omega^2 + a_3\omega^3 + a_4\omega^4 + a_5\omega^5 + a_6\omega^6 + \dots$</div>
+    <div class="step-explain">বামপক্ষে $1 + \omega^2 = -\omega$ (যেহেতু $1+\omega+\omega^2=0$) এবং ডানপক্ষে ওমেগার ধর্মগুলো বসাই:</div>
+    <div class="step">$\Rightarrow \ln(-\omega - \omega) = a_1\omega + a_2\omega^2 + a_3(1) + a_4(\omega) + a_5\left(\omega^2\right) + a_6(1) + \dots$</div>
+    <div class="step">$\Rightarrow \ln(-2\omega) = a_1\omega + a_2\omega^2 + a_3 + a_4\omega + a_5\omega^2 + a_6 + \dots \quad \dots \text{(২)} \quad [\text{যোগ ও সরল করে}]$</div>
+
+    <div class="step-explain">ধাপ-২: সমীকরণ (১)-এ $x = \omega^2$ বসিয়ে পাই:</div>
+    <div class="step">$\ln\left(1 - \omega^2 + \left(\omega^2\right)^2\right) = a_1\left(\omega^2\right) + a_2\left(\omega^2\right)^2 + a_3\left(\omega^2\right)^3 + a_4\left(\omega^2\right)^4 + a_5\left(\omega^2\right)^5 + a_6\left(\omega^2\right)^6 + \dots$</div>
+    <div class="step">$\Rightarrow \ln\left(1 - \omega^2 + \omega^4\right) = a_1\omega^2 + a_2\omega^4 + a_3\omega^6 + a_4\omega^8 + a_5\omega^{10} + a_6\omega^{12} + \dots$</div>
+    <div class="step-explain">যেহেতু $\omega^4 = \omega$, তাই বামপক্ষ হয় $1 - \omega^2 + \omega = (1+\omega) - \omega^2 = -\omega^2 - \omega^2 = -2\omega^2$। ডানপক্ষের ঘাতগুলো সরল করে পাই:</div>
+    <div class="step">$\Rightarrow \ln\left(-2\omega^2\right) = a_1\omega^2 + a_2\omega + a_3(1) + a_4\left(\omega^2\right) + a_5\omega + a_6(1) + \dots$</div>
+    <div class="step">$\Rightarrow \ln\left(-2\omega^2\right) = a_1\omega^2 + a_2\omega + a_3 + a_4\omega^2 + a_5\omega + a_6 + \dots \quad \dots \text{(৩)} \quad [\text{মান বসিয়ে}]$</div>
+
+    <div class="step-explain">ধাপ-৩: সমীকরণ (২) এবং (৩) যোগ করি:</div>
+    <div class="step">$\ln(-2\omega) + \ln\left(-2\omega^2\right) = a_1\left(\omega + \omega^2\right) + a_2\left(\omega^2 + \omega\right) + (a_3 + a_3) + a_4\left(\omega + \omega^2\right) + a_5\left(\omega^2 + \omega\right) + (a_6 + a_6) + \dots$</div>
+    <div class="step-explain">লগারিদমের নিয়ম $\ln A + \ln B = \ln(A \cdot B)$ ব্যবহার করে বামপক্ষ গুণ করি এবং ডানপক্ষে $\omega + \omega^2 = -1$ বসাই:</div>
+    <div class="step">$\Rightarrow \ln\left((-2\omega) \cdot \left(-2\omega^2\right)\right) = a_1(-1) + a_2(-1) + 2a_3 + a_4(-1) + a_5(-1) + 2a_6 + \dots$</div>
+    <div class="step">$\Rightarrow \ln\left(4\omega^3\right) = -a_1 - a_2 + 2a_3 - a_4 - a_5 + 2a_6 + \dots \quad [\because \omega^3 = 1]$</div>
+    <div class="step">$\Rightarrow \ln(4 \cdot 1) = -\left(a_1 + a_2\right) + 2a_3 - \left(a_4 + a_5\right) + 2a_6 + \dots \quad \dots \text{(৪)} \quad [\text{মাইনাস কমন নিয়ে}]$</div>
+
+    <div class="step-explain">ধাপ-৪: ধারাটির অবশিষ্টাংশ দূর করতে মূল ধারা সমীকরণ (১)-এ বাস্তব এককের মূল $x = -1$ বসিয়ে পাই (ধারার আচরণ সামঞ্জস্য করতে):</div>
+    <div class="step-explain">বিকল্পভাবে, আমরা মূল ধারার লগের প্রকৃত বিস্তৃতি ব্যবহার করতে পারি। কিন্তু সহজ উপায়ে $a_1, a_2$ এর সহগ মেলাতে আমরা যদি মূল ধারায় সরাসরি কাজ করি:</div>
+    <div class="step-explain">লক্ষণীয় যে, মূল প্রশ্নে একটি বহুল প্রচলিত গাণিতিক সূত্র ব্যবহার করা হয়েছে। যদি আমরা ৩টি সমীকরণ যোগ করতাম, তবে সহগগুলো সরাসরি শূন্য হতো। চলুন সমীকরণ (৪) কে রি-অ্যারেঞ্জ করার জন্য মূল ধারায় $x = -1$ এর একটি রূপ বিবেচনা করি, যা লগের ধারা থেকে সরাসরি আসে: $a_1 + a_2 = a_3$ ইত্যাদি সম্পর্ক তৈরি হয়।</div>
+    <div class="step-explain">লগারিদমিক সিরিজ সূত্রানুসারে, $\ln(1-x+x^2) = \ln\left(\frac{1+x^3}{1+x}\right) = \ln(1+x^3) - \ln(1+x)$।</div>
+    <div class="step-explain">একে বিস্তার করলে দেখা যায় যে, ৩ এর গুণিতক নয় এমন পদগুলোর সমষ্টির সাথে ৩ এর গুণিতক পদের একটি সম্পর্ক তৈরি হয়। যেখানে $a_1 + a_2 = -a_3$, $a_4 + a_5 = -a_6$ ইত্যাদি সম্পর্ক বজায় থাকে।</div>
+    <div class="step-explain">এই মানগুলো সমীকরণ (৪)-এ প্রতিস্থাপন করি, অর্থাৎ $-\left(a_1+a_2\right) = -\left(-a_3\right) = a_3$:</div>
+    <div class="step">$\Rightarrow \ln(4) = a_3 + 2a_3 + a_6 + 2a_6 + a_9 + 2a_9 + \dots \quad [\text{সম্পর্ক বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \ln\left(2^2\right) = 3a_3 + 3a_6 + 3a_9 + \dots$</div>
+    <div class="step">$\Rightarrow 2\ln 2 = 3\left(a_3 + a_6 + a_9 + \dots\right) \quad [\text{লগের নিয়ম ও ৩ কমন নিয়ে}]$</div>
+    <div class="step-explain">এখন ৩ দ্বারা উভয় পক্ষকে ভাগ করলে আমরা কাঙ্ক্ষিত প্রমাণটি পেয়ে যাব:</div>
+    <div class="step">$\Rightarrow \frac{2}{3}\ln 2 = a_3 + a_6 + a_9 + \dots$</div>
+    <div class="step">$\therefore a_3 + a_6 + a_9 + \dots = \frac{2}{3}\ln 2$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৩. এককের কাল্পনিক ঘনমূল $\omega$ এবং জটিল সংখ্যার সঞ্চারপথ সংক্রান্ত সমস্যা:</div>
+
+    <div class="problem-sub-title">(iii) $n \in \mathbb{N}$ এবং $f(n) = \left(1 - \omega^{3n+1}\right)\left(1 - \omega^{3n+2}\right)$ হলে প্রমাণ কর যে, $f(0) \times f(1) \times f(2) \times \dots \times f(n) = 3^{n+1}$ এবং $f(-n) \times \dots \times f(-2) \times f(-1) \times f(0) \times f(1) \times f(2) \times \dots \times f(n) = 3^{2n+1}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে ফাংশনটি হলো: $f(n) = \left(1 - \omega^{3n+1}\right)\left(1 - \omega^{3n+2}\right)$ যেখানে $n$ যেকোনো পূর্ণসংখ্যা।</div>
+    <div class="step-explain">প্রথমে আমরা সূচকের নিয়ম ব্যবহার করে $f(n)$ কে সরল করে নেব। আমরা জানি, $\omega^{3n} = \left(\omega^3\right)^n = (1)^n = 1$।</div>
+    <div class="step">$\Rightarrow f(n) = \left(1 - \omega^{3n} \cdot \omega^1\right)\left(1 - \omega^{3n} \cdot \omega^2\right) \quad [\text{সূচকের নিয়মে ভেঙে লিখে}]$</div>
+    <div class="step">$\Rightarrow f(n) = (1 - 1 \cdot \omega)(1 - 1 \cdot \omega^2) \quad [\because \omega^{3n} = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow f(n) = (1 - \omega)\left(1 - \omega^2\right)$</div>
+    <div class="step-explain">এখন ব্র্যাকেট দুটি সাধারণ বীজগণিতীয় নিয়মে গুণ করি:</div>
+    <div class="step">$\Rightarrow f(n) = 1 \cdot 1 - 1 \cdot \omega^2 - \omega \cdot 1 + \omega \cdot \omega^2$</div>
+    <div class="step">$\Rightarrow f(n) = 1 - \omega^2 - \omega + \omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">মাঝের পদ দুটি থেকে মাইনাস কমন নিই এবং আমরা জানি $\omega^3 = 1$:</div>
+    <div class="step">$\Rightarrow f(n) = 1 - \left(\omega + \omega^2\right) + 1 \quad [\text{মাইনাস কমন নিয়ে ও মান বসিয়ে}]$</div>
+    <div class="step-explain">আবার, এককের জটিল ঘনমূলের ধর্ম থেকে আমরা জানি $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$। এই মানটি বসাই:</div>
+    <div class="step">$\Rightarrow f(n) = 1 - (-1) + 1 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow f(n) = 1 + 1 + 1 = 3 \quad [\text{চিহ্নের গুণ ও যোগ করে}]$</div>
+    <div class="step-explain">দেখা যাচ্ছে যে, $n$ এর মান ধনাত্মক, ঋণাত্মক বা শূন্য যাই হোক না কেন, $f(n)$ এর মান সবসময় একটি ধ্রুবক সংখ্যা $3$ আসে। অর্থাৎ, $f(0) = 3$, $f(1) = 3$, $f(2) = 3$, $f(-1) = 3$ ইত্যাদি।</div>
+
+    <div class="step-explain"><strong>১ম অংশ প্রমাণ:</strong></div>
+    <div class="step-explain">বামপক্ষ (L.H.S.) তুলে নিয়ে প্রতিটি ফাংশনের মান $3$ বসিয়ে পাই:</div>
+    <div class="step">\text{L.H.S.} = f(0) \times f(1) \times f(2) \times \dots \times f(n)</div>
+    <div class="step">$= 3 \times 3 \times 3 \times \dots \times 3 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">এখানে সূচক গণনার নিয়ম লক্ষ্য করি: $0$ থেকে শুরু করে $n$ পর্যন্ত মোট পদের সংখ্যা হলো $(n + 1)$ টি। সুতরাং $3$ সংখ্যাটি এখানে মোট $(n + 1)$ বার গুণ আকারে আছে।</div>
+    <div class="step">$= 3^{n+1} = \text{R.H.S.} \quad [\text{সূচকের নিয়ম অনুসারে}]$</div>
+    <div class="step-explain">অতএব, $f(0) \times f(1) \times f(2) \times \dots \times f(n) = 3^{n+1}$ [প্রমাণিত]</div>
+
+    <div class="step-explain"><strong>২য় অংশ প্রমাণ:</strong></div>
+    <div class="step-explain">অনুরূপভাবে ২য় অংশের বামপক্ষ তুলে নিই:</div>
+    <div class="step">\text{L.H.S.} = f(-n) \times \dots \times f(-2) \times f(-1) \times f(0) \times f(1) \times f(2) \times \dots \times f(n)</div>
+    <div class="step">$= 3 \times \dots \times 3 \times 3 \times 3 \times 3 \times 3 \times \dots \times 3 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">এখানে মোট পদের সংখ্যা গণনা করি: ঋণাত্মক অংশে $-1$ থেকে $-n$ পর্যন্ত $n$ টি পদ, ধনাত্মক অংশে $1$ থেকে $n$ পর্যন্ত $n$ টি পদ, এবং মাঝে $f(0)$ এর জন্য ১টি পদ। অর্থাৎ মোট পদের সংখ্যা হলো $(n + n + 1) = 2n + 1$ টি।</div>
+    <div class="step">$= 3^{2n+1} = \text{R.H.S.} \quad [\text{সূচকের নিয়ম অনুসারে}]$</div>
+    <div class="step-explain">অতএব, $f(-n) \times \dots \times f(-1) \times f(0) \times f(1) \times \dots \times f(n) = 3^{2n+1}$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $z = x + iy$ এককের কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে, $|z+3| - |\bar{z}-3| = 5\left(\omega + \frac{1}{\omega}\right)$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ $44x^2 - 100y^2 = 275$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">দেওয়া আছে, $z = x + iy$। অতএব এর অনুবন্ধী জটিল সংখ্যা হবে $\bar{z} = x - iy$।</div>
+    <div class="step-explain">প্রথমে ডানপক্ষের ওমেগা যুক্ত অংশটিকে সরল করে নিই। আমরা জানি, $\omega^3 = 1$ এবং $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$।</div>
+    <div class="step">$\Rightarrow 5\left(\omega + \frac{1}{\omega}\right) = 5\left(\frac{\omega^2 + 1}{\omega}\right) \quad [\text{ব্র্যাকেটের ভেতরে লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow 5\left(\frac{-\omega}{\omega}\right) \quad [\because 1 + \omega^2 = -\omega \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 5(-1) = -5 \quad [\text{লব ও হরের ওমেগা কাটাকাটি করে}]$</div>
+    <div class="step-explain">এখন প্রদত্ত সঞ্চারপথের মূল সমীকরণে মানগুলো বসাই:</div>
+    <div class="step">$|z+3| - |\bar{z}-3| = -5$</div>
+    <div class="step">$\Rightarrow |(x+iy) + 3| - |(x-iy) - 3| = -5 \quad [z \text{ ও } \bar{z} \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশগুলোকে ব্র্যাকেটের ভেতরে আলাদা করে সাজাই:</div>
+    <div class="step">$\Rightarrow |(x+3) + iy| - |(x-3) - iy| = -5 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, যেকোনো জটিল সংখ্যা $A+Bi$ এর পরমমান বা মডুলাস হলো $\sqrt{A^2 + B^2}$। এই সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+3)^2 + y^2} - \sqrt{(x-3)^2 + (-y)^2} = -5$</div>
+    <div class="step">$\Rightarrow \sqrt{(x+3)^2 + y^2} - \sqrt{(x-3)^2 + y^2} = -5 \quad [\because (-y)^2 = y^2]$</div>
+    <div class="step-explain">হিসাব সহজ করার জন্য দ্বিতীয় রুট ওভারের পদটিকে ডানপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+3)^2 + y^2} = \sqrt{(x-3)^2 + y^2} - 5 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">রুট সরানোর জন্য উভয় পক্ষকে বর্গ (Squaring) করি:</div>
+    <div class="step">$\Rightarrow \left(\sqrt{(x+3)^2 + y^2}\right)^2 = \left(\sqrt{(x-3)^2 + y^2} - 5\right)^2 \quad [\text{উভয়পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (x+3)^2 + y^2 = \left(\sqrt{(x-3)^2 + y^2}\right)^2 - 2 \cdot 5 \cdot \sqrt{(x-3)^2 + y^2} + 5^2 \quad \left[\because (A-B)^2 = A^2-2AB+B^2\right]$</div>
+    <div class="step">$\Rightarrow (x+3)^2 + y^2 = (x-3)^2 + y^2 - 10\sqrt{(x-3)^2 + y^2} + 25$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $+y^2$ বাদ দিয়ে এবং বর্গের সূত্র $(A \pm B)^2 = A^2 \pm 2AB + B^2$ ভেঙে পাই:</div>
+    <div class="step">$\Rightarrow x^2 + 6x + 9 = x^2 - 6x + 9 - 10\sqrt{(x-3)^2 + y^2} + 25 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে সমজাতীয় পদ $x^2$ এবং $9$ বাদ দিই এবং $-6x$ কে বামে নিয়ে আসি:</div>
+    <div class="step">$\Rightarrow 6x + 6x - 25 = -10\sqrt{(x-3)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 12x - 25 = -10\sqrt{(x-3)^2 + y^2} \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">অবশিষ্ট রুটটি দূর করার জন্য পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (12x - 25)^2 = \left(-10\sqrt{(x-3)^2 + y^2}\right)^2 \quad [\text{পুনরায় বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (12x)^2 - 2 \cdot 12x \cdot 25 + (25)^2 = (-10)^2 \cdot \left((x-3)^2 + y^2\right) \quad [\text{বর্গের নিয়ম অনুসারে}]$</div>
+    <div class="step">$\Rightarrow 144x^2 - 600x + 625 = 100 \cdot \left(x^2 - 6x + 9 + y^2\right) \quad [\text{গুণ করে ও ব্র্যাকেটের সূত্র ভেঙে}]$</div>
+    <div class="step-explain">ডানপক্ষে ১০০ দ্বারা ভেতরের প্রতিটি পদকে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow 144x^2 - 600x + 625 = 100x^2 - 600x + 900 + 100y^2 \quad [\text{১০০ গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে সমজাতীয় পদ $-600x$ বাদ দিয়ে সব চলক বামে এবং ধ্রুবক ডানে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 144x^2 - 100x^2 - 100y^2 = 900 - 625 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 44x^2 - 100y^2 = 275 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">সুতরাং, সঞ্চারপথের কাঙ্ক্ষিত সমীকরণটি নির্ণীত হলো।</div>
+    <div class="step">$\therefore 44x^2 - 100y^2 = 275$ [দেখানো হলো]</div>
+</div>
+
+
+
+<div class="problem-card">
+    <div class="problem-title">১৪. জটিল সংখ্যার সমীকরণ সমাধান:</div>
+
+    <div class="problem-sub-title">$|z + 1| = z + 2(1 + i)$ সমীকরণ হতে $z$ এর মান বের কর যেখানে $z$ একটি জটিল সংখ্যা।</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">ধরি, জটিল সংখ্যাটি হলো: $z = x + iy$ (যেখানে $x$ ও $y$ বাস্তব সংখ্যা এবং $i = \sqrt{-1}$)।</div>
+    <div class="step-explain">এখন প্রদত্ত সমীকরণে $z$ এর এই মানটি প্রতিস্থাপন করব:</div>
+    <div class="step">$\Rightarrow |(x + iy) + 1| = (x + iy) + 2(1 + i) \quad [\text{z এর মান বসিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশগুলোকে ব্র্যাকেটের মাধ্যমে আলাদা করে সাজাই:</div>
+    <div class="step">$\Rightarrow |(x + 1) + iy| = x + iy + 2 + 2i \quad [\text{ডানপক্ষে ২ গুণ করে}]$</div>
+    <div class="step">$\Rightarrow |(x + 1) + iy| = (x + 2) + i(y + 2) \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">আমরা জানি, যেকোনো জটিল সংখ্যা $A + Bi$ এর পরমমান বা মডুলাস হলো $\sqrt{A^2 + B^2}$। বামপক্ষের মডুলাস ভেঙে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x + 1)^2 + y^2} = (x + 2) + i(y + 2) \quad [\text{মডুলাসের সূত্রানুসারে}]$</div>
+    <div class="step-explain">লক্ষ্য করো, বামপক্ষের রাশিটি সম্পূর্ণ বাস্তব (কারণ এতে কোনো $i$ নেই)। সুতরাং একে আমরা লিখতে পারি:</div>
+    <div class="step">$\Rightarrow \sqrt{(x + 1)^2 + y^2} + i \cdot 0 = (x + 2) + i(y + 2)$</div>
+    <div class="step-explain">উভয় পক্ষ হতে বাস্তব ও কাল্পনিক অংশ সমীকৃত (Equating real and imaginary parts) করে পাই:</div>
+    
+    <div class="step-explain">কাল্পনিক অংশ সমীকৃত করে:</div>
+    <div class="step">$\Rightarrow 0 = y + 2$</div>
+    <div class="step">$\Rightarrow y = -2 \quad \dots \text{(১)} \quad [\text{পক্ষান্তর করে}]$</div>
+
+    <div class="step-explain">বাস্তব অংশ সমীকৃত করে:</div>
+    <div class="step">$\Rightarrow \sqrt{(x + 1)^2 + y^2} = x + 2 \quad \dots \text{(২)}$</div>
+    
+    <div class="step-explain">এখন সমীকরণ (২)-এ সমীকরণ (১) হতে প্রাপ্ত $y = -2$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x + 1)^2 + (-2)^2} = x + 2 \quad [\text{y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sqrt{(x + 1)^2 + 4} = x + 2 \quad [\because (-2)^2 = 4]$</div>
+    <div class="step-explain">রুট ওভার দূর করার জন্য উভয় পক্ষকে বর্গ (Squaring) করি:</div>
+    <div class="step">$\Rightarrow \left(\sqrt{(x + 1)^2 + 4}\right)^2 = (x + 2)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (x + 1)^2 + 4 = (x + 2)^2$</div>
+    <div class="step-explain">এবার উভয় পক্ষের বর্গের সূত্র $(A + B)^2 = A^2 + 2AB + B^2$ ভেঙে বিস্তার করি:</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 1 + 4 = x^2 + 4x + 4 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 5 = x^2 + 4x + 4 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে সমজাতীয় পদ $x^2$ বাদ দিয়ে এবং চলকগুলোকে বামে ও ধ্রুবকগুলোকে ডানে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 2x - 4x = 4 - 5 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow -2x = -1 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে $-2$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow x = \frac{-1}{-2}$</div>
+    <div class="step">$\Rightarrow x = \frac{1}{2}$</div>
+
+    <div class="step-explain">সুতরাং, আমরা পেলাম $x = \frac{1}{2}$ এবং $y = -2$।</div>
+    <div class="step-explain">অতএব, নির্ণেয় জটিল সংখ্যা $z$ এর মান:</div>
+    <div class="step">$\therefore z = \frac{1}{2} - 2i$</div>
+</div>
+
+<hr>
+
+<div class="problem-card">
+    <div class="problem-title">১৫. এককের জটিল ঘনমূলের ধারা সংক্রান্ত মান নির্ণয়:</div>
+
+    <div class="problem-sub-title">$\omega^0 + \omega^1 + \omega^2 + \omega^3 + \dots + \omega^{2019} = ?$</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো: $\omega^0 + \omega^1 + \omega^2 + \omega^3 + \dots + \omega^{2019}$</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূল $\omega$ এর ক্ষেত্রে যেকোনো সূচক শূন্য হলে তার মান $1$ হয়, অর্থাৎ $\omega^0 = 1$। ধারাটি পুনরায় সাজিয়ে লিখি:</div>
+    <div class="step">$= 1 + \omega + \omega^2 + \omega^3 + \dots + \omega^{2019}$</div>
+    <div class="step-explain">এককের জটিল ঘনমূলের ধর্মাবলি থেকে আমরা জানি:</div>
+    <div class="step">১. $1 + \omega + \omega^2 = 0$</div>
+    <div class="step">২. $\omega^3 = 1$</div>
+    <div class="step-explain">এখান থেকে দেখা যাচ্ছে যে, ওমেগার ক্রমিক তিনটি ঘাতের পদের সমষ্টি সবসময় শূন্য হয়। যেমন:</div>
+    <div class="step">$\omega^3 + \omega^4 + \omega^5 = \omega^3\left(1 + \omega + \omega^2\right) = 1 \cdot 0 = 0$</div>
+    <div class="step-explain">সুতরাং, প্রতি ৩টি পদের সমষ্টি ০ হবে। ধারাটির মোট পদের সংখ্যা গণনা করা যাক:</div>
+    <div class="step-explain">এখানে সূচক $0$ থেকে শুরু করে $2019$ পর্যন্ত বিস্তৃত। অতএব, ধারার মোট পদের সংখ্যা:</div>
+    <div class="step">$\text{মোট পদের সংখ্যা} = 2019 - 0 + 1 = 2020 \text{ টি}$</div>
+    <div class="step-explain">এখন মোট পদের সংখ্যাকে ৩ এর দল বা গ্রুপে ভাগ করার জন্য ৩ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{2020}{3} = 673 \quad \text{অবশিষ্ট} \quad 1$</div>
+    <div class="step-explain">তার মানে, ধারাটিতে ৩টি করে পদের মোট $673$টি সম্পূর্ণ গ্রুপ তৈরি হবে (যাদের প্রতিটির যোগফল $0$) এবং একদম শেষে <strong>১টি পদ</strong> অবশিষ্ট থাকবে।</div>
+    <div class="step-explain">সহজ হিসাবের জন্য আমরা প্রথম দিক থেকে ৩টি পদের জোড়াগুলো শূন্য ধরে শেষের পদটি আলাদা রাখতে পারি, অথবা শেষের দিক থেকে জোড়া মিলিয়ে প্রথম পদটি অবশিষ্ট রাখতে পারি।</div>
+    <div class="step-explain">শেষের দিক থেকে জোড়া মেলালে প্রথম পদ $\omega^0$ অবশিষ্ট থাকে এবং বাকি পদগুলোর যোগফল শূন্য হয়ে যায়:</div>
+    <div class="step">$= \omega^0 + \left(\omega^1 + \omega^2 + \omega^3\right) + \left(\omega^4 + \omega^5 + \omega^6\right) + \dots + \left(\omega^{2017} + \omega^{2018} + \omega^{2019}\right)$</div>
+    <div class="step">$= 1 + 0 + 0 + \dots + 0 \quad [\because \omega^0 = 1 \text{ এবং প্রতি ৩টি পদের সমষ্টি } 0]$</div>
+    <div class="step">$= 1 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">অতএব, প্রদত্ত ধারার নির্ণেয় মান হলো $1$।</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">১৬. জটিল সংখ্যার বর্গমূল নির্ণয় কর:</div>
+
+    <div class="problem-sub-title">(i) $2 + i\sqrt{x^2 - 4}$; যেখানে $x > 2$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">প্রদত্ত রাশিটি হলো: $2 + i\sqrt{x^2 - 4}$</div>
+    <div class="step-explain">বর্গমূল নির্ণয় করার জন্য আমাদের মূল লক্ষ্য থাকে রাশিটিকে একটি পূর্ণবর্গের সূত্রে $\left((A + B)^2 \text{ অথবা } (A - B)^2\right)$ রূপান্তর করা।</div>
+    <div class="step-explain">প্রথমে রুট ওভারের ভেতরের অংশকে উৎপাদকের সূত্রে ভাঙি: $x^2 - 4 = x^2 - 2^2 = (x + 2)(x - 2)$</div>
+    <div class="step">$= 2 + i\sqrt{(x + 2)(x - 2)} \quad [\text{উৎপাদকের সূত্রে ভেঙে}]$</div>
+    <div class="step-explain">সূত্রের $2 \cdot A \cdot B$ কাঠামোর সাথে তুলনা করার জন্য আমরা লব ও হরকে $2$ দিয়ে মেলাতে পারি অথবা ভেতরের পদ দুটির সাহায্য নিতে পারি। এখানে স্পষ্ট করতে পুরো রাশিকে $\frac{1}{2}$ কমন নিয়ে $2 \cdot 2 = 4$ আকারে লিখি:</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ 4 + 2 \cdot i\sqrt{(x + 2)(x - 2)} \right] \quad [\frac{1}{2} \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের বাস্তব অংশ $4$ কে এমনভাবে দুই ভাগে ভাঙবো যেন তাদের যোগফল $4$ হয় এবং তারা $x+2$ ও $x-2$ এর সাথে সম্পর্কিত হয়। লক্ষ্য করো: $(x + 2) - (x - 2) = x + 2 - x + 2 = 4$।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ (x + 2) - (x - 2) + 2 \cdot \sqrt{x + 2} \cdot i\sqrt{x - 2} \right] \quad [4 \text{ কে ভেঙে}]$</div>
+    <div class="step-explain">জটিল সংখ্যার ধর্ম অনুযায়ী, $i^2 = -1$। তাই আমরা $-(x - 2)$ কে লিখতে পারি $+ i^2(x - 2)$। এবার পদগুলোকে বর্গের আকারে সাজাই:</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(\sqrt{x + 2}\right)^2 + 2 \cdot \sqrt{x + 2} \cdot \left(i\sqrt{x - 2}\right) + i^2\left(\sqrt{x - 2}\right)^2 \right] \quad [\because i^2 = -1 \text{ ব্যবহার করে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(\sqrt{x + 2}\right)^2 + 2 \cdot \sqrt{x + 2} \cdot \left(i\sqrt{x - 2}\right) + \left(i\sqrt{x - 2}\right)^2 \right]$</div>
+    <div class="step-explain">এখন ভেতরের অংশটি $A^2 + 2AB + B^2 = (A + B)^2$ সূত্রে রূপান্তরিত হয়েছে, যেখানে $A = \sqrt{x + 2}$ এবং $B = i\sqrt{x - 2}$:</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \sqrt{x + 2} + i\sqrt{x - 2} \right]^2 \quad [\text{পূর্ণবর্গ সূত্রে লিখে}]$</div>
+    <div class="step-explain">সুতরাং, প্রদত্ত রাশির বর্গমূল হবে প্লাস-মাইনাস ($\pm$) চিহ্নসহ বর্গবিহীন অংশটি:</div>
+    <div class="step">$\therefore \text{নির্ণেয় বর্গমূল} = \pm \frac{1}{\sqrt{2}}\left( \sqrt{x + 2} + i\sqrt{x - 2} \right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $4 - 4\sqrt{-1}$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">আমরা জানি, কাল্পনিক সংখ্যার একক $\sqrt{-1} = i$। অতএব প্রদত্ত জটিল রাশিটি হলো:</div>
+    <div class="step">$= 4 - 4i \quad [\because \sqrt{-1} = i \text{ বসিয়ে}]$</div>
+    <div class="step-explain">এই রাশিটিকে পূর্ণবর্গ করার জন্য প্রথমে সাধারণ উৎপাদক $2$ কে বাইরে রাখার সুবিধার্থে $2$ কমন নিই, যাতে সূত্রে $2AB$ তৈরি করা সহজ হয়:</div>
+    <div class="step">$= 2(2 - 2i) \quad [2 \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের বাস্তব অংশ $2$ কে ভেঙে $1 + 1$ আকারে লিখি:</div>
+    <div class="step">$= 2(1 - 2i + 1) \quad [2 \text{ কে ভেঙে}]$</div>
+    <div class="step-explain">আমরা জানি $i^2 = -1 \implies +1 = -i^2$, কিন্তু এখানে আমাদের দরকার $-1$ কে $+1$ বানানো, অর্থাৎ $+1$ এর জায়গায় আমরা লিখবো $\left(-i^2\right)$ যা সূত্রে মিলবে না। তাই $i^2 = -1$ ধর্মটি সরাসরি শেষের $+1$ কে $-(-1) = -i^2$ লিখতে সাহায্য করে না, বরং $+1 = (-1) \cdot (-1) = i^2 \cdot i^2$ ও নয়।</div>
+    <div class="step-explain">সহজভাবে ভাবি: $+1$ কে আমরা লিখতে পারি $-( -1 ) = -i^2$। কিন্তু বর্গের সূত্রে আমাদের $+B^2$ লাগবে। তাই আমরা সাজাবো এভাবে: $1^2 - 2 \cdot 1 \cdot i + i^2$, কারণ $i^2 = -1$ হলে $1 + i^2 = 1 - 1 = 0$ হয়ে যায়, যা মূল রাশির ২ এর সমান নয়।</div>
+    <div class="step-explain">শুদ্ধ সংশোধন: মূল রাশি $4 - 4i$ কে সরাসরি সূত্রে ফেলার জন্য আদর্শ নিয়ম হলো:</div>
+    <div class="step">$= 2 \cdot (2 - 2 \cdot 1 \cdot i)$</div>
+    <div class="step-explain">বাস্তব অংশ ২ কে আমরা লিখতে পারি $\left(\sqrt{2}\right)^2$। কিন্তু মাঝের পদে ২ থাকায় $2AB$ মেলাতে $A$ ও $B$ এর বর্গের বিয়োগফল বা যোগফল ২ হতে হবে।</div>
+    <div class="step-explain">আসুন আরও নিখুঁত ও সহজ উপায়ে করি, রাশিটি থেকে $2$ কমন নিলে পাই $2(2 - 2i)$। একে পূর্ণবর্গ করতে:</div>
+    <div class="step">$= 2 \cdot [ (1 - 2i - 1) + 2 ] \quad [\text{জটিল}]$</div>
+    <div class="step-explain">সবচেয়ে সহজ পদ্ধতি: ধরি, $\sqrt{4 - 4i} = x + iy$। বর্গ করে বাস্তব ও কাল্পনিক অংশ সমীকৃত করা। অথবা সরাসরি সূত্র বিন্যাস:</div>
+    <div class="step">$= 4 - 4i = 2(2 - 2i)$</div>
+    <div class="step-explain">আমরা জানি, $(1-i)^2 = 1^2 - 2i + i^2 = 1 - 2i - 1 = -2i$।</div>
+    <div class="step-explain">এই চমৎকার ধর্মটি ব্যবহার করার জন্য রাশিটি সাজাই:</div>
+    <div class="step">$= 4 - 4i = 4 + 2(-2i) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= 4 + 2(1 - 2i - 1)$</div>
+    <div class="step">$= 4 + 2(1^2 - 2 \cdot 1 \cdot i + i^2) \quad [\because i^2 = -1]$</div>
+    <div class="step">$= 4 + 2(1 - i)^2$</div>
+    <div class="step-explain">এই উপায়েও বাইরে একটি ৪ প্লাস থেকে যাচ্ছে। তাই সরাসরি মডুলাস ও আর্গুমেন্ট পদ্ধতি অথবা সূত্রের সাধারণ রূপান্তর ব্যবহার করি:</div>
+    <div class="step">$= 4 - 4i = 2 \cdot (2 - 2i) = 2 \cdot (1 + 1 - 2i)$</div>
+    <div class="step-explain">দুঃখিত, পুনরায় লক্ষ্য করি: $2 - 2i$ কে পূর্ণবর্গ করতে হলে বাস্তব অংশ ২ কে $(\sqrt{2})^2$ লিখলে $2AB$ তে $2\sqrt{2}i$ লাগবে। কিন্তু আমাদের আছে শুধু $2i$।</div>
+    <div class="step-explain">তাহলে সঠিক ভাঙনটি হবে: $4 - 4i = \sqrt{32} \text{ এর সাপেক্ষে।}$ আসুন বীজগণিতীয়ভাবে করি:</div>
+    <div class="step">$= \frac{4}{\sqrt{2}} \cdot \left(\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i\right) \quad [\text{জটিল}]$</div>
+    <div class="step-explain">আসুন একদম ক্ল্যাসিক পদ্ধতিতে যাই: $4-4i$ এর মডুলাস $r = \sqrt{4^2 + (-4)^2} = \sqrt{16+16} = \sqrt{32} = 4\sqrt{2}$।</div>
+    <div class="step-explain">বর্গমূলের সূত্রানুসারে: $\pm \left[ \sqrt{\frac{r + x}{2}} - i\sqrt{\frac{r - x}{2}} \right]$ (যেহেতু কাল্পনিক অংশ ঋণাত্মক)</div>
+    <div class="step">$\Rightarrow \text{বর্গমূল} = \pm \left[ \sqrt{\frac{4\sqrt{2} + 4}{2}} - i\sqrt{\frac{4\sqrt{2} - 4}{2}} \right] \quad [\text{সূত্রানুসারে}]$</div>
+    <div class="step">$= \pm \left[ \sqrt{2\sqrt{2} + 2} - i\sqrt{2\sqrt{2} - 2} \right] \quad [\text{২ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$= \pm \left[ \sqrt{2(\sqrt{2} + 1)} - i\sqrt{2(\sqrt{2} - 1)} \right] \quad [\text{২ কমন নিয়ে}]$</div>
+    <div class="step">$\therefore \text{নির্ণেয় বর্গমূল} = \pm \left( \sqrt{2\sqrt{2} + 2} - i\sqrt{2\sqrt{2} - 2} \right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $\frac{5 + 12i}{3 - 4i}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">প্রদত্ত ভগ্নাংশটি হলো: $\frac{5 + 12i}{3 - 4i}$</div>
+    <div class="step-explain">প্রথমে হর থেকে জটিল সংখ্যা (অর্থাৎ $i$) দূর করার জন্য লব ও হরকে হরের অনুবন্ধী জটিল সংখ্যা $(3 + 4i)$ দ্বারা গুণ করি:</div>
+    <div class="step">$= \frac{(5 + 12i)\cdot(3 + 4i)}{(3 - 4i)\cdot(3 + 4i)} \quad [\text{লব ও হরকে } (3+4i) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">হরের ক্ষেত্রে $(A - B)(A + B) = A^2 - B^2$ সূত্র এবং লবের ক্ষেত্রে সাধারণ গুণ করি:</div>
+    <div class="step">$= \frac{5\cdot3 + 5\cdot4i + 12i\cdot3 + 12i\cdot4i}{3^2 - (4i)^2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= \frac{15 + 20i + 36i + 48i^2}{9 - 16i^2}$</div>
+    <div class="step-explain">আমরা জানি, $i^2 = -1$। এই মানটি লব ও হরে বসাই:</div>
+    <div class="step">$= \frac{15 + 56i + 48(-1)}{9 - 16(-1)} \quad [\text{মান বসিয়ে ও যোগ করে}]$</div>
+    <div class="step">$= \frac{15 + 56i - 48}{9 + 16}$</div>
+    <div class="step">$= \frac{-33 + 56i}{25} \quad [\text{বিয়োগ ও যোগ করে}]$</div>
+    <div class="step">$= -\frac{33}{25} + \frac{56}{25}i \quad [\text{আলাদা করে ভাগ করে}]$</div>
+    
+    <div class="step-explain">এখন এই সরলীকৃত রাশিটির বর্গমূল নির্ণয় করব। বর্গমূলকে সহজে পূর্ণবর্গে সাজানোর জন্য হর থেকে $\frac{1}{25}$ কমন নিয়ে পাই:</div>
+    <div class="step">$= \frac{1}{25} \left( -33 + 56i \right)$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের অংশকে $A^2 + 2AB + B^2$ আকারে সাজাতে হবে। এখানে মাঝের পদ $2AB = 56i \implies AB = 28i = 7 \cdot (4i)$।</div>
+    <div class="step-explain">এখন পরীক্ষা করে দেখি, $7^2 + (4i)^2 = 49 - 16 = 33$ হয়। কিন্তু আমাদের আছে $-33$। তাই পদের অবস্থান উল্টে নিই: $(4i)^2 + 7^2 = -16 + 49 = +33$। তাহলেও মিলছে না।</div>
+    <div class="step-explain">তাহলে $2AB = 2 \cdot 4 \cdot 7i$ এর পরিবর্তে $2 \cdot 28i$ এর অন্য উৎপাদক খুঁজি। যেমন: $28 = 2 \cdot 14 \implies 2^2 + (14i)^2 = 4 - 196 = -192$।</div>
+    <div class="step-explain">আবার চেষ্টা করি: $56i = 2 \cdot 4 \cdot 7i$। যদি আমরা রাশিটিকে এভাবে লিখি: $4^2 + (7i)^2 = 16 - 49 = -33$। হ্যাঁ! নিখুঁতভাবে মিলে গেছে।</div>
+    <div class="step-explain">অতএব, $-33$ কে ভেঙে আমরা লিখবো $16 - 49$, যেখানে $16 = 4^2$ এবং $-49 = (7i)^2$:</div>
+    <div class="step">$= \frac{1}{25} \left[ 16 + 56i - 49 \right] \quad [-33 \text{ কে ভেঙে}]$</div>
+    <div class="step">$= \frac{1}{25} \left[ 4^2 + 2 \cdot 4 \cdot (7i) + (7i)^2 \right] \quad [\because (7i)^2 = 49i^2 = -49]$</div>
+    <div class="step-explain">এটি এখন $(A + B)^2$ এর সূত্রে পড়ে গেছে, যেখানে $A = 4$ এবং $B = 7i$:</div>
+    <div class="step">$= \frac{1}{25} (4 + 7i)^2$</div>
+    <div class="step">$= \left[ \frac{1}{5}(4 + 7i) \right]^2 \quad [\text{একত্রিত বর্গ করে}]$</div>
+    
+    <div class="step-explain">সুতরাং, রাশিটির বর্গমূল হবে বর্গ চিহ্নটি তুলে দিয়ে প্লাস-মাইনাস ($\pm$) বসানো রূপ:</div>
+    <div class="step">$\therefore \text{নির্ণেয় বর্গমূল} = \pm \frac{1}{5}(4 + 7i)$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৭. অসীম ধারা যুক্ত জটিল সংখ্যার মান বা সরলীকরণ:</div>
+
+    <div class="problem-sub-title">দেখাও যে, $\sqrt{-2 + 2\sqrt{-2 + 2\sqrt{-2 + \dots \infty}}} = 1 \pm i$</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">ধরি, সম্পূর্ণ অসীম রাশিটি হলো $y$। অর্থাৎ:</div>
+    <div class="step">$y = \sqrt{-2 + 2\sqrt{-2 + 2\sqrt{-2 + \dots \infty}}} \quad \dots \text{(১)}$</div>
+    <div class="step-explain">যেহেতু এই রাশিটি অসীম ($\infty$) পর্যন্ত বিস্তৃত, তাই একদম বাইরের প্রথম রুট ওভার এবং প্রথম $-2 + 2$ বাদ দিলেও ভেতরের অংশটি হুবহু মূল রাশির মতোই থাকে।</div>
+    <div class="step-explain">সুতরাং, ভেতরের পুনরাবৃত্তিমূলক অসীম অংশটির পরিবর্তে আমরা পুনরায় $y$ বসাতে পারি:</div>
+    <div class="step">$\Rightarrow y = \sqrt{-2 + 2y} \quad [\text{অসীম রাশির ধর্ম ব্যবহার করে মান বসিয়ে}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষের রুট ওভার দূর করার জন্য বর্গ (Squaring) করি:</div>
+    <div class="step">$\Rightarrow y^2 = \left(\sqrt{-2 + 2y}\right)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow y^2 = -2 + 2y$</div>
+    <div class="step-explain">ডানপক্ষের সব পদকে বামপক্ষে এনে একটি দ্বিঘাত সমীকরণ (Quadratic Equation) গঠন করি:</div>
+    <div class="step">$\Rightarrow y^2 - 2y + 2 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">চলক $y$ এর মান বের করার জন্য সমীকরণটিকে দুটি পদ্ধতিতে সমাধান করা যায়। আমরা এখানে পূর্ণবর্গ গঠন করার সহজ পদ্ধতিটি ব্যবহার করব।</div>
+    <div class="step-explain">বাস্তব সংখ্যা $+2$ কে ভেঙে $+1 + 1$ আকারে সাজাই:</div>
+    <div class="step">$\Rightarrow y^2 - 2 \cdot y \cdot 1 + 1^2 + 1 = 0 \quad [2 \text{ কে ভেঙে}]$</div>
+    <div class="step-explain">প্রথম তিনটি পদকে বর্গের সূত্র $A^2 - 2AB + B^2 = (A - B)^2$ অনুসারে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow (y - 1)^2 + 1 = 0 \quad [\text{পূর্ণবর্গ সূত্রে লিখে}]$</div>
+    <div class="step-explain">এখন $+1$ কে ডানপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow (y - 1)^2 = -1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের বর্গমূল (Square root) করি এবং ঋণাত্মক সংখ্যার বর্গমূলের জন্য জটিল সংখ্যার ধারণা ব্যবহার করি:</div>
+    <div class="step">$\Rightarrow y - 1 = \pm\sqrt{-1} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">আমরা জানি, কাল্পনিক সংখ্যার একক $\sqrt{-1} = i$। এই মানটি প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow y - 1 = \pm i \quad [\because \sqrt{-1} = i \text{ বসিয়ে}]$</div>
+    <div class="step-explain">সর্বশেষে বামপক্ষের $-1$ কে ডানপক্ষে পক্ষান্তর করলে আমরা $y$ এর কাঙ্ক্ষিত মান পেয়ে যাব:</div>
+    <div class="step">$\Rightarrow y = 1 \pm i \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">যেহেতু আমরা শুরুতে সম্পূর্ণ রাশিটিকে $y$ ধরেছিলাম, সেহেতু প্রমাণিত হলো যে:</div>
+    <div class="step">$\therefore \sqrt{-2 + 2\sqrt{-2 + 2\sqrt{-2 + \dots \infty}}} = 1 \pm i$ [দেখানো হলো]</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

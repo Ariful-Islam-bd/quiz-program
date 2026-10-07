@@ -1,0 +1,104 @@
+/* frontend/css/dark-mode.css */
+/* Version: 1.0.0 */
+/* Description: ডার্ক মোড স্টাইল */
+
+body.dark {
+    --bg: #1a1a1a;
+    --card: #2d2d2d;
+    --text: #ffffff;
+    --text-light: #b0b0b0;
+    --muted: #666666;
+    --accent: #64b5f6;
+    --accent-dark: #42a5f5;
+    --success: #66bb6a;
+    --success-dark: #4caf50;
+    --danger: #f44336;
+    --danger-dark: #d32f2f;
+    --warning: #ffb74d;
+    --border: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific adjustments */
+body.dark .option {
+    background: #3d3d3d;
+}
+
+body.dark .option:hover:not(.disabled) {
+    background: #4d4d4d;
+}
+
+body.dark .filter-select {
+    background: #3d3d3d;
+}
+
+body.dark .side-menu {
+    background: #2d2d2d;
+}
+
+body.dark .profile-box {
+    background: #2d2d2d;
+}
+
+body.dark .form-control {
+    background: #3d3d3d;
+    border-color: #404040;
+    color: white;
+}
+
+body.dark .form-control:focus {
+    border-color: var(--accent);
+}
+
+body.dark .modal-content {
+    background: #2d2d2d;
+}
+
+body.dark .leaderboard-list li {
+    background: #3d3d3d;
+}
+
+body.dark .review-item {
+    background: #3d3d3d;
+}
+
+body.dark .floating-btn {
+    background: #2d2d2d;
+    color: white;
+}
+
+body.dark .menu-btn {
+    color: white;
+}
+
+body.dark .close-btn {
+    color: white;
+}
+
+body.dark .menu-item:hover {
+    background: #3d3d3d;
+}
+
+body.dark .settings-block {
+    background: #3d3d3d;
+}
+
+body.dark .stat-row.highlight {
+    background: #3d3d3d;
+}
+
+body.dark .leaderboard-section {
+    background: #3d3d3d;
+}
+
+body.dark .toggle-slider {
+    background-color: #404040;
+}
+
+body.dark .toggle-slider:before {
+    background-color: white;
+}
+
+body.dark .modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}

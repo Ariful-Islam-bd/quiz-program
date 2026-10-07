@@ -1,0 +1,2324 @@
+/* ============================================================
+   File Path: frontend/css/profile.css
+   Version: 4.0.0
+   Description: প্রোফাইল পেজ ও ক্রপিং মডালের সম্পূর্ণ স্টাইল
+   Author: Frontend Team
+   ============================================================ */
+
+/* ============================================================
+   ১. প্রোফাইল পেজ র‍্যাপার
+   ============================================================ */
+#profilePageWrapper {
+    padding: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+}
+
+/* ============================================================
+   ২. প্রোফাইল টপ বার (Home Button)
+   ============================================================ */
+.profile-top-bar {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    right: 16px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-top-bar .home-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition);
+}
+
+.profile-top-bar .home-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-top-bar .home-btn .home-icon {
+    font-size: 1.2rem;
+}
+
+.profile-top-bar .close-btn {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.profile-top-bar .close-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(90deg);
+}
+
+/* ============================================================
+   ৩. প্রোফাইল হেডার ও কভার
+   ============================================================ */
+.profile-header-section {
+    position: relative;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-cover {
+    position: relative;
+    height: 350px;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.profile-cover.has-cover {
+    background: none;
+}
+
+.profile-cover .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.profile-cover.has-cover .cover-image {
+    display: block;
+}
+
+.profile-cover .cover-image.loading {
+    opacity: 0.5;
+    filter: blur(4px);
+}
+
+.profile-cover:hover .cover-overlay {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cover-actions {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.cover-btn {
+    pointer-events: auto;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    min-width: 44px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cover-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cover-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cover-btn.danger {
+    background: rgba(244, 67, 54, 0.3);
+    border-color: rgba(244, 67, 54, 0.4);
+}
+
+.cover-btn.danger:hover {
+    background: rgba(244, 67, 54, 0.55);
+    border-color: rgba(244, 67, 54, 0.6);
+}
+
+.cover-btn.danger:active {
+    background: rgba(244, 67, 54, 0.7);
+}
+
+.cover-btn .btn-icon {
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.cover-btn .btn-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cover-btn.icon-only {
+    padding: 10px 14px;
+    min-width: 44px;
+    justify-content: center;
+}
+
+.cover-btn.icon-only .btn-text {
+    display: none;
+}
+
+/* ============================================================
+   ৪. কভার লোডিং অ্যানিমেশন
+   ============================================================ */
+@keyframes coverPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.cover-loading {
+    animation: coverPulse 1.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   ৫. অ্যাভাটার সেকশন
+   ============================================================ */
+.profile-avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 24px 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+.profile-avatar-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--bg);
+}
+
+.profile-avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-edit-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 2px solid var(--card);
+    transition: all var(--transition);
+}
+
+.avatar-edit-badge:hover {
+    transform: scale(1.1);
+    background: var(--accent-dark);
+}
+
+.profile-name-title h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+}
+
+.profile-name-title p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 4px 0 0;
+}
+
+/* ============================================================
+   ৬. ট্যাব নেভিগেশন
+   ============================================================ */
+.profile-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 24px;
+    border-bottom: 2px solid var(--border);
+    background: var(--card);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.profile-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    padding: 14px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--text);
+    background: var(--bg);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* ============================================================
+   ৭. ট্যাব কন্টেন্ট
+   ============================================================ */
+.tab-content {
+    display: none;
+    padding: 24px;
+    background: var(--card);
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   ৮. প্রোফাইল ফর্ম
+   ============================================================ */
+.profile-form {
+    max-width: 700px;
+}
+
+.profile-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 4px;
+}
+
+.profile-form .form-group {
+    margin-bottom: 12px;
+}
+
+.profile-form .form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.profile-form .form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: border-color var(--transition);
+}
+
+.profile-form .form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+/* ============================================================
+   ৯. পরিসংখ্যান গ্রিড
+   ============================================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px var(--shadow);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    display: block;
+}
+
+/* ============================================================
+   ১০. প্রগ্রেস সেকশন
+   ============================================================ */
+.profile-progress-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.progress-label strong {
+    color: var(--accent);
+}
+
+/* ============================================================
+   ১১. অ্যাভাটার ম্যানেজমেন্ট
+   ============================================================ */
+.avatar-management {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.avatar-preview-large {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.avatar-large-wrapper {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--border);
+    background: var(--bg);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.avatar-large-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-large-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.avatar-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.avatar-actions-grid .btn {
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ============================================================
+   ১২. ইমোজি গ্যালারি
+   ============================================================ */
+.emoji-gallery {
+    margin-top: 20px;
+}
+
+.emoji-gallery h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.emoji-category {
+    margin-bottom: 16px;
+}
+
+.emoji-category:last-child {
+    margin-bottom: 0;
+}
+
+.emoji-category-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    padding-left: 4px;
+    letter-spacing: 0.3px;
+}
+
+.emoji-category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.emoji-option {
+    aspect-ratio: 1;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border);
+    background: var(--bg);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 48px;
+}
+
+.emoji-option:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 16px var(--shadow);
+    background: var(--card);
+}
+
+.emoji-option:active {
+    transform: scale(0.95);
+}
+
+.emoji-option.selected {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.08);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2), 0 4px 12px var(--shadow);
+}
+
+.emoji-option.selected::after {
+    content: '✓';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+}
+
+.emoji-option[title] {
+    position: relative;
+}
+
+.emoji-option[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    color: var(--text);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px var(--shadow);
+    border: 1px solid var(--border);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.emoji-option[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--border);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ============================================================
+   ১৩. লাইভ অ্যাভাটার
+   ============================================================ */
+.live-avatar-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card);
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px var(--shadow);
+    border: 1px solid var(--border);
+    z-index: 100;
+    font-size: 0.9rem;
+}
+
+.live-avatar-toggle .toggle-switch {
+    width: 40px;
+    height: 20px;
+}
+
+.live-avatar-toggle .toggle-slider:before {
+    height: 16px;
+    width: 16px;
+}
+
+.live-avatar-toggle input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+}
+
+/* ============================================================
+   ১৪. ক্রপিং মডাল (আধুনিক ১:১ ভিউপোর্ট)
+   ============================================================ */
+
+/* ✅ মডাল কন্টেইনার */
+.crop-modal {
+    max-width: 900px !important;
+    width: 95% !important;
+    max-height: 95vh !important;
+    padding: 20px !important;
+}
+
+.crop-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.crop-modal .modal-header h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+/* ✅ কন্টেইনার লেআউট */
+.crop-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* ✅ ভিউপোর্ট (১:১) - আধুনিক architecture */
+.crop-viewport-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: #1a1a1a;
+    touch-action: none;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.crop-viewport-wrapper:active {
+    cursor: grabbing;
+}
+
+/* ✅ ইমেজ কন্টেইনার - CSS ট্রান্সফর্ম দ্বারা কন্ট্রোল */
+.crop-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.crop-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: none;
+    will-change: transform;
+}
+
+/* ✅ ওভারলে মাস্ক - শুধু ভিজ্যুয়াল গাইড */
+.crop-overlay-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Circle Shape */
+.crop-overlay-mask.shape-circle {
+    -webkit-mask-image: radial-gradient(
+        circle at center,
+        transparent 70%,
+        black 71%
+    );
+    mask-image: radial-gradient(
+        circle at center,
+        transparent 70%,
+        black 71%
+    );
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Square Shape */
+.crop-overlay-mask.shape-square {
+    -webkit-mask-image: none;
+    mask-image: none;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+/* Rounded Shape */
+.crop-overlay-mask.shape-rounded {
+    -webkit-mask-image: radial-gradient(
+        circle at center,
+        transparent 70%,
+        black 71%
+    );
+    mask-image: radial-gradient(
+        circle at center,
+        transparent 70%,
+        black 71%
+    );
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+}
+
+/* ✅ প্রিভিউ সেকশন */
+.crop-preview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.crop-preview-label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    padding: 0 4px;
+}
+
+.crop-preview-label .preview-size {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ✅ প্রিভিউ কন্টেইনার - ১:১ ফিক্সড */
+.crop-preview-wrapper {
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    box-shadow: 0 4px 20px var(--shadow);
+    background: var(--card);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.crop-preview-circle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bg);
+    position: relative;
+}
+
+.crop-preview-circle canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    border-radius: 50% !important;
+}
+
+.crop-preview-circle .preview-placeholder {
+    font-size: 3rem;
+    opacity: 0.3;
+    color: var(--text-light);
+}
+
+.crop-preview-circle.updating {
+    animation: previewPulse 0.3s ease;
+}
+
+@keyframes previewPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.95); opacity: 0.7; }
+}
+
+/* ✅ ক্রপ কন্ট্রোলস */
+.crop-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* স্লাইডার গ্রুপ */
+.crop-slider-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.crop-slider-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-light);
+    min-width: 50px;
+}
+
+.crop-slider-group input[type="range"] {
+    flex: 1;
+    accent-color: var(--accent);
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.crop-slider-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: 2px solid var(--card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.crop-slider-group input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: 2px solid var(--card);
+}
+
+.crop-slider-group span {
+    font-size: 0.8rem;
+    min-width: 44px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* শেপ বাটন */
+.crop-shape-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.shape-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--transition);
+}
+
+.shape-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.shape-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+}
+
+/* অ্যাকশন বাটন */
+.crop-actions {
+    display: flex;
+    gap: 8px;
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+}
+
+.crop-actions .btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+/* ফিল্টার বাটন */
+.crop-filter-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+}
+
+.filter-btn {
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: all var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* ✅ মডাল অ্যাকশন */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   ১৫. কার্যকলাপ
+   ============================================================ */
+.activity-list {
+    min-height: 200px;
+}
+
+.empty-activity {
+    text-align: center;
+    color: var(--text-light);
+    padding: 40px 0;
+    font-size: 1.1rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    animation: slideIn 0.3s ease;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.activity-text {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ============================================================
+   ১৬. কনফর্মেশন মডাল
+   ============================================================ */
+.modal-overlay .modal-content .btn-danger {
+    background: var(--danger);
+    color: #fff;
+}
+
+.modal-overlay .modal-content .btn-danger:hover {
+    background: var(--danger-dark);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   ১৭. ইউটিলিটি ক্লাস
+   ============================================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+/* ============================================================
+   ১৮. স্ক্রোলবার স্টাইল
+   ============================================================ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--muted);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
+
+/* ============================================================
+   ১৯. ফ্লোট অ্যাভাটার অ্যানিমেশন
+   ============================================================ */
+@keyframes floatAvatar {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-8px) scale(1.02); }
+}
+
+/* ============================================================
+   ২০. ব্রাউজার সাপোর্ট ফিক্স
+   ============================================================ */
+@supports not (aspect-ratio: 1 / 1) {
+    .crop-viewport-wrapper {
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+    }
+    
+    .crop-viewport-wrapper .crop-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .crop-preview-wrapper {
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+    }
+    
+    .crop-preview-wrapper .crop-preview-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@supports not (mask-image: radial-gradient(circle, transparent 30%, black 31%)) {
+    .crop-overlay-mask.shape-circle {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+    }
+    
+    .crop-overlay-mask.shape-rounded {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 16px;
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* ============================================================
+   ২১. রেসপনসিভ ডিজাইন
+   ============================================================ */
+
+/* ✅ ট্যাবলেট */
+@media (max-width: 768px) {
+    .profile-top-bar {
+        top: 8px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    .profile-top-bar .home-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .profile-top-bar .home-btn .home-icon {
+        font-size: 1rem;
+    }
+    
+    .profile-avatar-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 16px 16px;
+        margin-top: -40px;
+    }
+    
+    .profile-avatar-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-avatar-initials {
+        font-size: 2rem;
+    }
+    
+    .profile-name-title h1 {
+        font-size: 1.4rem;
+    }
+    
+    .profile-cover {
+        height: 350px;
+    }
+    
+    .cover-actions {
+        bottom: 10px;
+        right: 12px;
+        gap: 6px;
+    }
+    
+    .cover-btn {
+        padding: 8px 14px;
+        min-height: 36px;
+        min-width: 36px;
+        font-size: 0.8rem;
+    }
+    
+    .cover-btn span {
+        display: none;
+    }
+    
+    .profile-form .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 14px 10px;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .profile-tabs {
+        padding: 0 12px;
+        gap: 2px;
+    }
+    
+    .tab-btn {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .live-avatar-toggle {
+        bottom: 70px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* ক্রপিং রেসপনসিভ */
+    .crop-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .crop-viewport-wrapper {
+        max-width: 100%;
+    }
+    
+    .crop-preview-wrapper {
+        max-width: 120px;
+    }
+    
+    .crop-controls {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .crop-modal {
+        padding: 16px !important;
+    }
+}
+
+/* ✅ মোবাইল */
+@media (max-width: 480px) {
+    .profile-top-bar .home-btn span:not(.home-icon) {
+        display: none;
+    }
+    
+    .cover-actions {
+        bottom: 10px;
+        right: 10px;
+        gap: 6px;
+    }
+    
+    .cover-btn {
+        padding: 8px 12px;
+        min-height: 34px;
+        min-width: 34px;
+        font-size: 0.7rem;
+    }
+    
+    .cover-btn .btn-text {
+        display: none;
+    }
+    
+    .cover-btn {
+        justify-content: center;
+    }
+    
+    .cover-btn .btn-icon {
+        font-size: 1.1rem;
+    }
+    
+    .profile-top-bar .home-btn {
+        padding: 8px 12px;
+    }
+    
+    .profile-cover {
+        height: 350px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .profile-avatar-wrapper {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .profile-avatar-initials {
+        font-size: 1.6rem;
+    }
+    
+    .avatar-edit-badge {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+    
+    .emoji-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+    }
+    
+    .emoji-option {
+        font-size: 1.3rem;
+        min-height: 38px;
+    }
+    
+    /* ক্রপিং রেসপনসিভ */
+    .crop-modal {
+        padding: 12px !important;
+        max-height: 98vh !important;
+    }
+    
+    .crop-preview-wrapper {
+        max-width: 80px;
+    }
+    
+    .crop-controls {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    
+    .crop-actions {
+        grid-column: 1;
+    }
+    
+    .crop-filter-group {
+        grid-column: 1;
+    }
+}
+
+/* ✅ অতি ছোট স্ক্রিন */
+@media (max-width: 360px) {
+    .emoji-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+    }
+    
+    .emoji-option {
+        font-size: 1.1rem;
+        min-height: 34px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+    
+    .stat-card {
+        padding: 10px 8px;
+    }
+    
+    .stat-number {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================================
+   ২২. ডার্ক মোড
+   ============================================================ */
+body.dark .profile-cover {
+    background: linear-gradient(135deg, #3b82f6, #7c3aed);
+}
+
+body.dark .profile-avatar-wrapper {
+    border-color: #2d2d2d;
+}
+
+body.dark .stat-card {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .profile-progress-section {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .activity-item {
+    border-color: #404040;
+}
+
+body.dark .emoji-option {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .emoji-option:hover {
+    background: #3d3d3d;
+    border-color: var(--accent);
+}
+
+body.dark .emoji-option.selected {
+    background: rgba(100, 181, 246, 0.12);
+    border-color: var(--accent);
+}
+
+body.dark .emoji-option[title]:hover::after {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #e2e8f0;
+}
+
+body.dark .emoji-option[title]:hover::before {
+    border-top-color: #404040;
+}
+
+body.dark .live-avatar-toggle {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .shape-btn,
+body.dark .filter-btn {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .shape-btn:hover,
+body.dark .filter-btn:hover {
+    border-color: var(--accent);
+}
+
+body.dark .shape-btn.active,
+body.dark .filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+body.dark .crop-preview-section {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .crop-preview-circle {
+    background: #1a1a1a;
+}
+
+body.dark .crop-viewport-wrapper {
+    background: #0a0a0a;
+}
+
+body.dark .crop-overlay-mask {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark .crop-overlay-mask.shape-circle,
+body.dark .crop-overlay-mask.shape-rounded {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark .cover-btn {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .cover-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .profile-top-bar .home-btn {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .profile-top-bar .home-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body.dark .crop-slider-group input[type="range"] {
+    background: #404040;
+}
+
+body.dark .crop-slider-group input[type="range"]::-webkit-slider-thumb {
+    background: var(--accent);
+    border-color: #2d2d2d;
+}
+
+body.dark .crop-slider-group input[type="range"]::-moz-range-thumb {
+    background: var(--accent);
+    border-color: #2d2d2d;
+}
+
+/* ============================================================
+   PASSWORD MANAGEMENT SECTION - FIXED
+   ============================================================ */
+
+.password-management-section {
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.password-management-section .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.password-management-section .section-icon {
+    font-size: 1.2rem;
+}
+
+.password-management-section .required {
+    color: var(--danger);
+    margin-left: 2px;
+}
+
+/* ✅ Password Input Wrapper - FIXED */
+.password-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    overflow: hidden; /* ✅ গুরুত্বপূর্ণ: overflow hidden */
+}
+
+.password-input-wrapper:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.1);
+}
+
+/* ✅ আইকন - বাম পাশে */
+.password-input-wrapper .input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--text-light);
+    pointer-events: none;
+    z-index: 2;
+    line-height: 1;
+    width: 20px; /* ✅ ফিক্সড প্রস্থ */
+    text-align: center;
+}
+
+/* ✅ ইনপুট ফিল্ড - সঠিক প্যাডিং */
+.password-input-wrapper input {
+    width: 100%;
+    padding: 10px 44px 10px 40px !important; /* ✅ বামে 40px প্যাডিং */
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+
+.password-input-wrapper input::placeholder {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ✅ টগল পাসওয়ার্ড বাটন - ডান পাশে */
+.password-input-wrapper .toggle-password-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    line-height: 1;
+    z-index: 2;
+}
+
+.password-input-wrapper .toggle-password-btn:hover {
+    color: var(--text);
+    background: var(--bg);
+}
+
+.password-input-wrapper.error {
+    border-color: var(--danger);
+}
+
+.password-input-wrapper.error:focus-within {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 4px rgba(244, 67, 54, 0.1);
+}
+
+/* Password Strength Meter */
+.password-strength-meter {
+    margin-top: 6px;
+}
+
+.strength-bar-container {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 2px;
+    transition: width 0.4s ease, background 0.4s ease;
+}
+
+.strength-bar.weak {
+    width: 25%;
+    background: var(--danger);
+}
+
+.strength-bar.medium {
+    width: 50%;
+    background: var(--warning);
+}
+
+.strength-bar.strong {
+    width: 75%;
+    background: #4caf50;
+}
+
+.strength-bar.very-strong {
+    width: 100%;
+    background: #2e7d32;
+}
+
+.strength-text {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 2px;
+    min-height: 18px;
+}
+
+/* Password Actions */
+.password-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.password-actions .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 140px;
+}
+
+.password-actions .btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.password-actions .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.password-actions .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.password-actions .btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.password-actions .btn-secondary:hover {
+    background: var(--border);
+    transform: translateY(-2px);
+}
+
+/* Password Message */
+.password-message {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideDown 0.3s ease;
+}
+
+.password-message.success {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.password-message.error {
+    background: rgba(244, 67, 54, 0.1);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+.password-message.warning {
+    background: rgba(255, 152, 0, 0.1);
+    color: var(--warning);
+    border: 1px solid var(--warning);
+}
+
+.password-message.info {
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.password-message .msg-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.password-message.hidden {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Error text */
+.password-management-section .error-text {
+    font-size: 0.8rem;
+    color: var(--danger);
+    min-height: 20px;
+    margin-top: 2px;
+    padding-left: 4px;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+body.dark .password-management-section {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .password-input-wrapper {
+    background: #1a1a1a;
+    border-color: #404040;
+}
+
+body.dark .password-input-wrapper input {
+    color: #e0e0e0;
+}
+
+body.dark .password-input-wrapper input::placeholder {
+    color: #666;
+}
+
+body.dark .password-input-wrapper:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(100, 181, 246, 0.15);
+}
+
+body.dark .password-input-wrapper .toggle-password-btn:hover {
+    background: #2d2d2d;
+}
+
+body.dark .strength-bar-container {
+    background: #404040;
+}
+
+body.dark .password-message.success {
+    background: rgba(76, 175, 80, 0.15);
+}
+
+body.dark .password-message.error {
+    background: rgba(244, 67, 54, 0.15);
+}
+
+body.dark .password-message.warning {
+    background: rgba(255, 152, 0, 0.15);
+}
+
+body.dark .password-message.info {
+    background: rgba(100, 181, 246, 0.15);
+}
+
+body.dark .password-actions .btn-secondary {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #e0e0e0;
+}
+
+body.dark .password-actions .btn-secondary:hover {
+    background: #3d3d3d;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .password-management-section {
+        padding: 16px;
+    }
+
+    .password-actions {
+        flex-direction: column;
+    }
+
+    .password-actions .btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .password-input-wrapper input {
+        padding: 10px 40px 10px 38px !important;
+        font-size: 0.9rem;
+    }
+
+    .password-input-wrapper .input-icon {
+        left: 10px;
+        font-size: 0.9rem;
+        width: 16px;
+    }
+
+    .password-input-wrapper .toggle-password-btn {
+        right: 8px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .password-management-section {
+        padding: 12px;
+    }
+
+    .password-input-wrapper input {
+        padding: 8px 36px 8px 34px !important;
+        font-size: 0.85rem;
+        min-height: 38px;
+    }
+
+    .password-input-wrapper .input-icon {
+        left: 8px;
+        font-size: 0.8rem;
+        width: 14px;
+    }
+
+    .password-input-wrapper .toggle-password-btn {
+        right: 6px;
+        font-size: 0.9rem;
+        padding: 2px 6px;
+    }
+}
+
+/* ============================================================
+   SECURITY TAB - PASSWORD MANAGEMENT
+   ============================================================ */
+
+.security-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.security-section .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.security-section .section-icon {
+    font-size: 1.2rem;
+}
+
+/* Session Management */
+.session-management-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+}
+
+.session-management-section .session-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.session-management-section .session-info p strong {
+    color: var(--text);
+}
+
+/* Dark Mode for Security Tab */
+body.dark .session-management-section {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .session-management-section .session-info p {
+    color: #94a3b8;
+}
+
+body.dark .session-management-section .session-info p strong {
+    color: #e2e8f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .security-section {
+        max-width: 100%;
+    }
+}
+
+/* ✅ ফর্ম স্টাইল */
+.password-change-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.password-change-form .form-group {
+    margin-bottom: 12px;
+}
+
+.password-change-form .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+.password-change-form .form-group .required {
+    color: var(--danger);
+    margin-left: 2px;
+}
+
+/* ✅ ফর্ম সাবমিট হলে লোডিং */
+.password-change-form .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.password-change-form .btn .spinner-small {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+/* ============================================================ */
+/* ১. মোড ইন্ডিকেটর */
+/* ============================================================ */
+.profile-mode-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: all 0.4s ease;
+    border: 1px solid var(--border);
+}
+
+.profile-mode-indicator.readonly {
+    background: var(--bg);
+    color: var(--text-light);
+    border-color: var(--border);
+}
+
+.profile-mode-indicator.editing {
+    background: #e3f2fd;
+    color: #0d47a1;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.profile-mode-indicator .mode-icon {
+    font-size: 18px;
+}
+
+.profile-mode-indicator .mode-text {
+    font-weight: 500;
+    flex: 1;
+}
+
+.profile-mode-indicator .mode-badge {
+    padding: 2px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.profile-mode-indicator .mode-badge.readonly {
+    background: var(--border);
+    color: var(--text-light);
+}
+
+.profile-mode-indicator .mode-badge.editing {
+    background: #2196f3;
+    color: white;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ============================================================ */
+/* ২. প্রোফাইল ফর্ম - রিড-অনলি মোড */
+/* ============================================================ */
+.profile-form.readonly .form-control {
+    background: var(--bg);
+    color: var(--text-light);
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: var(--border);
+}
+
+.profile-form.readonly .form-control:focus {
+    border-color: var(--border);
+    box-shadow: none;
+}
+
+.profile-form.readonly .form-group label {
+    opacity: 0.7;
+}
+
+/* ============================================================ */
+/* ৩. প্রোফাইল ফর্ম - এডিট মোড */
+/* ============================================================ */
+.profile-form.editing .form-control {
+    background: white;
+    color: var(--text);
+    cursor: text;
+    opacity: 1;
+    border-color: #2196f3;
+    transition: all 0.3s ease;
+}
+
+.profile-form.editing .form-control:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.12);
+    outline: none;
+}
+
+.profile-form.editing .form-group label {
+    opacity: 1;
+    color: var(--text);
+}
+
+/* ============================================================ */
+/* ৪. প্রোফাইল ফর্ম - ফিল্ড হাইলাইট (এডিট মোডে হোভার) */
+/* ============================================================ */
+.profile-form.editing .form-group:hover .form-control {
+    border-color: #1976d2;
+    background: #f8fbff;
+}
+
+.profile-form.editing .form-group:hover label {
+    color: #0d47a1;
+}
+
+/* ============================================================ */
+/* ৫. অ্যাকশন বাটনসমূহ */
+/* ============================================================ */
+.profile-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-actions .btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-actions .btn:active {
+    transform: scale(0.96);
+}
+
+.profile-actions .btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.profile-actions .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+}
+
+.profile-actions .btn-success {
+    background: #4caf50;
+    color: white;
+}
+
+.profile-actions .btn-success:hover {
+    background: #388e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+}
+
+.profile-actions .btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.profile-actions .btn-secondary:hover {
+    background: var(--border);
+    transform: translateY(-2px);
+}
+
+/* ============================================================ */
+/* ৬. এডিট মোডে ফর্ম অ্যানিমেশন */
+/* ============================================================ */
+.profile-form.editing {
+    animation: formEditFade 0.4s ease;
+}
+
+@keyframes formEditFade {
+    from {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================ */
+/* ৭. ডার্ক মোড সাপোর্ট */
+/* ============================================================ */
+body.dark .profile-mode-indicator.readonly {
+    background: #2a2a2a;
+    color: #999;
+    border-color: #444;
+}
+
+body.dark .profile-mode-indicator.editing {
+    background: #1a2a3a;
+    color: #64b5f6;
+    border-color: #2196f3;
+}
+
+body.dark .profile-mode-indicator .mode-badge.readonly {
+    background: #444;
+    color: #999;
+}
+
+body.dark .profile-form.readonly .form-control {
+    background: #2a2a2a;
+    color: #999;
+    border-color: #444;
+}
+
+body.dark .profile-form.editing .form-control {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #2196f3;
+}
+
+body.dark .profile-form.editing .form-control:focus {
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+body.dark .profile-form.editing .form-group:hover .form-control {
+    background: #1a2a3a;
+}
+
+body.dark .profile-actions .btn-secondary {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark .profile-actions .btn-secondary:hover {
+    background: #444;
+}
+
+/* ============================================================ */
+/* ৮. রেসপনসিভ ডিজাইন */
+/* ============================================================ */
+@media (max-width: 520px) {
+    .profile-mode-indicator {
+        font-size: 13px;
+        padding: 8px 12px;
+        flex-wrap: wrap;
+    }
+    
+    .profile-mode-indicator .mode-badge {
+        font-size: 11px;
+        padding: 2px 10px;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+    
+    .profile-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+    }
+}

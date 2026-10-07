@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q03-Q05</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(A)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+<div class="problem-card">
+    <div class="problem-title">৩. জটিল সংখ্যার আর্গুমেন্ট সংক্রান্ত প্রমাণসমূহ:</div>
+    
+    <div class="problem-sub-title">৩. (i) $z_1=1+i\sqrt{3},\;z_2=\sqrt{3}-i$ হলে দেখাও যে, (a) $\operatorname{Arg}(z_1z_2)=\operatorname{Arg}(z_1)+\operatorname{Arg}(z_2)$ এবং (b) $\operatorname{Arg}\left(\frac{z_1}{z_2}\right)=\operatorname{Arg}(z_1)-\operatorname{Arg}(z_2)$</div>
+    
+    <div class="solution-title">সমাধান ৩. (i):</div>
+    <div class="step-explain">দেওয়া আছে, $z_1 = 1+i\sqrt{3}$ এবং $z_2 = \sqrt{3}-i$</div>
+    <div class="step-explain">প্রথমে আমরা $z_1$ এর আর্গুমেন্ট, $\operatorname{Arg}(z_1)$ নির্ণয় করি। যেহেতু $z_1$ এর বাস্তব ও কাল্পনিক উভয় অংশই ধনাত্মক, এটি ১ম চতুর্ভাগে অবস্থিত।</div>
+    <div class="step">১ম চতুর্ভাগের সূত্রানুযায়ী, <br>$\operatorname{Arg}(z_1) = \tan^{-1}\left(\frac{\sqrt{3}}{1}\right)$</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z_1) = \tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z_1) = \frac{\pi}{3}$ <span class="note">[ $\because \tan\left(\frac{\pi}{3}\right) = \sqrt{3}$ ]</span></div>
+    <div class="step-explain">এবার আমরা $z_2$ এর আর্গুমেন্ট, $\operatorname{Arg}(z_2)$ নির্ণয় করি। যেহেতু $z_2$ এর বাস্তব অংশ ধনাত্মক এবং কাল্পনিক অংশ ঋণাত্মক, এটি ৪র্থ চতুর্ভাগে অবস্থিত।</div>
+    <div class="step">৪র্থ চতুর্ভাগের সূত্রানুযায়ী <br>$\operatorname{Arg}(z_2) = -\tan^{-1}\left(\frac{|-1|}{|\sqrt{3}|}\right)$</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z_2) = -\tan^{-1}\left(\frac{1}{\sqrt{3}}\right)$</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z_2) = -\frac{\pi}{6}$ <span class="note">[ $\because \tan\left(\frac{\pi}{6}\right) = \frac{1}{\sqrt{3}}$ ]</span></div>
+
+    <div class="solution-title">সমাধান ৩. (i) a:</div>
+    <div class="step-explain">(a) অংশ প্রমাণ করার জন্য প্রথমে $z_1 z_2$ গুণফল নির্ণয় করি:</div>
+    <div class="step">$z_1z_2 = \left(1+i\sqrt{3}\right) \cdot \left(\sqrt{3}-i\right)$ <span class="note">[ মান বসিয়ে ]</span></div>
+    <div class="step-explain">বীজগণিতিয় গুণ করে,</div>
+    <div class="step">$\Rightarrow z_1z_2 = 1 \cdot \sqrt{3} - 1 \cdot i + i\sqrt{3} \cdot \sqrt{3} - i^2\sqrt{3}$</div>
+    <div class="step-explain">$\because i^2 = -1$ এবং $\sqrt{3} \cdot \sqrt{3} = 3$</div>
+    <div class="step">$\Rightarrow z_1z_2 = \sqrt{3} - i + 3i - (-1)\sqrt{3}$</div>
+    <div class="step">$\Rightarrow z_1z_2 = \sqrt{3} + 2i + \sqrt{3}$</div>
+    <div class="step">$\Rightarrow z_1z_2 = 2\sqrt{3} + 2i$</div>
+    <div class="step-explain">এখন $z_1z_2 = 2\sqrt{3} + 2i$ সংখ্যাটি ১ম চতুর্ভাগে অবস্থিত। এর আর্গুমেন্ট :</div>
+    <div class="step">বামপক্ষ $= \operatorname{Arg}(z_1z_2)$ <br>$\quad = \tan^{-1}\left(\frac{2}{2\sqrt{3}}\right)$ <span class="note">[ ১ম চতুর্ভাগের সূত্রানুযায়ী ]</span></div>
+    <div class="step-explain">লব ও হরকে 2 দ্বারা ভাগ করে</div>
+    <div class="step">$\quad = \tan^{-1}\left(\frac{1}{\sqrt{3}}\right)$</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z_1z_2) = \frac{\pi}{6} \quad $ <span class="equation"> ----  (equation 1)</span></div>
+    <div class="step-explain">এবার ডানপক্ষ হিসাব করি:</div>
+    <div class="step">ডানপক্ষ $= \operatorname{Arg}(z_1) + \operatorname{Arg}(z_2)$</div>
+    <div class="step">$\quad = \frac{\pi}{3} + \left(-\frac{\pi}{6}\right)$ <span class="note">[ পূর্বে প্রাপ্ত মান বসিয়ে ]</span></div>
+    <div class="step">$\quad = \frac{\pi}{3} - \frac{\pi}{6}$</div>
+    <div class="step">$\quad = \frac{2\pi - \pi}{6}$ <span class="note">[ লসাগু করে ]</span></div>
+    <div class="step">$\Rightarrow$ ডানপক্ষ $= \frac{\pi}{6} \quad $ <span class="equation"> ----  (equation 2)</span></div>
+    <div class="step">যেহেতু (equation 1) ও (equation 2) এর মান সমান, সুতরাং: <br>$\operatorname{Arg}(z_1z_2) = \operatorname{Arg}(z_1) + \operatorname{Arg}(z_2)$ <b>(প্রমাণিত)</b></div>
+
+    <hr>
+    <div class="problem-sub-title">(i) $z_1=1+i\sqrt{3},\;z_2=\sqrt{3}-i$ হলে দেখাও যে, (a) $\operatorname{Arg}(z_1z_2)=\operatorname{Arg}(z_1)+\operatorname{Arg}(z_2)$ এবং (b) $\operatorname{Arg}\left(\frac{z_1}{z_2}\right)=\operatorname{Arg}(z_1)-\operatorname{Arg}(z_2)$</div>
+    <div class="solution-title">সমাধান ৩. (i) b:</div>
+    <div class="step-explain">(b) অংশ প্রমাণ করার জন্য প্রথমে $\frac{z_1}{z_2}$ ভাগফল নির্ণয় করি:</div>
+    <div class="step">$\frac{z_1}{z_2} = \frac{1+i\sqrt{3}}{\sqrt{3}-i}$ <span class="note">[ মান বসিয়ে ]</span></div>
+    <div class="step-explain">হরের অনুবন্ধী জটিল সংখ্যা $\sqrt{3}+i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\left(1+i\sqrt{3}\right)\left(\sqrt{3}+i\right)}{\left(\sqrt{3}-i\right)\left(\sqrt{3}+i\right)}$</div>
+    <div class="step-explain">লবে গুণ করে এবং হরে $a^2-b^2$ সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\sqrt{3} + i + i \cdot 3 + i^2\sqrt{3}}{(\sqrt{3})^2 - i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\sqrt{3} + 4i + (-1)\sqrt{3}}{3 - (-1)}$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\sqrt{3} + 4i - \sqrt{3}}{3 + 1}$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{4i}{4}$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = i$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = 0 + 1i$</div>
+    <div class="step-explain">যেহেতু $\frac{z_1}{z_2} = 0+1i$ একটি বিশুদ্ধ কাল্পনিক সংখ্যা এবং এটি ধনাত্মক $y$-অক্ষের ওপর অবস্থিত, এর আর্গুমেন্ট :</div>
+    <div class="step">বামপক্ষ $= \operatorname{Arg}\left(\frac{z_1}{z_2}\right) = \frac{\pi}{2} \quad $ <span class="equation"> ----  (equation 3)</span></div>
+    <div class="step-explain">এবার ডানপক্ষ হিসাব করি:</div>
+    <div class="step">ডানপক্ষ $= \operatorname{Arg}(z_1) - \operatorname{Arg}(z_2)$</div>
+    <div class="step-explain">পূর্বে প্রাপ্ত মান বসিয়ে</div>
+    <div class="step">$\quad = \frac{\pi}{3} - \left(-\frac{\pi}{6}\right)$</div>
+    <div class="step">$\quad  = \frac{\pi}{3} + \frac{\pi}{6}$</div>
+    <div class="step">$\quad = \frac{2\pi + \pi}{6}$ <span class="note">[ লসাগু করে ]</span></div>
+    <div class="step">$\quad = \frac{3\pi}{6}$</div>
+    <div class="step">$\Rightarrow$ ডানপক্ষ $= \frac{\pi}{2} \quad $ <span class="equation"> ----  (equation 4)</span></div>
+    <div class="step">যেহেতু (equation 3) ও (equation 4) এর মান সমান, সুতরাং: <br>$\operatorname{Arg}\left(\frac{z_1}{z_2}\right) = \operatorname{Arg}(z_1) - \operatorname{Arg}(z_2)$ <b>(প্রমাণিত)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৩. (ii) $z=r\cos\theta+ir\sin\theta$ হলে, প্রমাণ কর যে, $\operatorname{Arg}(z^2)=2\operatorname{Arg}(z)$</div>
+    <div class="solution-title">সমাধান ৩. (ii):</div>
+    <div class="step-explain">দেওয়া আছে, $z = r\cos\theta + ir\sin\theta = r(\cos\theta + i\sin\theta)$</div>
+    <div class="step-explain">এটি জটিল সংখ্যার পোলার আকার। আমরা জানি, এই আকারে $\theta$-ই হলো জটিল সংখ্যাটির আর্গুমেন্ট।</div>
+    <div class="step">$\text{সুতরাং, } \operatorname{Arg}(z) = \theta \quad $ <span class="equation"> ----  (equation 1)</span></div>
+    <div class="step-explain">এখন, ডানপক্ষ $= 2\operatorname{Arg}(z) = 2\theta$</div>
+    <div class="step-explain">এবার বামপক্ষের জন্য $z^2$ নির্ণয় করি:</div>
+    <div class="step">$z^2 = \left\{r\left(\cos\theta + i\sin\theta\right)\right\}^2$ <span class="note">[ বর্গ করে ]</span></div>
+    <div class="step">$\Rightarrow z^2 = r^2 \cdot \left(\cos\theta + i\sin\theta\right)^2$</div>
+    <div class="step">$\Rightarrow z^2 = r^2 \cdot \left(\cos^2\theta + 2 \cdot \cos\theta \cdot i\sin\theta + i^2\sin^2\theta\right)$</div>
+    <div class="step">$\Rightarrow z^2 = r^2 \cdot \left(\cos^2\theta + i \cdot 2\sin\theta\cos\theta - \sin^2\theta\right)$ <span class="note">[ $\because i^2 = -1$ ]</span></div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা করে,</div>
+    <div class="step">$\Rightarrow z^2 = r^2 \cdot \left\{\left(\cos^2\theta - \sin^2\theta\right) + i \cdot \left(2\sin\theta\cos\theta\right)\right\}$</div>
+    <div class="step-explain">ত্রিকোণমিতির সূত্রানুসারে আমরা জানি, <br>$\cos^2\theta - \sin^2\theta = \cos2\theta$ <br>এবং $2\sin\theta\cos\theta = \sin2\theta$<br>তহলে, এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow z^2 = r^2 \cdot \left(\cos2\theta + i\sin2\theta\right)$</div>
+    <div class="step-explain">এই সমীকরণটি খেয়াল করলে দেখা যায় যে, এটিও একটি পোলার আকৃতির জটিল সংখ্যা যার কোণ বা আর্গুমেন্ট হলো $2\theta$।</div>
+    <div class="step">সুতরাং, $\operatorname{Arg}(z^2) = 2\theta$</div>
+    <div class="step-explain">equation 1 থেকে $\theta = \operatorname{Arg}(z)$ বসিয়ে</div>
+    <div class="step">$\Rightarrow \operatorname{Arg}(z^2) = 2\operatorname{Arg}(z)$</div>
+    <div class="step">অতএব, <br>$\operatorname{Arg}(z^2) = 2\operatorname{Arg}(z)$ <b>(প্রমাণিত)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৩. (iii) $z_1=1+i\sqrt{3},\;z_2=\sqrt{3}+i$ হলে দেখাও যে, $\arg\left(\frac{z_1}{z_2}\right)=\arg(z_1)-\arg(z_2)$</div>
+    <div class="solution-title">সমাধান ৩. (iii):</div>
+    <div class="step">দেওয়া আছে, $z_1 = 1+i\sqrt{3}$ এবং $z_2 = \sqrt{3}+i$</div>
+    
+    <div class="step-explain">প্রথমে $\arg(z_1)$ নির্ণয় করি (১ম চতুর্ভাগ):</div>
+    <div class="step">$\arg(z_1) = \tan^{-1}\left(\frac{\sqrt{3}}{1}\right) = \frac{\pi}{3}$</div>
+    
+    <div class="step-explain">এবার $\arg(z_2)$ নির্ণয় করি (১ম চতুর্ভাগ):</div>
+    <div class="step">$\arg(z_2) = \tan^{-1}\left(\frac{1}{\sqrt{3}}\right) = \frac{\pi}{6}$</div>
+    
+    <div class="step-explain">এখন বামপক্ষের জন্য $\frac{z_1}{z_2}$ এর মান বের করি:</div>
+    <div class="step">$\frac{z_1}{z_2} = \frac{1+i\sqrt{3}}{\sqrt{3}+i}$ <span class="note">[ মান বসিয়ে ]</span></div>
+    <div class="step">লব ও হরকে হরের অনুবন্ধী সংখ্যা $\sqrt{3}-i$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\left(1+i\sqrt{3}\right)\left(\sqrt{3}-i\right)}{\left(\sqrt{3}+i\right)\left(\sqrt{3}-i\right)}$</div>
+    <div class="step-explain">আমরা উপ-প্রশ্ন (i)-(a) এর গুণফল থেকে ইতিপূর্বে দেখেছি যে, $\left(1+i\sqrt{3}\right)\left(\sqrt{3}-i\right) = 2\sqrt{3} + 2i$</div>
+    <div class="step-explain">লব এর গুণফল বসিয়ে এবং হরে সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{2\sqrt{3} + 2i}{(\sqrt{3})^2 - i^2}$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{2\sqrt{3} + 2i}{3 - (-1)}$ <span class="note">[ $\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{2\sqrt{3} + 2i}{4}$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা করে</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{2\sqrt{3}}{4} + i\frac{2}{4}$</div>
+    <div class="step-explain">লব ও হর কাটাকাটি করে</div>
+    <div class="step">$\Rightarrow \frac{z_1}{z_2} = \frac{\sqrt{3}}{2} + i\frac{1}{2}$</div>
+    
+    <div class="step-explain">যেহেতু নতুন সংখ্যাটি ১ম চতুর্ভাগে অবস্থিত, এর আর্গুমেন্ট:</div>
+    <div class="step">বামপক্ষ $= \arg\left(\frac{z_1}{z_2}\right) = \tan^{-1}\left(\frac{1/2}{\sqrt{3}/2}\right)$</div>
+    <div class="step-explain">ভগ্নাংশ উল্টিয়ে গুণ করে</div>
+    <div class="step">বামপক্ষ $= \tan^{-1}\left(\frac{1}{2} \cdot \frac{2}{\sqrt{3}}\right)$</div>
+    <div class="step">বামপক্ষ $= \tan^{-1}\left(\frac{1}{\sqrt{3}}\right) = \frac{\pi}{6} \quad $ <span class="equation"> $\dots$  (equation 1)</span></div>
+    
+    <div class="step-explain">এবার ডানপক্ষ হিসাব করি:</div>
+    <div class="step">ডানপক্ষ $= \arg(z_1) - \arg(z_2)$</div>
+    <div class="step">ডানপক্ষ $= \frac{\pi}{3} - \frac{\pi}{6}$ <span class="note">[ মান বসিয়ে ]</span></div>
+    <div class="step">ডানপক্ষ $= \frac{2\pi - \pi}{6} = \frac{\pi}{6} \quad $ <span class="equation"> $\dots$  (equation 2)</span></div>
+    <div class="step">যেহেতু (equation 1) ও (equation 2) এর মান সমান, সুতরাং: <br>$\arg\left(\frac{z_1}{z_2}\right) = \arg(z_1) - \arg(z_2)$ <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৩. (iv) $z_1=-1+\sqrt{3}i$ এবং $z_2=1-\sqrt{3}i$ হলে প্রমাণ কর যে, $\arg(z_1z_2)=\arg(z_1)+\arg(z_2)$</div>
+    <div class="solution-title">সমাধান ৩. (iv):</div>
+    <div class="step">দেওয়া আছে, $z_1 = -1+\sqrt{3}i$ এবং $z_2 = 1-\sqrt{3}i$</div>
+    
+    <div class="step-explain">প্রথমে $\arg(z_1)$ নির্ণয় করি। যেহেতু $z_1$ এর বাস্তব অংশ ঋণাত্মক এবং কাল্পনিক অংশ ধনাত্মক, এটি ২য় চতুর্ভাগে অবস্থিত।<br>২য় চতুর্ভাগের সূত্রানুযায়ী</div>
+    <div class="step">$\arg(z_1) = \pi - \tan^{-1}\left(\frac{|\sqrt{3}|}{|-1|}\right)$</div>
+    <div class="step">$\Rightarrow \arg(z_1) = \pi - \tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \arg(z_1) = \pi - \frac{\pi}{3}$</div>
+    <div class="step">$\Rightarrow \arg(z_1) = \frac{3\pi - \pi}{3} = \frac{2\pi}{3}$</div>
+    
+    <div class="step-explain">এবার $\arg(z_2)$ নির্ণয় করি। যেহেতু $z_2$ এর বাস্তব অংশ ধনাত্মক এবং কাল্পনিক অংশ ঋণাত্মক, এটি ৪র্থ চতুর্ভাগে অবস্থিত।<br>৪র্থ চতুর্ভাগের সূত্রানুযায়ী</div>
+    <div class="step">$\arg(z_2) = -\tan^{-1}\left(\frac{|-\sqrt{3}|}{|1|}\right)$</div>
+    <div class="step">$\Rightarrow \arg(z_2) = -\tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \arg(z_2) = -\frac{\pi}{3}$</div>
+    
+    <div class="step-explain">এখন বামপক্ষের জন্য গুণফল $z_1 z_2$ নির্ণয় করি:</div>
+    <div class="step">$z_1z_2 = \left(-1+\sqrt{3}i\right) \cdot \left(1-\sqrt{3}i\right)$</div>
+    <div class="step-explain">বণ্টন বিধি অনুযায়ী গুণ করে,</div>
+    <div class="step">$\Rightarrow z_1z_2 = -1 \cdot \left(1-\sqrt{3}i\right) + \sqrt{3}i \cdot \left(1-\sqrt{3}i\right)$</div>
+    <div class="step-explain">গুণ করে এবং $\sqrt{3}\cdot\sqrt{3}=3$ লিখে</div>
+    <div class="step">$\Rightarrow z_1z_2 = -1 + \sqrt{3}i + \sqrt{3}i - 3i^2$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -1 + 2\sqrt{3}i - 3(-1)$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -1 + 2\sqrt{3}i + 3$</div>
+    <div class="step">$\Rightarrow z_1z_2 = 2 + 2\sqrt{3}i$</div>
+    
+    <div class="step-explain">নতুন জটিল সংখ্যা $z_1z_2 = 2 + 2\sqrt{3}i$ এর বাস্তব ও কাল্পনিক উভয় অংশই ধনাত্মক হওয়ায় এটি ১ম চতুর্ভাগে অবস্থিত।<br>১ম চতুর্ভাগের সূত্রানুযায়ী এর আর্গুমেন্ট :</div>
+    <div class="step">বামপক্ষ $= \arg(z_1z_2) = \tan^{-1}\left(\frac{2\sqrt{3}}{2}\right)$</div>
+    <div class="step">$\Rightarrow \arg(z_1z_2) = \tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \arg(z_1z_2) = \frac{\pi}{3} \quad $ <span class="equation"> $\dots$  (equation 1)</span></div>
+    
+    <div class="step-explain">এবার ডানপক্ষ হিসাব করি:</div>
+    <div class="step">ডানপক্ষ $= \arg(z_1) + \arg(z_2)$</div>
+    <div class="step-explain">$\arg(z_1)$ ও $\arg(z_2)$ এর মান বসিয়ে</div>
+    <div class="step">$\Rightarrow \text{ডানপক্ষ} = \frac{2\pi}{3} + \left(-\frac{\pi}{3}\right)$</div>
+    <div class="step">$\Rightarrow \text{ডানপক্ষ} = \frac{2\pi}{3} - \frac{\pi}{3}$</div>
+    <div class="step">$\Rightarrow \text{ডানপক্ষ} = \frac{2\pi - \pi}{3}$</div>
+    <div class="step">$\Rightarrow \arg(z_1) + \arg(z_2) = \frac{\pi}{3} \quad $ <span class="equation"> $\dots$  (equation 2)</span></div>
+    <div class="step">যেহেতু (equation 1) ও (equation 2) এর মান সমান, সুতরাং: <br>$\arg(z_1z_2) = \arg(z_1) + \arg(z_2)$ <b>(প্রমাণিত)</b></div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৪. নিচের জটিল সংখ্যাগুলিকে পোলার আকারে প্রকাশ কর এবং মুখ্য আর্গুমেন্ট ও সাধারণ আর্গুমেন্ট নির্ণয় করঃ</div>
+    
+    <div class="step"><b>পোলার আকারের সাধারণ ধারণা:</b></div>
+    <div class="step">যেকোনো জটিল সংখ্যা $Z = x+iy$ এর পোলার আকার হলো $Z = r(\cos\theta + i\sin\theta)$। যেখানে—</div>
+    <div class="step">$r = \sqrt{x^2 + y^2} \quad [\text{মডুলাস}]$</div>
+    <div class="step">এবং $\theta$ হলো মুখ্য আর্গুমেন্ট ($-\pi < \theta \le \pi$)।</div>
+    <div class="step">সাধারণ আর্গুমেন্ট (General Argument) নির্ণয়ের সূত্র হলো: <br>$2n\pi + \theta \quad$ (যেখানে $n$ যেকোনো পূর্ণসংখ্যা বা $n \in \mathbb{Z}$)</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৪. (i) $1+\sqrt{3}i$</div>
+    <div class="solution-title">সমাধান ৪. (i):</div>
+    <div class="step">ধরি, প্রদত্ত জটিল সংখ্যা $Z = 1+\sqrt{3}i$</div>
+    <div class="step">এখানে, বাস্তব অংশ $x = 1$ এবং কাল্পনিক অংশ $y = \sqrt{3}$,<br>বিন্দুটি $(1, \sqrt{3})$ যা ১ম চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">প্রথমে মডুলাস ($r$) নির্ণয় করি:</div>
+    <div class="step">$r = \sqrt{x^2 + y^2}$</div>
+    <div class="step-explain">$x$ ও $y$ এর মান বসিয়ে</div>
+    <div class="step">$r = \sqrt{(1)^2 + (\sqrt{3})^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{1 + 3}$ <span class="note">[ বর্গ করে ]</span></div>
+    <div class="step">$\Rightarrow r = \sqrt{4} = 2$</div>
+    
+    <div class="step-explain">এখন, ১ম চতুর্ভাগের সূত্রানুযায়ী মুখ্য আর্গুমেন্ট ($\theta$) নির্ণয় করি :</div>
+    <div class="step">$\theta = \tan^{-1}\left(\frac{\sqrt{3}}{1}\right)$</div>
+    <div class="step">$\Rightarrow \theta = \tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \theta = \frac{\pi}{3}$ <span class="note">[ $\because \tan\left(\frac{\pi}{3}\right) = \sqrt{3}$ ]</span></div>
+    
+    <div class="step">সুতরাং, পোলার আকার:</div>
+    <div class="step">$Z = r\left(\cos\theta + i\sin\theta\right)$</div>
+    <div class="step-explain">$r$ ও $\theta$ এর মান বসিয়ে</div>
+    <div class="step">$Z = 2\left(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}\right)$</div>
+    
+    <div class="step">সাধারণ আর্গুমেন্ট:</div>
+    <div class="step">$2n\pi + \frac{\pi}{3} \quad$ [যেখানে $n \in \mathbb{Z}$]</div>
+    <div class="step"><b>উত্তর:</b> পোলার আকার: $2\left(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}\right)$, <br>মুখ্য আর্গুমেন্ট: $\frac{\pi}{3}$, <br>সাধারণ আর্গুমেন্ট: $2n\pi + \frac{\pi}{3}$ ($n \in \mathbb{Z}$)</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৪. (ii) $-i$</div>
+    <div class="solution-title">সমাধান ৪. (ii):</div>
+    <div class="step">ধরি, প্রদত্ত জটিল সংখ্যা $Z = -i = 0 + (-1)i$</div>
+    <div class="step">এখানে, বাস্তব অংশ $x = 0$ এবং কাল্পনিক অংশ $y = -1$,<br>বিন্দুটি $(0, -1)$ যা ঋণাত্মক $y$-অক্ষের ওপর অবস্থিত।</div>
+    <div class="step-explain">প্রথমে মডুলাস ($r$) নির্ণয় করি:</div>
+    <div class="step">$r = \sqrt{x^2 + y^2}$</div>
+    <div class="step-explain">$x$ ও $y$ এর মান বসিয়ে</div>
+    <div class="step">$r = \sqrt{(0)^2 + (-1)^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{0 + 1} = 1$</div>
+    
+    <div class="step-explain">এখন, মুখ্য আর্গুমেন্ট ($\theta$) নির্ণয় করি:</div>
+    <div class="step-explain">যেহেতু বিন্দুটি সরাসরি ঋণাত্মক $y$-অক্ষের উপর অবস্থিত, তাই মূলবিন্দু থেকে এটি ঘড়ির কাটার দিকে $90^\circ$ বা $\frac{\pi}{2}$ কোণ তৈরি করে। অর্থাৎ এর মুখ্য আর্গুমেন্ট :</div>
+    <div class="step">$\theta = -\frac{\pi}{2}$</div>
+    
+    <div class="step-explain">সুতরাং, পোলার আকার:</div>
+    <div class="step">$Z = r\left(\cos\theta + i\sin\theta\right)$</div>
+    <div class="step-explain">$r$ ও $\theta$ এর মান বসিয়ে</div>
+    <div class="step">$\Rightarrow Z = 1 \cdot \left\{\cos\left(-\frac{\pi}{2}\right) + i\sin\left(-\frac{\pi}{2}\right)\right\}$</div>
+    <div class="step">$\Rightarrow Z = \cos\left(-\frac{\pi}{2}\right) + i\sin\left(-\frac{\pi}{2}\right)$</div>
+    
+    <div class="step-explain">সাধারণ আর্গুমেন্ট:</div>
+    <div class="step">$2n\pi + \left(-\frac{\pi}{2}\right) = 2n\pi - \frac{\pi}{2} \quad$ [যেখানে $n \in \mathbb{Z}$]</div>
+    <div class="step"><b>উত্তর:</b> পোলার আকার: $\cos\left(-\frac{\pi}{2}\right) + i\sin\left(-\frac{\pi}{2}\right)$, <br>মুখ্য আর্গুমেন্ট: $-\frac{\pi}{2}$, <br>সাধারণ আর্গুমেন্ট: $2n\pi - \frac{\pi}{2}$ ($n \in \mathbb{Z}$)</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৪. (iii) $a-ai;\;a>0$</div>
+    <div class="solution-title">সমাধান ৪. (iii):</div>
+    <div class="step">ধরি, প্রদত্ত জটিল সংখ্যা $Z = a-ai$ যেখানে শর্ত দেওয়া আছে $a > 0$।</div>
+    <div class="step">এখানে, বাস্তব অংশ $x = a$ এবং কাল্পনিক অংশ $y = -a$; <br>যেহেতু $a > 0$, বিন্দুটি $(a, -a)$ ৪র্থ চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">প্রথমে মডুলাস ($r$) নির্ণয় করি:</div>
+    <div class="step">$r = \sqrt{x^2 + y^2}$</div>
+    <div class="step-explain">$x$ ও $y$ এর মান বসিয়ে</div>
+    <div class="step">$r = \sqrt{(a)^2 + (-a)^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{a^2 + a^2} = \sqrt{2a^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{2}a$ <span class="note">[ $\because a>0$ ]</span></div>
+    
+    <div class="step-explain">এখন, ৪র্থ চতুর্ভাগের সূত্রানুযায়ী মুখ্য আর্গুমেন্ট ($\theta$) নির্ণয় করি:</div>
+    <div class="step">$\theta = -\tan^{-1}\left(\frac{|-a|}{|a|}\right)$</div>
+    <div class="step-explain">পরমমান তুলে</div>
+    <div class="step">$\Rightarrow \theta = -\tan^{-1}\left(\frac{a}{a}\right)$</div>
+    <div class="step">$\Rightarrow \theta = -\tan^{-1}(1)$</div>
+    <div class="step">$\Rightarrow \theta = -\frac{\pi}{4}$ <span class="note">[ $\because \tan\left(\frac{\pi}{4}\right) = 1$ ]</span></div>
+    
+    <div class="step-explain">সুতরাং, পোলার আকার:</div>
+    <div class="step">$Z = r\left(\cos\theta + i\sin\theta\right)$</div>
+    <div class="step-explain">$r$ ও $\theta$ এর মান বসিয়ে</div>
+    <div class="step">$Z = \sqrt{2}a\left\{\cos\left(-\frac{\pi}{4}\right) + i\sin\left(-\frac{\pi}{4}\right)\right\}$</div>
+    
+    <div class="step-explain">সাধারণ আর্গুমেন্ট:</div>
+    <div class="step">$2n\pi + \left(-\frac{\pi}{4}\right) = 2n\pi - \frac{\pi}{4} \quad$ [ যেখানে $n \in \mathbb{Z}$ ]</div>
+    <div class="step"><b>উত্তর:</b> পোলার আকার: $\sqrt{2}a\left\{\cos\left(-\frac{\pi}{4}\right) + i\sin\left(-\frac{\pi}{4}\right)\right\}$, <br>মুখ্য আর্গুমেন্ট: $-\frac{\pi}{4}$, <br>সাধারণ আর্গুমেন্ট: $2n\pi - \frac{\pi}{4}$ ($n \in \mathbb{Z}$)</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৪. (iv) $\left(2\sqrt{3}-2i\right)\left(-2\sqrt{3}+6i\right)$</div>
+    <div class="solution-title">সমাধান ৪. (iv):</div>
+    <div class="step">ধরি, প্রদত্ত গুণফল আকারটি, <br>$Z = \left(2\sqrt{3}-2i\right)\left(-2\sqrt{3}+6i\right)$</div>
+    <div class="step-explain">প্রথমে সংখ্যা দুটিকে সাধারণ বীজগণিতীয় নিয়মে গুণ করে সরল আকারে নিয়ে আসি:</div>
+    <div class="step">$Z = 2\sqrt{3} \cdot \left(-2\sqrt{3}\right) + 2\sqrt{3} \cdot 6i - 2i \cdot \left(-2\sqrt{3}\right) - 2i \cdot 6i$</div>
+    <div class="step-explain">সকল গুণের কাজ সম্পাদন করে </div>
+    <div class="step">$\Rightarrow Z = -4 \cdot 3 + 12\sqrt{3}i + 4\sqrt{3}i - 12i^2$</div>
+    <div class="step">$\Rightarrow Z = -12 + 16\sqrt{3}i - 12(-1)$ <span class="note">[ $\because i^2 = -1$ ]</span></div>
+    <div class="step">$\Rightarrow Z = -12 + 16\sqrt{3}i + 12$</div>
+    <div class="step">$\Rightarrow Z = 0 + 16\sqrt{3}i$</div>
+    <div class="step">এখানে, সরলীকৃত জটিল সংখ্যাটির বাস্তব অংশ $x = 0$ <br>এবং কাল্পনিক অংশ $y = 16\sqrt{3}$, <br>বিন্দুটি $(0, 16\sqrt{3})$ যা সরাসরি ধনাত্মক $y$-অক্ষের ওপর অবস্থিত।</div>
+    <div class="step-explain">প্রথমে মডুলাস ($r$) নির্ণয় করি:</div>
+    <div class="step">$r = \sqrt{x^2 + y^2}$</div>
+    <div class="step-explain">$x$ ও $y$ এর মান বসিয়ে</div>
+    <div class="step">$r = \sqrt{(0)^2 + (16\sqrt{3})^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{0 + (256 \cdot 3)} = \sqrt{768}$</div>
+    <div class="step">$\Rightarrow r = 16\sqrt{3}$ <span class="note">[ বর্গমূল করে ]</span></div>
+    <div class="step-explain">এখন, মুখ্য আর্গুমেন্ট ($\theta$) নির্ণয় করি:</div>
+    <div class="step-explain">যেহেতু বিন্দুটির বাস্তব অংশ $0$ এবং কাল্পনিক অংশ ধনাত্মক, এটি ধনাত্মক $y$-অক্ষের সাথে মিশে আছে, তাই কোণ হবে সোজা $90^\circ$ বা $\frac{\pi}{2}$। অর্থাৎ এর মুখ্য আর্গুমেন্ট :</div>
+    <div class="step">$\theta = \frac{\pi}{2}$</div>
+    <div class="step-explain">সুতরাং, পোলার আকার:</div>
+    <div class="step">$Z = r\left(\cos\theta + i\sin\theta\right)$</div>
+    <div class="step-explain">$r$ ও $\theta$ এর মান বসিয়ে</div>
+    <div class="step">$Z = 16\sqrt{3}\left(\cos\frac{\pi}{2} + i\sin\frac{\pi}{2}\right)$</div>
+    <div class="step-explain">সাধারণ আর্গুমেন্ট:</div>
+    <div class="step">$2n\pi + \frac{\pi}{2} \quad [\text{যেখানে } n \in \mathbb{Z}]$</div>
+    <div class="step"><b>উত্তর:</b> পোলার আকার: $16\sqrt{3}\left(\cos\frac{\pi}{2} + i\sin\frac{\pi}{2}\right)$, <br>মুখ্য আর্গুমেন্ট: $\frac{\pi}{2}$, <br>সাধারণ আর্গুমেন্ট: $2n\pi + \frac{\pi}{2}$ ($n \in \mathbb{Z}$)</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৫. $A+iB$ আকারে প্রকাশ করঃ</div>
+    
+    <div class="problem-sub-title">৫. (i) $\left(1+2i\right)\left(2+3i\right)\left(3+4i\right)$</div>
+    <div class="solution-title">সমাধান ৫. (i):</div>
+    <div class="step-explain">প্রদত্ত রাশিটি হলো তিনটি জটিল সংখ্যার গুণফল। আমরা প্রথমে প্রথম দুটি জটিল সংখ্যা গুণ করব, তারপর প্রাপ্ত ফলাফলের সাথে তৃতীয়টি গুণ করব।</div>
+    <div class="step">$\text{ধরি, } Z = \left(1+2i\right)\left(2+3i\right)\left(3+4i\right)$</div>
+    <div class="step-explain">প্রথম দুটি বন্ধনী গুণ করে পাই:</div>
+    <div class="step">$\Rightarrow Z = \left(1 \cdot 2 + 1 \cdot 3i + 2i \cdot 2 + 2i \cdot 3i\right)\left(3+4i\right)$</div>
+    <div class="step">$\Rightarrow Z = \left(2 + 3i + 4i + 6i^2\right)\left(3+4i\right)$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \left(2 + 7i + 6(-1)\right)\left(3+4i\right)$</div>
+    <div class="step">$\Rightarrow Z = \left(2 + 7i - 6\right)\left(3+4i\right)$</div>
+    <div class="step">$\Rightarrow Z = \left(-4 + 7i\right)\left(3+4i\right)$</div>
+    <div class="step-explain">এবার প্রাপ্ত নতুন রাশির সাথে তৃতীয় বন্ধনী গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = -4 \cdot 3 - 4 \cdot 4i + 7i \cdot 3 + 7i \cdot 4i$</div>
+    <div class="step">$\Rightarrow Z = -12 - 16i + 21i + 28i^2$</div>
+    <div class="step-explain">$\because i^2 = -1$ এবং $21i-16i=5i$</div>
+    <div class="step">$\Rightarrow Z = -12 + 5i + 28(-1)$</div>
+    <div class="step">$\Rightarrow Z = -12 + 5i - 28$</div>
+    <div class="step">$\Rightarrow Z = -40 + 5i$</div>
+    <div class="step">রাশিটিকে $A+iB$ এর সাথে তুলনা করার সুবিধার্থে <br>$A+iB$ কাঠামোতে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = (-40) + i(5)$</div>
+    <div class="step"><b>উত্তর:</b> $(-40) + i(5)$ [এখানে $A = -40$ এবং $B = 5$]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (ii) $\dfrac{1+2i}{3-4i}$</div>
+    <div class="solution-title">সমাধান ৫. (ii):</div>
+    <div class="step-explain">যেকোনো ভগ্নাংশ আকারের জটিল সংখ্যাকে $A+iB$ আকারে প্রকাশ করতে হলে হরের অনুবন্ধী (Conjugate) জটিল সংখ্যা দ্বারা লব ও হরকে গুণ করে হরকে বাস্তব সংখ্যায় রূপান্তর করতে হয়। এখানে হর $3-4i$ এর অনুবন্ধী হলো $3+4i$।</div>
+    <div class="step">$\text{ধরি, } Z = \dfrac{1+2i}{3-4i}$</div>
+    <div class="step-explain">লব ও হরকে $(3+4i)$ দ্বারা গুণ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(1+2i\right)\left(3+4i\right)}{\left(3-4i\right)\left(3+4i\right)}$</div>
+    <div class="step-explain">লবে গুণ; হরে $a^2-b^2$ সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{1 \cdot 3 + 1 \cdot 4i + 2i \cdot 3 + 2i \cdot 4i}{(3)^2 - (4i)^2}$</div>
+    <div class="step-explain">বর্গ ও গুণ সম্পাদন করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3 + 4i + 6i + 8i^2}{9 - 16i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3 + 10i + 8(-1)}{9 - 16(-1)}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3 + 10i - 8}{9 + 16}$</div>
+    <div class="step-explain">লব ও হরে যোগ-বিয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{-5 + 10i}{25}$</div>
+    <div class="step-explain">এখন বাস্তব ও কাল্পনিক অংশ আলাদা করার জন্য হরটিকে পৃথকভাবে ভাগ করে আংশিক ভগ্নাংশে রূপান্তর করি :</div>
+    <div class="step">$\Rightarrow Z = \dfrac{-5}{25} + \dfrac{10i}{25}$</div>
+    <div class="step">$\Rightarrow Z = -\dfrac{1}{5} + \dfrac{2}{5}i$</div>
+    <div class="step">রাশিটিকে $A+iB$ এর সাথে তুলনা করার সুবিধার্থে <br>$A+iB$ কাঠামোতে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = \left(-\dfrac{1}{5}\right) + i\left(\dfrac{2}{5}\right)$</div>
+    <div class="step"><b>উত্তর:</b> $\left(-\dfrac{1}{5}\right) + i\left(\dfrac{2}{5}\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (iii) $\dfrac{2-3i}{4-4i}$</div>
+    <div class="solution-title">সমাধান ৫. (iii):</div>
+    <div class="step-explain">এখানে হর হলো $4-4i$, যার অনুবন্ধী জটিল সংখ্যা $4+4i$। আমরা লব ও হরকে $4+4i$ দ্বারা গুণ করব।</div>
+    <div class="step">$\text{ধরি, } Z = \dfrac{2-3i}{4-4i}$</div>
+    <div class="step-explain">লব ও হরকে হরের অনুবন্ধী রাশি $(4+4i)$ দ্বারা গুণ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(2-3i\right)\left(4+4i\right)}{\left(4-4i\right)\left(4+4i\right)}$</div>
+    <div class="step-explain">লবে গুণ; হরে $a^2-b^2$ সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{2 \cdot 4 + 2 \cdot 4i - 3i \cdot 4 - 3i \cdot 4i}{(4)^2 - (4i)^2}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{8 + 8i - 12i - 12i^2}{16 - 16i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{8 - 4i - 12(-1)}{16 - 16(-1)}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{8 - 4i + 12}{16 + 16}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{20 - 4i}{32}$</div>
+    <div class="step-explain">এখন বাস্তব ও কাল্পনিক অংশ আলাদা করার জন্য হরটিকে পৃথকভাবে ভাগ করে আংশিক ভগ্নাংশে রূপান্তর করি :</div>
+    <div class="step">$\Rightarrow Z = \dfrac{20}{32} - \dfrac{4i}{32}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{5}{8} - \dfrac{1}{8}i$</div>
+    <div class="step">রাশিটিকে $A+iB$ এর সাথে তুলনা করার সুবিধার্থে <br>$A+iB$ কাঠামোতে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{5}{8}\right) + i\left(-\dfrac{1}{8}\right)$</div>
+    <div class="step"><b>উত্তর:</b> $\left(\dfrac{5}{8}\right) + i\left(-\dfrac{1}{8}\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (iv) $\dfrac{1+2i}{2+3i}+\dfrac{1-4i}{3-i}$</div>
+    <div class="solution-title">সমাধান ৫. (iv):</div>
+    <div class="step-explain">দুটি ভগ্নাংশের যোগফল দেওয়া আছে। সরল করার সুবিধার্থে আমরা প্রথমে লসাগু করে একীভূত করব।</div>
+    <div class="step">$\text{ধরি, } Z = \dfrac{1+2i}{2+3i} + \dfrac{1-4i}{3-i}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(1+2i\right)\left(3-i\right) + \left(1-4i\right)\left(2+3i\right)}{\left(2+3i\right)\left(3-i\right)}$</div>
+    <div class="step-explain">এবার লব ও হরের বন্ধনীগুলোর গুণফল আলাদাভাবে নির্ণয় করি:</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(3 - i + 6i - 2i^2\right) + \left(2 + 3i - 8i - 12i^2\right)}{6 - 2i + 9i - 3i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left\{3 + 5i - 2(-1)\right\} + \left\{2 - 5i - 12(-1)\right\}}{6 + 7i - 3(-1)}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(3 + 5i + 2\right) + \left(2 - 5i + 12\right)}{6 + 7i + 3}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{\left(5 + 5i\right) + \left(14 - 5i\right)}{9 + 7i}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{5 + 5i + 14 - 5i}{9 + 7i}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{19}{9 + 7i}$</div>
+    <div class="step-explain">এখন প্রাপ্ত ভগ্নাংশের হর $9+7i$ এর অনুবন্ধী $9-7i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \dfrac{19 \cdot \left(9-7i\right)}{\left(9+7i\right)\left(9-7i\right)}$</div>
+    <div class="step-explain">হরে $(a+b)(a-b)=a^2-b^2$ সূত্র প্রয়োগ করে,</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171 - 133i}{(9)^2 - (7i)^2}$</div>
+    <div class="step-explain">বর্গ সম্পাদন করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171 - 133i}{81 - 49i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171 - 133i}{81 - 49(-1)}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171 - 133i}{81 + 49}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171 - 133i}{130}$</div>
+    <div class="step-explain">এখন বাস্তব ও কাল্পনিক অংশ আলাদা করার জন্য হরটিকে পৃথকভাবে ভাগ করে আংশিক ভগ্নাংশে রূপান্তর করি :</div>
+    <div class="step">$\Rightarrow Z = \dfrac{171}{130} - \dfrac{133}{130}i$</div>
+    <div class="step">বাস্তব ও কাল্পনিক অংশ পৃথক করে <br>$A+iB$ কাঠামোতে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{171}{130}\right) + i\left(-\dfrac{133}{130}\right)$</div>
+    <div class="step"><b>উত্তর:</b> $\left(\dfrac{171}{130}\right) + i\left(-\dfrac{133}{130}\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (v) $\dfrac{i}{3+i}$</div>
+    <div class="solution-title">সমাধান ৫. (v):</div>
+    <div class="step-explain">এখানে হর হলো $3+i$, এর অনুবন্ধী জটিল সংখ্যা $3-i$ দ্বারা লব ও হরকে গুণ করি।</div>
+    <div class="step">$\text{ধরি, } Z = \dfrac{i}{3+i}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{i \cdot \left(3-i\right)}{\left(3+i\right)\left(3-i\right)}$</div>
+    <div class="step-explain">লবে গুণ এবং হরে সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3i - i^2}{(3)^2 - (i)^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3i - (-1)}{9 - (-1)}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{3i + 1}{9 + 1}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{1 + 3i}{10}$</div>
+    <div class="step-explain">এখন বাস্তব ও কাল্পনিক অংশ আলাদা করার জন্য হরটিকে পৃথকভাবে ভাগ করে আংশিক ভগ্নাংশে রূপান্তর করি :</div>
+    <div class="step">$\Rightarrow Z = \dfrac{1}{10} + \dfrac{3}{10}i$</div>
+    <div class="step">বাস্তব ও কাল্পনিক অংশ পৃথক করে <br>$A+iB$ কাঠামোতে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{1}{10}\right) + i\left(\dfrac{3}{10}\right)$</div>
+    <div class="step"><b>উত্তর:</b> $\left(\dfrac{1}{10}\right) + i\left(\dfrac{3}{10}\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (vi) $\left(\dfrac{1+i}{1-i}\right)^3$</div>
+    <div class="solution-title">সমাধান ৫. (vi):</div>
+    <div class="step-explain">প্রথমে আমরা বন্ধনীর ভেতরের অংশটুকুকে সরল করব, তারপর প্রাপ্ত ফলের ওপর ঘন (cube) এর সূত্র প্রয়োগ করব। ভিতরের হর $1-i$ এর অনুবন্ধী $1+i$।</div>
+    <div class="step">$\text{ধরি, } Z = \left(\dfrac{1+i}{1-i}\right)^3$</div>
+    <div class="step-explain">লব ও হরকে $(1+i)$ দ্বারা গুণ করে</div>
+    <div class="step">$\Rightarrow Z = \left\{\dfrac{(1+i)(1+i)}{(1-i)(1+i)}\right\}^3$</div>
+    <div class="step">$\Rightarrow Z = \left\{\dfrac{(1+i)^2}{(1)^2 - (i)^2}\right\}^3$</div>
+    <div class="step-explain">$i^2=-1$ বসিয়ে</div>
+    <div class="step">$\Rightarrow Z = \left\{\dfrac{1^2 + 2 \cdot 1 \cdot i + i^2}{1 - (-1)}\right\}^3$</div>
+    <div class="step">$\Rightarrow Z = \left\{\dfrac{1 + 2i + (-1)}{1 + 1}\right\}^3$</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{1 + 2i - 1}{2}\right)^3$</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{2i}{2}\right)^3$</div>
+    <div class="step">$\Rightarrow Z = \left(i\right)^3$</div>
+    <div class="step">$\Rightarrow Z = i^3$</div>
+    <div class="step">$\Rightarrow Z = i^2 \cdot i$</div>
+    <div class="step">$\Rightarrow Z = (-1) \cdot i$</div>
+    <div class="step">$\Rightarrow Z = -i$</div>
+    <div class="step-explain">রাশিটিকে $A+iB$ আকারে দেখাতে বাস্তব অংশ $0$ ধরে সাজাই:</div>
+    <div class="step">$\Rightarrow Z = 0 + i(-1)$</div>
+    <div class="step"><b>উত্তর:</b> $0 + i(-1)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৫. (vii) $\dfrac{(1+i)^n}{(1-i)^{\,n-2}}$</div>
+    <div class="solution-title">সমাধান ৫. (vii):</div>
+    <div class="step-explain">সূচকের নিয়ম ব্যবহার করে হরের ঘাত বা পাওয়ারকে ভেঙে সহজ আকারে নিয়ে আসি।</div>
+    <div class="step">$\text{ধরি, } Z = \dfrac{(1+i)^n}{(1-i)^{n-2}}$</div>
+    <div class="step-explain">হরকে সূচকের $x^{a-b} = x^a \cdot x^{-b}$ সূত্রানুসারে সাজাই </div>
+    <div class="step">$\Rightarrow Z = \dfrac{(1+i)^n}{(1-i)^n \cdot (1-i)^{-2}}$</div>
+    <div class="step">$\Rightarrow Z = \dfrac{(1+i)^n}{(1-i)^n} \cdot \dfrac{1}{(1-i)^{-2}}$</div>
+    <div class="step-explain">আমরা জানি, সূচকের নিয়মানুসারে <br>$\dfrac{a^n}{b^n} = \left(\dfrac{a}{b}\right)^n$ এবং $\dfrac{1}{x^{-2}} = x^2$<br>তাহলে লিখা যায়,</div>
+    <div class="step">$\Rightarrow Z = \left(\dfrac{1+i}{1-i}\right)^n \cdot (1-i)^2$ </div>
+    <div class="step-explain">আমরা পূর্ববর্তী প্রশ্ন (vi) এর সমাধান থেকে দেখেছি যে, <nobr>$\dfrac{1+i}{1-i} = i$,</nobr> এই মানটি এখানে সরাসরি ব্যবহার করে নিচের মতো লিখতে পারি :</div>
+    <div class="step">$\Rightarrow Z = (i)^n \cdot (1-i)^2$</div>
+    <div class="step-explain">এখন $(1-i)^2$ অংশটিতে $(a-b)^2$ সূত্র প্রয়োগ করি :</div>
+    <div class="step">$\Rightarrow Z = i^n \cdot \left(1^2 - 2 \cdot 1 \cdot i + i^2\right)$</div>
+    <div class="step-explain">$i^2 = -1$ বসিয়ে,</div>
+    <div class="step">$\Rightarrow Z = i^n \cdot \left(1 - 2i + (-1)\right)$</div>
+    <div class="step">$\Rightarrow Z = i^n \cdot \left(1 - 2i - 1\right)$</div>
+    <div class="step">$\Rightarrow Z = i^n \cdot (-2i)$</div>
+    <div class="step-explain">সহগ ও ভিত্তি আলাদা করে সাজিয়ে</div>
+    <div class="step">$\Rightarrow Z = -2 \cdot i^n \cdot i^1$</div>
+    <div class="step">$\Rightarrow Z = -2 \cdot i^{n+1}$ <span class="note">[ $i^n \cdot i^1 = i^{n+1}$ ]</span></div>
+    <div class="step-explain">এখন প্রাপ্ত উত্তরটি $n$ এর মানের ওপর নির্ভরশীল। একে সরাসরি জটিল সংখ্যার সাধারণ রূপ $A+iB$ আকারে উপস্থাপনের জন্য এভাবে লেখা যায়:</div>
+    <div class="step">$\Rightarrow Z = \left(-2i^{n+1}\right) + i(0)$</div>
+    <div class="step"><b>উত্তর:</b> $-2 \cdot i^{n+1}$</div>
+</div>
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

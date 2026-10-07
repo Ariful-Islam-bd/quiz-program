@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B Complex</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(B)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(i) $(1 + \omega - \omega^2)^3 - (1 - \omega + \omega^2)^3 = 0$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">আমরা জানি, এককের ঘনমূল সংক্রান্ত দুটি অত্যন্ত গুরুত্বপূর্ণ ধর্ম বা সূত্র হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \implies 1 + \omega = -\omega^2 \quad \text{এবং} \quad 1 + \omega^2 = -\omega$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে সমীকরণটি সাজাই এবং এই মানগুলো ব্যবহার করি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 + \omega - \omega^2\right)^3 - \left(1 - \omega + \omega^2\right)^3</div>
+    <div class="step-explain">প্রথম ব্র্যাকেটের $1 + \omega$ এর জায়গায় $-\omega^2$ বসাই এবং দ্বিতীয় ব্র্যাকেটের $1 + \omega^2$ অংশ দুটিকে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(-\omega^2 - \omega^2\right)^3 - \left(1 + \omega^2 - \omega\right)^3 \quad [\because 1 + \omega = -\omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">দ্বিতীয় ব্র্যাকেটের $1 + \omega^2$ এর জায়গায় $-\omega$ বসাই:</div>
+    <div class="step">$= \left(-2\omega^2\right)^3 - \left(-\omega - \omega\right)^3 \quad [\text{যোগ করে এবং } 1 + \omega^2 = -\omega \text{ বসিয়ে}]$</div>
+    <div class="step">$= \left(-2\omega^2\right)^3 - \left(-2\omega\right)^3 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন সূচকের নিয়ম অনুযায়ী উভয় পদের ঘনক (cube) করে পাই (মনে রাখতে হবে ঋণাত্মক সংখ্যার ওপর বিজোড় পাওয়ার থাকলে চিহ্ন মাইনাসই থাকে):</div>
+    <div class="step">$= (-2)^3 \cdot \left(\omega^2\right)^3 - (-2)^3 \cdot \omega^3 \quad [\text{সূচক বণ্টন করে}]$</div>
+    <div class="step">$= -8\omega^6 - (-8)\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= -8\omega^6 + 8\omega^3 \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$। অতএব সূচকের নিয়মে $\omega^6 = \left(\omega^3\right)^2 = (1)^2 = 1$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= -8 \cdot \left(\omega^3\right)^2 + 8 \cdot \omega^3$</div>
+    <div class="step">$= -8 \cdot (1)^2 + 8 \cdot (1) \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -8 + 8 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 + \omega - \omega^2)^3 - (1 - \omega + \omega^2)^3 = 0$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $(1 + \omega)(1 + \omega^2)(1 + \omega^4)(1 + \omega^8) = 1$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0 \implies 1 + \omega = -\omega^2$ এবং $1 + \omega^2 = -\omega$। এছাড়াও $\omega^3 = 1$।</div>
+    <div class="step-explain">প্রথমে প্রমাণের বামপক্ষ (L.H.S.) লিখি:</div>
+    <div class="step">\text{L.H.S.} = (1 + \omega)\left(1 + \omega^2\right)\left(1 + \omega^4\right)\left(1 + \omega^8\right)</div>
+    <div class="step-explain">৩ এর চেয়ে বড় ঘাতযুক্ত পদগুলোকে ($\omega^4$ ও $\omega^8$) প্রথমে $\omega^3 = 1$ এর মাধ্যমে ছোট ঘাতে রূপান্তর করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega \quad [\because \omega^3 = 1]$</div>
+    <div class="step">$\omega^8 = \omega^6 \cdot \omega^2 = \left(\omega^3\right)^2 \cdot \omega^2 = (1)^2 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এখন এই সরলীকৃত মানগুলো মূল রাশিতে বসাই:</div>
+    <div class="step">$= (1 + \omega)\left(1 + \omega^2\right)(1 + \omega)\left(1 + \omega^2\right) \quad [\omega^4 \text{ ও } \omega^8 \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">এখন এককের ঘনমূলের মূল সূত্র থেকে প্রাপ্ত $1 + \omega = -\omega^2$ এবং $1 + \omega^2 = -\omega$ মানগুলো রাশিতে বসিয়ে দিই:</div>
+    <div class="step">$= \left(-\omega^2\right) \cdot (-\omega) \cdot \left(-\omega^2\right) \cdot (-\omega) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">চিহ্নগুলো গুণ করি। চারটি মাইনাস চিহ্ন গুণ হয়ে প্লাস হয়ে যাবে:</div>
+    <div class="step">$= \omega^2 \cdot \omega \cdot \omega^2 \cdot \omega \quad [\text{চিহ্নের গুণ করে}]$</div>
+    <div class="step-explain">সূচকের নিয়ম অনুযায়ী গুণের সময় পাওয়ারগুলো যোগ করি ($2 + 1 + 2 + 1 = 6$):</div>
+    <div class="step">$= \omega^6 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= \left(\omega^3\right)^2 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step">$= (1)^2 \quad [\framebox{$\because \omega^3 = 1$} \text{ মান বসিয়ে}]$</div>
+    <div class="step">$= 1$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 + \omega)(1 + \omega^2)(1 + \omega^4)(1 + \omega^8) = 1$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(iii) $(1 - \omega + \omega^2)(1 + \omega - \omega^2) = 4$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের প্রধান ধর্ম বা সূত্রটি হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0$</div>
+    <div class="step-explain">এই মূল সূত্রটি থেকে আমরা প্রয়োজন অনুযায়ী পক্ষান্তর করে লিখতে পারি:</div>
+    <div class="step">$1 + \omega^2 = -\omega \quad \text{এবং} \quad 1 + \omega = -\omega^2$</div>
+    <div class="step-explain">এখন আমরা প্রমাণের বামপক্ষ (L.H.S.) লিখে সমীকরণটি সাজাই এবং এই মানগুলো ব্যবহার করি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega + \omega^2\right)\left(1 + \omega - \omega^2\right)</div>
+    <div class="step-explain">প্রথম ব্র্যাকেটের ভেতরের $1$ ও $\omega^2$ পদ দুটিকে সুবিধার্থে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(1 + \omega^2 - \omega\right)\left(1 + \omega - \omega^2\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন প্রথম অংশে $1 + \omega^2$ এর পরিবর্তে $-\omega$ এবং দ্বিতীয় অংশে $1 + \omega$ এর পরিবর্তে $-\omega^2$ বসাই:</div>
+    <div class="step">$= (-\omega - \omega)\left(-\omega^2 - \omega^2\right) \quad [\because 1 + \omega^2 = -\omega \text{ এবং } 1 + \omega = -\omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের সমজাতীয় কাল্পনিক পদগুলো যোগ করি:</div>
+    <div class="step">$= (-2\omega)\left(-2\omega^2\right) \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">পদ দুটিকে গুণ করি। আমরা জানি, মাইনাসে মাইনাসে প্লাস হয় ($-2 \cdot -2 = 4$) এবং $\omega \cdot \omega^2 = \omega^3$:</div>
+    <div class="step">$= 4\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">যেহেতু এককের ঘনমূলের আরেকটি ধর্ম হলো $\omega^3 = 1$, তাই মানটি বসিয়ে পাই:</div>
+    <div class="step">$= 4 \cdot (1) \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 4$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega + \omega^2)(1 + \omega - \omega^2) = 4$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $(1 - \omega^2)(1 - \omega^4)(1 - \omega^8)(1 - \omega^{10}) = 9$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$। তাই ৩ এর চেয়ে বড় ঘাতযুক্ত ওমেগার পদগুলোকে প্রথমে ছোট ঘাতে রূপান্তর করে নেব।</div>
+    <div class="step-explain">সূচকের নিয়ম এবং $\omega^3 = 1$ ব্যবহার করে পাই:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^8 = \left(\omega^3\right)^2 \cdot \omega^2 = (1)^2 \cdot \omega^2 = \omega^2$</div>
+    <div class="step">$\omega^{10} = \left(\omega^3\right)^3 \cdot \omega = (1)^3 \cdot \omega = \omega$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে এই রূপান্তরিত মানগুলো বসিয়ে দিই:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega^2\right)\left(1 - \omega^4\right)\left(1 - \omega^8\right)\left(1 - \omega^{10}\right)</div>
+    <div class="step">$= \left(1 - \omega^2\right)(1 - \omega)\left(1 - \omega^2\right)(1 - \omega) \quad [\omega^4, \omega^8, \omega^{10} \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">একই রকম পদগুলোকে বর্গ আকারে সাজিয়ে একসাথে গুছিয়ে লিখি:</div>
+    <div class="step">$= \left[(1 - \omega)\left(1 - \omega^2\right)\right] \cdot \left[(1 - \omega)\left(1 - \omega^2\right)\right] \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= \left[(1 - \omega)\left(1 - \omega^2\right)\right]^2 \quad [\text{বর্গাকারে প্রকাশ করে}]$</div>
+    <div class="step-explain">এখন দ্বিতীয় বন্ধনীর ভেতরের পদ দুটিকে সাধারণ বীজগণিতীয় নিয়মে গুণ করি:</div>
+    <div class="step">$= \left(1 \cdot 1 - 1 \cdot \omega^2 - \omega \cdot 1 + \omega \cdot \omega^2\right)^2$</div>
+    <div class="step">$= \left(1 - \omega^2 - \omega + \omega^3\right)^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">এখানে $\omega^3 = 1$ মানটি বসাই এবং মাইনাস চিহ্নযুক্ত পদ দুটি থেকে মাইনাস কমন নিই:</div>
+    <div class="step">$= \left[1 - \left(\omega + \omega^2\right) + 1\right]^2 \quad [\because \omega^3 = 1 \text{ বসিয়ে এবং মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$= \left[2 - \left(\omega + \omega^2\right)\right]^2 \quad [\text{বাস্তব সংখ্যা দুটি যোগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$= [2 - (-1)]^2 \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= (2 + 1)^2 \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step">$= (3)^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step">$= 9$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega^2)(1 - \omega^4)(1 - \omega^8)(1 - \omega^{10}) = 9$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(v) $(1 - \omega + \omega^2)^2 + (1 + \omega - \omega^2)^2 = -4$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে একটি গুরুত্বপূর্ণ অনুসিদ্ধান্ত হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0$</div>
+    <div class="step-explain">এই সমীকরণটিকে পক্ষান্তর করে আমরা লিখতে পারি:</div>
+    <div class="step">$1 + \omega^2 = -\omega \quad \text{এবং} \quad 1 + \omega = -\omega^2$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে মানগুলো প্রতিস্থাপন করার জন্য পদগুলোকে একটু সাজিয়ে লিখি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega + \omega^2\right)^2 + \left(1 + \omega - \omega^2\right)^2</div>
+    <div class="step">$= \left(1 + \omega^2 - \omega\right)^2 + \left(1 + \omega - \omega^2\right)^2 \quad [\text{প্রথম বন্ধনীর পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন প্রথম ব্র্যাকেটের $1 + \omega^2$ এর স্থলে $-\omega$ এবং দ্বিতীয় ব্র্যাকেটের $1 + \omega$ এর স্থলে $-\omega^2$ বসিয়ে পাই:</div>
+    <div class="step">$= (-\omega - \omega)^2 + \left(-\omega^2 - \omega^2\right)^2 \quad [\because 1 + \omega^2 = -\omega \text{ এবং } 1 + \omega = -\omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">বন্ধনীগুলোর ভেতরের সমজাতীয় পদগুলো যোগ করি:</div>
+    <div class="step">$= (-2\omega)^2 + \left(-2\omega^2\right)^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন পদ দুটির বর্গ (square) করি। আমরা জানি, ঋণাত্মক সংখ্যার বর্গ সর্বদা ধনাত্মক হয় (যেমন: $(-2)^2 = 4$):</div>
+    <div class="step">$= 4\omega^2 + 4\omega^4 \quad [\text{বর্গ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$। সূচকের নিয়ম অনুযায়ী $\omega^4$ কে ভেঙে আমরা লিখতে পারি $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$। এই মানটি রাশিতে বসাই:</div>
+    <div class="step">$= 4\omega^2 + 4\left(\omega^3 \cdot \omega\right) \quad [\text{সূচকের নিয়ম অনুযায়ী ভেঙে}]$</div>
+    <div class="step">$= 4\omega^2 + 4(1 \cdot \omega) \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 4\omega^2 + 4\omega \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ ধ্রুবক $4$ কমন নিই:</div>
+    <div class="step">$= 4\left(\omega^2 + \omega\right) \quad [\text{৪ কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0$, সেহেতু পক্ষান্তর করলে পাই $\omega + \omega^2 = -1$ বা $\omega^2 + \omega = -1$। এবার এই মানটি বসিয়ে দিই:</div>
+    <div class="step">$= 4 \cdot (-1) \quad [\because \omega^2 + \omega = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -4 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega + \omega^2)^2 + (1 + \omega - \omega^2)^2 = -4$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) $(1 - \omega^2 + \omega^4)^2 + (1 + \omega^2 - \omega^4)^2 = -4$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">আমরা জানি, ওমেগার উচ্চ ঘাতগুলোকে ছোট করার নিয়ম হলো $\omega^3 = 1$ ব্যবহার করা। এখানে $\omega^4$ পদটি রয়েছে, তাকে প্রথমে সরল করে নিই:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega \quad [\because \omega^3 = 1]$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে $\omega^4$ এর জায়গায় $\omega$ বসিয়ে রাশিটি ছোট করি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega^2 + \omega^4\right)^2 + \left(1 + \omega^2 - \omega^4\right)^2</div>
+    <div class="step">$= \left(1 - \omega^2 + \omega\right)^2 + \left(1 + \omega^2 - \omega\right)^2 \quad [\because \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">প্রথম বন্ধনীর ভেতরের পদগুলোকে সূত্রের সাথে মেলাতে একটু সাজিয়ে গুছিয়ে লিখি:</div>
+    <div class="step">$= \left(1 + \omega - \omega^2\right)^2 + \left(1 + \omega^2 - \omega\right)^2 \quad [\text{প্রথম বন্ধনীর পদ সাজিয়ে}]$</div>
+    <div class="step-explain">লক্ষ্য করুন, পদগুলো সাজানোর পর রাশিটি হুবহু পূর্বের উপ-প্রশ্ন (v) এর বামপক্ষের মতো রূপ নিয়েছে।</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega = -\omega^2$ এবং $1 + \omega^2 = -\omega$। এই মানগুলো যথাস্থানে বসাই:</div>
+    <div class="step">$= \left(-\omega^2 - \omega^2\right)^2 + (-\omega - \omega)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \left(-2\omega^2\right)^2 + (-2\omega)^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন সূচকের নিয়ম অনুযায়ী বন্ধনীভুক্ত পদগুলোর বর্গ করি:</div>
+    <div class="step">$= 4\omega^4 + 4\omega^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step-explain">পুনরায় $\omega^4 = \omega$ মানটি এখানে বসিয়ে দিই:</div>
+    <div class="step">$= 4\omega + 4\omega^2 \quad [\because \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ ধ্রুবক $4$ কমন নিই:</div>
+    <div class="step">$= 4\left(\omega + \omega^2\right) \quad [\text{৪ কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $\omega + \omega^2 = -1$, তাই মানটি বসিয়ে পাই:</div>
+    <div class="step">$= 4 \cdot (-1) \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -4 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega^2 + \omega^4)^2 + (1 + \omega^2 - \omega^4)^2 = -4$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(vii) $(x + y)^2 + \left(x\omega + y\omega^2\right)^2 + \left(x\omega^2 + y\omega\right)^2 = 6xy$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে অত্যন্ত গুরুত্বপূর্ণ দুটি ধর্ম বা সূত্র হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \quad \text{এবং} \quad \omega^3 = 1$</div>
+    <div class="step-explain">প্রথমে প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে প্রতিটি পদের ওপর বর্গের সূত্র $(A+B)^2 = A^2 + 2AB + B^2$ প্রয়োগ করব:</div>
+    <div class="step">\text{L.H.S.} = (x + y)^2 + \left(x\omega + y\omega^2\right)^2 + \left(x\omega^2 + y\omega\right)^2</div>
+    <div class="step-explain">প্রথম পদ $(x + y)^2$ কে সূত্রে ভেঙে পাই:</div>
+    <div class="step">$= \left(x^2 + 2xy + y^2\right) + \left(x\omega + y\omega^2\right)^2 + \left(x\omega^2 + y\omega\right)^2$</div>
+    <div class="step-explain">দ্বিতীয় পদ $\left(x\omega + y\omega^2\right)^2$ কে সূত্রে ভেঙে পাই:</div>
+    <div class="step">$= \left(x^2 + 2xy + y^2\right) + \left[(x\omega)^2 + 2 \cdot (x\omega) \cdot \left(y\omega^2\right) + \left(y\omega^2\right)^2\right] + \left(x\omega^2 + y\omega\right)^2$</div>
+    <div class="step">$= \left(x^2 + 2xy + y^2\right) + \left(x^2\omega^2 + 2xy\omega^3 + y^2\omega^4\right) + \left(x\omega^2 + y\omega\right)^2 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">তৃতীয় পদ $\left(x\omega^2 + y\omega\right)^2$ কে সূত্রে ভেঙে পাই:</div>
+    <div class="step">$= \left(x^2 + 2xy + y^2\right) + \left(x^2\omega^2 + 2xy\omega^3 + y^2\omega^4\right) + \left[\left(x\omega^2\right)^2 + 2 \cdot \left(x\omega^2\right) \cdot (y\omega) + (y\omega)^2\right]$</div>
+    <div class="step">$= x^2 + 2xy + y^2 + x^2\omega^2 + 2xy\omega^3 + y^2\omega^4 + x^2\omega^4 + 2xy\omega^3 + y^2\omega^2 \quad [\text{ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step-explain">এখন ওমেগার উচ্চ ঘাতগুলোকে ছোট করার জন্য $\omega^3 = 1$ এবং $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$ মানগুলো বসাই:</div>
+    <div class="step">$= x^2 + 2xy + y^2 + x^2\omega^2 + 2xy(1) + y^2(\omega) + x^2(\omega) + 2xy(1) + y^2\omega^2 \quad [\because \omega^3 = 1 \text{ এবং } \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step">$= x^2 + 2xy + y^2 + x^2\omega^2 + 2xy + y^2\omega + x^2\omega + 2xy + y^2\omega^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">সমজাতীয় চলক বা পদগুলোকে (যেমন: $x^2, y^2$ এবং $xy$ যুক্ত পদ) একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(x^2 + x^2\omega^2 + x^2\omega\right) + \left(y^2 + y^2\omega + y^2\omega^2\right) + (2xy + 2xy + 2xy) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">প্রথম অংশ থেকে $x^2$, দ্বিতীয় অংশ থেকে $y^2$ কমন নিই এবং তৃতীয় অংশের $xy$ পদগুলো সাধারণ নিয়মে যোগ করি:</div>
+    <div class="step">$= x^2\left(1 + \omega^2 + \omega\right) + y^2\left(1 + \omega + \omega^2\right) + 6xy \quad [\text{কমন নিয়ে ও যোগ করে}]$</div>
+    <div class="step-explain">যেহেতু আমরা জানি $1 + \omega + \omega^2 = 0$, তাই এই মানটি প্রথম দুটি অংশে প্রতিস্থাপন করি:</div>
+    <div class="step">$= x^2 \cdot (0) + y^2 \cdot (0) + 6xy \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 0 + 0 + 6xy$</div>
+    <div class="step">$= 6xy$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(x + y)^2 + (x\omega + y\omega^2)^2 + (x\omega^2 + y\omega)^2 = 6xy$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(viii) $(a + b + c)\left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right) = a^3 + b^3 + c^3 - 3abc$</div>
+    <div class="solution-title">সমাধান (viii):</div>
+    <div class="step-explain">আমরা জানি, উৎপাদকের একটি বিখ্যাত বীজগণিতীয় সূত্র হলো:</div>
+    <div class="step">$a^3 + b^3 + c^3 - 3abc = (a + b + c)\left(a^2 + b^2 + c^2 - ab - bc - ca\right)$</div>
+    <div class="step-explain">সুতরাং, আমরা যদি প্রমাণের বামপক্ষের শেষ দুটি উৎপাদক গুণ করে ডানপক্ষের দ্বিতীয় অংশের সাথে মেলাতে পারি, তবে প্রমাণটি খুব সহজে হয়ে যাবে।</div>
+    <div class="step-explain">প্রথমে প্রমাণের বামপক্ষ (L.H.S.) লিখে নিই:</div>
+    <div class="step">\text{L.H.S.} = (a + b + c)\left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right)</div>
+    <div class="step-explain">প্রথম উৎপাদক $(a + b + c)$ কে অপরিবর্তিত রেখে শেষের দুটি উৎপাদক সাধারণ নিয়মে গুণ করি:</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a\left(a + b\omega^2 + c\omega\right) + b\omega\left(a + b\omega^2 + c\omega\right) + c\omega^2\left(a + b\omega^2 + c\omega\right) \right]$</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a^2 + ab\omega^2 + ac\omega + ab\omega + b^2\omega^3 + bc\omega^2 + ac\omega^2 + bc\omega^4 + c^2\omega^3 \right] \quad [\text{ভেতরে গুণ করে}]$</div>
+    <div class="step-explain">এখন ওমেগার পাওয়ারগুলো ছোট করার জন্য $\omega^3 = 1$ এবং $\omega^4 = \omega$ মানগুলো বসাই:</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a^2 + ab\omega^2 + ac\omega + ab\omega + b^2(1) + bc\omega^2 + ac\omega^2 + bc(\omega) + c^2(1) \right] \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a^2 + b^2 + c^2 + ab\omega + ab\omega^2 + bc\omega + bc\omega^2 + ac\omega + ac\omega^2 \right] \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন $ab, bc,$ এবং $ac$ যুক্ত পদগুলোর জোড়া থেকে যথাক্রমে সাধারণ উৎপাদক কমন নিই:</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a^2 + b^2 + c^2 + ab\left(\omega + \omega^2\right) + bc\left(\omega + \omega^2\right) + ac\left(\omega + \omega^2\right) \right] \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$। এই মানটি বন্ধনীগুলোর ভেতরে প্রতিস্থাপন করি:</div>
+    <div class="step">$= (a + b + c) \cdot \left[ a^2 + b^2 + c^2 + ab(-1) + bc(-1) + ac(-1) \right] \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= (a + b + c)\left(a^2 + b^2 + c^2 - ab - bc - ca\right) \quad [\text{চিহ্নের গুণ করে}]$</div>
+    <div class="step-explain">লক্ষ্য করুন, এটি হুবহু আমাদের কাঙ্ক্ষিত ঘনের উৎপাদক সূত্রের রূপ ধারণ করেছে:</div>
+    <div class="step">$= a^3 + b^3 + c^3 - 3abc \quad [\text{উৎপাদকের সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(a + b + c)(a + b\omega + c\omega^2)(a + b\omega^2 + c\omega) = a^3 + b^3 + c^3 - 3abc$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(ix) $(1 - \omega + \omega^2)(1 - \omega^2 + \omega^4)(1 - \omega^4 + \omega^8)(1 - \omega^8 + \omega^{16}) = 16$</div>
+    <div class="solution-title">সমাধান (ix):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে গুরুত্বপূর্ণ ধর্ম বা সূত্রগুলো হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \implies 1 + \omega^2 = -\omega \quad \text{এবং} \quad 1 + \omega = -\omega^2$</div>
+    <div class="step-explain">এছাড়াও ওমেগার উচ্চ ঘাত বা পাওয়ারের ক্ষেত্রে আমরা জানি, $\omega^3 = 1$। এই ধর্ম ব্যবহার করে ৩ এর চেয়ে বড় ঘাতগুলোকে ছোট করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^8 = \left(\omega^3\right)^2 \cdot \omega^2 = (1)^2 \cdot \omega^2 = \omega^2$</div>
+    <div class="step">$\omega^{16} = \left(\omega^3\right)^5 \cdot \omega = (1)^5 \cdot \omega = \omega$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে প্রথমে ওমেগার উচ্চ ঘাতযুক্ত পদগুলোর মান বসিয়ে রাশিটি সহজ করি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega + \omega^2\right)\left(1 - \omega^2 + \omega^4\right)\left(1 - \omega^4 + \omega^8\right)\left(1 - \omega^8 + \omega^{16}\right)</div>
+    <div class="step">$= \left(1 - \omega + \omega^2\right)\left(1 - \omega^2 + \omega\right)\left(1 - \omega + \omega^2\right)\left(1 - \omega^2 + \omega\right) \quad [\omega^4, \omega^8, \omega^{16} \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">এখন প্রথম ও তৃতীয় বন্ধনী এবং দ্বিতীয় ও চতুর্থ বন্ধনীর ভেতরের পদগুলোকে সূত্রের সাথে মেলাতে একটু সাজিয়ে গুছিয়ে লিখি:</div>
+    <div class="step">$= \left(1 + \omega^2 - \omega\right)\left(1 + \omega - \omega^2\right)\left(1 + \omega^2 - \omega\right)\left(1 + \omega - \omega^2\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন $1 + \omega^2 = -\omega$ এবং $1 + \omega = -\omega^2$ মানগুলো বসিয়ে দিই:</div>
+    <div class="step">$= (-\omega - \omega)\left(-\omega^2 - \omega^2\right)(-\omega - \omega)\left(-\omega^2 - \omega^2\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">প্রতিটি বন্ধনীর ভেতরের সমজাতীয় কাল্পনিক পদগুলো যোগ করি:</div>
+    <div class="step">$= (-2\omega)\left(-2\omega^2\right)(-2\omega)\left(-2\omega^2\right) \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">প্রথম দুটি পদ এবং শেষ দুটি পদ সাধারণ বীজগণিতীয় নিয়মে গুণ করি (মাইনাসে মাইনাসে প্লাস হবে):</div>
+    <div class="step">$= \left(4\omega^3\right) \cdot \left(4\omega^3\right) \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">যেহেতু $\omega^3 = 1$, তাই মান বসিয়ে পাই:</div>
+    <div class="step">$= [4 \cdot (1)] \cdot [4 \cdot (1)] \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 4 \cdot 4 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= 16$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega + \omega^2)(1 - \omega^2 + \omega^4)(1 - \omega^4 + \omega^8)(1 - \omega^8 + \omega^{16}) = 16$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(x) $(1 - \omega + \omega^2)^3 + (1 + \omega - \omega^2)^3 = -16$</div>
+    <div class="solution-title">সমাধান (x):</div>
+    <div class="step-explain">পূর্বের নিয়ম অনুযায়ী আমরা জানি:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \implies 1 + \omega^2 = -\omega \quad \text{এবং} \quad 1 + \omega = -\omega^2$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে প্রথম ব্র্যাকেটের ভেতরের পদগুলোকে সাজাই:</div>
+    <div class="step">\text{L.H.S.} = \left(1 - \omega + \omega^2\right)^3 + \left(1 + \omega - \omega^2\right)^3</div>
+    <div class="step">$= \left(1 + \omega^2 - \omega\right)^3 + \left(1 + \omega - \omega^2\right)^3 \quad [\text{প্রথম বন্ধনীর পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এবার প্রথম অংশে $1 + \omega^2$ এর পরিবর্তে $-\omega$ এবং দ্বিতীয় অংশে $1 + \omega$ এর পরিবর্তে $-\omega^2$ বসাই:</div>
+    <div class="step">$= (-\omega - \omega)^3 + \left(-\omega^2 - \omega^2\right)^3 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের সমজাতীয় পদগুলো যোগ করি:</div>
+    <div class="step">$= (-2\omega)^3 + \left(-2\omega^2\right)^3 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন সূচকের নিয়ম অনুযায়ী উভয় পদের ঘনক (cube) করি (মনে রাখতে হবে ঋণাত্মক সংখ্যার ওপর বিজোড় পাওয়ার থাকলে চিহ্ন মাইনাসই থাকে, যেমন: $(-2)^3 = -8$):</div>
+    <div class="step">$= -8\omega^3 + (-8)\omega^6 \quad [\text{ঘনক করে}]$</div>
+    <div class="step">$= -8\omega^3 - 8\omega^6 \quad [\text{চিহ্নের গুণ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$ এবং সূচকের নিয়মে $\omega^6 = \left(\omega^3\right)^2 = (1)^2 = 1$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= -8 \cdot (1) - 8 \cdot (1) \quad [\because \omega^3 = 1 \text{ এবং } \omega^6 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -8 - 8 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">ঋণাত্মক সংখ্যা দুটি যোগ করে পাই:</div>
+    <div class="step">$= -16$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega + \omega^2)^3 + (1 + \omega - \omega^2)^3 = -16$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(xi) $(1 + \omega - \omega^2)^4 + (1 - \omega + \omega^2)^4 = -16$</div>
+    <div class="solution-title">সমাধান (xi):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে একটি গুরুত্বপূর্ণ মৌলিক সূত্র হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0$</div>
+    <div class="step-explain">এই সমীকরণটিকে পক্ষান্তর করে আমরা আমাদের প্রয়োজন অনুযায়ী লিখতে পারি:</div>
+    <div class="step">$1 + \omega = -\omega^2 \quad \text{এবং} \quad 1 + \omega^2 = -\omega$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে মানগুলো প্রতিস্থাপন করার জন্য দ্বিতীয় ব্র্যাকেটের ভেতরের পদগুলোকে একটু সাজিয়ে লিখি:</div>
+    <div class="step">\text{L.H.S.} = \left(1 + \omega - \omega^2\right)^4 + \left(1 - \omega + \omega^2\right)^4</div>
+    <div class="step">$= \left(1 + \omega - \omega^2\right)^4 + \left(1 + \omega^2 - \omega\right)^4 \quad [\text{দ্বিতীয় বন্ধনীর পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন প্রথম ব্র্যাকেটের $1 + \omega$ এর স্থলে $-\omega^2$ এবং দ্বিতীয় ব্র্যাকেটের $1 + \omega^2$ এর স্থলে $-\omega$ বসিয়ে পাই:</div>
+    <div class="step">$= \left(-\omega^2 - \omega^2\right)^4 + (-\omega - \omega)^4 \quad [\because 1 + \omega = -\omega^2 \text{ এবং } 1 + \omega^2 = -\omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">বন্ধনীগুলোর ভেতরের সমজাতীয় কাল্পনিক পদগুলো সাধারণ নিয়মে যোগ করি:</div>
+    <div class="step">$= \left(-2\omega^2\right)^4 + (-2\omega)^4 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন সূচকের নিয়ম অনুযায়ী উভয় পদের ওপর ঘাত বা পাওয়ার $4$ প্রয়োগ করি (মনে রাখতে হবে ঋণাত্মক সংখ্যার ওপর জোড় পাওয়ার থাকলে তা ধনাত্মক হয়ে যায়, যেমন: $(-2)^4 = 16$):</div>
+    <div class="step">$= 16\omega^8 + 16\omega^4 \quad [\text{পাওয়ার হিসাব করে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ ধ্রুবক $16$ কমন নিই:</div>
+    <div class="step">$= 16\left(\omega^8 + \omega^4\right) \quad [\text{১৬ কমন নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$। সূচকের নিয়ম ব্যবহার করে ওমেগার উচ্চ ঘাতযুক্ত পদগুলোকে ($\omega^8$ ও $\omega^4$) ভেঙে ছোট করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^8 = \left(\omega^3\right)^2 \cdot \omega^2 = (1)^2 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এই রূপান্তরিত মানগুলো ব্র্যাকেটের ভেতরে বসিয়ে পাই:</div>
+    <div class="step">$= 16\left(\omega^2 + \omega\right) \quad [\because \omega^8 = \omega^2 \text{ এবং } \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0$, সেহেতু পক্ষান্তর করলে আমরা পাই $\omega + \omega^2 = -1$ বা $\omega^2 + \omega = -1$। এবার এই মানটি বসিয়ে দিই:</div>
+    <div class="step">$= 16 \cdot (-1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= -16 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 + \omega - \omega^2)^4 + (1 - \omega + \omega^2)^4 = -16$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xii) $(1 - \omega)(1 - \omega^2)(1 - \omega^4)(1 - \omega^8) = 9$</div>
+    <div class="solution-title">সমাধান (xii):</div>
+    <div class="step-explain">ওমেগার উচ্চ ঘাত বা ৩ এর চেয়ে বড় পাওয়ার থাকলে সেগুলোকে প্রথমে $\omega^3 = 1$ ব্যবহার করে ছোট করে নিতে হয়।</div>
+    <div class="step-explain">সূচকের নিয়মে এবং $\omega^3 = 1$ এর সাহায্যে ৩ নং ও ৪ নং পদের ওমেগাকে রূপান্তর করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^8 = \left(\omega^3\right)^2 \cdot \omega^2 = (1)^2 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে ওমেগার এই রূপান্তরিত মানগুলো বসিয়ে দিই:</div>
+    <div class="step">\text{L.H.S.} = (1 - \omega)\left(1 - \omega^2\right)\left(1 - \omega^4\right)\left(1 - \omega^8\right)</div>
+    <div class="step">$= (1 - \omega)\left(1 - \omega^2\right)(1 - \omega)\left(1 - \omega^2\right) \quad [\omega^4 \text{ ও } \omega^8 \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">একই রকম বা সদৃশ পদগুলোকে একসাথে জোড়া তৈরি করে হোল-বর্গ (whole square) আকারে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left[(1 - \omega)\left(1 - \omega^2\right)\right] \cdot \left[(1 - \omega)\left(1 - \omega^2\right)\right] \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= \left[(1 - \omega)\left(1 - \omega^2\right)\right]^2 \quad [\text{বর্গাকারে প্রকাশ করে}]$</div>
+    <div class="step-explain">এখন দ্বিতীয় বন্ধনীর ভেতরের পদ দুটিকে সাধারণ বীজগণিতীয় নিয়মে গুণ করি:</div>
+    <div class="step">$= \left(1 \cdot 1 - 1 \cdot \omega^2 - \omega \cdot 1 + \omega \cdot \omega^2\right)^2$</div>
+    <div class="step">$= \left(1 - \omega^2 - \omega + \omega^3\right)^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">এখানে $\omega^3 = 1$ মানটি বসাই এবং মাইনাস চিহ্নযুক্ত ওমেগার পদ দুটি থেকে মাইনাস কমন নিই:</div>
+    <div class="step">$= \left[1 - \left(\omega + \omega^2\right) + 1\right]^2 \quad [\because \omega^3 = 1 \text{ বসিয়ে এবং মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$= \left[2 - \left(\omega + \omega^2\right)\right]^2 \quad [\text{বাস্তব সংখ্যা দুটি যোগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$। এই মানটি ব্র্যাকেটের ভেতরে প্রতিস্থাপন করি:</div>
+    <div class="step">$= [2 - (-1)]^2 \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= (2 + 1)^2 \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step">$= (3)^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step">$= 9$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega)(1 - \omega^2)(1 - \omega^4)(1 - \omega^8) = 9$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে দেখাও যে:</div>
+
+    <div class="problem-sub-title">(xiii) $(1 + \omega - \omega^2)\left(\omega + \omega^2 - 1\right)\left(\omega^2 + 1 - \omega\right) = -8$</div>
+    <div class="solution-title">সমাধান (xiii):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে একটি গুরুত্বপূর্ণ মৌলিক সূত্র হলো:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0$</div>
+    <div class="step-explain">এই সমীকরণটিকে পক্ষান্তর করে আমরা আমাদের প্রয়োজন অনুযায়ী লিখতে পারি:</div>
+    <div class="step">$1 + \omega = -\omega^2, \quad \omega + \omega^2 = -1, \quad \text{এবং} \quad 1 + \omega^2 = -\omega$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে মানগুলো প্রতিস্থাপন করার জন্য তৃতীয় ব্র্যাকেটের ভেতরের পদগুলোকে একটু সাজিয়ে লিখি:</div>
+    <div class="step">\text{L.H.S.} = (1 + \omega - \omega^2)\left(\omega + \omega^2 - 1\right)\left(\omega^2 + 1 - \omega\right)</div>
+    <div class="step">$= (1 + \omega - \omega^2)\left(\omega + \omega^2 - 1\right)\left(1 + \omega^2 - \omega\right) \quad [\text{তৃতীয় বন্ধনীর পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন যথাক্রমে $1 + \omega = -\omega^2$, $\omega + \omega^2 = -1$ এবং $1 + \omega^2 = -\omega$ মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= \left(-\omega^2 - \omega^2\right)(-1 - 1)(-\omega - \omega) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">প্রতিটি বন্ধনীর ভেতরের সমজাতীয় পদগুলো সাধারণ বীজগণিতীয় নিয়মে যোগ করি:</div>
+    <div class="step">$= \left(-2\omega^2\right) \cdot (-2) \cdot (-2\omega) \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন পদ তিনটি গুণ করি। আমরা জানি, তিনটি মাইনাস চিহ্ন গুণ হয়ে চিহ্ন মাইনাসই থাকবে (যেমন: $-2 \cdot -2 \cdot -2 = -8$) এবং $\omega^2 \cdot \omega = \omega^3$:</div>
+    <div class="step">$= -8\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">যেহেতু এককের ঘনমূলের আরেকটি ধর্ম হলো $\omega^3 = 1$, তাই মানটি বসিয়ে পাই:</div>
+    <div class="step">$= -8 \cdot (1) \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -8$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 + \omega - \omega^2)(\omega + \omega^2 - 1)(\omega^2 + 1 - \omega) = -8$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xiv) $(1 - \omega + \omega^2)(1 - \omega^2 + \omega^4)(1 - \omega^4 + \omega^8) \dots 2n$ উৎপাদক পর্যন্ত $= 2^{2n}$</div>
+    <div class="solution-title">সমাধান (xiv):</div>
+    <div class="step-explain">প্রথমে ধারাটির ওমেগার উচ্চ ঘাতযুক্ত পদগুলোকে $\omega^3 = 1$ ধর্ম ব্যবহার করে ছোট আকারে রূপান্তর করি:</div>
+    <div class="step">$\text{২য় উৎপাদক: } 1 - \omega^2 + \omega^4 = 1 - \omega^2 + \omega \quad [\because \omega^4 = \omega^3 \cdot \omega = \omega]$</div>
+    <div class="step">$\text{৩য় উৎপাদক: } 1 - \omega^4 + \omega^8 = 1 - \omega + \omega^2 \quad [\because \omega^4 = \omega \text{ এবং } \omega^8 = \left(\omega^3\right)^2 \cdot \omega^2 = \omega^2]$</div>
+    <div class="step-explain">একইভাবে ওমেগার সূচক ক্রমান্বয়ে দ্বিগুণ হতে থাকলে পরবর্তী পদটির মান হবে:</div>
+    <div class="step">$\text{৪র্থ উৎপাদক: } 1 - \omega^8 + \omega^{16} = 1 - \omega^2 + \omega \quad [\because \omega^8 = \omega^2 \text{ এবং } \omega^{16} = \left(\omega^3\right)^5 \cdot \omega = \omega]$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে এই রূপান্তরিত মানগুলো বসিয়ে এবং পদগুলোকে সাজিয়ে পাই:</div>
+    <div class="step">\text{L.H.S.} = (1 - \omega + \omega^2)\left(1 - \omega^2 + \omega^4\right)\left(1 - \omega^4 + \omega^8\right) \dots 2n \text{ উৎপাদক পর্যন্ত}$$</div>
+    <div class="step">$= \left(1 + \omega^2 - \omega\right)\left(1 + \omega - \omega^2\right)\left(1 + \omega^2 - \omega\right)\left(1 + \omega - \omega^2\right) \dots 2n \text{ উৎপাদক পর্যন্ত} \quad [\text{মান বসিয়ে ও সাজিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega^2 = -\omega$ এবং $1 + \omega = -\omega^2$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= (-\omega - \omega)\left(-\omega^2 - \omega^2\right)(-\omega - \omega)\left(-\omega^2 - \omega^2\right) \dots 2n \text{ উৎপাদক পর্যন্ত}$</div>
+    <div class="step">$= (-2\omega)\left(-2\omega^2\right)(-2\omega)\left(-2\omega^2\right) \dots 2n \text{ উৎপাদক পর্যন্ত} \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">এখন প্রতি দুটি করে ক্রমিক উৎপাদক জোড়ায় জোড়ায় গুণ করে সরল করি:</div>
+    <div class="step">$= \left[(-2\omega) \cdot \left(-2\omega^2\right)\right] \cdot \left[(-2\omega) \cdot \left(-2\omega^2\right)\right] \dots n \text{ সংখ্যক জোড়া পর্যন্ত}$</div>
+    <div class="step">$= \left(4\omega^3\right) \cdot \left(4\omega^3\right) \dots n \text{ সংখ্যক উৎপাদক বা পদ পর্যন্ত} \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">যেহেতু $\omega^3 = 1$, সেহেতু প্রতিটি পদের মান হবে $4 \cdot (1) = 4$:</div>
+    <div class="step">$= 4 \cdot 4 \cdot 4 \dots n \text{ সংখ্যক উৎপাদক বা বার পর্যন্ত} \quad [\because \omega^3 = 1]$</div>
+    <div class="step-explain">কোনো সংখ্যা $n$ বার গুণ আকারে থাকলে তাকে সূচকের নিয়মে ঐ সংখ্যার ওপর পাওয়ার $n$ হিসেবে লেখা যায়:</div>
+    <div class="step">$= 4^n$</div>
+    <div class="step-explain">ভিত্তি $4$ কে ২ এর সূচক আকারে রূপান্তর করি:</div>
+    <div class="step">$= \left(2^2\right)^n \quad [\because 4 = 2^2]$</div>
+    <div class="step">$= 2^{2n} \quad [\text{পাওয়ারে পাওয়ারে গুণ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(1 - \omega + \omega^2)(1 - \omega^2 + \omega^4)(1 - \omega^4 + \omega^8) \dots 2n$ উৎপাদক পর্যন্ত $= 2^{2n}$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xv) $(1 + 3\omega + \omega^2)^2$ এবং $(1 + \omega + 3\omega^2)^2$ রাশিদ্বয়ের গুণফল $16$ এবং যোগফল $-4$.</div>
+    <div class="solution-title">সমাধান (xv):</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0$। প্রথমে রাশি দুটিকে সরল করার জন্য পদগুলোকে ভেঙে সাজিয়ে লিখি:</div>
+    <div class="step">\text{১ম রাশি} = \left(1 + 3\omega + \omega^2\right)^2 = \left(1 + \omega + \omega^2 + 2\omega\right)^2 \quad [\because 3\omega = \omega + 2\omega]$</div>
+    <div class="step">$= (0 + 2\omega)^2 = (2\omega)^2 = 4\omega^2 \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">একইভাবে ২য় রাশিটি সরল করে পাই:</div>
+    <div class="step">\text{২য় রাশি} = \left(1 + \omega + 3\omega^2\right)^2 = \left(1 + \omega + \omega^2 + 2\omega^2\right)^2 \quad [\text{ভেঙে লিখে}]$</div>
+    <div class="step">$= \left(0 + 2\omega^2\right)^2 = \left(2\omega^2\right)^2 = 4\omega^4 \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$, তাই ২য় রাশিটির মান দাঁড়ায়:</div>
+    <div class="step">$= 4\omega \quad [\because \omega^4 = \omega]$</div>
+
+    <div class="step-explain"><strong>১ম অংশ: রাশিদ্বয়ের গুণফল নির্ণয়</strong></div>
+    <div class="step">\text{গুণফল} = \text{১ম রাশি} \cdot \text{২য় রাশি}</div>
+    <div class="step">$= \left(4\omega^2\right) \cdot (4\omega) \quad [\text{সরলীকৃত মান বসিয়ে}]$</div>
+    <div class="step">$= 16\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= 16 \cdot (1) = 16 \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">সুতরাং, রাশিদ্বয়ের গুণফল $16$ [দেখানো হলো]।</div>
+
+    <div class="step-explain"><strong>২য় অংশ: রাশিদ্বয়ের যোগফল নির্ণয়</strong></div>
+    <div class="step">\text{যোগফল} = \text{১ম রাশি} + \text{২য় রাশি}</div>
+    <div class="step">$= 4\omega^2 + 4\omega \quad [\text{সরলীকৃত মান বসিয়ে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ ধ্রুবক $4$ কমন নিই:</div>
+    <div class="step">$= 4\left(\omega^2 + \omega\right) \quad [\text{৪ কমন নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0 \implies \omega^2 + \omega = -1$। এই মানটি প্রতিস্থাপন করি:</div>
+    <div class="step">$= 4 \cdot (-1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= -4 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">সুতরাং, রাশিদ্বয়ের যোগফল $-4$ [দেখানো হলো]।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১১. উৎপাদকে বিশ্লেষণ কর:</div>
+
+    <div class="problem-sub-title">(i) $a^2 + ab + b^2$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূল $\omega$ এর ধর্ম অনুসারে:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$</div>
+    <div class="step-explain">এবং আরেকটি অত্যন্ত গুরুত্বপূর্ণ ধর্ম হলো, $\omega^3 = 1$। জটিল সংখ্যার এই বৈশিষ্ট্যগুলো ব্যবহার করে বাস্তব রাশিটিকে উৎপাদকে বিশ্লেষণ করার জন্য মাঝের $ab$ পদটিকে একটু সাজিয়ে লিখব:</div>
+    <div class="step">প্রদত্ত রাশি $= a^2 + ab + b^2$</div>
+    <div class="step">$= a^2 - (-1) \cdot ab + b^2 \quad [\text{মাইনাসে মাইনাসে প্লাস করে সাজিয়ে}]$</div>
+    <div class="step-explain">এখন $(-1)$ এর পরিবর্তে $\left(\omega + \omega^2\right)$ বসাই:</div>
+    <div class="step">$= a^2 - \left(\omega + \omega^2\right)ab + b^2 \quad [\because -1 = \omega + \omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরে $ab$ দ্বারা গুণ করে দিই:</div>
+    <div class="step">$= a^2 - ab\omega - ab\omega^2 + b^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">এখন শেষ পদ $b^2$ এর সাথে ধ্রুবক $1$ গুণ আকারে আছে চিন্তা করে $1$ এর পরিবর্তে $\omega^3$ বসাই, যাতে কমন নেওয়া সহজ হয়:</div>
+    <div class="step">$= a^2 - ab\omega - ab\omega^2 + b^2 \cdot (1)$</div>
+    <div class="step">$= a^2 - ab\omega - ab\omega^2 + b^2\omega^3 \quad [\because 1 = \omega^3 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">প্রথম দুটি পদ থেকে সাধারণ উৎপাদক $a$ এবং শেষ দুটি পদ থেকে $-b\omega^2$ কমন নিই:</div>
+    <div class="step">$= a(a - b\omega) - b\omega^2(a - b\omega) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">উভয় অংশ থেকে সাধারণ বহুপদী উৎপাদক $(a - b\omega)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (a - b\omega)\left(a - b\omega^2\right) \quad [\text{পুনরায় কমন নিয়ে}]$</div>
+    <div class="step-explain">অতএব, $a^2 + ab + b^2$ এর নির্ণেয় উৎপাদকে বিশ্লেষিত রূপ হলো:</div>
+    <div class="step">$\therefore a^2 + ab + b^2 = (a - b\omega)\left(a - b\omega^2\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $a^2 - ab + b^2$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">পূর্বের নিয়মের মতো এখানেও আমরা এককের কাল্পনিক ঘনমূল $\omega$ এর ধর্ম ব্যবহার করব। আমরা জানি:</div>
+    <div class="step">$1 + \omega + \omega^2 = 0 \implies 1 = -\left(\omega + \omega^2\right) \implies -1 = \omega + \omega^2$$</div>
+    <div class="step-explain">আবার, জটিল সংখ্যার আরেকটি অনুসিদ্ধান্ত থেকে আমরা জানি যে, $\omega$ এবং $\omega^2$ এর গুণফল:</div>
+    <div class="step">$\omega \cdot \omega^2 = \omega^3 = 1$</div>
+    <div class="step-explain">প্রদত্ত রাশিতে মাঝের পদটির সহগ $-1$ বিবেচনা করে সেখানে মান বসানোর জন্য রাশিটি সাজিয়ে লিখি:</div>
+    <div class="step">প্রদত্ত রাশি $= a^2 - ab + b^2$</div>
+    <div class="step">$= a^2 + (-1) \cdot ab + b^2 \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step-explain">এখন $(-1)$ এর পরিবর্তে $\left(\omega + \omega^2\right)$ বসিয়ে পাই:</div>
+    <div class="step">$= a^2 + \left(\omega + \omega^2\right)ab + b^2 \quad [\because -1 = \omega + \omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরে $ab$ দ্বারা গুণ করে দিই:</div>
+    <div class="step">$= a^2 + ab\omega + ab\omega^2 + b^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">শেষ পদ $b^2$ এর সাথে $1$ গুণ আকারে চিন্তা করে $1$ এর পরিবর্তে $\omega^3$ বসাই:</div>
+    <div class="step">$= a^2 + ab\omega + ab\omega^2 + b^2\omega^3 \quad [\because 1 = \omega^3 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">প্রথম দুটি পদ থেকে সাধারণ উৎপাদক $a$ এবং শেষ দুটি পদ থেকে $b\omega^2$ কমন নিই:</div>
+    <div class="step">$= a(a + b\omega) + b\omega^2(a + b\omega) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">উভয় অংশ থেকে সাধারণ বহুপদী উৎপাদক $(a + b\omega)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (a + b\omega)\left(a + b\omega^2\right) \quad [\text{পুনরায় কমন নিয়ে}]$</div>
+    <div class="step-explain">অতএব, $a^2 - ab + b^2$ এর নির্ণেয় উৎপাদকে বিশ্লেষিত রূপ হলো:</div>
+    <div class="step">$\approx a^2 - ab + b^2 = (a + b\omega)\left(a + b\omega^2\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $a^2 + b^2 + c^2 - ab - bc - ca$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">আমরা উচ্চতর বীজগণিতের ঘনক নির্ণয়ের একটি বিখ্যাত উৎপাদক সূত্র জানি:</div>
+    <div class="step">$a^3 + b^3 + c^3 - 3abc = (a + b + c)\left(a^2 + b^2 + c^2 - ab - bc - ca\right)$$</div>
+    <div class="step-explain">আবার জটিল সংখ্যার এককের কাল্পনিক ঘনমূল $\omega$ এর সাহায্যে এই সূত্রেরই আরেকটি চমৎকার রূপান্তর আমরা জানি, যা হলো:</div>
+    <div class="step">$a^3 + b^3 + c^3 - 3abc = (a + b + c)\left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right)$</div>
+    <div class="step-explain">উপরের সমীকরণ দুটির বামপক্ষ লক্ষ্য করলে দেখা যায় তারা হুবহু এক। সুতরাং তাদের ডানপক্ষ দুটিও পরস্পর সমান হবে:</div>
+    <div class="step">$\therefore (a + b + c)\left(a^2 + b^2 + c^2 - ab - bc - ca\right) = (a + b + c)\left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right)$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে সাধারণ উৎপাদক $(a + b + c)$ বর্জন বা ভাগ করলে আমরা সরাসরি প্রদত্ত রাশির উৎপাদক পেয়ে যাই:</div>
+    <div class="step">$\Rightarrow a^2 + b^2 + c^2 - ab - bc - ca = \left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right)$</div>
+    
+    <div class="step-explain"><br><strong>বিকল্প পদ্ধতি (ধাপ সহ বিস্তারিত প্রমাণ):</strong> যদি পরীক্ষায় একদম ভেঙে করতে বলা হয়, তবে নিচের নিয়মে সমাধান করতে হবে।</div>
+    <div class="step">প্রদত্ত রাশি $= a^2 + b^2 + c^2 - ab - bc - ca$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$ এবং $1 + \omega + \omega^2 = 0 \implies -1 = \omega + \omega^2$। রাশিতে মাইনাস চিহ্নযুক্ত পদগুলোর সহগ $-1$ চিন্তা করে সাজিয়ে লিখি:</div>
+    <div class="step">$= a^2 + b^2 \cdot (1) + c^2 \cdot (1) + (-1)ab + (-1)bc + (-1)ca$</div>
+    <div class="step-explain">এখন $1$ এর স্থলে $\omega^3$ বা $\omega^6$ এবং $-1$ এর স্থলে $\omega + \omega^2$ বসিয়ে পাই (যাতে কমন নেওয়া সহজ হয়):</div>
+    <div class="step">$= a^2 + b^2\omega^3 + c^2\omega^6 + \left(\omega + \omega^2\right)ab + \left(\omega + \omega^2\right)bc + \left(\omega + \omega^2\right)ca \quad \left[\because \omega^3=1, \omega^6=1\right]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের পদগুলোকে বীজগণিতীয় নিয়মে গুণ করে দিই:</div>
+    <div class="step">$= a^2 + b^2\omega^3 + c^2\omega^6 + ab\omega + ab\omega^2 + bc\omega + bc\omega^2 + ca\omega + ca\omega^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">পদগুলোকে সাজিয়ে লিখি যাতে কমন নেওয়া সুবিধাজনক হয় এবং চমৎকার জোড়া তৈরি করা যায়:</div>
+    <div class="step">$= \left(a^2 + ab\omega + ca\omega^2\right) + \left(ab\omega^2 + b^2\omega^3 + bc\omega^4\right) + \left(ca\omega + bc\omega^2 + c^2\omega^3\right) \quad \left[\because bc\omega^4 = bc\omega^3 \cdot \omega = bc\omega \text{ সাজিয়ে}\right]$</div>
+    <div class="step-explain">এখন প্রথম অংশ থেকে $a$, দ্বিতীয় অংশ থেকে $b\omega^2$ এবং তৃতীয় অংশ থেকে $c\omega$ কমন নিই:</div>
+    <div class="step">$= a\left(a + b\omega + c\omega^2\right) + b\omega^2\left(a + b\omega + c\omega^2\right) + c\omega\left(a + b\omega + c\omega^2\right) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">সবগুলো অংশ থেকে সাধারণ বহুপদী উৎপাদক $\left(a + b\omega + c\omega^2\right)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= \left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right) \quad [\text{পুনরায় কমন নিয়ে}]$</div>
+    <div class="step-explain">অতএব, $a^2 + b^2 + c^2 - ab - bc - ca$ এর উৎপাদকে বিশ্লেষিত রূপ হলো:</div>
+    <div class="step">$\therefore a^2 + b^2 + c^2 - ab - bc - ca = \left(a + b\omega + c\omega^2\right)\left(a + b\omega^2 + c\omega\right)$</div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

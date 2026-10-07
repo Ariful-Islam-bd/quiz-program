@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6B Q01-Q12</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (6B)</h1>
+
+        <div class="problem-card">
+            <div class="problem-title">১. মান নির্ণয় কর : $\cot^2 \frac{\pi}{6} - 2\cos^2 \frac{\pi}{3} - \frac{3}{4}\sec^2 \frac{\pi}{4} - 4\sin^2 \frac{\pi}{6}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতিক অনুপাতগুলোর নির্দিষ্ট মান:
+                <ul>
+                    <li>$\cot \frac{\pi}{6} = \cot 30^\circ = \sqrt{3}$</li>
+                    <li>$\cos \frac{\pi}{3} = \cos 60^\circ = \frac{1}{2}$</li>
+                    <li>$\sec \frac{\pi}{4} = \sec 45^\circ = \sqrt{2}$</li>
+                    <li>$\sin \frac{\pi}{6} = \sin 30^\circ = \frac{1}{2}$</li>
+                </ul>
+            </div>
+            <div class="step">প্রদত্ত রাশি: $\cot^2 \frac{\pi}{6} - 2\cos^2 \frac{\pi}{3} - \frac{3}{4}\sec^2 \frac{\pi}{4} - 4\sin^2 \frac{\pi}{6}$</div>
+            <div class="step">$= (\cot \frac{\pi}{6})^2 - 2(\cos \frac{\pi}{3})^2 - \frac{3}{4} (\sec \frac{\pi}{4})^2 - 4(\sin \frac{\pi}{6})^2 \quad [\text{সহজভাবে বোঝার জন্য}]$</div>
+            <div class="step">$= (\sqrt{3})^2 - 2\left(\frac{1}{2}\right)^2 - \frac{3}{4}(\sqrt{2})^2 - 4\left(\frac{1}{2}\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">বর্গ বা স্কয়ারের কাজ সম্পন্ন করে পাই:</div>
+            <div class="step">$= 3 - 2 \cdot \left(\frac{1}{4}\right) - \frac{3}{4} \cdot 2 - 4 \cdot \left(\frac{1}{4}\right) \quad [\text{যেহেতু } (\sqrt{3})^2=3 \text{ এবং } (\sqrt{2})^2=2]$</div>
+            <div class="step-explain">লবের সাথে সংখ্যাগুলো গুণ করে পাই:</div>
+            <div class="step">$= 3 - \frac{2}{4} - \frac{6}{4} - \frac{4}{4} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">ভগ্নাংশগুলোর লব ও হর কাটাকাটি করে ছোট করি:</div>
+            <div class="step">$= 3 - \frac{1}{2} - \frac{3}{2} - 1 \quad [\text{লঘিষ্ঠ আকারে প্রকাশ করে}]$</div>
+            <div class="step-explain">পূর্ণসংখ্যাগুলো একসাথে এবং ভগ্নাংশগুলো একসাথে সাজিয়ে পাই:</div>
+            <div class="step">$= (3 - 1) - \left(\frac{1}{2} + \frac{3}{2}\right) \quad [\text{মাইনাস চিহ্ন কমন নিয়ে}]$</div>
+            <div class="step">$= 2 - \left(\frac{1 + 3}{2}\right) \quad [\text{বন্ধনীতে লসাগু করে}]$</div>
+            <div class="step">$= 2 - \frac{4}{2}$</div>
+            <div class="step">$= 2 - 2 \quad [\text{ভাগ করে}]$</div>
+            <div class="step">$= 0$</div>
+            <div class="step"><strong>নির্ণেয় মান:</strong> $0$</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২. $5\text{ cosec}^2\theta - 9\cot^2\theta = 3$ হলে দেখাও যে, $\tan\theta = \pm \sqrt{2}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">প্রদত্ত সমীকরণ: $5\text{ cosec}^2\theta - 9\cot^2\theta = 3$</div>
+            <div class="step">$\Rightarrow 5 \cdot \left(1 + \cot^2\theta\right) - 9\cot^2\theta = 3 \quad [\because  \text{cosec}^2\theta = 1 + \cot^2\theta]$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে $5$ দ্বারা গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow 5 + 5\cot^2\theta - 9\cot^2\theta = 3 \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">সমজাতীয় রাশিগুলোর বিয়োগ সম্পন্ন করি:</div>
+            <div class="step">$\Rightarrow 5 - 4\cot^2\theta = 3$</div>
+            <div class="step-explain">বামপক্ষের ধ্রুবক সংখ্যা $5$ কে ডানপক্ষে পক্ষান্তর করলে $-5$ হবে।</div>
+            <div class="step">$\Rightarrow -4\cot^2\theta = 3 - 5 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow -4\cot^2\theta = -2 \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">উভয়পক্ষকে $-1$ দ্বারা গুণ করে মাইনাস চিহ্ন বর্জন করি:</div>
+            <div class="step">$\Rightarrow 4\cot^2\theta = 2$</div>
+            <div class="step-explain">বামপক্ষের $4$ সংখ্যাটিকে ডানপক্ষের হরে নিয়ে যাই:</div>
+            <div class="step">$\Rightarrow \cot^2\theta = \frac{2}{4}$</div>
+            <div class="step">$\Rightarrow \cot^2\theta = \frac{1}{2} \quad [\text{লঘিষ্ঠ আকারে প্রকাশ করে}]$</div>
+            <div class="step-explain">যেহেতু আমাদের $\tan\theta$-এর মান বের করতে হবে, তাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\tan^2\theta} = \frac{1}{2} \quad [\because \cot^2\theta = \frac{1}{\tan^2\theta}]$</div>
+            <div class="step">$\Rightarrow \frac{\tan^2\theta}{1} = \frac{2}{1} \quad [\text{ব্যস্তকরণ করে}]$</div>
+            <div class="step">$\Rightarrow \tan^2\theta = 2$</div>
+            <div class="step-explain">এখন উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \sqrt{\tan^2\theta} = \pm \sqrt{2} \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step">$\Rightarrow \tan\theta = \pm \sqrt{2}$ (দেখানো হলো)</div>
+        </div>
+        
+        <div class="problem-card">
+            <div class="problem-title">৩. $\theta$ ধনাত্মক সূক্ষ্মকোণ হলে $\sin\theta + \cos\theta = \sqrt{2}$ এর সমাধান কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">প্রদত্ত সমীকরণ: $\sin\theta + \cos\theta = \sqrt{2}$</div>
+            <div class="step-explain">প্রথমে বামপক্ষের যেকোনো একটি ত্রিকোণমিতিক রাশিকে (যেমন $\cos\theta$) ডানপক্ষে পক্ষান্তর করি, যেন উভয়পক্ষকে বর্গ করতে সুবিধা হয়।</div>
+            <div class="step">$\Rightarrow \sin\theta = \sqrt{2} - \cos\theta \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">এখন রুট ($\sqrt{2}$) চিহ্নটি সরানোর জন্য সমীকরণের উভয়পক্ষকে বর্গ (Square) করি।</div>
+            <div class="step">$\Rightarrow (\sin\theta)^2 = \left(\sqrt{2} - \cos\theta\right)^2 \quad [\text{উভয়পক্ষকে বর্গ করে}]$</div>
+            <div class="step">$\Rightarrow \sin^2\theta = \left(\sqrt{2}\right)^2 - 2 \cdot \sqrt{2} \cdot \cos\theta + (\cos\theta)^2 \quad [\because (a-b)^2 = a^2 - 2ab + b^2 \text{ সূত্র প্রয়োগ করে}]$</div>
+            <div class="step">$\Rightarrow \sin^2\theta = 2 - 2\sqrt{2}\cos\theta + \cos^2\theta \quad [\because (\sqrt{2})^2 = 2]$</div>
+            <div class="step-explain">পুরো সমীকরণটিকে একই জাতীয় রাশিতে রূপান্তর করার জন্য $\sin^2\theta$-কে $\cos^2\theta$-তে পরিবর্তন করি।</div>
+            <div class="step">$\Rightarrow 1 - \cos^2\theta = 2 - 2\sqrt{2}\cos\theta + \cos^2\theta \quad [\because  \sin^2\theta = 1 - \cos^2\theta]$</div>
+            <div class="step-explain">এবার বামপক্ষের সব রাশিকে ডানপক্ষে নিয়ে যাই এবং পক্ষ পরিবর্তন করি।</div>
+            <div class="step">$\Rightarrow 2 - 2\sqrt{2}\cos\theta + \cos^2\theta - (1 - \cos^2\theta) = 0$</div>
+            <div class="step">$\Rightarrow 2 - 2\sqrt{2}\cos\theta + \cos^2\theta - 1 + \cos^2\theta = 0 \quad [\text{বন্ধনী তুলে দিয়ে}]$</div>
+            <div class="step-explain">সমজাতীয় রাশিগুলোর যোগ-বিয়োগ সম্পন্ন করে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow 2\cos^2\theta - 2\sqrt{2}\cos\theta + 1 = 0 \quad [\because \cos^2\theta + \cos^2\theta = 2\cos^2\theta \text{ এবং } 2 - 1 = 1]$</div>
+            <div class="step-explain">এই সমীকরণটিকে আবার একটি পূর্ণবর্গের সূত্রে সাজানো যায়, যেখানে $a = \sqrt{2}\cos\theta$ এবং $b = 1$:</div>
+            <div class="step">$\Rightarrow (\sqrt{2}\cos\theta)^2 - 2 \cdot (\sqrt{2}\cos\theta) \cdot 1 + (1)^2 = 0 \quad [\because (\sqrt{2}\cos\theta)^2 = 2\cos^2\theta]$</div>
+            <div class="step">$\Rightarrow \left(\sqrt{2}\cos\theta - 1\right)^2 = 0 \quad [\because a^2 - 2ab + b^2 = (a-b)^2]$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \sqrt{\left(\sqrt{2}\cos\theta - 1\right)^2} = \sqrt{0}$</div>
+            <div class="step">$\Rightarrow \sqrt{2}\cos\theta - 1 = 0 \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">ধ্রুবক সংখ্যা $-1$-কে ডানপক্ষে পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow \sqrt{2}\cos\theta = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $\sqrt{2}$-কে ডানপক্ষের হরে নিয়ে যাই:</div>
+            <div class="step">$\Rightarrow \cos\theta = \frac{1}{\sqrt{2}}$</div>
+            <div class="step-explain">আমরা জানি, $\cos 45^\circ$ বা $\cos \frac{\pi}{4}$-এর মান হলো $\frac{1}{\sqrt{2}}$।</div>
+            <div class="step">$\Rightarrow \cos\theta = \cos \frac{\pi}{4}$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\cos$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow \theta = \frac{\pi}{4}$</div>
+            <div class="step">যেহেতু প্রশ্নে বলা হয়েছে $\theta$ ধনাত্মক সূক্ষ্মকোণ, এবং $\frac{\pi}{4}$ বা $45^\circ$ একটি সূক্ষ্মকোণ ($0^\circ$ থেকে $90^\circ$ এর মধ্যে), তাই এই সমাধানটি গ্রহণযোগ্য।</div>
+            <div class="step"><strong>নির্ণেয় সমাধান:</strong> $\theta = \frac{\pi}{4}$ অথবা $45^\circ$</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৪. $A, B, C$ ধনাত্মক সূক্ষ্মকোণ এবং $\sin (B + C - A) = 1$, $\cos (C + A - B) = 1$ এবং $\tan (A + B - C) = 1$ হলে $A, B, C$ এর মান নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে ১ম সমীকরণ থেকে কোণের মান বের করার চেষ্টা করি। আমরা জানি, $\sin 90^\circ$ বা $\sin \frac{\pi}{2}$-এর মান হলো $1$।</div>
+            <div class="step">প্রদত্ত ১ম শর্ত: $\sin (B + C - A) = 1$</div>
+            <div class="step">$\Rightarrow \sin (B + C - A) = \sin \frac{\pi}{2}$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\sin$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow B + C - A = \frac{\pi}{2} \quad \text{...  ... (i)}$</div>
+            <div class="step-explain">একইভাবে ২য় সমীকরণ থেকে কোণের মান বের করি। আমরা জানি, $\cos 0^\circ$ বা $\cos 0$-এর মান হলো $1$।</div>
+            <div class="step">প্রদত্ত ২য় শর্ত: $\cos (C + A - B) = 1$</div>
+            <div class="step">$\Rightarrow \cos (C + A - B) = \cos 0$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\cos$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow C + A - B = 0 \quad \text{...  ... (ii)}$</div>
+            <div class="step-explain">এবার ৩য় সমীকরণ থেকে কোণের মান বের করি। আমরা জানি, $\tan 45^\circ$ বা $\tan \frac{\pi}{4}$-এর মান হলো $1$।</div>
+            <div class="step">প্রদত্ত ৩য় শর্ত: $\tan (A + B - C) = 1$</div>
+            <div class="step">$\Rightarrow \tan (A + B - C) = \tan \frac{\pi}{4}$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\tan$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow A + B - C = \frac{\pi}{4} \quad \text{...  ... (iii)}$</div>
+            <div class="step-explain">এখন আমরা তিনটি নতুন সমীকরণ (i), (ii) ও (iii) পেয়েছি। এগুলো যোগ-বিয়োগ করে $A, B, C$-এর মান নির্ণয় করব। প্রথমে সমীকরণ (i) ও (ii) যোগ করি:</div>
+            <div class="step">$\Rightarrow (B + C - A) + (C + A - B) = \frac{\pi}{2} + 0$</div>
+            <div class="step-explain">বামপক্ষের বন্ধনী তুলে দিয়ে সমজাতীয় রাশি কাটাকাটি করি (এখানে $+B$ ও $-B$ এবং $-A$ ও $+A$ কাটা যাবে):</div>
+            <div class="step">$\Rightarrow B + C - A + C + A - B = \frac{\pi}{2}$</div>
+            <div class="step">$\Rightarrow 2C = \frac{\pi}{2} \quad [\because C + C = 2C]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $2$-কে ডানপক্ষের হরের সাথে গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow C = \frac{\pi}{2 \cdot 2}$</div>
+            <div class="step">$\Rightarrow C = \frac{\pi}{4}$</div>
+            <div class="step-explain">এবার সমীকরণ (ii) ও (iii) যোগ করি:</div>
+            <div class="step">$\Rightarrow (C + A - B) + (A + B - C) = 0 + \frac{\pi}{4}$</div>
+            <div class="step-explain">বামপক্ষের বন্ধনী তুলে দিয়ে সমজাতীয় রাশি কাটাকাটি করি (এখানে $+C$ ও $-C$ এবং $-B$ ও $+B$ কাটা যাবে):</div>
+            <div class="step">$\Rightarrow C + A - B + A + B - C = \frac{\pi}{4}$</div>
+            <div class="step">$\Rightarrow 2A = \frac{\pi}{4} \quad [\because A + A = 2A]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $2$-কে ডানপক্ষের হরের সাথে গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow A = \frac{\pi}{4 \cdot 2}$</div>
+            <div class="step">$\Rightarrow A = \frac{\pi}{8}$</div>
+            <div class="step-explain">অবশেষে $B$-এর মান বের করার জন্য সমীকরণ (iii) ও (i) যোগ করি:</div>
+            <div class="step">$\Rightarrow (A + B - C) + (B + C - A) = \frac{\pi}{4} + \frac{\pi}{2}$</div>
+            <div class="step-explain">বামপক্ষের বন্ধনী তুলে দিয়ে সমজাতীয় রাশি কাটাকাটি করি (এখানে $+A$ ও $-A$ এবং $-C$ ও $+C$ কাটা যাবে):</div>
+            <div class="step">$\Rightarrow A + B - C + B + C - A = \frac{\pi}{4} + \frac{\pi}{2}$</div>
+            <div class="step">$\Rightarrow 2B = \frac{\pi + 2\pi}{4} \quad [\text{ডানপক্ষে লসাগু করে}]$</div>
+            <div class="step">$\Rightarrow 2B = \frac{3\pi}{4}$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $2$-কে ডানপক্ষের হরের সাথে গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow B = \frac{3\pi}{4 \cdot 2}$</div>
+            <div class="step">$\Rightarrow B = \frac{3\pi}{8}$</div>
+            <div class="step">যেহেতু প্রাপ্ত মানগুলো যথাক্রমে $A = 22.5^\circ$, $B = 67.5^\circ$ এবং $C = 45^\circ$, যা প্রত্যেকেই $0^\circ$ থেকে $90^\circ$-এর ভেতর অবস্থিত, তাই এরা সবাই ধনাত্মক সূক্ষ্মকোণ।</div>
+            <div class="step"><strong>নির্ণেয় মান:</strong> $A = \frac{\pi}{8}$, $B = \frac{3\pi}{8}$, $C = \frac{\pi}{4}$</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৫. যদি $\theta$ ও $\phi$ ধনাত্মক সূক্ষ্মকোণ এবং $\sin(\theta + \phi) = 1$ এবং $\tan(\theta - \phi) = \frac{1}{\sqrt{3}}$ হয়, তবে $\theta$ ও $\phi$ এর মান নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে ১ম শর্তটি থেকে একটি সমীকরণ তৈরি করার চেষ্টা করি। আমরা জানি, $\sin 90^\circ$ বা $\sin \frac{\pi}{2}$-এর মান হলো $1$।</div>
+            <div class="step">প্রদত্ত ১ম শর্ত: $\sin(\theta + \phi) = 1$</div>
+            <div class="step">$\Rightarrow \sin(\theta + \phi) = \sin \frac{\pi}{2}$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\sin$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow \theta + \phi = \frac{\pi}{2} \quad \text{--- (i)}$</div>
+            <div class="step-explain">এবার ২য় শর্তটি থেকে আরেকটি সমীকরণ তৈরি করি। আমরা জানি, $\tan 30^\circ$ বা $\tan \frac{\pi}{6}$-এর মান হলো $\frac{1}{\sqrt{3}}$।</div>
+            <div class="step">প্রদত্ত ২য় শর্ত: $\tan(\theta - \phi) = \frac{1}{\sqrt{3}}$</div>
+            <div class="step">$\Rightarrow \tan(\theta - \phi) = \tan \frac{\pi}{6}$</div>
+            <div class="step-explain">উভয়পক্ষ থেকে $\tan$ বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow \theta - \phi = \frac{\pi}{6} \quad \text{--- (ii)}$</div>
+            <div class="step-explain">এখন আমরা দুটি সমীকরণ (i) ও (ii) পেয়েছি। প্রথমে এই সমীকরণ দুটি যোগ করে $\theta$-এর মান বের করব।</div>
+            <div class="step">সমীকরণ (i) ও (ii) যোগ করে পাই:</div>
+            <div class="step">$\Rightarrow (\theta + \phi) + (\theta - \phi) = \frac{\pi}{2} + \frac{\pi}{6}$</div>
+            <div class="step-explain">বামপক্ষের বন্ধনী তুলে দিয়ে সমজাতীয় রাশি হিসাব করি (এখানে $+\phi$ ও $-\phi$ বিয়োগ হয়ে কেটে যাবে):</div>
+            <div class="step">$\Rightarrow \theta + \phi + \theta - \phi = \frac{\pi}{2} + \frac{\pi}{6}$</div>
+            <div class="step">$\Rightarrow 2\theta = \frac{3\pi + \pi}{6} \quad [\because \theta + \theta = 2\theta \text{ এবং ডানপক্ষে লসাগু করে}]$</div>
+            <div class="step">$\Rightarrow 2\theta = \frac{4\pi}{6}$</div>
+            <div class="step-explain">ডানপক্ষের ভগ্নাংশটিকে লব ও হরকে $2$ দ্বারা ভাগ করে ছোট বা লঘিষ্ঠ করি:</div>
+            <div class="step">$\Rightarrow 2\theta = \frac{2\pi}{3} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $2$-কে ডানপক্ষের হরে পক্ষান্তর করে পাই:</div>
+            <div class="step">$\Rightarrow \theta = \frac{2\pi}{3 \cdot 2}$</div>
+            <div class="step-explain">লব ও হরের $2$ কাটাকাটি করে পাই:</div>
+            <div class="step">$\Rightarrow \theta = \frac{\pi}{3}$</div>
+            <div class="step-explain">এবার $\phi$-এর মান বের করার জন্য সমীকরণ (i) থেকে সমীকরণ (ii) বিয়োগ করি।</div>
+            <div class="step">সমীকরণ (i) থেকে (ii) বিয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow (\theta + \phi) - (\theta - \phi) = \frac{\pi}{2} - \frac{\pi}{6}$</div>
+            <div class="step-explain">বামপক্ষের বন্ধনী তুলে দিই। মাইনাস চিহ্নের কারণে ভেতরের $-\phi$ টি পরিবর্তিত হয়ে $+\phi$ হবে:</div>
+            <div class="step">$\Rightarrow \theta + \phi - \theta + \phi = \frac{\pi}{2} - \frac{\pi}{6}$</div>
+            <div class="step-explain">বামপক্ষের $+\theta$ ও $-\theta$ বিয়োগ হয়ে কেটে যাবে:</div>
+            <div class="step">$\Rightarrow 2\phi = \frac{3\pi - \pi}{6} \quad [\because \phi + \phi = 2\phi \text{ এবং ডানপক্ষে লসাগু করে}]$</div>
+            <div class="step">$\Rightarrow 2\phi = \frac{2\pi}{6}$</div>
+            <div class="step-explain">ডানপক্ষের ভগ্নাংশটিকে লব ও হর কাটাকাটি করে ছোট করি:</div>
+            <div class="step">$\Rightarrow 2\phi = \frac{\pi}{3} \quad [\text{লঘিষ্ঠ আকারে প্রকাশ করে}]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক $2$-কে ডানপক্ষের হরের সাথে গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow \phi = \frac{\pi}{3 \cdot 2}$</div>
+            <div class="step">$\Rightarrow \phi = \frac{\pi}{6}$</div>
+            <div class="step">প্রাপ্ত মান দুটি ডিগ্রিতে হিসাব করলে হয় $\theta = 60^\circ$ এবং $\phi = 30^\circ$। যেহেতু দুটি কোণই $0^\circ$ থেকে $90^\circ$-এর মধ্যে অবস্থিত, তাই শর্তানুযায়ী এরা ধনাত্মক সূক্ষ্মকোণ।</div>
+            <div class="step"><strong>নির্ণেয় মান:</strong> $\theta = \frac{\pi}{3}$ এবং $\phi = \frac{\pi}{6}$</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৬. $\cos x$ কে $\cot x$ এর মাধ্যমে প্রকাশ কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">আমরা জানি, $\cos x$-এর সাথে সরাসরি $\cot x$-এর কোনো সূত্র নেই। তবে $\cos x$-কে ভাঙলে আমরা $\cot x$ এবং $\sin x$-এর একটি সম্পর্ক তৈরি করতে পারি। আমরা জানি: $\cot x = \frac{\cos x}{\sin x}$</div>
+            <div class="step-explain">উপরের সূত্রটি থেকে আড়-গুণন (Cross Multiplication) করে আমরা $\cos x$-এর মান লিখতে পারি:</div>
+            <div class="step">$\Rightarrow \cos x = \cot x \cdot \sin x$</div>
+            <div class="step-explain">যেহেতু আমাদের পুরো রাশিটিকে শুধুমাত্র $\cot x$ এর মাধ্যমে প্রকাশ করতে হবে, তাই এখন ডানপক্ষের $\sin x$-কে পরিবর্তন করতে হবে। আমরা জানি: $\sin x = \frac{1}{\cosec x}$</div>
+            <div class="step">$\Rightarrow \cos x = \cot x \cdot \left(\frac{1}{\cosec x}\right) \quad [\because \sin x = \frac{1}{\cosec x}]$</div>
+            <div class="step">$\Rightarrow \cos x = \frac{\cot x}{\cosec x}$</div>
+            <div class="step-explain">এখন উভয়পক্ষকে বর্গ (Square) করি, যেন আমরা সহজে $\cosec^2 x$-এর সূত্র বসাতে পারি।</div>
+            <div class="step">$\Rightarrow (\cos x)^2 = \left(\frac{\cot x}{\cosec x}\right)^2 \quad [\text{উভয়পক্ষকে বর্গ করে}]$</div>
+            <div class="step">$\Rightarrow \cos^2 x = \frac{\cot^2 x}{\cosec^2 x}$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির সূত্রানুযায়ী: $\cosec^2 x = 1 + \cot^2 x$। এখন হরের $\cosec^2 x$-এর পরিবর্তে এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \cos^2 x = \frac{\cot^2 x}{1 + \cot^2 x} \quad [\because \cosec^2 x = 1 + \cot^2 x]$</div>
+            <div class="step-explain">ডানপক্ষের পুরো রাশিটি এখন $\cot x$-এ রূপান্তরিত হয়েছে। এবার শুধু বামপক্ষের স্কয়ার (Square) সরানোর জন্য উভয়পক্ষের বর্গমূল (Square Root) করি:</div>
+            <div class="step">$\Rightarrow \sqrt{\cos^2 x} = \pm \sqrt{\frac{\cot^2 x}{1 + \cot^2 x}} \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">লবের $\cot^2 x$-এর স্কয়ার এবং রুট কাটাকাটি হয়ে শুধু $\cot x$ হবে, কিন্তু হরের অংশটি রুটের ভেতরেই থেকে যাবে:</div>
+            <div class="step">$\Rightarrow \cos x = \pm \frac{\cot x}{\sqrt{1 + \cot^2 x}}$</div>
+            <div class="step-explain">এখানে ধনাত্মক সূক্ষ্মকোণের ক্ষেত্রে সাধারণত শুধু ধনাত্মক (+) মানটি বিবেচনা করা হয়। তবে সার্বিক প্রকাশের জন্য $\pm$ রাখাটাই বেশি নির্ভুল।</div>
+            <div class="step"><strong>নির্ণেয় প্রকাশ:</strong> $\cos x = \frac{\cot x}{\sqrt{1 + \cot^2 x}}$ (অথবা $\pm \frac{\cot x}{\sqrt{1 + \cot^2 x}}$)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৭. প্রমাণ কর যে, $\sqrt{\frac{1 + \cos\theta}{1 - \cos\theta}} = \text{cosec}\theta + \cot\theta$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \sqrt{\frac{1 + \cos\theta}{1 - \cos\theta}}$</div>
+            <div class="step-explain">রুটের ভেতরের ভগ্নাংশের হর থেকে রুট সরানোর জন্য লব ও হর উভয়কে হরের অনুবন্ধী রাশি (conjugate), অর্থাৎ $\left(1 + \cos\theta\right)$ দ্বারা গুণ করি।</div>
+            <div class="step">$= \sqrt{\frac{(1 + \cos\theta) \cdot (1 + \cos\theta)}{(1 - \cos\theta) \cdot (1 + \cos\theta)}} \quad [\text{লব ও হরকে } (1 + \cos\theta) \text{ দ্বারা গুণ করে}]$</div>
+            <div class="step-explain">লবে একই রাশি দুবার গুণ থাকায় তা হোল-স্কয়ার হবে এবং হরে $a^2 - b^2 = (a-b)(a+b)$ এর সূত্র প্রয়োগ করি:</div>
+            <div class="step">$= \sqrt{\frac{(1 + \cos\theta)^2}{(1)^2 - \cos^2\theta}}$</div>
+            <div class="step">$= \sqrt{\frac{(1 + \cos\theta)^2}{1 - \cos^2\theta}}$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির প্রধান সূত্র অনুযায়ী: $1 - \cos^2\theta = \sin^2\theta$। এখন হরের পরিবর্তে এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$= \sqrt{\frac{(1 + \cos\theta)^2}{\sin^2\theta}} \quad [\because 1 - \cos^2\theta = \sin^2\theta]$</div>
+            <div class="step-explain">যেহেতু লব এবং হর—উভয় রাশির ওপরই স্কয়ার (Square) বা বর্গ রয়েছে, তাই পুরো ভগ্নাংশটিকে একটি সাধারণ বন্ধনীতে নিয়ে হোল-স্কয়ার আকারে সাজাই:</div>
+            <div class="step">$= \sqrt{\left(\frac{1 + \cos\theta}{\sin\theta}\right)^2}$</div>
+            <div class="step-explain">এখন বাইরের রুট (বর্গমূল) এবং ভেতরের স্কয়ার (বর্গ) একে অপরকে ভ্যানিশ বা বর্জন করবে:</div>
+            <div class="step">$= \frac{1 + \cos\theta}{\sin\theta} \quad [\text{রুট ও স্কয়ার বর্জন করে}]$</div>
+            <div class="step-explain">এবার হর $\sin\theta$ দিয়ে লবের প্রতিটি পদকে আলাদা বা আংশিক ভগ্নাংশ (Partial fraction) আকারে ভাগ করে পাই:</div>
+            <div class="step">$= \frac{1}{\sin\theta} + \frac{\cos\theta}{\sin\theta}$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতিক বিপরীত সূত্রানুযায়ী $\frac{1}{\sin\theta} = \text{cosec}\theta$ এবং $\frac{\cos\theta}{\sin\theta} = \cot\theta$। এই মানগুলো বসিয়ে পাই:</div>
+            <div class="step">$= \text{cosec}\theta + \cot\theta \quad [\because \frac{1}{\sin\theta} = \text{cosec}\theta \text{ এবং } \frac{\cos\theta}{\sin\theta} = \cot\theta]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\sqrt{\frac{1 + \cos\theta}{1 - \cos\theta}} = \text{cosec}\theta + \cot\theta$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৮. যদি $a^2\sec^2\theta - b^2\tan^2\theta = c^2$ হয় তবে দেখাও যে, $\frac{a^2 - b^2}{c^2 - b^2} = \cos^2\theta$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">প্রদত্ত সমীকরণ: $a^2\sec^2\theta - b^2\tan^2\theta = c^2$</div>
+            <div class="step-explain">প্রমাণে যেহেতু কোনো $\sec\theta$ বা $\tan\theta$ নেই, তাই আমরা সমীকরণটিকে মূল ত্রিকোণমিতিক রাশি $\sin\theta$ এবং $\cos\theta$-তে ভেঙে ফেলব। আমরা জানি, $\sec^2\theta = \frac{1}{\cos^2\theta}$ এবং $\tan^2\theta = \frac{\sin^2\theta}{\cos^2\theta}$। এই মানগুলো বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow a^2 \cdot \left(\frac{1}{\cos^2\theta}\right) - b^2 \cdot \left(\frac{\sin^2\theta}{\cos^2\theta}\right) = c^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \frac{a^2}{\cos^2\theta} - \frac{b^2\sin^2\theta}{\cos^2\theta} = c^2$</div>
+            <div class="step-explain">এবার বামপক্ষের ভগ্নাংশ দুটির হর একই ($\cos^2\theta$) হওয়ায় এদের লসাগু করি:</div>
+            <div class="step">$\Rightarrow \frac{a^2 - b^2\sin^2\theta}{\cos^2\theta} = c^2 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) করে পাই:</div>
+            <div class="step">$\Rightarrow a^2 - b^2\sin^2\theta = c^2\cos^2\theta \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step-explain">যেহেতু আমাদের চূড়ান্ত প্রমাণে শুধু $\cos^2\theta$ দরকার, তাই বামপক্ষের $\sin^2\theta$-কে সূত্রে ভেঙে $\cos^2\theta$-তে রূপান্তর করি। আমরা জানি, $\sin^2\theta = 1 - \cos^2\theta$।</div>
+            <div class="step">$\Rightarrow a^2 - b^2 \cdot \left(1 - \cos^2\theta\right) = c^2\cos^2\theta \quad [\because \sin^2\theta = 1 - \cos^2\theta]$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে $-b^2$ দ্বারা ভেতরের পদগুলোকে গুণ করি। মাইনাসে মাইনাসে প্লাস হবে:</div>
+            <div class="step">$\Rightarrow a^2 - b^2 + b^2\cos^2\theta = c^2\cos^2\theta \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">এখন $\cos^2\theta$ সংবলিত পদগুলোকে সমীকরণের ডানপক্ষে এবং ধ্রুবক পদগুলোকে বামপক্ষে আলাদা বা পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow a^2 - b^2 = c^2\cos^2\theta - b^2\cos^2\theta \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">ডানপক্ষ থেকে সাধারণ উৎপাদক (Common factor) হিসেবে $\cos^2\theta$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow a^2 - b^2 = \left(c^2 - b^2\right)\cos^2\theta \quad [\cos^2\theta \text{ কমন নিয়ে}]$</div>
+            <div class="step-explain">ডানপক্ষের গুণিতক রাশি $\left(c^2 - b^2\right)$-কে বামপক্ষের হরে নিয়ে যাই:</div>
+            <div class="step">$\Rightarrow \frac{a^2 - b^2}{c^2 - b^2} = \cos^2\theta$</div>
+            <div class="step-explain">পুরো সমীকরণটির বামপক্ষ ও ডানপক্ষ অদলবদল করে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow \frac{a^2 - b^2}{c^2 - b^2} = \cos^2\theta$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৯. প্রমাণ কর যে, $\sqrt{\frac{1 + \tan^2 A}{1 + \cot^2 A}} = \tan A$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \sqrt{\frac{1 + \tan^2 A}{1 + \cot^2 A}}$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির সূত্রানুযায়ী: $1 + \tan^2 A = \sec^2 A$ এবং $1 + \cot^2 A = \cosec^2 A$। লব ও হরে এই সূত্রগুলো প্রয়োগ করে পাই:</div>
+            <div class="step">$= \sqrt{\frac{\sec^2 A}{\cosec^2 A}} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">যেহেতু লব এবং হর—উভয় পদের উপরই স্কয়ার (Square) বা বর্গ রয়েছে, তাই পুরো ভগ্নাংশটিকে একটি সাধারণ বন্ধনীতে নিয়ে হোল-স্কয়ার আকারে সাজাই:</div>
+            <div class="step">$= \sqrt{\left(\frac{\sec A}{\cosec A}\right)^2}$</div>
+            <div class="step-explain">এখন বাইরের রুট (বর্গমূল) এবং ভেতরের স্কয়ার (বর্গ) একে অপরকে বর্জন করবে:</div>
+            <div class="step">$= \frac{\sec A}{\cosec A} \quad [\text{রুট ও স্কয়ার বর্জন করে}]$</div>
+            <div class="step-explain">এবার সমীকরণটিকে আরও সহজ করতে $\sec A$ এবং $\cosec A$-কে মৌলিক অনুপাত $\sin A$ ও $\cos A$-তে ভেঙে ফেলি। আমরা জানি, $\sec A = \frac{1}{\cos A}$ এবং $\cosec A = \frac{1}{\sin A}$।</div>
+            <div class="step">$= \frac{\frac{1}{\cos A}}{\frac{1}{\sin A}} \quad [\because \sec A = \frac{1}{\cos A} \text{ এবং } \cosec A = \frac{1}{\sin A}]$</div>
+            <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করার জন্য লবের ভগ্নাংশটিকে ঠিক রেখে, হরের ভগ্নাংশটিকে উল্টিয়ে গুণ আকারে লিখি:</div>
+            <div class="step">$= \frac{1}{\cos A} \cdot \frac{\sin A}{1} \quad [\text{গুণ আকারে উল্টিয়ে}]$</div>
+            <div class="step">$= \frac{\sin A}{\cos A}$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক সম্পর্ক অনুযায়ী: $\frac{\sin A}{\cos A} = \tan A$।</div>
+            <div class="step">$= \tan A \quad [\because \frac{\sin A}{\cos A} = \tan A]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\sqrt{\frac{1 + \tan^2 A}{1 + \cot^2 A}} = \tan A$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১০. যদি $\tan\theta + \sin\theta = m$ এবং $\tan\theta - \sin\theta = n$ হয় তবে দেখাও যে, $m^2 - n^2 = 4\sqrt{mn}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\tan\theta + \sin\theta = m$ এবং $\tan\theta - \sin\theta = n$</div>
+            <div class="step-explain">এখন সমীকরণের বামপক্ষ (L.H.S.) দিয়ে শুরু করি:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= m^2 - n^2$</div>
+            <div class="step-explain">এবার $m$ এবং $n$-এর মান বসিয়ে পাই:</div>
+            <div class="step">$= (\tan\theta + \sin\theta)^2 - (\tan\theta - \sin\theta)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">বীজগণিতের অনুসিদ্ধান্ত সূত্র অনুযায়ী আমরা জানি: $4ab = (a+b)^2 - (a-b)^2$। এখানে $a = \tan\theta$ এবং $b = \sin\theta$ ধরলে পুরো রাশিটির পরিবর্তে সরাসরি $4ab$ এর সূত্র লিখতে পারি:</div>
+            <div class="step">$= 4 \cdot \tan\theta \cdot \sin\theta \quad [\because (a+b)^2 - (a-b)^2 = 4ab]$</div>
+            <div class="step-explain">যেহেতু আমাদের ডানপক্ষে একটি রুট ($\sqrt{\dots}$) আনতে হবে, তাই পুরো রাশিটিকে রুটের ভেতরে নিয়ে বর্গ (Square) আকারে সাজাই:</div>
+            <div class="step">$= 4\sqrt{(\tan\theta \cdot \sin\theta)^2}$</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta \cdot \sin^2\theta}$</div>
+            <div class="step-explain">এখন রুটের ভেতরের $\sin^2\theta$-কে সূত্রে ভেঙে $\cos^2\theta$-তে রূপান্তর করি। আমরা জানি, $\sin^2\theta = 1 - \cos^2\theta$।</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta \cdot \left(1 - \cos^2\theta\right)} \quad [\because \sin^2\theta = 1 - \cos^2\theta]$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে $\tan^2\theta$ দ্বারা ভেতরের পদগুলোকে গুণ করি:</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta \cdot 1 - \tan^2\theta \cdot \cos^2\theta}$</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta - \tan^2\theta \cdot \cos^2\theta}$</div>
+            <div class="step-explain">আমরা জানি, $\tan^2\theta = \frac{\sin^2\theta}{\cos^2\theta}$। এই মানটি বসিয়ে কাটাকাটি করি:</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta - \left(\frac{\sin^2\theta}{\cos^2\theta}\right) \cdot \cos^2\theta} \quad [\because \tan^2\theta = \frac{\sin^2\theta}{\cos^2\theta}]$</div>
+            <div class="step-explain">লব ও হরের $\cos^2\theta$ কাটাকাটি করার পর বাকি থাকে:</div>
+            <div class="step">$= 4\sqrt{\tan^2\theta - \sin^2\theta} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">এখন রুটের ভেতরে $a^2 - b^2 = (a+b)(a-b)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+            <div class="step">$= 4\sqrt{(\tan\theta + \sin\theta) \cdot (\tan\theta - \sin\theta)} \quad [\because a^2 - b^2 = (a+b)(a-b)]$</div>
+            <div class="step-explain">সবশেষে উদ্দীপকে দেওয়া মান অনুযায়ী $(\tan\theta + \sin\theta) = m$ এবং $(\tan\theta - \sin\theta) = n$ বসিয়ে পাই:</div>
+            <div class="step">$= 4\sqrt{mn} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান দেখানো হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $m^2 - n^2 = 4\sqrt{mn}$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১১. $\cos^2 A = 1 - \cos^4 A$ হলে, দেখাও যে, $\cot^4 A - \cot^2 A = 1$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া শর্ত বা সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\cos^2 A = 1 - \cos^4 A$</div>
+            <div class="step-explain">এখন সমীকরণের ডানপক্ষের $-\cos^4 A$-কে বামপক্ষে এবং বামপক্ষের $\cos^2 A$-কে ডানপক্ষে পক্ষান্তর করে পাই (এতে চিহ্নের পরিবর্তন হবে):</div>
+            <div class="step">$\Rightarrow \cos^4 A = 1 - \cos^2 A \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক সূত্র অনুযায়ী: $1 - \cos^2 A = \sin^2 A$। ডানপক্ষে এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \cos^4 A = \sin^2 A \quad [\because 1 - \cos^2 A = \sin^2 A]$</div>
+            <div class="step-explain">যেহেতু আমাদের প্রমাণের ডানপক্ষে $1$ আনতে হবে এবং বামপক্ষে $\cot$ আনতে হবে, তাই সমীকরণের উভয়পক্ষকে $\sin^4 A$ দ্বারা ভাগ করি:</div>
+            <div class="step">$\Rightarrow \frac{\cos^4 A}{\sin^4 A} = \frac{\sin^2 A}{\sin^4 A} \quad [\text{উভয়পক্ষকে } \sin^4 A \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">বামপক্ষের ভগ্নাংশটিকে একটি সাধারণ বন্ধনীতে নিয়ে হোল-পাওয়ার আকারে সাজাই এবং ডানপক্ষের হরকে ভেঙে লিখি যেন কাটাকাটি করতে সুবিধা হয়:</div>
+            <div class="step">$\Rightarrow \left(\frac{\cos A}{\sin A}\right)^4 = \frac{\sin^2 A}{\sin^2 A \cdot \sin^2 A} \quad [\because \sin^4 A = \sin^2 A \cdot \sin^2 A]$</div>
+            <div class="step-explain">আমরা জানি, $\frac{\cos A}{\sin A} = \cot A$ এবং ডানপক্ষে লব ও হরের $\sin^2 A$ কাটাকাটি করে ছোট করি:</div>
+            <div class="step">$\Rightarrow \cot^4 A = \frac{1}{\sin^2 A} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">বিপরীত অনুপাতের সূত্র অনুযায়ী আমরা জানি, $\frac{1}{\sin^2 A} = \cosec^2 A$। এই মানটি ডানপক্ষে বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \cot^4 A = \cosec^2 A \quad [\because \frac{1}{\sin^2 A} = \cosec^2 A]$</div>
+            <div class="step-explain">এবার ডানপক্ষের $\cosec^2 A$-কে সূত্রে ভেঙে $\cot$-এ রূপান্তর করি। আমরা জানি, $\cosec^2 A = 1 + \cot^2 A$।</div>
+            <div class="step">$\Rightarrow \cot^4 A = 1 + \cot^2 A \quad [\because \cosec^2 A = 1 + \cot^2 A]$</div>
+            <div class="step-explain">সবশেষে ডানপক্ষের $+\cot^2 A$-কে বামপক্ষে পক্ষান্তর করলে তা $-\cot^2 A$ হয়ে যাবে:</div>
+            <div class="step">$\Rightarrow \cot^4 A - \cot^2 A = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">সমীকরণটি চূড়ান্ত প্রমাণের রূপে চলে এসেছে।</div>
+            <div class="step"><strong>অতএব,</strong> $\cot^4 A - \cot^2 A = 1$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১২. যদি $\sin^2 A + \sin^4 A = 1$ হয়, তবে দেখাও যে, $\tan^4 A - \tan^2 A = 1$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া শর্ত বা সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\sin^2 A + \sin^4 A = 1$</div>
+            <div class="step-explain">এখন বামপক্ষের $+\sin^2 A$-কে ডানপক্ষে পক্ষান্তর করে পাই (এতে চিহ্নের পরিবর্তন হয়ে মাইনাস হবে):</div>
+            <div class="step">$\Rightarrow \sin^4 A = 1 - \sin^2 A \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক সূত্র অনুযায়ী: $1 - \sin^2 A = \cos^2 A$। ডানপক্ষে এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \sin^4 A = \cos^2 A \quad [\because  1 - \sin^2 A = \cos^2 A]$</div>
+            <div class="step-explain">যেহেতু আমাদের চূড়ান্ত প্রমাণের বামপক্ষে $\tan$ এবং ডানপক্ষে $1$ আনতে হবে, তাই সমীকরণের উভয়পক্ষকে $\cos^4 A$ দ্বারা ভাগ করি:</div>
+            <div class="step">$\Rightarrow \frac{\sin^4 A}{\cos^4 A} = \frac{\cos^2 A}{\cos^4 A} \quad [\text{উভয়পক্ষকে } \cos^4 A \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">বামপক্ষের ভগ্নাংশটিকে একটি সাধারণ বন্ধনীতে নিয়ে হোল-পাওয়ার আকারে সাজাই এবং ডানপক্ষের হরকে ভেঙে লিখি যেন কাটাকাটি করতে সুবিধা হয়:</div>
+            <div class="step">$\Rightarrow \left(\frac{\sin A}{\cos A}\right)^4 = \frac{\cos^2 A}{\cos^2 A \cdot \cos^2 A} \quad [\because \cos^4 A = \cos^2 A \cdot \cos^2 A]$</div>
+            <div class="step-explain">আমরা জানি, $\frac{\sin A}{\cos A} = \tan A$ এবং ডানপক্ষে লব ও হরের $\cos^2 A$ কাটাকাটি করে ছোট করি:</div>
+            <div class="step">$\Rightarrow \tan^4 A = \frac{1}{\cos^2 A} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">বিপরীত অনুপাতের সূত্র অনুযায়ী আমরা জানি, $\frac{1}{\cos^2 A} = \sec^2 A$। এই মানটি ডানপক্ষে বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \tan^4 A = \sec^2 A \quad [\because \frac{1}{\cos^2 A} = \sec^2 A]$</div>
+            <div class="step-explain">এবার ডানপক্ষের $\sec^2 A$-কে সূত্রে ভেঙে $\tan$-এ রূপান্তর করি। আমরা জানি, $\sec^2 A = 1 + \tan^2 A$।</div>
+            <div class="step">$\Rightarrow \tan^4 A = 1 + \tan^2 A \quad [\because \sec^2 A = 1 + \tan^2 A]$</div>
+            <div class="step-explain">সবশেষে ডানপক্ষের $+\tan^2 A$-কে বামপক্ষে পক্ষান্তর করলে তা $-\tan^2 A$ হয়ে যাবে:</div>
+            <div class="step">$\Rightarrow \tan^4 A - \tan^2 A = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">সমীকরণটি চূড়ান্ত প্রমাণের রূপে চলে এসেছে।</div>
+            <div class="step"><strong>অতএব,</strong> $\tan^4 A - \tan^2 A = 1$ (দেখানো হলো)</div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

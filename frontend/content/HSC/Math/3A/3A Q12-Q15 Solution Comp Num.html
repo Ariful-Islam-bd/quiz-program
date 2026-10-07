@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q12-Q15</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+    <div class="problem-title">১২. আর্গন্ড চিত্র (Argand Diagram) এবং জটিল সংখ্যার জ্যামিতিক প্রয়োগ সংক্রান্ত সমস্যাবলি:</div>
+
+    <div class="problem-sub-title">(i) $9+i,\;4+13i,\;-8+8i$ এবং $-3-4i$ জটিল সংখ্যাগুলি আর্গন্ড চিত্রে যথাক্রমে $A,\;B,\;C,\;D$ বিন্দু সৃষ্টি করে। প্রমাণ কর যে, $ABCD$ একটি বর্গ।</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">ধরি, আর্গন্ড চিত্রে জটিল সংখ্যাগুলোর কার্তেসীয় স্থানাঙ্ক যথাক্রমে:</div>
+    <div class="step">$A(x_1, y_1) = A(9, 1)$</div>
+    <div class="step">$B(x_2, y_2) = B(4, 13)$</div>
+    <div class="step">$C(x_3, y_3) = C(-8, 8)$</div>
+    <div class="step">$D(x_4, y_4) = D(-3, -4)$</div>
+    <div class="step-explain">আমরা জানি, কোনো চতুর্ভুজকে বর্গ প্রমাণ করতে হলে তার ৪টি বাহুর দৈর্ঘ্য সমান এবং কর্ণ দুটির দৈর্ঘ্যও সমান দেখাতে হবে।</div>
+    <div class="step-explain">দুটি বিন্দুর মধ্যবর্তী দূরত্বের সূত্র: $d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$। এই সূত্র ব্যবহার করে বাহুগুলোর দৈর্ঘ্য বের করি:</div>
+    
+    <div class="step-explain">১. $AB$ বাহুর দৈর্ঘ্য:</div>
+    <div class="step">$AB = \sqrt{(4-9)^2 + (13-1)^2}$</div>
+    <div class="step">$\Rightarrow AB = \sqrt{(-5)^2 + (12)^2} = \sqrt{25 + 144} = \sqrt{169} = 13$</div>
+    
+    <div class="step-explain">২. $BC$ বাহুর দৈর্ঘ্য:</div>
+    <div class="step">$BC = \sqrt{(-8-4)^2 + (8-13)^2}$</div>
+    <div class="step">$\Rightarrow BC = \sqrt{(-12)^2 + (-5)^2} = \sqrt{144 + 25} = \sqrt{169} = 13$</div>
+    
+    <div class="step-explain">৩. $CD$ বাহুর দৈর্ঘ্য:</div>
+    <div class="step">$CD = \sqrt{(-3-(-8))^2 + (-4-8)^2}$</div>
+    <div class="step">$\Rightarrow CD = \sqrt{(-3+8)^2 + (-12)^2} = \sqrt{(5)^2 + 144} = \sqrt{25 + 144} = \sqrt{169} = 13$</div>
+    
+    <div class="step-explain">৪. $DA$ বাহুর দৈর্ঘ্য:</div>
+    <div class="step">$DA = \sqrt{(9-(-3))^2 + (1-(-4))^2}$</div>
+    <div class="step">$\Rightarrow DA = \sqrt{(9+3)^2 + (1+4)^2} = \sqrt{(12)^2 + (5)^2} = \sqrt{144 + 25} = \sqrt{169} = 13$</div>
+    
+    <div class="step-explain">যেহেতু ৪টি বাহুর দৈর্ঘ্যই সমান ($AB = BC = CD = DA = 13$), এটি একটি রম্বস বা বর্গ। এবার কর্ণ দুটির দৈর্ঘ্য যাচাই করি:</div>
+    
+    <div class="step-explain">৫. $AC$ কর্ণের দৈর্ঘ্য:</div>
+    <div class="step">$AC = \sqrt{(-8-9)^2 + (8-1)^2}$</div>
+    <div class="step">$\Rightarrow AC = \sqrt{(-17)^2 + (7)^2} = \sqrt{289 + 49} = \sqrt{338}$</div>
+    
+    <div class="step-explain">৬. $BD$ কর্ণের দৈর্ঘ্য:</div>
+    <div class="step">$BD = \sqrt{(-3-4)^2 + (-4-13)^2}$</div>
+    <div class="step">$\Rightarrow BD = \sqrt{(-7)^2 + (-17)^2} = \sqrt{49 + 289} = \sqrt{338}$</div>
+    
+    <div class="step-explain">যেহেতু চতুর্ভুজটির চারটি বাহু সমান এবং কর্ণদ্বয় পরস্পর সমান ($AC = BD = \sqrt{338}$), সেহেতু চতুর্ভুজটি একটি বর্গ।</div>
+    <div class="step-explain"><b>অতএব, প্রমাণিত হলো যে $ABCD$ একটি বর্গ।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $z=-1+i$ জটিল সংখ্যার মডুলাস ও আর্গুমেন্ট আর্গন্ড চিত্রে দেখাও।</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">দেওয়া আছে জটিল সংখ্যা: $z = -1+i$</div>
+    <div class="step-explain">এখানে বাস্তব অংশ $x = -1$ এবং কাল্পনিক অংশ $y = 1$। কার্তেসীয় স্থানাঙ্ক হিসেবে বিন্দুটি হলো $P(-1, 1)$, যা ২য় চতুর্ভাগে (Second Quadrant) অবস্থিত।</div>
+    
+    <div class="step-explain">১. মডুলাস ($r$ বা $|z|$) নির্ণয়:</div>
+    <div class="step">$|z| = \sqrt{x^2 + y^2}$</div>
+    <div class="step">$\Rightarrow |z| = \sqrt{(-1)^2 + (1)^2} = \sqrt{1 + 1} = \sqrt{2} \quad [\text{বর্গ ও যোগ করে}]$</div>
+    
+    <div class="step-explain">২. আর্গুমেন্ট ($\theta$) নির্ণয় (২য় চতুর্ভাগের জন্য সূত্র: $\theta = \pi - \tan^{-1}\left|\frac{y}{x}\right|$):</div>
+    <div class="step">$\theta = \pi - \tan^{-1}\left|\frac{1}{-1}\right|$</div>
+    <div class="step">$\Rightarrow \theta = \pi - \tan^{-1}(1) \quad [\text{পরমমান নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $\tan\left(\frac{\pi}{4}\right) = 1$ অর্থাৎ $\tan^{-1}(1) = \frac{\pi}{4}$। মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \theta = \pi - \frac{\pi}{4} = \frac{4\pi - \pi}{4} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \theta = \frac{3\pi}{4}$</div>
+    
+    <div class="step-explain">৩. আর্গন্ড চিত্রে প্রদর্শন:</div>
+    <div class="step-explain">আর্গন্ড চিত্রে অনুভূমিক অক্ষকে বাস্তব অক্ষ (Real axis) এবং উলম্ব অক্ষকে কাল্পনিক অক্ষ (Imaginary axis) ধরা হয়। মূলবিন্দু $O(0,0)$ থেকে বামে ১ ঘর এবং উপরে ১ ঘর গিয়ে $P(-1,1)$ বিন্দুটি চিহ্নিত করা হয়। মূলবিন্দু থেকে এই বিন্দুর দূরত্ব $OP = \sqrt{2}$ এবং ধনাত্মক বাস্তব অক্ষের সাথে উৎপন্ন কোণ $\theta = \frac{3\pi}{4}$।</div>
+    <div class="step-explain"><b>উত্তর:</b> মডুলাস $\sqrt{2}$ এবং আর্গুমেন্ট $\frac{3\pi}{4}$।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) আর্গ্যান্ড চিত্রে $z,\;iz,\;z+iz$ দ্বারা গঠিত ত্রিভুজের ক্ষেত্রফল নির্ণয় কর, যখন $z=2+3i$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে জটিল সংখ্যা: $z = 2+3i$</div>
+    <div class="step-explain">এখন বাকি শীর্ষবিন্দুগুলোর মান বের করি:</div>
+    <div class="step">$iz = i(2+3i) = 2i + 3i^2$</div>
+    <div class="step">$\Rightarrow iz = 2i + 3(-1) = -3 + 2i \quad [\because i^2 = -1]$</div>
+    <div class="step-explain">এবং ৩য় শীর্ষবিন্দু:</div>
+    <div class="step">$z+iz = (2+3i) + (-3+2i)$</div>
+    <div class="step">$\Rightarrow z+iz = (2-3) + i(3+2) = -1 + 5i \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">আর্গন্ড চিত্রে এই জটিল সংখ্যা তিনটিকে বিন্দু আকারে রূপান্তর করলে পাই:</div>
+    <div class="step">$P(z) = (2, 3)$</div>
+    <div class="step">$Q(iz) = (-3, 2)$</div>
+    <div class="step">$R(z+iz) = (-1, 5)$</div>
+    
+    <div class="step-explain">স্থানাঙ্ক জ্যামিতির ৩টি বিন্দুর সাপেক্ষে গঠিত ত্রিভুজের ক্ষেত্রফলের সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\text{ক্ষেত্রফল} = \frac{1}{2} \left| x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2) \right|$</div>
+    <div class="step">$\Rightarrow \text{ক্ষেত্রফল} = \frac{1}{2} \left| 2(2-5) + (-3)(5-3) + (-1)(3-2) \right| \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{ক্ষেত্রফল} = \frac{1}{2} \left| 2(-3) - 3(2) - 1(1) \right| \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{ক্ষেত্রফল} = \frac{1}{2} \left| -6 - 6 - 1 \right|$</div>
+    <div class="step">$\Rightarrow \text{ক্ষেত্রফল} = \frac{1}{2} \left| -13 \right| \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">যেহেতু ক্ষেত্রফল কখনো ঋণাত্মক হতে পারে না, তাই পরমমান নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{ক্ষেত্রফল} = \frac{13}{2} = 6.5 \text{ বর্গ একক}$</div>
+    <div class="step-explain"><b>উত্তর:</b> গঠিত ত্রিভুজের ক্ষেত্রফল $6.5$ বর্গ একক।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৩. জটিল সংখ্যার অয়লার আকার এবং মডুলাস-আর্গুমেন্ট নির্ণয়:</div>
+
+    <div class="problem-sub-title">$re^{i\theta}=\frac{3+3i}{2+3i}+\frac{1+5i}{1-2i}$ হলে, $r$ ও $\theta$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">দেওয়া আছে সমীকরণ:</div>
+    <div class="step">$re^{i\theta} = \frac{3+3i}{2+3i} + \frac{1+5i}{1-2i}$</div>
+    
+    <div class="step-explain">ডানপক্ষের ভগ্নাংশ দুটিকে সরল করার জন্য প্রথমে লসাগু করি:</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{(3+3i)(1-2i) + (1+5i)(2+3i)}{(2+3i)(1-2i)} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">এখন লব ও হরের গুণফলগুলো সাধারণ বীজগণিতীয় নিয়মে ভেঙে লিখি:</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{\left(3\cdot1 - 3\cdot2i + 3i\cdot1 - 3i\cdot2i\right) + \left(1\cdot2 + 1\cdot3i + 5i\cdot2 + 5i\cdot3i\right)}{2\cdot1 - 2\cdot2i + 3i\cdot1 - 3i\cdot2i} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{\left(3 - 6i + 3i - 6i^2\right) + \left(2 + 3i + 10i + 15i^2\right)}{2 - 4i + 3i - 6i^2}$</div>
+    
+    <div class="step-explain">আমরা জানি, $i^2 = -1$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{\left(3 - 3i - 6(-1)\right) + \left(2 + 13i + 15(-1)\right)}{2 - i - 6(-1)} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{(3 - 3i + 6) + (2 + 13i - 15)}{2 - i + 6} \quad [\text{চিহ্ন পরিবর্তন করে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{(9 - 3i) + (-13 + 13i)}{8 - i} \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{9 - 13 - 3i + 13i}{8 - i} \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-4 + 10i}{8 - i}$</div>
+    
+    <div class="step-explain">হরের জটিল সংখ্যা দূর করার জন্য লব ও হরকে হরের অনুবন্ধী জটিল সংখ্যা $(8+i)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{(-4 + 10i)(8 + i)}{(8 - i)(8 + i)} \quad [\text{লব ও হরকে } (8+i) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-4(8) - 4(i) + 10i(8) + 10i(i)}{(8)^2 - (i)^2} \quad [\text{গুণ ও সূত্রের সাহায্যে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-32 - 4i + 80i + 10i^2}{64 - i^2}$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-32 + 76i + 10(-1)}{64 - (-1)} \quad [\text{পুনরায় } i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-32 + 76i - 10}{64 + 1}$</div>
+    <div class="step">$\Rightarrow re^{i\theta} = \frac{-42 + 76i}{65}$</div>
+    
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা বা পৃথক করে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow re^{i\theta} = -\frac{42}{65} + i\cdot\frac{76}{65}$</div>
+    
+    <div class="step-explain">অয়লারের সূত্রানুসারে আমরা জানি, $re^{i\theta} = r(\cos\theta + i\sin\theta) = r\cos\theta + i\cdot r\sin\theta$। সুতরাং:</div>
+    <div class="step">$r\cos\theta + i\cdot r\sin\theta = -\frac{42}{65} + i\cdot\frac{76}{65}$</div>
+    
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$r\cos\theta = -\frac{42}{65} \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$r\sin\theta = \frac{76}{65} \quad \dots \quad \text{(২)}$</div>
+    
+    <div class="step-explain"><b>১. মডুলাস ($r$) নির্ণয়:</b></div>
+    <div class="step-explain">সমীকরণ (১) ও (২) কে বর্গ করে যোগ করি:</div>
+    <div class="step">$(r\cos\theta)^2 + (r\sin\theta)^2 = \left(-\frac{42}{65}\right)^2 + \left(\frac{76}{65}\right)^2 \quad [\text{বর্গ ও যোগ করে}]$</div>
+    <div class="step">$\Rightarrow r^2\cos^2\theta + r^2\sin^2\theta = \frac{1764}{4225} + \frac{5776}{4225}$</div>
+    <div class="step">$\Rightarrow r^2\left(\cos^2\theta + \sin^2\theta\right) = \frac{1764 + 5776}{4225} \quad [r^2 \text{ কমন ও লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow r^2\cdot1 = \frac{7540}{4225} \quad \left[\because \sin^2\theta + \cos^2\theta = 1\right]$</div>
+    <div class="step-explain">লব ও হরকে ৬৫ দ্বারা কাটাকাটি (ভাগ) করে পাই:</div>
+    <div class="step">$\Rightarrow r^2 = \frac{116}{65}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{\frac{116}{65}} \quad [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain"><b>২. আর্গুমেন্ট ($\theta$) নির্ণয়:</b></div>
+    <div class="step-explain">যেহেতু বাস্তব অংশ $x = -\frac{42}{65}$ (ঋণাত্মক) এবং কাল্পনিক অংশ $y = \frac{76}{65}$ (ধনাত্মক), বিন্দুটি ২য় চতুর্ভাগে (Second Quadrant) অবস্থিত।</div>
+    <div class="step-explain">সমীকরণ (২) কে সমীকরণ (১) দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\frac{r\sin\theta}{r\cos\theta} = \frac{\frac{76}{65}}{-\frac{42}{65}} \quad [\text{ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \tan\theta = -\frac{76}{42} \quad [\text{হরের ৬৫ কেটে এবং } \frac{\sin\theta}{\cos\theta}=\tan\theta \text{ লিখে}]$</div>
+    <div class="step">$\Rightarrow \tan\theta = -\frac{38}{21} \quad [\text{লব ও হরকে ২ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">২য় চতুর্ভাগের জন্য মুখ্য আর্গুমেন্ট: $\theta = \pi - \tan^{-1}\left|\frac{y}{x}\right|$। অতএব:</div>
+    <div class="step">$\Rightarrow \theta = \pi - \tan^{-1}\left(\frac{38}{21}\right)$</div>
+    
+    <div class="step-explain"><b>উত্তর:</b> $r = \sqrt{\frac{116}{65}}$ এবং $\theta = \pi - \tan^{-1}\left(\frac{38}{21}\right)$।</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">১৪. ত্রিকোণমিতিক সূত্রের সাহায্যে জটিল সংখ্যার রূপান্তর ও প্রমাণ:</div>
+
+    <div class="problem-sub-title">$z=\cos\theta+i\sin\theta$ হলে দেখাও যে, $\frac{2}{1+z}=1-i\tan\frac{\theta}{2}$</div>
+    <div class="solution-title">সমাধান:</div>
+
+    <div class="step-explain">দেওয়া আছে জটিল সংখ্যাটির মান: $z = \cos\theta + i\sin\theta$</div>
+    
+    <div class="step-explain">প্রমাণ করার জন্য আমরা বামপক্ষ (L.H.S.) দিয়ে শুরু করি এবং সেখানে $z$ এর মান বসাই:</div>
+    <div class="step">$\text{L.H.S.} = \frac{2}{1+z}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{2}{1 + \left(\cos\theta + i\sin\theta\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{2}{(1+\cos\theta) + i\sin\theta} \quad [\text{বাস্তব অংশ ব্র্যাকেটে আলাদা করে}]$</div>
+
+    <div class="step-explain">আমরা ত্রিকোণমিতির অংশকোণ বা গুণিতক কোণের দুটি গুরুত্বপূর্ণ সূত্র জানি:</div>
+    <div class="step-explain">১. $1+\cos\theta = 2\cos^2\frac{\theta}{2}$</div>
+    <div class="step-explain">২. $\sin\theta = 2\sin\frac{\theta}{2}\cos\frac{\theta}{2}$</div>
+    
+    <div class="step-explain">এই সূত্র দুটি ভগ্নাংশের হরে প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{2}{2\cos^2\frac{\theta}{2} + i\cdot2\sin\frac{\theta}{2}\cos\frac{\theta}{2}} \quad [\text{ত্রিকোণমিতিক সূত্র বসিয়ে}]$</div>
+
+    <div class="step-explain">এখন হরের উভয় পদ থেকে সাধারণ উৎপাদক $2\cos\frac{\theta}{2}$ কমন নিই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{2}{2\cos\frac{\theta}{2}\left(\cos\frac{\theta}{2} + i\sin\frac{\theta}{2}\right)} \quad [\text{কমন নিয়ে}]$</div>
+
+    <div class="step-explain">লব ও হরের ২ কাটাকাটি করে বা বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}\left(\cos\frac{\theta}{2} + i\sin\frac{\theta}{2}\right)}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{1}{\cos\frac{\theta}{2} + i\sin\frac{\theta}{2}} \quad [\text{আলাদা করে গুণ আকারে লিখে}]$</div>
+
+    <div class="step-explain">দ্বিতীয় ভগ্নাংশটির হর থেকে জটিল সংখ্যা দূর করার জন্য লব ও হরকে তার অনুবন্ধী রাশি $\left(\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}\right)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{1\cdot\left(\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}\right)}{\left(\cos\frac{\theta}{2} + i\sin\frac{\theta}{2}\right)\left(\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}\right)}$</div>
+
+    <div class="step-explain">হরের অংশে বীজগণিতীয় সূত্র $(A+B)(A-B) = A^2 - B^2$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{\left(\cos\frac{\theta}{2}\right)^2 - \left(i\sin\frac{\theta}{2}\right)^2}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{\cos^2\frac{\theta}{2} - i^2\sin^2\frac{\theta}{2}}$</div>
+
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার একক ধর্ম অনুযায়ী $i^2 = -1$। এই মানটি হরে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{\cos^2\frac{\theta}{2} - (-1)\sin^2\frac{\theta}{2}} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{\cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2}}$</div>
+
+    <div class="step-explain">ত্রিকোণমিতির মৌলিক সূত্রানুসারে আমরা জানি, $\cos^2\frac{\theta}{2} + \sin^2\frac{\theta}{2} = 1$। সুতরাং হর ১ হয়ে যাবে:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{1}{\cos\frac{\theta}{2}} \cdot \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{\cos\frac{\theta}{2} - i\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}}$</div>
+
+    <div class="step-explain">এখন লবের প্রতিটি পদকে হর দ্বারা আলাদা আলাদাভাবে ভাগ (Partial fraction) করে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \frac{\cos\frac{\theta}{2}}{\cos\frac{\theta}{2}} - \frac{i\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}} \quad [\text{আলাদা করে ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = 1 - i\cdot\frac{\sin\frac{\theta}{2}}{\cos\frac{\theta}{2}}$</div>
+
+    <div class="step-explain">আমরা জানি, $\frac{\sin\phi}{\cos\phi} = \tan\phi$। অতএব:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = 1 - i\tan\frac{\theta}{2}$</div>
+    
+    <div class="step-explain">দেখা যাচ্ছে যে, আমাদের প্রাপ্ত বামপক্ষের মান ডানপক্ষের (R.H.S.) মানের সাথে হুবহু মিলে গেছে।</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \text{R.H.S.}$</div>
+    
+    <div class="step-explain"><b>অতএব, দেখানো হলো যে, $\frac{2}{1+z}=1-i\tan\frac{\theta}{2}$।</b></div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৫. জটিল সংখ্যার সঞ্চারপথ (Locus) সংক্রান্ত সমস্যাবলি:</div>
+
+    <div class="problem-sub-title">$\frac{z+i}{z+2}$ এর সঞ্চারপথের সমীকরণ নির্ণয় কর, যখন এটি সম্পূর্ণ কাল্পনিক।</div>
+    <div class="solution-title">সমাধান:</div>
+
+    <div class="step-explain">আমরা জানি, যেকোনো সাধারণ জটিল সংখ্যাকে $z = x+iy$ আকারে প্রকাশ করা যায়, যেখানে $x$ হলো বাস্তব অংশ এবং $y$ হলো কাল্পনিক অংশ।</div>
+    <div class="step-explain">প্রথমে প্রদত্ত রাশিটিকে $z$ এর মান বসিয়ে সরল জটিল সংখ্যা আকারে রূপান্তর করি:</div>
+    <div class="step">ধরি, $Z = \frac{z+i}{z+2}$</div>
+    <div class="step">$\Rightarrow Z = \frac{(x+iy) + i}{(x+iy) + 2} \quad [z = x+iy \text{ বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের বাস্তব এবং কাল্পনিক অংশগুলোকে একসাথে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow Z = \frac{x + i(y+1)}{(x+2) + iy} \quad [i \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">হরের জটিল সংখ্যা দূর করার জন্য লব ও হরকে হরের অনুবন্ধী জটিল সংখ্যা $\left\{(x+2) - iy\right\}$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{\left\{x + i(y+1)\right\}\cdot\left\{(x+2) - iy\right\}}{\left\{(x+2) + iy\right\}\cdot\left\{(x+2) - iy\right\}}$</div>
+    
+    <div class="step-explain">লব অংশে সাধারণ বীজগণিতীয় গুণ করি এবং হরের অংশে $(A+B)(A-B) = A^2 - B^2$ এর সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{x(x+2) - x(iy) + i(y+1)(x+2) - i^2(y+1)y}{(x+2)^2 - (iy)^2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow Z = \frac{(x^2+2x) - ixy + i(xy+2y+x+2) - (-1)(y^2+y)}{(x+2)^2 - i^2y^2} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow Z = \frac{(x^2+2x) - ixy + ixy + i(2y+x+2) + (y^2+y)}{(x+2)^2 - (-1)y^2} \quad [\text{ব্র্যাকেট তুলে}]$</div>
+    
+    <div class="step-explain">লব অংশে $-ixy$ এবং $+ixy$ কাটাকাটি চলে যায়। এরপর বাস্তব ও কাল্পনিক পদগুলোকে আলাদা করে সাজাই:</div>
+    <div class="step">$\Rightarrow Z = \frac{(x^2+2x+y^2+y) + i(x+2y+2)}{(x+2)^2 + y^2} \quad [\text{সাজিয়ে লিখে}]$</div>
+    
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ সম্পূর্ণ পৃথক বা আলাদা ভগ্নাংশ আকারে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow Z = \frac{x^2+y^2+2x+y}{(x+2)^2 + y^2} + i\cdot\frac{x+2y+2}{(x+2)^2 + y^2}$</div>
+    
+    <div class="step-explain">প্রশ্নে বলা হয়েছে, রাশিটি <b>"সম্পূর্ণ কাল্পনিক" (Purely Imaginary)</b>। আমরা জানি, কোনো জটিল সংখ্যা সম্পূর্ণ কাল্পনিক হলে তার বাস্তব অংশের মান শূন্য ($0$) হয়।</div>
+    <div class="step-explain">সুতরাং, বাস্তব অংশ সমীকৃত করে পাই:</div>
+    <div class="step">$\frac{x^2+y^2+2x+y}{(x+2)^2 + y^2} = 0$</div>
+    
+    <div class="step-explain">এখন আর-গুণন (কোণাকুণি গুণ) করে পাই:</div>
+    <div class="step">$\Rightarrow x^2+y^2+2x+y = 0\cdot\left\{(x+2)^2 + y^2\right\}$</div>
+    <div class="step">$\Rightarrow x^2+y^2+2x+y = 0$</div>
+    
+    <div class="step-explain">উল্লেখ্য যে, হরের মান কখনো শূন্য হতে পারে না, অর্থাৎ $(x+2)^2 + y^2 \neq 0 \implies (x,y) \neq (-2,0)$।</div>
+    <div class="step-explain">প্রাপ্ত সমীকরণটি একটি বৃত্তের সমীকরণ নির্দেশ করে।</div>
+    
+    <div class="step-explain"><b>উত্তর:</b> নির্ণেয় সঞ্চারপথের সমীকরণ $x^2+y^2+2x+y = 0$ [যেখানে $(x,y) \neq (-2,0)$]।</div>
+</div>
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

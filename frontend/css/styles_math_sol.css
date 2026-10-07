@@ -1,0 +1,179 @@
+/* frontend/css/styles_math_sol.css */
+/* Version: 1.0.0 - গণিত কন্টেন্টের জন্য স্টাইল */
+
+/* ===== মৌলিক কন্টেইনার ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--card);
+    border-radius: var(--border-radius);
+}
+
+/* ===== সমস্যা কার্ড ===== */
+.problem-card {
+    background: var(--card);
+    border-radius: var(--border-radius);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px var(--shadow);
+    border-left: 4px solid var(--accent);
+}
+
+.problem-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+.problem-sub-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 16px 0 8px 0;
+    padding-left: 8px;
+    border-left: 3px solid var(--accent);
+}
+
+/* ===== সমাধান স্টাইল ===== */
+.solution-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--success);
+    margin: 16px 0 10px 0;
+}
+
+.step {
+    padding: 6px 12px;
+    margin: 6px 0;
+    background: var(--bg);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-family: 'Times New Roman', serif;
+}
+
+.step-explain {
+    padding: 6px 12px 6px 20px;
+    margin: 4px 0;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    border-left: 2px solid var(--border);
+}
+
+/* ===== বিশেষ এলিমেন্ট ===== */
+.note {
+    color: var(--warning);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.equation {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ===== অঙ্কনের জন্য ===== */
+.graphsmall {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== টেবিল ===== */
+.explanation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.95rem;
+}
+
+.explanation-table th,
+.explanation-table td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.explanation-table th {
+    background: var(--bg);
+    font-weight: 600;
+}
+
+/* ===== মোবাইল রেসপনসিভ ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .problem-card {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .problem-title {
+        font-size: 1rem;
+    }
+    
+    .problem-sub-title {
+        font-size: 0.95rem;
+    }
+    
+    .step {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+        overflow-x: auto;
+    }
+    
+    .step-explain {
+        font-size: 0.82rem;
+        padding: 4px 8px 4px 12px;
+    }
+    
+    .explanation-table {
+        font-size: 0.8rem;
+    }
+    
+    .explanation-table th,
+    .explanation-table td {
+        padding: 4px 6px;
+    }
+}
+
+/* ===== ডার্ক মোড ===== */
+body.dark .problem-card {
+    background: #2d2d2d;
+    border-left-color: var(--accent);
+}
+
+body.dark .step {
+    background: #1a1a1a;
+}
+
+body.dark .step-explain {
+    border-left-color: #404040;
+}
+
+body.dark .explanation-table th {
+    background: #1a1a1a;
+}
+
+body.dark .explanation-table td {
+    border-color: #404040;
+}
+
+/* ===== KaTeX ওভাররাইড ===== */
+.katex {
+    font-size: 1.05rem;
+}
+
+.katex-display {
+    margin: 12px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 0;
+}

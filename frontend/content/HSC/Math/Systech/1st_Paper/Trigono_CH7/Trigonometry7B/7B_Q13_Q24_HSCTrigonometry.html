@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7B Q13-Q24</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (7B)</h1>
+
+
+<div class="problem-card">
+    <div class="problem-title">১৩. $\cos 74^\circ 33' \cos 14^\circ 33' + \cos 75^\circ 27' \cos 15^\circ 27'$ এর মান বের কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত রাশিটি তুলে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \cos 74^\circ 33' \cdot \cos 14^\circ 33' + \cos 75^\circ 27' \cdot \cos 15^\circ 27'$</div>
+    
+    <div class="step-explain">এই রাশিতে চার ধরণের ভিন্ন কোণ দেখা যাচ্ছে। এদেরকে সূত্রে ফেলার জন্য সংযুক্ত কোণের নিয়মে রূপান্তর করতে হবে। প্রথম পদের কোণগুলোকে অপরিবর্তিত রেখে দ্বিতীয় পদের কোণগুলোকে $90^\circ$ থেকে বিয়োগ আকারে প্রকাশ করব।</div>
+    <div class="step-explain">আমরা জানি, $90^\circ = 89^\circ 60'$।</div>
+    <div class="step-explain">
+        * $89^\circ 60' - 14^\circ 33' = 75^\circ 27'$ অর্থাৎ $75^\circ 27' = 90^\circ - 14^\circ 33'$<br>
+        * $89^\circ 60' - 74^\circ 33' = 15^\circ 27'$ অর্থাৎ $15^\circ 27' = 90^\circ - 74^\circ 33'$
+    </div>
+    <div class="step-explain">এই মানগুলো রাশিতে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 74^\circ 33' \cdot \cos 14^\circ 33' + \cos(90^\circ - 14^\circ 33') \cdot \cos(90^\circ - 74^\circ 33') \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, প্রথম চতুর্ভাগে $\cos(90^\circ - \theta) = \sin\theta$ হয়। এই নিয়ম অনুসারে ডানপাশের পদ দুটি পরিবর্তন করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 74^\circ 33' \cdot \cos 14^\circ 33' + \sin 14^\circ 33' \cdot \sin 74^\circ 33' \quad [\because \cos(90^\circ - \theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">গুণফলের স্থান পরিবর্তন করে পদ দুটিকে সুন্দরভাবে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 74^\circ 33' \cdot \cos 14^\circ 33' + \sin 74^\circ 33' \cdot \sin 14^\circ 33' \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">এখন এই রাশিটি $\cos\text{A} \cdot \cos\text{B} + \sin\text{A} \cdot \sin\text{B}$ সূত্রের অনুরূপ হয়েছে, যেখানে $\text{A} = 74^\circ 33'$ এবং $\text{B} = 14^\circ 33'$।</div>
+    <div class="step-explain">আমরা জানি, $\cos(\text{A} - \text{B}) = \cos\text{A} \cdot \cos\text{B} + \sin\text{A} \cdot \sin\text{B}$। সূত্রটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos(74^\circ 33' - 14^\circ 33') \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার ব্র্যাকেটের ভেতরের কোণ দুটির বিয়োগফল নির্ণয় করি:</div>
+    <div class="step-explain">মিনিট অংশ: $33' - 33' = 0'$ এবং ডিগ্রি অংশ: $74^\circ - 14^\circ = 60^\circ$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 60^\circ \quad [\text{কোণ বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক চার্ট থেকে আমরা জানি, $\cos 60^\circ = \frac{1}{2}$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{1}{2} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\frac{1}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৪. মান নির্ণয় কর: $\frac{\tan 68^\circ 35' - \cot 66^\circ 25'}{1 + \tan 68^\circ 35' \cot 66^\circ 25'}$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত জটিল ভগ্নাংশটি লিখে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \frac{\tan 68^\circ 35' - \cot 66^\circ 25'}{1 + \tan 68^\circ 35' \cdot \cot 66^\circ 25'}$</div>
+    
+    <div class="step-explain">ট্যানের যৌগিক কোণের সূত্রে ফেলার জন্য আমাদের হরের ও লবের $\cot 66^\circ 25'$ অংশটিকে $\tan$ অনুপাতে পরিবর্তন করতে হবে।</div>
+    <div class="step-explain">আমরা জানি, $90^\circ = 89^\circ 60'$।</div>
+    <div class="step-explain">এখন, $89^\circ 60' - 23^\circ 35' = 66^\circ 25'$। অর্থাৎ $66^\circ 25' = 90^\circ - 23^\circ 35'$ লিখতে পারি।</div>
+    
+    <div class="step-explain">এই কোণটি ভাঙার নিয়ম রাশিতে প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\tan 68^\circ 35' - \cot(90^\circ - 23^\circ 35')}{1 + \tan 68^\circ 35' \cdot \cot(90^\circ - 23^\circ 35')} \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা সংযুক্ত কোণের সূত্র জানি, প্রথম চতুর্ভাগে $\cot(90^\circ - \theta) = \tan\theta$। এখানে $\theta = 23^\circ 35'$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\tan 68^\circ 35' - \tan 23^\circ 35'}{1 + \tan 68^\circ 35' \cdot \tan 23^\circ 35'} \quad [\because \cot(90^\circ - \theta) = \tan\theta]$</div>
+    
+    <div class="step-explain">এখন ভগ্নাংশটি হুবহু $\frac{\tan\text{A} - \tan\text{B}}{1 + \tan\text{A} \cdot \tan\text{B}}$ আকারের সূত্রে রূপ নিয়েছে, যেখানে $\text{A} = 68^\circ 35'$ এবং $\text{B} = 23^\circ 35'$।</div>
+    <div class="step-explain">আমরা ট্যানজেন্টের বিয়োগফলের যৌগিক সূত্রটি জানি: $\tan(\text{A} - \text{B}) = \frac{\tan\text{A} - \tan\text{B}}{1 + \tan\text{A} \cdot \tan\text{B}}$। সূত্রটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \tan(68^\circ 35' - 23^\circ 35') \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার ব্র্যাকেটের ভেতরের কোণ দুটির বিয়োগফল বের করি:</div>
+    <div class="step-explain">মিনিট অংশ: $35' - 35' = 0'$ এবং ডিগ্রি অংশ: $68^\circ - 23^\circ = 45^\circ$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \tan 45^\circ \quad [\text{কোণ বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, আদর্শ ত্রিকোণমিতিক কোণের মান অনুযায়ী $\tan 45^\circ = 1$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = 1 \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $1$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৫. $\frac{\cos 8^\circ + \sin 8^\circ}{\cos 8^\circ - \sin 8^\circ}$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত রাশিটি লিখে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \frac{\cos 8^\circ + \sin 8^\circ}{\cos 8^\circ - \sin 8^\circ}$</div>
+    
+    <div class="step-explain">এই ধরনের রাশিকে ট্যানজেন্ট ($\tan$) অনুপাতে নিয়ে যাওয়ার জন্য লব এবং হর উভয়কে $\cos 8^\circ$ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{\cos 8^\circ + \sin 8^\circ}{\cos 8^\circ}}{\frac{\cos 8^\circ - \sin 8^\circ}{\cos 8^\circ}} \quad [\text{লব ও হরকে } \cos 8^\circ \text{ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">এখন লব ও হরের পদগুলোকে আলাদা আলাদা করে বা বিচ্ছেদ করে ভাগ করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{\cos 8^\circ}{\cos 8^\circ} + \frac{\sin 8^\circ}{\cos 8^\circ}}{\frac{\cos 8^\circ}{\cos 8^\circ} - \frac{\sin 8^\circ}{\cos 8^\circ}} \quad [\text{আলাদাভাবে ভাগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos 8^\circ}{\cos 8^\circ} = 1$ এবং $\frac{\sin 8^\circ}{\cos 8^\circ} = \tan 8^\circ$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{1 + \tan 8^\circ}{1 - \tan 8^\circ} \quad [\because \frac{\sin\theta}{\cos\theta} = \tan\theta]$</div>
+    
+    <div class="step-explain">ট্যানের যৌগিক কোণের সূত্রে সাজানোর জন্য আমরা লবের $1$ এর পরিবর্তে $\tan 45^\circ$ লিখব (যেহেতু $\tan 45^\circ = 1$) এবং হরের $\tan 8^\circ$ এর সাথে একটি কাল্পনিক $1$ গুণ আকারে ধরে সেখানেও $\tan 45^\circ$ বসাব:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\tan 45^\circ + \tan 8^\circ}{1 - \tan 45^\circ \cdot \tan 8^\circ} \quad [\because \tan 45^\circ = 1]$</div>
+    
+    <div class="step-explain">এখন এই রূপটি হুবহু $\frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$ সূত্রের মতো হয়েছে, যার মূল সূত্রটি হলো $\tan(\text{A} + \text{B})$। এখানে $\text{A} = 45^\circ$ এবং $\text{B} = 8^\circ$ ধরে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \tan(45^\circ + 8^\circ) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের ভেতরের কোণ দুটি যোগ করি: $45^\circ + 8^\circ = 53^\circ$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \tan 53^\circ \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\tan 53^\circ$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৬. দেখাও যে, $\frac{\cos 25^\circ - \sin 25^\circ}{\cos 25^\circ + \sin 25^\circ} = \tan 20^\circ$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রমাণের সুবিধার জন্য আমরা বামপক্ষ (LHS) নিয়ে কাজ শুরু করি:</div>
+    <div class="step">$\text{LHS} = \frac{\cos 25^\circ - \sin 25^\circ}{\cos 25^\circ + \sin 25^\circ}$</div>
+    
+    <div class="step-explain">রাশিটিকে $\tan$ অনুপাতে রূপান্তরের জন্য লব এবং হর উভয়কে $\cos 25^\circ$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\cos 25^\circ - \sin 25^\circ}{\cos 25^\circ}}{\frac{\cos 25^\circ + \sin 25^\circ}{\cos 25^\circ}} \quad [\text{লব ও হরকে } \cos 25^\circ \text{ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের পদগুলোকে আলাদা করে ভাগ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\cos 25^\circ}{\cos 25^\circ} - \frac{\sin 25^\circ}{\cos 25^\circ}}{\frac{\cos 25^\circ}{\cos 25^\circ} + \frac{\sin 25^\circ}{\cos 25^\circ}} \quad [\text{আলাদাভাবে ভাগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos 25^\circ}{\cos 25^\circ} = 1$ এবং $\frac{\sin 25^\circ}{\cos 25^\circ} = \tan 25^\circ$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{1 - \tan 25^\circ}{1 + \tan 25^\circ} \quad [\because \frac{\sin\theta}{\cos\theta} = \tan\theta]$</div>
+    
+    <div class="step-explain">ট্যানের বিয়োগফলের যৌগিক কোণের সূত্রে সাজানোর জন্য লবের $1$ এর জায়গায় $\tan 45^\circ$ বসাই এবং হরের $\tan 25^\circ$ এর সাথে গুণ আকারে $\tan 45^\circ$ নিয়ে আসি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\tan 45^\circ - \tan 25^\circ}{1 + \tan 45^\circ \cdot \tan 25^\circ} \quad [\because \tan 45^\circ = 1]$</div>
+    
+    <div class="step-explain">আমরা ট্যানজেন্টের যৌগিক সূত্র জানি: $\tan(\text{A} - \text{B}) = \frac{\tan\text{A} - \tan\text{B}}{1 + \tan\text{A} \cdot \tan\text{B}}$। এই সূত্র অনুযায়ী রাশিটিকে সংকুচিত করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \tan(45^\circ - 25^\circ) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের ভেতরের কোণ দুটির বিয়োগফল নির্ণয় করি: $45^\circ - 25^\circ = 20^\circ$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \tan 20^\circ \quad [\text{বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">প্রাপ্ত মানটি ডানপক্ষের (RHS) সাথে হুবহু মিলে গেছে।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \text{RHS}$</div>
+    <div class="step">$\therefore \frac{\cos 25^\circ - \sin 25^\circ}{\cos 25^\circ + \sin 25^\circ} = \tan 20^\circ \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৭. দেখাও যে, $\frac{\sin 75^\circ + \sin 15^\circ}{\sin 75^\circ - \sin 15^\circ} = \sqrt{3}$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে বামপক্ষ (LHS) তুলে নিই:</div>
+    <div class="step">$\text{LHS} = \frac{\sin 75^\circ + \sin 15^\circ}{\sin 75^\circ - \sin 15^\circ}$</div>
+    
+    <div class="step-explain">এই সমস্যাটি ত্রিকোণমিতিক রূপান্তরের সূত্র $\sin\text{C} + \sin\text{D}$ এবং $\sin\text{C} - \sin\text{D}$ ব্যবহার করে খুব সহজে সমাধান করা যায়। এখানে $\text{C} = 75^\circ$ এবং $\text{D} = 15^\circ$।</div>
+    <div class="step-explain">আমরা গুরুত্বপূর্ণ সূত্র দুটি নিচে মনে করিয়ে দিই:</div>
+    <div class="step-explain">
+        * $\sin\text{C} + \sin\text{D} = 2 \cdot \sin\left(\frac{\text{C}+\text{D}}{2}\right) \cdot \cos\left(\frac{\text{C}-\text{D}}{2}\right)$<br>
+        * $\sin\text{C} - \sin\text{D} = 2 \cdot \cos\left(\frac{\text{C}+\text{D}}{2}\right) \cdot \sin\left(\frac{\text{C}-\text{D}}{2}\right)$
+    </div>
+    
+    <div class="step-explain">লব ও হরে এই সূত্র দুটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2 \cdot \sin\left(\frac{75^\circ + 15^\circ}{2}\right) \cdot \cos\left(\frac{75^\circ - 15^\circ}{2}\right)}{2 \cdot \cos\left(\frac{75^\circ + 15^\circ}{2}\right) \cdot \sin\left(\frac{75^\circ - 15^\circ}{2}\right)} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের সাধারণ গুণিতক $2$ কাটাকাটি করে বাদ দিই এবং ব্র্যাকেটের ভেতরের কোণগুলোর যোগ-বিয়োগ করি:</div>
+    <div class="step-explain">এখানে, $\frac{75^\circ + 15^\circ}{2} = \frac{90^\circ}{2} = 45^\circ$ এবং $\frac{75^\circ - 15^\circ}{2} = \frac{60^\circ}{2} = 30^\circ$।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin 45^\circ \cdot \cos 30^\circ}{\cos 45^\circ \cdot \sin 30^\circ} \quad [2 \text{ বাতিল করে ও কোণের হিসাব করে}]$</div>
+    
+    <div class="step-explain">এখন আদর্শ কোণসমূহের নির্দিষ্ট মানগুলো বসিয়ে দিই: $\sin 45^\circ = \frac{1}{\sqrt{2}}$, $\cos 30^\circ = \frac{\sqrt{3}}{2}$, $\cos 45^\circ = \frac{1}{\sqrt{2}}$, এবং $\sin 30^\circ = \frac{1}{2}$।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{\sqrt{3}}{2}\right)}{\left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{1}{2}\right)} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হর উভয় অংশেই গুণফল আকারে $\frac{1}{\sqrt{2}}$ রয়েছে, তাই এটিকে কাটাকাটি করে বা ভাগ করে বর্জন করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sqrt{3}}{2}}{\frac{1}{2}} \quad [\frac{1}{\sqrt{2}} \text{ বাতিল করে}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করতে নিচের অংশটি উল্টে গুণ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sqrt{3}}{2} \cdot \frac{2}{1} \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের সাধারণ উৎপাদক $2$ কাটাকাটি করলে চূড়ান্ত মান পাওয়া যায়:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \sqrt{3} \quad [2 \text{ বাতিল করে}]$</div>
+    
+    <div class="step-explain">এটি আমাদের ডানপক্ষের (RHS) সমান।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \text{RHS}$</div>
+    <div class="step">$\therefore \frac{\sin 75^\circ + \sin 15^\circ}{\sin 75^\circ - \sin 15^\circ} = \sqrt{3} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৮. $\frac{\cos 75^\circ + \cos 15^\circ}{\cos 75^\circ - \cos 15^\circ}$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত রাশিটি লিখে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \frac{\cos 75^\circ + \cos 15^\circ}{\cos 75^\circ - \cos 15^\circ}$</div>
+    
+    <div class="step-explain">এই সমস্যাটির জন্য আমরা ত্রিকোণমিতিক রূপান্তরের সূত্র $\cos\text{C} + \cos\text{D}$ এবং $\cos\text{C} - \cos\text{D}$ ব্যবহার করব। এখানে $\text{C} = 75^\circ$ এবং $\text{D} = 15^\circ$।</div>
+    <div class="step-explain">প্রয়োজনীয় সূত্র দুটি লক্ষ্য করি:</div>
+    <div class="step-explain">
+        * $\cos\text{C} + \cos\text{D} = 2 \cdot \cos\left(\frac{\text{C}+\text{D}}{2}\right) \cdot \cos\left(\frac{\text{C}-\text{D}}{2}\right)$<br>
+        * $\cos\text{C} - \cos\text{D} = 2 \cdot \sin\left(\frac{\text{C}+\text{D}}{2}\right) \cdot \sin\left(\frac{\text{D}-\text{C}}{2}\right)$ অথবা $2 \cdot \sin\left(\frac{\text{C}+\text{D}}{2}\right) \cdot \sin\left(\frac{\text{C}-\text{D}}{2}\right)$ (যখন মাইনাস চিহ্ন সামঞ্জস্য করা হয়)। আমরা দ্বিতীয় রূপটি ব্যবহার করব।
+    </div>
+    
+    <div class="step-explain">লব ও হরে সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{2 \cdot \cos\left(\frac{75^\circ + 15^\circ}{2}\right) \cdot \cos\left(\frac{75^\circ - 15^\circ}{2}\right)}{2 \cdot \sin\left(\frac{75^\circ + 15^\circ}{2}\right) \cdot \sin\left(\frac{75^\circ - 15^\circ}{2}\right)} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের শুরুতে থাকা $2$ কাটাকাটি করি এবং কোণগুলোর সাধারণ হিসাব করি:</div>
+    <div class="step-explain">এখানে, $\frac{75^\circ + 15^\circ}{2} = 45^\circ$ এবং $\frac{75^\circ - 15^\circ}{2} = 30^\circ$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\cos 45^\circ \cdot \cos 30^\circ}{\sin 45^\circ \cdot \sin 30^\circ} \quad [2 \text{ বাতিল করে ও কোণের হিসাব করে}]$</div>
+    
+    <div class="step-explain">অনুপাতগুলোকে আলাদা আলাদা করে সাজিয়ে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \left(\frac{\cos 45^\circ}{\sin 45^\circ}\right) \cdot \left(\frac{\cos 30^\circ}{\sin 30^\circ}\right) \quad [\text{আলাদা করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos\theta}{\sin\theta} = \cot\theta$। সুতরাং রাশিটি দাঁড়ায়:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cot 45^\circ \cdot \cot 30^\circ \quad [\because \frac{\cos\theta}{\sin\theta} = \cot\theta]$</div>
+    
+    <div class="step-explain">এখন ত্রিকোণমিতিক টেবিল থেকে নির্দিষ্ট মানগুলো বসাই। আমরা জানি, $\cot 45^\circ = 1$ এবং $\cot 30^\circ = \sqrt{3}$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = 1 \cdot \sqrt{3} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \sqrt{3} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\sqrt{3}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১৯. দেখাও যে, $\tan 20^\circ + \tan 25^\circ + \tan 20^\circ \cdot \tan 25^\circ = 1$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">এই ধরনের প্রমাণের ক্ষেত্রে রাশিতে ব্যবহৃত কোণগুলোর মধ্যে একটি সম্পর্ক খুঁজে বের করতে হয়। আমরা দেখতে পাচ্ছি $20^\circ$ এবং $25^\circ$ যোগ করলে $45^\circ$ পাওয়া যায়, যার ট্যানজেন্টের মান একটি নির্দিষ্ট পূর্ণসংখ্যা ($1$)।</div>
+    <div class="step-explain">আমরা জানি,</div>
+    <div class="step">$20^\circ + 25^\circ = 45^\circ$</div>
+    
+    <div class="step-explain">এবার উভয়পক্ষে ট্যানজেন্ট ($\tan$) অনুপাত নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan(20^\circ + 25^\circ) = \tan 45^\circ \quad [\text{উভয়পক্ষে } \tan \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা ট্যানজেন্টের যৌগিক কোণের যোগফলের সূত্রটি জানি: $\tan(\text{A} + \text{B}) = \frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$। বামপক্ষে এই সূত্রটি প্রয়োগ করি এবং ডানপক্ষে $\tan 45^\circ = 1$ মান বসাই:</div>
+    <div class="step">$\Rightarrow \frac{\tan 20^\circ + \tan 25^\circ}{1 - \tan 20^\circ \cdot \tan 25^\circ} = 1 \quad [\text{সূত্র ও মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন করে পাই:</div>
+    <div class="step">$\Rightarrow \tan 20^\circ + \tan 25^\circ = 1 \cdot \left(1 - \tan 20^\circ \cdot \tan 25^\circ\right) \quad [\text{বজ্রগুণন করে}]$</div>
+    <div class="step">$\Rightarrow \tan 20^\circ + \tan 25^\circ = 1 - \tan 20^\circ \cdot \tan 25^\circ$</div>
+    
+    <div class="step-explain">এখন ডানপক্ষের $-\tan 20^\circ \cdot \tan 25^\circ$ পদটিকে বামপক্ষে পক্ষান্তর করলে আমাদের কাঙ্ক্ষিত প্রমাণটি মিলে যাবে:</div>
+    <div class="step">$\Rightarrow \tan 20^\circ + \tan 25^\circ + \tan 20^\circ \cdot \tan 25^\circ = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">সুতরাং সম্পর্কটি দেখানো হলো।</div>
+    <div class="step">$\therefore \tan 20^\circ + \tan 25^\circ + \tan 20^\circ \cdot \tan 25^\circ = 1 \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২০. দেখাও যে, $\tan 36^\circ + \tan 9^\circ + \tan 36^\circ \cdot \tan 9^\circ = 1$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">পূর্ববর্তী অংকটির মতোই এখানেও আমরা কোণ দুটির সমষ্টির সম্পর্ক ব্যবহার করব। আমরা জানি যে, $36^\circ$ এবং $9^\circ$ যোগ করলে $45^\circ$ হয়।</div>
+    <div class="step-explain">আমরা জানি,</div>
+    <div class="step">$36^\circ + 9^\circ = 45^\circ$</div>
+    
+    <div class="step-explain">উভয়পক্ষে ট্যানজেন্ট ($\tan$) অনুপাত গ্রহণ করে পাই:</div>
+    <div class="step">$\Rightarrow \tan(36^\circ + 9^\circ) = \tan 45^\circ \quad [\text{উভয়পক্ষে } \tan \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">বামপক্ষে যৌগিক কোণের সূত্র $\tan(\text{A} + \text{B}) = \frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$ প্রয়োগ করি এবং ডানপক্ষে $\tan 45^\circ$ এর পরিবর্তে $1$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \frac{\tan 36^\circ + \tan 9^\circ}{1 - \tan 36^\circ \cdot \tan 9^\circ} = 1 \quad [\text{সূত্র ও মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন করে পাই:</div>
+    <div class="step">$\Rightarrow \tan 36^\circ + \tan 9^\circ = 1 \cdot \left(1 - \tan 36^\circ \cdot \tan 9^\circ\right) \quad [\text{বজ্রগুণন করে}]$</div>
+    <div class="step">$\Rightarrow \tan 36^\circ + \tan 9^\circ = 1 - \tan 36^\circ \cdot \tan 9^\circ$</div>
+    
+    <div class="step-explain">ডানপাশের ঋণাত্মক পদটিকে বামপাশে পক্ষান্তর করে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \tan 36^\circ + \tan 9^\circ + \tan 36^\circ \cdot \tan 9^\circ = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">অতএব সম্পর্কটি প্রমাণিত হলো।</div>
+    <div class="step">$\dots \tan 36^\circ + \tan 9^\circ + \tan 36^\circ \cdot \tan 9^\circ = 1 \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২১. দেখাও যে, $\tan 65^\circ = \tan 25^\circ + 2\tan 40^\circ$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">এই প্রশ্নটিতে তিনটি কোণ রয়েছে: $65^\circ, 25^\circ$ এবং $40^\circ$। এদের মধ্যে সম্পর্ক হলো $65^\circ - 25^\circ = 40^\circ$ অথবা $25^\circ + 40^\circ = 65^\circ$। আমরা বড় কোণটি নিয়ে শুরু করব।</div>
+    <div class="step-explain">আমরা জানি,</div>
+    <div class="step">$65^\circ = 25^\circ + 40^\circ$</div>
+    
+    <div class="step-explain">উভয়পক্ষে $\tan$ অনুপাত নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ = \tan(25^\circ + 40^\circ) \quad [\text{উভয়পক্ষে } \tan \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">ডানপক্ষে $\tan(\text{A} + \text{B})$ এর সূত্র ব্যবহার করি:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ = \frac{\tan 25^\circ + \tan 40^\circ}{1 - \tan 25^\circ \cdot \tan 40^\circ} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার বজ্রগুণন বা আর-গুণন করে সমীকরণটিকে সরল রেখায় নিয়ে আসি:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ \cdot \left(1 - \tan 25^\circ \cdot \tan 40^\circ\right) = \tan 25^\circ + \tan 40^\circ \quad [\text{বজ্রগুণন করে}]$</div>
+    <div class="step">$\Rightarrow \tan 65^\circ - \tan 65^\circ \cdot \tan 25^\circ \cdot \tan 40^\circ = \tan 25^\circ + \tan 40^\circ \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন মাঝের পদের $\tan 65^\circ$ কোণটিকে সংযুক্ত কোণের নিয়মে রূপান্তর করব, কারণ আমরা জানি $65^\circ + 25^\circ = 90^\circ$। অর্থাৎ, $65^\circ = 90^\circ - 25^\circ$।</div>
+    <div class="step">$\Rightarrow \tan 65^\circ - \tan(90^\circ - 25^\circ) \cdot \tan 25^\circ \cdot \tan 40^\circ = \tan 25^\circ + \tan 40^\circ \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">প্রথম চতুর্ভাগের নিয়ম অনুযায়ী, $\tan(90^\circ - \theta) = \cot\theta$। সুতরাং $\tan(90^\circ - 25^\circ) = \cot 25^\circ$ হবে:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ - \cot 25^\circ \cdot \tan 25^\circ \cdot \tan 40^\circ = \tan 25^\circ + \tan 40^\circ \quad [\because \tan(90^\circ - \theta) = \cot\theta]$</div>
+    
+    <div class="step-explain">আমরা জানি যে, $\cot\theta \cdot \tan\theta = 1$। এখানে $\cot 25^\circ \cdot \tan 25^\circ = 1$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ - 1 \cdot \tan 40^\circ = \tan 25^\circ + \tan 40^\circ \quad [\because \cot 25^\circ \cdot \tan 25^\circ = 1]$</div>
+    <div class="step">$\Rightarrow \tan 65^\circ - \tan 40^\circ = \tan 25^\circ + \tan 40^\circ$</div>
+    
+    <div class="step-explain">এবার বামপক্ষের $-\tan 40^\circ$ পদটিকে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ = \tan 25^\circ + \tan 40^\circ + \tan 40^\circ \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">ডানপক্ষের সদৃশ পদ দুটি যোগ করলে আমরা চূড়ান্ত প্রমাণ পেয়ে যাই:</div>
+    <div class="step">$\Rightarrow \tan 65^\circ = \tan 25^\circ + 2\tan 40^\circ \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">অতএব সম্পর্কটি সফলভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore \tan 65^\circ = \tan 25^\circ + 2\tan 40^\circ \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২২. দেখাও যে, $\tan 3\theta - \tan 2\theta - \tan\theta = \tan 3\theta \cdot \tan 2\theta \cdot \tan\theta$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">এই রাশিতে তিনটি কোণ রয়েছে: $3\theta, 2\theta$ এবং $\theta$। এদের মধ্যে বীজগণিতীয় সম্পর্কটি হলো $3\theta = 2\theta + \theta$। আমরা এই সম্পর্কটি দিয়ে কাজ শুরু করি।</div>
+    <div class="step-explain">আমরা জানি,</div>
+    <div class="step}$3\theta = 2\theta + \theta$</div>
+    
+    <div class="step-explain">উভয়পক্ষে ট্যানজেন্ট ($\tan$) অনুপাত নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan 3\theta = \tan(2\theta + \theta) \quad [\text{উভয়পক্ষে } \tan \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">ডানপক্ষে $\tan(\text{A} + \text{B})$ এর সূত্র প্রয়োগ করি, যেখানে $\text{A} = 2\theta$ এবং $\text{B} = \theta$:</div>
+    <div class="step">$\Rightarrow \tan 3\theta = \frac{\tan 2\theta + \tan\theta}{1 - \tan 2\theta \cdot \tan\theta} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন করি:</div>
+    <div class="step">$\Rightarrow \tan 3\theta \cdot \left(1 - \tan 2\theta \cdot \tan\theta\right) = \tan 2\theta + \tan\theta \quad [\text{বজ্রগুণন করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষের $\tan 3\theta$ দিয়ে ব্র্যাকেটের ভেতরের পদগুলোকে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow \tan 3\theta - \tan 3\theta \cdot \tan 2\theta \cdot \tan\theta = \tan 2\theta + \tan\theta \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এবার প্রমাণ মেলানোর জন্য পদগুলোকে পক্ষান্তর করি। বামপক্ষের গুণফল বিশিষ্ট ঋণাত্মক পদটিকে ডানপাশে এবং ডানপক্ষের পদ দুটিকে বামপাশে নিয়ে আসি:</div>
+    <div class="step">$\Rightarrow \tan 3\theta - \tan 2\theta - \tan\theta = \tan 3\theta \cdot \tan 2\theta \cdot \tan\theta \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">সম্পর্কটি নির্ভুলভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore \tan 3\theta - \tan 2\theta - \tan\theta = \tan 3\theta \cdot \tan 2\theta \cdot \tan\theta \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৩. যদি $\alpha + \beta = \frac{\pi}{4}$ হয়, তবে প্রমাণ কর যে, $\left(1 + \tan\alpha\right)\left(1 + \tan\beta\right) = 2$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে প্রদত্ত মান বা কোণের সম্পর্কটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\alpha + \beta = \frac{\pi}{4}$</div>
+    
+    <div class="step-explain">উভয়পক্ষে ট্যানজেন্ট ($\tan$) অনুপাত গ্রহণ করে পাই:</div>
+    <div class="step">$\Rightarrow \tan(\alpha + \beta) = \tan\left(\frac{\pi}{4}\right) \quad [\text{উভয়পক্ষে } \tan \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">বামপক্ষে যৌগিক কোণের সূত্র ভাঙি এবং ডানপাশে আমরা জানি $\frac{\pi}{4} \text{ রেডিয়ান} = 45^\circ$, তাই $\tan\left(\frac{\pi}{4}\right) = 1$ মান বসাই:</div>
+    <div class="step">$\Rightarrow \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha \cdot \tan\beta} = 1 \quad [\text{সূত্র ও মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এবার বজ্রগুণন করে পাই:</div>
+    <div class="step">$\Rightarrow \tan\alpha + \tan\beta = 1 \cdot \left(1 - \tan\alpha \cdot \tan\beta\right) \quad [\text{বজ্রগুণন করে}]$</div>
+    <div class="step">$\Rightarrow \tan\alpha + \tan\beta = 1 - \tan\alpha \cdot \tan\beta$</div>
+    
+    <div class="step-explain">ডানপক্ষের গুণফল বিশিষ্ট পদটিকে বামপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \tan\alpha + \tan\beta + \tan\alpha \cdot \tan\beta = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন প্রমাণের বামপক্ষের কাঠামো $\left(1 + \tan\alpha\right)\left(1 + \tan\beta\right)$ তৈরি করার জন্য বর্তমান সমীকরণের উভয়পক্ষে $1$ যোগ করি:</div>
+    <div class="step">$\Rightarrow 1 + \tan\alpha + \tan\beta + \tan\alpha \cdot \tan\beta = 1 + 1 \quad [\text{উভয়পক্ষে ১ যোগ করে}]$</div>
+    <div class="step">$\Rightarrow \left(1 + \tan\alpha\right) + \tan\beta \cdot \left(1 + \tan\alpha\right) = 2 \quad [\text{শেষ দুটি পদ থেকে } \tan\beta \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এবার সাধারণ উৎপাদক $\left(1 + \tan\alpha\right)$ কমন নিলে আমরা আমাদের কাঙ্ক্ষিত রূপটি পেয়ে যাবো:</div>
+    <div class="step">$\Rightarrow \left(1 + \tan\alpha\right)\left(1 + \tan\beta\right) = 2 \quad [\left(1 + \tan\alpha\right) \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">অতএব সম্পর্কটি সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore \left(1 + \tan\alpha\right)\left(1 + \tan\beta\right) = 2 \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২৪. যদি $\text{A} + \text{B} + \text{C} = \pi$ এবং $\cos\text{A} = \cos\text{B} \cdot \cos\text{C}$ হয়, তবে প্রমাণ কর যে,</div>
+    
+    <div class="problem-sub-title">i. $\tan\text{A} = \tan\text{B} + \tan\text{C}$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে যে শর্তগুলো দেওয়া আছে, সেগুলো সুন্দরভাবে লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\text{A} + \text{B} + \text{C} = \pi \quad \dots \dots \text{(১ নং সমীকরণ)}$</div>
+    <div class="step">এবং $\cos\text{A} = \cos\text{B} \cdot \cos\text{C} \quad \dots \dots \text{(২ নং সমীকরণ)}$</div>
+    
+    <div class="step-explain">(১ নং) সমীকরণ থেকে আমরা লিখতে পারি:</div>
+    <div class="step">$\Rightarrow \text{A} = \pi - (\text{B} + \text{C}) \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এবার উভয়পক্ষে কোসাইন ($\cos$) অনুপাত নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \cos\left\{\pi - (\text{B} + \text{C})\right\} \quad [\text{উভয়পক্ষে } \cos \text{ নিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা সংযুক্ত কোণের নিয়ম থেকে জানি, দ্বিতীয় চতুর্ভাগে (2nd Quadrant) কোসাইন ঋণাত্মক হয়, অর্থাৎ $\cos(\pi - \theta) = -\cos\theta$। এখানে $\theta = \text{B} + \text{C}$ বিবেচনা করে পাই:</div>
+    <div class="step">$\Rightarrow \cos\text{A} = -\cos(\text{B} + \text{C}) \quad [\because \cos(\pi - \theta) = -\cos\theta]$</div>
+    
+    <div class="step-explain">এখন ডানপক্ষে যৌগিক কোণের সূত্র $\cos(\text{B} + \text{C}) = \cos\text{B} \cdot \cos\text{C} - \sin\text{B} \cdot \sin\text{C}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \cos\text{A} = -\left(\cos\text{B} \cdot \cos\text{C} - \sin\text{B} \cdot \sin\text{C}\right) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের আগে থাকা মাইনাস ($-$) চিহ্ন দিয়ে ভেতরের পদগুলোকে গুণ করি:</div>
+    <div class="step">$\Rightarrow \cos\text{A} = -\cos\text{B} \cdot \cos\text{C} + \sin\text{B} \cdot \sin\text{C} \quad [\text{মাইনাস দ্বারা গুণ করে}]$</div>
+    
+    <div class="step-explain">প্রশ্নে দেওয়া (২ নং) সমীকরণ অনুযায়ী $\cos\text{B} \cdot \cos\text{C} = \cos\text{A}$ মানটি ডানপক্ষে প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \cos\text{A} = -\cos\text{A} + \sin\text{B} \cdot \sin\text{C} \quad [\cos\text{B} \cdot \cos\text{C} = \cos\text{A} \text{ বসিয়ে}]$</div>
+    
+    <div class="step-explain">ডানপক্ষের $-\cos\text{A}$ পদটিকে বামপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \cos\text{A} + \cos\text{A} = \sin\text{B} \cdot \sin\text{C} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 2\cos\text{A} = \sin\text{B} \cdot \sin\text{C} \quad \dots \dots \text{(৩ নং সমীকরণ) } [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">এখন আমাদের প্রমাণ করতে হবে $\tan\text{A} = \tan\text{B} + \tan\text{C}$। আমরা ডানপক্ষ (RHS) দিয়ে শুরু করি:</div>
+    <div class="step">$\text{RHS} = \tan\text{B} + \tan\text{C}$</div>
+    
+    <div class="step-explain">আমরা জানি, $\tan\theta = \frac{\sin\theta}{\cos\theta}$। এই সূত্র অনুযায়ী পদগুলোকে ভেঙে পাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{\sin\text{B}}{\cos\text{B}} + \frac{\sin\text{C}}{\cos\text{C}} \quad [\because \tan\theta = \frac{\sin\theta}{\cos\theta}]$</div>
+    
+    <div class="step-explain">ভগ্নাংশ দুটির হর $\cos\text{B}$ এবং $\cos\text{C}$ এর লসাগু করে যোগ করি:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{\sin\text{B} \cdot \cos\text{C} + \cos\text{B} \cdot \sin\text{C}}{\cos\text{B} \cdot \cos\text{C}} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">লবের অংশটি লক্ষ্য করলে দেখা যায় এটি $\sin\text{B} \cdot \cos\text{C} + \cos\text{B} \cdot \sin\text{C} = \sin(\text{B} + \text{C})$ সূত্রে পড়ে। এবং হরের ক্ষেত্রে দেওয়া আছে $\cos\text{B} \cdot \cos\text{C} = \cos\text{A}$। এই দুটি পরিবর্তন একসাথে করি:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{\sin(\text{B} + \text{C})}{\cos\text{A} } \quad [\text{লবে সূত্র প্রয়োগ করে এবং হরে মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">(১ নং) সমীকরণ থেকে আমরা জানি $\text{B} + \text{C} = \pi - \text{A}$। এটি লবের কোণে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{\sin(\pi - \text{A})}{\cos\text{A}} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">সংযুক্ত কোণের নিয়ম অনুযায়ী ২য় চতুর্ভাগে সাইন ধনাত্মক, অর্থাৎ $\sin(\pi - \text{A}) = \sin\text{A}$ হয়:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \frac{\sin\text{A}}{\cos\text{A}} \quad [\because \sin(\pi - \text{A}) = \sin\text{A}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\sin\text{A}}{\cos\text{A}} = \tan\text{A}$ যা আমাদের বামপক্ষের (LHS) সমান:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \tan\text{A} = \text{LHS}$</div>
+    <div class="step">$\therefore \tan\text{A} = \tan\text{B} + \tan\text{C} \quad [\text{প্রমাণিত}]$</div>
+
+    <hr />
+
+    <div class="problem-sub-title">ii. $\cot\text{B} \cdot \cot\text{C} = \frac{1}{2}$ অথবা $\tan\text{B} \cdot \tan\text{C} = 2$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    
+    <div class="step-explain">উপ-প্রশ্ন (i) এর সমাধান করার সময় আমরা একটি গুরুত্বপূর্ণ সমীকরণ পেয়েছিলাম, তা হলো (৩ নং সমীকরণ):</div>
+    <div class="step">$2\cos\text{A} = \sin\text{B} \cdot \sin\text{C}$</div>
+    
+    <div class="step-explain">আবার, প্রশ্নে শুরুতে দেওয়া আছে (২ নং সমীকরণ):</div>
+    <div class="step">$\cos\text{A} = \cos\text{B} \cdot \cos\text{C}$</div>
+    
+    <div class="step-explain">এখন আমরা এই দুটি সমীকরণের সম্পর্ক ব্যবহার করব। ২ নং সমীকরণ থেকে পাওয়া $\cos\text{A}$ এর মানটি ৩ নং সমীকরণের বামপক্ষে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 2 \cdot \left(\cos\text{B} \cdot \cos\text{C}\right) = \sin\text{B} \cdot \sin\text{C} \quad [\cos\text{A} \text{ এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2\cos\text{B} \cdot \cos\text{C} = \sin\text{B} \cdot \sin\text{C}$</div>
+    
+    <div class="step-explain"><strong>১ম অংশটি প্রমাণের জন্য ($\cot\text{B} \cdot \cot\text{C} = \frac{1}{2}$):</strong></div>
+    <div class="step-explain">সমীকরণের উভয়পক্ষকে $\sin\text{B} \cdot \sin\text{C}$ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{2\cos\text{B} \cdot \cos\text{C}}{\sin\text{B} \cdot \sin\text{C}} = \frac{\sin\text{B} \cdot \sin\text{C}}{\sin\text{B} \cdot \sin\text{C}} \quad [\text{উভয়পক্ষকে } \sin\text{B} \cdot \sin\text{C} \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow 2 \cdot \left(\frac{\cos\text{B}}{\sin\text{B}}\right) \cdot \left(\frac{\cos\text{C}}{\sin\text{C}}\right) = 1 \quad [\text{ডানপক্ষে কাটাকাটি করে ১ থাকে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{\cos\theta}{\sin\theta} = \cot\theta$। অতএব:</div>
+    <div class="step">$\Rightarrow 2\cot\text{B} \cdot \cot\text{C} = 1 \quad [\because \frac{\cos\theta}{\sin\theta} = \cot\theta]$</div>
+    
+    <div class="step-explain">এখন বামপাশের গুণিতক $2$ কে ডানপাশে পক্ষান্তর (ভাগ) করলে ১ম অংশ প্রমাণিত হয়:</div>
+    <div class="step">$\Rightarrow \cot\text{B} \cdot \cot\text{C} = \frac{1}{2} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain"><strong>২য় অংশটি প্রমাণের জন্য ($\tan\text{B} \cdot \tan\text{C} = 2$):</strong></div>
+    <div class="step-explain">আমরা জানি কোট্যানজেন্ট এবং ট্যানজেন্ট একে অপরের বিপরীত বা ব্যস্তানুপাতিক ($\cot\theta = \frac{1}{\tan\theta}$)। প্রাপ্ত সম্পর্কে এই রূপান্তরটি করি:</div>
+    <div class="step">$\Rightarrow \frac{1}{\tan\text{B}} \cdot \frac{1}{\tan\text{C}} = \frac{1}{2} \quad [\because \cot\theta = \frac{1}{\tan\theta}]$</div>
+    <div class="step">$\Rightarrow \frac{1}{\tan\text{B} \cdot \tan\text{C}} = \frac{1}{2} \quad [\text{লব ও হর গুণ করে}]$</div>
+    
+    <div class="step-explain">এবার উভয়পক্ষকে ব্যস্তকরণ বা বিপরীতকরণ (উল্টে দেওয়া) করে পাই:</div>
+    <div class="step">$\Rightarrow \tan\text{B} \cdot \tan\text{C} = 2 \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">অতএব, দুটি রূপই সফলভাবে প্রমাণিত হলো।</div>
+    <div class="step">$\therefore \cot\text{B} \cdot \cot\text{C} = \frac{1}{2} \text{ অথবা } \tan\text{B} \cdot \tan\text{C} = 2 \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Determ 1B Q2</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+    
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> মেট্রিক্স ও নির্ণায়ক অনুশীলনী (1B)</h1>
+
+
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (i) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^3 & b^3 & c^3 \end{vmatrix} = (a - b)(b - c)(c - a)(a + b + c)$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^3 & b^3 & c^3 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম কলাম থেকে দ্বিতীয় কলাম এবং দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করি, যাতে প্রথম সারিতে সর্বোচ্চ সংখ্যক শূন্য ($0$) পাওয়া যায়।</div>
+  <div class="step">$$= \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ a - b & b - c & c \\ a^3 - b^3 & b^3 - c^3 & c^3 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & 0 & 1 \\ a - b & b - c & c \\ a^3 - b^3 & b^3 - c^3 & c^3 \end{vmatrix} \quad [\text{বিয়োগ করে}]$$</div>
+  
+  <div class="step-explain">বীজগণিতের ঘনফলের সূত্র $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$ ব্যবহার করে ৩ নম্বর সারির উপাদানগুলোকে ভেঙে লিখি:</div>
+  <div class="step">$$= \begin{vmatrix} 0 & 0 & 1 \\ a - b & b - c & c \\ (a - b)(a^2 + ab + b^2) & (b - c)(b^2 + bc + c^2) & c^3 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">এখন প্রথম কলাম থেকে সাধারণ উৎপাদক $(a - b)$ এবং দ্বিতীয় কলাম থেকে $(b - c)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (a - b)(b - c) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & c \\ a^2 + ab + b^2 & b^2 + bc + c^2 & c^3 \end{vmatrix} \quad \left[ C_1 \text{ থেকে } (a - b) \text{ এবং } C_2 \text{ থেকে } (b - c) \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">প্রথম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি (যেহেতু প্রথম সারিতে দুটি শূন্য রয়েছে):</div>
+  <div class="step">$$= (a - b)(b - c) \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ a^2 + ab + b^2 & b^2 + bc + c^2 \end{vmatrix} \quad [\text{প্রথম সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">এবার $2 \times 2$ নির্ণায়কের কোনাকুনি গুণ করে মান বের করি:</div>
+  <div class="step">$$= (a - b)(b - c) \left\{ 1 \cdot (b^2 + bc + c^2) - 1 \cdot (a^2 + ab + b^2) \right\} \quad [\text{আর গুণন করে}]$$</div>
+  <div class="step">$$= (a - b)(b - c) \left( b^2 + bc + c^2 - a^2 - ab - b^2 \right) \quad [\text{বন্ধনী তুলে দিয়ে}]$$</div>
+  <div class="step">$$= (a - b)(b - c) \left( bc + c^2 - a^2 - ab \right) \quad \left[ +b^2 \text{ এবং } -b^2 \text{ কেটে দিয়ে} \right]$$</div>
+  
+  <div class="step-explain">পদগুলোকে সাজিয়ে নিয়ে উৎপাদকে বিশ্লেষণ করি:</div>
+  <div class="step">$$= (a - b)(b - c) \left\{ (c^2 - a^2) + (bc - ab) \right\} \quad [\text{পদগুলো পুনরায় সাজিয়ে}]$$</div>
+  <div class="step">$$= (a - b)(b - c) \left\{ (c - a)(c + a) + b(c - a) \right\} \quad \left[ \text{সূত্র } c^2 - a^2 = (c - a)(c + a) \text{ এবং } b \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">উভয় পদ থেকে সাধারণ উৎপাদক $(c - a)$ কমন নিই:</div>
+  <div class="step">$$= (a - b)(b - c)(c - a) (c + a + b) \quad [ (c - a) \text{ কমন নিয়ে} ]$$</div>
+  <div class="step">$$= (a - b)(b - c)(c - a)(a + b + c) \quad [\text{পদগুলো সাজিয়ে}]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (ii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 3 & a & b + c \\ 3 & b & c + a \\ 3 & c & a + b \end{vmatrix} = 0$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 3 & a & b + c \\ 3 & b & c + a \\ 3 & c & a + b \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম কলামের প্রতিটি উপাদানে $3$ মিল থাকায়, প্রথম কলাম থেকে $3$ কমন নিই:</div>
+  <div class="step">$$= 3 \begin{vmatrix} 1 & a & b + c \\ 1 & b & c + a \\ 1 & c & a + b \end{vmatrix} \quad [ C_1 \text{ থেকে } 3 \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">এখন দ্বিতীয় কলাম এবং তৃতীয় কলাম যোগ করে নতুন তৃতীয় কলাম তৈরি করি:</div>
+  <div class="step">$$= 3 \begin{vmatrix} 1 & a & a + b + c \\ 1 & b & b + c + a \\ 1 & c & c + a + b \end{vmatrix} \quad [ C_3' = C_3 + C_2 \text{ করে} ]$$</div>
+  <div class="step">$$= 3 \begin{vmatrix} 1 & a & a + b + c \\ 1 & b & a + b + c \\ 1 & c & a + b + c \end{vmatrix} \quad [\text{পদগুলো সাজিয়ে}]$$</div>
+  
+  <div class="step-explain">তৃতীয় কলামের প্রতিটি উপাদান একই হওয়ায়, তৃতীয় কলাম থেকে $(a + b + c)$ কমন নিই:</div>
+  <div class="step">$$= 3(a + b + c) \begin{vmatrix} 1 & a & 1 \\ 1 & b & 1 \\ 1 & c & 1 \end{vmatrix} \quad [ C_3 \text{ থেকে } (a + b + c) \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">আমরা জানি, কোনো নির্ণায়কের দুটি কলাম বা সারি সর্বসম (একই) হলে নির্ণায়কের মান শূন্য ($0$) হয়। এখানে প্রথম কলাম ($C_1$) এবং তৃতীয় কলাম ($C_3$) হুবহু এক।</div>
+  <div class="step">$$= 3(a + b + c) \cdot 0 \quad [ \because C_1 = C_3 ]$$</div>
+  <div class="step">$$= 0$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (iii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 + x_1 & x_2 & x_3 \\ x_1 & 1 + x_2 & x_3 \\ x_1 & x_2 & 1 + x_3 \end{vmatrix} = 1 + x_1 + x_2 + x_3$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 + x_1 & x_2 & x_3 \\ x_1 & 1 + x_2 & x_3 \\ x_1 & x_2 & 1 + x_3 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম, ২য় এবং ৩য় কলাম যোগ করে নতুন ১ম কলাম গঠন করি:</div>
+  <div class="step">$$= \begin{vmatrix} (1 + x_1) + x_2 + x_3 & x_2 & x_3 \\ x_1 + (1 + x_2) + x_3 & 1 + x_2 & x_3 \\ x_1 + x_2 + (1 + x_3) & x_2 & 1 + x_3 \end{vmatrix} \quad [ C_1' = C_1 + C_2 + C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} 1 + x_1 + x_2 + x_3 & x_2 & x_3 \\ 1 + x_1 + x_2 + x_3 & 1 + x_2 & x_3 \\ 1 + x_1 + x_2 + x_3 & x_2 & 1 + x_3 \end{vmatrix} \quad [\text{যোগের নিয়ম অনুসারে}]$$</div>
+  
+  <div class="step-explain">এখন প্রথম কলাম থেকে সাধারণ উপাদান $(1 + x_1 + x_2 + x_3)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \begin{vmatrix} 1 & x_2 & x_3 \\ 1 & 1 + x_2 & x_3 \\ 1 & x_2 & 1 + x_3 \end{vmatrix} \quad [ C_1 \text{ থেকে } (1 + x_1 + x_2 + x_3) \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় সারি এবং ২য় সারি থেকে ৩য় সারি বিয়োগ করে শূন্য তৈরি করি:</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \begin{vmatrix} 1 - 1 & x_2 - (1 + x_2) & x_3 - x_3 \\ 1 - 1 & (1 + x_2) - x_2 & x_3 - (1 + x_3) \\ 1 & x_2 & 1 + x_3 \end{vmatrix} \quad [ R_1' = R_1 - R_2 \text{ এবং } R_2' = R_2 - R_3 \text{ করে} ]$$</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \begin{vmatrix} 0 & -1 & 0 \\ 0 & 1 & -1 \\ 1 & x_2 & 1 + x_3 \end{vmatrix} \quad [\text{বিয়োগফল হিসাব করে}]$$</div>
+  
+  <div class="step-explain">প্রথম কলামের সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \cdot 1 \cdot \begin{vmatrix} -1 & 0 \\ 1 & -1 \end{vmatrix} \quad [\text{প্রথম কলামের সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে মান বের করি:</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \left\{ (-1) \cdot (-1) - 0 \cdot 1 \right\} \quad [\text{আর গুণন করে}]$$</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) (1 - 0) \quad [\text{গুণ করে}]$$</div>
+  <div class="step">$$= (1 + x_1 + x_2 + x_3) \cdot 1$$</div>
+  <div class="step">$$= 1 + x_1 + x_2 + x_3$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (iv) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 & \cos 2\alpha & \sin \alpha \\ 1 & \cos 2\beta & \sin \beta \\ 1 & \cos 2\gamma & \sin \gamma \end{vmatrix} = 2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma)(\sin \gamma - \sin \alpha)$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 & \cos 2\alpha & \sin \alpha \\ 1 & \cos 2\beta & \sin \beta \\ 1 & \cos 2\gamma & \sin \gamma \end{vmatrix}$$</div>
+  
+  <div class="step-explain">ত্রিকোণমিতির সূত্র $\cos 2\theta = 1 - 2\sin^2 \theta$ ব্যবহার করে দ্বিতীয় কলামের উপাদানগুলোকে রূপান্তর করি:</div>
+  <div class="step">$$= \begin{vmatrix} 1 & 1 - 2\sin^2 \alpha & \sin \alpha \\ 1 & 1 - 2\sin^2 \beta & \sin \beta \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix} \quad [ \because \cos 2\theta = 1 - 2\sin^2 \theta ]$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় সারি এবং ২য় সারি থেকে ৩য় সারি বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} 1 - 1 & (1 - 2\sin^2 \alpha) - (1 - 2\sin^2 \beta) & \sin \alpha - \sin \beta \\ 1 - 1 & (1 - 2\sin^2 \beta) - (1 - 2\sin^2 \gamma) & \sin \beta - \sin \gamma \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix} \quad [ R_1' = R_1 - R_2 \text{ এবং } R_2' = R_2 - R_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & -2\sin^2 \alpha + 2\sin^2 \beta & \sin \alpha - \sin \beta \\ 0 & -2\sin^2 \beta + 2\sin^2 \gamma & \sin \beta - \sin \gamma \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix} \quad [\text{সরল করে}]$$</div>
+  
+  <div class="step-explain">দ্বিতীয় কলাম থেকে $-2$ কমন নিই:</div>
+  <div class="step">$$= \begin{vmatrix} 0 & -2(\sin^2 \alpha - \sin^2 \beta) & \sin \alpha - \sin \beta \\ 0 & -2(\sin^2 \beta - \sin^2 \gamma) & \sin \beta - \sin \gamma \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix}$$</div>
+  
+  <div class="step-explain">বর্গের অন্তরের সূত্র $x^2 - y^2 = (x - y)(x + y)$ ব্যবহার করে ২য় কলাম ভাঙি:</div>
+  <div class="step">$$= \begin{vmatrix} 0 & -2(\sin \alpha - \sin \beta)(\sin \alpha + \sin \beta) & \sin \alpha - \sin \beta \\ 0 & -2(\sin \beta - \sin \gamma)(\sin \beta + \sin \gamma) & \sin \beta - \sin \gamma \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে $(\sin \alpha - \sin \beta)$ এবং ২য় সারি থেকে $(\sin \beta - \sin \gamma)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \begin{vmatrix} 0 & -2(\sin \alpha + \sin \beta) & 1 \\ 0 & -2(\sin \beta + \sin \gamma) & 1 \\ 1 & 1 - 2\sin^2 \gamma & \sin \gamma \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম কলামের সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= (\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \cdot 1 \cdot \begin{vmatrix} -2(\sin \alpha + \sin \beta) & 1 \\ -2(\sin \beta + \sin \gamma) & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম কলাম থেকে $-2$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+  <div class="step">$$= -2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \begin{vmatrix} \sin \alpha + \sin \beta & 1 \\ \sin \beta + \sin \gamma & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে মান নির্ণয় করি:</div>
+  <div class="step">$$= -2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \left\{ 1 \cdot (\sin \alpha + \sin \beta) - 1 \cdot (\sin \beta + \sin \gamma) \right\}$$</div>
+  <div class="step">$$= -2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \left( \sin \alpha + \sin \beta - \sin \beta - \sin \gamma \right)$$</div>
+  <div class="step">$$= -2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) (\sin \alpha - \sin \gamma) \quad [ +\sin \beta \text{ ও } -\sin \beta \text{ কেটে দিয়ে} ]$$</div>
+  
+  <div class="step-explain">শেষের পদ $(\sin \alpha - \sin \gamma)$ থেকে মাইনাস ($-$) কমন নিয়ে বাইরের মাইনাসের সাথে গুণ করে প্লাস করে দিই:</div>
+  <div class="step">$$= -2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma) \cdot \{ -(\sin \gamma - \sin \alpha) \}$$</div>
+  <div class="step">$$= 2(\sin \alpha - \sin \beta)(\sin \beta - \sin \gamma)(\sin \gamma - \sin \alpha) \quad [ (-1) \cdot (-1) = +1 ]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (v) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} \log x & \log y & \log z \\ \log 2x & \log 2y & \log 2z \\ \log 3x & \log 3y & \log 3z \end{vmatrix} = 0$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} \log x & \log y & \log z \\ \log 2x & \log 2y & \log 2z \\ \log 3x & \log 3y & \log 3z \end{vmatrix}$$</div>
+  
+  <div class="step-explain">লগারিদমের সূত্র $\log(ab) = \log a + \log b$ ব্যবহার করে ২য় এবং ৩য় সারির উপাদানগুলোকে ভেঙে লিখি:</div>
+  <div class="step">$$= \begin{vmatrix} \log x & \log y & \log z \\ \log 2 + \log x & \log 2 + \log y & \log 2 + \log z \\ \log 3 + \log x & \log 3 + \log y & \log 3 + \log z \end{vmatrix} \quad [ \because \log(mn) = \log m + \log n ]$$</div>
+  
+  <div class="step-explain">২য় সারি থেকে ১ম সারি এবং ৩য় সারি থেকে ১ম সারি বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} \log x & \log y & \log z \\ (\log 2 + \log x) - \log x & (\log 2 + \log y) - \log y & (\log 2 + \log z) - \log z \\ (\log 3 + \log x) - \log x & (\log 3 + \log y) - \log y & (\log 3 + \log z) - \log z \end{vmatrix} \quad [ R_2' = R_2 - R_1 \text{ এবং } R_3' = R_3 - R_1 ]$$</div>
+  <div class="step">$$= \begin{vmatrix} \log x & \log y & \log z \\ \log 2 & \log 2 & \log 2 \\ \log 3 & \log 3 & \log 3 \end{vmatrix} \quad [\text{বিয়োগ করার পর}]$$</div>
+  
+  <div class="step-explain">২য় সারি থেকে $\log 2$ এবং ৩য় সারি থেকে $\log 3$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= \log 2 \cdot \log 3 \begin{vmatrix} \log x & \log y & \log z \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{vmatrix} \quad [ R_2 \text{ থেকে } \log 2 \text{ এবং } R_3 \text{ থেকে } \log 3 \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">যেহেতু নির্ণায়কটির দ্বিতীয় সারি ($R_2$) এবং তৃতীয় সারি ($R_3$) সর্বসম (একই), তাই এর মান শূন্য হবে।</div>
+  <div class="step">$$= \log 2 \cdot \log 3 \cdot 0 \quad [ \because R_2 = R_3 ]$$</div>
+  <div class="step">$$= 0$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (vi) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 & 1 & 1 \\ l & m & n \\ l^2 & m^2 & n^2 \end{vmatrix} = (l - m)(m - n)(n - l)$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 & 1 & 1 \\ l & m & n \\ l^2 & m^2 & n^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ l - m & m - n & n \\ l^2 - m^2 & m^2 - n^2 & n^2 \end{vmatrix} \quad [ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & 0 & 1 \\ l - m & m - n & n \\ (l - m)(l + m) & (m - n)(m + n) & n^2 \end{vmatrix} \quad [ \because x^2 - y^2 = (x - y)(x + y) ]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(l - m)$ এবং ২য় কলাম থেকে $(m - n)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (l - m)(m - n) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & n \\ l + m & m + n & n^2 \end{vmatrix} \quad [ C_1 \text{ থেকে } (l - m) \text{ এবং } C_2 \text{ থেকে } (m - n) \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= (l - m)(m - n) \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ l + m & m + n \end{vmatrix} \quad [\text{১ম সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে বিয়োগ করি:</div>
+  <div class="step">$$= (l - m)(m - n) \left\{ 1 \cdot (m + n) - 1 \cdot (l + m) \right\}$$</div>
+  <div class="step">$$= (l - m)(m - n) (m + n - l - m)$$</div>
+  <div class="step">$$= (l - m)(m - n)(n - l) \quad [ +m \text{ এবং } -m \text{ কেটে দিয়ে} ]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (vii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 & 1 & 1 \\ 1 & p & p^2 \\ 1 & p^2 & p^4 \end{vmatrix} = p(p - 1)^2(p^2 - 1)$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 & 1 & 1 \\ 1 & p & p^2 \\ 1 & p^2 & p^4 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ 1 - p & p - p^2 & p^2 \\ 1 - p^2 & p^2 - p^4 & p^4 \end{vmatrix} \quad [ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & 0 & 1 \\ 1 - p & p(1 - p) & p^2 \\ 1 - p^2 & p^2(1 - p^2) & p^4 \end{vmatrix} \quad [\text{কমন নিয়ে}]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(1 - p)$ এবং ২য় কলাম থেকে $p(1 - p)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (1 - p) \cdot p(1 - p) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & p^2 \\ 1 + p & p(1 + p) & p^4 \end{vmatrix} \quad [ \because 1 - p^2 = (1 - p)(1 + p) ]$$</div>
+  <div class="step">$$= p(1 - p)^2 \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & p^2 \\ 1 + p & p(1 + p) & p^4 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে বিস্তার করি:</div>
+  <div class="step">$$= p(1 - p)^2 \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ 1 + p & p(1 + p) \end{vmatrix}$$</div>
+  
+  <div class="step-explain">২য় সারি থেকে সাধারণ উৎপাদক $(1 + p)$ কমন নিই:</div>
+  <div class="step">$$= p(1 - p)^2 (1 + p) \begin{vmatrix} 1 & 1 \\ 1 & p \end{vmatrix}$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ সম্পন্ন করি:</div>
+  <div class="step">$$= p(1 - p)^2 (1 + p) (1 \cdot p - 1 \cdot 1)$$</div>
+  <div class="step">$$= p(1 - p)^2 (1 + p) (p - 1)$$</div>
+  
+  <div class="step-explain">আমরা জানি $(1 - p)^2 = \{-(p - 1)\}^2 = (p - 1)^2$। আবার, $(1 + p)(p - 1) = (p + 1)(p - 1) = p^2 - 1$। মানগুলো গুছিয়ে লিখি:</div>
+  <div class="step">$$= p(p - 1)^2 (p^2 - 1) \quad [ \because (1-p)^2=(p-1)^2 \text{ এবং } (p+1)(p-1)=p^2-1 ]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (viii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a & a & a \\ 1 & a & a^2 \\ 1 & a^2 & a^4 \end{vmatrix} = a^2(a - 1)^2(a^2 - 1)$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a & a & a \\ 1 & a & a^2 \\ 1 & a^2 & a^4 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারির প্রতিটি উপাদান $a$ হওয়ায়, ১ম সারি থেকে $a$ কমন নিই:</div>
+  <div class="step">$$= a \begin{vmatrix} 1 & 1 & 1 \\ 1 & a & a^2 \\ 1 & a^2 & a^4 \end{vmatrix} \quad [ R_1 \text{ থেকে } a \text{ কমন নিয়ে} ]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= a \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ 1 - a & a - a^2 & a^2 \\ 1 - a^2 & a^2 - a^4 & a^4 \end{vmatrix} \quad [ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= a \begin{vmatrix} 0 & 0 & 1 \\ 1 - a & a(1 - a) & a^2 \\ (1 - a)(1 + a) & a^2(1 - a^2) & a^4 \end{vmatrix} \quad [\text{উৎপাদকে ভেঙে}]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(1 - a)$ এবং ২য় কলাম থেকে $a(1 - a)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= a \cdot (1 - a) \cdot a(1 - a) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & a^2 \\ 1 + a & 1 + a^2 & a^4 \end{vmatrix}$$</div>
+  <div class="step">$$= a^2(1 - a)^2 \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & a^2 \\ 1 + a & 1 + a^2 & a^4 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= a^2(1 - a)^2 \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ 1 + a & 1 + a^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে বিয়োগ করি:</div>
+  <div class="step">$$= a^2(1 - a)^2 \left\{ 1 \cdot (1 + a^2) - 1 \cdot (1 + a) \right\}$$</div>
+  <div class="step">$$= a^2(1 - a)^2 (1 + a^2 - 1 - a)$$</div>
+  <div class="step">$$= a^2(1 - a)^2 (a^2 - a) \quad [ +1 \text{ এবং } -1 \text{ কেটে দিয়ে} ]$$</div>
+  
+  <div class="step-explain">শেষের বন্ধনী থেকে $a$ কমন নিই:</div>
+  <div class="step">$$= a^2(1 - a)^2 \cdot a(a - 1)$$</div>
+  <div class="step">$$= a^3(1 - a)^2 (a - 1)$$</div>
+  
+  <div class="step-explain">এখানে লক্ষ্য করি, আমাদের প্রমাণে $a^2(a-1)^2(a^2-1)$ মেলাতে হবে। পূর্বের রাশিতে কোথাও ত্রুটি আছে কিনা তা পুনরায় চেক করার জন্য বিকল্প নিয়মে বিস্তার করি। ১ম কলাম ও ২য় কলাম বিয়োগের লাইনে ফিরে যাই:
+  $\begin{vmatrix} 1 & 1 \\ 1+a & 1+a^2 \end{vmatrix}$ এর পরিবর্তে উৎপাদক কমনে $a^2(1-a)^2$ এর ভিতরের অংশে ২য় কলামে ছিল $a^2(1-a^2) = a^2(1-a)(1+a)$। ফলে ২য় কলামে $a(1-a)$ কমন নিলে বাঁচে $a(1+a) = a + a^2$। দুঃখিত, সংশোধিত রূপ হবে:</div>
+  <div class="step">$$= a^2(1 - a)^2 \begin{vmatrix} 1 & 1 \\ 1 + a & a(1 + a) \end{vmatrix}$$</div>
+  <div class="step-explain">নিচের সারি থেকে $(1 + a)$ কমন নিই:</div>
+  <div class="step">$$= a^2(1 - a)^2 (1 + a) \begin{vmatrix} 1 & 1 \\ 1 & a \end{vmatrix}$$</div>
+  <div class="step-explain">এখন কোণাকুণি গুণ করি:</div>
+  <div class="step">$$= a^2(1 - a)^2 (1 + a) (a - 1)$$</div>
+  <div class="step-explain">যেহেতু $(1 - a)^2 = (a - 1)^2$ এবং $(1 + a)(a - 1) = a^2 - 1$, তাই পাই:</div>
+  <div class="step">$$= a^2(a - 1)^2 (a^2 - 1)$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (ix) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a^2 & ab & b^2 \\ 2a & a + b & 2b \\ 1 & 1 & 1 \end{vmatrix} = (a - b)^3$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a^2 & ab & b^2 \\ 2a & a + b & 2b \\ 1 & 1 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} a^2 - ab & ab - b^2 & b^2 \\ 2a - (a + b) & (a + b) - 2b & 2b \\ 1 - 1 & 1 - 1 & 1 \end{vmatrix} \quad [ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} a(a - b) & b(a - b) & b^2 \\ a - b & a - b & 2b \\ 0 & 0 & 1 \end{vmatrix} \quad [\text{বিয়োগ ও কমন নিয়ে}]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(a - b)$ এবং ২য় কলাম থেকে $(a - b)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (a - b)(a - b) \begin{vmatrix} a & b & b^2 \\ 1 & 1 & 2b \\ 0 & 0 & 1 \end{vmatrix} \quad [ C_1 \text{ ও } C_2 \text{ থেকে } (a-b) \text{ কমন নিয়ে} ]$$</div>
+  <div class="step">$$= (a - b)^2 \begin{vmatrix} a & b & b^2 \\ 1 & 1 & 2b \\ 0 & 0 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">৩য় সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি (যেহেতু ৩য় সারিতে দুটি শূন্য রয়েছে):</div>
+  <div class="step">$$= (a - b)^2 \cdot 1 \cdot \begin{vmatrix} a & b \\ 1 & 1 \end{vmatrix} \quad [\text{৩য় সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে পাই:</div>
+  <div class="step">$$= (a - b)^2 (a \cdot 1 - b \cdot 1)$$</div>
+  <div class="step">$$= (a - b)^2 (a - b)$$</div>
+  <div class="step">$$= (a - b)^3 \quad [\text{সূচকের নিয়ম অনুযায়ী গুণ করে}]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ২ (x) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} 1 & 1 & 1 \\ \sin A & \sin B & \sin C \\ \cos A & \cos B & \cos C \end{vmatrix} = -4\sin\frac{A - B}{2} \cdot \sin\frac{B - C}{2} \cdot \sin\frac{C - A}{2}$$</div>
+  
+  <div class="step-explain">প্রমাণ: ধরি বামপক্ষ ($\text{L.H.S.}$) হলো প্রদত্ত নির্ণায়কটি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} 1 & 1 & 1 \\ \sin A & \sin B & \sin C \\ \cos A & \cos B & \cos C \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ \sin A - \sin B & \sin B - \sin C & \sin C \\ \cos A - \cos B & \cos B - \cos C & \cos C \end{vmatrix} \quad [ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} ]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & 0 & 1 \\ \sin A - \sin B & \sin B - \sin C & \sin C \\ \cos A - \cos B & \cos B - \cos C & \cos C \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করে পাই:</div>
+  <div class="step">$$= 1 \cdot \begin{vmatrix} \sin A - \sin B & \sin B - \sin C \\ \cos A - \cos B & \cos B - \cos C \end{vmatrix}$$</div>
+  
+  <div class="step-explain">ত্রিকোণমিতির সূত্র $\sin C - \sin D = 2\cos\frac{C+D}{2}\sin\frac{C-D}{2}$ এবং $\cos C - \cos D = 2\sin\frac{C+D}{2}\sin\frac{D-C}{2}$ প্রয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} 2\cos\frac{A+B}{2}\sin\frac{A-B}{2} & 2\cos\frac{B+C}{2}\sin\frac{B-C}{2} \\ 2\sin\frac{A+B}{2}\sin\frac{B-A}{2} & 2\sin\frac{B+C}{2}\sin\frac{C-B}{2} \end{vmatrix}$$</div>
+  
+  <div class="step-explain">আমরা জানি, $\sin(-x) = -\sin x$। তাই $\sin\frac{B-A}{2} = -\sin\frac{A-B}{2}$ এবং $\sin\frac{C-B}{2} = -\sin\frac{B-C}{2}$ লিখি:</div>
+  <div class="step">$$= \begin{vmatrix} 2\cos\frac{A+B}{2}\sin\frac{A-B}{2} & 2\cos\frac{B+C}{2}\sin\frac{B-C}{2} \\ -2\sin\frac{A+B}{2}\sin\frac{A-B}{2} & -2\sin\frac{B+C}{2}\sin\frac{B-C}{2} \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $2\sin\frac{A-B}{2}$ এবং ২য় কলাম থেকে $2\sin\frac{B-C}{2}$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= 2\sin\frac{A-B}{2} \cdot 2\sin\frac{B-C}{2} \begin{vmatrix} \cos\frac{A+B}{2} & \cos\frac{B+C}{2} \\ -\sin\frac{A+B}{2} & -\sin\frac{B+C}{2} \end{vmatrix}$$</div>
+  <div class="step">$$= 4\sin\frac{A-B}{2}\sin\frac{B-C}{2} \left\{ \cos\frac{A+B}{2}\left(-\sin\frac{B+C}{2}\right) - \cos\frac{B+C}{2}\left(-\sin\frac{A+B}{2}\right) \right\} \quad [\text{আর গুণন করে}]$$</div>
+  <div class="step">$$= 4\sin\frac{A-B}{2}\sin\frac{B-C}{2} \left\{ \sin\frac{A+B}{2}\cos\frac{B+C}{2} - \cos\frac{A+B}{2}\sin\frac{B+C}{2} \right\} \quad [\text{সাজিয়ে লিখে}]$$</div>
+  
+  <div class="step-explain">ত্রিকোণমিতির সূত্র $\sin M \cos N - \cos M \sin N = \sin(M - N)$ প্রয়োগ করি, যেখানে $M = \frac{A+B}{2}$ এবং $N = \frac{B+C}{2}$:</div>
+  <div class="step">$$= 4\sin\frac{A-B}{2}\sin\frac{B-C}{2} \cdot \sin\left( \frac{A+B}{2} - \frac{B+C}{2} \right)$$</div>
+  <div class="step">$$= 4\sin\frac{A-B}{2}\sin\frac{B-C}{2} \cdot \sin\left( \frac{A + B - B - C}{2} \right) \quad [\text{লসাগু করে}]$$</div>
+  <div class="step">$$= 4\sin\frac{A-B}{2}\sin\frac{B-C}{2} \cdot \sin\left( \frac{A - C}{2} \right) \quad [ +B \text{ ও } -B \text{ কেটে দিয়ে} ]$$</div>
+  
+  <div class="step-explain">যেহেতু $\sin\left(\frac{A-C}{2}\right) = \sin\left(-\frac{C-A}{2}\right) = -\sin\left(\frac{C-A}{2}\right)$, তাই মাইনাসটি সামনে চলে আসবে:</div>
+  <div class="step">$$= -4\sin\frac{A-B}{2} \cdot \sin\frac{B-C}{2} \cdot \sin\frac{C-A}{2}$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

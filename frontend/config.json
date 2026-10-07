@@ -1,0 +1,6 @@
+{
+  "API_BASE_URL": "http://localhost:5000/api/v1",
+  "ENVIRONMENT": "development",
+  "APP_NAME": "Quiz Program",
+  "APP_VERSION": "2.0.0"
+}

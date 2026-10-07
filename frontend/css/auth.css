@@ -1,0 +1,1164 @@
+/* frontend/css/auth.css - Version 1.0.0 */
+/* অথেন্টিকেশন পেজের সম্পূর্ণ স্টাইল */
+
+/* ============================================================ */
+/* ১. মডাল ওভারলে */
+/* ============================================================ */
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: authFadeIn 0.3s ease;
+}
+
+.auth-modal-overlay.active {
+    display: flex;
+}
+
+@keyframes authFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ============================================================ */
+/* ২. মডাল কন্টেন্ট */
+/* ============================================================ */
+.auth-modal-content {
+    background: var(--card);
+    border-radius: 24px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 0;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    position: relative;
+    animation: authSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes authSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.auth-modal-content .auth-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--bg);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.auth-modal-content .auth-close-btn:hover {
+    background: var(--danger);
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* ============================================================ */
+/* ৩. অথেন্টিকেশন ফর্ম */
+/* ============================================================ */
+.auth-form-container {
+    padding: 40px 36px 36px;
+}
+
+.auth-form-container .auth-brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.auth-form-container .auth-brand .brand-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.auth-form-container .auth-brand h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.auth-form-container .auth-brand p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 4px 0 0;
+}
+
+/* ============================================================ */
+/* ৪. ফর্ম এলিমেন্ট */
+/* ============================================================ */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-form .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+}
+
+.auth-form .form-group label .required {
+    color: var(--danger);
+    margin-left: 2px;
+}
+
+.auth-form .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.auth-form .input-wrapper:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.15);
+}
+
+.auth-form .input-wrapper .input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 18px;
+    color: var(--text-light);
+    pointer-events: none;
+}
+
+.auth-form .input-wrapper input {
+    width: 100%;
+    padding: 14px 14px 14px 48px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+}
+
+.auth-form .input-wrapper input::placeholder {
+    color: var(--muted);
+}
+
+.auth-form .input-wrapper .toggle-password {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-light);
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.auth-form .input-wrapper .toggle-password:hover {
+    color: var(--text);
+}
+
+/* ============================================================ */
+/* ৫. ফর্ম অপশন (Remember Me + Forgot Password) */
+/* ============================================================ */
+.auth-form .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.auth-form .form-options .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.auth-form .form-options .remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.auth-form .form-options .forgot-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-form .form-options .forgot-link:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+/* ============================================================ */
+/* ৬. বাটনসমূহ */
+/* ============================================================ */
+.auth-form .btn-auth {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+}
+
+.auth-form .btn-auth.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.auth-form .btn-auth.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);
+}
+
+.auth-form .btn-auth.btn-primary:active {
+    transform: translateY(0);
+}
+
+.auth-form .btn-auth:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.auth-form .btn-auth .spinner-small {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================================ */
+/* ৭. ফরমেটিং লিংক */
+/* ============================================================ */
+.auth-form .auth-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.auth-form .auth-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-form .auth-footer a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+/* ============================================================ */
+/* ৮. সোশ্যাল ডিভাইডার */
+/* ============================================================ */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 8px 0 4px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* ============================================================ */
+/* ৯. সোশ্যাল বাটন */
+/* ============================================================ */
+.auth-social {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-social .btn-social {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text);
+    font-family: inherit;
+}
+
+.auth-social .btn-social:hover {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.05);
+    transform: translateY(-2px);
+}
+
+.auth-social .btn-social .social-icon {
+    font-size: 20px;
+}
+
+.auth-social .btn-social.btn-google .social-icon {
+    color: #ea4335;
+}
+
+.auth-social .btn-social.btn-facebook .social-icon {
+    color: #1877f2;
+}
+
+.auth-social .btn-social.btn-phone .social-icon {
+    color: #25d366;
+}
+
+.auth-social .btn-social:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ============================================================ */
+/* ১০. পাসওয়ার্ড শক্তি মিটার */
+/* ============================================================ */
+.password-strength {
+    margin-top: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.password-strength .strength-bar {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.4s ease, background 0.4s ease;
+    width: 0%;
+}
+
+.password-strength .strength-bar.weak {
+    width: 25%;
+    background: var(--danger);
+}
+
+.password-strength .strength-bar.medium {
+    width: 50%;
+    background: var(--warning);
+}
+
+.password-strength .strength-bar.strong {
+    width: 75%;
+    background: #4caf50;
+}
+
+.password-strength .strength-bar.very-strong {
+    width: 100%;
+    background: #2e7d32;
+}
+
+.password-strength-text {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+    min-height: 18px;
+}
+
+/* ============================================================ */
+/* ১১. ভ্যালিডেশন এরর */
+/* ============================================================ */
+.auth-form .form-group .error-text {
+    font-size: 12px;
+    color: var(--danger);
+    min-height: 16px;
+    margin-top: 2px;
+}
+
+.auth-form .input-wrapper.error {
+    border-color: var(--danger);
+}
+
+.auth-form .input-wrapper.error:focus-within {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 4px rgba(244, 67, 54, 0.15);
+}
+
+/* ============================================================ */
+/* ১২. সাফল্য বার্তা */
+/* ============================================================ */
+.auth-success-message {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.auth-success-message .success-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.auth-success-message h3 {
+    font-size: 22px;
+    color: var(--text);
+    margin: 0 0 4px;
+}
+
+.auth-success-message p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* ============================================================ */
+/* ১৩. ডার্ক মোড */
+/* ============================================================ */
+body.dark .auth-modal-content {
+    background: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body.dark .auth-form .input-wrapper {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark .auth-form .input-wrapper input {
+    color: #e0e0e0;
+}
+
+body.dark .auth-form .input-wrapper input::placeholder {
+    color: #777;
+}
+
+body.dark .auth-form .input-wrapper:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+body.dark .auth-social .btn-social {
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark .auth-social .btn-social:hover {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.1);
+}
+
+body.dark .auth-divider {
+    color: #666;
+}
+
+body.dark .auth-divider::before,
+body.dark .auth-divider::after {
+    background: #444;
+}
+
+body.dark .auth-modal-content .auth-close-btn {
+    background: #2a2a2a;
+    color: #aaa;
+}
+
+body.dark .auth-modal-content .auth-close-btn:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* frontend/css/auth.css - OTP Input Styles */
+
+/* ============================================================ */
+/* OTP ইনপুট ফিল্ড */
+/* ============================================================ */
+.otp-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.otp-inputs input {
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+    font-family: monospace;
+}
+
+.otp-inputs input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.15);
+    outline: none;
+}
+
+.otp-inputs input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* OTP পদ্ধতি সিলেক্টর */
+.reset-method-selector {
+    display: flex;
+    gap: 10px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.reset-method-selector .method-btn {
+    flex: 1;
+    min-width: 100px;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    position: relative;
+    text-align: center;
+}
+
+.reset-method-selector .method-btn:hover {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.05);
+    transform: translateY(-2px);
+}
+
+.reset-method-selector .method-btn.active {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent);
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+}
+
+.reset-method-selector .method-btn .method-icon {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.reset-method-selector .method-btn .method-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--warning);
+    color: white;
+    margin-top: 4px;
+}
+
+/* ============================================================ */
+/* ✅ বিকল্প ইমেইল স্ট্যাটাস */
+/* ============================================================ */
+.alt-email-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+.alt-email-status .status-badge {
+    font-size: 12px;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.alt-email-status .status-verified {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.alt-email-status .status-unverified {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.alt-email-status .btn-sm {
+    padding: 4px 14px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+/* ✅ ডার্ক মোড OTP */
+body.dark .otp-inputs input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark .otp-inputs input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+body.dark .reset-method-selector .method-btn {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark .reset-method-selector .method-btn:hover {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.1);
+}
+
+body.dark .reset-method-selector .method-btn.active {
+    border-color: var(--accent);
+    background: rgba(33, 150, 243, 0.15);
+    color: var(--accent);
+}
+
+body.dark .alt-email-info .info-box-warning {
+    background: #2a1f0a;
+    border-color: #856404;
+    color: #ffc107;
+}
+
+body.dark .alt-email-status .status-verified {
+    background: #1e3a2a;
+    color: #81c784;
+}
+
+body.dark .alt-email-status .status-unverified {
+    background: #2a1f0a;
+    color: #ffc107;
+}
+
+/* ✅ মোবাইল রেসপনসিভ */
+@media (max-width: 520px) {
+
+}
+
+/* ============================================================ */
+/* ১৪. রেসপনসিভ ডিজাইন */
+/* ============================================================ */
+@media (max-width: 520px) {
+    .auth-modal-content {
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        animation: none;
+    }
+
+    .auth-form-container {
+        padding: 24px 20px 32px;
+    }
+
+    .auth-form-container .auth-brand .brand-icon {
+        font-size: 36px;
+    }
+
+    .auth-form-container .auth-brand h2 {
+        font-size: 20px;
+    }
+
+    .auth-form .input-wrapper input {
+        padding: 12px 12px 12px 42px;
+        font-size: 14px;
+    }
+
+    .auth-form .input-wrapper .input-icon {
+        left: 12px;
+        font-size: 16px;
+    }
+
+    .auth-form .btn-auth {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .auth-form .form-options {
+        font-size: 13px;
+    }
+
+    .auth-social {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .auth-social .btn-social {
+        padding: 10px;
+        font-size: 14px;
+    }
+        .otp-inputs {
+        gap: 6px;
+    }
+    
+    .otp-inputs input {
+        width: 42px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .reset-method-selector {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .auth-form-container {
+        padding: 16px 14px 24px;
+    }
+
+    .auth-form .form-options {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
+/* সাফল্য পেজে বাটন হাইলাইট */
+#resetSuccess .btn-success {
+    font-size: 18px;
+    padding: 14px 32px;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+#resetSuccess .btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(76, 175, 80, 0.4);
+}
+
+/* সাফল্য পেজ অ্যানিমেশন */
+.reset-state#resetSuccess {
+    animation: successFadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes successFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* সাফল্য আইকন অ্যানিমেশন */
+#resetSuccess .reset-icon-large {
+    animation: successBounce 0.8s ease;
+}
+
+@keyframes successBounce {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.3); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* frontend/css/auth.css */
+/* লিংক সাফল্য বার্তার জন্য CSS */
+
+/* ✅ সাফল্য বার্তা অ্যানিমেশন */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ✅ লিংক সাফল্য বার্তা কন্টেইনার */
+.link-success-message {
+    margin-top: 16px !important;
+    padding: 16px 20px !important;
+    background: #e8f5e9 !important;
+    border: 2px solid #4caf50 !important;
+    border-radius: 12px !important;
+    color: #2e7d32 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    animation: slideDown 0.4s ease !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15) !important;
+}
+
+/* ✅ লিংক সাফল্য বার্তার ভিতরের এলিমেন্ট */
+.link-success-message strong {
+    color: #1b5e20 !important;
+    font-weight: 700 !important;
+}
+
+.link-success-message p {
+    margin: 4px 0 8px 0 !important;
+    color: #1b5e20 !important;
+}
+
+/* ✅ ইমেইল চেক করার নির্দেশনা বক্স */
+.link-success-message .instruction-box {
+    background: rgba(255, 255, 255, 0.6) !important;
+    padding: 10px 14px !important;
+    border-radius: 8px !important;
+    margin: 8px 0 !important;
+}
+
+.link-success-message .instruction-box p {
+    margin: 0 0 4px 0 !important;
+    font-weight: 600 !important;
+    color: #1b5e20 !important;
+}
+
+.link-success-message ul {
+    margin: 4px 0 0 16px !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+
+.link-success-message ul li {
+    padding: 2px 0 !important;
+    color: #2e7d32 !important;
+    font-size: 13px !important;
+}
+
+.link-success-message ul li::before {
+    content: "• " !important;
+    color: #4caf50 !important;
+    font-weight: bold !important;
+}
+
+/* ✅ বাটন স্টাইল */
+.link-success-message .btn-success {
+    padding: 6px 20px !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    border: none !important;
+    border-radius: 6px !important;
+    background: #4caf50 !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.link-success-message .btn-success:hover {
+    background: #388e3c !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3) !important;
+}
+
+.link-success-message .btn-secondary {
+    padding: 6px 20px !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    border: 1px solid #4caf50 !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    color: #2e7d32 !important;
+    transition: all 0.3s ease !important;
+}
+
+.link-success-message .btn-secondary:hover {
+    background: #4caf50 !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ✅ বাটন গ্রুপ */
+.link-success-message .button-group {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+    flex-wrap: wrap !important;
+}
+
+/* ✅ ডিজেবল ইনপুট স্টাইল */
+.link-success-message .input-disabled {
+    opacity: 0.7 !important;
+    cursor: not-allowed !important;
+}
+
+/* ============================================================ */
+/* ✅ ডার্ক মোড সাপোর্ট */
+/* ============================================================ */
+body.dark .link-success-message {
+    background: #1e3a2a !important;
+    border-color: #4caf50 !important;
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message strong {
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message p {
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message .instruction-box {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark .link-success-message ul li {
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message .btn-secondary {
+    color: #81c784 !important;
+    border-color: #4caf50 !important;
+}
+
+body.dark .link-success-message .btn-secondary:hover {
+    background: #4caf50 !important;
+    color: #1e3a2a !important;
+}
+
+/* ✅ OTP সাফল্য বার্তা */
+.otp-success-message {
+    margin-top: 16px !important;
+    padding: 16px 20px !important;
+    background: #e3f2fd !important;
+    border: 2px solid #2196f3 !important;
+    border-radius: 12px !important;
+    color: #0d47a1 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    animation: slideDown 0.4s ease !important;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15) !important;
+}
+
+.otp-success-message strong {
+    color: #0d47a1 !important;
+    font-weight: 700 !important;
+}
+
+.otp-success-message p {
+    margin: 4px 0 8px 0 !important;
+    color: #0d47a1 !important;
+}
+
+.otp-success-message ul {
+    margin: 4px 0 0 16px !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+
+.otp-success-message ul li {
+    padding: 2px 0 !important;
+    color: #0d47a1 !important;
+    font-size: 13px !important;
+}
+
+.otp-success-message ul li::before {
+    content: "• " !important;
+    color: #2196f3 !important;
+    font-weight: bold !important;
+}
+
+.otp-success-message .btn-primary {
+    padding: 6px 20px !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    border: none !important;
+    border-radius: 6px !important;
+    background: #2196f3 !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.otp-success-message .btn-primary:hover {
+    background: #1976d2 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3) !important;
+}
+
+.otp-success-message .btn-secondary {
+    padding: 6px 20px !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    border: 1px solid #2196f3 !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    color: #0d47a1 !important;
+    transition: all 0.3s ease !important;
+}
+
+.otp-success-message .btn-secondary:hover {
+    background: #2196f3 !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ✅ ডার্ক মোড সাপোর্ট */
+body.dark .otp-success-message {
+    background: #1a2a3a !important;
+    border-color: #2196f3 !important;
+    color: #64b5f6 !important;
+}
+
+body.dark .otp-success-message strong {
+    color: #64b5f6 !important;
+}
+
+body.dark .otp-success-message p {
+    color: #64b5f6 !important;
+}
+
+body.dark .otp-success-message ul li {
+    color: #64b5f6 !important;
+}
+
+body.dark .otp-success-message .btn-secondary {
+    color: #64b5f6 !important;
+    border-color: #2196f3 !important;
+}
+
+body.dark .otp-success-message .btn-secondary:hover {
+    background: #2196f3 !important;
+    color: #1a2a3a !important;
+}
+
+/* frontend/css/auth.css - লিংক সাফল্য বার্তার জন্য */
+
+/* ✅ লিংক সাফল্য বার্তা */
+.link-success-message {
+    margin-top: 16px !important;
+    padding: 16px 20px !important;
+    background: #e8f5e9 !important;
+    border: 2px solid #4caf50 !important;
+    border-radius: 12px !important;
+    color: #1b5e20 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    animation: slideDown 0.4s ease !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15) !important;
+}
+
+.link-success-message strong {
+    color: #1b5e20 !important;
+    font-weight: 700 !important;
+}
+
+.link-success-message p {
+    margin: 4px 0 8px 0 !important;
+    color: #1b5e20 !important;
+}
+
+.link-success-message ul {
+    margin: 4px 0 0 16px !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+
+.link-success-message ul li {
+    padding: 2px 0 !important;
+    color: #2e7d32 !important;
+    font-size: 13px !important;
+}
+
+.link-success-message ul li::before {
+    content: "• " !important;
+    color: #4caf50 !important;
+    font-weight: bold !important;
+}
+
+/* ✅ ডার্ক মোড সাপোর্ট */
+body.dark .link-success-message {
+    background: #1e3a2a !important;
+    border-color: #4caf50 !important;
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message strong {
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message p {
+    color: #81c784 !important;
+}
+
+body.dark .link-success-message ul li {
+    color: #81c784 !important;
+}

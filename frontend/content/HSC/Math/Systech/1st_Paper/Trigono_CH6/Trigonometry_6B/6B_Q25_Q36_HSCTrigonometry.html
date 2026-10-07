@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6B Q25-Q36</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (6B)</h1>
+
+        <div class="problem-card">
+            <div class="problem-title">২৫. প্রমাণ কর : $\sec^4 x - 1 = 2\tan^2 x + \tan^4 x$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \sec^4 x - 1$</div>
+            <div class="step-explain">প্রথমে সূচকের নিয়ম অনুযায়ী $\sec^4 x$-কে ভেঙে $\left(\sec^2 x\right)^2$ আকারে বর্গ হিসেবে প্রকাশ করি:</div>
+            <div class="step">$= \left(\sec^2 x\right)^2 - 1$</div>
+            <div class="step-explain">যেহেতু প্রমাণের ডানপক্ষে সব পদ $\tan$ আকারে আছে, তাই ভেতরের $\sec^2 x$-কে সূত্রে ভেঙে $\tan$-এ রূপান্তর করি। আমরা জানি, $\sec^2 x = 1 + \tan^2 x$।</div>
+            <div class="step">$= \left(1 + \tan^2 x\right)^2 - 1 \quad [\because \sec^2 x = 1 + \tan^2 x]$</div>
+            <div class="step-explain">এবার প্রথম পদে বীজগণিতের বর্গের সূত্র $(a+b)^2 = a^2 + 2ab + b^2$ প্রয়োগ করি, যেখানে $a = 1$ এবং $b = \tan^2 x$:</div>
+            <div class="step">$= \left((1)^2 + 2 \cdot 1 \cdot \tan^2 x + \left(\tan^2 x\right)^2\right) - 1 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step">$= 1 + 2\tan^2 x + \tan^4 x - 1$</div>
+            <div class="step-explain">এবার ধ্রুবক পদ $+1$ এবং শেষ পদ $-1$ পরস্পর বিয়োগ হয়ে কেটে যাবে:</div>
+            <div class="step">$= 2\tan^2 x + \tan^4 x \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, সমীকরণের বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\sec^4 x - 1 = 2\tan^2 x + \tan^4 x$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৬. $x\sin^3\theta + y\cos^3\theta = \sin\theta\cos\theta$ ও $x\sin\theta - y\cos\theta = 0$ হলে প্রমাণ কর যে, $x^2 + y^2 = 1$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া দ্বিতীয় সমীকরণটি লিখে নিই এবং তা থেকে একটি সম্পর্ক তৈরি করি:</div>
+            <div class="step">দেওয়া আছে, $x\sin\theta - y\cos\theta = 0 \quad \text{...  ... (i)}$</div>
+            <div class="step-explain">সমীকরণ (i) এর বামপক্ষের $-y\cos\theta$ পদটিকে ডানপক্ষে পক্ষান্তর করে পাই (মাইনাস চিহ্নটি পরিবর্তিত হয়ে প্লাস হবে):</div>
+            <div class="step">$\Rightarrow x\sin\theta = y\cos\theta \quad \text{...  ... (ii) [পক্ষান্তর করে]}$</div>
+            <div class="step-explain">এবার উদ্দীপকে দেওয়া প্রথম সমীকরণটি লিখে নিই এবং এটিকে সমীকরণ (iii) হিসেবে চিহ্নিত করি:</div>
+            <div class="step">$x\sin^3\theta + y\cos^3\theta = \sin\theta\cos\theta \quad \text{...  ... (iii)}$</div>
+            <div class="step-explain">সমীকরণ (iii) এর প্রথম পদের $\sin^3\theta$-কে সূচকের নিয়ম অনুযায়ী ভেঙে $x\sin\theta \cdot \sin^2\theta$ এবং দ্বিতীয় পদের $\cos^3\theta$-কে ভেঙে $y\cos\theta \cdot \cos^2\theta$ আকারে লিখি:</div>
+            <div class="step">$\Rightarrow (x\sin\theta) \cdot \sin^2\theta + (y\cos\theta) \cdot \cos^2\theta = \sin\theta\cos\theta$</div>
+            <div class="step-explain">এখন সমীকরণ (ii) থেকে প্রাপ্ত সম্পর্ক ব্যবহার করে প্রথম পদের $(x\sin\theta)$ এর পরিবর্তে $y\cos\theta$ বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow (y\cos\theta) \cdot \sin^2\theta + (y\cos\theta) \cdot \cos^2\theta = \sin\theta\cos\theta \quad [\text{সমীকরণ (ii) হতে মান বসিয়ে}]$</div>
+            <div class="step-explain">বামপক্ষের উভয় পদ থেকে সাধারণ উৎপাদক (Common factor) হিসেবে $y\cos\theta$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow y\cos\theta \cdot \left(\sin^2\theta + \cos^2\theta\right) = \sin\theta\cos\theta \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক প্রধান সূত্র অনুযায়ী: $\sin^2\theta + \cos^2\theta = 1$। বন্ধনীর ভেতরের অংশের পরিবর্তে এই মানটি বসাই:</div>
+            <div class="step">$\Rightarrow y\cos\theta \cdot (1) = \sin\theta\cos\theta \quad [\because \sin^2\theta + \cos^2\theta = 1]$</div>
+            <div class="step">$\Rightarrow y\cos\theta = \sin\theta\cos\theta$</div>
+            <div class="step-explain">সমীকরণের উভয়পক্ষ থেকে সাধারণ রাশি $\cos\theta$ দ্বারা ভাগ করে বা বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow y = \sin\theta \quad \text{...  ... (iv) [উভয়পক্ষকে } \cos\theta \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">আমরা $y$-এর একটি নির্দিষ্ট মান পেয়েছি। এবার $x$-এর মান বের করার জন্য $y$-এর এই মানটি সমীকরণ (ii)-এ বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow x\sin\theta = (\sin\theta) \cdot \cos\theta \quad [y\text{-এর মান বসিয়ে}]$</div>
+            <div class="step-explain">সমীকরণের উভয়পক্ষ থেকে সাধারণ রাশি $\sin\theta$ দ্বারা ভাগ করে বা বর্জন করে পাই:</div>
+            <div class="step">$\Rightarrow x = \cos\theta \quad \text{...  ... (v) [উভয়পক্ষকে } \sin\theta \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">এখন আমরা $x$ এবং $y$ উভয়ের মান পেয়ে গেছি। এবার প্রমাণের বামপক্ষ (L.H.S.) লিখে সমাধান শুরু করি:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= x^2 + y^2$</div>
+            <div class="step-explain">সমীকরণ (iv) ও (v) থেকে প্রাপ্ত $x$ ও $y$-এর মান বামপক্ষে প্রতিস্থাপন করি বা বসাই:</div>
+            <div class="step">$= (\cos\theta)^2 + (\sin\theta)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$= \cos^2\theta + \sin^2\theta$</div>
+            <div class="step-explain">পদ দুটিকে সাজিয়ে লিখি:</div>
+            <div class="step">$= \sin^2\theta + \cos^2\theta$</div>
+            <div class="step-explain">ত্রিকোণমিতির মৌলিক প্রধান সূত্র অনুযায়ী আমরা জানি: $\sin^2\theta + \cos^2\theta = 1$।</div>
+            <div class="step">$= 1 \quad [\because \sin^2\theta + \cos^2\theta = 1]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $x^2 + y^2 = 1$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৭. যদি $\frac{\cos^4\theta}{\cos^2\phi} + \frac{\sin^4\theta}{\sin^2\phi} = 1$ হয় তবে প্রমাণ কর যে, $\frac{\cos^4\phi}{\cos^2\theta} + \frac{\sin^4\phi}{\sin^2\theta} = 1$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া শর্ত বা সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\frac{\cos^4\theta}{\cos^2\phi} + \frac{\sin^4\theta}{\sin^2\phi} = 1$</div>
+            <div class="step-explain">পুরো সমীকরণটিকে একটি নির্দিষ্ট অনুপাতে (যেমন $\cos$-এ) রূপান্তর করার জন্য লব ও হরের $\sin^2$ পদগুলোকে সূত্রে ভাঙি। আমরা জানি, $\sin^2\theta = 1 - \cos^2\theta$ এবং $\sin^4\theta = \left(\sin^2\theta\right)^2 = \left(1 - \cos^2\theta\right)^2$, একইভাবে হরের $\sin^2\phi = 1 - \cos^2\phi$। এই মানগুলো বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \frac{\cos^4\theta}{\cos^2\phi} + \frac{\left(1 - \cos^2\theta\right)^2}{1 - \cos^2\phi} = 1 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">এবার বামপক্ষের ভগ্নাংশ দুটির হরগুলোর লসাগু করি। এখানে লসাগু হবে $\cos^2\phi \cdot \left(1 - \cos^2\phi\right)$:</div>
+            <div class="step">$\Rightarrow \frac{\cos^4\theta \cdot \left(1 - \cos^2\phi\right) + \cos^2\phi \cdot \left(1 - \cos^2\theta\right)^2}{\cos^2\phi \cdot \left(1 - \cos^2\phi\right)} = 1 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">আড়-গুণন (Cross Multiplication) করে হরটিকে ডানপক্ষে ১-এর সাথে গুণ করে দিই এবং লবের প্রথম বন্ধনীটি গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow \cos^4\theta - \cos^4\theta \cdot \cos^2\phi + \cos^2\phi \cdot \left(1 - \cos^2\theta\right)^2 = \cos^2\phi \cdot \left(1 - \cos^2\phi\right) \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step-explain">বামপক্ষের বর্গের অংশটিতে বীজগণিতের সূত্র $(a-b)^2 = a^2 - 2ab + b^2$ প্রয়োগ করি এবং ডানপক্ষের বন্ধনীটি গুণ করি:</div>
+            <div class="step">$\Rightarrow \cos^4\theta - \cos^4\theta \cdot \cos^2\phi + \cos^2\phi \cdot \left(1 - 2\cos^2\theta + \cos^4\theta\right) = \cos^2\phi - \cos^4\phi \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">বামপক্ষের মাঝের বন্ধনীটি $\cos^2\phi$ দ্বারা গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow \cos^4\theta - \cos^4\theta \cdot \cos^2\phi + \cos^2\phi - 2\cos^2\theta \cdot \cos^2\phi + \cos^4\theta \cdot \cos^2\phi = \cos^2\phi - \cos^4\phi \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">বামপক্ষে মাইনাস পদ ($-\cos^4\theta \cdot \cos^2\phi$) এবং প্লাস পদ ($+\cos^4\theta \cdot \cos^2\phi$) বিয়োগ হয়ে কেটে যাবে:</div>
+            <div class="step">$\Rightarrow \cos^4\theta + \cos^2\phi - 2\cos^2\theta \cdot \cos^2\phi = \cos^2\phi - \cos^4\phi \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">সমীকরণের উভয়পক্ষ থেকে সমজাতীয় পদ $+\cos^2\phi$ বাদ দিয়ে বা বিয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow \cos^4\theta - 2\cos^2\theta \cdot \cos^2\phi = - \cos^4\phi \quad [\text{উভয়পক্ষ থেকে } \cos^2\phi \text{ বাদ দিয়ে}]$</div>
+            <div class="step-explain">ডানপক্ষের $-\cos^4\phi$ পদটিকে বামপক্ষে পক্ষান্তর করি (এতে চিহ্ন পরিবর্তিত হয়ে প্লাস হবে):</div>
+            <div class="step">$\Rightarrow \cos^4\theta - 2\cos^2\theta \cdot \cos^2\phi + \cos^4\phi = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">রাশিটিকে পূর্ণবর্গ আকারে সাজানোর জন্য সূচকের নিয়মে ভেঙে লিখি:</div>
+            <div class="step">$\Rightarrow \left(\cos^2\theta\right)^2 - 2 \cdot \cos^2\theta \cdot \cos^2\phi + \left(\cos^2\phi\right)^2 = 0$</div>
+            <div class="step-explain">এটি বীজগণিতের $a^2 - 2ab + b^2 = (a-b)^2$ সূত্রের রূপে আছে। সূত্রটি প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow \left(\cos^2\theta - \cos^2\phi\right)^2 = 0 \quad [\because a^2 - 2ab + b^2 = (a-b)^2]$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \cos^2\theta - \cos^2\phi = 0 \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">বামপক্ষের $-\cos^2\phi$-কে ডানপক্ষে পক্ষান্তর করে পাই, যা থেকে একটি অত্যন্ত গুরুত্বপূর্ণ সম্পর্ক তৈরি হয়:</div>
+            <div class="step">$\Rightarrow \cos^2\theta = \cos^2\phi \quad \text{--- (i) [পক্ষান্তর করে]}$</div>
+            <div class="step-explain">যেহেতু $\cos^2\theta = \cos^2\phi$, তাই ত্রিকোণমিতির মৌলিক নিয়মে উভয়পক্ষকে $1$ থেকে বিয়োগ করলে আমরা $\sin$-এর সম্পর্কটিও পেয়ে যাব:</div>
+            <div class="step">$\Rightarrow 1 - \cos^2\theta = 1 - \cos^2\phi$</div>
+            <div class="step">$\Rightarrow \sin^2\theta = \sin^2\phi \quad \text{--- (ii)} \quad [\because 1 - \cos^2 A = \sin^2 A]$</div>
+            <div class="step-explain">এখন যে রাশিটি প্রমাণ করতে হবে, তার বামপক্ষ (L.H.S.) লিখে সমীকরণ (i) ও (ii) এর মান ব্যবহার করি:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \frac{\cos^4\phi}{\cos^2\theta} + \frac{\sin^4\phi}{\sin^2\theta}$</div>
+            <div class="step-explain">লবের পদগুলোকে সূচকের নিয়মে বর্গ আকারে সাজিয়ে লিখি:</div>
+            <div class="step">$= \frac{\left(\cos^2\phi\right)^2}{\cos^2\theta} + \frac{\left(\sin^2\phi\right)^2}{\sin^2\theta}$</div>
+            <div class="step-explain">এখন সমীকরণ (i) থেকে লবের $\cos^2\phi$-এর জায়গায় $\cos^2\theta$ এবং সমীকরণ (ii) থেকে লবের $\sin^2\phi$-এর জায়গায় $\sin^2\theta$ বসিয়ে পাই:</div>
+            <div class="step">$= \frac{\left(\cos^2\theta\right)^2}{\cos^2\theta} + \frac{\left(\sin^2\theta\right)^2}{\sin^2\theta} \quad [\text{সমীকরণ (i) ও (ii) হতে মান বসিয়ে}]$</div>
+            <div class="step">$= \frac{\cos^4\theta}{\cos^2\theta} + \frac{\sin^4\theta}{\sin^2\theta}$</div>
+            <div class="step-explain">লব ও হরের সূচকের কাটাকাটি বা ভাগ সম্পন্ন করি (পাওয়ার কমে যাবে):</div>
+            <div class="step">$= \cos^2\theta + \sin^2\theta \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">পদ দুটিকে সাজিয়ে লিখি:</div>
+            <div class="step">$= \sin^2\theta + \cos^2\theta$</div>
+            <div class="step-explain">ত্রিকোণমিতির মৌলিক প্রধান সূত্র অনুযায়ী আমরা জানি: $\sin^2\theta + \cos^2\theta = 1$।</div>
+            <div class="step">$= 1 \quad [\because \sin^2\theta + \cos^2\theta = 1]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\frac{\cos^4\phi}{\cos^2\theta} + \frac{\sin^4\phi}{\sin^2\theta} = 1$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৮. যদি $a^2\sec^2\theta - b^2\tan^2\theta = c^2$ হয় তবে দেখাও যে, $\cosec^2\theta = \frac{c^2 - b^2}{c^2 - a^2}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $a^2\sec^2\theta - b^2\tan^2\theta = c^2$</div>
+            <div class="step-explain">যেহেতু প্রমাণের রাশিতে $\cosec^2\theta$ রয়েছে এবং ডানপক্ষে $c^2 - b^2$ ও $c^2 - a^2$ পদ তৈরি করতে হবে, তাই প্রথমে সমীকরণটিকে মৌলিক অনুপাত $\sin$ ও $\cos$-এ ভেঙে সরল করি। আমরা জানি, $\sec^2\theta = \frac{1}{\cos^2\theta}$ এবং $\tan^2\theta = \frac{\sin^2\theta}{\cos^2\theta}$। এই মানগুলো বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow a^2 \cdot \left(\frac{1}{\cos^2\theta}\right) - b^2 \cdot \left(\frac{\sin^2\theta}{\cos^2\theta}\right) = c^2 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step">$\Rightarrow \frac{a^2}{\cos^2\theta} - \frac{b^2\sin^2\theta}{\cos^2\theta} = c^2$</div>
+            <div class="step-explain">এবার বামপক্ষের ভগ্নাংশ দুটির হর একই ($\cos^2\theta$) হওয়ায় এদের লসাগু করি:</div>
+            <div class="step">$\Rightarrow \frac{a^2 - b^2\sin^2\theta}{\cos^2\theta} = c^2 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">আমরা পুরো সমীকরণটিকে শুধু $\sin^2\theta$ চলকে রূপান্তর করার চেষ্টা করব, যেন সহজে $\cosec^2\theta$-এর মান বের করা যায়। তাই হরের $\cos^2\theta$-কে সূত্রে ভেঙে লিখি। আমরা জানি, $\cos^2\theta = 1 - \sin^2\theta$।</div>
+            <div class="step">$\Rightarrow \frac{a^2 - b^2\sin^2\theta}{1 - \sin^2\theta} = c^2 \quad [\because  \cos^2\theta = 1 - \sin^2\theta]$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) করে হরের রাশিটিকে ডানপক্ষের $c^2$-এর সাথে গুণ করি:</div>
+            <div class="step">$\Rightarrow a^2 - b^2\sin^2\theta = c^2 \cdot \left(1 - \sin^2\theta\right) \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step-explain">ডানপক্ষের বন্ধনীটি তুলে দিয়ে $c^2$ দ্বারা ভেতরের পদগুলোকে গুণ করি:</div>
+            <div class="step">$\Rightarrow a^2 - b^2\sin^2\theta = c^2 - c^2\sin^2\theta \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">এবার $\sin^2\theta$ সংবলিত পদগুলোকে সমীকরণের বামপক্ষে এবং ধ্রুবক পদগুলোকে ডানপক্ষে পক্ষান্তর করে সাজিয়ে লিখি (এতে চিহ্নের পরিবর্তন ঘটবে):</div>
+            <div class="step">$\Rightarrow c^2\sin^2\theta - b^2\sin^2\theta = c^2 - a^2 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">বামপক্ষের পদ দুটি থেকে সাধারণ উৎপাদক (Common factor) হিসেবে $\sin^2\theta$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \left(c^2 - b^2\right) \cdot \sin^2\theta = c^2 - a^2 \quad [\sin^2\theta \text{ কমন নিয়ে}]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক রাশি $\left(c^2 - b^2\right)$-কে ডানপক্ষের হরে পক্ষান্তর করে পাই, যা থেকে $\sin^2\theta$-এর একটি নির্দিষ্ট মান পাওয়া যায়:</div>
+            <div class="step">$\Rightarrow \sin^2\theta = \frac{c^2 - a^2}{c^2 - b^2} \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">যেহেতু প্রমাণের বামপক্ষে $\cosec^2\theta$ রয়েছে এবং আমরা জানি বিপরীত অনুপাতের সূত্র অনুযায়ী $\cosec^2\theta = \frac{1}{\sin^2\theta}$। তাই চূড়ান্ত মানটি পেতে সমীকরণটিকে ব্যস্তকরণ (Inverse) বা উল্টিয়ে দিই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\sin^2\theta} = \frac{c^2 - b^2}{c^2 - a^2} \quad [\text{ব্যস্তকরণ করে}]$</div>
+            <div class="step">$\Rightarrow \cosec^2\theta = \frac{c^2 - b^2}{c^2 - a^2} \quad [\because  \frac{1}{\sin^2\theta} = \cosec^2\theta]$</div>
+            <div class="step-explain">সমীকরণটি চূড়ান্ত প্রমাণের রূপে চলে এসেছে।</div>
+            <div class="step"><strong>অতএব,</strong> $\cosec^2\theta = \frac{c^2 - b^2}{c^2 - a^2}$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৯. যদি $\cot\theta(1 + \sin\theta) = 4m$ এবং $\cot\theta(1 - \sin\theta) = 4n$ হয়, তবে দেখাও যে, $(m^2 - n^2)^2 = mn$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণ দুটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\cot\theta(1 + \sin\theta) = 4m \quad \text{...  ... (i)}$</div>
+            <div class="step">এবং $\cot\theta(1 - \sin\theta) = 4n \quad \text{...  ... (ii)}$</div>
+            <div class="step-explain">হিসাবের সুবিধার্থে এবং প্রমাণের রূপ তৈরি করতে প্রথমে সমীকরণ (i) ও (ii) যোগ করি:</div>
+            <div class="step">$\Rightarrow 4m + 4n = \cot\theta(1 + \sin\theta) + \cot\theta(1 - \sin\theta) \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">বামপক্ষ থেকে $4$ এবং ডানপক্ষ থেকে সাধারণ উৎপাদক হিসেবে $\cot\theta$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 4(m + n) = \cot\theta \cdot (1 + \sin\theta + 1 - \sin\theta) \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">ডানপক্ষের বন্ধনীর ভেতর থেকে $+\sin\theta$ এবং $-\sin\theta$ বিয়োগ হয়ে কেটে যাবে। ধ্রুবক সংখ্যা দুটি যোগ করলে হবে $1 + 1 = 2$:</div>
+            <div class="step">$\Rightarrow 4(m + n) = \cot\theta \cdot (2) \quad [\text{যোগ-বিয়োগ করে}]$</div>
+            <div class="step">$\Rightarrow 4(m + n) = 2\cot\theta$</div>
+            <div class="step-explain">এবার উভয়পক্ষকে $2$ দ্বারা ভাগ করে পাই:</div>
+            <div class="step">$\Rightarrow 2(m + n) = \cot\theta \quad \text{...  ... (iii) [উভয়পক্ষকে } 2 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">একইভাবে, এবার সমীকরণ (i) থেকে সমীকরণ (ii) বিয়োগ করি:</div>
+            <div class="step">$\Rightarrow 4m - 4n = \cot\theta(1 + \sin\theta) - \cot\theta(1 - \sin\theta) \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">বামপক্ষ থেকে $4$ এবং ডানপক্ষ থেকে পুনরায় $\cot\theta$ কমন নিই। মাইনাস চিহ্নের কারণে ভেতরের পদের চিহ্ন পরিবর্তিত হবে:</div>
+            <div class="step">$\Rightarrow 4(m - n) = \cot\theta \cdot (1 + \sin\theta - 1 + \sin\theta) \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">ডানপক্ষের বন্ধনীর ভেতর থেকে $+1$ এবং $-1$ কেটে যাবে এবং সমজাতীয় পদ দুটি যোগ করলে হবে $\sin\theta + \sin\theta = 2\sin\theta$:</div>
+            <div class="step">$\Rightarrow 4(m - n) = \cot\theta \cdot (2\sin\theta) \quad [\text{যোগ-বিয়োগ করে}]$</div>
+            <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক সম্পর্ক অনুযায়ী: $\cot\theta = \frac{\cos\theta}{\sin\theta}$। এই মানটি ডানপক্ষে বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 4(m - n) = \left(\frac{\cos\theta}{\sin\theta}\right) \cdot 2\sin\theta \quad [\because \cot\theta = \frac{\cos\theta}{\sin\theta}]$</div>
+            <div class="step-explain">ডানপক্ষের লব ও হরের সাধারণ রাশি $\sin\theta$ কাটাকাটি করে বর্জন করি:</div>
+            <div class="step">$\Rightarrow 4(m - n) = 2\cos\theta$</div>
+            <div class="step-explain">এবার উভয়পক্ষকে $2$ দ্বারা ভাগ করে পাই:</div>
+            <div class="step">$\Rightarrow 2(m - n) = \cos\theta \quad \text{...  ... (iv) [উভয়পক্ষকে } 2 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">এখন প্রাপ্ত সমীকরণ (iii) এবং (iv) কে পরস্পর গুণ করি:</div>
+            <div class="step">$\Rightarrow \{2(m + n)\} \cdot \{2(m - n)\} = \cot\theta \cdot \cos\theta \quad [\text{গুণ করে}]$</div>
+            <div class="step">$\Rightarrow 4(m + n)(m - n) = \cot\theta \cdot \cos\theta$</div>
+            <div class="step-explain">বামপক্ষের রাশিতে বীজগণিতের সূত্র $(a+b)(a-b) = a^2 - b^2$ প্রয়োগ করি:</div>
+            <div class="step">$\Rightarrow 4\left(m^2 - n^2\right) = \cot\theta \cdot \cos\theta \quad [\because (a+b)(a-b) = a^2 - b^2]$</div>
+            <div class="step-explain">যেহেতু মূল প্রমাণের বামপক্ষে $(m^2 - n^2)^2$ অর্থাৎ বর্গ রয়েছে, তাই সমীকরণের উভয়পক্ষকে বর্গ (Square) করি:</div>
+            <div class="step">$\Rightarrow \left\{4\left(m^2 - n^2\right)\right\}^2 = (\cot\theta \cdot \cos\theta)^2 \quad [\text{উভয়পক্ষকে বর্গ করে}]$</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \cot^2\theta \cdot \cos^2\theta \quad \text{...  ... (v)}$</div>
+            <div class="step-explain">এখন প্রমাণের ডানপক্ষ মেলানোর জন্য সমীকরণ (v) এর ডানপক্ষের $\cos^2\theta$-কে সূত্রে ভেঙে লিখি। আমরা জানি, $\cos^2\theta = 1 - \sin^2\theta$।</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \cot^2\theta \cdot \left(1 - \sin^2\theta\right) \quad [\because \cos^2\theta = 1 - \sin^2\theta]$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে $\cot^2\theta$ দ্বারা ভেতরের পদগুলোকে গুণ করি:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \cot^2\theta - \cot^2\theta \cdot \sin^2\theta \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">দ্বিতীয় পদের $\cot^2\theta$-কে সূত্রে ভেঙে মৌলিক অনুপাতে প্রকাশ করি:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \cot^2\theta - \left(\frac{\cos^2\theta}{\sin^2\theta}\right) \cdot \sin^2\theta \quad [\because \cot^2\theta = \frac{\cos^2\theta}{\sin^2\theta}]$</div>
+            <div class="step-explain">দ্বিতীয় পদের লব ও হরের সাধারণ রাশি $\sin^2\theta$ কাটাকাটি করে বর্জন করি:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \cot^2\theta - \cos^2\theta \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">ডানপক্ষের রাশিটি বীজগণিতের $a^2 - b^2 = (a+b)(a-b)$ সূত্রের আকারে আছে। সূত্রটি প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = (\cot\theta + \cos\theta) \cdot (\cot\theta - \cos\theta) \quad [\because a^2 - b^2 = (a+b)(a-b)] \quad \text{...  ... (vi)}$</div>
+            <div class="step-explain">এবার মূল উদ্দীপকের দেওয়া সম্পর্ক দুটিকে গুণ করে $mn$ এর মান বের করি। উদ্দীপকের সমীকরণ (i) ও (ii) এর বামপক্ষ গুণ করলে পাই:</div>
+            <div class="step">$\Rightarrow 4m \cdot 4n = \{\cot\theta(1 + \sin\theta)\} \cdot \{\cot\theta(1 - \sin\theta)\} \quad [\text{উদ্দীপকের মান গুণ করে}]$</div>
+            <div class="step">$\Rightarrow 16mn = \cot^2\theta \cdot (1 + \sin\theta)(1 - \sin\theta)$</div>
+            <div class="step-explain">বন্ধনী দুটির মধ্যে বীজগণিতের সূত্র $(a+b)(a-b) = a^2 - b^2$ প্রয়োগ করি:</div>
+            <div class="step">$\Rightarrow 16mn = \cot^2\theta \cdot \left(1 - \sin^2\theta\right) \quad [\because (a+b)(a-b) = a^2 - b^2]$</div>
+            <div class="step-explain">আমরা জানি, $1 - \sin^2\theta = \cos^2\theta$। এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 16mn = \cot^2\theta \cdot \cos^2\theta$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \sqrt{16mn} = \sqrt{\cot^2\theta \cdot \cos^2\theta} \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step">$\Rightarrow 4\sqrt{mn} = \cot\theta \cdot \cos\theta \quad \text{...  ... (vii)}$</div>
+            <div class="step-explain">এখন সমীকরণ (vii) থেকে প্রাপ্ত $\cot\theta \cdot \cos\theta$ এর এই মানটি পূর্বের সমীকরণ (v) এ প্রতিস্থাপন করে বা বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = (\cot\theta \cdot \cos\theta)^2$</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = \left(4\sqrt{mn}\right)^2 \quad [\text{সমীকরণ (vii) হতে মান বসিয়ে}]$</div>
+            <div class="step-explain">ডানপক্ষের বর্গ সম্পন্ন করি। এখানে $4^2 = 16$ হবে এবং রুট ও স্কয়ার কেটে গিয়ে শুধু $mn$ থাকবে:</div>
+            <div class="step">$\Rightarrow 16\left(m^2 - n^2\right)^2 = 16mn$</div>
+            <div class="step-explain">সবশেষে সমীকরণের উভয়পক্ষকে সাধারণ ধ্রুবক সংখ্যা $16$ দ্বারা ভাগ করে বর্জন করি:</div>
+            <div class="step">$\Rightarrow \left(m^2 - n^2\right)^2 = mn \quad [\text{উভয়পক্ষকে } 16 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">সমীকরণটি চূড়ান্ত প্রমাণের রূপে চলে এসেছে।</div>
+            <div class="step"><strong>অতএব,</strong> $\left(m^2 - n^2\right)^2 = mn$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩০. $(a^2 - b^2)\sin\alpha + 2ab\cos\alpha = a^2 + b^2$ এবং $\alpha$ ধনাত্মক ও সূক্ষ্মকোণ হলে দেখাও যে, $\tan\alpha = \frac{a^2 - b^2}{2ab}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $(a^2 - b^2)\sin\alpha + 2ab\cos\alpha = a^2 + b^2$</div>
+            <div class="step-explain">বামপক্ষের $\cos\alpha$ সংবলিত পদটিকে বামপক্ষে রেখে $\sin\alpha$ সংবলিত পদটিকে ডানপক্ষে পক্ষান্তর করি (এতে চিহ্নের পরিবর্তন ঘটবে):</div>
+            <div class="step">$\Rightarrow 2ab\cos\alpha = (a^2 + b^2) - (a^2 - b^2)\sin\alpha \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">যেহেতু প্রমাণের রাশিতে কোনো রুট বা ত্রিকোণমিতিক অসমতা নেই এবং আমাদের $\tan\alpha$-এ পৌঁছাতে হবে, তাই সমীকরণটির উভয়পক্ষকে বর্গ (Square) করি:</div>
+            <div class="step">$\Rightarrow (2ab\cos\alpha)^2 = \left\{(a^2 + b^2) - (a^2 - b^2)\sin\alpha\right\}^2 \quad [\text{উভয়পক্ষকে বর্গ করে}]$</div>
+            <div class="step-explain">বামপক্ষের বর্গ সম্পন্ন করি এবং ডানপক্ষের রাশিতে বীজগণিতের সূত্র $(a-b)^2 = a^2 - 2ab + b^2$ প্রয়োগ করি (এখানে প্রথম পদ $a = a^2 + b^2$ এবং দ্বিতীয় পদ $b = (a^2 - b^2)\sin\alpha$):</div>
+            <div class="step">$\Rightarrow 4a^2b^2\cos^2\alpha = (a^2 + b^2)^2 - 2 \cdot (a^2 + b^2) \cdot (a^2 - b^2)\sin\alpha + (a^2 - b^2)^2\sin^2\alpha$</div>
+            <div class="step-explain">পুরো সমীকরণটিকে একটি চলক $\sin\alpha$-তে রূপান্তর করার জন্য বামপক্ষের $\cos^2\alpha$-কে সূত্রে ভেঙে লিখি। আমরা জানি, $\cos^2\alpha = 1 - \sin^2\alpha$। ডানপক্ষের মাঝের পদে বীজগণিতের সূত্র $(a+b)(a-b) = a^2 - b^2$ প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow 4a^2b^2 \cdot \left(1 - \sin^2\alpha\right) = (a^2 + b^2)^2 - 2\left\{(a^2)^2 - (b^2)^2\right\}\sin\alpha + (a^2 - b^2)^2\sin^2\alpha \quad [\because \cos^2\alpha = 1 - \sin^2\alpha]$</div>
+            <div class="step">$\Rightarrow 4a^2b^2 - 4a^2b^2\sin^2\alpha = (a^2 + b^2)^2 - 2(a^4 - b^4)\sin\alpha + (a^2 - b^2)^2\sin^2\alpha \quad [\text{বামপক্ষ গুণ করে}]$</div>
+            <div class="step-explain">এবার সমীকরণের সব পদকে ডানপক্ষে পক্ষান্তর করে সাজিয়ে একপাশে $0$ (শূন্য) করি:</div>
+            <div class="step">$\Rightarrow 0 = (a^2 - b^2)^2\sin^2\alpha + 4a^2b^2\sin^2\alpha - 2(a^4 - b^4)\sin\alpha + (a^2 + b^2)^2 - 4a^2b^2 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">সমীকরণটিকে সোজা করে লিখি এবং $\sin^2\alpha$ সংবলিত প্রথম দুটি পদ থেকে $\sin^2\alpha$ কমন নিই:</div>
+            <div class="step">$\Rightarrow \left\{(a^2 - b^2)^2 + 4a^2b^2\right\}\sin^2\alpha - 2(a^4 - b^4)\sin\alpha + \left\{(a^2 + b^2)^2 - 4a^2b^2\right\} = 0$</div>
+            <div class="step-explain">বীজগণিতের অনুসিদ্ধান্ত অনুযায়ী আমরা জানি: $(a-b)^2 + 4ab = (a+b)^2$ এবং $(a+b)^2 - 4ab = (a-b)^2$। প্রথম বন্ধনী এবং শেষ বন্ধনীর ভেতরের রাশিতে যথাক্রমে এই অনুসিদ্ধান্তগুলো প্রয়োগ করি (এখানে $a$ এর জায়গায় $a^2$ এবং $b$ এর জায়গায় $b^2$ আছে):</div>
+            <div class="step">$\Rightarrow (a^2 + b^2)^2\sin^2\alpha - 2(a^2 + b^2)(a^2 - b^2)\sin\alpha + (a^2 - b^2)^2 = 0  \quad [\text{অনুসিদ্ধান্ত প্রয়োগ করে এবং মাঝের পদ ভেঙে}]$</div>
+            <div class="step-explain">রাশিটিকে পূর্ণবর্গ আকারে সাজানোর জন্য সূচকের নিয়মে প্রথম পদটিকে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow \left\{(a^2 + b^2)\sin\alpha\right\}^2 - 2 \cdot \left\{(a^2 + b^2)\sin\alpha\right\} \cdot (a^2 - b^2) + (a^2 - b^2)^2 = 0$</div>
+            <div class="step-explain">এটি বীজগণিতের $x^2 - 2xy + y^2 = (x-y)^2$ সূত্রের রূপে আছে, যেখানে $x = (a^2 + b^2)\sin\alpha$ এবং $y = a^2 - b^2$। সূত্রটি প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow \left\{(a^2 + b^2)\sin\alpha - (a^2 - b^2)\right\}^2 = 0 \quad [\because x^2 - 2xy + y^2 = (x-y)^2]$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow (a^2 + b^2)\sin\alpha - (a^2 - b^2) = 0 \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">বামপক্ষের $-(a^2 - b^2)$ পদটিকে ডানপক্ষে পক্ষান্তর করে পাই:</div>
+            <div class="step">$\Rightarrow (a^2 + b^2)\sin\alpha = a^2 - b^2 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">বামপক্ষের গুণিতক রাশি $(a^2 + b^2)$-কে ডানপক্ষের হরে পক্ষান্তর করে আমরা $\sin\alpha$-এর মান পেয়ে যাই:</div>
+            <div class="step">$\Rightarrow \sin\alpha = \frac{a^2 - b^2}{a^2 + b^2} \quad \text{...  ... (i) [পক্ষান্তর করে]}$</div>
+            <div class="step-explain">আমরা $\sin\alpha$-এর মান পেয়েছি। এবার $\tan\alpha$ বের করতে আমাদের $\cos\alpha$-এর মানও প্রয়োজন। আমরা জানি, $\cos\alpha = \sqrt{1 - \sin^2\alpha}$ (যেহেতু $\alpha$ ধনাত্মক ও সূক্ষ্মকোণ, তাই মানটি ধনাত্মক)। সমীকরণ (i) থেকে প্রাপ্ত মানটি এখানে বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \cos\alpha = \sqrt{1 - \left(\frac{a^2 - b^2}{a^2 + b^2}\right)^2} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \cos\alpha = \sqrt{1 - \frac{(a^2 - b^2)^2}{(a^2 + b^2)^2}}$</div>
+            <div class="step-explain">রুটের ভেতরের ভগ্নাংশগুলোর লসাগু করি (লসাগু হবে $(a^2 + b^2)^2$):</div>
+            <div class="step">$\Rightarrow \cos\alpha = \sqrt{\frac{(a^2 + b^2)^2 - (a^2 - b^2)^2}{(a^2 + b^2)^2}} \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">বীজগণিতের সূত্র অনুযায়ী আমরা জানি: $(a+b)^2 - (a-b)^2 = 4ab$। লবের রাশিতে এই সূত্রটি প্রয়োগ করি:</div>
+            <div class="step">$\Rightarrow \cos\alpha = \sqrt{\frac{4a^2b^2}{(a^2 + b^2)^2}} \quad [\because (x+y)^2 - (x-y)^2 = 4xy]$</div>
+            <div class="step-explain">এবার লব ও হরের বর্গমূল (রুট) সম্পন্ন করি:</div>
+            <div class="step">$\Rightarrow \cos\alpha = \frac{2ab}{a^2 + b^2} \quad \text{...  ... (ii) [বর্গমূল করে]}$</div>
+            <div class="step-explain">এখন আমরা $\sin\alpha$ এবং $\cos\alpha$ উভয়ের নির্দিষ্ট মান পেয়ে গেছি। ত্রিকোণমিতির মৌলিক সম্পর্ক অনুযায়ী আমরা জানি, $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$। সমীকরণ (i) ও (ii) এর প্রাপ্ত মান এখানে ব্যবহার করে পাই:</div>
+            <div class="step">$\Rightarrow \tan\alpha = \frac{\frac{a^2 - b^2}{a^2 + b^2}}{\frac{2ab}{a^2 + b^2}} \quad [\because \tan\alpha = \frac{\sin\alpha}{\cos\alpha} \text{ মান বসিয়ে}]$</div>
+            <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করার জন্য লবের ভগ্নাংশটিকে ঠিক রেখে, হরের ভগ্নাংশটিকে উল্টিয়ে গুণ আকারে লিখি:</div>
+            <div class="step">$\Rightarrow \tan\alpha = \frac{a^2 - b^2}{a^2 + b^2} \cdot \frac{a^2 + b^2}{2ab} \quad [\text{গুণ আকারে উল্টিয়ে}]$</div>
+            <div class="step-explain">লব ও হরের সাধারণ রাশি $(a^2 + b^2)$ কাটাকাটি করে বর্জন করি:</div>
+            <div class="step">$\Rightarrow \tan\alpha = \frac{a^2 - b^2}{2ab} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">সমীকরণটি চূড়ান্ত প্রমাণের রূপে চলে এসেছে।</div>
+            <div class="step"><strong>অতএব,</strong> $\tan\alpha = \frac{a^2 - b^2}{2ab}$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩১. যদি $\cos\alpha + \sec\alpha = \frac{5}{2}$ হয় তবে প্রমাণ কর যে, $\cos^n\alpha + \sec^n\alpha = 2^n + 2^{-n}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\cos\alpha + \sec\alpha = \frac{5}{2}$</div>
+            <div class="step-explain">সমীকরণটিকে এক চলকে রূপান্তর করার জন্য আমরা জানি বিপরীত অনুপাতের সূত্র অনুযায়ী: $\sec\alpha = \frac{1}{\cos\alpha}$। এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \cos\alpha + \frac{1}{\cos\alpha} = \frac{5}{2} \quad [\because \sec\alpha = \frac{1}{\cos\alpha}]$</div>
+            <div class="step-explain">এবার বামপক্ষের পদগুলোর লসাগু করি (এখানে লসাগু হবে $\cos\alpha$):</div>
+            <div class="step">$\Rightarrow \frac{\cos^2\alpha + 1}{\cos\alpha} = \frac{5}{2} \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow 2 \cdot \left(\cos^2\alpha + 1\right) = 5 \cdot \cos\alpha \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step">$\Rightarrow 2\cos^2\alpha + 2 = 5\cos\alpha \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">ডানপক্ষের $5\cos\alpha$ পদটিকে বামপক্ষে পক্ষান্তর করি এবং ঘাতের ক্রমানুসারে সাজিয়ে লিখি (এতে $+5\cos\alpha$ পরিবর্তিত হয়ে $-5\cos\alpha$ হবে):</div>
+            <div class="step">$\Rightarrow 2\cos^2\alpha - 5\cos\alpha + 2 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">এখন বামপক্ষের রাশিটিকে মিডল টার্ম (Middle-term factorization) বা উৎপাদকে বিশ্লেষণ করার জন্য মাঝের $-5\cos\alpha$ পদটিকে ভেঙে $-4\cos\alpha - \cos\alpha$ আকারে লিখি:</div>
+            <div class="step">$\Rightarrow 2\cos^2\alpha - 4\cos\alpha - \cos\alpha + 2 = 0 \quad [\text{মিডল টার্ম করে}]$</div>
+            <div class="step-explain">প্রথম দুটি পদ থেকে $2\cos\alpha$ এবং পরের দুটি পদ থেকে $-1$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 2\cos\alpha \cdot \left(\cos\alpha - 2\right) - 1 \cdot \left(\cos\alpha - 2\right) = 0 \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">এবার সাধারণ উৎপাদক $\left(\cos\alpha - 2\right)$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \left(\cos\alpha - 2\right) \cdot \left(2\cos\alpha - 1\right) = 0$</div>
+            <div class="step-explain">আমরা জানি, দুটি রাশির গুণফল শূন্য হলে তারা পৃথক পৃথকভাবে শূন্য হয়। সুতরাং, হয়:</div>
+            <div class="step">$\cos\alpha - 2 = 0$</div>
+            <div class="step">$\Rightarrow \cos\alpha = 2 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">কিন্তু আমরা জানি, $\cos$-এর মান কখনো $1$ এর চেয়ে বড় হতে পারে না (অর্থাৎ, $-1 \le \cos\alpha \le 1$)। তাই এই মানটি গ্রহণযোগ্য নয়।</div>
+            <div class="step">$\therefore \cos\alpha = 2 \quad [\text{যা গ্রহণযোগ্য নয়}]$</div>
+            <div class="step-explain">অথবা, দ্বিতীয় উৎপাদকটি শূন্য ধরে পাই:</div>
+            <div class="step">$2\cos\alpha - 1 = 0$</div>
+            <div class="step">$\Rightarrow 2\cos\alpha = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow \cos\alpha = \frac{1}{2} \quad \text{...  ... (i) [ভাগ করে]}$</div>
+            <div class="step-explain">আমরা $\cos\alpha$-এর একটি নির্দিষ্ট মান পেয়েছি। এবার $\sec\alpha$-এর মান বের করার জন্য সমীকরণ (i)-কে ব্যস্তকরণ বা উল্টিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\cos\alpha} = 2 \quad [\text{ব্যস্তকরণ করে}]$</div>
+            <div class="step">$\Rightarrow \sec\alpha = 2 \quad \text{...  ... (ii)} \quad [\because \sec\alpha = \frac{1}{\cos\alpha}]$</div>
+            <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে সমীকরণ (i) ও (ii) থেকে প্রাপ্ত মানগুলো বসাই:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \cos^n\alpha + \sec^n\alpha$</div>
+            <div class="step">$= (\cos\alpha)^n + (\sec\alpha)^n$</div>
+            <div class="step-explain">এখন $\cos\alpha = \frac{1}{2}$ এবং $\sec\alpha = 2$ মান দুটি প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$= \left(\frac{1}{2}\right)^n + (2)^n \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">সূচকের নিয়ম অনুযায়ী $\left(\frac{1}{2}\right)^n$-কে ভেঙে $\frac{1^n}{2^n}$ অর্থাৎ $\frac{1}{2^n}$ লিখতে পারি:</div>
+            <div class="step">$= \frac{1}{2^n} + 2^n$</div>
+            <div class="step-explain">আমরা জানি, সূচকের ঋণাত্মক নিয়ম অনুযায়ী $\frac{1}{2^n} = 2^{-n}$ হয়। এই রূপান্তরটি করে পাই:</div>
+            <div class="step">$= 2^{-n} + 2^n \quad [\because \frac{1}{a^n} = a^{-n}]$</div>
+            <div class="step-explain">পদ দুটিকে সাজিয়ে লিখলে প্রমাণের ডানপক্ষের সাথে হুবহু মিলে যায়:</div>
+            <div class="step">$= 2^n + 2^{-n}$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\cos^n\alpha + \sec^n\alpha = 2^n + 2^{-n}$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩২. $f(\theta) = \frac{1 + \cos^2\theta}{\cos\theta}$, যদি $f(\theta) = \frac{5}{2}$ হলে দেখাও যে, $\cos^n\theta + \sec^n\theta = 2^n + 2^{-n}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া ফাংশনটি এবং শর্তটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $f(\theta) = \frac{1 + \cos^2\theta}{\cos\theta}$</div>
+            <div class="step">এবং $f(\theta) = \frac{5}{2}$</div>
+            <div class="step-explain">যেহেতু উভয় সমীকরণেই $f(\theta)$ এর মান দেওয়া আছে, তাই এদের তুলনা করে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1 + \cos^2\theta}{\cos\theta} = \frac{5}{2}$</div>
+            <div class="step-explain">এখন সমীকরণটির উভয়পক্ষকে আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করে পাই:</div>
+            <div class="step">$\Rightarrow 2 \cdot \left(1 + \cos^2\theta\right) = 5 \cdot \cos\theta \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step">$\Rightarrow 2 + 2\cos^2\theta = 5\cos\theta \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">ডানপক্ষের $5\cos\theta$ পদটিকে বামপক্ষে পক্ষান্তর করি এবং ঘাতের বড় থেকে ছোট ক্রমানুসারে সাজিয়ে লিখি (এতে প্লাস চিহ্নটি পরিবর্তিত হয়ে মাইনাস হবে):</div>
+            <div class="step">$\Rightarrow 2\cos^2\theta - 5\cos\theta + 2 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">এখন বামপক্ষের ত্রিপদী রাশিটিকে মিডল টার্ম (Middle-term factorization) বা উৎপাদকে বিশ্লেষণ করার জন্য মাঝের $-5\cos\theta$ পদটিকে ভেঙে $-4\cos\theta - \cos\theta$ আকারে লিখি:</div>
+            <div class="step">$\Rightarrow 2\cos^2\theta - 4\cos\theta - \cos\theta + 2 = 0 \quad [\text{মিডল টার্ম করে}]$</div>
+            <div class="step-explain">প্রথম দুটি পদ থেকে $2\cos\theta$ এবং পরের দুটি পদ থেকে $-1$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow 2\cos\theta \cdot \left(\cos\theta - 2\right) - 1 \cdot \left(\cos\theta - 2\right) = 0 \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">এবার সাধারণ উৎপাদক $\left(\cos\theta - 2\right)$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \left(\cos\theta - 2\right) \cdot \left(2\cos\theta - 1\right) = 0$</div>
+            <div class="step-explain">আমরা জানি, দুটি রাশির গুণফল শূন্য হলে তারা পৃথক পৃথকভাবে শূন্য হয়। সুতরাং, হয়:</div>
+            <div class="step">$\Rightarrow \cos\theta - 2 = 0$</div>
+            <div class="step">$\Rightarrow \cos\theta = 2 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">কিন্তু আমরা জানি, $\cos$-এর মান কখনো $1$ এর চেয়ে বড় হতে পারে না (অর্থাৎ, $-1 \le \cos\theta \le 1$)। তাই এই মানটি গ্রহণযোগ্য নয়।</div>
+            <div class="step">$\therefore \cos\theta = 2 \quad [\text{যা গ্রহণযোগ্য নয়}]$</div>
+            <div class="step-explain">অথবা, দ্বিতীয় উৎপাদকটি শূন্য ধরে পাই:</div>
+            <div class="step">$\Rightarrow \cos\theta - 1 = 0$</div>
+            <div class="step">$\Rightarrow 2\cos\theta = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow \cos\theta = \frac{1}{2} \quad \text{...  ... (i) [ভাগ করে]}$</div>
+            <div class="step-explain">আমরা $\cos\theta$-এর একটি নির্দিষ্ট মান পেয়েছি। এবার $\sec\theta$-এর মান বের করার জন্য সমীকরণ (i)-কে ব্যস্তকরণ বা উল্টিয়ে পাই, কারণ আমরা জানি $\sec\theta = \frac{1}{\cos\theta}$:</div>
+            <div class="step">$\Rightarrow \frac{1}{\cos\theta} = 2 \quad [\text{ব্যস্তকরণ করে}]$</div>
+            <div class="step">$\Rightarrow \sec\theta = 2 \quad \text{...  ... (ii)} \quad [\because \sec\theta = \frac{1}{\cos\theta}]$</div>
+            <div class="step-explain">এখন যে রাশিটি প্রমাণ করতে হবে তার বামপক্ষ (L.H.S.) লিখে নিই:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \cos^n\theta + \sec^n\theta$</div>
+            <div class="step">$= (\cos\theta)^n + (\sec\theta)^n$</div>
+            <div class="step-explain">এবার সমীকরণ (i) ও (ii) থেকে প্রাপ্ত $\cos\theta = \frac{1}{2}$ এবং $\sec\theta = 2$ মান দুটি বামপক্ষে প্রতিস্থাপন করি:</div>
+            <div class="step">$= \left(\frac{1}{2}\right)^n + (2)^n \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">সূচকের নিয়ম অনুযায়ী $\left(\frac{1}{2}\right)^n$-কে ভেঙে $\frac{1^n}{2^n}$ অর্থাৎ $\frac{1}{2^n}$ আকারে লিখি:</div>
+            <div class="step">$= \frac{1}{2^n} + 2^n$</div>
+            <div class="step-explain">আমরা জানি, সূচকের ঋণাত্মক নিয়ম অনুযায়ী $\frac{1}{2^n} = 2^{-n}$ হয়। এই রূপান্তরটি করে পাই:</div>
+            <div class="step">$= 2^{-n} + 2^n \quad [\because \frac{1}{a^n} = a^{-n}]$</div>
+            <div class="step-explain">পদ দুটিকে সাজিয়ে লিখলে তা প্রমাণের ডানপক্ষের সাথে হুবহু মিলে যায়:</div>
+            <div class="step">$= 2^n + 2^{-n}$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, সমীকরণের বামপক্ষ এবং ডানপক্ষ সমান দেখানো হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\cos^n\theta + \sec^n\theta = 2^n + 2^{-n}$ (দেখানো হলো)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩৩. $\sin x + 16\cosec x = 8$ হলে প্রমাণ কর যে, $\sin^n x + \cosec^n x = 2^{2n} + 2^{-2n}$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\sin x + 16\cosec x = 8$</div>
+            <div class="step-explain">সমীকরণটিকে এক চলকে রূপান্তর করার জন্য বিপরীত অনুপাতের সূত্র ব্যবহার করি। আমরা জানি, $\cosec x = \frac{1}{\sin x}$। এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \sin x + 16 \cdot \left(\frac{1}{\sin x}\right) = 8 \quad [\because \cosec x = \frac{1}{\sin x}]$</div>
+            <div class="step">$\Rightarrow \sin x + \frac{16}{\sin x} = 8$</div>
+            <div class="step-explain">এবার বামপক্ষের পদগুলোর লসাগু করি (এখানে লসাগু হবে $\sin x$):</div>
+            <div class="step">$\Rightarrow \frac{\sin^2 a + 16}{\sin x} = 8 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করে হরকে ডানপক্ষের ৮-এর সাথে গুণ করি:</div>
+            <div class="step">$\Rightarrow \sin^2 x + 16 = 8\sin x \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step-explain">ডানপক্ষের $8\sin x$ পদটিকে বামপক্ষে পক্ষান্তর করি এবং ঘাতের ক্রমানুসারে সাজিয়ে লিখি (এতে প্লাস চিহ্নটি পরিবর্তিত হয়ে মাইনাস হবে):</div>
+            <div class="step">$\Rightarrow \sin^2 x - 8\sin x + 16 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">রাশিটিকে পূর্ণবর্গ আকারে সাজানোর জন্য বর্গের সূত্রের রূপে ভেঙে লিখি, যেখানে $16$ কে $(4)^2$ আকারে প্রকাশ করা যায়:</div>
+            <div class="step">$\Rightarrow (\sin x)^2 - 2 \cdot \sin x \cdot 4 + (4)^2 = 0$</div>
+            <div class="step-explain">এটি বীজগণিতের $a^2 - 2ab + b^2 = (a-b)^2$ সূত্রের রূপে আছে, যেখানে $a = \sin x$ এবং $b = 4$। সূত্রটি প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow (\sin x - 4)^2 = 0 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \sin x - 4 = 0 \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">বামপক্ষের $-4$ পদটিকে ডানপক্ষে পক্ষান্তর করে আমরা $\sin x$-এর মান পেয়ে যাই:</div>
+            <div class="step">$\Rightarrow \sin x = 4 \quad \text{...  ... (i) [পক্ষান্তর করে]}$</div>
+            <div class="step-explain">এবার $\cosec x$-এর মান বের করার জন্য সমীকরণ (i)-কে ব্যস্তকরণ বা উল্টিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\sin x} = \frac{1}{4} \quad [\text{ব্যস্তকরণ করে}]$</div>
+            <div class="step">$\Rightarrow \cosec x = \frac{1}{4} \quad \text{...  ... (ii)} \quad [\because  \cosec x = \frac{1}{\sin x}]$</div>
+            <div class="step-explain">এখন যে রাশিটি প্রমাণ করতে হবে তার বামপক্ষ (L.H.S.) লিখে নিই:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \sin^n x + \cosec^n x$</div>
+            <div class="step">$= (\sin x)^n + (\cosec x)^n$</div>
+            <div class="step-explain">এবার সমীকরণ (i) ও (ii) থেকে প্রাপ্ত $\sin x = 4$ এবং $\cosec x = \frac{1}{4}$ মান দুটি প্রতিস্থাপন করি:</div>
+            <div class="step">$= (4)^n + \left(\frac{1}{4}\right)^n \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">ভিত্তি বা বেসগুলোকে প্রমাণের অনুরূপ করার জন্য $4$-কে সূচকের নিয়মে $2^2$ আকারে ভেঙে লিখি:</div>
+            <div class="step">$= \left(2^2\right)^n + \left(\frac{1}{2^2}\right)^n$</div>
+            <div class="step-explain">পাওয়ারের ওপর পাওয়ার থাকলে তা গুণ হয়, সেই নিয়ম অনুযায়ী $2 \cdot n = 2n$ করে পাই:</div>
+            <div class="step">$= 2^{2n} + \frac{1}{2^{2n}}$</div>
+            <div class="step-explain">আমরা জানি, সূচকের ঋণাত্মক নিয়ম অনুযায়ী $\frac{1}{a^m} = a^{-m}$ হয়। এই রূপান্তরটি করে পাই:</div>
+            <div class="step">$= 2^{2n} + 2^{-2n} \quad [\because \frac{1}{2^{2n}} = 2^{-2n}]$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, সমীকরণের বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\sin^n x + \cosec^n x = 2^{2n} + 2^{-2n}$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩৪. যদি $\sin\alpha + \cosec\alpha = 2$ হয়, তবে প্রমাণ কর যে, $\sin^n\alpha + \cosec^n\alpha = 2$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে উদ্দীপকে দেওয়া সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\sin\alpha + \cosec\alpha = 2$</div>
+            <div class="step-explain">সমীকরণটিকে এক চলকে রূপান্তর করার জন্য বিপরীত অনুপাতের সূত্র ব্যবহার করি। আমরা জানি, $\cosec\alpha = \frac{1}{\sin\alpha}$। এই মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \sin\alpha + \frac{1}{\sin\alpha} = 2 \quad [\because \cosec\alpha = \frac{1}{\sin\alpha}]$</div>
+            <div class="step-explain">এবার বামপক্ষের পদগুলোর লসাগু করি (এখানে লসাগু হবে $\sin\alpha$):</div>
+            <div class="step">$\Rightarrow \frac{\sin^2\alpha + 1}{\sin\alpha} = 2 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করে হরকে ডানপক্ষের ২-এর সাথে গুণ করি:</div>
+            <div class="step">$\Rightarrow \sin^2\alpha + 1 = 2\sin\alpha \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step-explain">ডানপক্ষের $2\sin\alpha$ পদটিকে বামপক্ষে পক্ষান্তর করি এবং ঘাতের ক্রমানুসারে সাজিয়ে লিখি (এতে প্লাস চিহ্নটি পরিবর্তিত হয়ে মাইনাস হবে):</div>
+            <div class="step">$\Rightarrow \sin^2\alpha - 2\sin\alpha + 1 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">রাশিটিকে পূর্ণবর্গ আকারে সাজানোর জন্য বর্গের সূত্রের রূপে ভেঙে লিখি, যেখানে $1$ কে $(1)^2$ আকারে প্রকাশ করা যায়:</div>
+            <div class="step">$\Rightarrow (\sin\alpha)^2 - 2 \cdot \sin\alpha \cdot 1 + (1)^2 = 0$</div>
+            <div class="step-explain">এটি বীজগণিতের $a^2 - 2ab + b^2 = (a-b)^2$ সূত্রের রূপে আছে, যেখানে $a = \sin\alpha$ এবং $b = 1$। সূত্রটি প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow (\sin\alpha - 1)^2 = 0 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">উভয়পক্ষের বর্গমূল (Square Root) করে পাই:</div>
+            <div class="step">$\Rightarrow \sin\alpha - 1 = 0 \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">বামপক্ষের $-1$ পদটিকে ডানপক্ষে পক্ষান্তর করে আমরা $\sin\alpha$-এর মান পেয়ে যাই:</div>
+            <div class="step">$\Rightarrow \sin\alpha = 1 \quad \text{...  ... (i) [পক্ষান্তর করে]}$</div>
+            <div class="step-explain">এবার $\cosec\alpha$-এর মান বের করার জন্য সমীকরণ (i)-কে ব্যস্তকরণ বা উল্টিয়ে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\sin\alpha} = \frac{1}{1}$</div>
+            <div class="step">$\Rightarrow \cosec\alpha = 1 \quad \text{...  ... (ii)} \quad [\because \cosec\alpha = \frac{1}{\sin\alpha}]$</div>
+            <div class="step-explain">এখন যে রাশিটি প্রমাণ করতে হবে তার বামপক্ষ (L.H.S.) লিখে নিই:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= \sin^n\alpha + \cosec^n\alpha$</div>
+            <div class="step">$= (\sin\alpha)^n + (\cosec\alpha)^n$</div>
+            <div class="step-explain">এবার সমীকরণ (i) ও (ii) থেকে প্রাপ্ত $\sin\alpha = 1$ এবং $\cosec\alpha = 1$ মান দুটি প্রতিস্থাপন করি বা বসাই:</div>
+            <div class="step">$= (1)^n + (1)^n \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">আমরা জানি, ১ (one) এর ওপর যেকোনো পাওয়ার বা ঘাত ($n$) থাকুক না কেন, তার মান সবসময় ১-ই হয় (অর্থাৎ $1^n = 1$)।</div>
+            <div class="step">$= 1 + 1 \quad [\because 1^n = 1]$</div>
+            <div class="step-explain">সংখ্যা দুটি যোগ করি:</div>
+            <div class="step">$= 2$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, সমীকরণের বামপক্ষ এবং ডানপক্ষ সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $\sin^n\alpha + \cosec^n\alpha = 2$ (প্রমাণিত)</div>
+        </div><div class="problem-card">
+        
+        
+        <div class="problem-title">৩৫. যদি $\cot A + \cot B + \cot C = 0$ হয়, তবে প্রমাণ কর যে, $(\Sigma\tan A)^2 = \Sigma\tan^2 A$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমেই প্রমাণের সুবিধার্থে সিগমা ($\Sigma$) সংবলিত রাশি দুটিকে বিস্তারিত রূপ বা পদে ভেঙে লিখি। আমরা জানি, ত্রিকোণমিতিতে তিনটি কোণ $A$, $B$, $C$-এর জন্য সিগমা চিহ্নের অর্থ হলো সমজাতীয় পদগুলোর সমষ্টি:</div>
+            <div class="step">$\Sigma\tan A = \tan A + \tan B + \tan C$</div>
+            <div class="step-explain">এবং বর্গের সিগমা রাশির বিস্তারিত রূপ হবে:</div>
+            <div class="step">$\Sigma\tan^2 A = \tan^2 A + \tan^2 B + \tan^2 C$</div>
+            <div class="step-explain">এখন উদ্দীপকে দেওয়া শর্ত বা সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\cot A + \cot B + \cot C = 0$</div>
+            <div class="step-explain">সমীকরণটিকে $\tan$ চলকে রূপান্তর করার জন্য আমরা জানি বিপরীত অনুপাতের সূত্র অনুযায়ী: $\cot\theta = \frac{1}{\tan\theta}$। এই সূত্রটি প্রতিটি পদে প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\tan A} + \frac{1}{\tan B} + \frac{1}{\tan C} = 0 \quad [\because \cot\theta = \frac{1}{\tan\theta}]$</div>
+            <div class="step-explain">এবার বামপক্ষের ভগ্নাংশ তিনটির হরগুলোর লসাগু করি। এখানে লসাগু হবে $\tan A \cdot \tan B \cdot \tan C$:</div>
+            <div class="step">$\Rightarrow \frac{\tan B \cdot \tan C + \tan A \cdot \tan C + \tan A \cdot \tan B}{\tan A \cdot \tan B \cdot \tan C} = 0 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">লবের পদগুলোকে চক্রক্রমিক নিয়মে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow \frac{\tan A \cdot \tan B + \tan B \cdot \tan C + \tan C \cdot \tan A}{\tan A \cdot \tan B \cdot \tan C} = 0$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করি। হরের রাশিটি ডানপক্ষের শূন্য ($0$) এর সাথে গুণ হয়ে সম্পূর্ণ শূন্য হয়ে যাবে:</div>
+            <div class="step">$\Rightarrow \tan A \cdot \tan B + \tan B \cdot \tan C + \tan C \cdot \tan A = 0 \cdot (\tan A \cdot \tan B \cdot \tan C) \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step">$\Rightarrow \tan A \cdot \tan B + \tan B \cdot \tan C + \tan C \cdot \tan A = 0 \quad \text{...  ... (i)}$</div>
+            <div class="step-explain">আমরা একটি গুরুত্বপূর্ণ সম্পর্ক পেয়ে গেছি। এবার প্রমাণের বামপক্ষ (L.H.S.) লিখে সমাধান শুরু করি:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= (\Sigma\tan A)^2$</div>
+            <div class="step-explain">সিগমা রাশির বিস্তারিত মানটি বসিয়ে পাই:</div>
+            <div class="step">$= \left(\tan A + \tan B + \tan C\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">এবার বীজগণিতের তিনটি পদের বর্গের সূত্র প্রয়োগ করি। আমরা জানি: $(x+y+z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$। এই সূত্রটি এখানে ব্যবহার করে পাই:</div>
+            <div class="step">$= \tan^2 A + \tan^2 B + \tan^2 C + 2 \cdot \left(\tan a \cdot \tan B + \tan B \cdot \tan C + \tan C \cdot \tan A\right) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">এখন সমীকরণ (i) থেকে প্রাপ্ত মান অনুযায়ী বন্ধনীর ভেতরের অংশটির পরিবর্তে $0$ (শূন্য) বসিয়ে পাই:</div>
+            <div class="step">$= \tan^2 A + \tan^2 B + \tan^2 C + 2 \cdot (0) \quad [\text{সমীকরণ (i) হতে মান বসিয়ে}]$</div>
+            <div class="step">$= \tan^2 A + \tan^2 B + \tan^2 C + 0$</div>
+            <div class="step">$= \tan^2 A + \tan^2 B + \tan^2 C$</div>
+            <div class="step-explain">শুরুতেই আমরা দেখেছি যে $\tan^2 A + \tan^2 B + \tan^2 C$ হলো $\Sigma\tan^2 A$ এর বিস্তারিত রূপ। সুতরাং, এটিকে পুনরায় সিগমা আকারে সংকুচিত করে পাই:</div>
+            <div class="step">$= \Sigma\tan^2 A$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, বামপক্ষ এবং ডানপক্ষ পরস্পর সমান প্রমাণিত হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $(\Sigma\tan A)^2 = \Sigma\tan^2 A$ (প্রমাণিত)</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩৬. যদি $\cosec A + \cosec B + \cosec C = 0$ হয়, তবে দেখাও যে, $(\Sigma\sin A)^2 = \Sigma\sin^2 A$</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমেই প্রমাণের সুবিধার্থে সিগমা ($\Sigma$) সংবলিত রাশি দুটিকে বিস্তারিত রূপ বা পদে ভেঙে লিখি। ত্রিকোণমিতিতে তিনটি কোণ $A$, $B$, $C$-এর জন্য সিগমা চিহ্নের অর্থ হলো সমজাতীয় পদগুলোর সমষ্টি:</div>
+            <div class="step">$\Sigma\sin A = \sin A + \sin B + \sin C$</div>
+            <div class="step-explain">এবং বর্গের সিগমা রাশির বিস্তারিত রূপ হবে:</div>
+            <div class="step">$\Sigma\sin^2 A = \sin^2 A + \sin^2 B + \sin^2 C$</div>
+            <div class="step-explain">এখন উদ্দীপকে দেওয়া শর্ত বা সমীকরণটি লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, $\cosec A + \cosec B + \cosec C = 0$</div>
+            <div class="step-explain">সমীকরণটিকে $\sin$ চলকে রূপান্তর করার জন্য আমরা জানি বিপরীত অনুপাতের সূত্র অনুযায়ী: $\cosec\theta = \frac{1}{\sin\theta}$। এই সূত্রটি প্রতিটি পদে প্রয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow \frac{1}{\sin A} + \frac{1}{\sin B} + \frac{1}{\sin C} = 0 \quad [\because \cosec\theta = \frac{1}{\sin\theta}]$</div>
+            <div class="step-explain">এবার বামপক্ষের ভগ্নাংশ তিনটির হরগুলোর লসাগু করি। এখানে লসাগু হবে $\sin A \cdot \sin B \cdot \sin C$:</div>
+            <div class="step">$\Rightarrow \frac{\sin B \cdot \sin C + \sin A \cdot \sin C + \sin A \cdot \sin B}{\sin A \cdot \sin B \cdot \sin C} = 0 \quad [\text{লসাগু করে}]$</div>
+            <div class="step-explain">লবের পদগুলোকে চক্রক্রমিক (Cyclic) নিয়মে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow \frac{\sin A \cdot \sin B + \sin B \cdot \sin C + \sin C \cdot \sin A}{\sin A \cdot \sin B \cdot \sin C} = 0$</div>
+            <div class="step-explain">এখন আড়-গুণন (Cross Multiplication) বা কোনাকুনি গুণ করি। হরের সম্পূর্ণ রাশিটি ডানপক্ষের শূন্য ($0$) এর সাথে গুণ হয়ে শূন্য হয়ে যাবে:</div>
+            <div class="step">$\Rightarrow \sin A \cdot \sin B + \sin B \cdot \sin C + \sin C \cdot \sin A = 0 \cdot (\sin A \cdot \sin B \cdot \sin C) \quad [\text{আড়-গুণন করে}]$</div>
+            <div class="step">$\Rightarrow \sin A \cdot \sin B + \sin B \cdot \sin C + \sin C \cdot \sin A = 0 \quad \text{...  ... (i)}$</div>
+            <div class="step-explain">আমরা একটি গুরুত্বপূর্ণ সম্পর্ক পেয়ে গেছি। এবার প্রমাণের বামপক্ষ (L.H.S.) লিখে সমাধান শুরু করি:</div>
+            <div class="step">বামপক্ষ (L.H.S.) $= (\Sigma\sin A)^2$</div>
+            <div class="step-explain">সিগমা রাশির বিস্তারিত মানটি বসিয়ে পাই:</div>
+            <div class="step">$= \left(\sin A + \sin B + \sin C\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">এবার বীজগণিতের তিনটি পদের বর্গের সূত্র প্রয়োগ করি। আমরা জানি: $(x+y+z)^2 = x^2 + y^2 + z^2 + 2(xy + yz + zx)$। এই সূত্রটি এখানে ব্যবহার করে পাই:</div>
+            <div class="step">$= \sin^2 A + \sin^2 B + \sin^2 C + 2 \cdot \left(\sin A \cdot \sin B + \sin B \cdot \sin C + \sin C \cdot \sin A\right) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+            <div class="step-explain">এখন সমীকরণ (i) থেকে প্রাপ্ত মান অনুযায়ী বন্ধনীর ভেতরের অংশটির পরিবর্তে $0$ (শূন্য) বসিয়ে পাই:</div>
+            <div class="step">$= \sin^2 A + \sin^2 B + \sin^2 C + 2 \cdot (0) \quad [\text{সমীকরণ (i) হতে মান বসিয়ে}]$</div>
+            <div class="step">$= \sin^2 A + \sin^2 B + \sin^2 C + 0$</div>
+            <div class="step">$= \sin^2 A + \sin^2 B + \sin^2 C$</div>
+            <div class="step-explain">শুরুতেই আমরা দেখেছি যে $\sin^2 A + \sin^2 B + \sin^2 C$ হলো $\Sigma\sin^2 A$ এর বিস্তারিত রূপ। সুতরাং, এটিকে পুনরায় সিগমা আকারে সংকুচিত করে পাই:</div>
+            <div class="step">$= \Sigma\sin^2 A$</div>
+            <div class="step">$= \text{ডানপক্ষ (R.H.S.)}$</div>
+            <div class="step-explain">সুতরাং, সমীকরণের বামপক্ষ এবং ডানপক্ষ পরস্পর সমান দেখানো হলো।</div>
+            <div class="step"><strong>অতএব,</strong> $(\Sigma\sin A)^2 = \Sigma\sin^2 A$ (দেখানো হলো)</div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

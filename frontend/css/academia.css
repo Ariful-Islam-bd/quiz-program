@@ -1,0 +1,448 @@
+/* frontend/css/academia.css */
+/* Version: 1.0.0 - একাডেমিয়া পেজের স্টাইল */
+
+/* ===== একাডেমিয়া পেজ ===== */
+#academiaPage {
+    padding: 20px 30px;
+    min-height: calc(100vh - 60px);
+    background: var(--bg);
+}
+
+#academiaContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== ব্রেডক্রাম্ব ===== */
+.academia-breadcrumb {
+    padding: 12px 0 16px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+    color: var(--text-light);
+}
+
+.breadcrumb-item.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.breadcrumb-link {
+    color: var(--accent);
+    cursor: pointer;
+    transition: all var(--transition);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.breadcrumb-link:hover {
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent-dark);
+}
+
+.breadcrumb-separator {
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* ===== শ্রেণি গ্রিড ===== */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.class-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 12px var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.class-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.class-card:hover::after {
+    transform: scaleX(1);
+}
+
+.class-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 30px var(--shadow);
+}
+
+.class-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.class-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.class-subjects {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.class-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 14px;
+    background: var(--accent);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* ===== বিষয় গ্রিড ===== */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    padding: 10px 0;
+}
+
+.subject-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.subject-card:hover {
+    transform: translateX(6px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px var(--shadow);
+}
+
+.subject-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px;
+    text-align: center;
+}
+
+.subject-info {
+    flex: 1;
+}
+
+.subject-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.subject-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.subject-arrow {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+}
+
+.subject-card:hover .subject-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+}
+
+/* ===== অধ্যায় লিস্ট ===== */
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.chapter-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.chapter-card:hover {
+    border-color: var(--accent);
+}
+
+.chapter-header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.chapter-header:hover {
+    background: var(--bg);
+}
+
+.chapter-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.chapter-number {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(33, 150, 243, 0.1);
+    padding: 2px 14px;
+    border-radius: 20px;
+}
+
+.chapter-name {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.chapter-toggle {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.chapter-toggle:hover {
+    background: var(--bg);
+}
+
+.chapter-toggle.open {
+    transform: rotate(180deg);
+}
+
+.chapter-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: var(--bg);
+}
+
+.chapter-body.open {
+    max-height: 800px;
+}
+
+/* ===== টপিক লিস্ট ===== */
+.topic-list {
+    padding: 12px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.topic-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    background: var(--card);
+}
+
+.topic-card:hover {
+    background: var(--card);
+    border-color: var(--accent);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.topic-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.topic-name {
+    flex: 1;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.topic-badge {
+    font-size: 0.7rem;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.topic-badge.note {
+    background: rgba(33, 150, 243, 0.12);
+    color: var(--accent);
+}
+
+.topic-badge.quiz {
+    background: rgba(76, 175, 80, 0.12);
+    color: var(--success);
+}
+
+/* ===== কন্টেন্ট ভিউয়ার ===== */
+.content-viewer {
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.content-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.content-body {
+    padding: 20px;
+    min-height: 200px;
+}
+
+/* ===== ডার্ক মোড ===== */
+body.dark .class-card {
+    background: #2d2d2d;
+}
+
+body.dark .subject-card {
+    background: #2d2d2d;
+}
+
+body.dark .chapter-card {
+    background: #2d2d2d;
+}
+
+body.dark .topic-card {
+    background: #1a1a1a;
+}
+
+body.dark .topic-card:hover {
+    background: #2d2d2d;
+}
+
+body.dark .content-viewer {
+    background: #2d2d2d;
+}
+
+body.dark .content-header {
+    background: #1a1a1a;
+}
+
+/* ===== রেসপনসিভ ===== */
+@media (max-width: 768px) {
+    #academiaPage {
+        padding: 10px 15px;
+    }
+    
+    .class-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+    }
+    
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chapter-header {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .chapter-info {
+        flex-wrap: wrap;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .class-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .class-card {
+        padding: 16px 12px;
+    }
+    
+    .class-icon {
+        font-size: 2rem;
+    }
+    
+    .class-name {
+        font-size: 0.85rem;
+    }
+    
+    .class-subjects {
+        font-size: 0.7rem;
+    }
+    
+    .topic-card {
+        padding: 8px 12px;
+    }
+}

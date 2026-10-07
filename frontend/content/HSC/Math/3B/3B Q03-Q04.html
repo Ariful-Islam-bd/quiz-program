@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B Complex</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(B)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+<div class="problem-card">
+    <div class="problem-title">৩. প্রমাণ কর বা দেখাও যে:</div>
+
+    <div class="problem-sub-title">(i) $i$ এর বর্গমূল $\pm \frac{1}{\sqrt{2}}(1 + i)$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">ধরি, প্রদত্ত রাশিটি হলো $i$। রাশিটিকে একটি পূর্ণবর্গ সূত্রে রূপান্তর করার জন্য প্রথমে এর বাইরে $\frac{1}{2}$ নিয়ে ভেতরে $2$ দ্বারা গুণ করি যেন $2i$ পাওয়া যায়।</div>
+    <div class="step">$= \frac{1}{2} \cdot (2i) \quad [\text{২ দ্বারা গুণ ও ভাগ করে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের $2i$ অংশটির সাথে ১ যোগ ও ১ বিয়োগ করি।</div>
+    <div class="step">$= \frac{1}{2} \cdot (1 + 2i - 1) \quad [\text{১ যোগ ও ১ বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুযায়ী $i^2 = -1$। সুতরাং শেষের $-1$ এর জায়গায় $i^2$ বসাই।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left(1^2 + 2 \cdot 1 \cdot i + i^2\right) \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের অংশটি এখন $a^2 + 2ab + b^2$ অর্থাৎ $(a+b)^2$ এর পূর্ণবর্গ সূত্রে রূপান্তরিত হয়েছে।</div>
+    <div class="step">$= \frac{1}{2} \cdot (1 + i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">সুতরাং, $i$ এর বর্গমূল হবে:</div>
+    <div class="step">$= \pm \sqrt{\frac{1}{2} \cdot (1 + i)^2}$</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}}(1 + i) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">অতএব, $i$ এর বর্গমূল $\pm \frac{1}{\sqrt{2}}(1 + i)$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $-i$ এর বর্গমূল $\pm \frac{1}{\sqrt{2}}(1 - i)$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত রাশিটি হলো $-i$। পূর্বের নিয়মের মতোই রাশিটিকে পূর্ণবর্গ করার জন্য প্রথমে $\frac{1}{2}$ কমন নিয়ে ভেতরে $2$ দ্বারা গুণ করি।</div>
+    <div class="step">$= \frac{1}{2} \cdot (-2i) \quad [\text{২ দ্বারা গুণ ও ভাগ করে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের $-2i$ অংশটির সাথে ১ যোগ ও ১ বিয়োগ করি।</div>
+    <div class="step">$= \frac{1}{2} \cdot (1 - 2i - 1) \quad [\text{১ যোগ ও ১ বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $i^2 = -1$। তাই শেষের $-1$ এর পরিবর্তে $i^2$ বসিয়ে পাই:</div>
+    <div class="step">$= \frac{1}{2} \cdot \left(1^2 - 2 \cdot 1 \cdot i + i^2\right) \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের অংশটি এখন $a^2 - 2ab + b^2$ অর্থাৎ $(a-b)^2$ এর সূত্রে পড়েছে।</div>
+    <div class="step">$= \frac{1}{2} \cdot (1 - i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">সুতরাং, $-i$ এর বর্গমূল হবে:</div>
+    <div class="step">$= \pm \sqrt{\frac{1}{2} \cdot (1 - i)^2}$</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}}(1 - i) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">অতএব, $-i$ এর বর্গমূল $\pm \frac{1}{\sqrt{2}}(1 - i)$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $\sqrt{i} + \sqrt{-i} = \pm\sqrt{2}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">বামপক্ষ সমাধান করার জন্য আমরা (i) ও (ii) নং উপ-প্রশ্ন থেকে পাওয়া বর্গমূলের মানগুলো ব্যবহার করতে পারি।</div>
+    <div class="step-explain">(i) নং থেকে আমরা জানি, $\sqrt{i} = \pm \frac{1}{\sqrt{2}}(1 + i)$</div>
+    <div class="step-explain">(ii) নং থেকে আমরা জানি, $\sqrt{-i} = \pm \frac{1}{\sqrt{2}}(1 - i)$</div>
+    <div class="step-explain">এখন বামপক্ষ (L.H.S.) দিয়ে শুরু করি:</div>
+    <div class="step">\text{L.H.S.} = \sqrt{i} + \sqrt{-i}</div>
+    <div class="step">$= \pm \left[ \frac{1}{\sqrt{2}}(1 + i) + \frac{1}{\sqrt{2}}(1 - i) \right] \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ উৎপাদক $\frac{1}{2}$ এর বর্গমূল অর্থাৎ $\frac{1}{\sqrt{2}}$ কমন নিই:</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}} \cdot \left( 1 + i + 1 - i \right) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরে কাল্পনিক অংশ $+i$ এবং $-i$ কাটাকাটি হয়ে যায় এবং বাস্তব অংশ $1 + 1 = 2$ থাকে।</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}} \cdot (2) \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, যেকোনো বাস্তব সংখ্যা $2$ কে লিখা যায় $\sqrt{2} \cdot \sqrt{2}$ আকারে।</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}} \cdot \left(\sqrt{2} \cdot \sqrt{2}\right) \quad [\because 2 = (\sqrt{2})^2]$</div>
+    <div class="step">$= \pm \sqrt{2} \quad [\text{লব ও হরের } \sqrt{2} \text{ কাটাকাটি করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $\sqrt{i} + \sqrt{-i} = \pm\sqrt{2}$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $\sqrt{4 + 2i} = \pm\left(\sqrt{2+\sqrt{5}} + i\sqrt{\sqrt{5}-2}\right)$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">ধরি, প্রদত্ত রাশিটি হলো $4 + 2i$। এই রাশিটিকে সরাসরি দেখেই বর্গের সূত্রে সাজানো কঠিন। তাই আমরা এটিকে ধ্রুবক ধরে সমীকরণ পদ্ধতিতে সমাধান করব।</div>
+    <div class="step-explain">মনে করি, $\sqrt{4 + 2i} = x + iy$ ---- (১ নং সমীকরণ)</div>
+    <div class="step-explain">এখন ১ নং সমীকরণের উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow 4 + 2i = (x + iy)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow 4 + 2i = x^2 + 2 \cdot x \cdot iy + (iy)^2 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 4 + 2i = x^2 + 2xyi - y^2 \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow 4 + 2i = (x^2 - y^2) + 2xyi \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$x^2 - y^2 = 4$ ---- (২ নং সমীকরণ)</div>
+    <div class="step">$2xy = 2$ ---- (৩ নং সমীকরণ)</div>
+    <div class="step-explain">বীজগণিতের বিখ্যাত অনুসিদ্ধান্ত সূত্র ব্যবহার করি: $(x^2 + y^2)^2 = (x^2 - y^2)^2 + (2xy)^2$</div>
+    <div class="step">$\Rightarrow (x^2 + y^2)^2 = (4)^2 + (2)^2 \quad [\text{২ ও ৩ নং এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow (x^2 + y^2)^2 = 16 + 4$</div>
+    <div class="step">$\Rightarrow (x^2 + y^2)^2 = 20$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = \sqrt{20} \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\sqrt{20} = \sqrt{4 \cdot 5} = 2\sqrt{5}$। বর্গসমষ্টি সর্বদা ধনাত্মক হওয়ায় কেবল পজিটিভ মান নেওয়া হলো।</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 2\sqrt{5}$ ---- (৪ নং সমীকরণ)</div>
+    <div class="step-explain">এখন ২ নং ও ৪ নং সমীকরণ যোগ করি:</div>
+    <div class="step">$(x^2 + y^2) + (x^2 - y^2) = 2\sqrt{5} + 4$</div>
+    <div class="step">$\Rightarrow 2x^2 = 2\sqrt{5} + 4 \quad [\text{যোগ করে}]$</div>
+    <div class="step">$\Rightarrow 2x^2 = 2(\sqrt{5} + 2) \quad [\text{২ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \sqrt{5} + 2 \quad [\text{উভয় পক্ষকে ২ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = 2 + \sqrt{5} \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{2 + \sqrt{5}} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">আবার ৪ নং সমীকরণ থেকে ২ নং সমীকরণ বিয়োগ করি:</div>
+    <div class="step">$(x^2 + y^2) - (x^2 - y^2) = 2\sqrt{5} - 4$</div>
+    <div class="step">$\Rightarrow 2y^2 = 2\sqrt{5} - 4 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 2y^2 = 2(\sqrt{5} - 2) \quad [\text{২ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow y^2 = \sqrt{5} - 2 \quad [\text{উভয় পক্ষকে ২ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow y = \pm \sqrt{\sqrt{5} - 2} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">যেহেতু ৩ নং সমীকরণ অনুযায়ী $2xy = 2$ (ধনাত্মক), তার অর্থ হলো $x$ এবং $y$ এর চিহ্ন একই হবে। অর্থাৎ তারা একই সাথে প্লাস বা একই সাথে মাইনাস চিহ্নের হবে।</div>
+    <div class="step-explain">সুতরাং ১ নং সমীকরণে $x$ ও $y$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\sqrt{4 + 2i} = \pm \left( \sqrt{2 + \sqrt{5}} + i\sqrt{\sqrt{5} - 2} \right)$</div>
+    <div class="step-explain">অতএব, $\sqrt{4 + 2i} = \pm\left(\sqrt{2+\sqrt{5}} + i\sqrt{\sqrt{5}-2}\right)$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩. প্রমাণ কর বা দেখাও যে:</div>
+
+    <div class="problem-sub-title">(v) $\sqrt{x + i\sqrt{1-x^2}} = \pm \frac{1}{\sqrt{2}}\left(\sqrt{1+x} + i\sqrt{1-x}\right)$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">প্রদত্ত রাশির বর্গমূল সহজে নির্ণয় করার জন্য প্রথমে রুটের ভেতরের অংশকে পূর্ণবর্গ করার চেষ্টা করি। রাশিটির বাইরে $\frac{1}{2}$ নিয়ে ভেতরে $2$ দ্বারা গুণ করি যেন সূত্রে ফেলার জন্য $2ab$ অংশটি তৈরি হয়।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left( 2x + 2i\sqrt{1-x^2} \right) \quad [\text{২ দ্বারা গুণ ও ভাগ করে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের $2x$ অংশকে আমরা লিখতে পারি $(1+x) - (1-x)$ আকারে। কারণ ব্র্যাকেট তুললে $1 + x - 1 + x = 2x$ হয়। এবং রুট ওভারের ভেতরের $1-x^2$ কে বীজগণিতীয় সূত্রে ভেঙ্গে পাই $(1+x)(1-x)$।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ (1+x) - (1-x) + 2i\sqrt{(1+x)(1-x)} \right] \quad [\text{বাস্তব ও কাল্পনিক অংশ ভেঙে}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুযায়ী $i^2 = -1$। সুতরাং মধ্যবর্তী মাইনাস চিহ্নটিকে প্লাস করতে হলে আমরা লিখতে পারি $-(1-x) = +i^2(1-x)$। আবার যেকোনো সংখ্যা $A$ কে লিখা যায় $\left(\sqrt{A}\right)^2$ আকারে।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(\sqrt{1+x}\right)^2 + 2 \cdot \sqrt{1+x} \cdot i\sqrt{1-x} + i^2\left(\sqrt{1-x}\right)^2 \right] \quad [\because i^2 = -1 \text{ এবং বর্গাকারে সাজিয়ে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(\sqrt{1+x}\right)^2 + 2 \cdot \left(\sqrt{1+x}\right) \cdot \left(i\sqrt{1-x}\right) + \left(i\sqrt{1-x}\right)^2 \right]$</div>
+    <div class="step-explain">ব্র্যাকেটের ভেতরের রাশিটি এখন $a^2 + 2ab + b^2$ অর্থাৎ $(a+b)^2$ এর পূর্ণবর্গ সূত্রে রূপান্তরিত হয়েছে। যেখানে $a = \sqrt{1+x}$ এবং $b = i\sqrt{1-x}$।</div>
+    <div class="step">$= \frac{1}{2} \cdot \left( \sqrt{1+x} + i\sqrt{1-x} \right)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">সুতরাং, প্রদত্ত রাশির বর্গমূল হবে:</div>
+    <div class="step">$\sqrt{x + i\sqrt{1-x^2}} = \pm \sqrt{\frac{1}{2} \cdot \left( \sqrt{1+x} + i\sqrt{1-x} \right)^2}$</div>
+    <div class="step">$= \pm \frac{1}{\sqrt{2}}\left(\sqrt{1+x} + i\sqrt{1-x}\right) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">অতএব, $\sqrt{x + i\sqrt{1-x^2}} = \pm \frac{1}{\sqrt{2}}\left(\sqrt{1+x} + i\sqrt{1-x}\right)$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) $(5 + 12i)^{-\frac{1}{2}} + (5 - 12i)^{-\frac{1}{2}} = \frac{6}{13}$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">আমরা জানি সূচকের নিয়ম অনুযায়ী $A^{-\frac{1}{2}} = \frac{1}{A^{\frac{1}{2}}} = \frac{1}{\sqrt{A}}$। সুতরাং বামপক্ষকে সাজিয়ে পাই:</div>
+    <div class="step">\text{L.H.S.} = \frac{1}{\sqrt{5 + 12i}} + \frac{1}{\sqrt{5 - 12i}}</div>
+    <div class="step-explain">এখন আমাদের হর দুটির বর্গমূল আলাদাভাবে নির্ণয় করতে হবে। প্রথমে $5 + 12i$ রাশিটির বর্গমূল বের করি। কাল্পনিক অংশ $12i$ কে $2ab$ আকারে ভাঙলে পাই $2 \cdot 3 \cdot 2i$। বাস্তব অংশ $5$ কে এমনভাবে ভাঙতে হবে যেন বর্গের বিয়োগফল $5$ হয়। আমরা জানি $9 - 4 = 5$।</div>
+    <div class="step">5 + 12i = 9 + 12i - 4 \quad [\text{বাস্তব অংশ ৫ কে ৯ - ৪ লিখে}]$</div>
+    <div class="step">$= 3^2 + 2 \cdot 3 \cdot (2i) + (2i)^2 \quad [\because (2i)^2 = 4i^2 = -4 \text{ বসিয়ে}]$</div>
+    <div class="step">$= (3 + 2i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step">$\therefore \sqrt{5 + 12i} = (3 + 2i) \quad [\text{বর্গমূল করে পজিটিভ মান নিয়ে}]$</div>
+    <div class="step-explain">একইভাবে, অনুবন্ধী রাশিটির ক্ষেত্রে মাইনাস চিহ্ন ব্যবহার করে পাই:</div>
+    <div class="step">5 - 12i = 9 - 12i - 4 = 3^2 - 2 \cdot 3 \cdot (2i) + (2i)^2</div>
+    <div class="step">$= (3 - 2i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step">$\therefore \sqrt{5 - 12i} = (3 - 2i) \quad [\text{বর্গমূল করে পজিটিভ মান নিয়ে}]$</div>
+    <div class="step-explain">এখন এই বর্গমূলের মানগুলো মূল বামপক্ষে বসিয়ে পাই:</div>
+    <div class="step">$= \frac{1}{3 + 2i} + \frac{1}{3 - 2i} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">ভগ্নাংশ দুটির হরগুলোর লসাগু করি। এখানে লসাগু হবে $(3 + 2i)(3 - 2i)$।</div>
+    <div class="step">$= \frac{(3 - 2i) + (3 + 2i)}{(3 + 2i)(3 - 2i)} \quad [\text{লসাগু করে}]$</div>
+    <div class="step-explain">লবে কাল্পনিক অংশ $-2i$ এবং $+2i$ কাটাকাটি হয়ে যায় এবং বাস্তব অংশ $3 + 3 = 6$ থাকে। হরে $(a+b)(a-b) = a^2 - b^2$ এর সূত্র প্রয়োগ করি।</div>
+    <div class="step">$= \frac{6}{3^2 - (2i)^2} \quad [\text{লব যোগ করে ও হরে সূত্র বসিয়ে}]$</div>
+    <div class="step">$= \frac{6}{9 - 4i^2}$</div>
+    <div class="step">$= \frac{6}{9 - 4(-1)} \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= \frac{6}{9 + 4} \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step">$= \frac{6}{13} \quad [\text{হর যোগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(5 + 12i)^{-\frac{1}{2}} + (5 - 12i)^{-\frac{1}{2}} = \frac{6}{13}$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vii) $\sqrt{i + \sqrt{i + \sqrt{i + \dots \infty}}} = \frac{1 \pm \sqrt{1 + 4i}}{2}$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">ধরি, অসীম পর্যন্ত বিস্তৃত প্রদত্ত জটিল রাশিটি হলো $y$।</div>
+    <div class="step">মনে করি, $y = \sqrt{i + \sqrt{i + \sqrt{i + \dots \infty}}}$ ---- (১ নং সমীকরণ)</div>
+    <div class="step-explain">যেহেতু রাশিটি অসীম ($\infty$) পর্যন্ত বিস্তৃত, তাই একদম বাইরের রুট ওভারের ভেতরের প্রথম $i$ বাদ দিলেও ভেতরের অবশিষ্ট অংশটি দেখতে ঠিক মূল রাশি $y$ এর মতোই হবে। সুতরাং আমরা লিখতে পারি:</div>
+    <div class="step">$\Rightarrow y = \sqrt{i + y} \quad [\text{ভেতরের অসীম অংশকে } y \text{ ধরে}]$</div>
+    <div class="step-explain">এখন সমীকরণের রুট বর্জন করার জন্য উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow y^2 = (\sqrt{i + y})^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow y^2 = i + y$</div>
+    <div class="step-explain">ডানপক্ষের সব পদ বামপক্ষে নিয়ে এসে একটি আদর্শ দ্বিঘাত সমীকরণ (Quadratic Equation) গঠন করি:</div>
+    <div class="step">$\Rightarrow y^2 - y - i = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এই সমীকরণটিকে আদর্শ দ্বিঘাত সমীকরণ $ay^2 + by + c = 0$ এর সাথে তুলনা করে পাই:</div>
+    <div class="step">এখানে, $a = 1, \quad b = -1, \quad c = -i$</div>
+    <div class="step-explain">আমরা জানি দ্বিঘাত সমীকরণের মূল বা সমাধানের সূত্র হলো: $y = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$। এই সূত্রে মানগুলো বসাই:</div>
+    <div class="step">$\Rightarrow y = \frac{-(-1) \pm \sqrt{(-1)^2 - 4 \cdot 1 \cdot (-i)}}{2 \cdot 1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow y = \frac{1 \pm \sqrt{1 - (-4i)}}{2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow y = \frac{1 \pm \sqrt{1 + 4i}}{2} \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step-explain">যেহেতু আমরা শুরুতে সম্পূর্ণ রাশিটিকে $y$ ধরেছিলাম, তাই $y$ এর প্রাপ্ত মানই হলো নির্ণেয় মান।</div>
+    <div class="step">$\therefore \sqrt{i + \sqrt{i + \sqrt{i + \dots \infty}}} = \frac{1 \pm \sqrt{1 + 4i}}{2}$</div>
+    <div class="step-explain">অতএব, $\sqrt{i + \sqrt{i + \sqrt{i + \dots \infty}}} = \frac{1 \pm \sqrt{1 + 4i}}{2}$ [দেখানো হলো]</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">৪. মান নির্ণয় কর:</div>
+
+    <div class="problem-sub-title">(i) $\sqrt[3]{i}$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">ধরি, ঘনমূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[3]{i}$</div>
+    <div class="step-explain">এখন রুট ওভার বর্জন করার জন্য উভয় পক্ষকে ঘন (cube) করি।</div>
+    <div class="step">$\Rightarrow x^3 = i \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step-explain">আমরা জানি যে, জটিল সংখ্যার ধর্ম অনুযায়ী $i^3 = i^2 \cdot i = (-1) \cdot i = -i$। সুতরাং, $i = -i^3$। এই মানটি ডানপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow x^3 = -i^3 \quad [\because i = -i^3 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^3 + i^3 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন বামপক্ষে $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow (x + i)\left(x^2 - x \cdot i + i^2\right) = 0 \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow (x + i)\left(x^2 - ix - 1\right) = 0 \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">এখানে দুটি উৎপাদকের গুণফল শূন্য, তাই তারা আলাদা আলাদাভাবে শূন্য হবে।</div>
+    <div class="step-explain">হয়,</div>
+    <div class="step">$x + i = 0$</div>
+    <div class="step">$\Rightarrow x = -i \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">অথবা,</div>
+    <div class="step">$x^2 - ix - 1 = 0$</div>
+    <div class="step-explain">এই দ্বিঘাত সমীকরণটিকে আদর্শ রূপ $ax^2 + bx + c = 0$ এর সাথে তুলনা করলে পাই: $a = 1, b = -i, c = -1$। দ্বিঘাত সমীকরণের মূল নির্ণয়ের সূত্র $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ ব্যবহার করি:</div>
+    <div class="step">$\Rightarrow x = \frac{-(-i) \pm \sqrt{(-i)^2 - 4 \cdot 1 \cdot (-1)}}{2 \cdot 1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{i \pm \sqrt{i^2 + 4}}{2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{i \pm \sqrt{-1 + 4}}{2} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow x = \frac{i \pm \sqrt{3}}{2} \quad [\text{যোগ-بিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{\pm \sqrt{3} + i}{2} \quad [\text{বাস্তব অংশ আগে সাজিয়ে}]$</div>
+    <div class="step-explain">নির্ণেয় মানসমূহ একত্রিত করে পাই:</div>
+    <div class="step">$\sqrt[3]{i} = -i, \quad \frac{\pm \sqrt{3} + i}{2}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $\sqrt[3]{-1}$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">ধরি, ঘনমূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[3]{-1}$</div>
+    <div class="step">$\Rightarrow x^3 = -1 \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step">$\Rightarrow x^3 + 1 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^3 + 1^3 = 0$</div>
+    <div class="step-explain">এখন বামপক্ষে $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow (x + 1)\left(x^2 - x \cdot 1 + 1^2\right) = 0 \quad [\text{সূত্রের সাহায্যে}]$</div>
+    <div class="step">$\Rightarrow (x + 1)\left(x^2 - x + 1\right) = 0$</div>
+    <div class="step-explain">সুতরাং আলাদা আলাদাভাবে শূন্য ধরে পাই:</div>
+    <div class="step-explain">হয়,</div>
+    <div class="step">$x + 1 = 0$</div>
+    <div class="step">$\Rightarrow x = -1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">অথবা,</div>
+    <div class="step">$x^2 - x + 1 = 0$</div>
+    <div class="step-explain">দ্বিঘাত সমীকরণের সূত্রে এখানে $a = 1, b = -1, c = 1$ মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow x = \frac{-(-1) \pm \sqrt{(-1)^2 - 4 \cdot 1 \cdot 1}}{2 \cdot 1}$</div>
+    <div class="step">$\Rightarrow x = \frac{1 \pm \sqrt{1 - 4}}{2}$</div>
+    <div class="step">$\Rightarrow x = \frac{1 \pm \sqrt{-3}}{2} \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\sqrt{-3} = \sqrt{3 \cdot (-1)} = \sqrt{3} \cdot \sqrt{-1} = \sqrt{3}i$।</div>
+    <div class="step">$\Rightarrow x = \frac{1 \pm \sqrt{3}i}{2} \quad [\because \sqrt{-1} = i]$</div>
+    <div class="step-explain">নির্ণেয় মানসমূহ:</div>
+    <div class="step">$\sqrt[3]{-1} = -1, \quad \frac{1 \pm \sqrt{3}i}{2}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $\sqrt[4]{-144}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">ধরি, চতুর্থ মূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[4]{-144}$</div>
+    <div class="step-explain">উভয় পক্ষকে চতুর্থ ঘাত (power 4) উন্নীত করি অথবা প্রথমে বর্গ করে নিতে পারি।</div>
+    <div class="step">$\Rightarrow x^4 = -144 \quad [\text{উভয় পক্ষকে ঘাত ৪ করে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 144 \cdot (-1) \quad [\text{ভেঙে লিখে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 12^2 \cdot i^2 \quad [\because i^2 = -1 \text{ বসিয়ে এবং } 144 = 12^2]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = (12i)^2 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষের বর্গ বর্জন করার জন্য বর্গমূল করি। মনে রাখতে হবে, বর্গমূল করার সময় ডানপক্ষে $\pm$ চিহ্ন আসবে।</div>
+    <div class="step">$\Rightarrow x^2 = \pm 12i \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">এখান থেকে আমরা দুটি শর্ত পাই: $x^2 = +12i$ অথবা $x^2 = -12i$। এদেরকে একসাথে বর্গসূত্রে সাজানোর জন্য ডানপক্ষকে $2ab$ এর সাথে মিলিয়ে $2 \cdot 6i$ লিখতে পারি এবং ২ আলাদা করে বর্গমূলের চিরাচরিত নিয়ম অনুসরণ করি:</div>
+    <div class="step">$\Rightarrow x^2 = \pm 6 \cdot (2i) \quad [\text{৬ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \pm 6 \cdot (1 + 2i - 1) \quad [\text{১ যোগ ও ১ বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \pm 6 \cdot \left(1^2 + 2 \cdot 1 \cdot i + i^2\right) \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow x^2 = \pm 6 \cdot (1 + i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">প্লাস ও মাইনাস উভয় চিহ্নের জন্যই ব্র্যাকেটের ভেতরের অংশটি একইভাবে সাজানো যায়। যদি $x^2 = -12i$ হতো, তবে হতো $\pm 6(1-i)^2$। সুতরাং একসাথে প্রকাশ করলে পাই:</div>
+    <div class="step">$\Rightarrow x^2 = 6 \cdot (1 \pm i)^2 \quad [\text{প্লাস ও মাইনাস একসাথে সাজিয়ে}]$</div>
+    <div class="step-explain">এখন পুনরায় উভয় পক্ষকে বর্গমূল করে $x$ এর মান বের করি:</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{6 \cdot (1 \pm i)^2}$</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{6}(1 \pm i) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মান: $\pm \sqrt{6}(1 \pm i)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $\sqrt[4]{-16}$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">ধরি, চতুর্থ মূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[4]{-16}$</div>
+    <div class="step">$\Rightarrow x^4 = -16 \quad [\text{উভয় পক্ষকে ঘাত ৪ করে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 16 \cdot (-1)$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 4^2 \cdot i^2 \quad [\because 16 = 4^2 \text{ এবং } i^2 = -1]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = (4i)^2$</div>
+    <div class="step-explain">উভয় পক্ষে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow x^2 = \pm 4i$</div>
+    <div class="step-explain">এখন বর্গের সূত্র গঠন করার জন্য ডানপক্ষ থেকে $2$ আলাদা করে সাজাই:</div>
+    <div class="step">$\Rightarrow x^2 = \pm 2 \cdot (2i) \quad [\text{২ আলাদা করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \pm 2 \cdot (1 + 2i - 1) \quad [\text{১ যোগ ও ১ বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \pm 2 \cdot \left(1^2 + 2 \cdot 1 \cdot i + i^2\right) \quad [\because i^2 = -1]$</div>
+    <div class="step-explain">প্লাস চিহ্নের জন্য রাশিটি হয় $(1+i)^2$ এবং মাইনাস চিহ্নের জন্য হয় $(1-i)^2$। সুতরাং একসাথে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow x^2 = 2 \cdot (1 \pm i)^2 \quad [\text{বর্গের সূত্র প্রয়োগ করে}]$</div>
+    <div class="step-explain">এখন ফাইনাল মান বের করার জন্য পুনরায় উভয় পক্ষে বর্গমূল করি:</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{2 \cdot (1 \pm i)^2}$</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{2}(1 \pm i) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মান: $\pm \sqrt{2}(1 \pm i)$</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">৪. মান নির্ণয় কর:</div>
+
+    <div class="problem-sub-title">(v) $\sqrt[4]{1}$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">ধরি, চতুর্থ মূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[4]{1}$</div>
+    <div class="step-explain">এখন উভয় পক্ষকে চতুর্থ ঘাত (power 4) এ উন্নীত করে পাই:</div>
+    <div class="step">$\Rightarrow x^4 = 1 \quad [\text{উভয় পক্ষকে ঘাত ৪ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের $1$ কে বামপক্ষে নিয়ে এসে ডানপক্ষ শূন্য করি:</div>
+    <div class="step">$\Rightarrow x^4 - 1 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন একে বর্গের অন্তরফল বা $a^2 - b^2$ এর সূত্রে সাজাই:</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 - (1^2)^2 = 0$</div>
+    <div class="step">$\Rightarrow \left(x^2 - 1\right)\left(x^2 + 1\right) = 0 \quad [\because a^2 - b^2 = (a-b)(a+b) \text{ এর সূত্র প্রয়োগ করে}]$</div>
+    <div class="step-explain">যেহেতু দুটি উৎপাদকের গুণফল শূন্য, তাই তারা আলাদা আলাদাভাবে শূন্য হবে।</div>
+    <div class="step-explain">হয়,</div>
+    <div class="step">$x^2 - 1 = 0$</div>
+    <div class="step">$\Rightarrow x^2 = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x = \pm 1 \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">অথবা,</div>
+    <div class="step">$x^2 + 1 = 0$</div>
+    <div class="step">$\Rightarrow x^2 = -1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">আমরা জানি জটিল সংখ্যার সংজ্ঞা অনুযায়ী, $i^2 = -1$।</div>
+    <div class="step">$\Rightarrow x^2 = i^2 \quad [\because -1 = i^2 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = \pm i \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মানসমূহ একত্রিত করে পাই:</div>
+    <div class="step">$\sqrt[4]{1} = \pm 1, \quad \pm i$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) $\sqrt[4]{-81}$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">ধরি, চতুর্থ মূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[4]{-81}$</div>
+    <div class="step-explain">উভয় পক্ষকে চতুর্থ ঘাতে উন্নীত করে পাই:</div>
+    <div class="step">$\Rightarrow x^4 = -81 \quad [\text{উভয় পক্ষকে ঘাত ৪ করে}]$</div>
+    <div class="step-explain">এখন বামপক্ষকে $\left(x^2\right)^2$ এবং ডানপক্ষের ঋণাত্মক বাস্তব সংখ্যাকে জটিল সংখ্যায় রূপান্তরের জন্য $81 \cdot (-1)$ আকারে লিখি:</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 81 \cdot (-1)$</div>
+    <div class="step-explain">আমরা জানি $81 = 9^2$ এবং $i^2 = -1$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = 9^2 \cdot i^2 \quad [\because 81 = 9^2 \text{ এবং } i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^2 = (9i)^2 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">উভয় পক্ষে প্রথমবার বর্গমূল করে পাই (ডানপক্ষে $\pm$ চিহ্ন যুক্ত হবে):</div>
+    <div class="step">$\Rightarrow x^2 = \pm 9i \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">এখন বর্গের পূর্ণাঙ্গ সূত্র গঠন করার জন্য ডানপক্ষের $9$ থেকে $2$ মেলানোর সুবিধার্থে প্রথমে $\frac{9}{2}$ কমন নিয়ে ভেতরে $2$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow x^2 = \pm \frac{9}{2} \cdot (2i) \quad [\text{২ দ্বারা গুণ ও ভাগ করে}]$</div>
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের $2i$ অংশটির সাথে ১ যোগ ও ১ বিয়োগ করি:</div>
+    <div class="step">$\Rightarrow x^2 = \pm \frac{9}{2} \cdot (1 + 2i - 1) \quad [\text{১ যোগ ও ১ বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি $i^2 = -1$, তাই শেষের $-1$ এর পরিবর্তে $i^2$ বসাই:</div>
+    <div class="step">$\Rightarrow x^2 = \frac{9}{2} \cdot \left(1^2 \pm 2 \cdot 1 \cdot i + i^2\right) \quad [\because i^2 = -1 \text{ বসিয়ে এবং চিহ্ন বিন্যাস করে}]$</div>
+    <div class="step-explain">এখানে প্লাস চিহ্নের জন্য রাশিটি হয় $(1+i)^2$ এবং মাইনাস চিহ্নের জন্য হয় $(1-i)^2$। সুতরাং একসাথে প্রকাশ করলে পাই:</div>
+    <div class="step">$\Rightarrow x^2 = \frac{9}{2} \cdot (1 \pm i)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">এখন ফাইনাল মান বের করার জন্য পুনরায় উভয় পক্ষে বর্গমূল করি:</div>
+    <div class="step">$\Rightarrow x = \pm \sqrt{\frac{9}{2} \cdot (1 \pm i)^2}$</div>
+    <div class="step-explain">ভগ্নাংশের লব $9$ এর বর্গমূল $3$ এবং হর $2$ এর বর্গমূল $\sqrt{2}$ আলাদা করে পাই:</div>
+    <div class="step">$\Rightarrow x = \pm \frac{3}{\sqrt{2}}(1 \pm i) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মান: $\pm \frac{3}{\sqrt{2}}(1 \pm i)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vii) $\sqrt[6]{-64}$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">ধরি, ষষ্ঠ মূলের মানটি হলো $x$।</div>
+    <div class="step">$x = \sqrt[6]{-64}$</div>
+    <div class="step-explain">উভয় পক্ষকে ষষ্ঠ ঘাত (power 6) এ উন্নীত করে পাই:</div>
+    <div class="step">$\Rightarrow x^6 = -64 \quad [\text{উভয় পক্ষকে ঘাত ৬ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের $-64$ কে বামপক্ষে নিয়ে এসে ডানপক্ষ শূন্য করি:</div>
+    <div class="step">$\Rightarrow x^6 + 64 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">যেহেতু $x^6 = \left(x^2\right)^3$ এবং $64 = 4^3$, তাই সমীকরণটিকে $a^3 + b^3$ এর উৎপাদক সূত্রে সাজাই:</div>
+    <div class="step">$\Rightarrow \left(x^2\right)^3 + 4^3 = 0$</div>
+    <div class="step-explain">আমরা জানি, $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$। এই সূত্রের সাহায্যে পাই:</div>
+    <div class="step">$\Rightarrow \left(x^2 + 4\right)\left[\left(x^2\right)^2 - x^2 \cdot 4 + 4^2\right] = 0 \quad [\text{উৎপাদকের সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2 + 4\right)\left(x^4 - 4x^2 + 16\right) = 0$</div>
+    <div class="step-explain">যেহেতু উৎপাদক দুটির গুণফল শূন্য, তাই তারা আলাদা আলাদাভাবে শূন্য হবে।</div>
+    <div class="step-explain">প্রথম অংশ থেকে পাই:</div>
+    <div class="step">$x^2 + 4 = 0$</div>
+    <div class="step">$\Rightarrow x^2 = -4 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = 4 \cdot (-1)$</div>
+    <div class="step">$\Rightarrow x^2 = 2^2 \cdot i^2 \quad [\because i^2 = -1 \text{ বসিয়ে এবং } 4 = 2^2]$</div>
+    <div class="step">$\Rightarrow x^2 = (2i)^2$</div>
+    <div class="step">$\Rightarrow x = \pm 2i \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+    <div class="step-explain">দ্বিতীয় অংশ থেকে পাই:</div>
+    <div class="step">$x^4 - 4x^2 + 16 = 0$</div>
+    <div class="step-explain">এই সমীকরণটি $x^2$ চলকের সাপেক্ষে একটি দ্বিঘাত সমীকরণ। একে সহজে বোঝার জন্য ধরি $x^2 = a$। তাহলে সমীকরণটি দাঁড়ায় $a^2 - 4a + 16 = 0$। দ্বিঘাত সমীকরণের মূলের সূত্র $a = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow x^2 = \frac{-(-4) \pm \sqrt{(-4)^2 - 4 \cdot 1 \cdot 16}}{2 \cdot 1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \frac{4 \pm \sqrt{16 - 64}}{2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \frac{4 \pm \sqrt{-48}}{2} \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">রুটের ভেতরের ঋণাত্মক সংখ্যাকে সরল করি: $\sqrt{-48} = \sqrt{16 \cdot 3 \cdot (-1)} = 4\sqrt{3}i$।</div>
+    <div class="step">$\Rightarrow x^2 = \frac{4 \pm 4\sqrt{3}i}{2} \quad [\because \sqrt{-48} = 4\sqrt{3}i \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \frac{2\left(2 \pm 2\sqrt{3}i\right)}{2} \quad [\text{লব থেকে ২ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = 2 \pm 2\sqrt{3}i \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step-explain">এখন $x$ এর মান বের করার জন্য ডানপক্ষকে পুনরায় পূর্ণবর্গ সূত্রে রূপান্তর করতে হবে। কাল্পনিক অংশ $\pm 2\sqrt{3}i$ কে $2ab$ এর সাথে তুলনা করলে পাই $2 \cdot 1 \cdot (\sqrt{3}i)$। এদের বর্গের সমষ্টি হয় $1^2 + (\sqrt{3}i)^2 = 1 - 3 = -2$। কিন্তু আমাদের এখানে আছে $+2$। তাই বাস্তব অংশ $+2$ কে মেলাতে আমরা লিখতে পারি $3 - 1$।</div>
+    <div class="step">$\Rightarrow x^2 = 3 \pm 2\sqrt{3}i - 1 \quad [\text{বাস্তব অংশ ২ কে ৩ - ১ লিখে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \left(\sqrt{3}\right)^2 \pm 2 \cdot \sqrt{3} \cdot i + i^2 \quad [\because i^2 = -1 \text{ এবং বর্গাকারে সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 = \left(\sqrt{3} \pm i\right)^2 \quad [\text{পূর্ণবর্গ সূত্র গঠন করে}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow x = \pm \left(\sqrt{3} \pm i\right) \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মানসমূহ একত্রিত করে পাই (মোট ৬টি মূল):</div>
+    <div class="step">$\sqrt[6]{-64} = \pm 2i, \quad \pm \left(\sqrt{3} + i\right), \quad \pm \left(\sqrt{3} - i\right)$</div>
+</div>
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

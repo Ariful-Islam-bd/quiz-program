@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Determ 1B Q4-Q5</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+    
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> মেট্রিক্স ও নির্ণায়ক অনুশীলনী (1B)</h1>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(i): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} 1 & x - a & y - b \\ 1 & x_1 - a & y_1 - b \\ 1 & x_2 - a & y_2 - b \end{vmatrix} = \begin{vmatrix} 1 & x & y \\ 1 & x_1 & y_1 \\ 1 & x_2 & y_2 \end{vmatrix}$</h3></div>
+    
+    <div class="step-explain">বামপক্ষ (LHS) দিয়ে সমাধান শুরু করি:</div>
+    <div class="step">$\text{LHS} = \begin{vmatrix} 1 & x - a & y - b \\ 1 & x_1 - a & y_1 - b \\ 1 & x_2 - a & y_2 - b \end{vmatrix}$</div>
+    
+    <div class="step-explain">নির্ণায়কের ধর্ম অনুযায়ী, কোনো কলামের সাথে অন্য কলামের গুণিতক যোগ বা বিয়োগ করলে মানের পরিবর্তন হয় না। এখানে দ্বিতীয় কলামের সাথে প্রথম কলামকে $a$ দ্বারা গুণ করে যোগ করি এবং তৃতীয় কলামের সাথে প্রথম কলামকে $b$ দ্বারা গুণ করে যোগ করি:</div>
+    <div class="step">$= \begin{vmatrix} 1 & x - a + a\cdot1 & y - b + b\cdot1 \\ 1 & x_1 - a + a\cdot1 & y_1 - b + b\cdot1 \\ 1 & x_2 - a + a\cdot1 & y_2 - b + b\cdot1 \end{vmatrix} \quad [C'_2 = C_2 + a\cdot C_1, \, C'_3 = C_3 + b\cdot C_1]$</div>
+    
+    <div class="step-explain">এখন প্রতিটি পদ সরলীকরণ বা যোগ-বিয়োগ করি:</div>
+    <div class="step">$= \begin{vmatrix} 1 & x - a + a & y - b + b \\ 1 & x_1 - a + a & y_1 - b + b \\ 1 & x_2 - a + a & y_2 - b + b \end{vmatrix}$</div>
+    <div class="step">$= \begin{vmatrix} 1 & x & y \\ 1 & x_1 & y_1 \\ 1 & x_2 & y_2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">আমরা দেখতে পাচ্ছি যে সরলীকৃত রূপটি ডানপক্ষের সমান হয়ে গেছে।</div>
+    <div class="step">$= \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(ii): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} 1 & bc & bc(b + c) \\ 1 & ca & ca(c + a) \\ 1 & ab & ab(a + b) \end{vmatrix} = abc \begin{vmatrix} a & 1 & b + c \\ b & 1 & c + a \\ c & 1 & a + b \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step-explain">প্রথমে বামপক্ষ (LHS) তুলে নিই:</div>
+    <div class="step">$\text{LHS} = \begin{vmatrix} 1 & bc & bc(b + c) \\ 1 & ca & ca(c + a) \\ 1 & ab & ab(a + b) \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারিকে $a$, দ্বিতীয় সারিকে $b$ এবং তৃতীয় সারিকে $c$ দ্বারা গুণ করি। মান অপরিবর্তিত রাখতে বাইরে $\frac{1}{abc}$ দ্বারা গুণ করি:</div>
+    <div class="step">$= \frac{1}{abc} \begin{vmatrix} a\cdot1 & a\cdot(bc) & a\cdot bc(b + c) \\ b\cdot1 & b\cdot(ca) & b\cdot ca(c + a) \\ c\cdot1 & c\cdot(ab) & c\cdot ab(a + b) \end{vmatrix} \quad [R'_1 = a\cdot R_1, \, R'_2 = b\cdot R_2, \, R'_3 = c\cdot R_3]$</div>
+    <div class="step">$= \frac{1}{abc} \begin{vmatrix} a & abc & abc(b + c) \\ b & abc & abc(c + a) \\ c & abc & abc(a + b) \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখন দ্বিতীয় কলাম এবং তৃতীয় কলাম থেকে সাধারণ উৎপাদক $abc$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+    <div class="step">$= \frac{1}{abc} \cdot abc \cdot abc \begin{vmatrix} a & 1 & b + c \\ b & 1 & c + a \\ c & 1 & a + b \end{vmatrix} \quad [C_2 \text{ ও } C_3 \text{ হতে } abc \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= abc \begin{vmatrix} a & 1 & b + c \\ b & 1 & c + a \\ c & 1 & a + b \end{vmatrix} \quad [\text{এটি মধ্যপক্ষ}]$</div>
+    
+    <div class="step-explain">এবার তৃতীয় কলামের সাথে প্রথম কলাম যোগ করি অর্থাৎ $C'_3 = C_3 + C_1$:</div>
+    <div class="step">$= abc \begin{vmatrix} a & 1 & b + c + a \\ b & 1 & c + a + b \\ c & 1 & a + b + c \end{vmatrix} \quad [C'_3 = C_3 + C_1]$</div>
+    <div class="step">$= abc \begin{vmatrix} a & 1 & a + b + c \\ b & 1 & a + b + c \\ c & 1 & a + b + c \end{vmatrix} \quad [\text{পদগুলো সাজিয়ে লিখে}]$</div>
+    
+    <div class="step-explain">তৃতীয় কলাম থেকে সাধারণ উৎপাদক $(a + b + c)$ কমন নিই:</div>
+    <div class="step">$= abc(a + b + c) \begin{vmatrix} a & 1 & 1 \\ b & 1 & 1 \\ c & 1 & 1 \end{vmatrix} \quad [C_3 \text{ হতে } (a + b + c) \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">যেহেতু এই নির্ণায়কের দ্বিতীয় কলাম এবং তৃতীয় কলাম হুবহু একই (সর্বসম), তাই এর মান শূন্য হবে:</div>
+    <div class="step">$= abc(a + b + c) \cdot 0 \quad [\text{যেহেতু } C_2 = C_3]$</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(iii): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} b + c & c + a & a + b \\ q + r & r + p & p + q \\ y + z & z + x & x + y \end{vmatrix} = 2 \begin{vmatrix} a & b & c \\ p & q & r \\ x & y & z \end{vmatrix}$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} b + c & c + a & a + b \\ q + r & r + p & p + q \\ y + z & z + x & x + y \end{vmatrix}$</div>
+    
+    <div class="step-explain">নির্ণায়কের কলামগুলোকে সারি এবং সারিগুলোকে কলামে রূপান্তর (Transposition) করলেও মান অপরিবর্তিত থাকে:</div>
+    <div class="step">$= \begin{vmatrix} b + c & q + r & y + z \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix} \quad [\text{সারি ও কলাম বিনিময় করে}]$</div>
+    
+    <div class="step-explain">প্রথম সারির সাথে দ্বিতীয় ও তৃতীয় সারি যোগ করি ($R'_1 = R_1 + R_2 + R_3$):</div>
+    <div class="step">$= \begin{vmatrix} (b+c)+(c+a)+(a+b) & (q+r)+(r+p)+(p+q) & (y+z)+(z+x)+(x+y) \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix}$</div>
+    <div class="step">$= \begin{vmatrix} 2a + 2b + 2c & 2p + 2q + 2r & 2b + 2c + 2a \text{ ভুল সংশোধন: } 2x + 2y + 2z \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix}$</div>
+    <div class="step">$= \begin{vmatrix} 2(a + b + c) & 2(p + q + r) & 2(x + y + z) \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে সাধারণ উপাদান $2$ কমন নিয়ে বাইরে আনি:</div>
+    <div class="step">$= 2 \begin{vmatrix} a + b + c & p + q + r & x + y + z \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix} \quad [R_1 \text{ হতে } 2 \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এবার প্রথম সারি থেকে দ্বিতীয় সারি বিয়োগ করে নতুন প্রথম সারি ($R'_1 = R_1 - R_2$) তৈরি করি:</div>
+    <div class="step">$= 2 \begin{vmatrix} (a+b+c) - (c+a) & (p+q+r) - (r+p) & (x+y+z) - (z+x) \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix}$</div>
+    <div class="step">$= 2 \begin{vmatrix} b & q & y \\ c + a & r + p & z + x \\ a + b & p + q & x + y \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখন তৃতীয় সারি থেকে প্রথম সারি বিয়োগ করি ($R'_3 = R_3 - R_1$):</div>
+    <div class="step">$= 2 \begin{vmatrix} b & q & y \\ c + a & r + p & z + x \\ (a + b) - b & (p + q) - q & (x + y) - y \end{vmatrix}$</div>
+    <div class="step">$= 2 \begin{vmatrix} b & q & y \\ c + a & r + p & z + x \\ a & p & x \end{vmatrix}$</div>
+    
+    <div class="step-explain">এবার দ্বিতীয় সারি থেকে তৃতীয় সারি বিয়োগ করি ($R'_2 = R_2 - R_3$):</div>
+    <div class="step">$= 2 \begin{vmatrix} b & q & y \\ c & r & z \\ a & p & x \end{vmatrix}$</div>
+    
+    <div class="step-explain">ডানপক্ষের সাথে মেলাতে সারিগুলোর পারস্পরিক স্থান পরিবর্তন করতে হবে। প্রথমে ১ম ও ৩য় সারির স্থান বদল করি (এতে একটি মাইনাস চিহ্ন আসবে):</div>
+    <div class="step">$= -2 \begin{vmatrix} a & p & x \\ c & r & z \\ b & q & y \end{vmatrix} \quad [R_1 \leftrightarrow R_3]$</div>
+    
+    <div class="step-explain">এবার ২য় ও ৩য় সারির স্থান বদল করি (আরেকটি মাইনাস চিহ্নের কারণে মাইনাসে মাইনাসে প্লাস হয়ে যাবে):</div>
+    <div class="step">$= 2 \begin{vmatrix} a & p & x \\ b & q & y \\ c & r & z \end{vmatrix} \quad [R_2 \leftrightarrow R_3]$</div>
+    
+    <div class="step-explain">সবশেষে সারি ও কলাম বিনিময় (Transpose) করি:</div>
+    <div class="step">$= 2 \begin{vmatrix} a & b & c \\ p & q & r \\ x & y & z \end{vmatrix} = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(iv): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} x - a & x + a \\ y - b & y + b \\ z - c & z + c \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step-explain"><mark>বিশেষ দ্রষ্টব্য:</mark> প্রশ্নে প্রদত্ত ম্যাট্রিক্সটি $৩ \times ২$ আকারের, যা একটি বর্গাকার ম্যাট্রিক্স নয়। নির্ণায়ক সর্বদা বর্গাকার ম্যাট্রিক্সের হয়। সাধারণত এই প্রশ্নে ৩টি কলাম থাকার কথা যেখানে একটি কলামে $1, 1, 1$ বা অন্য কিছু থাকে। তবে যদি প্রশ্নটি টাইপো হয়ে থাকে এবং এটি ২ কলামের না হয়ে ৩ কলামের কোনো সমঞ্জস রূপ হয়, তবেই সমাধান সম্ভব। যদি প্রশ্নে প্রদত্ত রূপটিই বজায় রেখে ১ম কলামের সাথে ২য় কলাম যোগ করি ($C'_1 = C_1 + C_2$):</div>
+    <div class="step">$\text{LHS} = \begin{vmatrix} x - a & x + a \\ y - b & y + b \\ z - c & z + c \end{vmatrix}$</div>
+    
+    <div class="step-explain">কলামের মাত্রা অসঙ্গতিপূর্ণ হওয়ায় নির্ণায়ক গঠন সম্ভব নয়। তবে ৩টি সারি ও ৩টি কলামের আদর্শ প্রশ্ন ধরে নিলে এটি শূন্য প্রমাণিত হয়। দেওয়া উদ্দীপকটি সরাসরি অসংজ্ঞায়িত।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(v): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} bc & a & a^2 \\ ca & b & b^2 \\ ab & c & c^2 \end{vmatrix} = \begin{vmatrix} 1 & 1 & 1 \\ a^2 & b^2 & c^2 \\ a^3 & b^3 & c^3 \end{vmatrix}$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} bc & a & a^2 \\ ca & b & b^2 \\ ab & c & c^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারিকে $a$, দ্বিতীয় সারিকে $b$ এবং তৃতীয় সারিকে $c$ দ্বারা গুণ করি এবং বাইরে $\frac{1}{abc}$ নিই:</div>
+    <div class="step">$= \frac{1}{abc} \begin{vmatrix} a\cdot(bc) & a\cdot a & a\cdot a^2 \\ b\cdot(ca) & b\cdot b & b\cdot b^2 \\ c\cdot(ab) & c\cdot c & c\cdot c^2 \end{vmatrix} \quad [R'_1 = a\cdot R_1, \, R'_2 = b\cdot R_2, \, R'_3 = c\cdot R_3]$</div>
+    <div class="step">$= \frac{1}{abc} \begin{vmatrix} abc & a^2 & a^3 \\ abc & b^2 & b^3 \\ abc & c^2 & c^3 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে সাধারণ উৎপাদক $abc$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+    <div class="step">$= \frac{abc}{abc} \begin{vmatrix} 1 & a^2 & a^3 \\ 1 & b^2 & b^3 \\ 1 & c^2 & c^3 \end{vmatrix} \quad [C_1 \text{ হতে } abc \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= \begin{vmatrix} 1 & a^2 & a^3 \\ 1 & b^2 & b^3 \\ 1 & c^2 & c^3 \end{vmatrix}$</div>
+    
+    <div class="step-explain">এবার নির্ণায়কের সারি ও কলামগুলোর স্থান পরস্পর বিনিময় (Transpose) করি:</div>
+    <div class="step">$= \begin{vmatrix} 1 & 1 & 1 \\ a^2 & b^2 & c^2 \\ a^3 & b^3 & c^3 \end{vmatrix} = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(vi): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} y + z & x & 1 \\ z + x & y & 1 \\ x + y & z & 1 \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} y + z & x & 1 \\ z + x & y & 1 \\ x + y & z & 1 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলামের সাথে দ্বিতীয় কলাম যোগ করি অর্থাৎ $C'_1 = C_1 + C_2$:</div>
+    <div class="step">$= \begin{vmatrix} (y + z) + x & x & 1 \\ (z + x) + y & y & 1 \\ (x + y) + z & z & 1 \end{vmatrix} \quad [C'_1 = C_1 + C_2]$</div>
+    <div class="step">$= \begin{vmatrix} a+b+c \text{ ভুল সংশোধন: } x+y+z & x & 1 \\ x+y+z & y & 1 \\ x+y+z & z & 1 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে সাধারণ উৎপাদক $(x + y + z)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (x + y + z) \begin{vmatrix} 1 & x & 1 \\ 1 & y & 1 \\ 1 & z & 1 \end{vmatrix} \quad [C_1 \text{ হতে } (x+y+z) \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এখানে প্রথম কলাম এবং তৃতীয় কলামের সকল উপাদান হুবহু একই (সর্বসম)। আমরা জানি দুটি কলাম সমান হলে নির্ণায়কের মান শূন্য হয়:</div>
+    <div class="step">$= (x + y + z) \cdot 0 \quad [\text{যেহেতু } C_1 = C_3]$</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(vii): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} 1 & a & a - 2 \\ 2 & b & b - 4 \\ 3 & c & c - 6 \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} 1 & a & a - 2 \\ 2 & b & b - 4 \\ 3 & c & c - 6 \end{vmatrix}$</div>
+    
+    <div class="step-explain">তৃতীয় কলামের সাথে দ্বিতীয় কলাম বিয়োগ করি এবং প্রথম কলামকে $2$ দ্বারা গুণ করে যোগ করি। এর চেয়ে সহজ উপায় হলো: $C'_3 = C_3 - C_2$ করা:</div>
+    <div class="step">$= \begin{vmatrix} 1 & a & (a - 2) - a \\ 2 & b & (b - 4) - b \\ 3 & c & (c - 6) - c \end{vmatrix} \quad [C'_3 = C_3 - C_2]$</div>
+    <div class="step">$= \begin{vmatrix} 1 & a & -2 \\ 2 & b & -4 \\ 3 & c & -6 \end{vmatrix}$</div>
+    
+    <div class="step-explain">এবার তৃতীয় কলাম থেকে সাধারণ উৎপাদক $-2$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+    <div class="step">$= -2 \begin{vmatrix} 1 & a & 1 \\ 2 & b & 2 \\ 3 & c & 3 \end{vmatrix} \quad [C_3 \text{ হতে } -2 \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এখানে লক্ষ্য করলে দেখা যাবে, প্রথম কলাম এবং তৃতীয় কলামের প্রতিটি অনুরূপ ভুক্তি সমান ($C_1 = C_3$):</div>
+    <div class="step">$= -2 \cdot 0 \quad [\text{যেহেতু } C_1 = C_3]$</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(viii): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} a & b & c \\ x & y & z \\ p & q & r \end{vmatrix} = \begin{vmatrix} y & b & q \\ x & a & p \\ z & c & r \end{vmatrix}$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} a & b & c \\ x & y & z \\ p & q & r \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথমে নির্ণায়কটির সারি ও কলামের স্থান পরিবর্তন (Transpose) করি:</div>
+    <div class="step">$= \begin{vmatrix} a & x & p \\ b & y & q \\ c & z & r \end{vmatrix} \quad [\text{সারি ও কলাম বিনিময় করে}]$</div>
+    
+    <div class="step-explain">এবার প্রথম সারি ও দ্বিতীয় সারির স্থান পারস্পরিক পরিবর্তন করি। আমরা জানি, দুটি সারির স্থান পরিবর্তন করলে নির্ণায়কের চিহ্নের পরিবর্তন হয় (একটি মাইনাস আসবে):</div>
+    <div class="step">$= - \begin{vmatrix} b & y & q \\ a & x & p \\ c & z & r \end{vmatrix} \quad [R_1 \leftrightarrow R_2]$</div>
+    
+    <div class="step-explain">এবার প্রথম কলাম ও দ্বিতীয় কলামের স্থান পরিবর্তন করি। কলাম পরিবর্তনের কারণে আরেকটি মাইনাস চিহ্ন আসবে, যা আগের মাইনাসের সাথে গুণ হয়ে প্লাস হয়ে যাবে:</div>
+    <div class="step">$= (-1)\cdot(-1) \begin{vmatrix} y & b & q \\ x & a & p \\ z & c & r \end{vmatrix} \quad [C_1 \leftrightarrow C_2]$</div>
+    <div class="step">$= \begin{vmatrix} y & b & q \\ x & a & p \\ z & c & r \end{vmatrix} = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৪(ix): বিস্তার না করে প্রমাণ কর যে, $\begin{vmatrix} 2 & a & 6 - a \\ 3 & b & 9 - b \\ 9 & c & 27 - c \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} 2 & a & 6 - a \\ 3 & b & 9 - b \\ 9 & c & 27 - c \end{vmatrix}$</div>
+    
+    <div class="step-explain">তৃতীয় কলামের সাথে দ্বিতীয় কলাম যোগ করি অর্থাৎ $C'_3 = C_3 + C_2$:</div>
+    <div class="step">$= \begin{vmatrix} 2 & a & (6 - a) + a \\ 3 & b & (9 - b) + b \\ 9 & c & (27 - c) + c \end{vmatrix} \quad [C'_3 = C_3 + C_2]$</div>
+    <div class="step">$= \begin{vmatrix} 2 & a & 6 \\ 3 & b & 9 \\ 9 & c & 27 \end{vmatrix}$</div>
+    
+    <div class="step-explain">এবার তৃতীয় কলামের প্রতিটি উপাদান থেকে সাধারণ উৎপাদক $3$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+    <div class="step">$= 3 \begin{vmatrix} 2 & a & 2 \\ 3 & b & 3 \\ 9 & c & 9 \end{vmatrix} \quad [C_3 \text{ হতে } 3 \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এখানে পরিষ্কার দেখা যাচ্ছে যে, প্রথম কলাম এবং তৃতীয় কলামের উপাদানগুলো একদম একই রকম বা সর্বসম ($C_1 = C_3$):</div>
+    <div class="step">$= 3 \cdot 0 \quad [\text{যেহেতু } C_1 = C_3]$</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৫(i): $A = \begin{bmatrix} 6 & 9 \\ 2 & 3 \end{bmatrix}$ ম্যাট্রিক্সটির বিপরীত যোগ্যতা যাচাই কর।</h3></div>
+    
+    <div class="step-explain">দেওয়া আছে, একটি $২ \times ২$ আকারের বর্গাকার ম্যাট্রিক্স:</div>
+    <div class="step">$A = \begin{bmatrix} 6 & 9 \\ 2 & 3 \end{bmatrix}$</div>
+    
+    <div class="step-explain">আমরা জানি, কোনো বর্গাকার ম্যাট্রিক্সের বিপরীত ম্যাট্রিক্স থাকার শর্ত হলো ম্যাট্রিক্সটির নির্ণায়কের মান শূন্য হওয়া যাবে না (অর্থাৎ ম্যাট্রিক্সটি অ-ব্যতিক্রমী বা Non-singular হতে হবে)। তাহলে প্রথমে $A$ ম্যাট্রিক্সের নির্ণায়ক $|A|$ এর মান বের করি:</div>
+    <div class="step">$|A| = \begin{vmatrix} 6 & 9 \\ 2 & 3 \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখন মুখ্য কর্ণের ভুক্তিদ্বয়ের গুণফল থেকে গৌণ কর্ণের ভুক্তিদ্বয়ের গুণফল বিয়োগ করি:</div>
+    <div class="step">$\Rightarrow |A| = (6 \cdot 3) - (9 \cdot 2) \quad [\text{নির্ণায়কের মান বের করে}]$</div>
+    <div class="step">$\Rightarrow |A| = 18 - 18$</div>
+    <div class="step">$\Rightarrow |A| = 0$</div>
+    
+    <div class="step-explain">যেহেতু ম্যাট্রিক্সটির নির্ণায়কের মান $|A| = 0$, তাই এটি একটি ব্যতিক্রমী (Singular) ম্যাট্রিক্স। সুতরাং, $A$ ম্যাট্রিক্সটি <strong>বিপরীত যোগ্য নয়</strong> (Not Invertible)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৫(ii): $B = \begin{bmatrix} 4 & 5 \\ 19 & 25 \end{bmatrix}$ ম্যাট্রিক্সটির বিপরীত যোগ্যতা যাচাই কর।</h3></div>
+    
+    <div class="step-explain">দেওয়া আছে, ম্যাট্রিক্সটি:</div>
+    <div class="step">$B = \begin{bmatrix} 4 & 5 \\ 19 & 25 \end{bmatrix}$</div>
+    
+    <div class="step-explain">বিপরীত যোগ্যতা যাচাইয়ের জন্য এই ম্যাট্রিক্সটির নির্ণায়ক $|B|$ এর মান হিসাব করি:</div>
+    <div class="step">$|B| = \begin{vmatrix} 4 & 5 \\ 19 & 25 \end{vmatrix}$</div>
+    
+    <div class="step-explain">আর-গুণন পদ্ধতিতে মান বের করি:</div>
+    <div class="step">$\Rightarrow |B| = (4 \cdot 25) - (5 \cdot 19) \quad [\text{কোণাকুণি গুণ করে}]$</div>
+    <div class="step">$\Rightarrow |B| = 100 - 95$</div>
+    <div class="step">$\Rightarrow |B| = 5$</div>
+    
+    <div class="step-explain">যেহেতু ম্যাট্রিক্সটির নির্ণায়কের মান $|B| = 5 \neq 0$, তাই এটি একটি অ-ব্যчислиহ্ন বা অ-ব্যতিক্রমী (Non-singular) ম্যাট্রিক্স। সুতরাং, $B$ ম্যাট্রিক্সটি <strong>বিপরীত যোগ্য</strong> (Invertible)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৫(iii): $A = \begin{bmatrix} 28 & 29 & 30 \\ 31 & 33 & 35 \\ 34 & 37 & 40 \end{bmatrix}$ ম্যাট্রিক্সটির বিপরীত যোগ্যতা যাচাই কর।</h3></div>
+    
+    <div class="step-explain">দেওয়া আছে, একটি $৩ \times ৩$ আকারের ম্যাট্রিক্স:</div>
+    <div class="step">$A = \begin{bmatrix} 28 & 29 & 30 \\ 31 & 33 & 35 \\ 34 & 37 & 40 \end{bmatrix}$</div>
+    
+    <div class="step-explain">এই ম্যাট্রিক্সের বিপরীত যোগ্যতা যাচাইয়ের জন্য প্রথমে এর নির্ণায়ক $|A|$ গঠন করি:</div>
+    <div class="step">$|A| = \begin{vmatrix} 28 & 29 & 30 \\ 31 & 33 & 35 \\ 34 & 37 & 40 \end{vmatrix}$</div>
+    
+    <div class="step-explain">হিসাব সহজ করার জন্য বিস্তার করার আগে কলাম অপারেশন করি। প্রথম কলাম থেকে দ্বিতীয় কলাম এবং দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করি ($C'_1 = C_1 - C_2$ এবং $C'_2 = C_2 - C_3$):</div>
+    <div class="step">$\Rightarrow |A| = \begin{vmatrix} 28 - 29 & 29 - 30 & 30 \\ 31 - 33 & 33 - 35 & 35 \\ 34 - 37 & 37 - 40 & 40 \end{vmatrix} \quad [C'_1 = C_1 - C_2, \, C'_2 = C_2 - C_3]$</div>
+    
+    <div class="step-explain">বিয়োগফলগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow |A| = \begin{vmatrix} -1 & -1 & 30 \\ -2 & -2 & 35 \\ -3 & -3 & 40 \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখানে লক্ষ্য করলে দেখা যাচ্ছে, নতুন নির্ণায়কটির প্রথম কলাম এবং দ্বিতীয় কলাম হুবহু একই (সর্বসম)। আমরা জানি, নির্ণায়কের যে কোনো দুটি সারি বা কলামের উপাদান সমান হলে তার মান সর্বদা শূন্য হয়।</div>
+    <div class="step">$\Rightarrow |A| = 0 \quad [\text{যেহেতু } C_1 = C_2]$</div>
+    
+    <div class="step-explain">যেহেতু নির্ণায়কের মান $|A| = 0$, এটি একটি ব্যতিক্রমী ম্যাট্রিক্স। সুতরাং, প্রদত্ত $A$ ম্যাট্রিক্সটি <strong>বিপরীত যোগ্য নয়</strong> (Not Invertible)।</div>
+</div>
+
+
+
+
+</div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

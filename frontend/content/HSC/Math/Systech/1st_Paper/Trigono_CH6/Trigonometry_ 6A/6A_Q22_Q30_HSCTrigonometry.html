@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6A Q22-Q30</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (6A)</h1>
+
+        <div class="problem-card">
+            <div class="problem-title">২২. চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>ব্যাসার্ধ $OC = 6.5 \text{ cm}$ ও $BC = 5\text{cm}$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="165">
+                    <defs>
+                        <pattern id="diagonalHatch" width="3" height="5" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                            <line x1="0" y1="0" x2="0" y2="6" stroke="#333333" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <path d="M 30,90 A 70,70 0 0,1 170,90 Z" fill="url(#diagonalHatch)" />
+                    <polygon points="30,90 131,28 170,90" fill="#ffffff" stroke="#000" stroke-width="1" stroke-linejoin="round" />
+                    <circle cx="100" cy="90" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="85" x2="100" y2="90" stroke="#000000" stroke-width="1.5" />
+                    <text x="18" y="94" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="130" y="21" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="174" y="94" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="96" y="105" font-family="Arial, sans-serif" font-size="12" fill="#000000">O</text>
+                </svg>
+            </div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, বৃত্তের ব্যাসার্ধ, $r = OC = 6.5 \text{ cm}$</div>
+            <div class="step">জ্যা এর দৈর্ঘ্য, $BC = 5 \text{ cm}$</div>
+            <div class="step-explain">চিত্র হতে জ্যা $AC$ হলো বৃত্তের ব্যাস এবং $O$ হলো বৃত্তের কেন্দ্র। অতএব বৃত্তের ব্যাস $AC$ এর দৈর্ঘ্য হবে ব্যাসার্ধের দ্বিগুণ:</div>
+            <div class="step">ব্যাস, $AC = 2 \cdot OC$</div>
+            <div class="step">$\Rightarrow AC = 2 \cdot 6.5 \text{ cm} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow AC = 13 \text{ cm} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">আমরা জ্যামিতি থেকে জানি, অর্ধবৃত্তস্থ কোণ সর্বদা এক সমকোণ বা $90^\circ$ হয়। চিত্রে $\angle ABC$ একটি অর্ধবৃত্তস্থ কোণ। সুতরাং:</div>
+            <div class="step">$\angle ABC = 90^\circ$</div>
+            <div class="step-explain">যেহেতু $\angle ABC = 90^\circ$, তাই $\Delta ABC$ একটি সমকোণী ত্রিভুজ, যার অতিভুজ হলো $AC$।</div>
+            <div class="step-explain">এখন সমকোণী ত্রিভুজ $\Delta ABC$-এ পিথাগোরাসের উপপাদ্য প্রয়োগ করে পাই:</div>
+            <div class="step">$AB^2 + BC^2 = AC^2 \quad [\text{পিথাগোরাসের উপপাদ্যানুসারে}]$</div>
+            <div class="step-explain">সূত্রে $BC$ ও $AC$ এর মান প্রতিস্থাপন করি:</div>
+            <div class="step">$\Rightarrow AB^2 + 5^2 = 13^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow AB^2 + 25 = 169 \quad [\text{বর্গ করে}]$</div>
+            <div class="step-explain">সংখ্যাটিকে ডানপাশে পক্ষান্তর করে বিয়োগ করি:</div>
+            <div class="step">$\Rightarrow AB^2 = 169 - 25 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow AB^2 = 144 \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষে বর্গমূল নিয়ে $AB$ এর মান বের করি:</div>
+            <div class="step">$\Rightarrow AB = \sqrt{144}$</div>
+            <div class="step">$\Rightarrow AB = 12 \text{ cm} \quad [\text{বর্গমূল করে}]$</div>
+            <div class="step-explain">এখন সমকোণী ত্রিভুজ $\Delta ABC$ এর ক্ষেত্রফল নির্ণয় করি (আমরা জানি, ক্ষেত্রফল $= \frac{1}{2} \cdot \text{ভূমি} \cdot \text{উচ্চতা}$):</div>
+            <div class="step">$\Delta ABC \text{ এর ক্ষেত্রফল} = \frac{1}{2} \cdot BC \cdot AB$</div>
+            <div class="step">$= \frac{1}{2} \cdot 5 \cdot 12 \text{ বর্গ সে.মি.} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">লবের $12$ কে হরের $2$ দ্বারা ভাগ করে সরল করি (আমরা জানি, $12 \div 2 = 6$):</div>
+            <div class="step">$= 5 \cdot 6 \text{ বর্গ সে.মি.} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step">$= 30 \text{ বর্গ সে.মি.} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">চিত্রে ছায়াঘেরা অংশটি অর্ধবৃত্তের ভেতরে অবস্থিত। সুতরাং ছায়াঘেরা অংশের ক্ষেত্রফল বের করতে হলে অর্ধবৃত্তের ক্ষেত্রফল থেকে $\Delta ABC$ এর ক্ষেত্রফল বিয়োগ করতে হবে।</div>
+            <div class="step-explain">প্রথমে সম্পূর্ণ বৃত্তের ক্ষেত্রফল $\pi r^2$ এর সূত্র ব্যবহার করে অর্ধবৃত্তের ক্ষেত্রফল নির্ণয় করি:</div>
+            <div class="step">$\text{অর্ধবৃত্তের ক্ষেত্রফল} = \frac{1}{2}\pi r^2$</div>
+            <div class="step">$= \frac{1}{2} \cdot \pi \cdot (6.5)^2 \text{ বর্গ সে.মি.} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">$6.5$ এর বর্গ বা স্কয়ার নির্ণয় করি (আমরা জানি, $6.5 \cdot 6.5 = 42.25$):</div>
+            <div class="step">$= \frac{1}{2} \cdot \pi \cdot 42.25 \text{ বর্গ সে.মি.} \quad [\text{বর্গ করে}]$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী $\pi \approx 3.14159$ মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\approx \frac{1}{2} \cdot 3.14159 \cdot 42.25 \text{ বর্গ সে.মি.} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">লবের অংশ দুটি গুণ করি:</div>
+            <div class="step">$\approx \frac{132.73217}{2} \text{ বর্গ সে.মি.} \quad [\text{লব গুণ করে}]$</div>
+            <div class="step-explain">২ দ্বারা ভাগ করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত অর্ধবৃত্তের ক্ষেত্রফল পাই:</div>
+            <div class="step">$\approx 66.3661 \text{ বর্গ সে.মি.} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন অর্ধবৃত্তের ক্ষেত্রফল থেকে ত্রিভুজটির ক্ষেত্রফল বিয়োগ করে ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় করি:</div>
+            <div class="step">$\text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \text{অর্ধবৃত্তের ক্ষেত্রফল} - \Delta ABC \text{ এর ক্ষেত্রফল}$</div>
+            <div class="step">$\approx 66.3661 - 30 \text{ বর্গ সে.মি.} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\approx 36.3661 \text{ বর্গ সে.মি.} \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">ছায়াঘেরা অংশের ক্ষেত্রফল সফলভাবে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁতভাবে পাওয়া গেল।</div>
+            <div class="step"><strong>অতএব,</strong> চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $36.3661 \text{ বর্গ সে.মি.}$ (বা $\text{cm}^2$)।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৩. চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>$\angle AOC = 90^\circ$, $OA = 2$<br>        
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <defs>
+                        <pattern id="diagonalHatch" width="4" height="4" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                            <line x1="0" y1="0" x2="0" y2="4" stroke="#333333" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <circle cx="100" cy="110" r="70" fill="#ffffff" />
+                    <path d="M 100,40 A 70,70 0 0,1 160.62,75 Z" fill="url(#diagonalHatch)" />
+                    <polygon points="100,40 160.62,75 100,110" fill="#ffffff" opacity="0" /> 
+                    <line x1="100" y1="40" x2="160.62" y2="75" stroke="#000000" stroke-width="1.5" />
+                    <circle cx="100" cy="110" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="110" x2="100" y2="40" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="110" x2="170" y2="110" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="110" x2="160.62" y2="75" stroke="#000000" stroke-width="1.5" />
+                    <path d="M 125,110 A 25,25 0 0,0 121.65,97.5" fill="none" stroke="#000000" stroke-width="1" />
+                    <text x="85" y="115" font-family="Arial, sans-serif" font-size="12" fill="#000000">O</text>
+                    <text x="175" y="114" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="165" y="73" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="96" y="34" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="134" y="45" font-family="Arial, sans-serif" font-size="12" fill="#000000">E</text>
+                    <text x="14" y="114" font-family="Arial, sans-serif" font-size="12" fill="#000000">D</text>
+                    <text x="128" y="106" font-family="Arial, sans-serif" font-size="10" fill="#000000">30°</text>
+                </svg>
+            </div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে উল্লেখ করি:</div>
+            <div class="step">বৃত্তের ব্যাসার্ধ, $r = OA = OB = OC = 2$</div>
+            <div class="step">দেওয়া আছে, মোট কোণ, $\angle AOC = 90^\circ$</div>
+            <div class="step">এবং কোণ, $\angle AOB = 30^\circ$</div>
+            <div class="step-explain">চিত্রানুসারে, বৃত্তকলা $OBC$ এর কেন্দ্রের কোণ $\angle BOC$ এর মান বের করতে হবে। চিত্র থেকে স্পষ্ট যে:</div>
+            <div class="step">$\angle BOC = \angle AOC - \angle AOB$</div>
+            <div class="step">$\Rightarrow \angle BOC = 90^\circ - 30^\circ \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \angle BOC = 60^\circ \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">ধরি, বৃত্তকলা $OBC$ এর কেন্দ্রের কোণ $\theta = 60^\circ$। আমরা জানি, গাণিতিক হিসাবের সুবিধার্থে কোণকে রেডিয়ান এককে প্রকাশ করতে হয়:</div>
+            <div class="step">$\theta = 60 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad \left[\because 1^\circ = \frac{\pi}{180} \text{ rad}\right]$</div>
+            <div class="step">$\Rightarrow \theta = \frac{\pi}{3} \text{ রেডিয়ান} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">চিত্রের ছায়াঘেরা অংশটি (বৃত্তাংশ $BCE$) হলো বৃত্তকলা $OBC$ এর মোট ক্ষেত্রফল থেকে $\Delta OBC$ এর ক্ষেত্রফলের বিয়োগফল।</div>
+            <div class="solution-subtitle">১ম অংশ: বৃত্তকলা $OBC$ এর ক্ষেত্রফল নির্ণয়</div>
+            <div class="step-explain">আমরা জানি, বৃত্তকলার ক্ষেত্রফলের সূত্রটি হলো:</div>
+            <div class="step">$\text{বৃত্তকলা } OBC \text{ এর ক্ষেত্রফল} = \frac{1}{2}r^2\theta$</div>
+            <div class="step-explain">সূত্রে $r$ এবং $\theta$ এর মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$= \frac{1}{2} \cdot (2)^2 \cdot \frac{\pi}{3} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$= \frac{1}{2} \cdot 4 \cdot \frac{\pi}{3} \quad [\text{বর্গ করে}]$</div>
+            <div class="step">$= \frac{2\pi}{3} \text{ বর্গ একক} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="solution-subtitle">২য় অংশ: $\Delta OBC$ এর ক্ষেত্রফল নির্ণয়</div>
+            <div class="step-explain">আমরা জানি, ত্রিভুজের দুটি বাহু এবং তাদের মধ্যবর্তী কোণ দেওয়া থাকলে ক্ষেত্রফলের সূত্রটি হলো $\frac{1}{2} \cdot a \cdot b \cdot \sin\theta$। এখানে ত্রিভুজের দুটি বাহু $OB$ ও $OC$ (উভয়ই ব্যাসার্ধ $r$) এবং মধ্যবর্তী কোণ $\angle BOC = 60^\circ$:</div>
+            <div class="step">$\Delta OBC \text{ এর ক্ষেত্রফল} = \frac{1}{2} \cdot OB \cdot OC \cdot \sin(\angle BOC)$</div>
+            <div class="step">$= \frac{1}{2} \cdot 2 \cdot 2 \cdot \sin(60^\circ) \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">সরল করি এবং ত্রিকোণমিতিক মান $\sin(60^\circ) = \frac{\sqrt{3}}{2}$ বসাই:</div>
+            <div class="step">$= 2 \cdot \frac{\sqrt{3}}{2} \quad \left[\because \sin(60^\circ) = \frac{\sqrt{3}}{2}\right]$</div>
+            <div class="step">$= \sqrt{3} \text{ বর্গ একক} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="solution-subtitle">৩য় অংশ: ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয়</div>
+            <div class="step-explain">এবার বৃত্তকলার ক্ষেত্রফল থেকে ত্রিভুজের ক্ষেত্রফল বিয়োগ করে ছায়াঘেরা অংশের মান বের করি:</div>
+            <div class="step">$\text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \text{বৃত্তকলা } OBC \text{ এর ক্ষেত্রফল} - \Delta OBC \text{ এর ক্ষেত্রফল}$</div>
+            <div class="step">$= \frac{2\pi}{3} - \sqrt{3}$</div>
+            <div class="step-explain">নির্দেশনানুযায়ী $\pi \approx 3.14159$ এবং $\sqrt{3} \approx 1.73205$ ধরে মান বসিয়ে পাই:</div>
+            <div class="step">$\approx \frac{2 \cdot 3.14159}{3} - 1.73205 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\approx \frac{6.28318}{3} - 1.73205 \quad [\text{গুণ করে}]$</div>
+            <div class="step">$\approx 2.09439 - 1.73205 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">বিয়োগ সম্পন্ন করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত মান রাখি:</div>
+            <div class="step">$\approx 0.3623 \text{ বর্গ একক} \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">ছায়াঘেরা অঞ্চলের ক্ষেত্রফল সফলভাবে এবং নিখুঁতভাবে নির্ণয় করা হলো।</div>
+            <div class="step"><strong>অতএব,</strong> চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $0.3623 \text{ বর্গ একক}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৪. চিত্রে প্রদর্শিত বৃত্তের পরিধি $31.416 \text{ সে.মি.}$ হলে বৃত্তটির ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>$\theta = 58^\circ$<br>        
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <defs>
+                        <pattern id="diagonalHatch" width="5" height="5" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                            <line x1="0" y1="0" x2="0" y2="5" stroke="#333333" stroke-width="1.2" />
+                        </pattern>
+                    </defs>
+                    <circle cx="100" cy="100" r="70" fill="url(#diagonalHatch)" />
+                    <path d="M 100,100 L 100,30 A 70,70 0 0,1 159.36,62.91 Z" fill="#ffffff" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="100" x2="100" y2="30" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="100" x2="159.36" y2="62.91" stroke="#000000" stroke-width="1.5" />
+                    <path d="M 100,75 A 25,25 0 0,1 121.20,86.75" fill="none" stroke="#000000" stroke-width="1" />
+                    <text x="94" y="115" font-family="Arial, sans-serif" font-size="12" fill="#000000">O</text>
+                    <text x="95" y="24" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="163" y="62" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="110" y="72" font-family="Arial, sans-serif" font-size="12" fill="#000000">θ</text>
+                    <text x="75" y="185" font-family="Arial, sans-serif" font-size="12" fill="#000000">θ = 58°</text>
+                </svg>
+            </div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, সম্পূর্ণ বৃত্তের ক্ষেত্রফল থেকে সাদা রঙের বৃত্তকলা $OAB$ এর ক্ষেত্রফল বাদ দিলেই ছায়াঘেরা অংশের ক্ষেত্রফল পাওয়া যাবে।</div>
+            <div class="step-explain"><strong>ধাপ ১: বৃত্তের ব্যাসার্ধ ($r$) নির্ণয়</strong></div>
+            <div class="step">ধরি, বৃত্তের ব্যাসার্ধ $= r \text{ সে.মি.}$</div>
+            <div class="step">দেওয়া আছে, বৃত্তের পরিধি $= 31.416 \text{ সে.মি.}$ এবং কেন্দ্রস্থ কোণ $\theta = 58^\circ$</div>
+            <div class="step">আমরা জানি, বৃত্তের পরিধি $= 2\pi r$</div>
+            <div class="step">প্রশ্নানুসারে সমীকরণ গঠন করে পাই:</div>
+            <div class="step">$$2\pi r = 31.416$$</div>
+            <div class="step">$$\Rightarrow r = \frac{31.416}{2\pi}$$</div>
+            <div class="step-explain">এখানে, $\pi \approx 3.14159$ মান ব্যবহার করে পাই:</div>
+            <div class="step">$\Rightarrow r = \frac{31.416}{2 \cdot 3.14159} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow r = \frac{31.416}{6.28318}$</div>
+            <div class="step">$\Rightarrow r \approx 5.00002 \text{ সে.মি.}$</div>
+            <div class="step-explain">হিসাবের সুবিধার্থে আমরা বৃত্তের ব্যাসার্ধ $r = 5 \text{ সে.মি.}$ ধরে নিই।</div>
+            <div class="step-explain"><strong>ধাপ ২: সম্পূর্ণ বৃত্তের ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">আমরা জানি, বৃত্তের ক্ষেত্রফলের সূত্র $= \pi r^2$</div>
+            <div class="step-explain">এখন ব্যাসার্ধ $r$ এর মান বসিয়ে পাই:</div>
+            <div class="step">$\text{বৃত্তের ক্ষেত্রফল} = \pi \cdot \left(5\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তের ক্ষেত্রফল} = 3.14159 \cdot 25 \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তের ক্ষেত্রফল} \approx 78.5398 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>ধাপ ৩: সাদা অংশের (বৃত্তকলা $OAB$ এর) ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">আমরা জানি, $\theta$ কোণ উৎপন্নকারী বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+            <div class="step-explain">সূত্রে $\theta = 58^\circ$ এবং $r = 5$ প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\text{বৃত্তকলা OAB এর ক্ষেত্রফল} = \frac{58^\circ}{360^\circ} \cdot 3.14159 \cdot \left(5\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAB এর ক্ষেত্রফল} = \frac{58}{360} \cdot 3.14159 \cdot 25$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAB এর ক্ষেত্রফল} = \frac{58}{360} \cdot 78.5398 \quad [\text{গুণ করে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAB এর ক্ষেত্রফল} = \frac{4555.3084}{360} \quad [\text{লব গুণ করে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAB এর ক্ষেত্রফল} \approx 12.6536 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>ধাপ ৪: ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">ছায়াঘেরা অংশের ক্ষেত্রফল হবে সম্পূর্ণ বৃত্তের ক্ষেত্রফল এবং বৃত্তকলা $OAB$ এর ক্ষেত্রফলের বিয়োগফল।</div>
+            <div class="step">$\text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \text{সম্পূর্ণ বৃত্তের ক্ষেত্রফল} - \text{বৃত্তকলা OAB এর ক্ষেত্রফল}$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = 78.5398 - 12.6536 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} \approx 65.8862 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>উত্তর:</strong> বৃত্তটির ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $65.8862 \text{ বর্গ সে.মি.}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৫. চিত্রে, $OABC$ একটি রম্বস এবং $OAC$ বৃত্তকলা $O$ কেন্দ্রিক বৃত্তের অংশ। $ABCA$ অংশের ক্ষেত্রফল নির্ণয় কর।<br>$\angle AOC = 45^\circ$, $OA = 40 \text{ cm}$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <defs>
+                        <pattern id="diagonalHatch" width="4" height="4" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                            <line x1="0" y1="0" x2="0" y2="4" stroke="#333333" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <polygon points="70,100 119.5,65 169,100 119.5,135" fill="url(#diagonalHatch)" stroke="#000" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M 119.5,65 A 50,50 0 1,0 119.5,135" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="2,2" />
+                    <path d="M 70,100 L 119.5,65 A 50,50 0 0,1 119.5,135 Z" fill="#ffffff" stroke="#000" stroke-width="1.5" />
+                    <path d="M 86,112 A 20,20 0 0,0 86,88" fill="none" stroke="#000" stroke-width="1" />
+                    <text x="54" y="104" font-family="Arial, sans-serif" font-size="12" fill="#000000">O</text>
+                    <text x="116" y="55" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="174" y="104" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="116" y="150" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="95" y="102" font-family="Arial, sans-serif" font-size="10" fill="#000000">45°</text>
+                    <text x="70" y="132" font-family="Arial, sans-serif" font-size="10" fill="#000000">40 cm</text>
+                </svg>
+            </div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, $OABC$ একটি রম্বস এবং এর ভেতরে $OAC$ একটি বৃত্তকলা। সম্পূর্ণ রম্বসের ক্ষেত্রফল থেকে সাদা রঙের বৃত্তকলা $OAC$ এর ক্ষেত্রফল বিয়োগ করলেই ছায়াঘেরা $ABCA$ অংশের ক্ষেত্রফল পাওয়া যাবে।</div>
+            <div class="step-explain"><strong>ধাপ ১: দেওয়া আছে অংশ এবং রম্বসের কোণ ও বাহুর মান</strong></div>
+            <div class="step-explain">রম্বসের এক বাহুর দৈর্ঘ্য, $OA = 40 \text{ cm}$</div>
+            <div class="step-explain">যেহেতু রম্বসের প্রতিটি বাহুর দৈর্ঘ্য সমান, তাই:</div>
+            <div class="step">$OA = AB = BC = CO = 40 \text{ cm}$</div>
+            <div class="step-explain">এবং রম্বসের একটি কোণ, $\angle AOC = 45^\circ$</div>
+            <div class="step-explain"><strong>ধাপ ২: রম্বস $OABC$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">আমরা জানি, কোনো রম্বসের দুটি সন্নিহিত বাহু এবং তাদের অন্তর্ভুক্ত কোণ দেওয়া থাকলে রম্বসের ক্ষেত্রফলের সূত্র: $\text{ক্ষেত্রফল} = OA \cdot OC \cdot \sin\left(\angle AOC\right)$</div>
+            <div class="step-explain">এখন বাহুদ্বয় ও কোণের মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\text{রম্বস OABC এর ক্ষেত্রফল} = 40 \cdot 40 \cdot \sin\left(45^\circ\right) \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{রম্বস OABC এর ক্ষেত্রফল} = 1600 \cdot \frac{1}{\sqrt{2}} \quad \left[\sin\left(45^\circ\right) = \frac{1}{\sqrt{2}} \text{ বসিয়ে}\right]$</div>
+            <div class="step">$\Rightarrow \text{রম্বস OABC এর ক্ষেত্রফল} = \frac{1600}{1.41421} \quad [\sqrt{2} \approx 1.41421 \text{ বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{রম্বস OABC এর ক্ষেত্রফল} \approx 1131.3708 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>ধাপ ৩: বৃত্তকলা $OAC$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">এখানে, বৃত্তকলার কেন্দ্রস্থ কোণ, $\theta = \angle AOC = 45^\circ$</div>
+            <div class="step-explain">এবং বৃত্তকলার ব্যাসার্ধ, $r = OA = 40 \text{ cm}$</div>
+            <div class="step-explain">আমরা জানি, বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+            <div class="step-explain">সূত্রে মানসমূহ প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\text{বৃত্তকলা OAC এর ক্ষেত্রফল} = \frac{45^\circ}{360^\circ} \cdot \pi \cdot \left(40\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAC এর ক্ষেত্রফল} = \frac{1}{8} \cdot 3.14159 \cdot 1600 \quad [\text{কাটাকাটি করে এবং } \pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAC এর ক্ষেত্রফল} = 200 \cdot 3.14159 \quad \left[\frac{1600}{8} = 200 \text{ ভাগ করে}\right]$</div>
+            <div class="step">$\Rightarrow \text{বৃত্তকলা OAC এর ক্ষেত্রফল} \approx 628.3185 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>ধাপ ৪: ছায়াঘেরা $ABCA$ অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step-explain">ছায়াঘেরা অংশের ক্ষেত্রফল হবে সম্পূর্ণ রম্বসের ক্ষেত্রফল এবং সাদা বৃত্তকলা অংশের ক্ষেত্রফলের বিয়োগফল।</div>
+            <div class="step">$\text{ABCA অংশের ক্ষেত্রফল} = \text{রম্বস OABC এর ক্ষেত্রফল} - \text{বৃত্তকলা OAC এর ক্ষেত্রফল}$</div>
+            <div class="step">$\Rightarrow \text{ABCA অংশের ক্ষেত্রফল} = 1131.3708 - 628.3185 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{ABCA অংশের ক্ষেত্রফল} \approx 503.0523 \text{ বর্গ সে.মি.}$</div>
+            <div class="step-explain"><strong>উত্তর:</strong> ছায়াঘেরা $ABCA$ অংশের ক্ষেত্রফল প্রায় $503.0523 \text{ বর্গ সে.মি.}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৬. বৃত্তের ক্ষেত্রফল $49\pi$ হলে ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>$\angle BAC = 60^\circ$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <rect width="100%" height="100%" fill="#ffffff" />
+                    <defs>
+                    <pattern id="verticalHatch" width="4" height="4" patternUnits="userSpaceOnUse">
+                        <line x1="0" y1="0" x2="0" y2="4" stroke="#333333" stroke-width="1.2" />
+                    </pattern>
+                    </defs>
+                    <path d="M 100,100 L 39.38,135 A 70,70 0 0,0 160.62,135 Z" fill="url(#verticalHatch)" stroke="#000000" stroke-width="1.5" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="30" x2="39.38" y2="135" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="30" x2="160.62" y2="135" stroke="#000000" stroke-width="1.5" />
+                    <circle cx="100" cy="100" r="2" fill="#000000" />
+                    <path d="M 91.34,45 A 15,15 0 0,0 108.66,45" fill="none" stroke="#000000" stroke-width="1" />
+                    <text x="94" y="24" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="24" y="142" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="166" y="142" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="94" y="92" font-family="Arial, sans-serif" font-size="12" fill="#000000">O</text>
+                    <text x="100" y="58" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">60°</text>
+                </svg>
+            </div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, $O$ হলো বৃত্তের কেন্দ্র। $A, B, C$ বিন্দু তিনটি পরিধির ওপর অবস্থিত। উদ্দীপকে বৃত্তের ক্ষেত্রফল এবং বৃত্তস্থ কোণ $\angle BAC = 60^\circ$ দেওয়া আছে। আমাদের ছায়াঘেরা অংশ অর্থাৎ বৃত্তকলা $OBC$ এর ক্ষেত্রফল নির্ণয় করতে হবে।</div>
+            <div class="step-explain"><strong>ধাপ ১: বৃত্তের ব্যাসার্ধ ($r$) নির্ণয়</strong></div>
+            <div class="step">ধরি, বৃত্তের ব্যাসার্ধ $= r \text{ সে.মি.}$</div>
+            <div class="step">দেওয়া আছে, বৃত্তের ক্ষেত্রফল $= 49\pi$</div>
+            <div class="step">আমরা জানি, বৃত্তের ক্ষেত্রফলের সূত্র $= \pi r^2$</div>
+            <div class="step">প্রশ্নানুসারে সমীকরণ গঠন করে পাই:</div>
+            <div class="step">$\pi r^2 = 49\pi$</div>
+            <div class="step">$\Rightarrow r^2 = \frac{49\pi}{\pi} \quad [\text{উভয় পক্ষকে } \pi \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step">$\Rightarrow r^2 = 49$</div>
+            <div class="step">$\Rightarrow r = \sqrt{49} \quad [\text{উভয় পক্ষে বর্গমূল করে}]$</div>
+            <div class="step">$\Rightarrow r = 7 \text{ সে.মি.}$</div>
+            <div class="step-explain"><strong>ধাপ ২: কেন্দ্রস্থ কোণ ($\angle BOC$ বা $\theta$) নির্ণয়</strong></div>
+            <div class="step">চিত্রে, একই উপচাপ $BC$ এর ওপর দণ্ডায়মান বৃত্তস্থ কোণ $\angle BAC$ এবং কেন্দ্রস্থ কোণ $\angle BOC$।</div>
+            <div class="step">আমরা জানি, একই চাপের ওপর দণ্ডায়মান কেন্দ্রস্থ কোণ বৃত্তস্থ কোণের দ্বিগুণ।</div>
+            <div class="step">অতএব, কেন্দ্রস্থ কোণ $\theta = \angle BOC = 2 \cdot \angle BAC$</div>
+            <div class="step">দেওয়া আছে, $\angle BAC = 60^\circ$। এই মান বসিয়ে পাই:</div>
+            <div class="step">$\theta = 2 \cdot 60^\circ \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \theta = 120^\circ$</div>
+            <div class="step-explain"><strong>ধাপ ৩: ছায়াঘেরা অংশের (বৃত্তকলা $OBC$ এর) ক্ষেত্রফল নির্ণয়</strong></div>
+            <div class="step">আমরা জানি, $\theta$ কোণ উৎপন্নকারী বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+            <div class="step-explain">এখানে, বৃত্তকলাটির ক্ষেত্রফল বের করতে উদ্দীপকে দেওয়া সম্পূর্ণ বৃত্তের ক্ষেত্রফল ($\pi r^2 = 49\pi$) সরাসরি ব্যবহার করা যায়।</div>
+            <div class="step-explain">সূত্রে $\theta = 120^\circ$ এবং $\pi r^2 = 49\pi$ প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\therefore \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \frac{120^\circ}{360^\circ} \cdot 49\pi \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \frac{1}{3} \cdot 49\pi \quad \left[\frac{120}{360} = \frac{1}{3} \text{ কাটাকাটি করে}\right]$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \frac{49 \cdot 3.14159}{3} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \frac{153.9379}{3} \quad [\text{লব গুণ করে}]$</div>
+            <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} \approx 51.3126 \text{ বর্গ একক}$</div>
+            <div class="step"><strong>উত্তর:</strong> বৃত্তটির ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $51.3126 \text{ বর্গ একক}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৭. চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+                    <rect width="100%" height="100%" fill="#ffffff" />
+                    <defs>
+                        <pattern id="diagonalHatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                            <line x1="0" y1="0" x2="0" y2="6" stroke="#333333" stroke-width="1.2" />
+                        </pattern>
+                    </defs>
+                    <polygon points="55,160 270,160 210,85" fill="url(#diagonalHatch)" stroke="#000" stroke-width="1.5" stroke-linejoin="round" />
+                    <circle cx="210" cy="85" r="65" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
+                    <path d="M 210,85 151.3,113.5 A 65,65 0 0,0 250.6,135.8 z" fill="none" stroke="#000" stroke-width="1.5" />
+                    <path d="M 192,94 A 20,20 0 0,0 223,100" fill="none" stroke="#000" stroke-width="1.5" />
+                    <text x="210" y="116" font-family="Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">α</text>
+                    <text x="162" y="96" font-family="Arial, sans-serif" font-size="11" fill="#000000">6m</text>
+                    <text x="235" y="113" font-family="Arial, sans-serif" font-size="11" fill="#000000">6m</text>
+                    <text x="90" y="130" font-family="Arial, sans-serif" font-size="11" fill="#000000">9m</text>
+                    <text x="260" y="145" font-family="Arial, sans-serif" font-size="11" fill="#000000">3m</text>
+                    <path d="M 55,166 Q 150,178 270,166" fill="none" stroke="#000000" stroke-width="1" />
+                    <text x="138" y="190" font-family="Arial, sans-serif" font-size="12" fill="#000000">21m</text>
+                </svg>
+            </div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, একটি বড় ত্রিভুজ রয়েছে যার ভূমি $21 \text{ m}$। এই ত্রিভুজের একটি শীর্ষবিন্দুকে কেন্দ্র করে $6 \text{ m}$ ব্যাসার্ধের একটি বৃত্ত আঁকা হয়েছে। সম্পূর্ণ ত্রিভুজের ক্ষেত্রফল থেকে বৃত্তের অন্তর্গত সাদা অংশের (বৃত্তকলা) ক্ষেত্রফল বাদ দিলেই ছায়াঘেরা অংশের ক্ষেত্রফল পাওয়া যাবে।</div>
+
+    <div class="step-explain"><strong>ধাপ ১: ত্রিভুজের বাহুসমূহের দৈর্ঘ্য নির্ণয়</strong></div>
+    <div class="step">চিত্রানুযায়ী, ত্রিভুজের বাহুগুলোর দৈর্ঘ্য ভেঙে ভেঙে দেওয়া আছে:</div>
+    <div class="step">ভূমি, $a = 21 \text{ m}$</div>
+    <div class="step">বাম পাশের বাহুর মোট দৈর্ঘ্য, $b = 9 \text{ m} + 6 \text{ m} = 15 \text{ m}$</div>
+    <div class="step">ডান পাশের বাহুর মোট দৈর্ঘ্য, $c = 6 \text{ m} + 3 \text{ m} = 9 \text{ m}$</div>
+
+    <div class="step-explain"><strong>ধাপ ২: সম্পূর্ণ ত্রিভুজটির ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">যেহেতু ত্রিভুজটির তিনটি বাহুর দৈর্ঘ্য অসমান ($a = 21$, $b = 15$, $c = 9$), এটি একটি বিষমবাহু ত্রিভুজ। এর ক্ষেত্রফল নির্ণয়ের জন্য প্রথমে অর্ধ-পরিসীমা ($s$) বের করতে হবে।</div>
+    <div class="step">আমরা জানি, অর্ধ-পরিসীমা, $s = \frac{a + b + c}{2}$</div>
+    <div class="step">$s = \frac{21 + 15 + 9}{2} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow s = \frac{45}{2}$</div>
+    <div class="step">$\Rightarrow s = 22.5 \text{ m}$</div>
+    
+    <div class="step-explain">এখন, বিষমবাহু ত্রিভুজের ক্ষেত্রফলের সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\text{ত্রিভুজের ক্ষেত্রফল} = \sqrt{s\left(s-a\right)\left(s-b\right)\left(s-c\right)}$</div>
+    <div class="step">$\Rightarrow \text{ত্রিভুজের ক্ষেত্রফল} = \sqrt{22.5 \cdot \left(22.5 - 21\right) \cdot \left(22.5 - 15\right) \cdot \left(22.5 - 9\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{ত্রিভুজের ক্ষেত্রফল} = \sqrt{22.5 \cdot 1.5 \cdot 7.5 \cdot 13.5} \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{ত্রিভুজের ক্ষেত্রফল} = \sqrt{3417.1875} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{ত্রিভুজের ক্ষেত্রফল} \approx 58.4567 \text{ বর্গ মিটার}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৩: ত্রিভুজের শীর্ষকোণ ($\alpha$) নির্ণয়</strong></div>
+    <div class="step-explain">বৃত্তকলার ক্ষেত্রফল বের করতে হলে আমাদের কেন্দ্রস্থ কোণ $\alpha$ এর মান জানতে হবে। ত্রিকোণমিতির কোসাইন সূত্র (Law of Cosines) ব্যবহার করে পাই:</div>
+    <div class="step">$\cos\left(\alpha\right) = \frac{b^2 + c^2 - a^2}{2 \cdot b \cdot c}$</div>
+    <div class="step">$\Rightarrow \cos\left(\alpha\right) = \frac{15^2 + 9^2 - 21^2}{2 \cdot 15 \cdot 9} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos\left(\alpha\right) = \frac{225 + 81 - 441}{270} \quad [\text{বর্গ ও গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \cos\left(\alpha\right) = \frac{306 - 441}{270} \quad [\text{যোগ করে}]$</div>
+    <div class="step">$\Rightarrow \cos\left(\alpha\right) = \frac{-135}{270}$</div>
+    <div class="step">$\Rightarrow \cos\left(\alpha\right) = -0.5$</div>
+    <div class="step">$\Rightarrow \alpha = \cos^{-1}\left(-0.5\right)$</div>
+    <div class="step">$\Rightarrow \alpha = 120^\circ$</div>
+
+    <div class="step-explain"><strong>ধাপ ৪: সাদা বৃত্তকলা অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step">চিত্র অনুযায়ী, বৃত্তকলার ব্যাসার্ধ, $r = 6 \text{ m}$ এবং কেন্দ্রস্থ কোণ, $\alpha = 120^\circ$</div>
+    <div class="step">আমরা জানি, বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\alpha}{360^\circ} \cdot \pi r^2$</div>
+    <div class="step-explain">সূত্রে মানসমূহ প্রতিস্থাপন করে পাই (যেখানে $\pi \approx 3.14159$):</div>
+    <div class="step">$\text{বৃত্তকলার ক্ষেত্রফল} = \frac{120^\circ}{360^\circ} \cdot 3.14159 \cdot \left(6\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলার ক্ষেত্রফল} = \frac{1}{3} \cdot 3.14159 \cdot 36 \quad \left[\frac{120}{360} = \frac{1}{3} \text{ কাটাকাটি করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলার ক্ষেত্রফল} = 12 \cdot 3.14159 \quad \left[\frac{36}{3} = 12 \text{ ভাগ করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলার ক্ষেত্রফল} \approx 37.6991 \text{ বর্গ মিটার}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৫: ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">ছায়াঘেরা অংশের ক্ষেত্রফল হবে সম্পূর্ণ ত্রিভুজের ক্ষেত্রফল থেকে বৃত্তকলার ক্ষেত্রফলের বিয়োগফল।</div>
+    <div class="step">$\text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \text{ত্রিভুজের ক্ষেত্রফল} - \text{বৃত্তকলার ক্ষেত্রফল}$</div>
+    <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = 58.4567 - 37.6991 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} \approx 20.7576 \text{ বর্গ মিটার}$</div>
+
+    <div class="step-explain"><strong>উত্তর:</strong> চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $20.7576 \text{ বর্গ মিটার}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৮. চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয় কর।<br>$CA = 4$, $CB = 4$, $AB = 4\sqrt{2}$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <rect width="100%" height="100%" fill="#ffffff" />
+                    <defs>
+                    <pattern id="diagonalHatch" width="5" height="5" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                        <line x1="0" y1="0" x2="0" y2="5" stroke="#333333" stroke-width="1.2" />
+                    </pattern>
+                    </defs>
+                    <circle cx="90" cy="100" r="70" fill="#ffffff" />
+                    <path d="M 140,50 A 70,70 0 0,1 140,150 Z" fill="url(#diagonalHatch)" />
+                    <line x1="140" y1="50" x2="140" y2="150" stroke="#000000" stroke-width="1.5" />
+                    <circle cx="90" cy="100" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="90" y1="100" x2="140" y2="50" stroke="#000000" stroke-width="1.5" />
+                    <line x1="90" y1="100" x2="140" y2="150" stroke="#000000" stroke-width="1.5" />
+                    <text x="75" y="104" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="138" y="42" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="138" y="164" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="105" y="68" font-family="Arial, sans-serif" font-size="11" fill="#000000">4</text>
+                    <text x="105" y="138" font-family="Arial, sans-serif" font-size="11" fill="#000000">4</text>
+                    <text x="112" y="104" font-family="Arial, sans-serif" font-size="11" fill="#000000">4√2</text>
+                </svg>
+            </div>
+    <div class="solution-title">সমাধান:></div>
+    
+    <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, $C$ হলো বৃত্তের কেন্দ্র। $CA$ এবং $CB$ হলো বৃত্তের দুটি ব্যাসার্ধ। বৃত্তকলা $CAB$ এর জ্যা $AB$ এবং বৃত্তচাপ $AB$ এর মধ্যবর্তী অংশটিই হলো ছায়াঘেরা অংশ (বৃত্তাংশ বা Segment)। বৃত্তকলা $CAB$ এর ক্ষেত্রফল থেকে $\triangle CAB$ এর ক্ষেত্রফল বিয়োগ করলেই এই ছায়াঘেরা অংশের ক্ষেত্রফল পাওয়া যাবে।</div>
+
+    <div class="step-explain"><strong>ধাপ ১: দেওয়া আছে অংশ এবং বৃত্তের ব্যাসার্ধ</strong></div>
+    <div class="step-explain">বৃত্তের ব্যাসার্ধ, $r = CA = CB = 4 \text{ সে.মি.}$</div>
+    <div class="step-explain">জ্যা এর দৈর্ঘ্য, $AB = 4\sqrt{2} \text{ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ২: কেন্দ্রস্থ কোণ ($\angle ACB$ বা $\theta$) নির্ণয়</strong></div>
+    <div class="step-explain">$\triangle CAB$ ত্রিভুজে পিথাগোরাসের উপপাদ্যের বিপরীত সূত্র যাচাই করে পাই:</div>
+    <div class="step">$CA^2 + CB^2 = 4^2 + 4^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow CA^2 + CB^2 = 16 + 16$</div>
+    <div class="step">$\Rightarrow CA^2 + CB^2 = 32$</div>
+    
+    <div class="step-explain">আবার, বৃহত্তম বাহু $AB$ এর বর্গ করে পাই:</div>
+    <div class="step">$AB^2 = \left(4\sqrt{2}\right)^2$</div>
+    <div class="step">$\Rightarrow AB^2 = 16 \cdot 2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow AB^2 = 32$</div>
+
+    <div class="step-explain">যেহেতু $CA^2 + CB^2 = AB^2$, সেহেতু পিথাগোরাসের উপপাদ্য অনুযায়ী ত্রিভুজটি একটি সমকোণী ত্রিভুজ যার অতিভুজ $AB$।</div>
+    <div class="step-explain">অতএব, অতিভুজের বিপরীত কোণটি সমকোণ, অর্থাৎ কেন্দ্রস্থ কোণ $\theta = \angle ACB = 90^\circ$</div>
+
+    <div class="step-explain"><strong>ধাপ ৩: বৃত্তকলা $CAB$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">আমরা জানি, বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+    <div class="step-explain">সূত্রে $\theta = 90^\circ$, $r = 4$ এবং $\pi \approx 3.14159$ প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\text{বৃত্তকলা CAB এর ক্ষেত্রফল} = \frac{90^\circ}{360^\circ} \cdot 3.14159 \cdot 4^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা CAB এর ক্ষেত্রফল} = \frac{1}{4} \cdot 3.14159 \cdot 16 \quad \left[\frac{90}{360}=\frac{1}{4} \text{ এবং } 4^2=16 \text{ করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা CAB এর ক্ষেত্রফল} = 4 \cdot 3.14159 \quad \left[\frac{16}{4} = 4 \text{ ভাগ করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা CAB এর ক্ষেত্রফল} \approx 12.5664 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৪: $\triangle CAB$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">যেহেতু $\triangle CAB$ একটি সমকোণী ত্রিভুজ যার লম্ব ও ভূমি যথাক্রমে $CA$ ও $CB$, তাই এর ক্ষেত্রফলের সূত্র:</div>
+    <div class="step">$\triangle\text{ CAB এর ক্ষেত্রফল} = \frac{1}{2} \cdot \text{ভূমি} \cdot \text{উচ্চতা}$</div>
+    <div class="step">$\Rightarrow \triangle\text{ CAB এর ক্ষেত্রফল} = \frac{1}{2} \cdot CA \cdot CB$</div>
+    <div class="step">$\Rightarrow \triangle\text{ CAB এর ক্ষেত্রফল} = \frac{1}{2} \cdot 4 \cdot 4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \triangle\text{ CAB এর ক্ষেত্রফল} = \frac{1}{2} \cdot 16$</div>
+    <div class="step">$\Rightarrow \triangle\text{ CAB এর ক্ষেত্রফল} = 8 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৫: ছায়াঘেরা অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">ছায়াঘেরা অংশের ক্ষেত্রফল হবে সম্পূর্ণ বৃত্তকলার ক্ষেত্রফল থেকে ত্রিভুজটির ক্ষেত্রফলের বিয়োগফল।</div>
+    <div class="step">$\text{ছায়াঘেরা অংশের ক্ষেত্রফল} = \text{বৃত্তকলা CAB এর ক্ষেত্রফল} - \triangle\text{ CAB এর ক্ষেত্রফল}$</div>
+    <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} = 12.5664 - 8 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{ছায়াঘেরা অংশের ক্ষেত্রফল} \approx 4.5664 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>উত্তর:</strong> চিত্রের ছায়াঘেরা অংশের ক্ষেত্রফল প্রায় $4.5664 \text{ বর্গ সে.মি.}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২৯. চিত্রে, $PEF$ একটি বৃত্তকলা হলে, $EQRF$ এলাকার ক্ষেত্রফল নির্ণয় কর।<br>$PR = 4 \text{ cm} + 4 \text{ cm} = 8 \text{ cm}$, $PQ = 4 \text{ cm} + 4 \text{ cm} = 8 \text{ cm}$, $RQ = 8 \text{ cm}$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <rect width="100%" height="100%" fill="#ffffff" />
+                    <polygon points="30,170 170,170 100,48.7" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M 30,170 L 65,109.4 A 70,70 0 0,1 100,170 Z" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="20" y1="165" x2="50" y2="113" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
+                    <line x1="50" y1="113" x2="85" y2="52" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
+                    <line x1="105" y1="43" x2="178" y2="165" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
+                    <line x1="30" y1="182" x2="100" y2="182" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
+                    <line x1="100" y1="182" x2="170" y2="182" stroke="#000000" stroke-width="1" stroke-dasharray="3,3" />
+                    <text x="18" y="175" font-family="Arial, sans-serif" font-size="12" fill="#000000">P</text>
+                    <text x="174" y="175" font-family="Arial, sans-serif" font-size="12" fill="#000000">Q</text>
+                    <text x="96" y="42" font-family="Arial, sans-serif" font-size="12" fill="#000000">R</text>
+                    <text x="74" y="108" font-family="Arial, sans-serif" font-size="12" fill="#000000">F</text>
+                    <text x="102" y="165" font-family="Arial, sans-serif" font-size="12" fill="#000000">E</text>
+                    <text x="25" y="132" font-family="Arial, sans-serif" font-size="10" fill="#000000" transform="rotate(-60 25,132)">4 cm</text>
+                    <text x="56" y="78" font-family="Arial, sans-serif" font-size="10" fill="#000000" transform="rotate(-60 56,78)">4 cm</text>
+                    <text x="145" y="100" font-family="Arial, sans-serif" font-size="10" fill="#000000" transform="rotate(60 145,105)">8 cm</text>
+                    <text x="50" y="194" font-family="Arial, sans-serif" font-size="10" fill="#000000">4 cm</text>
+                    <text x="120" y="194" font-family="Arial, sans-serif" font-size="10" fill="#000000">4 cm</text>
+                </svg>
+            </div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, $\triangle PQR$ একটি ত্রিভুজ এবং $PEF$ একটি বৃত্তকলা। সম্পূর্ণ ত্রিভুজ $\triangle PQR$ এর ক্ষেত্রফল থেকে বৃত্তকলা $PEF$ এর ক্ষেত্রফল বাদ দিলেই অবশিষ্ট $EQRF$ এলাকার ক্ষেত্রফল পাওয়া যাবে।</div>
+
+    <div class="step-explain"><strong>ধাপ ১: দেওয়া আছে অংশ এবং ত্রিভুজের প্রকৃতি নির্ণয়</strong></div>
+    <div class="step-explain">উদ্দীপক ও চিত্রানুযায়ী, $\triangle PQR$ এর বাহুত্রয়ের দৈর্ঘ্য:</div>
+    <div class="step">$\text{বাহু } PQ = 4 \text{ cm} + 4 \text{ cm} = 8 \text{ cm}$</div>
+    <div class="step">$\text{বাহু } PR = 4 \text{ cm} + 4 \text{ cm} = 8 \text{ cm}$</div>
+    <div class="step">$\text{বাহু } RQ = 8 \text{ cm}$</div>
+    <div class="step-explain">যেহেতু ত্রিভুজটির তিনটি বাহুর দৈর্ঘ্যই সমান ($PQ = PR = RQ = 8 \text{ cm}$), সেহেতু $\triangle PQR$ একটি সমবাহু ত্রিভুজ।</div>
+    <div class="step-explain">আমরা জানি, সমবাহু ত্রিভুজের প্রতিটি কোণের মান $60^\circ$ হয়।</div>
+    <div class="step-explain">অতএব, শীর্ষকোণ $\angle QPR$ বা কেন্দ্রস্থ কোণ $\theta = 60^\circ$</div>
+
+    <div class="step-explain"><strong>ধাপ ২: সমবাহু ত্রিভুজ $\triangle PQR$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">ধরি, সমবাহু ত্রিভুজের বাহুর দৈর্ঘ্য $a = 8 \text{ cm}$</div>
+    <div class="step-explain">আমরা জানি, সমবাহু ত্রিভুজের ক্ষেত্রফলের সূত্র $= \frac{\sqrt{3}}{4}a^2$</div>
+    <div class="step-explain">এখন বাহুর মান $a = 8$ বসিয়ে পাই:</div>
+    <div class="step">$\triangle \text{PQR এর ক্ষেত্রফল} = \frac{\sqrt{3}}{4} \cdot \left(8\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \triangle \text{PQR এর ক্ষেত্রফল} = \frac{\sqrt{3}}{4} \cdot 64 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \triangle \text{PQR এর ক্ষেত্রফল} = 16\sqrt{3} \quad \left[\frac{64}{4} = 16 \text{ কাটাকাটি করে}\right]$</div>
+    <div class="step-explain">এখানে, $\sqrt{3} \approx 1.73205$ মান ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow \triangle \text{PQR এর ক্ষেত্রফল} = 16 \cdot 1.73205$</div>
+    <div class="step">$\Rightarrow \triangle \text{PQR এর ক্ষেত্রফল} \approx 27.7128 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৩: বৃত্তকলা $PEF$ এর ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">চিত্র অনুযায়ী, বৃত্তকলাটির কেন্দ্র $P$, ব্যাসার্ধ $r = PE = PF = 4 \text{ cm}$</div>
+    <div class="step-explain">এবং কেন্দ্রস্থ কোণ, $\theta = 60^\circ$</div>
+    <div class="step-explain">আমরা জানি, বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+    <div class="step-explain">সূত্রে মানসমূহ প্রতিস্থাপন করে পাই (যেখানে $\pi \approx 3.14159$):</div>
+    <div class="step">$\text{বৃত্তকলা PEF এর ক্ষেত্রফল} = \frac{60^\circ}{360^\circ} \cdot 3.14159 \cdot \left(4\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা PEF এর ক্ষেত্রফল} = \frac{1}{6} \cdot 3.14159 \cdot 16 \quad \left[\frac{60}{360} = \frac{1}{6} \text{ এবং } 4^2 = 16 \text{ করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা PEF এর ক্ষেত্রফল} = \frac{16 \cdot 3.14159}{6} \quad [\text{লব গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা PEF এর ক্ষেত্রফল} = \frac{50.26544}{6}$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা PEF এর ক্ষেত্রফল} \approx 8.3776 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৪: $EQRF$ এলাকার ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">অবশিষ্ট $EQRF$ এলাকার ক্ষেত্রফল হবে সম্পূর্ণ ত্রিভুজের ক্ষেত্রফল থেকে বৃত্তকলাটির ক্ষেত্রফলের বিয়োগফল।</div>
+    <div class="step">$\text{EQRF এলাকার ক্ষেত্রফল} = \triangle \text{PQR এর ক্ষেত্রফল} - \text{বৃত্তকলা PEF এর ক্ষেত্রফল}$</div>
+    <div class="step">$\Rightarrow \text{EQRF এলাকার ক্ষেত্রফল} = 27.7128 - 8.3776 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{EQRF এলাকার ক্ষেত্রফল} \approx 19.3352 \text{ বর্গ সে.মি.}$</div>
+
+    <div class="step-explain"><strong>উত্তর:</strong> $EQRF$ এলাকার ক্ষেত্রফল প্রায় $19.3352 \text{ বর্গ সে.মি.}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">৩০. চিত্রে, $\text{AB} = 5 \text{ সেমি.}$ হলে গাঢ় অংশের ক্ষেত্রফল নির্ণয় কর।<br>$\angle \text{ABC} = 50^\circ$<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                    <rect width="100%" height="100%" fill="#ffffff" />
+                    <defs>
+                        <pattern id="dotPattern" width="6" height="6" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="1" fill="#333333" />
+                        </pattern>
+                    </defs>
+                    <circle cx="100" cy="90" r="70" fill="url(#dotPattern)" />
+                    <path d="M 100,90 L 70.42,153.44 A 70,70 0 0,0 129.58,153.44 Z" fill="#ffffff" />
+                    <circle cx="100" cy="90" r="70" fill="none" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="90" x2="70.42" y2="153.44" stroke="#000000" stroke-width="1.5" />
+                    <line x1="100" y1="90" x2="129.58" y2="153.44" stroke="#000000" stroke-width="1.5" />
+                    <path d="M 91.55,108.06 A 20,20 0 0,0 108.45,108.06" fill="none" stroke="#000000" stroke-width="1" />
+                    <text x="95" y="82" font-family="Arial, sans-serif" font-size="12" fill="#000000">B</text>
+                    <text x="58" y="165" font-family="Arial, sans-serif" font-size="12" fill="#000000">A</text>
+                    <text x="132" y="165" font-family="Arial, sans-serif" font-size="12" fill="#000000">C</text>
+                    <text x="100" y="125" font-family="Arial, sans-serif" font-size="11" fill="#000000" text-anchor="middle">50°</text>
+                </svg>
+            </div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">চিত্রে লক্ষ্য করলে দেখা যায়, $B$ হলো বৃত্তের কেন্দ্র। $BA$ এবং $BC$ হলো বৃত্তের দুটি ব্যাসার্ধ। এখানে সম্পূর্ণ বৃত্তের ক্ষেত্রফল থেকে সাদা রঙের বৃত্তকলা $ABC$ এর ক্ষেত্রফল বাদ দিলেই ডট প্যাটার্নযুক্ত গাঢ় বা ছায়াঘেরা অংশের ক্ষেত্রফল পাওয়া যাবে।</div>
+
+    <div class="step-explain"><strong>ধাপ ১: দেওয়া আছে অংশ এবং বৃত্তের ব্যাসার্ধ</strong></div>
+    <div class="step-explain">বৃত্তের ব্যাসার্ধ, $r = AB = 5 \text{ সেমি.}$</div>
+    <div class="step-explain">বৃত্তকলার কেন্দ্রস্থ কোণ, $\theta = \angle ABC = 50^\circ$</div>
+
+    <div class="step-explain"><strong>ধাপ ২: সম্পূর্ণ বৃত্তের ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">আমরা জানি, বৃত্তের ক্ষেত্রফলের সূত্র $= \pi r^2$</div>
+    <div class="step-explain">এখন ব্যাসার্ধ $r$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\text{বৃত্তের ক্ষেত্রফল} = \pi \cdot \left(5\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তের ক্ষেত্রফল} = 3.14159 \cdot 25 \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তের ক্ষেত্রফল} \approx 78.5398 \text{ বর্গ সেমি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৩: সাদা অংশের (বৃত্তকলা $ABC$ এর) ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">আমরা জানি, $\theta$ কোণ উৎপন্নকারী বৃত্তকলার ক্ষেত্রফলের সূত্র $= \frac{\theta}{360^\circ} \cdot \pi r^2$</div>
+    <div class="step-explain">সূত্রে $\theta = 50^\circ$ এবং $r = 5$ প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\text{বৃত্তকলা ABC এর ক্ষেত্রফল} = \frac{50^\circ}{360^\circ} \cdot 3.14159 \cdot \left(5\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা ABC এর ক্ষেত্রফল} = \frac{5}{36} \cdot 3.14159 \cdot 25 \quad \left[\frac{50}{360} = \frac{5}{36} \text{ লঘিষ্ঠ করে}\right]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা ABC এর ক্ষেত্রফল} = \frac{5 \cdot 78.5398}{36} \quad [3.14159 \cdot 25 = 78.5398 \text{ গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা ABC এর ক্ষেত্রফল} = \frac{392.6990}{36} \quad [\text{লব গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{বৃত্তকলা ABC এর ক্ষেত্রফল} \approx 10.9083 \text{ বর্গ সেমি.}$</div>
+
+    <div class="step-explain"><strong>ধাপ ৪: গাঢ় অংশের ক্ষেত্রফল নির্ণয়</strong></div>
+    <div class="step-explain">গাঢ় অংশের ক্ষেত্রফল হবে সম্পূর্ণ বৃত্তের ক্ষেত্রফল এবং সাদা বৃত্তকলা অংশের ক্ষেত্রফলের বিয়োগফল।</div>
+    <div class="step">$\text{গাঢ় অংশের ক্ষেত্রফল} = \text{সম্পূর্ণ বৃত্তের ক্ষেত্রফল} - \text{বৃত্তকলা ABC এর ক্ষেত্রফল}$</div>
+    <div class="step">$\Rightarrow \text{গাঢ় অংশের ক্ষেত্রফল} = 78.5398 - 10.9083 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{গাঢ় অংশের ক্ষেত্রফল} \approx 67.6315 \text{ বর্গ সেমি.}$</div>
+
+    <div class="step-explain"><strong>উত্তর:</strong> চিত্রে প্রদর্শিত বৃত্তটির গাঢ় অংশের ক্ষেত্রফল প্রায় $67.6315 \text{ বর্গ সেমি.}$।</div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7A Q13-Q24</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (7A)</h1>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৩. যদি $x = r \sin(\theta + 45^\circ)$ এবং $y = r \sin(\theta - 45^\circ)$ হয়, তবে প্রমাণ কর যে, $x^2 + y^2 = r^2$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain"><strong>দেওয়া আছে:</strong></div>
+    <div class="step">$x = r \sin(\theta + 45^\circ)$</div>
+    <div class="step">$y = r \sin(\theta - 45^\circ)$</div>
+    
+    <div class="step-explain">আমাদের $x^2 + y^2 = r^2$ প্রমাণ করতে হবে। বামপক্ষ থেকে হিসাব শুরু করি:</div>
+    <div class="step">$\text{বামপক্ষ} = x^2 + y^2$</div>
+    <div class="step-explain">এখন $x$ এবং $y$ এর মান প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$= \left\{r \sin(\theta + 45^\circ)\right\}^2 + \left\{r \sin(\theta - 45^\circ)\right\}^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">বর্গ বা স্কয়ার আলাদা করে লিখি:</div>
+    <div class="step">$= r^2 \sin^2(\theta + 45^\circ) + r^2 \sin^2(\theta - 45^\circ)$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ উৎপাদক $r^2$ কমন নিয়ে পাই:</div>
+    <div class="step">$= r^2 \left\{\sin^2(\theta + 45^\circ) + \sin^2(\theta - 45^\circ)\right\} \quad [r^2 \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= r^2 \left[ \left\{ \sin\left(\theta + 45^\circ\right) \right\}^2 + \left\{ \sin\left(\theta - 45^\circ\right) \right\}^2 \right]$</div>
+        
+    <div class="step-explain">আমরা জানি, $\sin(\text{A} + \text{B}) = \sin\text{A}\cos\text{B} + \cos\text{A}\sin\text{B}$ এবং $\sin(\text{A} - \text{B}) = \sin\text{A}\cos\text{B} - \cos\text{A}\sin\text{B}$। এই সূত্র দুটি মূল রাশিতে বসিয়ে পাই:</div>
+    <div class="step">$= r^2 \left[\left\{\sin\theta\cos 45^\circ + \cos\theta\sin 45^\circ\right\}^2 + \left\{\sin\theta\cos 45^\circ - \cos\theta\sin 45^\circ\right\}^2\right]$</div>
+    <div class="step-explain">আমরা জানি, $\sin 45^\circ = \frac{1}{\sqrt{2}}$ এবং $\cos 45^\circ = \frac{1}{\sqrt{2}}$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= r^2 \left[\left\{\sin\theta \cdot \frac{1}{\sqrt{2}} + \cos\theta \cdot \frac{1}{\sqrt{2}}\right\}^2 + \left\{\sin\theta \cdot \frac{1}{\sqrt{2}} - \cos\theta \cdot \frac{1}{\sqrt{2}}\right\}^2\right] \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">উভয় ব্র্যাকেটের ভেতর থেকে $\frac{1}{\sqrt{2}}$ কমন নেওয়া যায়।</div>
+    <div class="step">$= r^2 \left[\left\{\frac{1}{\sqrt{2}} \cdot \left(\sin\theta + \cos\theta\right)\right\}^2 + \left\{\frac{1}{\sqrt{2}} \cdot \left(  \sin\theta - \cos\theta\right)\right\}^2\right] \quad [\frac{1}{\sqrt{2}}  \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= r^2 \left[\left(\frac{1}{\sqrt{2}}\right)^2 \cdot \left(\sin\theta + \cos\theta\right)^2 + \left(\frac{1}{\sqrt{2}}\right)^2 \cdot \left(\sin\theta - \cos\theta\right)^2\right]$</div>
+    <div class="step-explain"> এখন, $\left(\frac{1}{\sqrt{2}}\right)^2$ কমন নেওয়া যায়,</div>
+    <div class="step">$= r^2 \cdot \left(\frac{1}{\sqrt{2}}\right)^2 \left[(\sin\theta + \cos\theta)^2 + (\sin\theta - \cos\theta)^2\right]$</div>
+
+    <div class="step-explain">যেহেতু,  $\left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}$ এবং   $r^2 \cdot \frac{1}{2} = \frac{r^2}{2}$</div>
+
+    <div class="step">$= \frac{r^2}{2} \left[(\sin\theta + \cos\theta)^2 + (\sin\theta - \cos\theta)^2\right]$</div>
+    
+    <div class="step-explain">বীজগণিতের সূত্রানুযায়ী আমরা জানি, $(a+b)^2 + (a-b)^2 = 2(a^2 + b^2)$। এখানে $a = \sin\theta$ এবং $b = \cos\theta$ ধরে পাই:</div>
+    <div class="step">$= \frac{r^2}{2} \cdot 2\left(\sin^2\theta + \cos^2\theta\right) \quad [\text{সূত্র: } (a+b)^2+(a-b)^2 = 2(a^2+b^2)]$</div>
+    <div class="step-explain">লব ও হরের $2$ কাটাকাটি করি:</div>
+    <div class="step">$= r^2 \left(\sin^2\theta + \cos^2\theta\right)$</div>
+    <div class="step-explain">ত্রিকোণমিতিক মৌলিক অভেদ থেকে আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$।</div>
+    <div class="step">$= r^2 \cdot 1 \quad [\because \sin^2\theta + \cos^2\theta = 1]$</div>
+    <div class="step">$= r^2 = \text{ডানপক্ষ}$</div>
+    <div class="step">সুতরাং, $x^2 + y^2 = r^2$ (প্রমাণিত)।</div>
+
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৪. সমকোণী $\triangle\text{ABC}$ এ $\angle\text{B} = 90^\circ$ হলে, প্রমাণ কর যে, $\sin^2\text{A} - \sin^2\text{B} + \sin^2\text{C} = 0$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain"><strong>দেওয়া আছে:</strong> $\triangle\text{ABC}$ একটি সমকোণী ত্রিভুজ এবং $\angle\text{B} = 90^\circ$।</div>
+    <div class="step-explain">আমরা জানি, ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$ বা দুই সমকোণ।</div>
+    <div class="step">$\text{A} + \text{B} + \text{C} = 180^\circ$</div>
+    <div class="step-explain">যেহেতু $\text{B} = 90^\circ$, সেহেতু:</div>
+    <div class="step">$\text{A} + 90^\circ + \text{C} = 180^\circ \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{A} + \text{C} = 180^\circ - 90^\circ$</div>
+    <div class="step">$\Rightarrow \text{A} + \text{C} = 90^\circ$</div>
+    <div class="step">$\Rightarrow \text{C} = 90^\circ - \text{A} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন প্রমাণ্য রাশিটির বামপক্ষ দিয়ে শুরু করি:</div>
+    <div class="step">$\text{বামপক্ষ} = \sin^2\text{A} - \sin^2\text{B} + \sin^2\text{C}$</div>
+    <div class="step-explain">এখন $\text{B}$ এবং $\text{C}$ এর মান প্রতিস্থাপন করি:</div>
+    <div class="step">$= \sin^2\text{A} - \sin^2(90^\circ) + \sin^2(90^\circ - \text{A}) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\sin 90^\circ = 1$, তাই $\sin^2 90^\circ = 1^2 = 1$।<br>আবার সংযুক্ত কোণের সূত্রানুযায়ী, $\sin(90^\circ - \text{A}) = \cos\text{A}$ (যেহেতু সহগ $1$ বিজোড় এবং ১ম চতুর্ভাগ)। সুতরাং $\sin^2(90^\circ - \text{A}) = \cos^2\text{A}$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= \sin^2\text{A} - 1 + \cos^2\text{A}$</div>
+    <div class="step-explain">ত্রিকোণমিতিক পদগুলোকে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(\sin^2\text{A} + \cos^2\text{A}\right) - 1$</div>
+    <div class="step-explain">আমরা জানি, $\sin^2\text{A} + \cos^2\text{A} = 1$। মানটি বসিয়ে পাই:</div>
+    <div class="step">$= 1 - 1 \quad [\because \sin^2\text{A} + \cos^2\text{A} = 1]$</div>
+    <div class="step">$= 0 = \text{ডানপক্ষ}$</div>
+    <div class="step">সুতরাং, $\sin^2\text{A} - \sin^2\text{B} + \sin^2\text{C} = 0$ (প্রমাণিত)।</div>
+
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৫. যদি $\text{ABCD}$ চতুর্ভুজের কোণগুলি যথাক্রমে $\text{A, B, C, D}$ হয়, তবে দেখাও যে,
+    i. $\cos\frac{1}{2}(\text{A} + \text{C}) + \cos\frac{1}{2}(\text{B} + \text{D}) = 0$ <br>
+    ii. $\sin(\text{A} + \text{B} + \text{C}) + \sin(\text{A} + \text{B} + \text{C} + 2\text{D}) = 0$</h3></div>
+    <div class="solution-title">সমাধান ১৫(i):</div>
+    <div class="step-explain">আমরা জানি, যেকোনো চতুর্ভুজের চার কোণের সমষ্টি $360^\circ$ বা $4\pi$ রেডিয়ান।</div>
+    <div class="step">$\text{A} + \text{B} + \text{C} + \text{D} = 360^\circ$</div>
+    <div class="step-explain">উভয় পক্ষকে $2$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\frac{\text{A} + \text{B} + \text{C} + \text{D}}{2} = \frac{360^\circ}{2} \quad [\text{উভয় পক্ষকে } 2 \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{\text{A} + \text{C}}{2} + \frac{\text{B} + \text{D}}{2} = 180^\circ \quad [\text{আলাদা করে সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{1}{2}(\text{A} + \text{C}) = 180^\circ - \frac{1}{2}(\text{B} + \text{D}) \quad [\text{পক্ষান্তর করে}]$</div>
+
+    <div class="step-explain"><h4>i. $\cos\frac{1}{2}(\text{A} + \text{C}) + \cos\frac{1}{2}(\text{B} + \text{D}) = 0$</h4></div>
+    <div class="step-explain">বামপক্ষ থেকে শুরু করি:</div>
+    <div class="step">$\text{বামপক্ষ} = \cos\frac{1}{2}(\text{A} + \text{C}) + \cos\frac{1}{2}(\text{B} + \text{D})$</div>
+    <div class="step-explain">এখন $\frac{1}{2}(\text{A} + \text{C})$ এর মান প্রতিস্থাপন করি:</div>
+    <div class="step">$= \cos\left\{180^\circ - \frac{1}{2}(\text{B} + \text{D})\right\} + \cos\frac{1}{2}(\text{B} + \text{D}) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $180^\circ = 2 \cdot 90^\circ$। সুতরাং সংযুক্ত কোণের নিয়ম অনুযায়ী $\cos(2 \cdot 90^\circ - \alpha) = -\cos\alpha$ (সহগ জোড় এবং ২য় চতুর্ভাগে $\cos$ ঋণাত্মক)। এখানে $\alpha = \frac{1}{2}(\text{B} + \text{D})$।</div>
+    <div class="step">$= -\cos\frac{1}{2}(\text{B} + \text{D}) + \cos\frac{1}{2}(\text{B} + \text{D})$</div>
+    <div class="step-explain">বিপরীত চিহ্নযুক্ত একই পদ কাটাকাটি হয়ে যায়:</div>
+    <div class="step">$= 0 = \text{ডানপক্ষ}$</div>
+    <div class="step">সুতরাং, $\cos\frac{1}{2}(\text{A} + \text{C}) + \cos\frac{1}{2}(\text{B} + \text{D}) = 0$ (দেখানো হলো)।</div>
+
+    <hr>
+    <div class="solution-title">সমাধান ১৫(ii):</div>
+    <div class="step-explain"><h4>ii. $\sin(\text{A} + \text{B} + \text{C}) + \sin(\text{A} + \text{B} + \text{C} + 2\text{D}) = 0$</h4></div>
+    <div class="step-explain">চতুর্ভুজের মূল শর্তটি পুনরায় ব্যবহার করি:</div>
+    <div class="step">$\text{A} + \text{B} + \text{C} + \text{D} = 360^\circ$</div>
+    <div class="step">$\Rightarrow \text{A} + \text{B} + \text{C} = 360^\circ - \text{D} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন প্রমাণ্য রাশিটির বামপক্ষ তুলি:</div>
+    <div class="step">$\text{বামপক্ষ} = \sin(\text{A} + \text{B} + \text{C}) + \sin(\text{A} + \text{B} + \text{C} + 2\text{D})$</div>
+    <div class="step-explain">২য় পদের কোণটিকে একটু সাজিয়ে লিখি যাতে মান বসাতে সুবিধা হয়:</div>
+    <div class="step">$= \sin(\text{A} + \text{B} + \text{C}) + \sin\left\{(\text{A} + \text{B} + \text{C} + \text{D}) + \text{D}\right\}$</div>
+    <div class="step-explain">এখন ১ম পদে $(\text{A} + \text{B} + \text{C}) = 360^\circ - \text{D}$ এবং ২য় পদের বন্ধনীতে $(\text{A} + \text{B} + \text{C} + \text{D}) = 360^\circ$ মান বসিয়ে পাই:</div>
+    <div class="step">$= \sin(360^\circ - \text{D}) + \sin(360^\circ + \text{D}) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $360^\circ = 4 \cdot 90^\circ$ (জোড় গুণিতক)। চতুর্ভাগ বিশ্লেষণ করি:</div>
+    <div class="step-explain">
+        * $\sin(360^\circ - \text{D}) = \sin(4 \cdot 90^\circ - \text{D})$: কোণটি ৪র্থ চতুর্ভাগে অবস্থিত, যেখানে $\sin$ ঋণাত্মক। সুতরাং এটি হবে $-\sin\text{D}$।<br>
+        * $\sin(360^\circ + \text{D}) = \sin(4 \cdot 90^\circ + \text{D})$: কোণটি সম্পূর্ণ এক ঘূর্ণন শেষে ১ম চতুর্ভাগে অবস্থিত, যেখানে $\sin$ ধনাত্মক। সুতরাং এটি হবে $+\sin\text{D}$।
+    </div>
+    <div class="step">$= (-\sin\text{D}) + (+\sin\text{D}) \quad [\text{চতুর্ভাগের নিয়ম প্রয়োগ করে}]$</div>
+    <div class="step">$= -\sin\text{D} + \sin\text{D}$</div>
+    <div class="step">$= 0 = \text{ডানপক্ষ}$</div>
+    <div class="step">সুতরাং, $\sin(\text{A} + \text{B} + \text{C}) + \sin(\text{A} + \text{B} + \text{C} + 2\text{D}) = 0$ (দেখানো হলো)।</div>
+
+</div>
+
+    <div class="problem-card">
+        <div class="problem-title"><h3>১৬. $\cos\theta = \frac{1}{2}$ এবং $180^\circ \lt \theta \lt 360^\circ$ হলে $\theta =$ কত? </h3></div>
+        <div class="solution-title">সমাধান:</div>
+        <div class="step-explain">প্রশ্নে প্রদত্ত শর্ত এবং মানগুলো প্রথমে লিখে পাই:</div>
+        <div class="step">$\cos\theta = \frac{1}{2}$</div>
+        <div class="step-explain">এবং কোণের ব্যবধি বা সীমা দেওয়া আছে:</div>
+        <div class="step">$180^\circ \lt \theta \lt 360^\circ$</div>
+        <div class="step-explain">আমরা জানি, ত্রিকোণমিতিক চতুর্ভাগ (Quadrant) এর নিয়ম অনুযায়ী, তৃতীয় চতুর্ভাগে ($180^\circ$ থেকে $270^\circ$) $\cos\theta$ এর মান ঋণাত্মক (-) এবং চতুর্থ চতুর্ভাগে ($270^\circ$ থেকে $360^\circ$) $\cos\theta$ এর মান ধনাত্মক (+)। যেহেতু প্রশ্নে $\cos\theta = \frac{1}{2}$ (ধনাত্মক মান) দেওয়া আছে, তাই $\theta$ কোণটি অবশ্যই চতুর্থ চতুর্ভাগে (4th Quadrant) অবস্থিত হবে।</div>
+        <div class="step-explain">আমরা জানি, সাধারণ কোণের মান হিসেবে:</div>
+        <div class="step">$\cos 60^\circ = \frac{1}{2}$</div>
+        <div class="step-explain">এখন, চতুর্থ চতুর্ভাগে ধনাত্মক মান বজায় রেখে কোণটিকে রূপান্তর করার জন্য আমরা $\cos(360^\circ - \alpha) = \cos\alpha$ সূত্রটি ব্যবহার করব।</div>
+        <div class="step">$\Rightarrow \cos\theta = \cos(360^\circ - 60^\circ) \quad [\because \cos 60^\circ = \frac{1}{2} \text{ এবং চতুর্থ চতুর্ভাগে } \cos \text{ ধনাত্মক}]$</div>
+        <div class="step-explain">ব্র্যাকেটের ভেতরের বিয়োগফলটি হিসাব করে পাই:</div>
+        <div class="step">$\Rightarrow \cos\theta = \cos 300^\circ \quad [360^\circ \text{ থেকে } 60^\circ \text{ বিয়োগ করে}]$</div>
+        <div class="step-explain">উভয় পক্ষ থেকে $\cos$ বর্জন বা তুলনা করে পাই:</div>
+        <div class="step">$\Rightarrow \theta = 300^\circ$</div>
+        <div class="step-explain">নির্ণেয় মানটি প্রদত্ত শর্ত $180^\circ \lt 300^\circ \lt 360^\circ$ কে সম্পূর্ণরূপে সিদ্ধ করে।</div>
+        <div class="step-explain">সুতরাং, নির্ণেয় কোণের মান:</div>
+        <div class="step">$\theta = 300^\circ$</div>
+    </div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৭. $\tan x = \frac{3}{4}$, $\cos x$ ধনাত্মক হলে, $\sin x$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">উদ্দীপকে আমাদের দুটি শর্ত দেওয়া আছে। প্রথমটি হলো $\tan x = \frac{3}{4}$ এবং দ্বিতীয়টি হলো $\cos x$ এর মান ধনাত্মক (positive)। আমরা জানি যে, ত্রিকোণমিতিক চতুর্ভাগ (Quadrant) এর নিয়ম অনুযায়ী, $\tan x$ এর মান ধনাত্মক হয় প্রথম এবং তৃতীয় চতুর্ভাগে। আবার, $\cos x$ এর মান ধনাত্মক হয় প্রথম এবং চতুর্থ চতুর্ভাগে। যেহেতু দুটি শর্তই একসাথে সত্য হতে হবে, তাই $x$ কোণটি অবশ্যই প্রথম চতুর্ভাগে (First Quadrant) অবস্থিত। আর প্রথম চতুর্ভাগে সব ত্রিকোণমিতিক অনুপাতই ($\sin, \cos, \tan$) ধনাত্মক হয়।</div>
+
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\tan x = \frac{3}{4}$</div>
+    
+    <div class="step-explain">আমরা জানি, বর্গের ত্রিকোণমিতিক সূত্র থেকে:</div>
+    <div class="step">$\sec^2 x = 1 + \tan^2 x \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন $\tan x$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sec^2 x = 1 + \left(\frac{3}{4}\right)^2 \quad [\tan x = \frac{3}{4} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec^2 x = 1 + \frac{3^2}{4^2} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2 x = 1 + \frac{9}{16}$</div>
+    <div class="step">$\Rightarrow \sec^2 x = \frac{16 + 9}{16} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2 x = \frac{25}{16}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \sec x = \pm\sqrt{\frac{25}{16}}$</div>
+    <div class="step">$\Rightarrow \sec x = \pm\frac{5}{4}$</div>
+    
+    <div class="step-explain">যেহেতু $\cos x$ ধনাত্মক, তাই এর বিপরীত অনুপাত $\sec x$ ও ধনাত্মক হবে। সুতরাং, আমরা ঋণাত্মক ($-$) চিহ্ন বর্জন করে ধনাত্মক ($+$) চিহ্ন নেব:</div>
+    <div class="step">$\sec x = \frac{5}{4} \quad [\sec x > 0 \text{ বিবেচনা করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos x$ হলো $\sec x$ এর বিপরীত। ব্যস্তকরণ (Inverse) করে পাই:</div>
+    <div class="step">$\cos x = \frac{1}{\sec x}$</div>
+    <div class="step">$\Rightarrow \cos x = \frac{4}{5} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন আমাদের $\sin x$ এর মান বের করতে হবে। আমরা জানি, $\tan x = \frac{\sin x}{\cos x}$। এই সূত্রটিকে আর-গুণন (Cross-multiplication) করলে পাই:</div>
+    <div class="step">$\sin x = \tan x \cdot \cos x$</div>
+    
+    <div class="step-explain">এখন $\tan x$ এবং $\cos x$ এর মান প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \sin x = \frac{3}{4} \cdot \frac{4}{5} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব এবং হরের $4$ কাটাকাটি করলে চূড়ান্ত মান পাওয়া যায়:</div>
+    <div class="step">$\Rightarrow \sin x = \frac{3}{5}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\sin x = \frac{3}{5}$</div>
+
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৮ যদি $\frac{\pi}{2} < \alpha < \pi$ এবং $\sin\alpha = \frac{4}{5}$ হয়, তবে $\tan\alpha$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে শর্ত দেওয়া আছে $\frac{\pi}{2} \lt \alpha \lt \pi$। এর অর্থ হলো $\alpha$ কোণটি $90^\circ$ থেকে বড় কিন্তু $180^\circ$ থেকে ছোট। অর্থাৎ, $\alpha$ দ্বিতীয় চতুর্ভাগে (Second Quadrant) অবস্থিত। দ্বিতীয় চতুর্ভাগে শুধুমাত্র $\sin$ এবং $\csc$ ধনাত্মক, বাকি সব ত্রিকোণমিতিক অনুপাত (যেমন $\tan$) ঋণাত্মক (negative) হয়।</div>
+    
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\sin\alpha = \frac{4}{5}$</div>
+    
+    <div class="step-explain">আমরা জানি, ত্রিকোণমিতির মৌলিক সূত্র অনুযায়ী:</div>
+    <div class="step">$\sin^2\alpha + \cos^2\alpha = 1$</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = 1 - \sin^2\alpha \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন $\sin\alpha$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = 1 - \left(\frac{4}{5}\right)^2 \quad [\sin\alpha = \frac{4}{5} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = 1 - \frac{4^2}{5^2} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = 1 - \frac{16}{25}$</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = \frac{25 - 16}{25} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\alpha = \frac{9}{25}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \cos\alpha = \pm\sqrt{\frac{9}{25}}$</div>
+    <div class="step">$\Rightarrow \cos\alpha = \pm\frac{3}{5}$</div>
+    
+    <div class="step-explain">যেহেতু $\alpha$ কোণটি দ্বিতীয় চতুর্ভাগে ($\frac{\pi}{2} \lt \alpha \lt \pi$) অবস্থিত, তাই সেখানে $\cos\alpha$ এর মান অবশ্যই ঋণাত্মক হবে। সুতরাং:</div>
+    <div class="step">$\cos\alpha = -\frac{3}{5} \quad [\because \text{দ্বিতীয় চতুর্ভাগে } \cos\alpha \lt 0]$</div>
+    
+    <div class="step-explain">এখন আমাদের $\tan\alpha$ এর মান নির্ণয় করতে হবে। আমরা জানি:</div>
+    <div class="step">$\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$</div>
+    
+    <div class="step-explain">এখন $\sin\alpha$ এবং $\cos\alpha$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan\alpha = \frac{\frac{4}{5}}{-\frac{3}{5}} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">complex fraction বা জটিল ভগ্নাংশটিকে সরল করার জন্য হরের ভগ্নাংশটিকে উল্টে গুণ করে পাই:</div>
+    <div class="step">$\Rightarrow \tan\alpha = \frac{4}{5} \cdot \left(-\frac{5}{3}\right) \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $5$ কাটাকাটি করলে আমরা চূড়ান্ত মান পাই:</div>
+    <div class="step">$\Rightarrow \tan\alpha = -\frac{4}{3}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\tan\alpha = -\frac{4}{3}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>১৯. $\sec x = -2$ এবং $\pi < x < \frac{3\pi}{2}$ হলে প্রমাণ কর যে, $\cos x + \tan x = \frac{2\sqrt{3}-1}{2}$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে প্রশ্নে দেওয়া আছে $\pi \lt x \lt \frac{3\pi}{2}$। এর অর্থ হলো $x$ কোণটি $180^\circ$ থেকে বড় কিন্তু $270^\circ$ থেকে ছোট। অর্থাৎ, $x$ কোণটি তৃতীয় চতুর্ভাগে (Third Quadrant) অবস্থিত। ত্রিকোণমিতিক নিয়ম অনুযায়ী, তৃতীয় চতুর্ভাগে শুধুমাত্র $\tan$ এবং $\cot$ ধনাত্মক (positive) হয়, আর বাকি সব অনুপাত (যেমন: $\sin, \cos, \sec, \csc$) ঋণাত্মক (negative) হয়।</div>
+
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\sec x = -2$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos x$ হলো $\sec x$ এর বিপরীত বা ব্যস্তানুপাতিক। সুতরাং:</div>
+    <div class="step">$\cos x = \frac{1}{\sec x}$</div>
+    <div class="step">$\Rightarrow \cos x = \frac{1}{-2} \quad [\sec x = -2 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos x = -\frac{1}{2}$</div>
+    
+    <div class="step-explain">এখন আমাদের $\tan x$ এর মান বের করতে হবে। আমরা জানি বর্গের ত্রিকোণমিতিক সূত্র:</div>
+    <div class="step">$\sec^2 x - \tan^2 x = 1$</div>
+    <div class="step">$\Rightarrow \tan^2 x = \sec^2 x - 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন $\sec x$ এর মান প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \tan^2 x = (-2)^2 - 1 \quad [\sec x = -2 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan^2 x = 4 - 1 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \tan^2 x = 3$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \tan x = \pm\sqrt{3}$</div>
+    
+    <div class="step-explain">যেহেতু $x$ কোণটি তৃতীয় চতুর্ভাগে ($\pi \lt x \lt \frac{3\pi}{2}$) অবস্থিত এবং আমরা জানি তৃতীয় চতুর্ভাগে $\tan$ এর মান ধনাত্মক হয়, তাই ঋণাত্মক ($-$) চিহ্ন বর্জন করে পাই:</div>
+    <div class="step">$\tan x = \sqrt{3} \quad [\because \text{তৃতীয় চতুর্ভাগে } \tan x > 0]$</div>
+    
+    <div class="step-explain">এখন বামপক্ষ (LHS) দিয়ে শুরু করি এবং $\cos x$ ও $\tan x$ এর মান বসাই:</div>
+    <div class="step">$\text{LHS} = \cos x + \tan x$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \left(-\frac{1}{2}\right) + \sqrt{3} \quad [\cos x = -\frac{1}{2} \text{ এবং } \tan x = \sqrt{3} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \sqrt{3} - \frac{1}{2} \quad [\text{পদগুলো সাজিয়ে লিখে}]$</div>
+    
+    <div class="step-explain">এবার ২ লসাগু করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2 \cdot \sqrt{3} - 1}{2} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2\sqrt{3} - 1}{2}$</div>
+    
+    <div class="step-explain">আমরা দেখতে পাচ্ছি বামপক্ষ এবং ডানপক্ষ মিলে গেছে।</div>
+    <div class="step">$\therefore \cos x + \tan x = \frac{2\sqrt{3}-1}{2} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২০. $\tan\theta = \frac{5}{12}$, $\pi < \theta < \frac{3\pi}{2}$ হলে, $\sin(-\theta) + \cos\theta$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে দেওয়া আছে $\pi \lt \theta \lt \frac{3\pi}{2}$। এর অর্থ $\theta$ কোণটি তৃতীয় চতুর্ভাগে (Third Quadrant) অবস্থিত। তৃতীয় চতুর্ভাগে $\tan$ এবং $\cot$ ধনাত্মক হলেও $\sin$ এবং $\cos$ উভয়েই ঋণাত্মক (negative) হবে।</div>
+    
+    <div class="step-explain">আরেকটি গুরুত্বপূর্ণ সূত্র আমাদের মনে রাখতে হবে: $\sin(-\theta) = -\sin\theta$। সুতরাং প্রদত্ত রাশিটি দাঁড়ায়:</div>
+    <div class="step">$\sin(-\theta) + \cos\theta = -\sin\theta + \cos\theta$</div>
+    
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\tan\theta = \frac{5}{12}$</div>
+    
+    <div class="step-explain">আমরা জানি, বর্গের ত্রিকোণমিতিক সূত্র থেকে:</div>
+    <div class="step">$\sec^2\theta = 1 + \tan^2\theta$</div>
+    
+    <div class="step-explain">এখন $\tan\theta$ এর মান বসাই:</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \left(\frac{5}{12}\right)^2 \quad [\tan\theta = \frac{5}{12} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{5^2}{12^2} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{25}{144}$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{144 + 25}{144} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{169}{144}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\sqrt{\frac{169}{144}}$</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\frac{13}{12}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ তৃতীয় চতুর্ভাগে অবস্থিত, তাই $\sec\theta$ ঋণাত্মক হবে:</div>
+    <div class="step">$\sec\theta = -\frac{13}{12} \quad [\because \text{তৃতীয় চতুর্ভাগে } \sec\theta < 0]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos\theta$ হলো $\sec\theta$ এর বিপরীত। ব্যস্তকরণ করে পাই:</div>
+    <div class="step">$\cos\theta = \frac{1}{\sec\theta}$</div>
+    <div class="step">$\Rightarrow \cos\theta = -\frac{12}{13} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন আমাদের $\sin\theta$ এর মান বের করতে হবে। আমরা জানি:</div>
+    <div class="step">$\tan\theta = \frac{\sin\theta}{\cos\theta}$</div>
+    <div class="step">$\Rightarrow \sin\theta = \tan\theta \cdot \cos\theta \quad [\text{আর-গুণন করে}]$</div>
+    
+    <div class="step-explain">এখন $\tan\theta$ এবং $\cos\theta$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sin\theta = \frac{5}{12} \cdot \left(-\frac{12}{13}\right) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $12$ কাটাকাটি করলে পাই:</div>
+    <div class="step">$\Rightarrow \sin\theta = -\frac{5}{13}$</div>
+    
+    <div class="step-explain">এখন মূল প্রদত্ত রাশিতে $\sin\theta$ এবং $\cos\theta$ এর মান প্রতিস্থাপন করব:</div>
+    <div class="step">$\text{প্রদত্ত রাশি} = \sin(-\theta) + \cos\theta$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = -\sin\theta + \cos\theta \quad [\because \sin(-\theta) = -\sin\theta]$</div>
+    
+    <div class="step-explain">এবার বের করা মানগুলো ব্র্যাকেট ব্যবহার করে নিখুঁতভাবে বসাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = -\left(-\frac{5}{13}\right) + \left(-\frac{12}{13}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{5}{13} - \frac{12}{13} \quad [(- \cdot - = +) \text{ এবং } (+ \cdot - = -) \text{ করে}]$</div>
+    
+    <div class="step-explain">হর সমান হওয়ায় ১৩ লসাগু করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{5 - 12}{13} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = -\frac{7}{13}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $-\frac{7}{13}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২১. $\tan\theta = \frac{3}{4}$ এবং $\pi \lt \theta \lt \frac{3\pi}{2}$ হলে, $\csc(-\theta) + \sec(-\theta)$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে শর্ত দেওয়া আছে $\pi \lt \theta \lt \frac{3\pi}{2}$। এর অর্থ হলো $\theta$ কোণটি $180^\circ$ থেকে বড় কিন্তু $270^\circ$ থেকে ছোট। অর্থাৎ, $\theta$ কোণটি তৃতীয় চতুর্ভাগে (Third Quadrant) অবস্থিত। ত্রিকোণমিতিক নিয়ম অনুযায়ী, তৃতীয় চতুর্ভাগে শুধুমাত্র $\tan$ এবং $\cot$ ধনাত্মক (positive) হয়। বাকি সব অনুপাত (যেমন: $\sin, \cos, \sec, \csc$) ঋণাত্মক (negative) হয়।</div>
+
+    <div class="step-explain">ঋণাত্মক কোণের ত্রিকোণমিতিক সূত্র থেকে আমরা জানি, $\csc(-\theta) = -\csc\theta$ এবং $\sec(-\theta) = \sec\theta$। সুতরাং, প্রদত্ত রাশিটি দাঁড়ায়:</div>
+    <div class="step">$\csc(-\theta) + \sec(-\theta) = -\csc\theta + \sec\theta$</div>
+
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\tan\theta = \frac{3}{4}$</div>
+    
+    <div class="step-explain">আমরা জানি, বর্গের ত্রিকোণমিতিক সূত্র:</div>
+    <div class="step">$\sec^2\theta = 1 + \tan^2\theta$</div>
+    
+    <div class="step-explain">এখন $\tan\theta$ এর মান প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \left(\frac{3}{4}\right)^2 \quad [\tan\theta = \frac{3}{4} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{3^2}{4^2} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{9}{16}$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{16 + 9}{16} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{25}{16}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\sqrt{\frac{25}{16}}$</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\frac{5}{4}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ তৃতীয় চতুর্ভাগে অবস্থিত, তাই $\sec\theta$ এর মান ঋণাত্মক হবে। সুতরাং:</div>
+    <div class="step">$\sec\theta = -\frac{5}{4} \quad [\because \text{তৃতীয় চতুর্ভাগে } \sec\theta \lt 0]$</div>
+    
+    <div class="step-explain">আবার, বর্গের আরেকটি ত্রিকোণমিতিক সূত্র থেকে আমরা জানি:</div>
+    <div class="step">$\csc^2\theta = 1 + \cot^2\theta$</div>
+    
+    <div class="step-explain">যেহেতু $\cot\theta = \frac{1}{\tan\theta}$, তাই $\cot\theta = \frac{4}{3}$ হবে। মানটি সূত্রে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \csc^2\theta = 1 + \left(\frac{4}{3}\right)^2 \quad [\cot\theta = \frac{4}{3} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \csc^2\theta = 1 + \frac{16}{9} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \csc^2\theta = \frac{9 + 16}{9} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \csc^2\theta = \frac{25}{9}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \csc\theta = \pm\sqrt{\frac{25}{9}}$</div>
+    <div class="step">$\Rightarrow \csc\theta = \pm\frac{5}{3}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ তৃতীয় চতুর্ভাগে অবস্থিত, তাই $\csc\theta$ এর মান ঋণাত্মক হবে। সুতরাং:</div>
+    <div class="step">$\csc\theta = -\frac{5}{3} \quad [\because \text{তৃতীয় চতুর্ভাগে } \csc\theta \lt 0]$</div>
+    
+    <div class="step-explain">এখন মূল প্রদত্ত রাশিতে মানগুলো প্রতিস্থাপন করব:</div>
+    <div class="step">$\text{প্রদত্ত রাশি} = \csc(-\theta) + \sec(-\theta)$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = -\csc\theta + \sec\theta \quad [\because \csc(-\theta) = -\csc\theta, \sec(-\theta) = \sec\theta]$</div>
+    
+    <div class="step-explain">এখন $\csc\theta$ ও $\sec\theta$ এর মান ব্র্যাকেটসহ বসাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = -\left(-\frac{5}{3}\right) + \left(-\frac{5}{4}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{5}{3} - \frac{5}{4} \quad [(- \cdot - = +) \text{ এবং } (+ \cdot - = -) \text{ করে}]$</div>
+    
+    <div class="step-explain">৩ এবং ৪ এর লসাগু ১২ নিয়ে সরল করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{4 \cdot 5 - 3 \cdot 5}{12} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{20 - 15}{12}$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{5}{12}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\frac{5}{12}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>প্রশ্ন ২২. যদি $\sin\theta = \frac{3}{5}$ এবং $\frac{\pi}{2} \lt \theta \lt \pi$ হয়, তবে $\frac{\cot\theta + \cos(-\theta)}{\csc(-\theta) + \tan\theta}$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে শর্ত দেওয়া আছে $\frac{\pi}{2} \lt \theta \lt \pi$। এর অর্থ $\theta$ কোণটি $90^\circ$ থেকে বড় কিন্তু $180^\circ$ থেকে ছোট। অর্থাৎ, $\theta$ দ্বিতীয় চতুর্ভাগে (Second Quadrant) অবস্থিত। দ্বিতীয় চতুর্ভাগে $\sin$ এবং $\csc$ ধনাত্মক (positive) হয়, কিন্তু বাকি সব অনুপাত (যেমন: $\cos, \tan, \cot$) ঋণাত্মক (negative) হয়।</div>
+    
+    <div class="step-explain">ঋণাত্মক কোণের নিয়ম থেকে আমরা জানি: $\cos(-\theta) = \cos\theta$ এবং $\csc(-\theta) = -\csc\theta$। সুতরাং প্রদত্ত রাশিটি সরল করলে দাঁড়ায়:</div>
+    <div class="step">$\frac{\cot\theta + \cos(-\theta)}{\csc(-\theta) + \tan\theta} = \frac{\cot\theta + \cos\theta}{-\csc\theta + \tan\theta}$</div>
+
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\sin\theta = \frac{3}{5}$</div>
+    
+    <div class="step-explain">যেহেতু $\csc\theta$ হলো $\sin\theta$ এর বিপরীত, তাই ব্যস্তকরণ করে পাই:</div>
+    <div class="step">$\csc\theta = \frac{1}{\sin\theta} = \frac{5}{3} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos^2\theta = 1 - \sin^2\theta$। মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \cos^2\theta = 1 - \left(\frac{3}{5}\right)^2 \quad [\sin\theta = \frac{3}{5} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\theta = 1 - \frac{9}{25} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\theta = \frac{25 - 9}{25} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos^2\theta = \frac{16}{25}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \cos\theta = \pm\sqrt{\frac{16}{25}} = \pm\frac{4}{5}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ দ্বিতীয় চতুর্ভাগে অবস্থিত, তাই $\cos\theta$ এর মান ঋণাত্মক হবে:</div>
+    <div class="step">$\cos\theta = -\frac{4}{5} \quad [\because \text{দ্বিতীয় চতুর্ভাগে } \cos\theta \lt 0]$</div>
+    
+    <div class="step-explain">এখন বাকি অনুপাতগুলোর মান বের করি:</div>
+    <div class="step">$\tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{\frac{3}{5}}{-\frac{4}{5}} = \frac{3}{5} \cdot \left(-\frac{5}{4}\right) = -\frac{3}{4} \quad [\text{মান বসিয়ে ও সরল করে}]$</div>
+    <div class="step">$\cot\theta = \frac{1}{\tan\theta} = -\frac{4}{3} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন প্রদত্ত রাশিতে সব মান বসিয়ে পাই:</div>
+    <div class="step">$\text{প্রদত্ত রাশি} = \frac{\cot\theta + \cos\theta}{-\csc\theta + \tan\theta}$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\left(-\frac{4}{3}\right) + \left(-\frac{4}{5}\right)}{-\left(\frac{5}{3}\right) + \left(-\frac{3}{4}\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{-\frac{4}{3} - \frac{4}{5}}{-\frac{5}{3} - \frac{3}{4}} \quad [\text{চিহ্ন গুণ করে}]$</div>
+    
+    <div class="step-explain">লব এবং হর উভয়ের জন্য আলাদাভাবে লসাগু করি (লবের লসাগু ১৫, হরের লসাগু ১২):</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{-20 - 12}{15}}{\frac{-20 - 9}{12}} \quad [\text{উপর-নিচ লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{-32}{15}}{\frac{-29}{12}}$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে গুণ আকারে উল্টে দিয়ে সরল করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \left(-\frac{32}{15}\right) \cdot \left(-\frac{12}{29}\right) \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{32 \cdot 12}{15 \cdot 29} \quad [(- \cdot - = +) \text{ করে}]$</div>
+    
+    <div class="step-explain">১২ এবং ১৫ কে ৩ দিয়ে কাটাকাটি করলে (৪ এবং ৫ থাকে) পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{32 \cdot 4}{5 \cdot 29} \quad [\text{লব ও হরকে ৩ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{128}{145}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\frac{128}{145}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৩. $\tan\theta = \frac{5}{12}$ এবং $\sin\theta$ ঋণাত্মক হলে প্রমাণ কর যে, $\frac{\sin\theta + \cos(-\theta)}{\sec(-\theta) + \tan\theta} = \frac{51}{26}$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে শর্ত দেওয়া আছে $\tan\theta = \frac{5}{12}$ (যা একটি ধনাত্মক মান) এবং $\sin\theta$ এর মান ঋণাত্মক (negative)। আমরা জানি, ত্রিকোণমিতিক চতুর্ভাগের নিয়ম অনুযায়ী $\tan\theta$ ধনাত্মক হয় প্রথম এবং তৃতীয় চতুর্ভাগে। আবার, $\sin\theta$ ঋণাত্মক হয় তৃতীয় এবং চতুর্থ চতুর্ভাগে। যেহেতু দুটি শর্তই একসাথে সত্য হতে হবে, তাই $\theta$ কোণটি অবশ্যই তৃতীয় চতুর্ভাগে (Third Quadrant) অবস্থিত। তৃতীয় চতুর্ভাগে $\tan$ এবং $\cot$ ছাড়া বাকি সব অনুপাত (যেমন: $\sin, \cos, \sec$) ঋণাত্মক হয়।</div>
+
+    <div class="step-explain">ঋণাত্মক কোণের ত্রিকোণমিতিক সূত্র থেকে আমরা জানি, $\cos(-\theta) = \cos\theta$ এবং $\sec(-\theta) = \sec\theta$। সুতরাং, আমাদের প্রমাণ করার রাশিটি দাঁড়ায়:</div>
+    <div class="step">$\frac{\sin\theta + \cos\theta}{\sec\theta + \tan\theta} = \frac{51}{26}$</div>
+
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\tan\theta = \frac{5}{12}$</div>
+    
+    <div class="step-explain">আমরা জানি, বর্গের ত্রিকোণমিতিক সূত্র:</div>
+    <div class="step">$\sec^2\theta = 1 + \tan^2\theta$</div>
+    
+    <div class="step-explain">এখন $\tan\theta$ এর মান প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \left(\frac{5}{12}\right)^2 \quad [\tan\theta = \frac{5}{12} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{5^2}{12^2} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \frac{25}{144}$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{144 + 25}{144} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{169}{144}$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\sqrt{\frac{169}{144}}$</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\frac{13}{12}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ তৃতীয় চতুর্ভাগে অবস্থিত, তাই $\sec\theta$ এর মান ঋণাত্মক হবে। সুতরাং:</div>
+    <div class="step">$\sec\theta = -\frac{13}{12} \quad [\because \text{তৃতীয় চতুর্ভাগে } \sec\theta < 0]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos\theta$ হলো $\sec\theta$ এর বিপরীত বা ব্যস্তানুপাত। ব্যস্তকরণ করে পাই:</div>
+    <div class="step">$\cos\theta = \frac{1}{\sec\theta}$</div>
+    <div class="step">$\Rightarrow \cos\theta = -\frac{12}{13} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন আমাদের $\sin\theta$ এর মান বের করতে হবে। আমরা জানি, $\tan\theta = \frac{\sin\theta}{\cos\theta}$। একে আর-গুণন করলে পাই:</div>
+    <div class="step">$\sin\theta = \tan\theta \cdot \cos\theta$</div>
+    
+    <div class="step-explain">এখন $\tan\theta$ এবং $\cos\theta$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sin\theta = \frac{5}{12} \cdot \left(-\frac{12}{13}\right) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব এবং হরের $12$ কাটাকাটি করলে পাই:</div>
+    <div class="step">$\Rightarrow \sin\theta = -\frac{5}{13}$</div>
+    
+    <div class="step-explain">এখন বামপক্ষ (LHS) নিয়ে কাজ শুরু করি:</div>
+    <div class="step">$\text{LHS} = \frac{\sin\theta + \cos(-\theta)}{\sec(-\theta) + \tan\theta}$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sin\theta + \cos\theta}{\sec\theta + \tan\theta} \quad [\because \cos(-\theta) = \cos\theta, \sec(-\theta) = \sec\theta]$</div>
+    
+    <div class="step-explain">এবার সবকটি বের করা মান ব্র্যাকেট ব্যবহার করে নিখুঁতভাবে লব ও হরে বসাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\left(-\frac{5}{13}\right) + \left(-\frac{12}{13}\right)}{\left(-\frac{13}{12}\right) + \frac{5}{12}} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{-\frac{5}{13} - \frac{12}{13}}{-\frac{13}{12} + \frac{5}{12}} \quad [\text{চিহ্ন গুণ করে}]$</div>
+    
+    <div class="step-explain">লব এবং হরের অংশগুলোকে নিজ নিজ লসাগু (লবের ১৩, হরের ১২) নিয়ে সরল করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{-5 - 12}{13}}{\frac{-13 + 5}{12}} \quad [\text{উপর-নিচ লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{-17}{13}}{\frac{-8}{12}}$</div>
+    
+    <div class="step-explain">হরের ভগ্নাংশটিকে কাটাকাটি করে ছোট করে নেই (৪ দিয়ে ভাগ করে):</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{-17}{13}}{\frac{-2}{3}} \quad [\text{হরের ভগ্নাংশকে লঘিষ্ঠ করে}]$</div>
+    
+    <div class="step-explain">জতিটি ভগ্নাংশটিকে সরল করার জন্য হরের অংশটিকে উল্টে গুণ আকারে লিখি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \left(-\frac{17}{13}\right) \cdot \left(-\frac{3}{2}\right) \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{17 \cdot 3}{13 \cdot 2} \quad [(- \cdot - = +) \text{ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{51}{26}$</div>
+    
+    <div class="step-explain">দেখা যাচ্ছে বামপক্ষ এবং ডানপক্ষ মিলে গেছে।</div>
+    <div class="step">$\therefore \frac{\sin\theta + \cos(-\theta)}{\sec(-\theta) + \tan\theta} = \frac{51}{26} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৪. যদি $\tan\theta = \frac{5}{12}$ এবং $\cos\theta$ ধনাত্মক হয়, তবে $\frac{\sin\theta + \cos(-\theta)}{\sec(-\theta) + \tan\theta}$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এখানে শর্ত দেওয়া আছে $\tan\theta = \frac{5}{12}$ এবং $\cos\theta$ ধনাত্মক (positive)। আমরা জানি, $\tan\theta$ এবং $\cos\theta$ উভয়েই ধনাত্মক হয় শুধুমাত্র প্রথম চতুর্ভাগে (First Quadrant)। প্রথম চতুর্ভাগে সব ত্রিকোনমিতিক অনুপাতই ($\sin, \cos, \tan, \sec, \csc, \cot$) ধনাত্মক হয়।</div>
+    
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\tan\theta = \frac{5}{12}$</div>
+    
+    <div class="step-explain">প্রশ্ন ২৩ এর মতোই বর্গের ত্রিকোণমিতিক সূত্র ব্যবহার করে আমরা পাই:</div>
+    <div class="step">$\sec^2\theta = 1 + \tan^2\theta$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = 1 + \left(\frac{5}{12}\right)^2 \quad [\tan\theta = \frac{5}{12} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec^2\theta = \frac{169}{144} \quad [\text{বর্গ ও লসাগু করে}]$</div>
+    
+    <div class="step-explain">উভয়পক্ষকে বর্গমূল করে পাই:</div>
+    <div class="step">$\Rightarrow \sec\theta = \pm\sqrt{\frac{169}{144}} = \pm\frac{13}{12}$</div>
+    
+    <div class="step-explain">যেহেতু $\theta$ প্রথম চতুর্ভাগে অবস্থিত, তাই সব মান ধনাত্মক হবে। সুতরাং:</div>
+    <div class="step">$\sec\theta = \frac{13}{12} \quad [\because \text{প্রথম চতুর্ভাগে } \sec\theta > 0]$</div>
+    
+    <div class="step-explain">ব্যস্তকরণ করে $\cos\theta$ এর মান পাই:</div>
+    <div class="step">$\cos\theta = \frac{1}{\sec\theta} = \frac{12}{13} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন $\sin\theta$ এর মান বের করি:</div>
+    <div class="step">$\sin\theta = \tan\theta \cdot \cos\theta \quad [\text{সূত্র থেকে}]$</div>
+    <div class="step">$\Rightarrow \sin\theta = \frac{5}{12} \cdot \frac{12}{13} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin\theta = \frac{5}{13} \quad [\text{লব ও হরের ১২ কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">এখন প্রদত্ত রাশিতে সব ধনাত্মক মানগুলো বসাবো। ঋণাত্মক কোণের নিয়ম অনুযায়ী $\cos(-\theta) = \cos\theta$ এবং $\sec(-\theta) = \sec\theta$:</div>
+    <div class="step">$\text{প্রদত্ত রাশি} = \frac{\sin\theta + \cos(-\theta)}{\sec(-\theta) + \tan\theta}$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\sin\theta + \cos\theta}{\sec\theta + \tan\theta} \quad [\because \cos(-\theta) = \cos\theta, \sec(-\theta) = \sec\theta]$</div>
+    
+    <div class="step-explain">এখন বের করা মানগুলো লব ও হরে প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{5}{13} + \frac{12}{13}}{\frac{13}{12} + \frac{5}{12}} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">লব এবং হরের অংশগুলোকে আলাদাভাবে লসাগু (লবের ১৩, হরের ১২) করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{5 + 12}{13}}{\frac{13 + 5}{12}} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{17}{13}}{\frac{18}{12}}$</div>
+    
+    <div class="step-explain">হরের ভগ্নাংশটিকে ৬ দিয়ে কাটাকাটি করে ছোট করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\frac{17}{13}}{\frac{3}{2}} \quad [\text{হরের ভগ্নাংশকে লঘিষ্ঠ করে}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে গুণ আকারে উল্টে দিয়ে সরল করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{17}{13} \cdot \frac{2}{3} \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{17 \cdot 2}{13 \cdot 3}$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{34}{39}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\frac{34}{39}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৫. $\sin^2\frac{17\pi}{18} + \sin^2\frac{5\pi}{8} + \cos^2\frac{37\pi}{18} + \cos^2\frac{3\pi}{8}$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত রাশিটি হলো:</div>
+    <div class="step">$\sin^2\frac{17\pi}{18} + \sin^2\frac{5\pi}{8} + \cos^2\frac{37\pi}{18} + \cos^2\frac{3\pi}{8}$</div>
+    
+    <div class="step-explain">এই ধরনের বড় কোণবিশিষ্ট ত্রিকোণমিতিক রাশিকে সরল করার জন্য কোণগুলোকে সূক্ষ্মকোণে $\left(0 \text{ থেকে } \frac{\pi}{2}\right)$ রূপান্তর করতে হয়। নিচে প্রতিটি কোণকে ভেঙে দেখানো হলো:</div>
+    <div class="step-explain">
+        * $\frac{17\pi}{18} = \pi - \frac{\pi}{18}$ (এটি দ্বিতীয় চতুর্ভাগে পড়ে, যেখানে $\sin$ ধনাত্মক)<br>
+        * $\frac{5\pi}{8} = \frac{\pi}{2} + \frac{\pi}{8}$ (এটি দ্বিতীয় চতুর্ভাগে পড়ে, $\frac{\pi}{2}$ এর বিজোড় গুণিতকের জন্য $\sin$ পরিবর্তন হয়ে $\cos$ হবে)<br>
+        * $\frac{37\pi}{18} = 2\pi + \frac{\pi}{18}$ (এটি প্রথম চতুর্ভাগে পড়ে, যেখানে সব অনুপাত ধনাত্মক)
+    </div >
+    
+    <div class="step-explain">এই রূপান্তরগুলো রাশিতে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sin^2\left(\pi - \frac{\pi}{18}\right) + \sin^2\left(\frac{\pi}{2} + \frac{\pi}{8}\right) + \cos^2\left(2\pi + \frac{\pi}{18}\right) + \cos^2\frac{3\pi}{8} \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">এখন চতুর্ভাগের নিয়ম এবং বর্গ (square) থাকার কারণে মাইনাস চিহ্নের প্রভাব দূর করে পাই:</div>
+    <div class="step">$\Rightarrow \left(\sin\frac{\pi}{18}\right)^2 + \left(\cos\frac{\pi}{8}\right)^2 + \left(\cos\frac{\pi}{18}\right)^2 + \cos^2\frac{3\pi}{8} \quad [\text{চতুর্ভাগের নিয়ম প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \sin^2\frac{\pi}{18} + \cos^2\frac{\pi}{8} + \cos^2\frac{\pi}{18} + \cos^2\frac{3\pi}{8}$</div>
+    
+    <div class="step-explain">একই কোণবিশিষ্ট পদগুলোকে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(\sin^2\frac{\pi}{18} + \cos^2\frac{\pi}{18}\right) + \cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8} \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$। প্রথম অংশটির মান ১ বসাই এবং শেষ কোণ $\frac{3\pi}{8}$ কে আরও ভেঙে লিখি $\left(\frac{\pi}{2} - \frac{\pi}{8}\right)$:</div>
+    <div class="step">$\Rightarrow 1 + \cos^2\frac{\pi}{8} + \cos^2\left(\frac{\pi}{2} - \frac{\pi}{8}\right) \quad [\text{মান বসিয়ে ও কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">যেহেতু $\cos\left(\frac{\pi}{2} - \theta\right) = \sin\theta$, তাই এটি রূপান্তরিত হবে:</div>
+    <div class="step">$\Rightarrow 1 + \cos^2\frac{\pi}{8} + \sin^2\frac{\pi}{8} \quad [\because \cos(\frac{\pi}{2}-\theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">আবারো $\cos^2\frac{\pi}{8} + \sin^2\frac{\pi}{8} = 1$ সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow 1 + 1 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 2$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $2$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৬. $\cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8} + \cos^2\frac{5\pi}{8} + \cos^2\frac{7\pi}{8}$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত রাশিটি হলো:</div>
+    <div class="step">$\cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8} + \cos^2\frac{5\pi}{8} + \cos^2\frac{7\pi}{8}$</div>
+    
+    <div class="step-explain">এখানে বড় কোণ দুটির মান লঘিষ্ঠ করার জন্য $\frac{5\pi}{8}$ এবং $\frac{7\pi}{8}$ কে ভেঙে প্রকাশ করি:</div>
+    <div class="step-explain">
+        * $\frac{7\pi}{8} = \pi - \frac{\pi}{8}$<br>
+        * $\frac{5\pi}{8} = \pi - \frac{3\pi}{8}$
+    </div>
+    
+    <div class="step-explain">এই রূপান্তরগুলো প্রদত্ত রাশিতে প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8} + \cos^2\left(\pi - \frac{3\pi}{8}\right) + \cos^2\left(\pi - \frac{\pi}{8}\right) \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, দ্বিতীয় চতুর্ভাগে $\cos$ ঋণাত্মক হলেও বর্গের কারণে $(-)^2 = +$ হয়ে যাবে। অর্থাৎ, $\cos^2(\pi - \theta) = \cos^2\theta$।</div>
+    <div class="step">$\Rightarrow \cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8} + \cos^2\frac{3\pi}{8} + \cos^2\frac{\pi}{8} \quad [\text{চতুর্ভাগের নিয়ম প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">একই জাতীয় পদগুলো যোগ করে পাই:</div>
+    <div class="step">$\Rightarrow 2\cos^2\frac{\pi}{8} + 2\cos^2\frac{3\pi}{8}$</div>
+    <div class="step">$\Rightarrow 2\left(\cos^2\frac{\pi}{8} + \cos^2\frac{3\pi}{8}\right) \quad [2 \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এখন ভেতরের $\frac{3\pi}{8}$ কোণটিকে পুনরায় ছোট করার জন্য $\left(\frac{\pi}{2} - \frac{\pi}{8}\right)$ আকারে লিখি:</div>
+    <div class="step">$\Rightarrow 2\left\{\cos^2\frac{\pi}{8} + \cos^2\left(\frac{\pi}{2} - \frac{\pi}{8}\right)\right\} \quad [\text{কোণ ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 2\left(\cos^2\frac{\pi}{8} + \sin^2\frac{\pi}{8}\right) \quad [\because \cos(\frac{\pi}{2}-\theta)=\sin\theta]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক অভেদ $\cos^2\theta + \sin^2\theta = 1$ সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow 2 \cdot 1 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $2$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৭. $\sec^2\frac{14\pi}{17} - \sec^2\frac{39\pi}{17} + \cot^2\frac{41\pi}{34} - \cot^2\frac{23\pi}{34}$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত রাশিটি হলো:</div>
+    <div class="step">$\sec^2\frac{14\pi}{17} - \sec^2\frac{39\pi}{17} + \cot^2\frac{41\pi}{34} - \cot^2\frac{23\pi}{34}$</div>
+    
+    <div class="step-explain">হরের মানগুলোর সাথে সামঞ্জস্য রেখে প্রতিটি কোণকে সহজ সূক্ষ্মকোণে রূপান্তর করি:</div>
+    <div class="step-explain">
+        * $\frac{14\pi}{17} = \pi - \frac{3\pi}{17}$<br>
+        * $\frac{39\pi}{17} = 2\pi + \frac{5\pi}{17}$<br>
+        * $\frac{41\pi}{34} = \pi + \frac{7\pi}{34}$<br>
+        * $\frac{23\pi}{34} = \frac{\pi}{2} - \frac{6\pi}{34} = \frac{\pi}{2} - \frac{3\pi}{17}$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো রাশিতে বসিয়ে চতুর্ভাগের নিয়ম অনুযায়ী সরল করি:</div>
+    <div class="step">$\Rightarrow \sec^2\left(\pi - \frac{3\pi}{17}\right) - \sec^2\left(2\pi + \frac{5\pi}{17}\right) + \cot^2\left(\pi + \frac{7\pi}{34}\right) - \cot^2\left(\frac{\pi}{2} - \frac{3\pi}{17}\right)$</div>
+    
+    <div class="step-explain">বর্গ থাকার কারণে চিহ্নের পরিবর্তন ধনাত্মক থাকবে। মনে রাখতে হবে, $\cot\left(\frac{\pi}{2} - \theta\right) = \tan\theta$:</div>
+    <div class="step">$\Rightarrow \sec^2\frac{3\pi}{17} - \sec^2\frac{5\pi}{17} + \cot^2\frac{7\pi}{34} - \tan^2\frac{3\pi}{17} \quad [\text{চতুর্ভাগের নিয়ম প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">কোণ $\frac{3\pi}{17}$ সম্বলিত পদগুলো একসাথে করি এবং অবশিষ্ট কোণ $\frac{7\pi}{34}$ কে ভাঙি $\left(\frac{\pi}{2} - \frac{10\pi}{34}\right) = \left(\frac{\pi}{2} - \frac{5\pi}{17}\right)$:</div>
+    <div class="step">$\Rightarrow \left(\sec^2\frac{3\pi}{17} - \tan^2\frac{3\pi}{17}\right) - \sec^2\frac{5\pi}{17} + \cot^2\left(\frac{\pi}{2} - \frac{5\pi}{17}\right) \quad [\text{পদ সাজিয়ে ও কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\sec^2\theta - \tan^2\theta = 1$ এবং $\cot\left(\frac{\pi}{2} - \theta\right) = \tan\theta$। সূত্রে মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 1 - \sec^2\frac{5\pi}{17} + \tan^2\frac{5\pi}{17} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">শেষের দুটি পদ থেকে মাইনাস ($-$) চিহ্ন কমন নিয়ে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow 1 - \left(\sec^2\frac{5\pi}{17} - \tan^2\frac{5\pi}{17}\right) \quad [\text{মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1 - 1 \quad [\because \sec^2\theta - \tan^2\theta = 1]$</div>
+    <div class="step">$\Rightarrow 0$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $0$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৮. $\sin^2 10^\circ + \sin^2 20^\circ + \sin^2 30^\circ + \dots \dots \dots + \sin^2 80^\circ$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো:</div>
+    <div class="step">$\sin^2 10^\circ + \sin^2 20^\circ + \sin^2 30^\circ + \dots \dots \dots + \sin^2 80^\circ$</div>
+    
+    <div class="step-explain">এখানে ধারাটির সাধারণ ব্যবধান ১০° করে বৃদ্ধি পাচ্ছে। ১ম পদ ১০° এবং শেষ পদ ৮০°। সম্পূর্ণ ধারাটি লিখে পাই:</div>
+    <div class="step">$\Rightarrow \sin^2 10^\circ + \sin^2 20^\circ + \sin^2 30^\circ + \sin^2 40^\circ + \sin^2 50^\circ + \sin^2 60^\circ + \sin^2 70^\circ + \sin^2 80^\circ$</div>
+    
+    <div class="step-explain">এখানে মোট পদের সংখ্যা ৮টি। প্রথম ৪টি পদকে ঠিক রেখে শেষের ৪টি বড় কোণকে পূরক কোণের নিয়মে $\left(90^\circ - \theta\right)$ আকারে ভেঙে লিখি:</div>
+    <div class="step-explain">
+        * $\sin^2 80^\circ = \sin^2(90^\circ - 10^\circ) = \cos^2 10^\circ$<br>
+        * $\sin^2 70^\circ = \sin^2(90^\circ - 20^\circ) = \cos^2 20^\circ$<br>
+        * $\sin^2 60^\circ = \sin^2(90^\circ - 30^\circ) = \cos^2 30^\circ$<br>
+        * $\sin^2 50^\circ = \sin^2(90^\circ - 40^\circ) = \cos^2 40^\circ$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো ধারায় বসিয়ে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sin^2 10^\circ + \sin^2 20^\circ + \sin^2 30^\circ + \sin^2 40^\circ + \cos^2 40^\circ + \cos^2 30^\circ + \cos^2 20^\circ + \cos^2 10^\circ$</div>
+    
+    <div class="step-explain">একই কোণের $\sin^2$ এবং $\cos^2$ পদগুলোকে জোড়ায় জোড়ায় সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(\sin^2 10^\circ + \cos^2 10^\circ\right) + \left(\sin^2 20^\circ + \cos^2 20^\circ\right) + \left(\sin^2 30^\circ + \cos^2 30^\circ\right) + \left(\sin^2 40^\circ + \cos^2 40^\circ\right)$</div>
+    
+    <div class="step-explain">প্রতিটি জোড়ার জন্য $\sin^2\theta + \cos^2\theta = 1$ সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow 1 + 1 + 1 + 1 \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 4$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $4$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>২৯. $\cos^2 15^\circ + \cos^2 25^\circ + \cos^2 35^\circ + \dots \dots \dots + \cos^2 75^\circ$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো:</div>
+    <div class="step">$\cos^2 15^\circ + \cos^2 25^\circ + \cos^2 35^\circ + \dots \dots \dots + \cos^2 75^\circ$</div>
+    
+    <div class="step-explain">এখানে ধারাটির পদগুলো ১৫° থেকে শুরু হয়ে ১০° ব্যবধানে বৃদ্ধি পেয়ে ৭৫° পর্যন্ত গিয়েছে। সম্পূর্ণ ধারাটি বিস্তৃত করে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow \cos^2 15^\circ + \cos^2 25^\circ + \cos^2 35^\circ + \cos^2 45^\circ + \cos^2 55^\circ + \cos^2 65^\circ + \cos^2 75^\circ$</div>
+    
+    <div class="step-explain">এখানে মোট ৭টি পদ রয়েছে। মাঝখানের পদ $\cos^2 45^\circ$ এর একটি নির্দিষ্ট মান রয়েছে। প্রথম ৩টি পদ অপরিবর্তিত রেখে শেষের ৩টি বড় কোণকে পূরক কোণে রূপান্তর করি:</div>
+    <div class="step-explain">
+        * $\cos^2 75^\circ = \cos^2(90^\circ - 15^\circ) = \sin^2 15^\circ$<br>
+        * $\cos^2 65^\circ = \cos^2(90^\circ - 25^\circ) = \sin^2 25^\circ$<br>
+        * $\cos^2 55^\circ = \cos^2(90^\circ - 35^\circ) = \sin^2 35^\circ$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো ধারায় প্রতিস্থাপন করে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(\cos^2 15^\circ + \sin^2 15^\circ\right) + \left(\cos^2 25^\circ + \sin^2 25^\circ\right) + \left(\cos^2 35^\circ + \sin^2 35^\circ\right) + \cos^2 45^\circ$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos^2\theta + \sin^2\theta = 1$ এবং $\cos 45^\circ = \frac{1}{\sqrt{2}}$। মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 1 + 1 + 1 + \left(\frac{1}{\sqrt{2}}\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 3 + \frac{1}{2} \quad [\text{বর্গ করে}]$</div>
+    
+    <div class="step-explain">এবার ২ লসাগু করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{3 \cdot 2 + 1}{2} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \frac{6 + 1}{2}$</div>
+    <div class="step">$\Rightarrow \frac{7}{2}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\frac{7}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩০. যদি $\theta = \frac{\pi}{36}$ হয়, তবে $\sin^2 3\theta + \sin^2 4\theta + \sin^2 5\theta + \dots \dots \dots + \sin^2 15\theta$ এর মান নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\theta = \frac{\pi}{36}$</div>
+    
+    <div class="step-explain">প্রদত্ত রাশিটি হলো একটি সমান্তরীয় কোণের ধারা:</div>
+    <div class="step">$\text{প্রদত্ত রাশি} = \sin^2 3\theta + \sin^2 4\theta + \sin^2 5\theta + \dots \dots \dots + \sin^2 15\theta$</div>
+    
+    <div class="step-explain">ধারাটির পদগুলোর কোণ ৩ থেকে শুরু করে ১৫ পর্যন্ত মোট পদের সংখ্যা নির্ণয় করি। পদের সংখ্যা $= (15 - 3) + 1 = 13$ টি। সম্পূর্ণ ধারাটি বিস্তারিতভাবে নিচে লেখা হলো:</div>
+    <div class="step">$\Rightarrow \sin^2 3\theta + \sin^2 4\theta + \sin^2 5\theta + \sin^2 6\theta + \sin^2 7\theta + \sin^2 8\theta + \sin^2 9\theta + \sin^2 10\theta + \sin^2 11\theta + \sin^2 12\theta + \sin^2 13\theta + \sin^2 14\theta + \sin^2 15\theta$</div>
+    
+    <div class="step-explain">এখন আমরা $\theta = \frac{\pi}{36}$ কোণটির সম্পর্ক থেকে কিছু বিশেষ পদের সরল মান বের করব। যেমন, মাঝখানের পদ $9\theta$:</div>
+    <div class="step">$9\theta = 9 \cdot \frac{\pi}{36} = \frac{\pi}{4}$</div>
+    <div class="step">$\Rightarrow \sin^2 9\theta = \sin^2\frac{\pi}{4} = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2}$</div>
+    
+    <div class="step-explain">আবার, ধারার দুই প্রান্তের কোণগুলোর সমষ্টি লক্ষ্য করি, যেমন $3\theta + 15\theta = 18\theta$। এখানে:</div>
+    <div class="step">$18\theta = 18 \cdot \frac{\pi}{36} = \frac{\pi}{2}$</div>
+    
+    <div class="step-explain">অতএব, যেকোনো বড় কোণকে ছোট কোণে রূপান্তরের জন্য আমরা লিখতে পারি: $15\theta = 18\theta - 3\theta = \frac{\pi}{2} - 3\theta$। একইভাবে বাকি পদগুলোর জোড়া তৈরি করি:</div>
+    <div class="step-explain">
+        * $\sin^2 15\theta = \sin^2\left(\frac{\pi}{2} - 3\theta\right) = \cos^2 3\theta$<br>
+        * $\sin^2 14\theta = \sin^2\left(\frac{\pi}{2} - 4\theta\right) = \cos^2 4\theta$<br>
+        * $\sin^2 13\theta = \sin^2\left(\frac{\pi}{2} - 5\theta\right) = \cos^2 5\theta$<br>
+        * $\sin^2 12\theta = \sin^2\left(\frac{\pi}{2} - 6\theta\right) = \cos^2 6\theta$<br>
+        * $\sin^2 11\theta = \sin^2\left(\frac{\pi}{2} - 7\theta\right) = \cos^2 7\theta$<br>
+        * $\sin^2 10\theta = \sin^2\left(\frac{\pi}{2} - 8\theta\right) = \cos^2 8\theta$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো মূল ধারায় প্রতিস্থাপন করে জোড়ায় জোড়ায় সাজিয়ে লিখি (এখানে মোট ৬টি জোড়া পাওয়া যাবে এবং মাঝখানে অতিরিক্ত পদ $9\theta$ থাকবে):</div>
+    <div class="step">$\Rightarrow \left(\sin^2 3\theta + \cos^2 3\theta\right) + \left(\sin^2 4\theta + \cos^2 4\theta\right) + \left(\sin^2 5\theta + \cos^2 5\theta\right) + \left(\sin^2 6\theta + \cos^2 6\theta\right) + \left(\sin^2 7\theta + \cos^2 7\theta\right) + \left(\sin^2 8\theta + \cos^2 8\theta\right) + \sin^2 9\theta$</div>
+    
+    <div class="step-explain">প্রতিটি জোড়ার মান ১ এবং $\sin^2 9\theta = \frac{1}{2}$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow (1 + 1 + 1 + 1 + 1 + 1) + \frac{1}{2} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 6 + \frac{1}{2}$</div>
+    
+    <div class="step-explain">এবার ২ লসাগু করে সরল মান নির্ণয় করি:</div>
+    <div class="step">$\Rightarrow \frac{6 \cdot 2 + 1}{2} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \frac{12 + 1}{2}$</div>
+    <div class="step">$\Rightarrow \frac{13}{2}$</div>
+    
+    <div class="step"><strong>উত্তর:</strong> $\frac{13}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩১. $\cot\frac{\pi}{20} \cdot \cot\frac{3\pi}{20} \cdot \cot\frac{5\pi}{20} \cdot \cot\frac{7\pi}{20} \cdot \cot\frac{9\pi}{20}$ এর মান নির্ণয় কর। </h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ত্রিকোণমিতিক রাশিটি হলো:</div>
+    <div class="step">$\cot\frac{\pi}{20} \cdot \cot\frac{3\pi}{20} \cdot \cot\frac{5\pi}{20} \cdot \cot\frac{7\pi}{20} \cdot \cot\frac{9\pi}{20}$</div>
+    
+    <div class="step-explain">এখানে মাঝখানের পদ $\cot\frac{5\pi}{20}$ কে কাটাকাটি করে ছোট করলে আমরা পাই $\cot\frac{\pi}{4}$। আমরা জানি, $\cot\frac{\pi}{4} = \cot 45^\circ = 1$।</div>
+    <div class="step-explain">বাকি পদগুলোর মধ্যে বড় কোণগুলোকে $\left(\frac{\pi}{2} - \theta\right)$ সূত্রে রূপান্তর করে ছোট কোণে নিয়ে আসব, যেন সেগুলো $\tan$ এ রূপান্তরিত হয়ে আগের পদগুলোর সাথে কাটাকাটি চলে যায়। নিচে রূপান্তর দুটি দেখানো হলো:</div>
+    <div class="step-explain">
+        * $\frac{9\pi}{20} = \frac{10\pi - \pi}{20} = \frac{10\pi}{20} - \frac{\pi}{20} = \frac{\pi}{2} - \frac{\pi}{20}$<br>
+        * $\frac{7\pi}{20} = \frac{10\pi - 3\pi}{20} = \frac{10\pi}{20} - \frac{3\pi}{20} = \frac{\pi}{2} - \frac{3\pi}{20}$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো প্রদত্ত রাশিতে প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \cot\frac{\pi}{20} \cdot \cot\frac{3\pi}{20} \cdot \cot\left(\frac{\pi}{4}\right) \cdot \cot\left(\frac{\pi}{2} - \frac{3\pi}{20}\right) \cdot \cot\left(\frac{\pi}{2} - \frac{\pi}{20}\right) \quad [\text{কোণ ভেঙে ও লঘিষ্ঠ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, প্রথম চতুর্ভাগের সূত্র অনুযায়ী $\cot\left(\frac{\pi}{2} - \theta\right) = \tan\theta$ এবং নির্দিষ্ট মান $\cot\frac{\pi}{4} = 1$। এই সূত্রগুলো প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \cot\frac{\pi}{20} \cdot \cot\frac{3\pi}{20} \cdot 1 \cdot \tan\frac{3\pi}{20} \cdot \tan\frac{\pi}{20} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">একই কোণবিশিষ্ট $\cot$ এবং $\tan$ পদগুলোকে জোড়ায় জোড়ায় সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(\cot\frac{\pi}{20} \cdot \tan\frac{\pi}{20}\right) \cdot \left(\cot\frac{3\pi}{20} \cdot \tan\frac{3\pi}{20}\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cot\theta \cdot \tan\theta = \frac{1}{\tan\theta} \cdot \tan\theta = 1$। অতএব, জোড়াগুলোর মান ১ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 1 \cdot 1 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $1$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩২. $\theta = \frac{\pi}{20}$ হলে দেখাও যে, $\cot\theta \cot 3\theta \cot 5\theta \dots \dots \dots \cot 19\theta = -1$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\theta = \frac{\pi}{20}$</div>
+    
+    <div class="step-explain">এখান থেকে আমরা আড়াআড়ি গুণ (Cross-multiplication) করে পাই:</div>
+    <div class="step">$\Rightarrow 20\theta = \pi$</div>
+    <div class="step">$\Rightarrow 10\theta = \frac{\pi}{2} \quad [\text{উভয়পক্ষকে ২ দ্বারা ভাগ করে}]$</div>
+
+    <div class="step-explain">এখন প্রমাণ করার জন্য বামপক্ষ (LHS) তুলে সম্পূর্ণ ধারাটি বিস্তৃত আকারে লিখি। এখানে কোণগুলো বিজোড় সংখ্যা (১, ৩, ৫, ...) আকারে ১৯ পর্যন্ত বৃদ্ধি পেয়েছে। মোট পদের সংখ্যা ১০টি:</div>
+    <div class="step">$\text{LHS} = \cot\theta \cdot \cot 3\theta \cdot \cot 5\theta \cdot \cot 7\theta \cdot \cot 9\theta \cdot \cot 11\theta \cdot \cot 13\theta \cdot \cot 15\theta \cdot \cot 17\theta \cdot \cot 19\theta$</div>
+    
+    <div class="step-explain">ধারাটির প্রথম ৫টি পদ অপরিবর্তিত রেখে শেষের ৫টি বড় কোণকে $10\theta = \frac{\pi}{2}$ অথবা $20\theta = \pi$ সম্পর্কের মাধ্যমে ভেঙে ছোট কোণে রূপান্তর করব:</div>
+    <div class="step-explain">
+        * $\cot 19\theta = \cot(20\theta - \theta) = \cot(\pi - \theta) = -\cot\theta$ (দ্বিতীয় চতুর্ভাগে $\cot$ ঋণাত্মক)<br>
+        * $\cot 17\theta = \cot(20\theta - 3\theta) = \cot(\pi - 3\theta) = -\cot 3\theta$<br>
+        * $\cot 15\theta = \cot(20\theta - 5\theta) = \cot(\pi - 5\theta) = -\cot 5\theta$<br>
+        * $\cot 13\theta = \cot(20\theta - 7\theta) = \cot(\pi - 7\theta) = -\cot 7\theta$<br>
+        * $\cot 11\theta = \cot(20\theta - 9\theta) = \cot(\pi - 9\theta) = -\cot 9\theta$
+    </div>
+    
+    <div class="step-explain">এই মানগুলো বামপক্ষে প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \cot\theta \cdot \cot 3\theta \cdot \cot 5\theta \cdot \cot 7\theta \cdot \cot 9\theta \cdot (-\cot 9\theta) \cdot (-\cot 7\theta) \cdot (-\cot 5\theta) \cdot (-\cot 3\theta) \cdot (-\cot\theta) \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">এখানে মোট ৫টি ঋণাত্মক ($-$) চিহ্ন গুণ আকারে আছে। আমরা জানি, বিজোড় সংখ্যক মাইনাস গুণ করলে ফল ঋণাত্মক ($-$) হয়। মাইনাস চিহ্নটি সামনে নিয়ে এসে একই পদগুলোকে বর্গ আকারে সাজাই:</div>
+    <div class="step">$\Rightarrow - \left(\cot^2\theta \cdot \cot^2 3\theta \cdot \cot^2 5\theta \cdot \cot^2 7\theta \cdot \cot^2 9\theta\right) \quad [\text{মাইনাস সামনে নিয়ে ও বর্গ করে}]$</div>
+    
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের বড় কোণ $7\theta$ এবং $9\theta$ কে $10\theta = \frac{\pi}{2}$ এর সাহায্যে ভাঙি:</div>
+    <div class="step-explain">
+        * $9\theta = 10\theta - \theta = \frac{\pi}{2} - \theta \Rightarrow \cot 9\theta = \cot\left(\frac{\pi}{2} - \theta\right) = \tan\theta$<br>
+        * $7\theta = 10\theta - 3\theta = \frac{\pi}{2} - 3\theta \Rightarrow \cot 7\theta = \cot\left(\frac{\pi}{2} - 3\theta\right) = \tan 3\theta$
+    </div>
+    
+    <div class="step-explain">এছাড়াও মাঝের পদটির মান: $5\theta = 5 \cdot \frac{\pi}{20} = \frac{\pi}{4} \Rightarrow \cot 5\theta = \cot\frac{\pi}{4} = 1$। এই রূপান্তরগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow - \left\{\cot^2\theta \cdot \cot^2 3\theta \cdot (1)^2 \cdot \tan^2 3\theta \cdot \tan^2\theta\right\} \quad [\text{কোণ ভেঙে ও মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">একই কোণবিশিষ্ট $\cot^2$ এবং $\tan^2$ পদগুলোকে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow - \left\{\left(\cot^2\theta \cdot \tan^2\theta\right) \cdot \left(\cot^2 3\theta \cdot \tan^2 3\theta\right) \cdot 1\right\} \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">যেহেতু $\cot^2\alpha \cdot \tan^2\alpha = 1$, তাই মানগুলো ১ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow - (1 \cdot 1 \cdot 1) \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow -1$</div>
+    
+    <div class="step-explain">আমরা দেখতে পাচ্ছি আমাদের কাঙ্ক্ষিত ডানপক্ষ চলে এসেছে।</div>
+    <div class="step">$\therefore \cot\theta \cot 3\theta \cot 5\theta \dots \dots \dots \cot 19\theta = -1 \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩৩. $\text{A} = \frac{\pi}{12}$ হলে প্রমাণ কর যে, $\tan\text{A} \tan 3\text{A} \tan 5\text{A} \tan 7\text{A} \tan 11\text{A} = 1$</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">দেওয়া আছে,</div>
+    <div class="step">$\text{A} = \frac{\pi}{12}$</div>
+    
+    <div class="step-explain">আড়াআড়ি গুণ করে পাই:</div>
+    <div class="step">$\Rightarrow 12\text{A} = \pi$</div>
+    <div class="step">$\Rightarrow 6\text{A} = \frac{\pi}{2} \quad [\text{উভয়পক্ষকে ২ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">বামপক্ষ (LHS) দিয়ে শুরু করি:</div>
+    <div class="step">$\text{LHS} = \tan\text{A} \cdot \tan 3\text{A} \cdot \tan 5\text{A} \cdot \tan 7\text{A} \cdot \tan 11\text{A}$</div>
+    
+    <div class="step-explain">এখানে মাঝের পদ $\tan 3\text{A}$ এর ক্ষেত্রে $\text{A}$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\tan 3\text{A} = \tan\left(3 \cdot \frac{\pi}{12}\right) = \tan\frac{\pi}{4} = 1$</div>
+    
+    <div class="step-explain">এবার শেষের বড় কোণ দুটি $7\text{A}$ এবং $11\text{A}$ কে যথাক্রমে $6\text{A} = \frac{\pi}{2}$ এবং $12\text{A} = \pi$ ব্যবহার করে ভেঙে প্রকাশ করি:</div>
+    <div class="step-explain">
+        * $11\text{A} = 12\text{A} - \text{A} = \pi - \text{A} \Rightarrow \tan 11\text{A} = \tan(\pi - \text{A}) = -\tan\text{A}$ (দ্বিতীয় চতুর্ভাগে $\tan$ ঋণাত্মক)<br>
+        * $7\text{A} = 6\text{A} + \text{A} = \frac{\pi}{2} + \text{A} \Rightarrow \tan 7\text{A} = \tan\left(\frac{\pi}{2} + \text{A}\right) = -\cot\text{A}$ (দ্বিতীয় চতুর্ভাগে $\frac{\pi}{2}$ এর বিজোড় গুণিতকের জন্য $\tan$ পরিবর্তিত হয়ে $-\cot$ হয়)
+    </div>
+    
+    <div class="step-explain">এই মানগুলো বামপক্ষে প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$\Rightarrow \tan\text{A} \cdot 1 \cdot \tan 5\text{A} \cdot (-\cot\text{A}) \cdot (-\tan\text{A}) \quad [\text{কোণ ভেঙে ও মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">দুটি মাইনাস চিহ্ন গুণ হয়ে ধনাত্মক ($+$) হয়ে যাবে $\left(-\cdot- = +\right)$। পদগুলোকে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow (\tan\text{A} \cdot \cot\text{A}) \cdot \tan\text{A} \cdot \tan 5\text{A} \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1 \cdot \tan\text{A} \cdot \tan 5\text{A} \quad [\because \tan\text{A}\cdot\cot\text{A} = 1]$</div>
+    <div class="step">$\Rightarrow \tan\text{A} \cdot \tan 5\text{A}$</div>
+    
+    <div class="step-explain">এখন অবশিষ্ট বড় কোণ $5\text{A}$ কে $6\text{A} = \frac{\pi}{2}$ সম্পর্কের সাহায্যে ভাঙি:</div>
+    <div class="step">$\Rightarrow \tan\text{A} \cdot \tan(6\text{A} - \text{A})$</div>
+    <div class="step">$\Rightarrow \tan\text{A} \cdot \tan\left(\frac{\pi}{2} - \text{A}\right) \quad [6\text{A} = \frac{\pi}{2} \text{ বসিয়ে}]$</div>
+    
+    <div class="step-explain">প্রথম চতুর্ভাগের সূত্র অনুযায়ী, $\tan\left(\frac{\pi}{2} - \text{A}\right) = \cot\text{A}$। মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan\text{A} \cdot \cot\text{A} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 1$</div>
+    
+    <div class="step-explain">ডানপক্ষের সাথে মিলে গেছে।</div>
+    <div class="step">$\therefore \tan\text{A} \tan 3\text{A} \tan 5\text{A} \tan 7\text{A} \tan 11\text{A} = 1 \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩৪. $\cos x + \cos(\pi + x) + \cos(2\pi + x) + \dots \dots \dots + \cos(n\pi + x)$ এর যোগফল নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো:</div>
+    <div class="step">$\cos x + \cos(\pi + x) + \cos(2\pi + x) + \dots \dots \dots + \cos(n\pi + x)$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক চতুর্ভাগের নিয়ম অনুযায়ী, কোণগুলোকে সরল করে পাই:</div>
+    <div class="step-explain">
+        * $\cos(\pi + x) = -\cos x$ (তৃতীয় চতুর্ভাগে $\cos$ ঋণাত্মক)<br>
+        * $\cos(2\pi + x) = \cos x$ (প্রথম চতুর্ভাগে $\cos$ ধনাত্মক)<br>
+        * $\cos(3\pi + x) = -\cos x$ (তৃতীয় চতুর্ভাগে $\cos$ ঋণাত্মক)
+    </div>
+    
+    <div class="step-explain">সাধারণভাবে বলা যায়, $n$ এর মান জোড় হলে $\cos(n\pi + x) = \cos x$ এবং $n$ এর মান বিজোড় হলে $\cos(n\pi + x) = -\cos x$ হয়।</div>
+    <div class="step-explain">তাহলে ধারাটি দাঁড়ায়:</div>
+    <div class="step">$\Rightarrow \cos x - \cos x + \cos x - \cos x + \dots \dots \dots + (-1)^n \cos x$</div>
+    
+    <div class="step-explain">এখানে ধারাটির যোগফল পদের সংখ্যার উপর নির্ভর করবে। ধারাটিতে মোট পদের সংখ্যা হলো $(n + 1)$ টি (যেহেতু পদগুলো $0 \cdot \pi$ থেকে শুরু করে $n \cdot \pi$ পর্যন্ত গিয়েছে)।</div>
+    
+    <div class="step-explain"><strong>কেস-১: যদি $n$ জোড় সংখ্যা (Even number) হয়:</strong></div>
+    <div class="step-explain">যদি $n$ জোড় হয়, তবে মোট পদের সংখ্যা $(n + 1)$ হবে একটি বিজোড় সংখ্যা। উদাহরণস্বরূপ, $n = 2$ হলে পদ সংখ্যা ৩টি ($\cos x - \cos x + \cos x$), যার ফল হবে $\cos x$। অর্থাৎ, জোড়ায় জোড়ায় পদগুলো কাটাকাটি যাওয়ার পর একটি পদ অবশিষ্ট থাকবে।</div>
+    <div class="step">$\text{যোগফল} = \cos x \quad [\text{যখন } n \text{ জোড়}]$</div>
+    
+    <div class="step-explain"><strong>কেস-২: যদি $n$ বিজোড় সংখ্যা (Odd number) হয়:</strong></div>
+    <div class="step-explain">যদি $n$ বিজোড় হয়, তবে মোট পদের সংখ্যা $(n + 1)$ হবে একটি জোড় সংখ্যা। উদাহরণস্বরূপ, $n = 1$ হলে পদ সংখ্যা ২টি ($\cos x - \cos x$), যার ফল হবে $0$। অর্থাৎ, সব পদ জোড়ায় জোড়ায় একে অপরকে বাতিল করে দেবে।</div>
+    <div class="step">$\text{যোগফল} = 0 \quad [\text{যখন } n \text{ বিজোড়}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> যোগফল $\cos x$ যখন $n$ জোড় এবং $0$ যখন $n$ বিজোড়।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩৫. $\sin\theta + \sin(\pi + \theta) + \sin(2\pi + \theta) + \dots \dots \dots + \sin(n\pi + \theta)$  এর যোগফল নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো:</div>
+    <div class="step">$\sin\theta + \sin(\pi + \theta) + \sin(2\pi + \theta) + \dots \dots \dots + \sin(n\pi + \theta)$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক চতুর্ভাগের নিয়ম অনুযায়ী, কোণগুলোকে সরল করে পাই:</div>
+    <div class="step-explain">
+        * $\sin(\pi + \theta) = -\sin\theta$ (তৃতীয় চতুর্ভাগে $\sin$ ঋণাত্মক)<br>
+        * $\sin(2\pi + \theta) = \sin\theta$ (প্রথম চতুর্ভাগে $\sin$ ধনাত্মক)<br>
+        * $\sin(3\pi + \theta) = -\sin\theta$ (তৃতীয় চতুর্ভাগে $\sin$ ঋণাত্মক)
+    </div>
+    
+    <div class="step-explain">সুতরাং, ধারাটিকে এভাবে লেখা যায়:</div>
+    <div class="step">$\Rightarrow \sin\theta - \sin\theta + \sin\theta - \sin\theta + \dots \dots \dots + (-1)^n \sin\theta$</div>
+    
+    <div class="step-explain">প্রশ্ন ৩৪ এর মতোই, এই ধারাটির মোট পদের সংখ্যা হলো $(n + 1)$ টি। যোগফলটি পদের সংখ্যার জোড় বা বিজোড় হওয়ার উপর নির্ভর করবে:</div>
+    
+    <div class="step-explain"><strong>কেস-১: যদি $n$ জোড় সংখ্যা হয়:</strong></div>
+    <div class="step-explain">যদি $n$ জোড় হয়, তবে মোট পদের সংখ্যা $(n + 1)$ হবে বিজোড়। ফলে প্রথম পদগুলো জোড়ায় জোড়ায় কাটাকাটি গিয়ে শেষ পর্যন্ত একটি পদ $\sin\theta$ অবশিষ্ট থাকবে।</div>
+    <div class="step">$\text{যোগফল} = \sin\theta \quad [\text{যখন } n \text{ জোড়}]$</div>
+    
+    <div class="step-explain"><strong>কেস-২: যদি $n$ বিজোড় সংখ্যা হয়:</strong></div>
+    <div class="step-explain">যদি $n$ বিজোড় হয়, তবে মোট পদের সংখ্যা $(n + 1)$ হবে জোড়। ফলে প্রতিটি ধনাত্মক পদের জন্য একটি ঋণাত্মক পদ থাকবে এবং তারা সম্পূর্ণ কাটাকাটি হয়ে যাবে।</div>
+    <div class="step">$\text{যোগফল} = 0 \quad [\text{যখন } n \text{ বিজোড়}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> যোগফল $\sin\theta$ যখন $n$ জোড় এবং $0$ যখন $n$ বিজোড়।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title"><h3>৩৬. $\tan\theta + \tan(\pi + \theta) + \tan(2\pi + \theta) + \dots \dots \dots + \tan(n\pi + \theta)$  এর যোগফল নির্ণয় কর।</h3></div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রদত্ত ধারাটি হলো:</div>
+    <div class="step">$\tan\theta + \tan(\pi + \theta) + \tan(2\pi + \theta) + \dots \dots \dots + \tan(n\pi + \theta)$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক চতুর্ভাগের নিয়ম লক্ষ্য করি। আমরা জানি, $\tan$ এর পর্যায়কাল (period) হলো $\pi$। অর্থাৎ, প্রতি $\pi$ কোণ পর পর $\tan$ এর মানের কোনো পরিবর্তন হয় না। চতুর্ভাগ দিয়ে দেখলে:</div>
+    <div class="step-explain">
+        * $\tan(\pi + \theta) = \tan\theta$ (তৃতীয় চতুর্ভাগে $\tan$ ধনাত্মক)<br>
+        * $\tan(2\pi + \theta) = \tan\theta$ (প্রথম চতুর্ভাগে $\tan$ ধনাত্মক)<br>
+        * $\tan(3\pi + \theta) = \tan\theta$ (তৃতীয় চতুর্ভাগে $\tan$ ধনাত্মক)
+    </div>
+    
+    <div class="step-explain">সাধারণভাবে, $n$ এর যেকোনো পূর্ণসংখ্যা মানের জন্য $\tan(n\pi + \theta) = \tan\theta$ হয়।</div>
+    <div class="step-explain">এই মানগুলো ধারায় প্রতিস্থাপন করলে ধারাটি দাঁড়ায়:</div>
+    <div class="step">$\Rightarrow \tan\theta + \tan\theta + \tan\theta + \dots \dots \dots + \tan\theta$</div>
+    
+    <div class="step-explain">এখানে ধারাটি $0 \cdot \pi$ থেকে শুরু করে $n \cdot \pi$ পর্যন্ত বিস্তৃত। সুতরাং এখানে মোট পদের সংখ্যা হলো $(n + 1)$ টি।</div>
+    <div class="step-explain">যেহেতু একই পদ $\tan\theta$ মোট $(n + 1)$ বার যোগ আকারে আছে, তাই বীজগণিতীয় নিয়ম অনুযায়ী এদের সমষ্টি হবে পদের সংখ্যা এবং ওই পদের গুণফলের সমান।</div>
+    <div class="step">$\Rightarrow \text{যোগফল} = (n + 1) \cdot \tan\theta \quad [\text{একই পদ যোগ করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $(n + 1)\tan\theta$</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

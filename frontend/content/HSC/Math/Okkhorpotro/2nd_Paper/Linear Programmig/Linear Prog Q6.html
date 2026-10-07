@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSC Differ 9C</title>
+    
+    <link rel="stylesheet" href="../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../katex/katex.min.css" />
+    <script defer src="../../../katex/katex.min.js"></script>
+    <script defer src="../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (i). একজন ভদ্রলোক সর্বোচ্চ ১০০ টাকা ব্যয় করে কিছুসংখ্যক কলম ও পেন্সিল কিনতে চান। প্রতিটি কলম ও পেন্সিলের ক্রয়মূল্য যথাক্রমে ১২ টাকা ও ৮ টাকা। তিনি অন্ততঃ ১টি কলম কিনবেন কিন্তু ৮টির অধিক পেন্সিল কিনবেন না। ঐ ভদ্রলোক কোন প্রকারের কতগুলি জিনিস কিনলে একত্রে সর্বাধিক সংখ্যক জিনিস কিনতে পারবেন?
+  </div>
+  <div class="solution-title">সমাধান (i):</div>
+  
+  <div class="step-explain">মনে করি, ভদ্রলোক $x$ সংখ্যক কলম এবং $y$ সংখ্যক পেন্সিল কিনবেন। যেহেতু জিনিসের সংখ্যা ঋণাত্মক হতে পারে না, তাই:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের উদ্দেশ্য হলো মোট জিনিসের সংখ্যা সর্বাধিক করা। সুতরাং, অভিষ্ট ফাংশন (Objective Function) $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">এখন প্রদত্ত শর্ত বা সীমাবদ্ধতাগুলো (Constraints) নিচে সাজানো হলো:</div>
+  <div class="step-explain">১. প্রতিটি কলমের দাম ১২ টাকা এবং পেন্সিলের দাম ৮ টাকা। মোট খরচ সর্বোচ্চ ১০০ টাকা হতে পারবে:</div>
+  <div class="step">$12x + 8y \le 100$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে $4$ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$3x + 2y \le 25 \quad \text{--- (১)}$ [৪ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. তিনি অন্ততঃ (কমপক্ষে) ১টি কলম কিনবেন:</div>
+  <div class="step">$x \ge 1 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">৩. তিনি ৮টির অধিক পেন্সিল কিনবেন না (অর্থাৎ পেন্সিলের সংখ্যা ৮ বা তার কম হবে):</div>
+  <div class="step">$y \le 8 \quad \text{--- (৩)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে রেখাচিত্র অঙ্কন করার জন্য বিন্দুসমূহ নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$3x + 2y = 25$</div>
+  <div class="step">বা, $\frac{3x}{25} + \frac{2y}{25} = 1$ [উভয়পক্ষকে ২৫ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{25/3} + \frac{y}{25/2} = 1$</div>
+  <div class="step">বা, $\frac{x}{8.33} + \frac{y}{12.5} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(8.33, 0)$ এবং Y-অক্ষকে $B(0, 12.5)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) ও (৩) নং অসমতার অনুরূপ সমীকরণ যথাক্রমে:</div>
+  <div class="step">$x = 1 \quad \text{--- (৫)}$ [Y-অক্ষের সমান্তরাল রেখা]</div>
+  <div class="step">$y = 8 \quad \text{--- (৬)}$ [X-অক্ষের সমান্তরাল রেখা]</div>
+
+  <div class="step-explain">এখন সমীকরণগুলোর ছেদবিন্দু নির্ণয় করি। $x=1$ রেখাটি (৪) নং রেখাকে ছেদ করলে:</div>
+  <div class="step">$3(1) + 2y = 25 \implies 2y = 22 \implies y = 11$</div>
+  <div class="step-explain">কিন্তু $y \le 8$ শর্তের কারণে এই বিন্দুটি অনুকূল অঞ্চলে থাকবে না।</div>
+  
+  <div class="step-explain">আবার, $y=8$ রেখাটি (৪) নং রেখাকে ছেদ করলে:</div>
+  <div class="step">$3x + 2(8) = 25 \implies 3x + 16 = 25 \implies 3x = 9 \implies x = 3$</div>
+  <div class="step-explain">সুতরাং ছেদবিন্দুটি হলো $P(3, 8)$।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $C(1, 0)$, $D(1, 8)$, এবং $P(3, 8)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="258" y1="350" x2="50" y2="37.5" stroke="red" stroke-width="2" />
+    <line x1="75" y1="20" x2="75" y2="350" stroke="blue" stroke-width="2" />
+    <line x1="50" y1="150" x2="450" y2="150" stroke="green" stroke-width="2" />
+
+    <polygon points="75,350 75,150 125,150 258,350" fill="rgba(0, 255, 0, 0.15)" stroke="none" />
+
+    <circle cx="75" cy="350" r="4" fill="black" />
+    <circle cx="75" cy="150" r="4" fill="black" />
+    <circle cx="125" cy="150" r="4" fill="black" />
+    <circle cx="258" cy="350" r="4" fill="black" />
+
+    <text x="40" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="60" y="335" font-size="10">C(1,0)</text>
+    <text x="60" y="140" font-size="10">D(1,8)</text>
+    <text x="135" y="145" font-size="10">P(3,8)</text>
+    <text x="250" y="335" font-size="10">A(8.33,0)</text>
+    <text x="280" y="100" font-size="11" fill="red">3x+2y=25</text>
+    <text x="85" y="40" font-size="11" fill="blue">x=1</text>
+    <text x="400" y="140" font-size="11" fill="green">y=8</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $C(1, 0) \implies Z = 1 + 0 = 1$</div>
+  <div class="step">বিন্দু $D(1, 8) \implies Z = 1 + 8 = 9$</div>
+  <div class="step">বিন্দু $P(3, 8) \implies Z = 3 + 8 = 11$</div>
+  <div class="step">বিন্দু $A(8.33, 0)$ [যেহেতু জিনিসের সংখ্যা ভগ্নাংশ হতে পারে না, তাই পূর্ণসংখ্যা বিবেচনা করলে $x=8, y=0 \implies Z = 8 + 0 = 8$]</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(3, 8)$ বিন্দুতে $Z$-এর মান সর্বাধিক এবং তা হলো $11$।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বাধিক সংখ্যক জিনিস পেতে ভদ্রলোককে ৩টি কলম এবং ৮টি পেন্সিল কিনতে হবে। একত্রে সর্বাধিক জিনিসের সংখ্যা হবে ১১টি।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (ii). একজন লোক সর্বোচ্চ ৫০০ টাকা ব্যয়ে কয়েকটি কাপ ও প্লেট কিনতে চান। প্রতিটি কাপের দাম ৩০ টাকা ও প্লেটের দাম ২০ টাকা। অনূ্যন ৩টি প্লেট ও অনধিক ৬টি কাপ কেনার শর্তে ঐ টাকায় কোন প্রকারের কতগুলি জিনিস কিনলে তিনি মোট সর্বাধিক জিনিস কিনতে পারবেন?
+  </div>
+  <div class="solution-title">সমাধান (ii):</div>
+
+  <div class="step-explain">মনে করি, কাপের সংখ্যা $x$ এবং প্লেটের সংখ্যা $y$। অতএব, $x \ge 0, y \ge 0$।</div>
+  <div class="step-explain">এখানে মোট জিনিসের সংখ্যা সর্বাধিক করতে হবে। অভিষ্ট ফাংশন:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step">মূল্য সংক্রান্ত শর্ত: $30x + 20y \le 500 \implies 3x + 2y \le 50 \quad \text{--- (১)}$ [১০ দ্বারা ভাগ করে]</div>
+  <div class="step">প্লেটের সংখ্যা অনূ্যন (কমপক্ষে) ৩টি: $y \ge 3 \quad \text{--- (২)}$</div>
+  <div class="step">কাপের সংখ্যা অনধিক (সর্বোচ্চ) ৬টি: $x \le 6 \quad \text{--- (৩)}$</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$3x + 2y = 50 \implies \frac{x}{50/3} + \frac{y}{25} = 1 \implies \frac{x}{16.67} + \frac{y}{25} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step">$y = 3 \quad \text{--- (৫)}$</div>
+  <div class="step">$x = 6 \quad \text{--- (৬)}$</div>
+
+  <div class="step-explain">রেখাগুলোর পারস্পরিক ছেদবিন্দু নির্ণয়:</div>
+  <div class="step-explain">$x = 6$ এবং $3x + 2y = 50$ এর ছেদবিন্দু: $3(6) + 2y = 50 \implies 18 + 2y = 50 \implies 2y = 32 \implies y = 16$। বিন্দুটি $P(6, 16)$।</div>
+  <div class="step-explain">$y = 3$ এবং $3x + 2y = 50$ এর ছেদবিন্দু: $3x + 2(3) = 50 \implies 3x = 44 \implies x = 14.67$। বিন্দুটি $Q(14.67, 3)$।</div>
+  <div class="step-explain">$x = 6$ এবং $y = 3$ এর ছেদবিন্দু: $R(6, 3)$।</div>
+  <div class="step-explain">$x = 0$ এবং $y = 3$ এর ছেদবিন্দু Y-অক্ষে: $S(0, 3)$।</div>
+  <div class="step-explain">$3x+2y=50$ রেখাটি Y-অক্ষকে $B(0,25)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $S(0, 3)$, $R(6, 3)$, $P(6, 16)$, এবং $B(0, 25)$। নিচে লেখচিত্রটি দেখানো হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="250" y1="350" x2="50" y2="50" stroke="red" stroke-width="2" />
+    <line x1="122" y1="20" x2="122" y2="350" stroke="blue" stroke-width="2" />
+    <line x1="50" y1="314" x2="450" y2="314" stroke="green" stroke-width="2" />
+
+    <polygon points="50,314 122,314 122,158 50,50" fill="rgba(0, 0, 255, 0.1)" stroke="none" />
+
+    <circle cx="50" cy="314" r="4" fill="black" /><text x="60" y="310" font-size="10">S(0,3)</text>
+    <circle cx="122" cy="314" r="4" fill="black" /><text x="130" y="310" font-size="10">R(6,3)</text>
+    <circle cx="122" cy="158" r="4" fill="black" /><text x="130" y="155" font-size="10">P(6,16)</text>
+    <circle cx="50" cy="50" r="4" fill="black" /><text x="60" y="60" font-size="10">B(0,25)</text>
+
+    <text x="40" y="365" font-size="12">O</text>
+    <text x="260" y="120" font-size="11" fill="red">3x+2y=50</text>
+    <text x="130" y="40" font-size="11" fill="blue">x=6</text>
+    <text x="400" y="305" font-size="11" fill="green">y=3</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে $Z = x + y$-এর মান যাচাই:</div>
+  <div class="step">বিন্দু $S(0, 3) \implies Z = 0 + 3 = 3$</div>
+  <div class="step">বিন্দু $R(6, 3) \implies Z = 6 + 3 = 9$</div>
+  <div class="step">বিন্দু $P(6, 16) \implies Z = 6 + 16 = 22$</div>
+  <div class="step">বিন্দু $B(0, 25) \implies Z = 0 + 25 = 25$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $B(0, 25)$ বিন্দুতে $Z$-এর মান সর্বোচ্চ অর্থাৎ $25$ হয়। এই বিন্দুতে কাপের সংখ্যা $0$ এবং প্লেটের সংখ্যা $25$।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> তিনি যদি কোনো কাপ না কিনে ($0$ টি) শুধু ২৫টি প্লেট কেনেন, তবে তিনি সর্বাধিক ২৫টি জিনিস কিনতে পারবেন।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (iii). এক ব্যক্তি ৫০০ টাকার মধ্যে কমপক্ষে ৬ খানা গামছা এবং ৪ খানা তোয়ালে কিনতে চান। প্রতিখানা গামছার মূল্য ৩০ টাকা এবং প্রতিখানা তোয়ালের মূল্য ৪০ টাকা। প্রত্যেক প্রকারের কতখানা জিনিস কিনলে সে প্রদত্ত শর্তাধীনে সর্বাপেক্ষা বেশি সংখ্যক জিনিস কিনতে পারবেন?
+  </div>
+  <div class="solution-title">সমাধান (iii):</div>
+
+  <div class="step-explain">মনে করি, গামছার সংখ্যা $x$ এবং তোয়ালের সংখ্যা $y$। জিনিসের সংখ্যা অঋণাত্মক, তাই $x \ge 0, y \ge 0$।</div>
+  <div class="step-explain">উদ্দেশ্য ফাংশন সর্বাধিকীকরণ করতে হবে:</div>
+  <div class="step">$Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step">মূল্য বা বাজেট শর্ত: $30x + 40y \le 500 \implies 3x + 4y \le 50 \quad \text{--- (১)}$ [১০ দ্বারা ভাগ করে]</div>
+  <div class="step">গামছার ন্যূনতম সংখ্যা: $x \ge 6 \quad \text{--- (২)}$</div>
+  <div class="step">তোয়ালের ন্যূনতম সংখ্যা: $y \ge 4 \quad \text{--- (৩)}$</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$3x + 4y = 50 \implies \frac{x}{50/3} + \frac{y}{50/4} = 1 \implies \frac{x}{16.67} + \frac{y}{12.5} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step">$x = 6 \quad \text{--- (৫)}$</div>
+  <div class="step">$y = 4 \quad \text{--- (৬)}$</div>
+
+  <div class="step-explain">ছেদবিন্দুসমূহ নির্ণয়:</div>
+  <div class="step-explain">$x = 6$ এবং $y = 4$ এর ছেদবিন্দু হলো $E(6, 4)$।</div>
+  <div class="step-explain">$x = 6$ রেখাটি (৪) নং রেখাকে ছেদ করলে: $3(6) + 4y = 50 \implies 18 + 4y = 50 \implies 4y = 32 \implies y = 8$। ছেদবিন্দু $F(6, 8)$।</div>
+  <div class="step-explain">$y = 4$ রেখাটি (৪) নং রেখাকে ছেদ করলে: $3x + 4(4) = 50 \implies 3x + 16 = 50 \implies 3x = 34 \implies x = 11.33$। ছেদবিন্দু $G(11.33, 4)$।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $E(6, 4)$, $F(6, 8)$, এবং $G(11.33, 4)$। নিচে লেখচিত্র অঙ্কন করা হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="383" y1="350" x2="50" y2="100" stroke="red" stroke-width="2" />
+    <line x1="170" y1="20" x2="170" y2="350" stroke="blue" stroke-width="2" />
+    <line x1="50" y1="270" x2="450" y2="270" stroke="green" stroke-width="2" />
+
+    <polygon points="170,270 170,190 276,270" fill="rgba(255, 0, 0, 0.15)" stroke="none" />
+
+    <circle cx="170" cy="270" r="4" fill="black" /><text x="180" y="285" font-size="10">E(6,4)</text>
+    <circle cx="170" cy="190" r="4" fill="black" /><text x="180" y="185" font-size="10">F(6,8)</text>
+    <circle cx="276" cy="270" r="4" fill="black" /><text x="285" y="265" font-size="10">G(11.33,4)</text>
+
+    <text x="40" y="365" font-size="12">O</text>
+    <text x="300" y="140" font-size="11" fill="red">3x+4y=50</text>
+    <text x="180" y="50" font-size="11" fill="blue">x=6</text>
+    <text x="400" y="260" font-size="11" fill="green">y=4</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে $Z$-এর মান পরীক্ষা করি:</div>
+  <div class="step">বিন্দু $E(6, 4) \implies Z = 6 + 4 = 10$</div>
+  <div class="step">বিন্দু $F(6, 8) \implies Z = 6 + 8 = 14$</div>
+  <div class="step-explain">বিন্দু $G(11.33, 4)$ এর কাছাকাছি পূর্ণসংখ্যার বিন্দুটি হলো $(11, 4)$ [যেহেতু $3(11)+4(4) = 33+16=49 \le 50$ শর্ত সিদ্ধ করে]।</div>
+  <div class="step">বিন্দু $(11, 4) \implies Z = 11 + 4 = 15$</div>
+
+  <div class="step-explain">সুতরাং, সর্বাপেক্ষা বেশি জিনিস কিনতে হলে পূর্ণসংখ্যার বিন্দু $(11, 4)$ গ্রহণ করতে হবে, যেখানে $Z$-এর মান সর্বাধিক $15$ হয়।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> শর্তানুসারে সর্বাপেক্ষা বেশি সংখ্যক জিনিস কিনতে হলে ১১ খানা গামছা এবং ৪ খানা তোয়ালে কিনতে হবে।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (iv). একজন ফল বিক্রেতা আম ও পেয়ারা বিক্রয় করেন। প্রতি ঝুড়ি আম ও পেয়ারার মূল্য যথাক্রমে ৫০ টাকা এবং ২৫ টাকা। ঐ বিক্রেতা তার দোকানে ১২টির বেশি ঝুড়ি রাখতে পারেন না। প্রতি ঝুড়ি আম ও পেয়ারা বিক্রয়ে লাভ যথাক্রমে ১০ টাকা ও ৬ টাকা হলে সর্বোচ্চ ৫০০ টাকা মূলধন ব্যয়ে কত ঝুড়ি আম ও পেয়ারা কিনলে ঐ বিক্রেতা সর্বোচ্চ লাভ করতে পারবেন?
+  </div>
+  <div class="solution-title">সমাধান (iv):</div>
+
+  <div class="step-explain">মনে করি, ফল বিক্রেতা $x$ ঝুড়ি আম এবং $y$ ঝুড়ি পেয়ারা কিনবেন। যেহেতু ঝুড়ির সংখ্যা ঋণাত্মক হতে পারে না, তাই:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের মূল উদ্দেশ্য হলো মোট লাভ সর্বাধিক করা। প্রতি ঝুড়ি আমে লাভ ১০ টাকা এবং পেয়ারায় লাভ ৬ টাকা। সুতরাং, অভিষ্ট ফাংশন (Objective Function) $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = 10x + 6y$</div>
+
+  <div class="step-explain">এখন প্রদত্ত শর্ত বা সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করা হলো:</div>
+  <div class="step-explain">১. মূলধন বা ক্রয়মূল্য সংক্রান্ত শর্ত (সর্বোচ্চ ৫০০ টাকা ব্যয় করতে পারবেন):</div>
+  <div class="step">$50x + 25y \le 500$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে $25$ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + y \le 20 \quad \text{--- (১)}$ [২৫ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. জায়গার সীমাবদ্ধতা সংক্রান্ত শর্ত (দোকানে ১২টির বেশি ঝুড়ি রাখা যাবে না):</div>
+  <div class="step">$x + y \le 12 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে রেখাচিত্রের জন্য বিন্দুসমূহ নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + y = 20$</div>
+  <div class="step">বা, $\frac{2x}{20} + \frac{y}{20} = 1$ [উভয়পক্ষকে ২০ দ্বারা ভাগ করে]</div>
+  <div class="step">বা, $\frac{x}{10} + \frac{y}{20} = 1 \quad \text{--- (৩)}$ [छेদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(10, 0)$ এবং Y-অক্ষকে $B(0, 20)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + y = 12$</div>
+  <div class="step">বা, $\frac{x}{12} + \frac{y}{12} = 1 \quad \text{--- (৪)}$ [উভয়পক্ষকে ১২ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(12, 0)$ এবং Y-অক্ষকে $D(0, 12)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয় করি:</div>
+  <div class="step-explain">(৩) নং থেকে (৪) নং বিয়োগ করে পাই:</div>
+  <div class="step">$\left(2x + y\right) - \left(x + y\right) = 20 - 12 \implies x = 8$ [বিয়োগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৪) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$8 + y = 12 \implies y = 4$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং, রেখা দুটির ছেদবিন্দু হলো $P(8, 4)$।</div>
+
+  <div class="step-explain">যেহেতু উভয় অসমতাতেই '$\le$' চিহ্ন রয়েছে, তাই অনুকূল এলাকাটি হবে মূলবিন্দুর দিকের অংশ। শর্তসমূহ বিশ্লেষণ করে প্রাপ্ত অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(10, 0)$, $P(8, 4)$ এবং $D(0, 12)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="200" y1="350" x2="50" y2="50" stroke="red" stroke-width="2" />
+    <line x1="230" y1="350" x2="50" y2="170" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 200,350 170,290 50,170" fill="rgba(0, 128, 255, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="200" cy="350" r="4" fill="black" />
+    <circle cx="170" cy="290" r="4" fill="black" />
+    <circle cx="50" cy="170" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O(0,0)</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="195" y="340" font-size="10">A(10,0)</text>
+    <text x="180" y="285" font-size="10">P(8,4)</text>
+    <text x="55" y="165" font-size="10">D(0,12)</text>
+    <text x="140" y="90" font-size="11" fill="red">2x+y=20</text>
+    <text x="210" y="200" font-size="11" fill="blue">x+y=12</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 10x + 6y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 10\cdot0 + 6\cdot0 = 0$</div>
+  <div class="step">বিন্দু $A(10, 0) \implies Z = 10\cdot10 + 6\cdot0 = 100$</div>
+  <div class="step">বিন্দু $D(0, 12) \implies Z = 10\cdot0 + 6\cdot12 = 72$</div>
+  <div class="step">বিন্দু $P(8, 4) \implies Z = 10\cdot8 + 6\cdot4 = 80 + 24 = 104$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(8, 4)$ বিন্দুতে লাভের পরিমাণ সর্বাধিক এবং তা হলো $104$ টাকা।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> বিক্রেতা যদি ৮ ঝুড়ি আম এবং ৪ ঝুড়ি পেয়ারা কেনেন, তবে তিনি সর্বোচ্চ ১০৪ টাকা লাভ করতে পারবেন।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (v). এক ব্যক্তি তার বাগানে কমপক্ষে ১২ টি নারকেলের চারা এবং ৮ টি আমের চারা লাগাতে চান। প্রতিটি নারকেলের চারা ও আমের চারার মূল্য যথাক্রমে ২০ টাকা ও ৩০ টাকা। ঐ ব্যক্তি ৬০০ টাকার বেশি ব্যয় না করে প্রত্যেক প্রকারের কতগুলি চারা কিনতে পারেন যাতে মোট চারার সংখ্যা সর্বাধিক হয়?
+  </div>
+  <div class="solution-title">সমাধান (v):</div>
+
+  <div class="step-explain">মনে করি, নারকেলের চারার সংখ্যা $x$ এবং আমের চারার সংখ্যা $y$।</div>
+  <div class="step-explain">উদ্দেশ্য হলো মোট চারার সংখ্যা সর্বাধিক করা। অভিষ্ট ফাংশন:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step-explain">১. নারকেলের চারা কমপক্ষে ১২ টি হতে হবে:</div>
+  <div class="step">$x \ge 12 \quad \text{--- (১)}$</div>
+  <div class="step-explain">২. আমের চারা কমপক্ষে ৮ টি হতে হবে:</div>
+  <div class="step">$y \ge 8 \quad \text{--- (২)}$</div>
+  <div class="step-explain">৩. মোট ব্যয় ৬০০ টাকার বেশি হতে পারবে না (সর্বোচ্চ ৬০০ টাকা):</div>
+  <div class="step">$20x + 30y \le 600$</div>
+  <div class="step-explain">বা, ১০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + 3y \le 60 \quad \text{--- (৩)}$ [১০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$x = 12 \quad \text{--- (৪)}$ [Y-অক্ষের সমান্তরাল রেখা]</div>
+  <div class="step">$y = 8 \quad \text{--- (৫)}$ [X-অক্ষের সমান্তরাল রেখা]</div>
+  <div class="step">$2x + 3y = 60 \implies \frac{2x}{60} + \frac{3y}{60} = 1 \implies \frac{x}{30} + \frac{y}{20} = 1 \quad \text{--- (৬)}$</div>
+  <div class="step-explain">এই ৩ নং রেখাটি X-অক্ষকে $(30, 0)$ এবং Y-অক্ষকে $(0, 20)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">রেখাগুলোর ছেদবিন্দু নির্ণয়:</div>
+  <div class="step-explain">$x = 12$ এবং $y = 8$ রেখার ছেদবিন্দু: $Q(12, 8)$</div>
+  <div class="step-explain">$x = 12$ রেখাটি (৬) নং রেখাকে ছেদ করলে: $2(12) + 3y = 60 \implies 24 + 3y = 60 \implies 3y = 36 \implies y = 12$। ছেদবিন্দু $R(12, 12)$।</div>
+  <div class="step-explain">$y = 8$ রেখাটি (৬) নং রেখাকে ছেদ করলে: $2x + 3(8) = 60 \implies 2x + 24 = 60 \implies 2x = 36 \implies x = 18$। ছেদবিন্দু $P(18, 8)$।</div>
+
+  <div class="step-explain">অতএব, সীমাবদ্ধ অঞ্চল বা অনুকূল এলাকার কৌণিক বিন্দুসমূহ হলো: $Q(12, 8)$, $R(12, 12)$, এবং $P(18, 8)$। নিচে এর লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="350" y1="350" x2="50" y2="150" stroke="red" stroke-width="2" />
+    <line x1="170" y1="20" x2="170" y2="350" stroke="blue" stroke-width="2" />
+    <line x1="50" y1="270" x2="450" y2="270" stroke="green" stroke-width="2" />
+
+    <polygon points="170,270 170,230 230,270" fill="rgba(0, 255, 0, 0.2)" stroke="none" />
+
+    <circle cx="170" cy="270" r="4" fill="black" /><text x="130" y="285" font-size="10">Q(12,8)</text>
+    <circle cx="170" cy="230" r="4" fill="black" /><text x="130" y="225" font-size="10">R(12,12)</text>
+    <circle cx="230" cy="270" r="4" fill="black" /><text x="235" y="260" font-size="10">P(18,8)</text>
+
+    <text x="40" y="365" font-size="12">O</text>
+    <text x="270" y="170" font-size="11" fill="red">2x+3y=60</text>
+    <text x="180" y="50" font-size="11" fill="blue">x=12</text>
+    <text x="400" y="260" font-size="11" fill="green">y=8</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই:</div>
+  <div class="step">বিন্দু $Q(12, 8) \implies Z = 12 + 8 = 20$</div>
+  <div class="step">বিন্দু $R(12, 12) \implies Z = 12 + 12 = 24$</div>
+  <div class="step">বিন্দু $P(18, 8) \implies Z = 18 + 8 = 26$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(18, 8)$ বিন্দুতে মোট চারার সংখ্যা সর্বাধিক অর্থাৎ $26$ হয়।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> তিনি যদি ১৮ টি নারকেলের চারা এবং ৮ টি আমের চারা কেনেন, তবে মোট চারার সংখ্যা সর্বাধিক ২৬টি হবে।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (vi). একজন পোল্ট্রি মালিক ৮০০ টাকার মধ্যে কিছু হাঁস ও মুরগীর বাচ্চা কিনতে চান। প্রতিটি মুরগীর বাচ্চার দাম ৪০ টাকা এবং প্রতিটি হাঁসের বাচ্চার দাম ২০ টাকা। তিনি কোন প্রকারের কতগুলি বাচ্চা কিনতে পারবেন, যাতে তার হাঁস ও মুরগীর মোট বাচ্চার সংখ্যা সর্বাধিক ২৫-এর বেশি না হয়?
+  </div>
+  <div class="solution-title">সমাধান (vi):</div>
+
+  <div class="step-explain">মনে করি, মুরগীর বাচ্চার সংখ্যা $x$ এবং হাঁসের বাচ্চার সংখ্যা $y$। অতএব, $x \ge 0, y \ge 0$।</div>
+  <div class="step-explain">এখানে মোট বাচ্চার সংখ্যা সর্বাধিক করতে বলা হয়েছে। সুতরাং অভিষ্ট ফাংশন:</div>
+  <div class="step">সর্বдравকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step-explain">১. বাজেট সংক্রান্ত শর্ত (সর্বোচ্চ ৮০০ টাকা ব্যয় করতে পারবেন):</div>
+  <div class="step">$40x + 20y \le 800$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + y \le 40 \quad \text{--- (১)}$ [২০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. মোট সংখ্যার শর্ত (সর্বাধিক ২৫টি বাচ্চার বেশি হবে না):</div>
+  <div class="step">$x + y \le 25 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$2x + y = 40 \implies \frac{x}{20} + \frac{y}{40} = 1 \quad \text{--- (৩)}$</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(20, 0)$ এবং Y-অক্ষকে $B(0, 40)$ বিন্দুতে ছেদ করে.</div>
+  
+  <div class="step">$x + y = 25 \implies \frac{x}{25} + \frac{y}{25} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(25, 0)$ and Y-অক্ষকে $D(0, 25)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয়:</div>
+  <div class="step-explain">(৩) নং সমীকরণ থেকে (৪) নং বিয়োগ করে পাই:</div>
+  <div class="step">$\left(2x + y\right) - \left(x + y\right) = 40 - 25 \implies x = 15$ [বিয়োগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৪) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$15 + y = 25 \implies y = 10$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং ছেদবিন্দুটি হলো $P(15, 10)$।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(20, 0)$, $P(15, 10)$ এবং $D(0, 25)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="250" y1="350" x2="50" y2="-50" stroke="red" stroke-width="2" />
+    <line x1="300" y1="350" x2="50" y2="100" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 250,350 200,250 50,100" fill="rgba(128, 0, 128, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="250" cy="350" r="4" fill="black" />
+    <circle cx="200" cy="250" r="4" fill="black" />
+    <circle cx="50" cy="100" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O(0,0)</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="245" y="340" font-size="10">A(20,0)</text>
+    <text x="210" y="245" font-size="10">P(15,10)</text>
+    <text x="55" y="95" font-size="10">D(0,25)</text>
+    <text x="140" y="120" font-size="11" fill="red">2x+y=40</text>
+    <text x="260" y="160" font-size="11" fill="blue">x+y=25</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 0 + 0 = 0$</div>
+  <div class="step">বিন্দু $A(20, 0) \implies Z = 20 + 0 = 20$</div>
+  <div class="step">বিন্দু $D(0, 25) \implies Z = 0 + 25 = 25$</div>
+  <div class="step">বিন্দু $P(15, 10) \implies Z = 15 + 10 = 25$</div>
+
+  <div class="step-explain">এখানে দেখা যাচ্ছে যে $D(0, 25)$ এবং $P(15, 10)$ উভয় বিন্দুতেই মোট বাচ্চার সংখ্যা সর্বাধিক ২৫টি হয়। তবে বাস্তবসম্মতভাবে ব্যবসা সচল রাখতে উভয় প্রকার বাচ্চা কিনতে চাইলে $P(15, 10)$ বিন্দুটি গ্রহণ করা শ্রেয়।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বাধিক ২৫টি বাচ্চা কেনার শর্তে তিনি ১৫টি মুরগীর বাচ্চা এবং ১০টি হাঁসের বাচ্চা কিনতে পারবেন (অথবা শুধু ২৫টি হাঁসের বাচ্চাও কিনতে পারেন)।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (vii). একজন ব্যবসায়ী তার দোকানের জন্য রেডিও ও টেলিভিশন মিলে ১০০ সেট কিনতে পারেন। রেডিও সেট ও টেলিভিশন সেট প্রতিটির ক্রয়মূল্য যথাক্রমে ৪০ ডলার ও ১২০ ডলার। প্রতি রেডিও ও টেলিভিশন সেটে লাভ যথাক্রমে ১৬ ডলার ও ৩২ ডলার। সর্বোচ্চ ১০৪০০ ডলারের বিনিয়োগ করে তিনি সর্বোচ্চ কত লাভ করতে পারেন?
+  </div>
+  <div class="solution-title">সমাধান (vii):</div>
+
+  <div class="step-explain">মনে করি, ব্যবসায়ী $x$ সংখ্যক রেডিও সেট এবং $y$ সংখ্যক টেলিভিশন সেট কিনবেন। যেহেতু সেটের সংখ্যা ঋণাত্মক হতে পারে না, অতএব:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের মূল উদ্দেশ্য হলো মোট লাভ সর্বাধিক করা। প্রতি রেডিওতে লাভ ১৬ ডলার এবং টেলিভিশনে লাভ ৩২ ডলার। সুতরাং, অভিষ্ট ফাংশন (Objective Function) $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = 16x + 32y$</div>
+
+  <div class="step-explain">প্রদত্ত শর্ত বা সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করা হলো:</div>
+  <div class="step-explain">১. মোট সেটের সংখ্যা সংক্রান্ত শর্ত (সর্বোচ্চ ১০০ সেট কিনতে পারেন):</div>
+  <div class="step">$x + y \le 100 \quad \text{--- (১)}$</div>
+
+  <div class="step-explain">২. বিনিয়োগ বা ক্রয়মূল্য সংক্রান্ত শর্ত (সর্বোচ্চ ১০৪০০ ডলার বিনিয়োগ করতে পারবেন):</div>
+  <div class="step">$40x + 120y \le 10400$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে $40$ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 3y \le 260 \quad \text{--- (২)}$ [৪০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">অসমতাগুলোকে সমীকরণে রূপান্তর করে অক্ষদ্বয়ের ছেদবিন্দুসমূহ নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + y = 100$</div>
+  <div class="step">ba, $\frac{x}{100} + \frac{y}{100} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(100, 0)$ এবং Y-অক্ষকে $B(0, 100)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 260$</div>
+  <div class="step">বা, $\frac{x}{260} + \frac{3y}{260} = 1 \implies \frac{x}{260} + \frac{y}{260/3} = 1$</div>
+  <div class="step">বা, $\frac{x}{260} + \frac{y}{86.67} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(260, 0)$ এবং Y-অক্ষকে $D\left(0, 86.67\right)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয় করি:</div>
+  <div class="step-explain">(৪) নং সমীকরণ থেকে (৩) নং বিয়োগ করে পাই:</div>
+  <div class="step">$\left(x + 3y\right) - \left(x + y\right) = 260 - 100 \implies 2y = 160 \implies y = 80$ [বিয়োগ করে]</div>
+  <div class="step-explain">$y$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$x + 80 = 100 \implies x = 20$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং, রেখা দুটির ছেদবিন্দু হলো $P(20, 80)$।</div>
+
+  <div class="step-explain">শর্তসমূহ বিশ্লেষণ করে প্রাপ্ত অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(100, 0)$, $P(20, 80)$ এবং $D\left(0, 86.67\right)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="170" y1="350" x2="50" y2="230" stroke="red" stroke-width="2" />
+    <line x1="362" y1="350" x2="50" y2="246" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 170,350 74,254 50,246" fill="rgba(0, 128, 255, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="170" cy="350" r="4" fill="black" />
+    <circle cx="74" cy="254" r="4" fill="black" />
+    <circle cx="50" cy="246" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="155" y="340" font-size="10">A(100,0)</text>
+    <text x="84" y="250" font-size="10">P(20,80)</text>
+    <text x="55" y="240" font-size="10">D(0,86.7)</text>
+    <text x="140" y="290" font-size="11" fill="red">x+y=100</text>
+    <text x="280" y="310" font-size="11" fill="blue">x+3y=260</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = 16x + 32y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 16\cdot0 + 32\cdot0 = 0$</div>
+  <div class="step">বিন্দু $A(100, 0) \implies Z = 16\cdot100 + 32\cdot0 = 1600$</div>
+  <div class="step">বিন্দু $D(0, 86.67) \implies$ যেহেতু সেটের সংখ্যা পূর্ণসংখ্যা হতে হবে, এর কাছাকাছি সম্ভাব্য পূর্ণবিন্দু $(1, 86)$ চেক করলে $Z = 16\cdot1 + 32\cdot86 = 16 + 2752 = 2768$</div>
+  <div class="step">বিন্দু $P(20, 80) \implies Z = 16\cdot20 + 32\cdot80 = 320 + 2560 = 2880$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(20, 80)$ বিন্দুতে লাভের পরিমাণ সর্বাধিক এবং তা হলো $2880$ ডলার।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> ব্যবসায়ী ২০টি রেডিও এবং ৮০টি টেলিভিশন কিনলে সর্বোচ্চ ২৮৮০ ডলার লাভ করতে পারবেন।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (viii). এক ব্যক্তি ১২০০ টাকার মধ্যে মাছের পোনা কিনতে চান। ১০০ রুই মাছের পোনার দাম ৬০ টাকা এবং ১০০ কাতল মাছের পোনার দাম ৩০ টাকা হলে, তিনি কোন মাছের কত পোনা কিনতে পারবেন যার মোট পোনার সংখ্যা সর্বাধিক ৩০০০-এর বেশি না হয়।
+  </div>
+  <div class="solution-title">সমাধান (viii):</div>
+
+  <div class="step-explain">হিসাবের সুবিধার জন্য মনে করি, তিনি $x$ শত (শতক এককে) রুই মাছের পোনা এবং $y$ শত কাতল মাছের পোনা কিনবেন। অতএব:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মোট পোনার সংখ্যা (শতক এককে) সর্বাধিক করতে হবে। সুতরাং, অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step-explain">১. বাজেট সংক্রান্ত শর্ত (১০০টি বা ১ শত রুই-এর দাম ৬০ টাকা এবং কাতল-এর দাম ৩০ টাকা, মোট বাজেট ১২০০ টাকা):</div>
+  <div class="step">$60x + 30y \le 1200$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৩০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + y \le 40 \quad \text{--- (১)}$ [৩০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. মোট পোনার সংখ্যার শর্ত (সর্বাধিক ৩০০০ টি বা ৩০ শত এর বেশি হবে না):</div>
+  <div class="step">$x + y \le 30 \quad \text{--- (২)}$</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$2x + y = 40 \implies \frac{x}{20} + \frac{y}{40} = 1 \quad \text{--- (৩)}$</div>
+  <div class="step-explain">এই রেখাটি X-অক্ষকে $A(20, 0)$ এবং Y-অক্ষকে $B(0, 40)$ বিন্দুতে ছেদ করে।</div>
+  
+  <div class="step">$x + y = 30 \implies \frac{x}{30} + \frac{y}{30} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step-explain">এই রেখাটি X-অক্ষকে $C(30, 0)$ এবং Y-অক্ষকে $D(0, 30)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয়:</div>
+  <div class="step-explain">(৩) নং থেকে (৪) নং বিয়োগ করে পাই:</div>
+  <div class="step">$\left(2x + y\right) - \left(x + y\right) = 40 - 30 \implies x = 10$ [বিয়োগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৪) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$10 + y = 30 \implies y = 20$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং ছেদবিন্দুটি হলো $P(10, 20)$।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(20, 0)$, $P(10, 20)$ এবং $D(0, 30)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="250" y1="350" x2="50" y2="-50" stroke="red" stroke-width="2" />
+    <line x1="350" y1="350" x2="50" y2="50" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 250,350 150,150 50,50" fill="rgba(0, 255, 0, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="250" cy="350" r="4" fill="black" />
+    <circle cx="150" cy="150" r="4" fill="black" />
+    <circle cx="50" cy="50" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="240" y="340" font-size="10">A(20,0)</text>
+    <text x="160" y="145" font-size="10">P(10,20)</text>
+    <text x="55" y="45" font-size="10">D(0,30)</text>
+    <text x="110" y="100" font-size="11" fill="red">2x+y=40</text>
+    <text x="310" y="110" font-size="11" fill="blue">x+y=30</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 0 + 0 = 0$</div>
+  <div class="step">বিন্দু $A(20, 0) \implies Z = 20 + 0 = 20 \text{ শত} = 2000$ টি</div>
+  <div class="step">বিন্দু $D(0, 30) \implies Z = 0 + 30 = 30 \text{ শত} = 3000$ টি</div>
+  <div class="step">বিন্দু $P(10, 20) \implies Z = 10 + 20 = 30 \text{ শত} = 3000$ টি</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $D(0, 30)$ এবং $P(10, 20)$ উভয় বিন্দুতেই মোট মাছের পোনার সংখ্যা সর্বাধিক ৩০০০ টি হয়। তবে মিশ্র চাষের বাস্তবতার জন্য $P(10, 20)$ বিন্দুটিই গ্রহণযোগ্য।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> তিনি ১০ শত (১০০০টি) রুই মাছের পোনা এবং ২০ শত (২০০০টি) কাতল মাছের পোনা কিনতে পারবেন।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (ix) একজন কৃষক ধান ও গম চাষ করতে গিয়ে, দেখলেন যে, প্রতি হেক্টর জমিতে ধান ও গম চাষের খরচ যথাক্রমে $1200$ টাকা এবং $400$ টাকা। প্রতি হেক্টর জমিতে ধান ও গম চাষের জন্য যথাক্রমে $4$ জন ও $6$ জন করে শ্রমিকের প্রয়োজন হয়। সর্বোচ্চ $26$ জন শ্রমিক নিয়োগ করে এবং $4800$ টাকা বিনিয়োগ করে সর্বোচ্চ কত হেক্টর জমি তিনি চাষ করতে পারবেন?
+  </div>
+  <div class="solution-title">সমাধান (ix):</div>
+
+  <div class="step-explain">মনে করি, কৃষক $x$ হেক্টর জমিতে ধান এবং $y$ হেক্টর জমিতে গম চাষ করবেন। জমির পরিমাণ অঋণাত্মক হওয়ায়:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে আমাদের উদ্দেশ্য হলো মোট চাষাবাদকৃত জমির পরিমাণ সর্বাধিক করা। সুতরাং, অভিষ্ট ফাংশন:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">সীমাবদ্ধতার শর্তসমূহ:</div>
+  <div class="step-explain">১. খরচ বা বিনিয়োগের শর্ত (সর্বোচ্চ ৪৮০০ টাকা):</div>
+  <div class="step">$1200x + 400y \le 4800$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৪০০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$3x + y \le 12 \quad \text{--- (১)}$ [৪০০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">২. শ্রমিক নিয়োগের শর্ত (সর্বোচ্চ ২৬ জন শ্রমিক):</div>
+  <div class="step">$4x + 6y \le 26$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$2x + 3y \le 13 \quad \text{--- (২)}$ [২ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">অসমতাগুলোর অনুরূপ সমীকরণসমূহ:</div>
+  <div class="step">$3x + y = 12 \implies \frac{x}{4} + \frac{y}{12} = 1 \quad \text{--- (৩)}$</div>
+  <div class="step-explain">এই রেখাটি X-অক্ষকে $A(4, 0)$ এবং Y-অক্ষকে $B(0, 12)$ বিন্দুতে ছেদ করে।</div>
+  
+  <div class="step">$2x + 3y = 13 \implies \frac{x}{13/2} + \frac{y}{13/3} = 1 \implies \frac{x}{6.5} + \frac{y}{4.33} = 1 \quad \text{--- (৪)}$</div>
+  <div class="step-explain">এই রেখাটি X-অক্ষকে $C(6.5, 0)$ এবং Y-অক্ষকে $D(0, 4.33)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয়:</div>
+  <div class="step-explain">(৩) নং সমীকরণকে ৩ দ্বারা গুণ করে তা থেকে (৪) নং বিয়োগ করি:</div>
+  <div class="step">$3\cdot\left(3x + y\right) - \left(2x + 3y\right) = 3\cdot12 - 13$</div>
+  <div class="step">বা, $9x + 3y - 2x - 3y = 36 - 13$</div>
+  <div class="step">বা, $7x = 23 \implies x = \frac{23}{7} \approx 3.29$</div>
+  <div class="step-explain">$x$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$3\cdot\left(\frac{23}{7}\right) + y = 12 \implies y = 12 - \frac{69}{7} = \frac{84 - 69}{7} = \frac{15}{7} \approx 2.14$ [লসাগু করে]</div>
+  <div class="step-explain">সুতরাং ছেদবিন্দুটি হলো $P\left(\frac{23}{7}, \frac{15}{7}\right)$ বা $P(3.29, 2.14)$।</div>
+
+  <div class="step-explain">অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(4, 0)$, $P(3.29, 2.14)$ এবং $D(0, 4.33)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    
+    <line x1="150" y1="350" x2="50" y2="50" stroke="red" stroke-width="2" />
+    <line x1="212" y1="350" x2="50" y2="242" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 150,350 132,296 50,242" fill="rgba(128, 0, 128, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="150" cy="350" r="4" fill="black" />
+    <circle cx="132" cy="296" r="4" fill="black" />
+    <circle cx="50" cy="242" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="145" y="340" font-size="10">A(4,0)</text>
+    <text x="140" y="290" font-size="10">P(3.29,2.14)</text>
+    <text x="55" y="235" font-size="10">D(0,4.33)</text>
+    <text x="110" y="150" font-size="11" fill="red">3x+y=12</text>
+    <text x="170" y="260" font-size="11" fill="blue">2x+3y=13</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 0 + 0 = 0$</div>
+  <div class="step">বিন্দু $A(4, 0) \implies Z = 4 + 0 = 4$</div>
+  <div class="step">বিন্দু $D(0, 4.33) \implies Z = 0 + 4.33 = 4.33$</div>
+  <div class="step">বিন্দু $P\left(\frac{23}{7}, \frac{15}{7}\right) \implies Z = \frac{23}{7} + \frac{15}{7} = \frac{38}{7} \approx 5.43$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P$ বিন্দুতে চাষাবাদকৃত জমির পরিমাণ সর্বাধিক এবং তা হলো $5.43$ হেক্টর বা $5\frac{3}{7}$ হেক্টর।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> তিনি সর্বোচ্চ $5.43$ হেক্টর (বা $\frac{38}{7}$ হেক্টর) জমি চাষ করতে পারবেন।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (x) একটি বাগানে সর্বোচ্চ $23$ বর্গমিটারের জমিতে পেয়ারা এবং সুপারির চারা লাগাতে হবে। একটি পেয়ারার চারার জন্য $2$ বর্গমিটার এবং একটি সুপারির চারার জন্য $1$ বর্গমিটার জায়গা বরাদ্দ করা হয়। প্রতি পেয়ারার চারার মূল্য $0.40$ টাকা এবং প্রতি সুপারির চারার মূল্য $1.20$ টাকা। যদি মোট $11.60$ টাকার বেশি ব্যয় না করা হয়, তবে সর্বোচ্চ কত সংখ্যক গাছ লাগানো যাবে?
+  </div>
+  <div class="solution-title">সমাধান (x):</div>
+
+  <div class="step-explain">মনে করি, পেয়ারার চারার সংখ্যা $x$ এবং সুপারির চারার সংখ্যা $y$। চারা গাছের সংখ্যা কখনো ঋণাত্মক হতে পারে না, সুতরাং:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মোট গাছের সংখ্যা সর্বাধিক করতে হবে। অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = x + y$</div>
+
+  <div class="step-explain">প্রদত্ত শর্ত বা সীমাবদ্ধতার অসমতাগুলো নিচে গঠন করা হলো:</div>
+  <div class="step-explain">১. জায়গার সীমাবদ্ধতা সংক্রান্ত শর্ত (মোট জায়গা সর্বোচ্চ ২৩ বর্গমিটার):</div>
+  <div class="step">$2x + 1y \le 23 \implies 2x + y \le 23 \quad \text{--- (১)}$</div>
+
+  <div class="step-explain">২. খরচ বা বাজেট সংক্রান্ত শর্ত (মোট খরচ সর্বোচ্চ ১১.৬০ টাকা):</div>
+  <div class="step">$0.40x + 1.20y \le 11.60$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ১০০ দ্বারা গুণ করে দশমিক মুক্ত করে পাই:</div>
+  <div class="step">$40x + 120y \le 1160$ [১০০ দ্বারা গুণ করে]</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ৪০ দ্বারা ভাগ করে পাই:</div>
+  <div class="step">$x + 3y \le 29 \quad \text{--- (২)}$ [৪০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain">এখন অসমতাগুলোকে সমীকরণে রূপান্তর করে অক্ষদ্বয়ের ছেদবিন্দুসমূহ নির্ণয় করি।</div>
+  <div class="step-explain">(১) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$2x + y = 23$</div>
+  <div class="step">বা, $\frac{2x}{23} + \frac{y}{23} = 1 \implies \frac{x}{23/2} + \frac{y}{23} = 1$</div>
+  <div class="step">বা, $\frac{x}{11.5} + \frac{y}{23} = 1 \quad \text{--- (৩)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $A(11.5, 0)$ এবং Y-অক্ষকে $B(0, 23)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">(২) নং অসমতার অনুরূপ সমীকরণ:</div>
+  <div class="step">$x + 3y = 29$</div>
+  <div class="step">বা, $\frac{x}{29} + \frac{3y}{29} = 1 \implies \frac{x}{29} + \frac{y}{29/3} = 1$</div>
+  <div class="step">বা, $\frac{x}{29} + \frac{y}{9.67} = 1 \quad \text{--- (৪)}$ [ছেদক আকৃতিতে রূপান্তর করে]</div>
+  <div class="step-explain">এই সরলরেখাটি X-অক্ষকে $C(29, 0)$ এবং Y-অক্ষকে $D(0, 9.67)$ বিন্দুতে ছেদ করে।</div>
+
+  <div class="step-explain">এখন (৩) ও (৪) নং সমীকরণদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয় করি:</div>
+  <div class="step-explain">(৩) নং সমীকরণকে ৩ দ্বারা গুণ করে তা থেকে (৪) নং বিয়োগ করি:</div>
+  <div class="step">$3\cdot\left(2x + y\right) - \left(x + 3y\right) = 3\cdot23 - 29$</div>
+  <div class="step">বা, $6x + 3y - x - 3y = 69 - 29$</div>
+  <div class="step">বা, $5x = 40 \implies x = 8$ [৫ দ্বারা ভাগ করে]</div>
+  <div class="step-explain">$x$-এর মান (৩) নং সমীকরণে বসিয়ে পাই:</div>
+  <div class="step">$2\cdot8 + y = 23 \implies 16 + y = 23 \implies y = 7$ [মান বসিয়ে]</div>
+  <div class="step-explain">সুতরাং, রেখা দুটির ছেদবিন্দু হলো $P(8, 7)$।</div>
+
+  <div class="step-explain">উভয় অসমতার ক্ষেত্রে অনুভূমিক দিক মূলবিন্দুর দিকে হওয়ায়, অনুকূল অঞ্চলের কৌণিক বিন্দুসমূহ হলো: $O(0, 0)$, $A(11.5, 0)$, $P(8, 7)$ এবং $D(0, 9.67)$। নিচে এর নিখুঁত লেখচিত্র দেওয়া হলো:</div>
+
+  <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #fcfcfc; border: 1px solid #ddd;">
+    <path d="M 50 0 L 50 350 M 100 0 L 100 350 M 150 0 L 150 350 M 200 0 L 200 350 M 250 0 L 250 350 M 300 0 L 300 350 M 350 0 L 350 350 M 400 0 L 400 350 M 450 0 L 450 350" stroke="#eee" stroke-width="1" />
+    <path d="M 50 50 L 500 50 M 50 100 L 500 100 M 50 150 L 500 150 M 50 200 L 500 200 M 50 250 L 500 250 M 50 300 L 500 300" stroke="#eee" stroke-width="1" />
+    
+    <line x1="50" y1="350" x2="480" y2="350" stroke="#333" stroke-width="2" />
+    <line x1="50" y1="20" x2="50" y2="350" stroke="#333" stroke-width="2" />
+    <path d="M 480 345 L 490 350 L 480 355 Z" fill="#333" />
+    <path d="M 45 20 L 50 10 L 55 20 Z" fill="#333" />
+    
+    <line x1="188" y1="350" x2="50" y2="74" stroke="red" stroke-width="2" />
+    <line x1="398" y1="350" x2="50" y2="234" stroke="blue" stroke-width="2" />
+
+    <polygon points="50,350 188,350 146,266 50,234" fill="rgba(0, 128, 255, 0.15)" stroke="none" />
+
+    <circle cx="50" cy="350" r="4" fill="black" />
+    <circle cx="188" cy="350" r="4" fill="black" />
+    <circle cx="146" cy="266" r="4" fill="black" />
+    <circle cx="50" cy="234" r="4" fill="black" />
+
+    <text x="35" y="365" font-size="12">O</text>
+    <text x="475" y="370" font-size="12">X</text>
+    <text x="25" y="25" font-size="12">Y</text>
+    <text x="175" y="340" font-size="10">A(11.5,0)</text>
+    <text x="154" y="262" font-size="10">P(8,7)</text>
+    <text x="55" y="228" font-size="10">D(0,9.67)</text>
+    <text x="130" y="140" font-size="11" fill="red">2x+y=23</text>
+    <text x="300" y="290" font-size="11" fill="blue">x+3y=29</text>
+  </svg>
+
+  <div class="step-explain">কৌণিক বিন্দুগুলোতে অভিষ্ট ফাংশন $Z = x + y$-এর মান যাচাই করি:</div>
+  <div class="step">বিন্দু $O(0, 0) \implies Z = 0 + 0 = 0$</div>
+  <div class="step">বিন্দু $A(11.5, 0) \implies$ যেহেতু চারার সংখ্যা পূর্ণসংখ্যা হতে হবে, তাই $x=11, y=0 \implies Z = 11 + 0 = 11$</div>
+  <div class="step">বিন্দু $D(0, 9.67) \implies$ পূর্ণসংখ্যা বিবেচনা করে $x=0, y=9 \implies Z = 0 + 9 = 9$</div>
+  <div class="step">বিন্দু $P(8, 7) \implies Z = 8 + 7 = 15$</div>
+
+  <div class="step-explain">দেখা যাচ্ছে যে, $P(8, 7)$ বিন্দুতে মোট গাছের সংখ্যা সর্বাধিক এবং তা হলো $15$।</div>
+  <div class="step-explain"><strong>উত্তর:</strong> সর্বোচ্চ সংখ্যক গাছ লাগাতে হলে ৮টি পেয়ারার চারা এবং ৭টি সুপারির চারা লাগাতে হবে। একত্রে সর্বোচ্চ ১৫টি গাছ লাগানো যাবে।</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (xi) দুই প্রকার খাদ্য $F_1$ এবং $F_2$ তে ভিটামিন $A$ ও $C$ পাওয়া যায়। এক একক $F_1$ খাদ্যে $7$-একক ভিটামিন $A$ ও $3$-একক ভিটামিন $C$ পাওয়া যায়। আবার প্রতি একক $F_2$ খাদ্যে $2$-একক ভিটামিন $A$ ও $5$-একক ভিটামিন $C$ পাওয়া যায়$.$ $F_1$ ও $F_2$ খাদ্যের প্রতি এককের দাম যথাক্রমে $25$ টাকা এবং $18$ টাকা। একজন লোকের দৈনিক ন্যূনতম $45$ একক ভিটামিন $A$ এবং $60$-একক ভিটামিন $C$ প্রয়োজন। সবচেয়ে কম খরচে দৈনিক ভিটামিন-এর চাহিদা মেটানোর জন্য একটি যোগাশ্রয়ী সমস্যা গঠন কর।
+  </div>
+  <div class="solution-title">সমাধান (xi):</div>
+
+  <div class="step-explain">প্রশ্নানুযায়ী কেবল যোগাশ্রয়ী সমস্যাটি গঠন করতে বলা হয়েছে। গাণিতিক মডেল তৈরির সুবিধার্থে তথ্যগুলোকে নিচের ছকের মাধ্যমে উপস্থাপন করি:</div>
+
+  <table border="1" style="border-collapse: collapse; text-align: center; width: 100%; margin: 10px 0;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th>উপাদান</th>
+        <th>$F_1$ খাদ্য (প্রতি একক)</th>
+        <th>$F_2$ খাদ্য (প্রতি একক)</th>
+        <th>দৈনিক ন্যূনতম প্রয়োজন</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ভিটামিন $A$</strong></td>
+        <td>$7$ একক</td>
+        <td>$2$ একক</td>
+        <td>$45$ একক</td>
+      </tr>
+      <tr>
+        <td><strong>ভিটামিন $C$</strong></td>
+        <td>$3$ একক</td>
+        <td>$5$ একক</td>
+        <td>$60$ একক</td>
+      </tr>
+      <tr style="background-color: #fafafa;">
+        <td><strong>মূল্য (প্রতি একক)</strong></td>
+        <td>$25$ টাকা</td>
+        <td>$18$ টাকা</td>
+        <td>---</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="step-explain">মনে করি, দৈনিক চাহিদামত খাদ্যের জন্য $F_1$ খাদ্য কেনা হয় $x$ একক এবং $F_2$ খাদ্য কেনা হয় $y$ একক। যেহেতু খাদ্যের পরিমাণ ঋণাত্মক হতে পারে না, তাই অবয়ব বা অঋণাত্মকতার শর্ত হবে:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মূল উদ্দেশ্য হলো খরচ সর্বনিম্ন করা। প্রতি একক $F_1$-এর দাম ২৫ টাকা এবং $F_2$-এর দাম ১৮ টাকা। অতএব, মোট খরচ বা অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 25x + 18y$</div>
+
+  <div class="step-explain">এখন পুষ্টির চাহিদাসংক্রান্ত সীমাবদ্ধতার শর্তসমূহ বা অসমতাগুলো গঠন করি:</div>
+  
+  <div class="step-explain">১. ভিটামিন $A$ এর ক্ষেত্রে শর্ত (ন্যূনতম ৪৫ একক প্রয়োজন, অর্থাৎ ৪৫ বা তার বেশি হতে হবে):</div>
+  <div class="step">$7x + 2y \ge 45$</div>
+
+  <div class="step-explain">২. ভিটামিন $C$ এর ক্ষেত্রে শর্ত (ন্যূনতম ৬০ একক প্রয়োজন, অর্থাৎ ৬০ বা তার বেশি হতে হবে):</div>
+  <div class="step">$3x + 5y \ge 60$</div>
+
+  <div class="step-explain"><strong>সুতরাং, নির্ণেয় যোগাশ্রয়ী প্রোগ্রামিং সমস্যাটি নিম্নরূপ:</strong></div>
+  <div class="step">সর্বনিম্নকরণ করতে হবে: $Z = 25x + 18y$</div>
+  <div class="step-explain">সীমাবদ্ধতাসমূহ:</div>
+  <div class="step">$7x + 2y \ge 45$</div>
+  <div class="step">$3x + 5y \ge 60$</div>
+  <div class="step">এবং $x \ge 0, y \ge 0$</div>
+</div>
+
+<div class="problem-card">
+  <div class="problem-title">
+    ৬. (xii) জনাব দবির মিয়া তাঁর দোকানে বিক্রির জন্য মোবাইল ও কম্পিউটার মিলে $50$ সেট কিনতে পারেন। প্রতিটা কম্পিউটারের ক্রয়মূল্য, মোবাইলের ক্রয়মূল্যের তিনগুণ এবং প্রতিটা কম্পিউটারে লাভ মোবাইলের লাভের দ্বিগুণ। প্রতিটা মোবাইল সেটের ক্রয়মূল্য $20$ ডলার এবং লাভ $4$ ডলার। দবির মিয়ার সর্বোচ্চ $5200$ ডলার বিনিয়োগের মাধ্যমে সর্বোচ্চ লাভের জন্য একটি যোগাশ্রয়ী প্রোগ্রাম গঠন কর।
+  </div>
+  <div class="solution-title">সমাধান (xii):</div>
+
+  <div class="step-explain">প্রশ্নানুযায়ী কেবল যোগাশ্রয়ী প্রোগ্রাম গঠন করতে হবে। প্রথমে তথ্যের ওপর ভিত্তি করে প্রতিটি উপাদানের মান স্পষ্ট করে নিই:</div>
+  <div class="step-explain">১. একটি মোবাইল সেটের ক্রয়মূল্য = $20$ ডলার।</div>
+  <div class="step-explain">২. একটি কম্পিউটারের ক্রয়মূল্য = মোবাইলের ক্রয়মূল্যের তিনগুণ = $20 \cdot 3 = 60$ ডলার।</div>
+  <div class="step-explain">৩. একটি মোবাইল সেটের লাভ = $4$ ডলার।</div>
+  <div class="step-explain">৪. একটি কম্পিউটারের লাভ = মোবাইলের লাভের দ্বিগুণ = $4 \cdot 2 = 8$ ডলার।</div>
+
+  <div class="step-explain">মনে করি, দবির মিয়া $x$ সংখ্যক মোবাইল সেট এবং $y$ সংখ্যক কম্পিউটার সেট কিনবেন। যেহেতু জিনিসের সংখ্যা অঋণাত্মক হয়:</div>
+  <div class="step">$x \ge 0, y \ge 0$</div>
+
+  <div class="step-explain">এখানে মূল উদ্দেশ্য হলো মোট লাভ সর্বাধিক করা। সুতরাং, লাভ বা অভিষ্ট ফাংশন $Z$ হলে:</div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = 4x + 8y$</div>
+
+  <div class="step-explain">এখন প্রদত্ত সীমাবদ্ধতার শর্ত বা অসমতাগুলো গঠন করি:</div>
+  
+  <div class="step-explain">১. মোট সেটের সংখ্যা সংক্রান্ত শর্ত (মোবাইল ও কম্পিউটার মিলে সর্বোচ্চ ৫০ সেট কিনতে পারেন):</div>
+  <div class="step">$x + y \le 50$</div>
+
+  <div class="step-explain">২. বিনিয়োগ বা ক্রয়মূল্য সংক্রান্ত শর্ত (সর্বোচ্চ ৫২০০ ডলার বিনিয়োগ করতে পারবেন):</div>
+  <div class="step">$20x + 60y \le 5200$</div>
+  <div class="step-explain">বা, উভয়পক্ষকে ২০ দ্বারা ভাগ করে সরল আকারে পাই:</div>
+  <div class="step">$x + 3y \le 260$ [২০ দ্বারা ভাগ করে]</div>
+
+  <div class="step-explain"><strong>সুতরাং, নির্ণেয় যোগাশ্রয়ী প্রোগ্রামটি নিম্নরূপ:</strong></div>
+  <div class="step">সর্বাধিকীকরণ করতে হবে: $Z = 4x + 8y$</div>
+  <div class="step-explain">সীমাবদ্ধতাসমূহ:</div>
+  <div class="step">$x + y \le 50$</div>
+  <div class="step">$x + 3y \le 260$</div>
+  <div class="step">এবং $x \ge 0, y \ge 0$</div>
+</div>
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

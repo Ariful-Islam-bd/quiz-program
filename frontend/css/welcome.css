@@ -1,0 +1,319 @@
+/* frontend/css/welcome.css */
+/* Version: 2.1.0 - সম্পূর্ণ আপডেট */
+
+/* ===== ওয়েলকাম পেজ ===== */
+.welcome-page {
+    min-height: calc(100vh - 60px);
+    background: var(--bg);
+    padding: 30px 20px;
+    display: none;
+}
+
+.welcome-page.active {
+    display: block;
+}
+
+/* ===== হিরো সেকশন ===== */
+.welcome-header {
+    text-align: center;
+    padding: 20px 20px 30px;
+}
+
+.welcome-user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.welcome-avatar-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #64b5f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.welcome-avatar-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(33, 150, 243, 0.4);
+}
+
+.welcome-avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-avatar-initials {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-user-text {
+    text-align: left;
+}
+
+.welcome-user-text h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text);
+}
+
+.welcome-user-text h1 #welcomeUserName {
+    background: linear-gradient(135deg, var(--accent, #4f46e5), #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.welcome-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent, #4f46e5), #7c3aed);
+    -webkit-background-clip: text;
+    /*-webkit-text-fill-color: transparent;*/
+    background-clip: text;
+    /*color: transparent;*/
+    margin-bottom: 8px;
+}
+
+@supports not (background-clip: text) {
+    .welcome-header h1 {
+        color: var(--accent, #4f46e5);
+        background: none;
+        -webkit-text-fill-color: var(--accent, #4f46e5);
+    }
+    .welcome-user-text h1 #welcomeUserName {
+        color: var(--accent, #4f46e5);
+        -webkit-text-fill-color: var(--accent, #4f46e5);
+    }
+}
+
+.welcome-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.welcome-user-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin: 4px 0 0 0;
+}
+
+/* ===== কার্ড গ্রিড ===== */
+.welcome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.welcome-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.welcome-card:nth-child(1) { animation-delay: 0.1s; }
+.welcome-card:nth-child(2) { animation-delay: 0.2s; }
+.welcome-card:nth-child(3) { animation-delay: 0.3s; }
+
+.welcome-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+    border-color: var(--accent);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.welcome-card h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.welcome-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===== স্ট্যাটিস্টিক্স ===== */
+.welcome-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ===== অ্যানিমেশন ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== রেসপনসিভ ===== */
+@media (max-width: 768px) {
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    .welcome-stats {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+    .welcome-header h1 {
+        font-size: 2rem;
+    }
+    .welcome-user-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .welcome-user-text {
+        text-align: center;
+    }
+    
+    .welcome-user-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .welcome-avatar-wrapper {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .welcome-avatar-initials {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-page {
+        padding: 15px 10px;
+    }
+    .welcome-card {
+        padding: 24px 16px;
+    }
+    .welcome-stats {
+        padding: 16px;
+        gap: 12px;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    .welcome-user-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .welcome-avatar-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .welcome-avatar-initials {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== ডার্ক মোড ===== */
+body.dark .welcome-card {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .welcome-card:hover {
+    border-color: var(--accent);
+}
+
+body.dark .welcome-stats {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .stat-number {
+    color: #64b5f6;
+}
+
+body.dark .welcome-avatar-wrapper {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .welcome-user-text h1 {
+    color: #e2e8f0;
+}
+
+body.dark .welcome-user-text h1 #welcomeUserName {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+body.dark .welcome-user-text p {
+    color: #94a3b8;
+}

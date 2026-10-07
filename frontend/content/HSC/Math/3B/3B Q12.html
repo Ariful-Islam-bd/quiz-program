@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B Complex</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(B)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+
+<div class="problem-card">
+    <div class="problem-title">১২. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে প্রমাণ কর/দেখাও যে:</div>
+
+    <div class="problem-sub-title">(i) $(a + b\omega + c\omega^2)^2 + (a\omega + b + c\omega^2)^2 + (a\omega + b\omega^2 + c)^2 = 0$ হলে প্রমাণ কর যে, $a = c$ বা $b = \frac{1}{2}(a + c)$</div>
+    <div class="solution-title">নিয়মিত সমাধান (i):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে $\omega^3 = 1$ এবং $1 + \omega + \omega^2 = 0$। সুবিধার্থে প্রদত্ত রাশির পদগুলোকে ধরে নিই:</div>
+    <div class="step">$\text{ধরি, } P = a + b\omega + c\omega^2$</div>
+    <div class="step">$Q = a\omega + b + c\omega^2 = b + a\omega + c\omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$R = a\omega + b\omega^2 + c = c + a\omega + b\omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন লক্ষ্য করি, $P$ কে $\omega$ দ্বারা গুণ করলে আমরা $R$ এর একটি রূপ পাই:</div>
+    <div class="step">$\omega \cdot P = \omega\left(a + b\omega + c\omega^2\right) = a\omega + b\omega^2 + c\omega^3$</div>
+    <div class="step">$\Rightarrow \omega P = a\omega + b\omega^2 + c \cdot (1) = a\omega + b\omega^2 + c = R \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">সুতরাং, আমরা পেলাম $R = \omega P$। এবার প্রদত্ত সমীকরণে এই মানটি ব্যবহার করি:</div>
+    <div class="step">$P^2 + Q^2 + R^2 = 0$</div>
+    <div class="step">$\Rightarrow P^2 + Q^2 + (\omega P)^2 = 0 \quad [R = \omega P \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow P^2 + Q^2 + \omega^2 P^2 = 0 \quad [\text{বর্গ বণ্টন করে}]$</div>
+    <div class="step">$\Rightarrow P^2\left(1 + \omega^2\right) + Q^2 = 0 \quad [P^2 \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0 \implies 1 + \omega^2 = -\omega$, তাই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow P^2(-\omega) + Q^2 = 0 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow Q^2 = \omega P^2$</div>
+    <div class="step-explain">যেহেতু $\omega = \omega^4 = \left(\omega^2\right)^2$, তাই আমরা লিখতে পারি:</div>
+    <div class="step">$\Rightarrow Q^2 = \left(\omega^2\right)^2 \cdot P^2 \implies Q^2 = \left(\omega^2 P\right)^2$</div>
+    <div class="step-explain">উভয় পক্ষে বর্গমূল করলে আমরা দুটি সম্ভাব্য কেস বা ক্ষেত্র পাই:</div>
+    <div class="step">$\Rightarrow Q = \pm \omega^2 P$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-১: ধনাত্মক ($+$) চিহ্ন নিয়ে পাই:</strong></div>
+    <div class="step">$Q = \omega^2 P$</div>
+    <div class="step-explain">এখন $Q$ ও $P$ এর মূল মানগুলো বসিয়ে দিই:</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = \omega^2\left(a + b\omega + c\omega^2\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = a\omega^2 + b\omega^3 + c\omega^4 \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step-explain">আমরা জানি $\omega^3 = 1$ এবং $\omega^4 = \omega^3 \cdot \omega = \omega$, এই মানগুলো ডানপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = a\omega^2 + b(1) + c(\omega) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = b + c\omega + a\omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে স্বাধীন পদ $b$ বিয়োগ বা বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow a\omega + c\omega^2 = c\omega + a\omega^2$</div>
+    <div class="step-explain">চলক $a$ যুক্ত পদগুলোকে বামপক্ষে এবং $c$ যুক্ত পদগুলোকে ডানপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow a\omega - a\omega^2 = c\omega - c\omega^2 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow a\left(\omega - \omega^2\right) = c\left(\omega - \omega^2\right) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে সাধারণ উৎপাদক $\left(\omega - \omega^2\right)$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow a = c$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-২: ঋণাত্মক ($-$) চিহ্ন নিয়ে পাই:</strong></div>
+    <div class="step">$Q = -\omega^2 P$</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = -\omega^2\left(a + b\omega + c\omega^2\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = -\left(a\omega^2 + b\omega^3 + c\omega^4\right) \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 = -\left(a\omega^2 + b + c\omega\right) \quad [\because \omega^3=1, \omega^4=\omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ডানপক্ষের সব পদ বামপক্ষে পক্ষান্তর করে পাই (চিহ্ন পরিবর্তিত হবে):</div>
+    <div class="step">$\Rightarrow b + a\omega + c\omega^2 + a\omega^2 + b + c\omega = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">সমজাতীয় পদগুলো একসাথে সাজিয়ে যোগ করি:</div>
+    <div class="step">$\Rightarrow (b + b) + (a\omega + c\omega) + \left(c\omega^2 + a\omega^2\right) = 0 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2b + (a + c)\omega + (a + c)\omega^2 = 0 \quad [\text{যোগ করে ও কমন নিয়ে}]$</div>
+    <div class="step-explain">শেষ দুটি পদ থেকে সাধারণ উৎপাদক $(a + c)$ কমন নিই:</div>
+    <div class="step">$\Rightarrow 2b + (a + c)\left(\omega + \omega^2\right) = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$, এই মানটি প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow 2b + (a + c)(-1) = 0 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2b - (a + c) = 0 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow 2b = a + c \implies b = \frac{1}{2}(a + c) \quad [\text{পক্ষান্তর ও ভাগ করে}]$</div>
+    <div class="step-explain">সুতরাং প্রমাণিত হলো যে, $a = c$ বা $b = \frac{1}{2}(a + c)$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $(a\omega^2 + b + c\omega)^3 + (a\omega + b + c\omega^2)^3 = 0$ হলে প্রমাণ কর যে, $a = \frac{1}{2}(b + c)$ বা $b = \frac{1}{2}(a + c)$ বা $c = \frac{1}{2}(a + b)$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">সুবিধার্থে প্রদত্ত সমীকরণের ঘনক পদের ভেতরের অংশ দুটিকে দুটি চলক ধরে নিই:</div>
+    <div class="step">$\text{ধরি, } X = a\omega^2 + b + c\omega = b + c\omega + a\omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$\text{এবং } Y = a\omega + b + c\omega^2 = b + a\omega + c\omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">তাহলে প্রদত্ত সমীকরণটি দাঁড়ায়:</div>
+    <div class="step">$X^3 + Y^3 = 0$</div>
+    <div class="step">$\Rightarrow X^3 = -Y^3 \implies \left(\frac{X}{Y}\right)^3 = -1 \quad [\text{উভয় পক্ষকে } Y^3 \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $-1$ এর ঘনমূলগুলো হলো $-1, -\omega, -\omega^2$। অতএব আমরা লিখতে পারি:</div>
+    <div class="step">$\Rightarrow \frac{X}{Y} = -1 \quad \text{বা} \quad \frac{X}{Y} = -\omega \quad \text{বা} \quad \frac{X}{Y} = -\omega^2$</div>
+    <div class="step">$\Rightarrow X = -Y \quad \text{বা} \quad X = -Y\omega \quad \text{বা} \quad X = -Y\omega^2 \quad [\text{আড়গুণন করে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-১: যখন $X = -Y$ হয়:</strong></div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -\left(b + a\omega + c\omega^2\right) \quad [\text{X ও Y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 + b + a\omega + c\omega^2 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 2b + (a + c)\omega + (a + c)\omega^2 = 0 \quad [\text{যোগ করে ও কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2b + (a + c)\left(\omega + \omega^2\right) = 0 \quad [\text{পুনরায় কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2b + (a + c)(-1) = 0 \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2b - (a + c) = 0 \implies b = \frac{1}{2}(a + c) \quad [\text{পক্ষান্তর করে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-২: যখন $X = -Y\omega$ হয়:</strong></div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -\omega\left(b + a\omega + c\omega^2\right) \quad [\text{X ও Y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -b\omega - a\omega^2 - c\omega^3 \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -b\omega - a\omega^2 - c(1) \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 + b\omega + a\omega^2 + c = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">সমজাতীয় পদগুলো সাজিয়ে ও কমন নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow (b + c) + (b + c)\omega + 2a\omega^2 = 0$</div>
+    <div class="step">$\Rightarrow (b + c)(1 + \omega) + 2a\omega^2 = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0 \implies 1 + \omega = -\omega^2$, এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow (b + c)\left(-\omega^2\right) + 2a\omega^2 = 0 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \omega^2 [-(b + c) + 2a] = 0 \quad [\omega^2 \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু কাল্পনিক ঘনমূল $\omega \neq 0$, তাই উভয় পক্ষকে $\omega^2$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow 2a - (b + c) = 0 \implies a = \frac{1}{2}(b + c) \quad [\text{পক্ষান্তর করে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-৩: যখন $X = -Y\omega^2$ হয়:</strong></div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -\omega^2\left(b + a\omega + c\omega^2\right) \quad [\text{X ও Y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -b\omega^2 - a\omega^3 - c\omega^4 \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 = -b\omega^2 - a(1) - c\omega \quad [\because \omega^3 = 1, \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow b + c\omega + a\omega^2 + b\omega^2 + a + c\omega = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">সমজাতীয় পদগুলো সাজিয়ে ও কমন নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow (a + b) + 2c\omega + (a + b)\omega^2 = 0$</div>
+    <div class="step">$\Rightarrow (a + b)\left(1 + \omega^2\right) + 2c\omega = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega^2 = -\omega$, এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow (a + b)(-\omega) + 2c\omega = 0 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \omega [-(a + b) + 2c] = 0 \quad [\omega \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে $\omega$ দ্বারা ভাগ করে পাই (যেহেতু $\omega \neq 0$):</div>
+    <div class="step">$\Rightarrow 2c - (a + b) = 0 \implies c = \frac{1}{2}(a + b) \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">সুতরাং প্রমাণিত হলো যে, $a = \frac{1}{2}(b + c)$ বা $b = \frac{1}{2}(a + c)$ বা $c = \frac{1}{2}(a + b)$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) যদি $a + b + c = 0$ হয় তবে দেখাও যে, $(a + b\omega + c\omega^2)^3 + (a + b\omega^2 + c\omega)^3 = 27abc$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে, $a + b + c = 0$। এর থেকে আমরা লিখতে পারি:</div>
+    <div class="step">$b + c = -a, \quad a + b = -c, \quad \text{এবং} \quad a + c = -b$</div>
+    <div class="step-explain">হিসাব সহজ করার জন্য ধরি,</div>
+    <div class="step">$M = a + b\omega + c\omega^2 \quad \text{এবং} \quad N = a + b\omega^2 + c\omega$$</div>
+    <div class="step-explain">আমরা ঘনের একটি বিখ্যাত উৎপাদক সূত্র জানি, $M^3 + N^3 = (M + N)\left(M + \omega N\right)\left(M + \omega^2 N\right)$। এখন আমরা এই তিনটি উৎপাদকের মান আলাদাভাবে বের করব।</div>
+
+    <div class="step-explain"><strong>১ম উৎপাদক: $(M + N)$ এর মান নির্ণয়:</strong></div>
+    <div class="step">$M + N = \left(a + b\omega + c\omega^2\right) + \left(a + b\omega^2 + c\omega\right)$</div>
+    <div class="step">$= 2a + b\left(\omega + \omega^2\right) + c\left(\omega^2 + \omega\right) \quad [\text{সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step">$= 2a + b(-1) + c(-1) \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 2a - (b + c) \quad [\text{মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$= 2a - (-a) \quad [\because b + c = -a \text{ মান বসিয়ে}]$</div>
+    <div class="step">$= 2a + a = 3a \quad [\text{যোগ করে}]$</div>
+
+    <div class="step-explain"><strong>২য় উৎপাদক: $(M + \omega N)$ এর মান নির্ণয়:</strong></div>
+    <div class="step">$M + \omega N = \left(a + b\omega + c\omega^2\right) + \omega\left(a + b\omega^2 + c\omega\right)$$</div>
+    <div class="step">$= a + b\omega + c\omega^2 + a\omega + b\omega^3 + c\omega^2 \quad [\omega \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$= a(1 + \omega) + b\omega + c\omega^2 + a\omega + b(1) + c\omega^2 \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= a(1 + \omega) + b(1 + \omega) + 2c\omega^2 \quad [\text{সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step">$= a\left(-\omega^2\right) + b\left(-\omega^2\right) + 2c\omega^2 \quad [\because 1 + \omega = -\omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step">$= -\omega^2(a + b) + 2c\omega^2 \quad [\text{মাইনাস ও ওমেগা স্কয়ার কমন নিয়ে}]$</div>
+    <div class="step">$= -\omega^2(-c) + 2c\omega^2 \quad [\text{দেওয়া আছে, } a + b = -c \text{ বসিয়ে}]$</div>
+    <div class="step">$= c\omega^2 + 2c\omega^2 = 3c\omega^2 \quad [\text{যোগ করে}]$</div>
+
+    <div class="step-explain"><strong>৩য় উৎপাদক: $\left(M + \omega^2 N\right)$ এর মান নির্ণয়:</strong></div>
+    <div class="step">$M + \omega^2 N = \left(a + b\omega + c\omega^2\right) + \omega^2\left(a + b\omega^2 + c\omega\right)$</div>
+    <div class="step">$= a + b\omega + c\omega^2 + a\omega^2 + b\omega^4 + c\omega^3 \quad [\omega^2 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$= a\left(1 + \omega^2\right) + b\omega + c\omega^2 + a\omega^2 + b\omega + c(1) \quad [\because \omega^4 = \omega, \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= a\left(1 + \omega^2\right) + 2b\omega + c\left(1 + \omega^2\right) \quad [\text{সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step">$= a(-\omega) + 2b\omega + c(-\omega) \quad [\textstyle \because 1 + \omega^2 = -\omega \text{ বসিয়ে}]$</div>
+    <div class="step">$= -\omega(a + c) + 2b\omega \quad [-\omega \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= -\omega(-b) + 2b\omega \quad [\because a + c = -b \text{ বসিয়ে}]$</div>
+    <div class="step">$= b\omega + 2b\omega = 3b\omega \quad [\text{যোগ করে}]$</div>
+
+    <div class="step-explain"><strong>চূড়ান্ত হিসাব: এখন বামপক্ষে (L.H.S.) সব মান গুণ করি:</strong></div>
+    <div class="step">\text{L.H.S.} = M^3 + N^3 = (M + N)\left(M + \omega N\right)\left(M + \omega^2 N\right)</div>
+    <div class="step">$= (3a) \cdot \left(3c\omega^2\right) \cdot (3b\omega) \quad [\text{তিনটি উৎপাদকের মান বসিয়ে}]$</div>
+    <div class="step">$= (3 \cdot 3 \cdot 3) \cdot (a \cdot b \cdot c) \cdot \left(\omega^2 \cdot \omega\right) \quad [\text{ধ্রুবক ও চলক আলাদা করে}]$</div>
+    <div class="step">$= 27abc\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= 27abc \cdot (1) = 27abc \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $(a + b\omega + c\omega^2)^3 + (a + b\omega^2 + c\omega)^3 = 27abc$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে প্রমাণ কর/দেখাও যে:</div>
+
+    <div class="problem-sub-title">(iv) $g(x) = p + qx + rx^2$ এবং $p + q + r = 0$ হলে প্রমাণ কর যে, $\{g(\omega)\}^2 + \{g(\omega^2)\}^2 = 3\left(p^2 + 2qr\right)$ যেখানে $\omega$ এককের জটিল ঘনমূল।</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">দেওয়া আছে, বহুপদী ফাংশন $g(x) = p + qx + rx^2$ এবং একটি শর্ত $p + q + r = 0$। এর থেকে আমরা লিখতে পারি $p + r = -q$ অথবা $q + r = -p$।</div>
+    <div class="step-explain">প্রথমে আমরা $g(\omega)$ এবং $g\left(\omega^2\right)$ এর মান বের করে নেব:</div>
+    <div class="step">$g(\omega) = p + q\omega + r\omega^2 \quad [x = \omega \text{ বসিয়ে}]$</div>
+    <div class="step">$g\left(\omega^2\right) = p + q\left(\omega^2\right) + r\left(\omega^2\right)^2 = p + q\omega^2 + r\omega^4$</div>
+    <div class="step-explain">আমরা জানি, $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$। সুতরাং:</div>
+    <div class="step">$g\left(\omega^2\right) = p + q\omega^2 + r\omega \quad [\because \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে মানগুলো প্রতিস্থাপন করি:</div>
+    <div class="step">\text{L.H.S.} = \{g(\omega)\}^2 + \left\{g\left(\omega^2\right)\right\}^2</div>
+    <div class="step">$= \left(p + q\omega + r\omega^2\right)^2 + \left(p + r\omega + q\omega^2\right)^2 \quad [\text{মান বসিয়ে ও শেষের পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এখানে হিসাব সহজ করার জন্য আমরা সূত্র $\left(A + B\right)^2 + \left(A - B\right)^2 = 2\left(A^2 + B^2\right)$ এর কাঠামো ব্যবহার করতে পারি, অথবা সরাসরি গুণ করতে পারি। আমরা পদগুলোকে ভেঙে সাধারণ বর্গের সূত্রে ফেলি:</div>
+    <div class="step">$= \left[p + \left(q\omega + r\omega^2\right)\right]^2 + \left[p + \left(r\omega + q\omega^2\right)\right]^2 \quad [\text{বন্ধনী দিয়ে সাজিয়ে}]$</div>
+    <div class="step">$= \left[p^2 + 2p\left(q\omega + r\omega^2\right) + \left(q\omega + r\omega^2\right)^2\right] + \left[p^2 + 2p\left(r\omega + q\omega^2\right) + \left(r\omega + q\omega^2\right)^2\right] \quad \left[\because (A+B)^2 = A^2+2AB+B^2\right]$</div>
+    <div class="step">$= 2p^2 + 2p\left(q\omega + r\omega^2 + r\omega + q\omega^2\right) + \left(q^2\omega^2 + 2qr\omega^3 + r^2\omega^4\right) + \left(r^2\omega^2 + 2qr\omega^3 + q^2\omega^4\right) \quad [\text{যোগ ও বর্গ ভেঙে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$ এবং $\omega^4 = \omega$। এই মানগুলো বসিয়ে এবং সমজাতীয় চলক কমন নিয়ে পাই:</div>
+    <div class="step">$= 2p^2 + 2p\left[q\left(\omega + \omega^2\right) + r\left(\omega + \omega^2\right)\right] + \left[q^2\omega^2 + 2qr(1) + r^2\omega\right] + \left[r^2\omega^2 + 2qr(1) + q^2\omega\right]$</div>
+    <div class="step">$= 2p^2 + 2p(q + r)\left(\omega + \omega^2\right) + 4qr + q^2\left(\omega + \omega^2\right) + r^2\left(\omega + \omega^2\right) \quad [\text{কমন নিয়ে ও যোগ করে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$, এই মানটি প্রতিস্থাপন করি:</div>
+    <div class="step">$= 2p^2 + 2p(q + r)(-1) + 4qr + q^2(-1) + r^2(-1) \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 2p^2 - 2p(q + r) + 4qr - \left(q^2 + r^2\right) \quad [\text{চিহ্নের গুণ করে}]$</div>
+    <div class="step-explain">দেওয়া আছে $p + q + r = 0 \implies q + r = -p$, এই মানটি মাঝের পদে বসাই:</div>
+    <div class="step">$= 2p^2 - 2p(-p) + 4qr - \left(q^2 + r^2\right) \quad [\because q + r = -p \text{ বসিয়ে}]$</div>
+    <div class="step">$= 2p^2 + 2p^2 + 4qr - \left(q^2 + r^2\right) = 4p^2 + 4qr - \left(q^2 + r^2\right)$</div>
+    <div class="step-explain">আবার শর্ত থেকে পাই $q^2 + r^2 = (q + r)^2 - 2qr = (-p)^2 - 2qr = p^2 - 2qr$। এই মানটি শেষ অংশে বসাই:</div>
+    <div class="step">$= 4p^2 + 4qr - \left(p^2 - 2qr\right) \quad [\text{মান প্রতিস্থাপন করে}]$</div>
+    <div class="step">$= 4p^2 + 4qr - p^2 + 2qr \quad [\text{ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step">$= 3p^2 + 6qr \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step">$= 3\left(p^2 + 2qr\right) \quad [৩ কমন নিয়ে]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $\{g(\omega)\}^2 + \{g(\omega^2)\}^2 = 3\left(p^2 + 2qr\right)$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(v) $P(x) = a + bx + cx^2$ এবং $\{P(\omega)\}^3 + \left\{P\left(\frac{1}{\omega}\right)\right\}^3 = 0$ হয়, তবে দেখাও যে, $a = \frac{1}{2}(b + c)$ অথবা $c = \frac{1}{2}(a + b)$ अथवा, $b = \frac{1}{2}(c + a)$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">দেওয়া আছে, $P(x) = a + bx + cx^2$। প্রথমে আমরা লক্ষ্য করি যে, $\frac{1}{\omega} = \frac{\omega^2}{\omega^3} = \frac{\omega^2}{1} = \omega^2$।</div>
+    <div class="step-explain">সুতরাং, আমরা বহুপদীটিতে মান বসিয়ে পাই:</div>
+    <div class="step">$P(\omega) = a + b\omega + c\omega^2$</div>
+    <div class="step">$P\left(\frac{1}{\omega}\right) = P\left(\omega^2\right) = a + b\left(\omega^2\right) + c\left(\omega^2\right)^2 = a + b\omega^2 + c\omega^4 = a + b\omega^2 + c\omega \quad [\because \omega^4 = \omega]$</div>
+    <div class="step-explain">সুবিধার্থে ধরি, $X = P(\omega) = a + b\omega + c\omega^2$ এবং $Y = P\left(\omega^2\right) = a + b\omega^2 + c\omega$। তাহলে প্রদত্ত সমীকরণটি দাঁড়ায়:</div>
+    <div class="step">$X^3 + Y^3 = 0$</div>
+    <div class="step-explain">আমরা জানি, এটি ১২(ii) নং প্রশ্নের অনুরূপ কাঠামো। $X^3 + Y^3 = 0 \implies X^3 = -Y^3 \implies \left(\frac{X}{Y}\right)^3 = -1$।</div>
+    <div class="step-explain">অতএব, $-1$ এর তিনটি ঘনমূলের জন্য আমরা তিনটি ক্ষেত্র পাই: $X = -Y$, $X = -Y\omega$, এবং $X = -Y\omega^2$।</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-১: যখন $X = -Y$ হয়:</strong></div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -\left(a + b\omega^2 + c\omega\right) \quad [\text{X ও Y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 + a + b\omega^2 + c\omega = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 2a + b\left(\omega + \omega^2\right) + c\left(\omega + \omega^2\right) = 0 \quad [\text{সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2a + b(-1) + c(-1) = 0 \quad [\because \omega + \omega^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 2a - b - c = 0 \implies 2a = b + c \implies a = \frac{1}{2}(b + c) \quad [\text{পক্ষান্তর ও ভাগ করে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-২: যখন $X = -Y\omega$ হয়:</strong></div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -\omega\left(a + b\omega^2 + c\omega\right) \quad [\text{X ও Y এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -a\omega - b\omega^3 - c\omega^2 \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -a\omega - b(1) - c\omega^2 \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 + a\omega + b + c\omega^2 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow (a + b) + (a + b)\omega + 2c\omega^2 = 0 \quad [\text{সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow (a + b)(1 + \omega) + 2c\omega^2 = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow (a + b)\left(-\omega^2\right) + 2c\omega^2 = 0 \quad [\because 1 + \omega = -\omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \omega^2 [2c - (a + b)] = 0 \implies 2c - (a + b) = 0 \quad [\because \omega^2 \neq 0 \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow 2c = a + b \implies c = \frac{1}{2}(a + b) \quad [\text{পক্ষান্তর ও ভাগ করে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-৩: যখন $X = -Y\omega^2$ হয়:</strong></div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -\omega^2\left(a + b\omega^2 + c\omega\right)$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -a\omega^2 - b\omega^4 - c\omega^3 \quad [\text{ডানপক্ষে গুণ করে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 = -a\omega^2 - b\omega - c \quad [\textstyle \because \omega^4 = \omega, \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + b\omega + c\omega^2 + a\omega^2 + b\omega + c = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow (c + a) + 2b\omega + (c + a)\omega^2 = 0 \quad [\text{সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow (c + a)\left(1 + \omega^2\right) + 2b\omega = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow (c + a)(-\omega) + 2b\omega = 0 \quad [\because 1 + \omega^2 = -\omega \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \omega [2b - (c + a)] = 0 \implies 2b - (c + a) = 0 \quad [\because \omega \neq 0 \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow 2b = c + a \implies b = \frac{1}{2}(c + a) \quad [\text{পক্ষান্তর ও ভাগ করে}]$</div>
+    <div class="step-explain">সুতরাং দেখানো হলো যে, $a = \frac{1}{2}(b + c)$ অথবা $c = \frac{1}{2}(a + b)$ অথবা $b = \frac{1}{2}(c + a)$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) $x = p + q$, $y = p + \omega q$ এবং $z = p + \omega^2 q$ হলে, দেখাও যে, $x^3 + y^3 + z^3 = 3\left(p^3 + q^3\right)$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">দেওয়া আছে, $x = p + q$, $y = p + \omega q$, এবং $z = p + \omega^2 q$।</div>
+    <div class="step-explain">আমরা বীজগণিতের একটি অত্যন্ত পরিচিত অনুসিদ্ধান্ত জানি:</div>
+    <div class="step">$x^3 + y^3 + z^3 - 3xyz = (x + y + z)\left(x^2 + y^2 + z^2 - xy - yz - zx\right)$$</div>
+    <div class="step-explain">হিসাবটি সহজ করার জন্য প্রথমে আমরা আলাদাভাবে $(x + y + z)$ এর মান বের করি:</div>
+    <div class="step">$x + y + z = (p + q) + (p + \omega q) + \left(p + \omega^2 q\right)$$</div>
+    <div class="step">$= (p + p + p) + \left(q + \omega q + \omega^2 q\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= 3p + q\left(1 + \omega + \omega^2\right) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$= 3p + q \cdot (0) = 3p \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+
+    <div class="step-explain">এখন আমরা জানি যে, এককের কাল্পনিক ঘনমূলের সূত্র অনুযায়ী আরেকটি চমৎকার রূপ হলো:</div>
+    <div class="step">$x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x + \omega y + \omega^2 z)(x + \omega^2 y + \omega z) = 0$ যদি $x+y+z$ এর কোনো রূপান্তর ঘটে।</div>
+    <div class="step-explain">সরাসরি মান বসানোর জন্য আমরা প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে ঘনের সূত্র ব্যবহার করে ভেঙে ফেলি:</div>
+    <div class="step">\text{L.H.S.} = x^3 + y^3 + z^3</div>
+    <div class="step">$= (p + q)^3 + (p + \omega q)^3 + \left(p + \omega^2 q\right)^3 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">বীজগণিতীয় ঘনের সূত্র $(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$ প্রতিটি পদে প্রয়োগ করি:</div>
+    <div class="step">$= \left(p^3 + 3p^2q + 3pq^2 + q^3\right) + \left[p^3 + 3p^2(\omega q) + 3p(\omega q)^2 + (\omega q)^3\right] + \left[p^3 + 3p^2\left(\omega^2 q\right) + 3p\left(\omega^2 q\right)^2 + \left(\omega^2 q\right)^3\right]$</div>
+    <div class="step">$= \left(p^3 + 3p^2q + 3pq^2 + q^3\right) + \left(p^3 + 3p^2q\omega + 3pq^2\omega^2 + q^3\omega^3\right) + \left(p^3 + 3p^2q\omega^2 + 3pq^2\omega^4 + q^3\omega^6\right) \quad [\text{ব্র্যাকেট তুলে}]$</div>
+    <div class="step-explain">এখন $p^3, q^3, 3p^2q,$ এবং $3pq^2$ যুক্ত সমজাতীয় পদগুলো আলাদা আলাদা ব্র্যাকেটে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(p^3 + p^3 + p^3\right) + 3p^2q\left(1 + \omega + \omega^2\right) + 3pq^2\left(1 + \omega^2 + \omega^4\right) + q^3\left(1 + \omega^3 + \omega^6\right) \quad [\text{পদ সাজিয়ে ও কমন নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$, $\omega^4 = \omega$, এবং $\omega^6 = \left(\omega^3\right)^2 = 1$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= 3p^3 + 3p^2q\left(1 + \omega + \omega^2\right) + 3pq^2\left(1 + \omega^2 + \omega\right) + q^3(1 + 1 + 1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0$, তাই ২য় ও ৩য় পদ শূন্য হয়ে যাবে:</div>
+    <div class="step">$= 3p^3 + 3p^2q \cdot (0) + 3pq^2 \cdot (0) + q^3 \cdot (3) \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 3p^3 + 0 + 0 + 3q^3$</div>
+    <div class="step">$= 3\left(p^3 + q^3\right) \quad [৩ কমন নিয়ে]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^3 + y^3 + z^3 = 3\left(p^3 + q^3\right)$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. এককের একটি কাল্পনিক ঘনমূল $\omega$ হলে প্রমাণ কর/মান নির্ণয় কর:</div>
+
+    <div class="problem-sub-title">(vii) $x = p + q$, $y = p\omega + q\omega^2$, $z = p\omega^2 + q\omega$ হলে, দেখাও যে, $x^2 + y^2 + z^2 = 6pq$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">দেওয়া আছে, $x = p + q$, $y = p\omega + q\omega^2$, এবং $z = p\omega^2 + q\omega$।</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূলের ক্ষেত্রে গুরুত্বপূর্ণ ধর্ম দুটি হলো $\omega^3 = 1$ এবং $1 + \omega + \omega^2 = 0$।</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে $x, y, z$ এর মানগুলো প্রতিস্থাপন করি:</div>
+    <div class="step">\text{L.H.S.} = x^2 + y^2 + z^2</div>
+    <div class="step">$= (p + q)^2 + \left(p\omega + q\omega^2\right)^2 + \left(p\omega^2 + q\omega\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">তিনটি পদের প্রতিটিতেই সাধারণ বর্গের সূত্র $(A+B)^2 = A^2 + 2AB + B^2$ প্রয়োগ করি:</div>
+    <div class="step">$= \left(p^2 + 2pq + q^2\right) + \left[p^2\omega^2 + 2(p\omega)\left(q\omega^2\right) + q^2\left(\omega^2\right)^2\right] + \left[p^2\left(\omega^2\right)^2 + 2\left(p\omega^2\right)(q\omega) + q^2\omega^2\right]$</div>
+    <div class="step">$= p^2 + 2pq + q^2 + p^2\omega^2 + 2pq\omega^3 + q^2\omega^4 + p^2\omega^4 + 2pq\omega^3 + q^2\omega^2 \quad [\text{সূচকের নিয়ম অনুসারে গুণ করে}]$</div>
+    <div class="step-explain">যেহেতু $\omega^3 = 1$ এবং $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$, এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$= p^2 + 2pq + q^2 + p^2\omega^2 + 2pq(1) + q^2\omega + p^2\omega + 2pq(1) + q^2\omega^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= p^2 + 2pq + q^2 + p^2\omega^2 + 2pq + q^2\omega + p^2\omega + 2pq + q^2\omega^2 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">এখন $p^2, q^2$ এবং $2pq$ যুক্ত সমজাতীয় পদগুলোকে একসাথে সাজিয়ে লিখি:</div>
+    <div class="step">$= \left(p^2 + p^2\omega^2 + p^2\omega\right) + \left(q^2 + q^2\omega + q^2\omega^2\right) + (2pq + 2pq + 2pq) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">প্রথম ব্র্যাকেট থেকে $p^2$, দ্বিতীয় ব্র্যাকেট থেকে $q^2$ কমন নিই এবং ধ্রুবক পদগুলো সাধারণ নিয়মে যোগ করি:</div>
+    <div class="step">$= p^2\left(1 + \omega^2 + \omega\right) + q^2\left(1 + \omega + \omega^2\right) + 6pq \quad [\text{কমন নিয়ে ও যোগ করে}]$</div>
+    <div class="step-explain">যেহেতু $1 + \omega + \omega^2 = 0$, এই মানটি প্রথম দুটি রাশিতে প্রতিস্থাপন করে পাই:</div>
+    <div class="step">$= p^2 \cdot (0) + q^2 \cdot (0) + 6pq \quad [\because 1 + \omega + \omega^2 = 0 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 0 + 0 + 6pq$</div>
+    <div class="step">$= 6pq$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^2 + y^2 + z^2 = 6pq$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(viii) $y^2 + y + 1 = 0$ সমীকরণটির মূলদ্বয় $p, q$ হলে, দেখাও যে, $p^m + q^m = \begin{cases} 2, & \text{যখন } m \text{ এর মান } 3 \text{ দ্বারা বিভাজ্য} \\ -1, & \text{যখন } m \text{ অপর কোনো পূর্ণসংখ্যা} \end{cases}$</div>
+    <div class="solution-title">সমাধান (viii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণটি হলো: $y^2 + y + 1 = 0$। আমরা জানি, এককের কাল্পনিক ঘনমূল $\omega$ এর দ্বিঘাত সমীকরণটি হলো $\omega^2 + \omega + 1 = 0$।</div>
+    <div class="step-explain">সুতরাং, $y^2 + y + 1 = 0$ সমীকরণটির মূলদ্বয় হলো এককের দুটি কাল্পনিক ঘনমূল $\omega$ এবং $\omega^2$।</div>
+    <div class="step">$\therefore \text{ধরি, } p = \omega \quad \text{এবং} \quad q = \omega^2$</div>
+    <div class="step-explain">এখন প্রদত্ত রাশিতে $p$ ও $q$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$p^m + q^m = (\omega)^m + \left(\omega^2\right)^m = \omega^m + \omega^{2m}$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-১: যখন $m$ এর মান $3$ দ্বারা বিভাজ্য হয়:</strong></div>
+    <div class="step-explain">যেহেতু $m, 3$ দ্বারা বিভাজ্য, তাই ধরি $m = 3k$, যেখানে $k$ একটি পূর্ণসংখ্যা।</div>
+    <div class="step">$\Rightarrow \omega^m + \omega^{2m} = \omega^{3k} + \omega^{2 \cdot 3k} \quad [m = 3k \text{ বসিয়ে}]$</div>
+    <div class="step">$= \left(\omega^3\right)^k + \left(\omega^3\right)^{2k} \quad [\text{সূচকের নিয়মে সাজিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $\omega^3 = 1$, সেহেতু মান বসিয়ে পাই:</div>
+    <div class="step">$= (1)^k + (1)^{2k} \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 1 + 1 = 2 \quad [\because 1 \text{ এর ওপর যেকোনো পাওয়ারের মান } 1]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-২: যখন $m$ এর মান $3$ দ্বারা বিভাজ্য নয় (অপর কোনো পূর্ণসংখ্যা):</strong></div>
+    <div class="step-explain">যদি $m, 3$ দ্বারা বিভাজ্য না হয়, তবে $m$ কে $3$ দ্বারা ভাগ করলে ভাগশেষ হয় $1$ থাকবে অথবা $2$ থাকবে।</div>
+    <div class="step-explain">উপক্ষেত্র (a): ভাগশেষ $1$ হলে ধরি $m = 3k + 1$:</div>
+    <div class="step">$\Rightarrow \omega^m + \omega^{2m} = \omega^{3k+1} + \omega^{2(3k+1)}$</div>
+    <div class="step">$= \omega^{3k} \cdot \omega^1 + \omega^{6k+2} = \left(\omega^3\right)^k \cdot \omega + \left(\omega^3\right)^{2k} \cdot \omega^2 \quad [\text{ভেঙে লিখে}]$</div>
+    <div class="step">$= (1)^k \cdot \omega + (1)^{2k} \cdot \omega^2 = 1 \cdot \omega + 1 \cdot \omega^2 \quad [\because \omega^3 = 1]$</div>
+    <div class="step">$= \omega + \omega^2 = -1 \quad [\because 1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1]$</div>
+    
+    <div class="step-explain">উপক্ষেত্র (b): ভাগশেষ $2$ হলে ধরি $m = 3k + 2$:</div>
+    <div class="step">$\Rightarrow \omega^m + \omega^{2m} = \omega^{3k+2} + \omega^{2(3k+2)}$</div>
+    <div class="step">$= \omega^{3k} \cdot \omega^2 + \omega^{6k+4} = \left(\omega^3\right)^k \cdot \omega^2 + \left(\omega^3\right)^{2k} \cdot \omega^4 \quad [\text{ভেঙে লিখে}]$</div>
+    <div class="step">$= (1)^k \cdot \omega^2 + (1)^{2k} \cdot \omega = \omega^2 + \omega \quad [\because \omega^3 = 1 \text{ এবং } \omega^4 = \omega]$</div>
+    <div class="step">$= -1 \quad [\because \omega^2 + \omega = -1]$</div>
+    <div class="step-explain">সুতরাং দেখা গেল উভয় উপক্ষেত্রেই মান আসে $-1$। অতএব, দেখানো হলো যে:</div>
+    <div class="step">$p^m + q^m = \begin{cases} 2, & \text{যখন } m \text{ এর মান } 3 \text{ দ্বারা বিভাজ্য} \\ -1, & \text{যখন } m \text{ অপর কোনো পূর্ণসংখ্যা} \end{cases}$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ix) প্রমাণ কর যে, $\left(\frac{-1+\sqrt{-3}}{2}\right)^n + \left(\frac{-1-\sqrt{-3}}{2}\right)^n = \begin{cases} 2, & \text{যখন } n \text{ এর মান } 3 \text{ দ্বারা বিভাজ্য} \\ -1, & \text{যখন } n \text{ অপর কোনো পূর্ণসংখ্যা} \end{cases}$</div>
+    <div class="solution-title">সমাধান (ix):</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক ঘনমূল দুটির গাণিতিক মান হলো:</div>
+    <div class="step">$\omega = \frac{-1 + \sqrt{-3}}{2} \quad \text{এবং} \quad \omega^2 = \frac{-1 - \sqrt{-3}}{2}$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষে (L.H.S.) এই মানগুলো প্রতিস্থাপন করি:</div>
+    <div class="step">\text{L.H.S.} = \left(\frac{-1+\sqrt{-3}}{2}\right)^n + \left(\frac{-1-\sqrt{-3}}{2}\right)^n</div>
+    <div class="step">$= (\omega)^n + \left(\omega^2\right)^n = \omega^n + \omega^{2n} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">এই রাশিটি পূর্ববর্তী ১২(viii) নং প্রশ্নের রাশির হুবহু অনুরূপ। সূচকের নিয়মে আমরা পুনরায় দুটি ক্ষেত্র বিশ্লেষণ করি:</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-১: যখন $n$, $3$ দ্বারা বিভাজ্য হয় (ধরি $n = 3k$):</strong></div>
+    <div class="step">$\Rightarrow \omega^{3k} + \omega^{2(3k)} = \left(\omega^3\right)^k + \left(\omega^3\right)^{2k}$</div>
+    <div class="step">$= (1)^k + (1)^{2k} = 1 + 1 = 2 \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+
+    <div class="step-explain"><strong>ক্ষেত্র-২: যখন $n$, $3$ দ্বারা বিভাজ্য নয় (অপর কোনো পূর্ণসংখ্যা):</strong></div>
+    <div class="step-explain">যদি $n = 3k + 1$ হয়, তবে:</div>
+    <div class="step">$\Rightarrow \omega^{3k+1} + \omega^{2(3k+1)} = \omega^{3k} \cdot \omega + \omega^{6k+2}$</div>
+    <div class="step">$= \left(\omega^3\right)^k \cdot \omega + \left(\omega^3\right)^{2k} \cdot \omega^2 = 1 \cdot \omega + 1 \cdot \omega^2 = \omega + \omega^2 = -1 \quad [\because 1 + \omega + \omega^2 = 0]$</div>
+    <div class="step-explain">যদি $n = 3k + 2$ হয়, তবে:</div>
+    <div class="step">$\Rightarrow \omega^{3k+2} + \omega^{2(3k+2)} = \omega^{3k} \cdot \omega^2 + \omega^{6k+4}$</div>
+    <div class="step">$= \left(\omega^3\right)^k \cdot \omega^2 + \left(\omega^3\right)^{2k} \cdot \omega = 1 \cdot \omega^2 + 1 \cdot \omega = \omega^2 + \omega = -1 \quad [\because \omega^4 = \omega]$</div>
+    <div class="step-explain">সুতরাং, আমরা কাঙ্ক্ষিত শর্তটি প্রমাণ করতে পারলাম:</div>
+    <div class="step">$\therefore \left(\frac{-1+\sqrt{-3}}{2}\right)^n + \left(\frac{-1-\sqrt{-3}}{2}\right)^n = \begin{cases} 2, & \text{যখন } n \text{ এর মান } 3 \text{ দ্বারা বিভাজ্য} \\ -1, & \text{যখন } n \text{ অপর কোনো পূর্ণসংখ্যা} \end{cases}$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(x) এককের জটিল ঘনমূল $\omega, \omega^2$ হলে $(-1+\sqrt{-3})^7 + (-1-\sqrt{-3})^7$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (x):</div>
+    <div class="step-explain">আমরা জানি, এককের জটিল বা কাল্পনিক ঘনমূল দুটির সূত্র হলো:</div>
+    <div class="step">$\omega = \frac{-1 + \sqrt{-3}}{2} \implies 2\omega = -1 + \sqrt{-3} \quad [\text{আড়গুণন করে}]$</div>
+    <div class="step">$\omega^2 = \frac{-1 - \sqrt{-3}}{2} \implies 2\omega^2 = -1 - \sqrt{-3} \quad [\text{আড়গুণন করে}]$</div>
+    <div class="step-explain">এখন প্রদত্ত রাশিতে $(-1 + \sqrt{-3})$ এর জায়গায় $2\omega$ এবং $(-1 - \sqrt{-3})$ এর জায়গায় $2\omega^2$ বসিয়ে পাই:</div>
+    <div class="step">\text{প্রদত্ত রাশি} = (-1+\sqrt{-3})^7 + (-1-\sqrt{-3})^7</div>
+    <div class="step">$= (2\omega)^7 + \left(2\omega^2\right)^7 \quad [\text{মান প্রতিস্থাপন করে}]$</div>
+    <div class="step-explain">সূচকের নিয়ম অনুসারে বন্ধনীর ভেতরে থাকা ধ্রুবক এবং ওমেগার ওপর ঘাত বা পাওয়ার $7$ বণ্টন করি (আমরা জানি, $2^7 = 128$):</div>
+    <div class="step">$= 2^7 \cdot \omega^7 + 2^7 \cdot \left(\omega^2\right)^7$</div>
+    <div class="step">$= 128\omega^7 + 128\omega^{14} \quad [\text{পাওয়ার হিসাব করে}]$</div>
+    <div class="step-explain">উভয় পদ থেকে সাধারণ ধ্রুবক $128$ কমন নিই:</div>
+    <div class="step">$= 128\left(\omega^7 + \omega^{14}\right) \quad [\text{১২৮ কমন নিয়ে}]$</div>
+    <div class="step-explain">এখন ওমেগার উচ্চ ঘাতগুলোকে $\omega^3 = 1$ এর সাহায্যে সরল করি:</div>
+    <div class="step">$\omega^7 = \omega^6 \cdot \omega = \left(\omega^3\right)^2 \cdot \omega = (1)^2 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^{14} = \omega^{12} \cdot \omega^2 = \left(\omega^3\right)^4 \cdot \omega^2 = (1)^4 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এই সরলীকৃত মানগুলো ব্র্যাকেটের ভেতরে বসিয়ে পাই:</div>
+    <div class="step">$= 128\left(\omega + \omega^2\right) \quad [\because \omega^7 = \omega \text{ এবং } \omega^{14} = \omega^2 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">যেহেতু এককের মূলত্রয়ের যোগফল শূন্য, অর্থাৎ $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$। এই মানটি বসাই:</div>
+    <div class="step">$= 128 \cdot (-1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= -128 \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">অতএব, প্রদত্ত রাশির নির্ণেয় মান হলো $-128$।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. এককের জটিল ঘনমূলের ধর্ম ব্যবহার করে প্রমাণ কর:</div>
+
+    <div class="problem-sub-title">(xi) $x = \frac{1}{2}\left(-1+\sqrt{-3}\right)$ এবং $y = \frac{1}{2}\left(-1-\sqrt{-3}\right)$ হলে, প্রমাণ কর যে,</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(a) $x^2 + xy + y^2 = 0$</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(b) $x^3 + y^{-3} = 2 = x^3 + x^{-3}$</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(c) $1 - x - y + xy = 3$</div>
+
+    <div class="solution-title">প্রাথমিক বিশ্লেষণ ও মান চিহ্নায়ন:</div>
+    <div class="step-explain">দেওয়া আছে, $x = \frac{1}{2}\left(-1+\sqrt{-3}\right) = \frac{-1+\sqrt{-3}}{2}$</div>
+    <div class="step-explain">এবং $y = \frac{1}{2}\left(-1-\sqrt{-3}\right) = \frac{-1-\sqrt{-3}}{2}$</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক বা জটিল ঘনমূল দুটি হলো $\omega$ এবং $\omega^2$। এদের গাণিতিক মান উপরিউক্ত $x$ ও $y$ এর মানের সমান।</div>
+    <div class="step">$\therefore \text{ধরি, } x = \omega \quad \text{এবং} \quad y = \omega^2$</div>
+    <div class="step-explain">জটিল সংখ্যার তত্ত্বানুসারে কাল্পনিক ঘনমূলের প্রধান দুটি বৈশিষ্ট্য হলো:</div>
+    <div class="step">১. $\omega^3 = 1$</div>
+    <div class="step">২. $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (a):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $x^2 + xy + y^2 = 0$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে $x = \omega$ এবং $y = \omega^2$ বসাই:</div>
+    <div class="step">\text{L.H.S.} = x^2 + xy + y^2</div>
+    <div class="step">$= (\omega)^2 + (\omega) \cdot \left(\omega^2\right) + \left(\omega^2\right)^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \omega^2 + \omega^3 + \omega^4 \quad [\text{সূচকের নিয়ম অনুসারে গুণ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$ এবং $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$। এই মানগুলো প্রতিস্থাপন করি:</div>
+    <div class="step">$= \omega^2 + 1 + \omega \quad [\because \omega^3 = 1, \omega^4 = \omega \text{ বসিয়ে}]$</div>
+    <div class="step">$= 1 + \omega + \omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">এককের জটিল ঘনমূলের ধর্ম অনুসারে আমরা জানি $1 + \omega + \omega^2 = 0$।</div>
+    <div class="step">$= 0 = \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^2 + xy + y^2 = 0$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (b):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $x^3 + y^{-3} = 2 = x^3 + x^{-3}$। এখানে দুটি অংশ সমান দেখাতে হবে।</div>
+    
+    <div class="step-explain"><strong>১ম অংশ ($x^3 + y^{-3}$):</strong></div>
+    <div class="step-explain">এখানে $x = \omega$ এবং $y = \omega^2$ মান বসিয়ে পাই:</div>
+    <div class="step">x^3 + y^{-3} = (\omega)^3 + \left(\omega^2\right)^{-3} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \omega^3 + \omega^{-6} \quad [\text{ঘাতের ঘাত গুণ করে}]$</div>
+    <div class="step-explain">ঋণাত্মক সূচকের নিয়ম $A^{-n} = \frac{1}{A^n}$ ব্যবহার করে ভগ্নাংশ আকারে লিখি:</div>
+    <div class="step">$= \omega^3 + \frac{1}{\omega^6}$</div>
+    <div class="step-explain">আমরা জানি, $\omega^3 = 1$ এবং $\omega^6 = \left(\omega^3\right)^2 = (1)^2 = 1$। মানগুলো বসাই:</div>
+    <div class="step">$= 1 + \frac{1}{1} \quad [\because \omega^3 = 1, \omega^6 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 1 + 1 = 2 \quad [\text{যোগ করে}]$</div>
+
+    <div class="step-explain"><strong>২য় অংশ ($x^3 + x^{-3}$):</strong></div>
+    <div class="step-explain">একইভাবে $x = \omega$ বসিয়ে পাই:</div>
+    <div class="step">x^3 + x^{-3} = (\omega)^3 + (\omega)^{-3} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \omega^3 + \frac{1}{\omega^3} \quad [\text{ভগ্নাংশ আকারে লিখে}]$</div>
+    <div class="step">$= 1 + \frac{1}{1} \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= 1 + 1 = 2 \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">যেহেতু উভয় অংশের মানই $2$ এসেছে, সেহেতু আমরা লিখতে পারি:</div>
+    <div class="step">$\therefore x^3 + y^{-3} = 2 = x^3 + x^{-3}$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (c):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $1 - x - y + xy = 3$</div>
+    <div class="step-explain">প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে $x = \omega$ এবং $y = \omega^2$ বসাই:</div>
+    <div class="step">\text{L.H.S.} = 1 - x - y + xy</div>
+    <div class="step">$= 1 - \omega - \omega^2 + (\omega) \cdot \left(\omega^2\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">মাঝের দুটি পদ থেকে মাইনাস ($-$) কমন নিই এবং শেষের পদদুটি গুণ করি:</div>
+    <div class="step">$= 1 - \left(\omega + \omega^2\right) + \omega^3 \quad [\text{মাইনাস কমন নিয়ে ও গুণ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\omega + \omega^2 = -1$ এবং $\omega^3 = 1$। এই মানগুলো প্রতিস্থাপন করি:</div>
+    <div class="step">$= 1 - (-1) + 1 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">মাইনাসে মাইনাসে প্লাস করে পাই:</div>
+    <div class="step">$= 1 + 1 + 1 \quad [\text{চিহ্নের গুণ করে}]$</div>
+    <div class="step">$= 3 = \text{R.H.S.} \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">অতএব, $1 - x - y + xy = 3$ [প্রমাণিত]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. এককের জটিল ঘনমূলের ধর্ম ব্যবহার করে প্রমাণ কর:</div>
+
+    <div class="problem-sub-title">(xi) $x = \frac{1}{2}\left(-1+\sqrt{-3}\right)$ এবং $y = \frac{1}{2}\left(-1-\sqrt{-3}\right)$ হলে, প্রমাণ কর যে,</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(d) $x^4 + x^2y^2 + y^4 = 0$</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(e) $x^4 + x^3y + x^2y^2 + xy^3 + y^4 = -1$</div>
+    <div class="problem-sub-title" style="padding-left: 20px;">(f) $3x^4 + x^3y + xy^3 + y^4 = -3$</div>
+
+    <div class="solution-title">প্রাথমিক বিশ্লেষণ ও মান চিহ্নায়ন:</div>
+    <div class="step-explain">দেওয়া আছে, $x = \frac{1}{2}\left(-1+\sqrt{-3}\right) = \frac{-1+\sqrt{-3}}{2}$</div>
+    <div class="step-explain">এবং $y = \frac{1}{2}\left(-1-\sqrt{-3}\right) = \frac{-1-\sqrt{-3}}{2}$</div>
+    <div class="step-explain">আমরা জানি, এককের কাল্পনিক বা জটিল ঘনমূল দুটি হলো $\omega$ এবং $\omega^2$। এদের গাণিতিক মান উপরিউক্ত $x$ ও $y$ এর মানের হুবহু সমান।</div>
+    <div class="step">$\therefore \text{ধরি, } x = \omega \quad \text{এবং} \quad y = \omega^2$</div>
+    <div class="step-explain">জতিলা সংখ্যা বা এককের ঘনমূলের প্রধান ধর্মাবলি নিম্নরূপ:</div>
+    <div class="step">১. $\omega^3 = 1$</div>
+    <div class="step">২. $1 + \omega + \omega^2 = 0 \implies \omega + \omega^2 = -1$</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (d):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $x^4 + x^2y^2 + y^4 = 0$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ (L.H.S.) তুলে নিয়ে $x = \omega$ এবং $y = \omega^2$ বসাই:</div>
+    <div class="step">\text{L.H.S.} = x^4 + x^2y^2 + y^4</div>
+    <div class="step">$= (\omega)^4 + (\omega)^2 \cdot \left(\omega^2\right)^2 + \left(\omega^2\right)^4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \omega^4 + \omega^2 \cdot \omega^4 + \omega^8 \quad [\text{সূচকের নিয়ম অনুসারে ঘাত গুণ করে}]$</div>
+    <div class="step">$= \omega^4 + \omega^6 + \omega^8 \quad [\text{সূচকের নিয়ম অনুসারে ভিত্তি একই হলে ঘাত যোগ করে}]$</div>
+    <div class="step-explain">এখন $\omega^3 = 1$ বৈশিষ্ট্য ব্যবহার করে প্রতিটি পদের ঘাত বা পাওয়ার ছোট করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^6 = \left(\omega^3\right)^2 = (1)^2 = 1$</div>
+    <div class="step">$\omega^8 = \omega^6 \cdot \omega^2 = 1 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এই সরলীকৃত মানগুলো সমীকরণে প্রতিস্থাপন করি:</div>
+    <div class="step">$= \omega + 1 + \omega^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= 1 + \omega + \omega^2 \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step-explain">যেহেতু এককের জটিল ঘনমূলের সমষ্টি $1 + \omega + \omega^2 = 0$:</div>
+    <div class="step">$= 0 = \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^4 + x^2y^2 + y^4 = 0$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (e):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $x^4 + x^3y + x^2y^2 + xy^3 + y^4 = -1$</div>
+    <div class="step-explain">পূর্বের মতো বামপক্ষে (L.H.S.) $x = \omega$ এবং $y = \omega^2$ বসিয়ে পাই:</div>
+    <div class="step">\text{L.H.S.} = x^4 + x^3y + x^2y^2 + xy^3 + y^4</div>
+    <div class="step">$= (\omega)^4 + (\omega)^3 \cdot \left(\omega^2\right) + (\omega)^2 \cdot \left(\omega^2\right)^2 + (\omega) \cdot \left(\omega^2\right)^3 + \left(\omega^2\right)^4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \omega^4 + \omega^3 \cdot \omega^2 + \omega^2 \cdot \omega^4 + \omega \cdot \omega^6 + \omega^8 \quad [\text{ঘাতের ঘাত গুণ করে}]$</div>
+    <div class="step">$= \omega^4 + \omega^5 + \omega^6 + \omega^7 + \omega^8 \quad [\text{সূচকের নিয়ম অনুসারে ঘাত যোগ করে}]$</div>
+    <div class="step-explain">এখন ওমেগার ঘাতগুলোকে $\omega^3 = 1$ এর সাহায্যে নিম্নরূপে রূপান্তর করি:</div>
+    <div class="step">$\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^5 = \omega^3 \cdot \omega^2 = 1 \cdot \omega^2 = \omega^2$</div>
+    <div class="step">$\omega^6 = \left(\omega^3\right)^2 = (1)^2 = 1$</div>
+    <div class="step">$\omega^7 = \omega^6 \cdot \omega = 1 \cdot \omega = \omega$</div>
+    <div class="step">$\omega^8 = \omega^6 \cdot \omega^2 = 1 \cdot \omega^2 = \omega^2$</div>
+    <div class="step-explain">এই রূপান্তরিত মানগুলো রাশিতে বসাই:</div>
+    <div class="step">$= \omega + \omega^2 + 1 + \omega + \omega^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= \left(1 + \omega + \omega^2\right) + \left(\omega + \omega^2\right) \quad [\text{ব্র্যাকেট দিয়ে আলাদা করে}]$</div>
+    <div class="step-explain">আমরা জানি, $1 + \omega + \omega^2 = 0$ এবং $\omega + \omega^2 = -1$। এই মান দুটি প্রতিস্থাপন করি:</div>
+    <div class="step">$= 0 + (-1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= -1 = \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^4 + x^3y + x^2y^2 + xy^3 + y^4 = -1$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="solution-title">সমাধান (f):</div>
+    <div class="step-explain">প্রমাণ করতে হবে যে, $3x^4 + x^3y + xy^3 + y^4 = -3$</div>
+    <div class="step-explain">প্রমাণের বামপক্ষে (L.H.S.) $x = \omega$ এবং $y = \omega^2$ বসিয়ে পাই:</div>
+    <div class="step">\text{L.H.S.} = 3x^4 + x^3y + xy^3 + y^4</div>
+    <div class="step">$= 3(\omega)^4 + (\omega)^3 \cdot \left(\omega^2\right) + (\omega) \cdot \left(\omega^2\right)^3 + \left(\omega^2\right)^4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= 3\omega^4 + \omega^3 \cdot \omega^2 + \omega \cdot \omega^6 + \omega^8 \quad [\text{ঘাতের ঘাত গুণ করে}]$</div>
+    <div class="step">$= 3\omega^4 + \omega^5 + \omega^7 + \omega^8 \quad [\text{সূচকের নিয়ম অনুসারে ঘাত যোগ করে}]$</div>
+    <div class="step-explain">ইতিপূর্বে প্রাপ্ত ওমেগার সরলীকৃত রূপ বা মানগুলো এখানে সরাসরি বসাই:</div>
+    <div class="step">$\because \omega^4 = \omega, \quad \omega^5 = \omega^2, \quad \omega^7 = \omega, \quad \omega^8 = \omega^2$</div>
+    <div class="step">$\Rightarrow 3(\omega) + \left(\omega^2\right) + (\omega) + \left(\omega^2\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$= 3\omega + \omega^2 + \omega + \omega^2 \quad [\text{ব্র্যাকেট তুলে}]$</div>
+    <div class="step-explain">সমজাতীয় ওমেগা এবং ওমেগা স্কয়ারের পদগুলো একসাথে যোগ করি:</div>
+    <div class="step">$= (3\omega + \omega) + \left(\omega^2 + \omega^2\right)$</div>
+    <div class="step">$= 4\omega + 2\omega^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">হিসাব মেলানোর সুবিধার্থে এই রাশিটিকে ভেঙে $1 + \omega + \omega^2$ এর কাঠামোতে সাজাই:</div>
+    <div class="step">$= 2\omega + 2\omega + 2\omega^2 = 2\omega + 2\left(\omega + \omega^2\right) \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step-explain">যেহেতু $\omega + \omega^2 = -1$, মানটি বসিয়ে পাই:</div>
+    <div class="step">$= 2\omega + 2(-1) = 2\omega - 2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">এখানে প্রমাণের সাথে সামঞ্জস্য করতে আমরা মূল $x$ এর বীজগণিতীয় মান সরাসরি ব্যবহার করতে পারি অথবা বিকল্প উপায়ে সাজাতে পারি। আমরা $x$ এর মান বসাবো না, বরং উৎপাদকে সাজাবো:</div>
+    <div class="step-explain">বিকল্প সুন্দর সাজানো রূপ: মূল পদ $4\omega + 2\omega^2$ কে আমরা লিখতে পারি:</div>
+    <div class="step">$= 2\omega + 2\left(\omega + \omega^2\right) = 2\omega + 2(-1) = 2\omega - 2$</div>
+    <div class="step-explain">কিন্তু আমরা জানি $1 + \omega + \omega^2 = 0 \implies 3 + 3\omega + 3\omega^2 = 0$। রাশির কাঠামোটি ৩ কমন নেওয়ার জন্য সাজাই:</div>
+    <div class="step">$= 3\omega^2 + 3\omega + 3 - 3\omega^2 - \omega - 3 \quad [\text{পদ ব্যালেন্স করে, যা দীর্ঘ]}$</div>
+    <div class="step-explain">সবচেয়ে সহজ উপায় হলো মূল বামপক্ষকে এভাবে সাজানো:</div>
+    <div class="step">$= 3\omega + \omega + \omega^2 + \omega^2 = 3\omega + \omega^2 + \omega + \omega^2 = 3\omega + 2\omega^2 + \omega$</div>
+    <div class="step-explain">আসুন একটু সহজভাবে চিন্তা করি, $3x^4 + x^3y + xy^3 + y^4$ এর সূচক ভাঙার পর আমরা পেয়েছিলাম:</div>
+    <div class="step">$= 3\omega + \omega^2 + \omega + \omega^2 = 4\omega + 2\omega^2$</div>
+    <div class="step">$= 2\omega + 2\left(\omega + \omega^2\right) = 2\omega - 2$</div>
+    <div class="step-explain">যেহেতু জটিল ঘনমূলের মান $x = \omega = \frac{-1+\sqrt{-3}}{2}$, সেহেতু এখানে কাঙ্ক্ষিত প্রমাণ $-3$ পেতে হলে প্রশ্নে সম্ভবত একটি টাইপো আছে অথবা রাশিতে $3y^4$ হওয়ার কথা ছিল। যদি প্রশ্নটি $3x^4 + x^3y + xy^3 + y^4 = -3$ হয়, তবে প্রমাণের খাতিরে $x$ এর মান বসানো আবশ্যক। চলুন $2\omega - 2$ তে $\omega$ এর মান বসিয়ে যাচাই করি:</div>
+    <div class="step">$= 2\left(\frac{-1+\sqrt{-3}}{2}\right) - 2 \quad [\omega \text{ এর মূল মান বসিয়ে}]$</div>
+    <div class="step">$= -1 + \sqrt{-3} - 2 = -3 + \sqrt{-3}$</div>
+    <div class="step-explain">এখানে অতিরিক্ত $\sqrt{-3}$ থেকে যাচ্ছে। সুতরাং প্রশ্নটিতে একটি মুদ্রণজনিত ত্রুটি বা টাইপো রয়েছে। সঠিক প্রশ্নটি হবে: $3x^4 + 3x^3y + 3xy^3 + 3y^4$ অথবা $3x^4 + x^3y + xy^3 + 3y^4$ ধরনের কিছু।</div>
+    <div class="step-explain">যদি প্রশ্নটি <strong>$3x^4 + 3x^3y + 3xy^3 + 3y^4 = -3$</strong> হতো, তবে:</div>
+    <div class="step">$= 3\omega + 3\omega^2 + 3\omega + 3\omega^2 = 6\omega + 6\omega^2 = 6\left(\omega + \omega^2\right) = 6(-1) = -6$</div>
+    <div class="step-explain">যদি প্রশ্নটি আদর্শ পাঠ্যবই অনুসারে <strong>$x^4 + x^3y + x^2y^2 + xy^3 + y^4 = -1$</strong> এর ওপর ভিত্তি করে তৈরি হয় এবং ৩ দ্বারা গুণ থাকে:</div>
+    <div class="step-explain">আসুন আমরা বইয়ের স্ট্যান্ডার্ড প্রশ্নটি দেখি: $3x^4 + 3x^3y + 3x^2y^2 + 3xy^3 + 3y^4 = 3(-1) = -3$ হওয়ার কথা, কিন্তু এখানে $x^2y^2$ পদটি অনুপস্থিত।</div>
+    <div class="step-explain">যদি প্রশ্নে প্রদত্ত রাশিটিই চূড়ান্ত হয়, তবে মান আসে $-3 + \sqrt{-3}$। উচ্চমাধ্যমিকের মূল প্রশ্নটি মূলত ছিল: <strong>$3x^4 + 3x^3y + 3x^2y^2 + 3xy^3 + 3y^4 = -3$</strong> অথবা <strong>$x^4 + x^2y^2 + y^4 = 0$</strong>। প্রদত্ত প্রশ্নে $x^2y^2$ বাদ পড়ায় হিসাবটি অমিল ঠেকছে। তবে যদি আমরা ধরে নিই প্রশ্নটিতে $3y^4$ এর জায়গায় সহগ বিন্যাস অন্য ছিল, তবে তা মিলবে।</div>
+    <div class="step-explain">বইয়ের মূল প্রশ্ন সংশোধন সাপেক্ষে: যদি রাশিটি $3\left(x^4 + x^3y + x^2y^2 + xy^3 + y^4\right)$ এর মত হয়, তবে সরাসরি উত্তর $-3$ আসে। প্রদত্ত সমীকরণটি নিখুঁতভাবে টাইপোমুক্ত ধরে সমাধান করলে মান দাঁড়ায় $-3 + \sqrt{-3}$।</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">১২. জটিল সংখ্যার আর্গুমেন্ট সংক্রান্ত প্রমাণ:</div>
+
+    <div class="problem-sub-title">(xii) $x^3 - 8 = 0$ সমীকরণের জটিল মূলদ্বয় $z_1$ ও $z_2$ হলে, প্রমাণ কর যে, $\text{Arg}(z_1 z_2) = \text{Arg}(z_1) + \text{Arg}(z_2)$</div>
+    <div class="solution-title">সমাধান (xii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণটি হলো: $x^3 - 8 = 0$</div>
+    <div class="step-explain">প্রথমে আমরা এই সমীকরণটির মূলগুলো বের করব:</div>
+    <div class="step">$\Rightarrow x^3 = 8 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x = \sqrt[3]{8} \quad [\text{ঘনমূল করে}]$</div>
+    <div class="step-explain">আমরা জানি, $8$ এর তিনটি ঘনমূল হলো $2, 2\omega, 2\omega^2$; যেখানে $\omega$ হলো এককের একটি কাল্পনিক ঘনমূল।</div>
+    <div class="step-explain">যেহেতু প্রশ্নে শুধু 'জটিল মূলদ্বয়' এর কথা বলা হয়েছে, তাই বাস্তব মূল $2$ বাদ যাবে। সুতরাং জটিল মূল দুটি হলো:</div>
+    <div class="step">$z_1 = 2\omega = 2\left(\frac{-1 + \sqrt{3}i}{2}\right) = -1 + \sqrt{3}i$</div>
+    <div class="step">$z_2 = 2\omega^2 = 2\left(\frac{-1 - \sqrt{3}i}{2}\right) = -1 - \sqrt{3}i$</div>
+    
+    <div class="step-explain">এখন আমরা $z_1$ এবং $z_2$ এর প্রধান আর্গুমেন্ট ($\text{Arg}$) নির্ণয় করব:</div>
+    <div class="step-explain">$z_1 = -1 + \sqrt{3}i$ সংখ্যাটি দ্বিতীয় চতুর্ভাগে ($\text{II-quadrant}$) অবস্থিত। সুতরাং এর আর্গুমেন্ট:</div>
+    <div class="step">$\text{Arg}(z_1) = \pi - \tan^{-1}\left|\frac{\sqrt{3}}{-1}\right| \quad \left[\because \text{II-quadrant এ } \text{Arg} = \pi - \tan^{-1}\left|\frac{y}{x}\right|\right]$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_1) = \pi - \tan^{-1}\left(\sqrt{3}\right)$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_1) = \pi - \frac{\pi}{3} = \frac{3\pi - \pi}{3} = \frac{2\pi}{3} \quad \left[\because \tan\frac{\pi}{3} = \sqrt{3}\right]$</div>
+
+    <div class="step-explain">$z_2 = -1 - \sqrt{3}i$ সংখ্যাটি তৃতীয় চতুর্ভাগে ($\text{III-quadrant}$) অবস্থিত। প্রধান আর্গুমেন্টের নিয়ম অনুযায়ী এর আর্গুমেন্ট:</div>
+    <div class="step">$\text{Arg}(z_2) = -\pi + \tan^{-1}\left|\frac{-\sqrt{3}}{-1}\right| \quad \left[\times \text{III-quadrant এ } \text{Arg} = -\pi + \tan^{-1}\left|\frac{y}{x}\right|\right]$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_2) = -\pi + \tan^{-1}\left(\sqrt{3}\right)$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_2) = -\pi + \frac{\pi}{3} = \frac{-3\pi + \pi}{3} = -\frac{2\pi}{3}$</div>
+
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষ (R.H.S.) হিসাব করি:</div>
+    <div class="step">\text{R.H.S.} = \text{Arg}(z_1) + \text{Arg}(z_2)</div>
+    <div class="step">$= \frac{2\pi}{3} + \left(-\frac{2\pi}{3}\right) = \frac{2\pi}{3} - \frac{2\pi}{3} = 0 \quad [\text{মান বসিয়ে}]$</div>
+
+    <div class="step-explain">এবার বামপক্ষের জন্য প্রথমে $z_1 z_2$ এর মান বের করি:</div>
+    <div class="step">$z_1 z_2 = (-1 + \sqrt{3}i)(-1 - \sqrt{3}i)$</div>
+    <div class="step">$= (-1)^2 - (\sqrt{3}i)^2 \quad \left[\because (A-B)(A+B) = A^2 - B^2\right]$</div>
+    <div class="step">$= 1 - 3i^2 = 1 - 3(-1) = 1 + 3 = 4 \quad \left[\because i^2 = -1\right]$</div>
+    <div class="step-explain">যেহেতু $z_1 z_2 = 4$, যা একটি বিশুদ্ধ বাস্তব ধনাত্মক সংখ্যা (ধনাত্মক $x$-অক্ষের ওপর অবস্থিত), তাই এর আর্গুমেন্ট হবে $0$।</div>
+    <div class="step">\text{L.H.S.} = \text{Arg}(z_1 z_2) = \text{Arg}(4) = 0</div>
+    
+    <div class="step-explain">যেহেতু $\text{L.H.S.} = \text{R.H.S.}$, সেহেতু প্রমাণিত হলো যে:</div>
+    <div class="step">$\text{Arg}(z_1 z_2) = \text{Arg}(z_1) + \text{Arg}(z_2)$ [প্রমাণিত]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xiii) $x^3 - 27 = 0$ সমীকরণের জটিল মূলদ্বয় $z_1$ ও $z_2$ হলে, প্রমাণ কর যে, $\text{Arg}(z_1 z_2) = \text{Arg}(z_1) + \text{Arg}(z_2)$</div>
+    <div class="solution-title">সমাধান (xiii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণটি হলো: $x^3 - 27 = 0$</div>
+    <div class="step-explain">সমীকরণটির মূলগুলো বের করার প্রক্রিয়া:</div>
+    <div class="step">$\Rightarrow x^3 = 27 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x = \sqrt[3]{27} \quad [\text{ঘনমূল করে}]$</div>
+    <div class="step-explain">আমরা জানি, $27$ এর তিনটি ঘনমূল হলো $3, 3\omega, 3\omega^2$। এদের মধ্যে জটিল মূল দুটি হলো:</div>
+    <div class="step">$z_1 = 3\omega = 3\left(\frac{-1 + \sqrt{3}i}{2}\right) = -\frac{3}{2} + \frac{3\sqrt{3}}{2}i$</div>
+    <div class="step">$z_2 = 3\omega^2 = 3\left(\frac{-1 - \sqrt{3}i}{2}\right) = -\frac{3}{2} - \frac{3\sqrt{3}}{2}i$</div>
+
+    <div class="step-explain">এখন মূল দুটির প্রধান আর্গুমেন্ট বের করি:</div>
+    <div class="step-explain">$z_1$ সংখ্যাটি দ্বিতীয় চতুর্ভাগে অবস্থিত হওয়ায়:</div>
+    <div class="step">$\text{Arg}(z_1) = \pi - \tan^{-1}\left|\frac{\frac{3\sqrt{3}}{2}}{-\frac{3}{2}}\right| \quad \left[\because \text{II-quadrant এ } \text{Arg} = \pi - \tan^{-1}\left|\frac{y}{x}\right|\right]$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_1) = \pi - \tan^{-1}\left(\sqrt{3}\right) \quad [\text{লব ও হরের কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_1) = \pi - \frac{\pi}{3} = \frac{2\pi}{3}$</div>
+
+    <div class="step-explain">$z_2$ সংখ্যাটি তৃতীয় চতুর্ভাগে অবস্থিত হওয়ায় প্রধান আর্গুমেন্ট হবে:</div>
+    <div class="step">$\text{Arg}(z_2) = -\pi + \tan^{-1}\left|\frac{-\frac{3\sqrt{3}}{2}}{-\frac{3}{2}}\right| \quad \left[\because \text{III-quadrant এ } \text{Arg} = -\pi + \tan^{-1}\left|\frac{y}{x}\right|\right]$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_2) = -\pi + \tan^{-1}\left(\sqrt{3}\right)$</div>
+    <div class="step">$\Rightarrow \text{Arg}(z_2) = -\pi + \frac{\pi}{3} = -\frac{2\pi}{3}$</div>
+
+    <div class="step-explain">এখন ডানপক্ষ (R.H.S.) যোগফল বের করি:</div>
+    <div class="step">\text{R.H.S.} = \text{Arg}(z_1) + \text{Arg}(z_2)</div>
+    <div class="step">$= \frac{2\pi}{3} + \left(-\frac{2\pi}{3}\right) = 0 \quad [\text{মান বসিয়ে}]$</div>
+
+    <div class="step-explain">বামপক্ষের জন্য গুণফল $z_1 z_2$ নির্ণয় করি:</div>
+    <div class="step">$z_1 z_2 = (3\omega) \cdot \left(3\omega^2\right) = 9\omega^3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$= 9 \cdot (1) = 9 \quad \left[\because \omega^3 = 1\right]$</div>
+    <div class="step-explain">যেহেতু $9$ একটি ধনাত্মক বাস্তব সংখ্যা, তাই এটি মূলবিন্দু থেকে ধনাত্মক $x$-অক্ষের দিকে অবস্থিত। এর আর্গুমেন্ট হবে $0$।</div>
+    <div class="step">\text{L.H.S.} = \text{Arg}(z_1 z_2) = \text{Arg}(9) = 0</div>
+
+    <div class="step-explain">অতএব, দেখা যাচ্ছে যে $\text{L.H.S.} = \text{R.H.S.}$।</div>
+    <div class="step">$\therefore \text{Arg}(z_1 z_2) = \text{Arg}(z_1) + \text{Arg}(z_2)$ [প্রমাণিত]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. জটিল সংখ্যার সমীকরণ ও মূল সংক্রান্ত মান নির্ণয়:</div>
+
+    <div class="problem-sub-title">(xiv) $t^3 - 1 = 0$ সমীকরণের জটিল মূলদ্বয় $x$ ও $y$ হলে, $\left|\frac{1}{x} + \frac{1}{\bar{y}}\right|$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (xiv):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণটি হলো: $t^3 - 1 = 0$</div>
+    <div class="step-explain">সমীকরণটির মূলগুলো বের করার প্রক্রিয়া:</div>
+    <div class="step">$\Rightarrow t^3 = 1 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow t = \sqrt[3]{1} \quad [\text{ঘনমূল করে}]$</div>
+    <div class="step-explain">আমরা জানি, এককের তিনটি ঘনমূল হলো $1, \omega, \omega^2$। এদের মধ্যে জটিল বা কাল্পনিক মূল দুটি হলো $\omega$ এবং $\omega^2$।</div>
+    <div class="step-explain">যেহেতু প্রশ্নে জটিল মূলদ্বয়কে $x$ ও $y$ বলা হয়েছে, তাই আমরা ধরে নিই:</div>
+    <div class="step">$x = \omega \quad \text{এবং} \quad y = \omega^2$</div>
+    <div class="step-explain">আমরা জানি, কাল্পনিক ঘনমূলের ক্ষেত্রে এককের জটিল অনুবন্ধী ধর্ম অনুযায়ী, $\bar{y} = \overline{\omega^2} = \omega$।</div>
+    <div class="step-explain">আসুন বিষয়টি একটু বিস্তারিত বুঝে নিই:</div>
+    <div class="step">$\omega = \frac{-1+\sqrt{3}i}{2} \implies \overline{\omega} = \frac{-1-\sqrt{3}i}{2} = \omega^2$</div>
+    <div class="step">$\therefore \bar{y} = \overline{\omega^2} = \omega \quad [\text{অনুবন্ধী মান বসিয়ে}]$</div>
+    <div class="step-explain">এখন প্রদত্ত রাশিটি তুলে নিয়ে $x$ এবং $\bar{y}$ এর মান প্রতিস্থাপন করি:</div>
+    <div class="step">\text{প্রদত্ত রাশি} = \left|\frac{1}{x} + \frac{1}{\bar{y}}\right|</div>
+    <div class="step">$= \left|\frac{1}{\omega} + \frac{1}{\omega}\right| \quad [x = \omega \text{ এবং } \bar{y} = \omega \text{ বসিয়ে}]$</div>
+    <div class="step">$= \left|\frac{1 + 1}{\omega}\right| \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$= \left|\frac{2}{\omega}\right|$</div>
+    <div class="step-explain">লব ও হরকে $\omega^2$ দ্বারা গুণ করি, যাতে হরে $\omega^3$ তৈরি হয় এবং তার মান $1$ বসানো যায়:</div>
+    <div class="step">$= \left|\frac{2 \cdot \omega^2}{\omega \cdot \omega^2}\right| \quad [\text{লব ও হরকে } \omega^2 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$= \left|\frac{2\omega^2}{\omega^3}\right|$</div>
+    <div class="step">$= \left|\frac{2\omega^2}{1}\right| \quad [\because \omega^3 = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= \left|2\omega^2\right|$</div>
+    <div class="step-explain">পরমমানের ধর্মাবলি অনুযায়ী ধ্রুবক সংখ্যাকে মডুলাসের বাইরে আনা যায়, অর্থাৎ $|c \cdot z| = c \cdot |z|$:</div>
+    <div class="step">$= 2 \cdot \left|\omega^2\right| \quad [\text{ধ্রুবক বাইরে নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, এককের জটিল ঘনমূলের মডুলাস বা পরমমান সর্বদাই $1$ হয়। অর্থাৎ $|\omega| = 1$ এবং $\left|\omega^2\right| = 1$।</div>
+    <div class="step">$= 2 \cdot 1 = 2 \quad [\because \left|\omega^2\right| = 1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">অতএব, প্রদত্ত রাশির নির্ণেয় মান হলো $2$।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xv) $z = \frac{1}{\sqrt{18}}(3 + 3i)$ হলে $|z|$ এর ঘনমূলগুলোর যোগফল নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (xv):</div>
+    <div class="step-explain">দেওয়া আছে জটিল সংখ্যাটি হলো: $z = \frac{1}{\sqrt{18}}(3 + 3i)$</div>
+    <div class="step-explain">প্রথমে সংখ্যাটিকে সরল আকারে সাজিয়ে নিই, আমরা জানি $\sqrt{18} = \sqrt{9 \cdot 2} = 3\sqrt{2}$:</div>
+    <div class="step">$\Rightarrow z = \frac{1}{3\sqrt{2}}(3 + 3i)$</div>
+    <div class="step">$\Rightarrow z = \frac{3}{3\sqrt{2}} + \frac{3}{3\sqrt{2}}i \quad [\text{আলাদা করে ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow z = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}i \quad [\text{লব ও হর থেকে ৩ কাটাকাটি করে}]$</div>
+    <div class="step-explain">এখন আমরা জটিল সংখ্যা $z$ এর মডুলাস $|z|$ এর মান নির্ণয় করব। আমরা জানি, কোনো জটিল সংখ্যা $A + Bi$ এর মডুলাস হলো $\sqrt{A^2 + B^2}$:</div>
+    <div class="step">$|z| = \sqrt{\left(\frac{1}{\sqrt{2}}\right)^2 + \left(\frac{1}{\sqrt{2}}\right)^2} \quad [\text{মডুলাসের সূত্রানুসারে}]$</div>
+    <div class="step">$= \sqrt{\frac{1}{2} + \frac{1}{2}} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$= \sqrt{1} = 1 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">সুতরাং, $|z| = 1$। এখন প্রশ্নে জানতে চাওয়া হয়েছে $|z|$ এর অর্থাৎ $1$ এর ঘনমূলগুলোর যোগফল।</div>
+    <div class="step-explain">আমরা জানি, এককের ($1$ এর) তিনটি ঘনমূল হলো $1, \omega$ এবং $\omega^2$।</div>
+    <div class="step-explain">এখন এই ঘনমূল তিনটির যোগফল বের করতে হবে:</div>
+    <div class="step">\text{ঘনমূলগুলোর যোগফল} = 1 + \omega + \omega^2</div>
+    <div class="step-explain">জটিল সংখ্যার মৌলিক তত্ত্ব বা ধর্ম অনুসারে আমরা জানি যে, এককের জটিল ঘনমূলত্রয়ের সমষ্টি সর্বদাই শূন্য হয়:</div>
+    <div class="step">$= 0 \quad [\because 1 + \omega + \omega^2 = 0]$</div>
+    <div class="step-explain">অতএব, $|z|$ এর ঘনমূলগুলোর নির্ণেয় যোগফল হলো $0$।</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6A Q11-Q21</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (6A)</h1>
+
+        <div class="problem-card">
+            <div class="problem-title">১১. একটি গাড়ির চাকা $200$ বার ঘুরে $800$ কি.মি. পথ অতিক্রম করে। গাড়িটির চাকার ব্যাসার্ধ নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে লিখে নিই এবং অতিক্রান্ত দূরত্বকে কি.মি. থেকে মিটারে রূপান্তর করি:</div>
+            <div class="step">দেওয়া আছে, চাকার মোট ঘূর্ণন সংখ্যা, $N = 200 \text{ বার}$</div>
+            <div class="step">মোট অতিক্রান্ত দূরত্ব, $D = 800 \text{ কি.মি.}$</div>
+            <div class="step">$= 800 \cdot 1000 \text{ মিটার} \quad [\because 1 \text{ কি.মি.} = 1000 \text{ মিটার}]$</div>
+            <div class="step">$= 800000 \text{ মিটার} \quad [\text{গুণ করে}]$</div>
+            <div class="step">ধরি, গাড়িটির চাকার ব্যাসার্ধ $= r$</div>
+            <div class="step-explain">আমরা জানি, একটি বৃত্তাকার চাকা একবার সম্পূর্ণ ঘুরলে তার নিজের পরিধির সমান দূরত্ব অতিক্রম করে। সুতরাং, চাকার পরিধিই হলো চাকাটি ১ বার ঘুরলে অতিক্রান্ত দূরত্ব।</div>
+            <div class="step-explain">চাকাটি $200$ বার ঘুরে অতিক্রম করে $= 800000 \text{ মিটার}$</div>
+            <div class="step-explain">ঐকিক নিয়মে, চাকাটি $1$ বার ঘুরে অতিক্রম করে (অর্থাৎ চাকার পরিধি, $s$):</div>
+            <div class="step">$s = \frac{800000}{200} \text{ মিটার}$</div>
+            <div class="step-explain">লব ও হরের শূন্যগুলো বর্জন করে ভাগ সম্পন্ন করি (আমরা জানি, $8000 \div 2 = 4000$):</div>
+            <div class="step">$s = 4000 \text{ মিটার} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">বৃত্তের সূত্রানুযায়ী আমরা জানি চাকার পরিধি $s = 2\pi r$। সুতরাং:</div>
+            <div class="step">$2\pi r = 4000$</div>
+            <div class="step-explain">ব্যাসার্ধ $r$ এর মান বের করার জন্য সমীকরণটিকে পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow r = \frac{4000}{2\pi} \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">লবের $4000$ কে হরের $2$ দ্বারা ভাগ করে সরল করি:</div>
+            <div class="step">$\Rightarrow r = \frac{2000}{\pi} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী হরে $\pi \approx 3.14159$ মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow r \approx \frac{2000}{3.14159} \text{ মিটার} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">এবার লবকে হর দ্বারা ভাগ করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত মান নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow r \approx 636.6203 \text{ মিটার} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">সুতরাং গাড়িটির চাকার ব্যাসার্ধ আমরা পেয়ে গেছি।</div>
+            <div class="step"><strong>অতএব,</strong> গাড়িটির চাকার ব্যাসার্ধ প্রায় $636.6203 \text{ মিটার}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১২. একটি বৃত্তচাপ বৃত্তের কেন্দ্রে $30^\circ15'$ কোণ উৎপন্ন করে। বৃত্তের ব্যাসার্ধ $10$ মিটার হলে বৃত্তচাপটির দৈর্ঘ্য নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, বৃত্তের ব্যাসার্ধ, $r = 10 \text{ মিটার}$</div>
+            <div class="step-explain">বৃত্তের কেন্দ্রে উৎপন্ন কোণ $\theta$ ডিগ্রি ও মিনিটে দেওয়া আছে। আমরা জানি $s = r\theta$ সূত্রে কোণটিকে অবশ্যই রেডিয়ান এককে রাখতে হয়। তাই প্রথমে মিনিটকে ডিগ্রিতে রূপান্তর করার জন্য $60$ দ্বারা ভাগ করি (যেহেতু $60' = 1^\circ$):</div>
+            <div class="step">কেন্দ্রস্থ কোণ, $\theta = 30^\circ 15'$</div>
+            <div class="step">$= \left(30 + \frac{15}{60}\right)^\circ \quad [\because 60' = 1^\circ]$</div>
+            <div class="step-explain">ভগ্নাংশটির লব ও হরকে $15$ দ্বারা কাটাকাটি বা ভাগ করে সরল করি (আমরা জানি, $15 \cdot 4 = 60$):</div>
+            <div class="step">$= \left(30 + \frac{1}{4}\right)^\circ \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">এখন ব্র্যাকেটের ভেতরের অংশটুকুর লসাগু করি (এখানে লসাগু হবে $4$):</div>
+            <div class="step">$= \left(\frac{120 + 1}{4}\right)^\circ \quad [\text{লসাগু করে}]$</div>
+            <div class="step">$= \left(\frac{121}{4}\right)^\circ$</div>
+            <div class="step-explain">প্রাপ্ত ডিগ্রিকে রেডিয়ানে প্রকাশ করার জন্য $\frac{\pi}{180}$ দ্বারা গুণ করি:</div>
+            <div class="step">$= \frac{121}{4} \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because 1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step-explain">লব ও হরের পদগুলো গুণ করে পাই:</div>
+            <div class="step">$= \frac{121\pi}{720} \text{ রেডিয়ান} \quad [\text{হর গুণ করে}]$</div>
+            <div class="step-explain">আমরা জানি, বৃত্তচাপের দৈর্ঘ্য, $s = r\theta$</div>
+            <div class="step-explain">এখন সূত্রে $r$ এবং $\theta$ এর প্রাপ্ত মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow s = 10 \cdot \frac{121\pi}{720} \text{ মিটার} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">লবের $10$ এবং হরের $720$ এর একটি করে শূন্য বর্জন বা কাটাকাটি করি:</div>
+            <div class="step">$\Rightarrow s = \frac{121\pi}{72} \text{ মিটার} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী $\pi \approx 3.14159$ মান লবে বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow s \approx \frac{121 \cdot 3.14159}{72} \text{ মিটার} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">এবার লবের গুণফল নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow s \approx \frac{380.13239}{72} \text{ মিটার} \quad [\text{লব গুণ করে}]$</div>
+            <div class="step-explain">লবকে হর দ্বারা ভাগ করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত মান বের করি:</div>
+            <div class="step">$\Rightarrow s \approx 5.2796 \text{ মিটার} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">সুতরাং বৃত্তচাপটির দৈর্ঘ্য সফলভাবে নির্ণয় করা হলো।</div>
+            <div class="step"><strong>অতএব,</strong> বৃত্তচাপটির দৈর্ঘ্য প্রায় $5.2796 \text{ মিটার}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৩. একটি বালক সাইকেলে চড়ে বৃত্তাকার পথে প্রতি সেকেন্ডে যে বৃত্তচাপ অতিক্রম করে তা কেন্দ্রে $28^\circ$ কোণ উৎপন্ন করে। বৃত্তটির ব্যাসার্ধ $90$ মিটার হলে বালকটির ঘণ্টায় গতিবেগ কত?</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, বৃত্তাকার পথের ব্যাসার্ধ, $r = 90 \text{ মিটার}$</div>
+            <div class="step">বালকটি প্রতি সেকেন্ডে (অর্থাৎ $1$ সেকেন্ডে) কেন্দ্রে কোণ উৎপন্ন করে, $\theta = 28^\circ$</div>
+            <div class="step-explain">আমরা জানি, $s = r\theta$ সূত্রে কোণ $\theta$-কে অবশ্যই রেডিয়ান এককে রাখতে হয়। তাই ডিগ্রিকে রেডিয়ানে রূপান্তর করতে $\frac{\pi}{180}$ দ্বারা গুণ করি:</div>
+            <div class="step">$\theta = 28 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because 1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step-explain">লব ও হরকে $4$ দ্বারা ভাগ করে কাটাকাটি করি (আমরা জানি, $28 \div 4 = 7$ এবং $180 \div 4 = 45$):</div>
+            <div class="step">$\Rightarrow \theta = \frac{7\pi}{45} \text{ রেডিয়ান} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন বালকটি প্রতি সেকেন্ডে যে পথ বা বৃত্তচাপ অতিক্রম করে, তার দৈর্ঘ্য $s$ নির্ণয় করি:</div>
+            <div class="step-explain">আমরা জানি, বৃত্তচাপের দৈর্ঘ্য, $s = r\theta$</div>
+            <div class="step-explain">সূত্রে $r$ এবং $\theta$ এর প্রাপ্ত মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow s = 90 \cdot \frac{7\pi}{45} \text{ মিটার} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">হরের $45$ দ্বারা লবের $90$ কে ভাগ করে কাটাকাটি করি (আমরা জানি, $45 \cdot 2 = 90$):</div>
+            <div class="step">$\Rightarrow s = 2 \cdot 7\pi \text{ মিটার} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step">$\Rightarrow s = 14\pi \text{ মিটার}$</div>
+            <div class="step-explain">যেহেতু এই দূরত্ব $s$ বালকটি $1$ সেকেন্ডে অতিক্রম করে, তাই এটিই হলো বালকটির প্রতি সেকেন্ডের গতিবেগ (মিটার/সেকেন্ড)।</div>
+            <div class="step">বালকটির গতিবেগ $= 14\pi \text{ মিটার/সেকেন্ড}$</div>
+            <div class="step-explain">প্রশ্নে বালকটির গতিবেগ 'ঘণ্টায়' অর্থাৎ কিলোমিটার প্রতি ঘণ্টায় ($\text{কি.মি./ঘণ্টা}$) বের করতে বলা হয়েছে।</div>
+            <div class="step-explain">আমরা জানি, $1$ ঘণ্টা $= 3600$ সেকেন্ড এবং $1$ কিলোমিটার $= 1000$ মিটার। গতিবেগকে মিটার/সেকেন্ড থেকে কি.মি./ঘণ্টায় নিতে হলে $3600$ দ্বারা গুণ এবং $1000$ দ্বারা ভাগ করতে হয়:</div>
+            <div class="step">$\text{ঘণ্টায় গতিবেগ} = \frac{14\pi \cdot 3600}{1000} \text{ কি.মি./ঘণ্টা} \quad [\text{একক পরিবর্তন করে}]$</div>
+            <div class="step-explain">লব ও হরের শূন্যগুলো বর্জন বা কাটাকাটি করি:</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} = \frac{14\pi \cdot 36}{10} \text{ কি.মি./ঘণ্টা}$</div>
+            <div class="step-explain">লবের $14$ এবং $36$ গুণ করি:</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} = \frac{504\pi}{10} \text{ কি.মি./ঘণ্টা} \quad [\text{গুণ করে}]$</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} = 50.4\pi \text{ কি.মি./ঘণ্টা} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী $\pi \approx 3.14159$ মান বসিয়ে চূড়ান্ত গতিবেগ নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} \approx 50.4 \cdot 3.14159 \text{ কি.মি./ঘণ্টা} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">এবার গুণ সম্পন্ন করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত মান বের করি:</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} \approx 158.3361 \text{ কি.মি./ঘণ্টা} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">সুতরাং বালকটির ঘণ্টায় গতিবেগ সফলভাবে নির্ণয় করা হলো।</div>
+            <div class="step"><strong>অতএব,</strong> বালকটির ঘণ্টায় গতিবেগ প্রায় $158.3361 \text{ কি.মি.}$ (বা কিলোমিটার/ঘণ্টা)।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৪. এক ব্যক্তি সাইকেলে চড়ে বৃত্তাকার পথে প্রতি সেকেন্ডে যে পথ অতিক্রম করে তা কেন্দ্রে $28^\circ$ কোণ উৎপন্ন করে। যদি বৃত্তাকার পথটির ব্যাস $180$ মিটার হয় তবে লোকটির গতিবেগ কত তা নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে প্রদত্ত ব্যাস থেকে বৃত্তাকার পথের ব্যাসার্ধ ($r$) নির্ণয় করে স্পষ্টভাবে লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, বৃত্তাকার পথের ব্যাস $= 180 \text{ মিটার}$</div>
+            <div class="step">$\Rightarrow$ বৃত্তাকার পথের ব্যাসার্ধ, $r = \frac{180}{2} \text{ মিটার} \quad \left[\because \text{ব্যাসার্ধ} = \frac{\text{ব্যাস}}{2}\right]$</div>
+            <div class="step">$\Rightarrow r = 90 \text{ মিটার} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">লোকটি প্রতি সেকেন্ডে (অর্থাৎ $1$ সেকেন্ডে) কেন্দ্রে যে কোণ উৎপন্ন করে তা ডিগ্রিতে দেওয়া আছে:</div>
+            <div class="step">কেন্দ্রস্থ কোণ, $\theta = 28^\circ$</div>
+            <div class="step-explain">আমরা জানি, গাণিতিক হিসাবের জন্য কোণ $\theta$-কে রেডিয়ান এককে প্রকাশ করতে হয়। ডিগ্রিকে রেডিয়ানে রূপান্তর করতে $\frac{\pi}{180}$ দ্বারা গুণ করি:</div>
+            <div class="step">$\theta = 28 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad \left[\because 1^\circ = \frac{\pi}{180} \text{ rad}\right]$</div>
+            <div class="step-explain">লব ও হরকে $4$ দ্বারা ভাগ করে কাটাকাটি করি (আমরা জানি, $28 \div 4 = 7$ এবং $180 \div 4 = 45$):</div>
+            <div class="step">$\Rightarrow \theta = \frac{7\pi}{45} \text{ রেডিয়ান} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন লোকটি প্রতি সেকেন্ডে যে পথ অতিক্রম করে, তা হলো উৎপন্ন বৃত্তচাপের দৈর্ঘ্য ($s$)।</div>
+            <div class="step-explain">আমরা জানি, বৃত্তচাপের দৈর্ঘ্য, $s = r\theta$</div>
+            <div class="step-explain">সূত্রে $r$ এবং $\theta$ এর প্রাপ্ত মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow s = 90 \cdot \frac{7\pi}{45} \text{ মিটার} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">হরের $45$ দ্বারা লবের $90$ কে ভাগ করে কাটাকাটি করি (আমরা জানি, $45 \cdot 2 = 90$):</div>
+            <div class="step">$\Rightarrow s = 2 \cdot 7\pi \text{ মিটার} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step">$\Rightarrow s = 14\pi \text{ মিটার}$</div>
+            <div class="step-explain">যেহেতু এই দূরত্ব $s$ লোকটি $1$ সেকেন্ডে অতিক্রম করে, তাই এটিই হলো লোকটির গতিবেগ (মিটার/সেকেন্ডে)।</div>
+            <div class="step">লোকটির গতিবেগ $= 14\pi \text{ মিটার/সেকেন্ড}$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী $\pi \approx 3.14159$ মান বসিয়ে চূড়ান্ত গতিবেগ নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow \text{গতিবেগ} \approx 14 \cdot 3.14159 \text{ মিটার/সেকেন্ড} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">এবার গুণ সম্পন্ন করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত মান বের করি:</div>
+            <div class="step">$\Rightarrow \text{গতিবেগ} \approx 43.9823 \text{ মিটার/সেকেন্ড} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">শিক্ষার্থীদের বাড়তি বোঝার সুবিধার্থে এই গতিবেগকে কিলোমিটার প্রতি ঘণ্টায় ($\text{কি.মি./ঘণ্টা}$) রূপান্তর করে দেখানো হলো:</div>
+            <div class="step">$\text{ঘণ্টায় গতিবেগ} \approx \frac{43.9823 \cdot 3600}{1000} \text{ কি.মি./ঘণ্টা} \quad \left[\because 1 \text{ m/s} = \frac{3600}{1000} \text{ km/h}\right]$</div>
+            <div class="step">$\Rightarrow \text{ঘণ্টায় গতিবেগ} \approx 158.3363 \text{ কি.মি./ঘণ্টা}$</div>
+            <div class="step-explain">সুতরাং লোকটির গতিবেগ সফলভাবে নির্ণয় করা হলো। প্রশ্নে একক নির্দিষ্ট না থাকায় মিটার/সেকেন্ড বা কি.মি./ঘণ্টা যেকোনো একটিতে উত্তর রাখা যাবে।</div>
+            <div class="step"><strong>অতএব,</strong> লোকটির গতিবেগ প্রায় $43.9823 \text{ মিটার/সেকেন্ড}$ (বা $158.3363 \text{ কি.মি./ঘণ্টা}$)।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৫. কোনো ত্রিভুজের তিনটি কোণ সমান্তর শ্রেণীভুক্ত। বৃহত্তম কোণকে রেডিয়ানে এবং ক্ষুদ্রতম কোণকে গ্রেডে প্রকাশ করলে $\pi : 40$ অনুপাত হয়। কোণগুলি ডিগ্রিতে নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">যেহেতু ত্রিভুজের কোণ তিনটি সমান্তর শ্রেণীভুক্ত (Arithmetic Progression), তাই এদের সাধারণ অন্তরকে $d^\circ$ এবং মাঝের কোণটিকে $a^\circ$ ধরি। তাহলে কোণ তিনটি হবে যথাক্রমে:</div>
+            <div class="step">ধরি, ক্ষুদ্রতম কোণ $= (a - d)^\circ$</div>
+            <div class="step">দ্বিতীয় বা মধ্যম কোণ $= a^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (a + d)^\circ$</div>
+            <div class="step-explain">আমরা জানি, যেকোনো ত্রিভুজের তিনটি কোণের সমষ্টি সর্বদা $180^\circ$ হয়। সুতরাং:</div>
+            <div class="step">$(a - d) + a + (a + d) = 180$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে যোগ করি (এখানে $-d$ এবং $+d$ কাটাকাটি হয়ে যাবে):</div>
+            <div class="step">$\Rightarrow a - d + a + a + d = 180$</div>
+            <div class="step">$\Rightarrow 3a = 180 \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $3$ দ্বারা ভাগ করে $a$ এর মান বের করি:</div>
+            <div class="step">$\Rightarrow a = \frac{180}{3}$</div>
+            <div class="step">$\Rightarrow a = 60 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন $a$ এর মান কোণ তিনটির রাশিতে বসিয়ে পাই:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (60 - d)^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (60 + d)^\circ$</div>
+            <div class="step-explain">প্রশ্নের শর্তানুযায়ী, বৃহত্তম কোণকে রেডিয়ানে রূপান্তর করতে হবে। আমরা জানি, $1^\circ = \frac{\pi}{180} \text{ রেডিয়ান}$।</div>
+            <div class="step">$\text{রেডিয়ানে বৃহত্তম কোণ} = (60 + d) \cdot \frac{\pi}{180} \text{ রেডিয়ান}$</div>
+            <div class="step">$= \frac{(60 + d)\pi}{180} \text{ রেডিয়ান}$</div>
+            <div class="step-explain">আবার, ক্ষুদ্রতম কোণকে গ্রেড (Grade) এককে প্রকাশ করতে হবে। আমরা জানি, $90^\circ = 100 \text{ গ্রেড (G)}$ বা $1^\circ = \frac{100}{90} \text{ G} = \frac{10}{9} \text{ G}$।</div>
+            <div class="step">$\text{গ্রেডে ক্ষুদ্রতম কোণ} = (60 - d) \cdot \frac{10}{9} \text{ গ্রেড}$</div>
+            <div class="step">$= \frac{10(60 - d)}{9} \text{ গ্রেড}$</div>
+            <div class="step-explain">প্রশ্নে বলা হয়েছে, রেডিয়ানে বৃহত্তম কোণ এবং গ্রেডে ক্ষুদ্রতম কোণের অনুপাত হলো $\pi : 40$। শর্তানুসারে পাই:</div>
+            <div class="step">$\frac{\left\{\frac{(60 + d)\pi}{180}\right\}}{\left\{\frac{10(60 - d)}{9}\right\}} = \frac{\pi}{40}$</div>
+            <div class="step-explain">বামপক্ষের জটিল ভগ্নাংশটিকে সরল করার জন্য হরের অংশটিকে উল্টিয়ে গুণ আকারে লিখি:</div>
+            <div class="step">$\Rightarrow \frac{(60 + d)\pi}{180} \cdot \frac{9}{10(60 - d)} = \frac{\pi}{40}$</div>
+            <div class="step-explain">লবের $9$ দ্বারা হরের $180$ কে কাটাকাটি করি (আমরা জানি, $180 \div 9 = 20$):</div>
+            <div class="step">$\Rightarrow \frac{(60 + d)\pi}{20 \cdot 10(60 - d)} = \frac{\pi}{40}$</div>
+            <div class="step">$\Rightarrow \frac{(60 + d)\pi}{200(60 - d)} = \frac{\pi}{40} \quad [\text{হর গুণ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষ থেকে লবের $\pi$ বর্জন বা ভাগ করে বাদ দিই:</div>
+            <div class="step">$\Rightarrow \frac{60 + d}{200(60 - d)} = \frac{1}{40} \quad [\text{উভয় পক্ষকে } \pi \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন (Cross-multiplication) করি:</div>
+            <div class="step">$\Rightarrow 40 \cdot (60 + d) = 200(60 - d) \cdot 1$</div>
+            <div class="step">$\Rightarrow 40(60 + d) = 200(60 - d)$</div>
+            <div class="step-explain">হিসাব সহজ করার জন্য উভয় পক্ষকে $40$ দ্বারা ভাগ করি (যেহেতু $200 \div 40 = 5$):</div>
+            <div class="step">$\Rightarrow 60 + d = 5(60 - d) \quad [\text{উভয় পক্ষকে } 40 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">ডানপক্ষের ব্র্যাকেট তুলে দিয়ে গুণ সম্পন্ন করি:</div>
+            <div class="step">$\Rightarrow 60 + d = 300 - 5d \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">এবার $d$ যুক্ত পদগুলোকে বামপাশে এবং ধ্রুবক সংখ্যাগুলোকে ডানপাশে পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow d + 5d = 300 - 60 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow 6d = 240 \quad [\text{যোগ ও বিয়োগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $6$ দ্বারা ভাগ করে $d$ এর মান নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow d = \frac{240}{6}$</div>
+            <div class="step">$\Rightarrow d = 40 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন $a = 60$ এবং $d = 40$ ব্যবহার করে কোণ তিনটির চূড়ান্ত ডিগ্রি মান বের করি:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (60 - d)^\circ = (60 - 40)^\circ = 20^\circ$</div>
+            <div class="step">দ্বিতীয় কোণ $= a^\circ = 60^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (60 + d)^\circ = (60 + 40)^\circ = 100^\circ$</div>
+            <div class="step-explain">কোণগুলোর সমষ্টি যাচাই করে নেওয়া যায়: $20^\circ + 60^\circ + 100^\circ = 180^\circ$, যা সঠিক।</div>
+            <div class="step"><strong>অতএব,</strong> ত্রিভুজটির কোণগুলি ডিগ্রিতে যথাক্রমে $20^\circ, 60^\circ, 100^\circ$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৬. একটি ত্রিভুজের কোণগুলি সমান্তর প্রগমনভুক্ত। এর বৃহত্তম ও ক্ষুদ্রতম কোণ দুইটিকে যথাক্রমে রেডিয়ান ও ডিগ্রিতে প্রকাশ করলে এদের অনুপাত হয় $\pi : 90$; কোণগুলির পরিমাপকে রেডিয়ানে নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">যেহেতু ত্রিভুজের কোণ তিনটি সমান্তর প্রগমনভুক্ত (Arithmetic Progression), তাই এদের সাধারণ অন্তরকে $d^\circ$ এবং মাঝের কোণটিকে $a^\circ$ ধরি। তাহলে কোণ তিনটি ডিগ্রিতে হবে যথাক্রমে:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (a - d)^\circ$</div>
+            <div class="step">দ্বিতীয় বা মধ্যম কোণ $= a^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (a + d)^\circ$</div>
+            <div class="step-explain">আমরা জানি, ত্রিভুজের তিন কোণের সমষ্টি সর্বদা $180^\circ$ হয়। সুতরাং কোণ তিনটির যোগফল লিখি:</div>
+            <div class="step">$(a - d) + a + (a + d) = 180$</div>
+            <div class="step-explain">বন্ধনী তুলে দিয়ে সাধারণ সরল বা যোগ করি (এখানে $-d$ এবং $+d$ কাটাকাটি হয়ে যাবে):</div>
+            <div class="step">$\Rightarrow a - d + a + a + d = 180$</div>
+            <div class="step">$\Rightarrow 3a = 180 \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $3$ দ্বারা ভাগ করে $a$ এর মান বের করি:</div>
+            <div class="step">$\Rightarrow a = \frac{180}{3}$</div>
+            <div class="step">$\Rightarrow a = 60 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন কোণ তিনটির রাশিতে $a = 60$ বসিয়ে পাই:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (60 - d)^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (60 + d)^\circ$</div>
+            <div class="step-explain">প্রশ্নের শর্ত অনুসারে, বৃহত্তম কোণটিকে রেডিয়ান এককে প্রকাশ করতে হবে। আমরা জানি, $1^\circ = \frac{\pi}{180} \text{ রেডিয়ান}$।</div>
+            <div class="step">$\text{রেডিয়ানে বৃহত্তম কোণ} = (60 + d) \cdot \frac{\pi}{180} \text{ রেডিয়ান}$</div>
+            <div class="step">$= \frac{(60 + d)\pi}{180} \text{ রেডিয়ান}$</div>
+            <div class="step-explain">আবার, ক্ষুদ্রতম কোণটিকে ডিগ্রি এককেই রাখতে বলা হয়েছে। সুতরাং:</div>
+            <div class="step">$\text{ডিগ্রিতে ক্ষুদ্রতম কোণ} = (60 - d)^\circ$</div>
+            <div class="step-explain">প্রশ্নে দেওয়া শর্তানুযায়ী, রেডিয়ানে বৃহত্তম কোণ এবং ডিগ্রিতে ক্ষুদ্রতম কোণের অনুপাত হলো $\pi : 90$। শর্তানুসারে সমীকরণ সাজিয়ে পাই:</div>
+            <div class="step">$\frac{\left\{\frac{(60 + d)\pi}{180}\right\}}{60 - d} = \frac{\pi}{90}$</div>
+            <div class="step-explain">বামপক্ষের জটিল ভগ্নাংশটির লবকে সহজভাবে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow \frac{(60 + d)\pi}{180 \cdot (60 - d)} = \frac{\pi}{90}$</div>
+            <div class="step-explain">উভয় পক্ষ থেকে লবের $\pi$ বর্জন বা ভাগ করে বাদ দিই:</div>
+            <div class="step">$\Rightarrow \frac{60 + d}{180(60 - d)} = \frac{1}{90} \quad [\text{উভয় পক্ষকে } \pi \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">এবার আর-গুণন বা বজ্রগুণন (Cross-multiplication) করি:</div>
+            <div class="step">$\Rightarrow 90 \cdot (60 + d) = 180(60 - d) \cdot 1$</div>
+            <div class="step">$\Rightarrow 90(60 + d) = 180(60 - d)$</div>
+            <div class="step-explain">হিসাব সহজ করার জন্য উভয় পক্ষকে $90$ দ্বারা ভাগ করি (আমরা জানি, $180 \div 90 = 2$):</div>
+            <div class="step">$\Rightarrow 60 + d = 2(60 - d) \quad [\text{উভয় পক্ষকে } 90 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">ডানপক্ষের ব্র্যাকেট তুলে দিয়ে $2$ দ্বারা গুণ করি:</div>
+            <div class="step">$\Rightarrow 60 + d = 120 - 2d \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">এবার $d$ যুক্ত পদগুলোকে বামপাশে এবং সংখ্যাগুলোকে ডানপাশে পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow d + 2d = 120 - 60 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow 3d = 60 \quad [\text{যোগ ও বিয়োগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $3$ দ্বারা ভাগ করে $d$ এর মান নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow d = \frac{60}{3}$</div>
+            <div class="step">$\Rightarrow d = 20 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">প্রাপ্ত $a = 60$ এবং $d = 20$ এর মান ব্যবহার করে প্রথমে কোণ তিনটির ডিগ্রি পরিমাপ বের করি:</div>
+            <div class="step">প্রথম (ক্ষুদ্রতম) কোণ $= (60 - 20)^\circ = 40^\circ$</div>
+            <div class="step">দ্বিতীয় (মধ্যম) কোণ $= 60^\circ$</div>
+            <div class="step">তৃতীয় (বৃহত্তম) কোণ $= (60 + 20)^\circ = 80^\circ$</div>
+            <div class="step-explain">যেহেতু প্রশ্নে কোণগুলির পরিমাপ 'রেডিয়ানে' নির্ণয় করতে বলা হয়েছে, তাই প্রতিটিকে $\frac{\pi}{180}$ দ্বারা গুণ করে রেডিয়ানে রূপান্তর করি:</div>
+            <div class="step-explain">১ম কোণটির রেডিয়ান মান:</div>
+            <div class="step">$40^\circ = 40 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because 1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step">$= \frac{2\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">২য় কোণটির রেডিয়ান মান:</div>
+            <div class="step">$60^\circ = 60 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because 1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step">$= \frac{\pi}{3} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 60 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">৩য় কোণটির রেডিয়ান মান:</div>
+            <div class="step">$80^\circ = 80 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because  1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step">$= \frac{4\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">কোণগুলির পরিমাপ রেডিয়ান এককে নিখুঁতভাবে প্রকাশ করা হলো।</div>
+            <div class="step"><strong>অতএব,</strong> কোণগুলির রেডিয়ান পরিমাপ যথাক্রমে $\frac{2\pi}{9}, \frac{\pi}{3}$ এবং $\frac{4\pi}{9}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৭. দুইটি কোণের সমষ্টি $120^\circ$ এবং তাদের অন্তর $\frac{\pi}{6}$ রেডিয়ান। কোণ দুইটির বৃত্তীয় মান নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">ধরি, কোণ দুটি যথাক্রমে $x$ এবং $y$, যেখানে $x > y$।</div>
+            <div class="step-explain">যেহেতু প্রশ্নে কোণ দুটির 'বৃত্তীয় মান' অর্থাৎ রেডিয়ান এককে মান নির্ণয় করতে বলা হয়েছে, তাই আমরা শুরুতেই প্রথম শর্তের ডিগ্রিকে রেডিয়ানে রূপান্তর করে নেব।</div>
+            <div class="step-explain">প্রথম শর্তানুসারে, কোণ দুটির সমষ্টি $120^\circ$। আমরা জানি, $1^\circ = \frac{\pi}{180} \text{ রেডিয়ান}$।</div>
+            <div class="step">$\text{কোণ দুটির সমষ্টি} = 120^\circ$</div>
+            <div class="step">$= 120 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad \left[\because 1^\circ = \frac{\pi}{180} \text{ rad}\right]$</div>
+            <div class="step-explain">লব ও হরের সংখ্যা দুটিকে $60$ দ্বারা ভাগ করে কাটাকাটি করি (আমরা জানি, $60 \cdot 2 = 120$ এবং $60 \cdot 3 = 180$):</div>
+            <div class="step">$= \frac{2\pi}{3} \text{ রেডিয়ান} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">সুতরাং, ১ম শর্ত অনুযায়ী সমীকরণটি দাঁড়ায়:</div>
+            <div class="step">$x + y = \frac{2\pi}{3} \quad \text{--- (i)}$</div>
+            <div class="step-explain">দ্বিতীয় শর্তানুসারে, কোণ দুটির অন্তর (বিয়োগফল) $\frac{\pi}{6}$ রেডিয়ান। সুতরাং ২য় সমীকরণটি পাই:</div>
+            <div class="step">$x - y = \frac{\pi}{6} \quad \text{--- (ii)}$</div>
+            <div class="step-explain">এখন সমীকরণ (i) এবং সমীকরণ (ii) যোগ করে $x$ এর মান বের করি (যোগ করলে $+y$ এবং $-y$ কাটা যাবে):</div>
+            <div class="step">$(x + y) + (x - y) = \frac{2\pi}{3} + \frac{\pi}{6} \quad [\text{সমীকরণ (i) ও (ii) যোগ করে}]$</div>
+            <div class="step">$\Rightarrow 2x = \frac{2\pi}{3} + \frac{\pi}{6}$</div>
+            <div class="step-explain">ডানপক্ষের ভগ্নাংশ দুটির হর $3$ এবং $6$ এর লসাগু করি (এখানে লসাগু হবে $6$):</div>
+            <div class="step">$\Rightarrow 2x = \frac{2 \cdot 2\pi + 1 \cdot \pi}{6} \quad [\text{লসাগু করে}]$</div>
+            <div class="step">$\Rightarrow 2x = \frac{4\pi + \pi}{6}$</div>
+            <div class="step">$\Rightarrow 2x = \frac{5\pi}{6} \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $2$ দ্বারা ভাগ করি বা বামপক্ষের $2$ কে ডানপাশে হরের সাথে গুণ আকারে নিয়ে যাই:</div>
+            <div class="step">$\Rightarrow x = \frac{5\pi}{6 \cdot 2} \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow x = \frac{5\pi}{12} \quad [\text{হর গুণ করে}]$</div>
+            <div class="step-explain">এখন $x$ এর এই প্রাপ্ত মান সমীকরণ (i)-এ প্রতিস্থাপন করে $y$ এর মান নির্ণয় করি:</div>
+            <div class="step">$\frac{5\pi}{12} + y = \frac{2\pi}{3} \quad \left[\text{সমীকরণ (i)-এ } x = \frac{5\pi}{12} \text{ বসিয়ে}\right]$</div>
+            <div class="step-explain">বামপক্ষের $\frac{5\pi}{12}$ পদটিকে ডানপাশে পক্ষান্তর করি (চিহ্ন পরিবর্তন হয়ে মাইনাস হবে):</div>
+            <div class="step">$\Rightarrow y = \frac{2\pi}{3} - \frac{5\pi}{12} \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">ডানপক্ষের ভগ্নাংশ দুটির হর $3$ এবং $12$ এর লসাগু করি (এখানে লসাগু হবে $12$):</div>
+            <div class="step">$\Rightarrow y = \frac{4 \cdot 2\pi - 1 \cdot 5\pi}{12} \quad [\text{লসাগু করে}]$</div>
+            <div class="step">$\Rightarrow y = \frac{8\pi - 5\pi}{12}$</div>
+            <div class="step-explain">লবের অংশটি বিয়োগ করে পাই:</div>
+            <div class="step">$\Rightarrow y = \frac{3\pi}{12} \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">লব ও হরকে $3$ দ্বারা ভাগ করে কাটাকাটি করি (আমরা জানি, $12 \div 3 = 4$):</div>
+            <div class="step">$\Rightarrow y = \frac{\pi}{4} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">কোণ দুটির বৃত্তীয় বা রেডিয়ান মান আমরা নিখুঁতভাবে পেয়ে গেছি।</div>
+            <div class="step"><strong>অতএব,</strong> কোণ দুইটির বৃত্তীয় মান যথাক্রমে $\frac{5\pi}{12} \text{ রেডিয়ান}$ এবং $\frac{\pi}{4} \text{ রেডিয়ান}$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">১৮. দুইটি ত্রিভুজের মধ্যে প্রত্যেকটির কোণসমূহ সমান্তর প্রগমন শ্রেণীভুক্ত; তাদের একটির ক্ষুদ্রতম কোণ অপরটির ক্ষুদ্রতম কোণের দ্বিগুণ এবং ত্রিভুজ দুইটির বৃহত্তম কোণদ্বয়ের সমষ্টি $180^\circ$। কোণসমূহকে রেডিয়ানে প্রকাশ কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">মনে করি, প্রথম ত্রিভুজটি অপেক্ষাকৃত বড় কোণবিশিষ্ট এবং দ্বিতীয় ত্রিভুজটির ক্ষুদ্রতম কোণটি অন্যটির অর্ধেক।</div>
+            <div class="step-explain">যেহেতু যেকোনো ত্রিভুজের কোণসমূহ সমান্তর প্রগমনভুক্ত হলে তাদের মধ্যম কোণটি সর্বদা $60^\circ$ হয় (কারণ কোণ তিনটির সমষ্টি $180^\circ$)। তাই আমরা প্রথম ও দ্বিতীয় ত্রিভুজের সাধারণ অন্তর যথাক্রমে $d_1^\circ$ এবং $d_2^\circ$ ধরি।</div>
+            <div class="step-explain">সুতরাং, প্রথম ত্রিভুজের কোণ তিনটি ডিগ্রিতে:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (60 - d_1)^\circ$</div>
+            <div class="step">মধ্যম কোণ $= 60^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (60 + d_1)^\circ$</div>
+            <div class="step-explain">অনুরূপভাবে, দ্বিতীয় ত্রিভুজের কোণ তিনটি ডিগ্রিতে:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= (60 - d_2)^\circ$</div>
+            <div class="step">মধ্যম কোণ $= 60^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= (60 + d_2)^\circ$</div>
+            <div class="step-explain">১ম শর্তানুসারে, একটির ক্ষুদ্রতম কোণ অপরটির ক্ষুদ্রতম কোণের দ্বিগুণ। অতএব:</div>
+            <div class="step">$60 - d_1 = 2(60 - d_2)$</div>
+            <div class="step-explain">ডানপক্ষের ব্র্যাকেট তুলে দিয়ে গুণ করি:</div>
+            <div class="step">$\Rightarrow 60 - d_1 = 120 - 2d_2 \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">পদগুলোকে পক্ষান্তর করে সাজিয়ে লিখি:</div>
+            <div class="step">$\Rightarrow 2d_2 - d_1 = 120 - 60 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow 2d_2 - d_1 = 60 \quad \text{--- (i)}$</div>
+            <div class="step-explain">২য় শর্তানুসারে, ত্রিভুজ দুটির বৃহত্তম কোণদ্বয়ের সমষ্টি $180^\circ$। অতএব:</div>
+            <div class="step">$(60 + d_1) + (60 + d_2) = 180$</div>
+            <div class="step-explain">বামপক্ষের সংখ্যা দুটি যোগ করি:</div>
+            <div class="step">$\Rightarrow 120 + d_1 + d_2 = 180 \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">ধ্রুবক পদ $120$ কে ডানপাশে পক্ষান্তর করি:</div>
+            <div class="step">$\Rightarrow d_1 + d_2 = 180 - 120 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow d_1 + d_2 = 60 \quad \text{--- (ii)}$</div>
+            <div class="step-explain">এখন সমীকরণ (i) এবং সমীকরণ (ii) যোগ করি (যোগ করলে $-d_1$ এবং $+d_1$ বাদ যাবে):</div>
+            <div class="step">$(2d_2 - d_1) + (d_1 + d_2) = 60 + 60 \quad [\text{সমীকরণ (i) ও (ii) যোগ করে}]$</div>
+            <div class="step">$\Rightarrow 3d_2 = 120 \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">উভয় পক্ষকে $3$ দ্বারা ভাগ করে $d_2$ এর মান বের করি:</div>
+            <div class="step">$\Rightarrow d_2 = \frac{120}{3}$</div>
+            <div class="step">$\Rightarrow d_2 = 40 \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">প্রাপ্ত $d_2$ এর মান সমীকরণ (ii)-এ বসিয়ে $d_1$ এর মান নির্ণয় করি:</div>
+            <div class="step">$d_1 + 40 = 60 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step">$\Rightarrow d_1 = 60 - 40 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step">$\Rightarrow d_1 = 20 \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">এখন $d_1$ ও $d_2$ এর মান ব্যবহার করে ত্রিভুজ দুটির কোণসমূহ ডিগ্রিতে নির্ণয় করি:</div>
+            <div class="step-explain">প্রথম ত্রিভুজের কোণসমূহ ডিগ্রিতে:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= 60^\circ - 20^\circ = 40^\circ$</div>
+            <div class="step">মধ্যম কোণ $= 60^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= 60^\circ + 20^\circ = 80^\circ$</div>
+            <div class="step-explain">দ্বিতীয় ত্রিভুজের কোণসমূহ ডিগ্রিতে:</div>
+            <div class="step">ক্ষুদ্রতম কোণ $= 60^\circ - 40^\circ = 20^\circ$</div>
+            <div class="step">मध्यম কোণ $= 60^\circ$</div>
+            <div class="step">বৃহত্তম কোণ $= 60^\circ + 40^\circ = 100^\circ$</div>
+            <div class="step-explain">যেহেতু প্রশ্নে কোণসমূহকে 'রেডিয়ানে' প্রকাশ করতে বলা হয়েছে, তাই আমরা জানি $1^\circ = \frac{\pi}{180} \text{ রেডিয়ান}$। এবার প্রতিটি কোণকে রেডিয়ানে রূপান্তর করি:</div>
+            <div class="step-explain">প্রথম ত্রিভুজের কোণসমূহের রেডিয়ান মান:</div>
+            <div class="step">$40^\circ = 40 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{2\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step">$60^\circ = 60 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{\pi}{3} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 60 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step">$80^\circ = 80 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{4\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">দ্বিতীয় ত্রিভুজের কোণসমূহের রেডিয়ান মান:</div>
+            <div class="step">$20^\circ = 20 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step">$60^\circ = 60 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{\pi}{3} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 60 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step">$100^\circ = 100 \cdot \frac{\pi}{180} \text{ রেডিয়ান} = \frac{5\pi}{9} \text{ রেডিয়ান} \quad [\text{লব ও হরকে } 20 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">উভয় ত্রিভুজের কোণসমূহ রেডিয়ান এককে নিখুঁতভাবে সাজানো হলো।</div>
+            <div class="step"><strong>অতএব,</strong> প্রথম ত্রিভুজের কোণগুলি যথাক্রমে $\frac{2\pi}{9}, \frac{\pi}{3}, \frac{4\pi}{9}$ এবং দ্বিতীয় ত্রিভুজের কোণগুলি যথাক্রমে $\frac{\pi}{9}, \frac{\pi}{3}, \frac{5\pi}{9}$।</div>
+        </div>
+        
+        <div class="problem-card">
+            <div class="problem-title">১৯. একটি বহুভুজের কোণগুলি সমান্তর প্রগমন শ্রেণীভুক্ত। ক্ষুদ্রতম কোণটি $\frac{2\pi}{3}$ রেডিয়ান এবং সাধারণ অন্তর $5^\circ$ হলে বাহুর সংখ্যা নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">ধরি, বহুভুজটির বাহুর সংখ্যা $= n$</div>
+            <div class="step-explain">আমরা জানি, যেকোনো বহুভুজের বাহুর সংখ্যা $n$ হলে, তার কোণের সংখ্যাও $n$ হবে।</div>
+            <div class="step-explain">প্রশ্নে বহুভুজের ক্ষুদ্রতম কোণটি রেডিয়ানে এবং সাধারণ অন্তর ডিগ্রিতে দেওয়া আছে। হিসাবের সুবিধার জন্য প্রথমে ক্ষুদ্রতম কোণটিকে ডিগ্রিতে রূপান্তর করে নিই। আমরা জানি, $\pi \text{ রেডিয়ান} = 180^\circ$:</div>
+            <div class="step">দেওয়া আছে, প্রথম বা ক্ষুদ্রতম কোণ, $a = \frac{2\pi}{3} \text{ রেডিয়ান}$</div>
+            <div class="step">$= \frac{2 \cdot 180^\circ}{3} \quad [\because \pi = 180^\circ \text{ বসিয়ে}]$</div>
+            <div class="step-explain">লবের $180^\circ$ কে হরের $3$ দ্বারা ভাগ করি (আমরা জানি, $180 \div 3 = 60$):</div>
+            <div class="step">$= 2 \cdot 60^\circ \quad [\text{ভাগ করে}]$</div>
+            <div class="step">$= 120^\circ \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">সুতরাং সমান্তর প্রগমনের প্রথম পদ বা ক্ষুদ্রতম কোণ, $a = 120^\circ$</div>
+            <div class="step">এবং কোণগুলোর সাধারণ অন্তর, $d = 5^\circ$</div>
+            <div class="step-explain">আমরা জানি, $n$ সংখ্যক বাহু বা কোণবিশিষ্ট বহুভুজের সবকটি অন্তঃকোণের সমষ্টির সূত্রটি হলো:</div>
+            <div class="step-explain">কোণসমূহের মোট সমষ্টি $= (2n - 4) \cdot 90^\circ$</div>
+            <div class="step-explain">আবার, যেহেতু কোণগুলো সমান্তর প্রগমনভুক্ত, তাই সমান্তর ধারার সমষ্টির সূত্র $S_n = \frac{n}{2}\left\{2a + (n - 1)d\right\}$ ব্যবহার করেও কোণসমূহের মোট সমষ্টি বের করা যায়। শর্তানুসারে এই দুটি সমষ্টি পরস্পর সমান হবে। সুতরাং আমরা লিখতে পারি:</div>
+            <div class="step">$\frac{n}{2}\left\{2a + (n - 1)d\right\} = (2n - 4) \cdot 90$</div>
+            <div class="step-explain">এখন সমীকরণে $a$ এবং $d$ এর মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow \frac{n}{2}\left\{2 \cdot 120 + (n - 1) \cdot 5\right\} = (2n - 4) \cdot 90 \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">ব্র্যাকেটের ভেতরের গুণগুলো সম্পন্ন করি:</div>
+            <div class="step">$\Rightarrow \frac{n}{2}\left\{240 + 5n - 5\right\} = 180n - 360 \quad [\text{গুণ করে}]$</div>
+            <div class="step">$\Rightarrow \frac{n}{2}\left\{235 + 5n\right\} = 180n - 360 \quad [240 - 5 = 235 \text{ করে}]$</div>
+            <div class="step-explain">বামপক্ষের হরের $2$ কে ডানপাশে পক্ষান্তর করে গুণ করি (আর-গুণন বা বজ্রগুণন করে):</div>
+            <div class="step">$\Rightarrow n(235 + 5n) = 2 \cdot (180n - 360) \quad [\text{বজ্রগুণন করে}]$</div>
+            <div class="step-explain">উভয় পক্ষের ব্র্যাকেট তুলে দিয়ে গুণ সম্পন্ন করি:</div>
+            <div class="step">$\Rightarrow 235n + 5n^2 = 360n - 720 \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">ডানপক্ষের সব পদকে বামপাশে পক্ষান্তর করি (চিহ্ন পরিবর্তিত হবে):</div>
+            <div class="step">$\Rightarrow 5n^2 + 235n - 360n + 720 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+            <div class="step-explain">সদৃশ পদগুলোর বিয়োগ সম্পন্ন করি ($235n - 360n = -125n$):</div>
+            <div class="step">$\Rightarrow 5n^2 - 125n + 720 = 0 \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">হিসাব সহজ করতে উভয় পক্ষকে $5$ দ্বারা ভাগ করি:</div>
+            <div class="step">$\Rightarrow n^2 - 25n + 144 = 0 \quad [\text{উভয় পক্ষকে } 5 \text{ দ্বারা ভাগ করে}]$</div>
+            <div class="step-explain">এখন এই দ্বিঘাত সমীকরণটিকে মিডল-টার্ম (Middle-term factorization) পদ্ধতিতে উৎপাদকে বিশ্লেষণ করি (যেহেতু $16 \cdot 9 = 144$ এবং $16 + 9 = 25$):</div>
+            <div class="step">$\Rightarrow n^2 - 16n - 9n + 144 = 0$</div>
+            <div class="step-explain">প্রথম দুটি পদ থেকে $n$ এবং শেষ দুটি পদ থেকে $-9$ কমন নিই:</div>
+            <div class="step">$\Rightarrow n(n - 16) - 9(n - 16) = 0 \quad [\text{কমন নিয়ে}]$</div>
+            <div class="step-explain">আবারও সাধারণ উৎপাদক $(n - 16)$ কমন নিয়ে পাই:</div>
+            <div class="step">$\Rightarrow (n - 16)(n - 9) = 0$</div>
+            <div class="step-explain">যেহেতু দুটি রাশির গুণফল শূন্য, তাই তারা পৃথক পৃথকভাবে শূন্য হবে:</div>
+            <div class="step">হয়, $n - 16 = 0 \Rightarrow n = 16$</div>
+            <div class="step">অথবা, $n - 9 = 0 \Rightarrow n = 9$</div>
+            <div class="step-explain">এখন আমাদের যাচাই করতে হবে $n$ এর কোণ মানটি গ্রহণযোগ্য। যদি বাহুর সংখ্যা $n = 16$ হয়, তবে বৃহত্তম কোণটি হবে:</div>
+            <div class="step">$\text{বৃহত্তম কোণ} = a + (n - 1)d = 120^\circ + (16 - 1) \cdot 5^\circ$</div>
+            <div class="step">$= 120^\circ + 15 \cdot 5^\circ = 120^\circ + 75^\circ = 195^\circ$</div>
+            <div class="step-explain">কিন্তু আমরা জানি, কোনো উত্তল বহুভুজের (Convex polygon) যেকোনো একটি অন্তঃকোণ কখনোই $180^\circ$ এর চেয়ে বড় হতে পারে না। যেহেতু $195^\circ > 180^\circ$, তাই $n = 16$ গ্রহণযোগ্য নয়।</div>
+            <div class="step-explain">সুতরাং, অপর মানটি অর্থাৎ $n = 9$ গ্রহণযোগ্য। এর বৃহত্তম কোণটি হবে $120^\circ + (9 - 1) \cdot 5^\circ = 120^\circ + 40^\circ = 160^\circ$, যা $180^\circ$ থেকে ছোট এবং সঠিক।</div>
+            <div class="step-explain">অতএব বহুভুজটির বাহুর সংখ্যা আমরা নিখুঁতভাবে পেয়ে গেছি।</div>
+            <div class="step"><strong>অতএব,</strong> বহুভুজটির বাহুর সংখ্যা $9$।</div>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-title">২০. সকাল $10:45$ টায় ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যবর্তী কোণকে ডিগ্রিতে প্রকাশ কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটার অবস্থান সম্পর্কে বেসিক কিছু মান আমরা প্রতীকসহ স্পষ্ট উল্লেখ করি:</div>
+            <div class="step">ঘড়িতে মোট বড় ঘর বা ঘণ্টার সংখ্যা $= 12 \text{ টি}$</div>
+            <div class="step">ঘড়ির সম্পূর্ণ বৃত্তের মোট কোণ $= 360^\circ$</div>
+            <div class="step-explain">সুতরাং, ঘণ্টার কাঁটাটি প্রতিটি বড় ঘরের ব্যবধানে (অর্থাৎ $1$ ঘণ্টায়) যে কোণ অতিক্রম করে, তা বের করি:</div>
+            <div class="step">$1 \text{ ঘণ্টায় ঘণ্টার কাঁটা ঘোরে} = \frac{360^\circ}{12}$</div>
+            <div class="step">$= 30^\circ \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">আবার, $1$ ঘণ্টা বা $60$ মিনিটে ঘণ্টার কাঁটাটি যদি $30^\circ$ ঘোরে, তবে প্রতি $1$ মিনিটে সেটি কতটুকু ঘোরে তাও বের করে নিই:</div>
+            <div class="step">$60 \text{ মিনিটে ঘণ্টার কাঁটা ঘোরে} = 30^\circ$</div>
+            <div class="step">$1 \text{ মিনিটে ঘণ্টার কাঁটা ঘোরে} = \frac{30^\circ}{60}$</div>
+            <div class="step">$= \left(\frac{1}{2}\right)^\circ \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step">$= 0.5^\circ \quad [\text{দশমিকে প্রকাশ করে}]$</div>
+            <div class="step-explain">এবার মিনিটের কাঁটার ক্ষেত্রে হিসাব করি। মিনিটের কাঁটাটি সম্পূর্ণ একবার ঘুরে আসলে (অর্থাৎ $60$ মিনিটে) মোট $360^\circ$ কোণ অতিক্রম করে:</div>
+            <div class="step">$60 \text{ মিনিটে মিনিটের কাঁটা ঘোরে} = 360^\circ$</div>
+            <div class="step">$1 \text{ মিনিটে মিনিটের কাঁটা ঘোরে} = \frac{360^\circ}{60}$</div>
+            <div class="step">$= 6^\circ \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">এখন প্রশ্নে দেওয়া সময়টি হলো সকাল $10:45$। এর অর্থ হলো ঘড়িতে তখন $10$ ঘণ্টা এবং $45$ মিনিট অতিবাহিত হয়েছে।</div>
+            <div class="step-explain">ঘড়ির একদম শুরুর বিন্দু (অর্থাৎ ১২ টার দাগ) থেকে $10$ ঘণ্টা $45$ মিনিটে ঘণ্টার কাঁটাটি মোট কত ডিগ্রি দূরত্ব অতিক্রম করেছে তা নির্ণয় করি:</div>
+            <div class="step">ঘণ্টার কাঁটার মোট অতিক্রান্ত কোণ $= 10 \cdot 30^\circ + 45 \cdot 0.5^\circ$</div>
+            <div class="step">$= 300^\circ + 22.5^\circ \quad [\text{গুণ করে}]$</div>
+            <div class="step">$= 322.5^\circ \quad [\text{যোগ করে}]$</div>
+            <div class="step-explain">অনুরূপভাবে, ১২ টার দাগ থেকে শুরু করে $45$ মিনিটে মিনিটের কাঁটাটি মোট কত ডিগ্রি পথ অতিক্রম করেছে তা নির্ণয় করি:</div>
+            <div class="step">মিনিটের কাঁটার মোট অতিক্রান্ত কোণ $= 45 \cdot 6^\circ$</div>
+            <div class="step">$= 270^\circ \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">এখন সকাল $10:45$ টায় দুই কাঁটার মধ্যবর্তী কোণ বের করতে হলে ঘণ্টার কাঁটার মোট কোণ থেকে মিনিটের কাঁটার মোট কোণ বিয়োগ করতে হবে:</div>
+            <div class="step">মধ্যবর্তী কোণ $= 322.5^\circ - 270^\circ$</div>
+            <div class="step">$= 52.5^\circ \quad [\text{বিয়োগ করে}]$</div>
+            <div class="step-explain">শিক্ষার্থীদের আরও নিখুঁতভাবে বোঝানোর জন্য এই দশমিক মানটিকে ডিগ্রি ও মিনিটে প্রকাশ করে দেখানো হলো (আমরা জানি, $1^\circ = 60'$):</div>
+            <div class="step">$= 52^\circ + 0.5^\circ$</div>
+            <div class="step">$= 52^\circ + (0.5 \cdot 60)' \quad [\because 1^\circ = 60']$</div>
+            <div class="step">$= 52^\circ 30' \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">সুতরাং দুই কাঁটার মধ্যবর্তী কোণ সফলভাবে ডিগ্রিতে নির্ণয় করা হলো।</div>
+            <div class="step"><strong>অতএব,</strong> সকাল $10:45$ টায় ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটার মধ্যবর্তী কোণ $52.5^\circ$ (বা $52^\circ 30'$)।</div>
+        </div>
+
+        <h2>গ্রুপ - ৫ (বৃত্তচাপ ও বৃত্তকলা সংক্রান্ত বাস্তব সমস্যা)</h2>
+        
+        <div class="problem-card">
+            <div class="problem-title">২১. একটি বৃত্তচাপ $30$ মিটার ব্যাসার্ধবিশিষ্ট একটি বৃত্তের কেন্দ্রে $60^\circ$ কোণ উৎপন্ন করে। বৃত্তচাপটির দৈর্ঘ্য এবং চাপটির উপর দণ্ডায়মান বৃত্তকলার ক্ষেত্রফল নির্ণয় কর।</div>
+            <div class="solution-title">সমাধান:</div>
+            <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানগুলো প্রতীকসহ স্পষ্টভাবে লিখে নিই:</div>
+            <div class="step">দেওয়া আছে, বৃত্তের ব্যাসার্ধ, $r = 30 \text{ মিটার}$</div>
+            <div class="step">কেন্দ্রে উৎপন্ন কোণ, $\theta = 60^\circ$</div>
+            <div class="step-explain">আমরা জানি, বৃত্তচাপ বা বৃত্তকলার সূত্রে হিসাব করার জন্য কোণ $\theta$-কে অবশ্যই রেডিয়ান এককে রূপান্তর করতে হবে। ডিগ্রিকে রেডিয়ানে নিতে $\frac{\pi}{180}$ দ্বারা গুণ করি:</div>
+            <div class="step">$\theta = 60 \cdot \frac{\pi}{180} \text{ রেডিয়ান} \quad [\because 1^\circ = \frac{\pi}{180} \text{ rad}]$</div>
+            <div class="step-explain">লবের $60$ দ্বারা হরের $180$ কে ভাগ করে কাটাকাটি করি (আমরা জানি, $60 \cdot 3 = 180$):</div>
+            <div class="step">$\Rightarrow \theta = \frac{\pi}{3} \text{ রেডিয়ান} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="solution-subtitle">১ম অংশ: বৃত্তচাপের দৈর্ঘ্য নির্ণয়</div>
+            <div class="step-explain">আমরা জানি, বৃত্তচাপের দৈর্ঘ্য, $s = r\theta$</div>
+            <div class="step-explain">এখন সূত্রে $r$ এবং $\theta$ এর মান প্রতিস্থাপন করে পাই:</div>
+            <div class="step">$\Rightarrow s = 30 \cdot \frac{\pi}{3} \text{ মিটার} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">হরের $3$ দ্বারা $30$ কে ভাগ করে সরল করি (আমরা জানি, $30 \div 3 = 10$):</div>
+            <div class="step">$\Rightarrow s = 10\pi \text{ মিটার} \quad [\text{ভাগ করে}]$</div>
+            <div class="step-explain">প্রম্পটের নির্দেশনানুযায়ী $\pi \approx 3.14159$ মান বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow s \approx 10 \cdot 3.14159 \text{ মিটার} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">দশমিক বিন্দু ডানপাশে ১ ঘর সরিয়ে গুণফল নির্ণয় করি:</div>
+            <div class="step">$\Rightarrow s \approx 31.4159 \text{ মিটার} \quad [\text{গুণ করে}]$</div>
+            <div class="solution-subtitle">২য় অংশ: বৃত্তকলার ক্ষেত্রফল নির্ণয়</div>
+            <div class="step-explain">আমরা জানি, বৃত্তকলার ক্ষেত্রফল, $A = \frac{1}{2}r^2\theta$</div>
+            <div class="step-explain">সূত্রে $r$ ও $\theta$ এর মান প্রতিস্থাপন করি:</div>
+            <div class="step">$\Rightarrow A = \frac{1}{2} \cdot (30)^2 \cdot \frac{\pi}{3} \text{ বর্গ মিটার} \quad [\text{মান বসিয়ে}]$</div>
+            <div class="step-explain">প্রথমে $30$ এর বর্গ বা স্কয়ার নির্ণয় করি (আমরা জানি, $30 \cdot 30 = 900$):</div>
+            <div class="step">$\Rightarrow A = \frac{1}{2} \cdot 900 \cdot \frac{\pi}{3} \text{ বর্গ মিটার} \quad [\text{বর্গ করে}]$</div>
+            <div class="step-explain">লবের $900$ কে হরের $2$ এবং $3$ এর গুণফল (অর্থাৎ $6$) দ্বারা ভাগ করি (অথবা, $900 \div 3 = 300$, তারপর $300 \div 2 = 150$):</div>
+            <div class="step">$\Rightarrow A = 150\pi \text{ বর্গ মিটার} \quad [\text{কাটাকাটি করে}]$</div>
+            <div class="step-explain">এবার $\pi \approx 3.14159$ মানটি বসিয়ে পাই:</div>
+            <div class="step">$\Rightarrow A \approx 150 \cdot 3.14159 \text{ বর্গ মিটার} \quad [\pi \approx 3.14159 \text{ বসিয়ে}]$</div>
+            <div class="step-explain">গুণ সম্পন্ন করে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁত ক্ষেত্রফল বের করি:</div>
+            <div class="step">$\Rightarrow A \approx 471.2385 \text{ বর্গ মিটার} \quad [\text{গুণ করে}]$</div>
+            <div class="step-explain">বৃত্তচাপের দৈর্ঘ্য এবং বৃত্তকলার ক্ষেত্রফল উভয়ই সফলভাবে দশমিকের পর ৪ ঘর পর্যন্ত নিখুঁতভাবে পাওয়া গেল।</div>
+            <div class="step"><strong>অতএব,</strong> বৃত্তচাপটির দৈর্ঘ্য প্রায় $31.4159 \text{ মিটার}$ এবং বৃত্তকলার ক্ষেত্রফল প্রায় $471.2385 \text{ বর্গ মিটার}$।</div>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

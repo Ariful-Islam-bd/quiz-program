@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7B Q01-Q12</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> ত্রিকোণমিতি অনুশীলনী (7B)</h1>
+
+<div class="problem-card">
+    <div class="problem-title">১. মান নির্ণয় কর:</div>
+    
+    <div class="problem-sub-title">i. $\cos 75^\circ$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    
+    <div class="step-explain">আমরা $75^\circ$ কোণটিকে এমন দুটি কোণের যোগফল হিসেবে প্রকাশ করব যাদের ত্রিকোণমিতিক অনুপাতের আদর্শ মান আমরা সহজেই জানি (যেমন: $45^\circ$ এবং $30^\circ$):</div>
+    <div class="step">$\cos 75^\circ = \cos\left(45^\circ + 30^\circ\right) \quad [75^\circ = 45^\circ + 30^\circ \text{ লিখে}]$</div>
+    
+    <div class="step-explain">এখন কোসাইনের যৌগিক কোণের সূত্র $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$ প্রয়োগ করি। এখানে $\text{A} = 45^\circ$ এবং $\text{B} = 30^\circ$ বিবেচনা করে পাই:</div>
+    <div class="step">$\Rightarrow \cos 75^\circ = \cos 45^\circ \cdot \cos 30^\circ - \sin 45^\circ \cdot \sin 30^\circ \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার আমরা আদর্শ কোণগুলোর জানা মানগুলো বসাই, যেখানে $\cos 45^\circ = \frac{1}{\sqrt{2}}$, $\cos 30^\circ = \frac{\sqrt{3}}{2}$, $\sin 45^\circ = \frac{1}{\sqrt{2}}$ এবং $\sin 30^\circ = \frac{1}{2}$:</div>
+    <div class="step">$\Rightarrow \cos 75^\circ = \left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{\sqrt{3}}{2}\right) - \left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{1}{2}\right) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">পদগুলোকে নিজেদের মধ্যে গুণ করি:</div>
+    <div class="step">$\Rightarrow \cos 75^\circ = \frac{\sqrt{3}}{2\sqrt{2}} - \frac{1}{2\sqrt{2}} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">ভগ্নাংশ দুটির হর একই ($2\sqrt{2}$)। সুতরাং এদের লসাগু করে পাই:</div>
+    <div class="step">$\Rightarrow \cos 75^\circ = \frac{\sqrt{3} - 1}{2\sqrt{2}} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">নির্ণেয় মানটি পাওয়া গেল।</div>
+    <div class="step">$\therefore \cos 75^\circ = \frac{\sqrt{3} - 1}{2\sqrt{2}}$</div>
+
+    <hr />
+
+    <div class="problem-sub-title">ii. $\sec 165^\circ$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    
+    <div class="step-explain">আমরা জানি, সেক ($\sec$) অনুপাত হলো কোসাইন ($\cos$) অনুপাতের বিপরীত, অর্থাৎ $\sec\theta = \frac{1}{\cos\theta}$। তাই প্রথমে আমরা $\cos 165^\circ$ এর মান বের করব:</div>
+    <div class="step">$\cos 165^\circ = \cos\left(120^\circ + 45^\circ\right) \quad [165^\circ = 120^\circ + 45^\circ \text{ লিখে}]$</div>
+    
+    <div class="step-explain">কোসাইনের যৌগিক কোণের সূত্র $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \cos 165^\circ = \cos 120^\circ \cdot \cos 45^\circ - \sin 120^\circ \cdot \sin 45^\circ \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\cos 120^\circ = -\frac{1}{2}$ এবং $\sin 120^\circ = \frac{\sqrt{3}}{2}$। এই মানগুলো অন্যান্য আদর্শ মানের সাথে প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow \cos 165^\circ = \left(-\frac{1}{2}\right) \cdot \left(\frac{1}{\sqrt{2}}\right) - \left(\frac{\sqrt{3}}{2}\right) \cdot \left(\frac{1}{\sqrt{2}}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos 165^\circ = -\frac{1}{2\sqrt{2}} - \frac{\sqrt{3}}{2\sqrt{2}} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">হর একই থাকায় লসাগু করে পাই:</div>
+    <div class="step">$\Rightarrow \cos 165^\circ = \frac{-1 - \sqrt{3}}{2\sqrt{2}} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain">লব থেকে একটি মাইনাস ($-$) চিহ্ন কমন নিয়ে সুন্দরভাবে সাজাই:</div>
+    <div class="step">$\Rightarrow \cos 165^\circ = -\frac{\sqrt{3} + 1}{2\sqrt{2}} \quad [\text{মাইনাস কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">এখন $\sec 165^\circ = \frac{1}{\cos 165^\circ}$ সম্পর্কে মানটি বসিয়ে ভগ্নাংশটি উল্টে দিই:</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = \frac{1}{-\frac{\sqrt{3} + 1}{2\sqrt{2}}} \quad [\text{ব্যস্তকরণ সম্পর্ক বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\frac{2\sqrt{2}}{\sqrt{3} + 1} \quad [\text{উল্টে গুণ করে}]$</div>
+    
+    <div class="step-explain">হরের অমূলদ রাশি দূর করার জন্য লব ও হরকে $(\sqrt{3} - 1)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\frac{2\sqrt{2}\cdot\left(\sqrt{3} - 1\right)}{\left(\sqrt{3} + 1\right)\cdot\left(\sqrt{3} - 1\right)} \quad [\text{লব ও হরকে } (\sqrt{3}-1) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\frac{2\sqrt{2}\cdot\left(\sqrt{3} - 1\right)}{\left(\sqrt{3}\right)^2 - (1)^2} \quad [\text{হরে } (\text{a}+\text{b})(\text{a}-\text{b})=\text{a}^2-\text{b}^2 \text{ সূত্র ব্যবহার করে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\frac{2\sqrt{2}\cdot\left(\sqrt{3} - 1\right)}{3 - 1} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\frac{2\sqrt{2}\cdot\left(\sqrt{3} - 1\right)}{2} \quad [\text{বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $2$ কাটাকাটি করি:</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\sqrt{2}\cdot\left(\sqrt{3} - 1\right) \quad [\text{কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = -\sqrt{6} + \sqrt{2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \sec 165^\circ = \sqrt{2} - \sqrt{6} \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step">$\therefore \sec 165^\circ = \sqrt{2} - \sqrt{6}$</div>
+
+    <hr />
+
+    <div class="problem-sub-title">iii. $\tan 15^\circ$</div>
+    <div class="solution-title"> সমাধান (iii):</div>
+    
+    <div class="step-explain">কোণ $15^\circ$ কে আমরা $45^\circ - 30^\circ$ হিসেবে লিখতে পারি:</div>
+    <div class="step">$\tan 15^\circ = \tan\left(45^\circ - 30^\circ\right) \quad [15^\circ = 45^\circ - 30^\circ \text{ লিখে}]$</div>
+    
+    <div class="step-explain">ট্যানজেন্টের যৌগিক কোণের বিয়োগফলের সূত্র $\tan(\text{A} - \text{B}) = \frac{\tan\text{A} - \tan\text{B}}{1 + \tan\text{A} \cdot \tan\text{B}}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\tan 45^\circ - \tan 30^\circ}{1 + \tan 45^\circ \cdot \tan 30^\circ} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\tan 45^\circ = 1$ এবং $\tan 30^\circ = \frac{1}{\sqrt{3}}$। এই মানগুলো সমীকরণে বসাই:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{1 - \frac{1}{\sqrt{3}}}{1 + 1 \cdot \left(\frac{1}{\sqrt{3}}\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{1 - \frac{1}{\sqrt{3}}}{1 + \frac{1}{\sqrt{3}}}$</div>
+    
+    <div class="step-explain">প্রধান ভগ্নাংশের লব ও হর উভয় অংশে আলাদাভাবে $\sqrt{3}$ লসাগু করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\frac{\sqrt{3} - 1}{\sqrt{3}}}{\frac{\sqrt{3} + 1}{\sqrt{3}}} \quad [\text{লব ও হরে লসাগু করে}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটি দূর করার জন্য নিচের অংশটি উল্টে গুণ করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\sqrt{3} - 1}{\sqrt{3}} \cdot \frac{\sqrt{3}}{\sqrt{3} + 1} \quad [\text{উল্টে গুণ করে}]$</div>
+    
+    <div class="step-explain">লব ও হরের সাধারণ উৎপাদক $\sqrt{3}$ কাটাকাটি করে পাই:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\sqrt{3} - 1}{\sqrt{3} + 1} \quad [\text{কাটাকাটি করে}]$</div>
+    
+    <div class="step-explain">হরকে মূলদ করার জন্য লব ও হরকে হরের বিপরীত অনুবন্ধী রাশি $(\sqrt{3} - 1)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\left(\sqrt{3} - 1\right)\cdot\left(\sqrt{3} - 1\right)}{\left(\sqrt{3} + 1\right)\cdot\left(\sqrt{3} - 1\right)} \quad [\text{লব ও হরকে } (\sqrt{3}-1) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\left(\sqrt{3} - 1\right)^2}{\left(\sqrt{3}\right)^2 - (1)^2} \quad [\text{লবে বর্গ এবং হরে বর্গের পার্থক্য সূত্র}]$</div>
+    
+    <div class="step-explain">লবে $(\text{a}-\text{b})^2 = \text{a}^2 - 2\text{ab} + \text{b}^2$ সূত্র বিস্তার করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{\left(\sqrt{3}\right)^2 - 2\cdot\sqrt{3}\cdot1 + (1)^2}{3 - 1} \quad [\text{সূত্র বিস্তার করে}]$</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{3 - 2\sqrt{3} + 1}{2} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{4 - 2\sqrt{3}}{2} \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">লব থেকে $2$ কমন নিয়ে কাটাকাটি করি:</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = \frac{2\cdot\left(2 - \sqrt{3}\right)}{2} \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan 15^\circ = 2 - \sqrt{3} \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step">$\dots \tan 15^\circ = 2 - \sqrt{3}$</div>
+
+    <hr />
+
+    <div class="problem-sub-title">iv. $\tan 105^\circ$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    
+    <div class="step-explain">কোণ $105^\circ$ কে আমরা আদর্শ দুটি কোণ $60^\circ + 45^\circ$ এর যোগফল রূপে লিখি:</div>
+    <div class="step">$\tan 105^\circ = \tan\left(60^\circ + 45^\circ\right) \quad [105^\circ = 60^\circ + 45^\circ \text{ লিখে}]$</div>
+    
+    <div class="step-explain">ট্যানজেন্টের যৌগিক কোণের যোগফলের সূত্র $\tan(\text{A} + \text{B}) = \frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = \frac{\tan 60^\circ + \tan 45^\circ}{1 - \tan 60^\circ \cdot \tan 45^\circ} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক আদর্শ মান বসাই, যেখানে $\tan 60^\circ = \sqrt{3}$ এবং $\tan 45^\circ = 1$:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = \frac{\sqrt{3} + 1}{1 - \sqrt{3} \cdot 1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = \frac{\sqrt{3} + 1}{1 - \sqrt{3}}$</div>
+    
+    <div class="step-explain">হর থেকে একটি মাইনাস ($-$) চিহ্ন কমন নিয়ে সাজিয়ে নিই, যাতে গণনা করতে সুবিধা হয়:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = \frac{\sqrt{3} + 1}{-\left(\sqrt{3} - 1\right)} \quad [\text{হরে মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{\sqrt{3} + 1}{\sqrt{3} - 1}$</div>
+    
+    <div class="step-explain">হরকে মূলদ আকারে রূপান্তর করার জন্য লব ও হর উভয় অংশকে $(\sqrt{3} + 1)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{\left(\sqrt{3} + 1\right)\cdot\left(\sqrt{3} + 1\right)}{\left(\sqrt{3} - 1\right)\cdot\left(\sqrt{3} + 1\right)} \quad [\text{লব ও হরকে } (\sqrt{3}+1) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{\left(\sqrt{3} + 1\right)^2}{\left(\sqrt{3}\right)^2 - (1)^2} \quad [\text{লবে পূর্ণবর্গ ও হরে বর্গের পার্থক্য সূত্র}]$</div>
+    
+    <div class="step-explain">লবে $(\text{a}+\text{b})^2 = \text{a}^2 + 2\text{ab} + \text{b}^2$ সূত্র ভাঙি:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{\left(\sqrt{3}\right)^2 + 2\cdot\sqrt{3}\cdot1 + (1)^2}{3 - 1} \quad [\text{সূত্র বিস্তার করে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{3 + 2\sqrt{3} + 1}{2} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{4 + 2\sqrt{3}}{2} \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">লব থেকে সাধারণ উৎপাদক $2$ কমন নিই:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\frac{2\cdot\left(2 + \sqrt{3}\right)}{2} \quad [\text{কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $2$ কাটাকাটি করে আমরা চূড়ান্ত মান পাই:</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -\left(2 + \sqrt{3}\right) \quad [\text{কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \tan 105^\circ = -2 - \sqrt{3} \quad [\text{মাইনাস দ্বারা গুণ করে}]$</div>
+    <div class="step">$\therefore \tan 105^\circ = -2 - \sqrt{3} \text{ অথবা } -\left(2 + \sqrt{3}\right)$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">২. $f(x) = \sin x$ হলে $\triangle\text{ABC}$-এ দেখাও যে, $f(\text{A}) = \sin\text{B} \cos\text{C} + \cos\text{B} \sin\text{C}$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রশ্নে একটি ফাংশন দেওয়া আছে, তা প্রথমে লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $f(x) = \sin x$</div>
+    
+    <div class="step-explain">এই ফাংশন অনুযায়ী, চলক $x$ এর স্থলে ত্রিভুজের কোণ $\text{A}$ বসালে আমরা পাই:</div>
+    <div class="step">$f(\text{A}) = \sin\text{A} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, যেকোনো ত্রিভুজ $\triangle\text{ABC}$-এর তিন কোণের সমষ্টি দুই সমকোণ বা $180^\circ$ বা $\pi$ রেডিয়ান।</div>
+    <div class="step">$\text{A} + \text{B} + \text{C} = \pi \quad [\triangle\text{ABC} \text{-এর তিন কোণের সমষ্টি}]$</div>
+    
+    <div class="step-explain">এখান থেকে কোণ $\text{A}$ এর মানটি বের করে নিই:</div>
+    <div class="step">$\Rightarrow \text{A} = \pi - (\text{B} + \text{C}) \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">এখন আমাদের প্রমাণ করার সুবিধার্থে ডানপক্ষ (RHS) দিয়ে হিসাব শুরু করি:</div>
+    <div class="step">$\text{RHS} = \sin\text{B} \cdot \cos\text{C} + \cos\text{B} \cdot \sin\text{C}$</div>
+    
+    <div class="step-explain">আমরা ত্রিকোণমিতির যৌগিক কোণের একটি গুরুত্বপূর্ণ সূত্র জানি: $\sin(\text{B} + \text{C}) = \sin\text{B} \cdot \cos\text{C} + \cos\text{B} \cdot \sin\text{C}$। এই সূত্রটি এখানে ডানপক্ষে সরাসরি প্রয়োগ করা যায়:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \sin(\text{B} + \text{C}) \quad [\because \sin\text{B}\cos\text{C} + \cos\text{B}\sin\text{C} = \sin(\text{B}+\text{C})]$</div>
+    
+    <div class="step-explain">এবার আমরা পূর্বে বের করে রাখা সম্পর্ক $\text{A} = \pi - (\text{B} + \text{C})$ থেকে পাই যে, $(\text{B} + \text{C}) = \pi - \text{A}$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \sin(\pi - \text{A}) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক সংযুক্ত কোণের নিয়ম বা চতুর্ভাগের নিয়ম অনুযায়ী, $\pi$ বা $180^\circ$ থেকে কোনো কোণ বিয়োগ করলে তা দ্বিতীয় চতুর্ভাগে (2nd Quadrant) অবস্থান করে। দ্বিতীয় চতুর্ভাগে $\sin$ ধনাত্মক ($+$) এবং $\pi$ বা $2 \cdot \frac{\pi}{2}$ জোড় গুণিতক হওয়ায় অনুপাত পরিবর্তিত হয় না। অর্থাৎ, $\sin(\pi - \text{A}) = \sin\text{A}$ হয়।</div>
+    <div class="step">$\Rightarrow \text{RHS} = \sin\text{A} \quad [\because \sin(\pi - \theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">শুরুতেই আমরা দেখেছি যে, $\sin\text{A} = f(\text{A})$। অতএব:</div>
+    <div class="step">$\Rightarrow \text{RHS} = f(\text{A}) \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">পদগুলোকে সাজিয়ে লিখলে আমরা বামপক্ষ পেয়ে যাই:</div>
+    <div class="step">$\Rightarrow \text{RHS} = \text{LHS}$</div>
+    
+    <div class="step-explain">সুতরাং, সম্পর্কটি সফলভাবে দেখানো হলো।</div>
+    <div class="step">$\therefore f(\text{A}) = \sin\text{B} \cos\text{C} + \cos\text{B} \sin\text{C} \quad [\text{দেখানো হলো}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৩. প্রমাণ কর যে, $\tan 75^\circ = 2 + \sqrt{3}$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রমাণের সুবিধার্থে আমরা প্রথমে বামপক্ষ (LHS) নিয়ে কাজ শুরু করি। এখানে $75^\circ$ কোণটিকে আমাদের চেনা দুটি আদর্শ কোণের যোগফল হিসেবে প্রকাশ করব।</div>
+    <div class="step">$\text{LHS} = \tan 75^\circ$</div>
+    
+    <div class="step-explain">আমরা জানি, $75^\circ = 45^\circ + 30^\circ$। সুতরাং কোণটিকে ভেঙে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \tan(45^\circ + 30^\circ) \quad [75^\circ \text{ কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতির যৌগিক কোণের সূত্র অনুযায়ী আমরা জানি, $\tan(\text{A} + \text{B}) = \frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$। এখানে $\text{A} = 45^\circ$ এবং $\text{B} = 30^\circ$ ধরে সূত্রটি প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\tan 45^\circ + \tan 30^\circ}{1 - \tan 45^\circ \cdot \tan 30^\circ} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন আদর্শ কোণগুলোর নির্দিষ্ট মান বসাই। আমরা জানি, $\tan 45^\circ = 1$ এবং $\tan 30^\circ = \frac{1}{\sqrt{3}}$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{1 + \frac{1}{\sqrt{3}}}{1 - 1 \cdot \left(\frac{1}{\sqrt{3}}\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{1 + \frac{1}{\sqrt{3}}}{1 - \frac{1}{\sqrt{3}}}$</div>
+    
+    <div class="step-explain">এবার লব এবং হর উভয় অংশের ভগ্নাংশগুলোর সাধারণ লসাগু করি। এখানে লসাগু হবে $\sqrt{3}$:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\frac{\sqrt{3} + 1}{\sqrt{3}}}{\frac{\sqrt{3} - 1}{\sqrt{3}}} \quad [\text{লব ও হরে লসাগু করে}]$</div>
+    
+    <div class="step-explain">জটিল ভগ্নাংশটিকে সরল করার জন্য হরের অংশটিকে উল্টে গুণ আকারে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sqrt{3} + 1}{\sqrt{3}} \cdot \frac{\sqrt{3}}{\sqrt{3} - 1} \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের সাধারণ উৎপাদক $\sqrt{3}$ কাটাকাটি করে বা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\sqrt{3} + 1}{\sqrt{3} - 1} \quad [\sqrt{3} \text{ বাতিল করে}]$</div>
+    
+    <div class="step-explain">হরের করণী নিরসন করার জন্য (অর্থাৎ হর থেকে রুট চিহ্ন সরানোর জন্য) লব ও হরকে হরের অনুবন্ধী রাশি $\left(\sqrt{3} + 1\right)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\left(\sqrt{3} + 1\right) \cdot \left(\sqrt{3} + 1\right)}{\left(\sqrt{3} - 1\right) \cdot \left(\sqrt{3} + 1\right)} \quad [\text{লব ও হরকে } (\sqrt{3}+1) \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\left(\sqrt{3} + 1\right)^2}{\left(\sqrt{3}\right)^2 - 1^2} \quad [\text{সূত্রে সাজিয়ে}]$</div>
+    
+    <div class="step-explain">লবে বর্গের সূত্র $(a+b)^2 = a^2 + 2ab + b^2$ এবং হরে $(a-b)(a+b) = a^2 - b^2$ সূত্র ভেঙে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{\left(\sqrt{3}\right)^2 + 2 \cdot \sqrt{3} \cdot 1 + 1^2}{3 - 1} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{3 + 2\sqrt{3} + 1}{2}$</div>
+    
+    <div class="step-explain">লবের সংখ্যাগুলো যোগ করি: $3 + 1 = 4$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{4 + 2\sqrt{3}}{2}$</div>
+    
+    <div class="step-explain">লব থেকে সাধারণ উৎপাদক $2$ কমন বা ভাগ করে নিই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \frac{2 \cdot \left(2 + \sqrt{3}\right)}{2} \quad [2 \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $2$ কাটাকাটি করলে চূড়ান্ত সরল মান পাওয়া যায়:</div>
+    <div class="step">$\Rightarrow \text{LHS} = 2 + \sqrt{3} \quad [\text{লব ও হরকে ২ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain">আমরা দেখতে পাচ্ছি এটি আমাদের ডানপক্ষের (RHS) সমান।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \text{RHS}$</div>
+    <div class="step">$\therefore \tan 75^\circ = 2 + \sqrt{3} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৪. $\triangle\text{ABC}$-এ $\text{A} + \text{B} = 105^\circ$ হলে $\sin\text{C}$ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে প্রদত্ত মানটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\text{A} + \text{B} = 105^\circ$</div>
+    
+    <div class="step-explain">আমরা জানি, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের সমষ্টি সর্বদা $180^\circ$ হয়। অর্থাৎ $\triangle\text{ABC}$-এর ক্ষেত্রে:</div>
+    <div class="step">$\text{A} + \text{B} + \text{C} = 180^\circ \quad [\text{ত্রিভুজের তিন কোণের সমষ্টি}]$</div>
+    
+    <div class="step-explain">এখন এই সমীকরণে $(\text{A} + \text{B})$ এর স্থলে প্রশ্নে প্রদত্ত মান $105^\circ$ প্রতিস্থাপন করি:</div>
+    <div class="step">$\Rightarrow 105^\circ + \text{C} = 180^\circ \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">কোণ $\text{C}$ এর মান বের করার জন্য $105^\circ$ কে ডানপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \text{C} = 180^\circ - 105^\circ \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow \text{C} = 75^\circ \quad [\text{বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">আমাদের $\sin\text{C}$ এর মান নির্ণয় করতে হবে। কোণ $\text{C}$ এর জায়গায় $75^\circ$ বসিয়ে পাই:</div>
+    <div class="step">$\sin\text{C} = \sin 75^\circ \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">কোণ $75^\circ$ এর সরাসরি মান সাধারণ টেবিলে থাকে না, তাই যৌগিক কোণের সূত্রে ফেলার জন্য এটিকে দুটি আদর্শ কোণের যোগফল রূপে ভাঙি: $75^\circ = 45^\circ + 30^\circ$</div>
+    <div class="step">$\Rightarrow \sin\text{C} = \sin(45^\circ + 30^\circ) \quad [75^\circ \text{ কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা ত্রিকোণমিতির যৌগিক কোণের সাইন সূত্রটি জানি: $\sin(\text{X} + \text{Y}) = \sin\text{X} \cdot \cos\text{Y} + \cos\text{X} \cdot \sin\text{Y}$। সূত্রটি এখানে প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \sin\text{C} = \sin 45^\circ \cdot \cos 30^\circ + \cos 45^\circ \cdot \sin 30^\circ \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন আদর্শ কোণসমূহের মানগুলো নির্ভুলভাবে বসিয়ে দিই: $\sin 45^\circ = \frac{1}{\sqrt{2}}$, $\cos 30^\circ = \frac{\sqrt{3}}{2}$, $\cos 45^\circ = \frac{1}{\sqrt{2}}$, এবং $\sin 30^\circ = \frac{1}{2}$।</div>
+    <div class="step">$\Rightarrow \sin\text{C} = \left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{\sqrt{3}}{2}\right) + \left(\frac{1}{\sqrt{2}}\right) \cdot \left(\frac{1}{2}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{C} = \frac{\sqrt{3}}{2\sqrt{2}} + \frac{1}{2\sqrt{2}} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">যেহেতু দুটি ভগ্নাংশের হরই এক $\left(2\sqrt{2}\right)$, তাই লসাগু করে লব দুটি সরাসরি যোগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sin\text{C} = \frac{\sqrt{3} + 1}{2\sqrt{2}} \quad [\text{লসাগু করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\frac{\sqrt{3} + 1}{2\sqrt{2}}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৫. $\sin(\text{A} - \text{B} + \text{C})$ কে বিস্তৃত কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রদত্ত ত্রিকোণমিতিক রাশিতে তিনটি কোণ রয়েছে। যৌগিক কোণের পরিচিত সূত্রে সাজানোর জন্য আমরা প্রথম দুটি কোণকে বন্ধনীভুক্ত করে একটি কোণ বিবেচনা করব।</div>
+    <div class="step">প্রদত্ত রাশি $= \sin\left\{(\text{A} - \text{B}) + \text{C}\right\} \quad [\text{বন্ধনী ব্যবহার করে}]$</div>
+    
+    <div class="step-explain">এখন আমরা এই রাশিটিকে $\sin(\text{X} + \text{Y})$ সূত্রের সাথে তুলনা করতে পারি, যেখানে প্রথম অংশ $\text{X} = (\text{A} - \text{B})$ এবং দ্বিতীয় অংশ $\text{Y} = \text{C}$।</div>
+    <div class="step-explain">আমরা জানি, $\sin(\text{X} + \text{Y}) = \sin\text{X} \cdot \cos\text{Y} + \cos\text{X} \cdot \sin\text{Y}$। এই সূত্র অনুযায়ী রাশিটিকে ভাঙলে পাই:</div>
+    <div class="step">$= \sin(\text{A} - \text{B}) \cdot \cos\text{C} + \cos(\text{A} - \text{B}) \cdot \sin\text{C} \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার ব্র্যাকেটের ভেতরে থাকা $\sin(\text{A} - \text{B})$ এবং $\cos(\text{A} - \text{B})$ অংশ দুটিকে আবার তাদের নিজস্ব যৌগিক কোণের মূল সূত্রে ভেঙে লিখতে হবে।</div>
+    <div class="step-explain">আমরা জানি:</div>
+    <div class="step-explain">
+        * $\sin(\text{A} - \text{B}) = \sin\text{A} \cdot \cos\text{B} - \cos\text{A} \cdot \sin\text{B}$<br>
+        * $\cos(\text{A} - \text{B}) = \cos\text{A} \cdot \cos\text{B} + \sin\text{A} \cdot \sin\text{B}$
+    </div>
+    
+    <div class="step-explain">এই দুটি সূত্র মূল লাইনে প্রতিস্থাপন করি:</div>
+    <div class="step">$= \left(\sin\text{A} \cdot \cos\text{B} - \cos\text{A} \cdot \sin\text{B}\right) \cdot \cos\text{C} + \left(\cos\text{A} \cdot \cos\text{B} + \sin\text{A} \cdot \sin\text{B}\right) \cdot \sin\text{C} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain">এখন ব্র্যাকেট বা বন্ধনী তুলে দিয়ে বাইরের পদগুলো দিয়ে ভেতরের পদগুলোকে সাধারণ বীজগণিতীয় নিয়মে গুণ করে দিই:</div>
+    <div class="step">$= \sin\text{A} \cdot \cos\text{B} \cdot \cos\text{C} - \cos\text{A} \cdot \sin\text{B} \cdot \cos\text{C} + \cos\text{A} \cdot \cos\text{B} \cdot \sin\text{C} + \sin\text{A} \cdot \sin\text{B} \cdot \sin\text{C} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">বিস্তৃতির কাজ সম্পন্ন হয়েছে। পদগুলোকে সুন্দর ও ক্রমানুসারে (প্রথমে ৩টি $\sin$ এর গুণফল, এরপর ১টি $\sin$ ও ২টি $\cos$ এর গুণফল বিশিষ্ট পদগুলো) সাজিয়ে লিখি:</div>
+    <div class="step">$= \sin\text{A}\sin\text{B}\sin\text{C} + \sin\text{A}\cos\text{B}\cos\text{C} - \cos\text{A}\sin\text{B}\cos\text{C} + \cos\text{A}\cos\text{B}\sin\text{C} \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\sin\text{A}\sin\text{B}\sin\text{C} + \sin\text{A}\cos\text{B}\cos\text{C} - \cos\text{A}\sin\text{B}\cos\text{C} + \cos\text{A}\cos\text{B}\sin\text{C}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৬. $\text{A}$ ও $\text{B}$ ধনাত্মক সূক্ষ্মকোণ, $\sin\text{A} = \frac{3}{5}$ এবং $\cos\text{B} = \frac{12}{13}$ হলে, $\sin(\text{A} - \text{B})$ এবং $\cos(\text{A} + \text{B})$ এর মান কত?</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রশ্নে যে মানগুলো দেওয়া আছে, সেগুলো লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\sin\text{A} = \frac{3}{5}$ এবং $\cos\text{B} = \frac{12}{13}$</div>
+    <div class="step-explain">যেহেতু $\text{A}$ ও $\text{B}$ ধনাত্মক সূক্ষ্মকোণ, তাই এদের সকল ত্রিকোণমিতিক অনুপাতের মান ধনাত্মক ($+$) হবে।</div>
+    
+    <div class="step-explain">যৌগিক কোণের সূত্র ব্যবহারের জন্য আমাদের প্রথমে $\cos\text{A}$ এবং $\sin\text{B}$ এর মান বের করতে হবে।</div>
+    <div class="step-explain">আমরা জানি, $\cos^2\text{A} = 1 - \sin^2\text{A}$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \sqrt{1 - \sin^2\text{A}} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \sqrt{1 - \left(\frac{3}{5}\right)^2} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \sqrt{1 - \frac{9}{25}} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \sqrt{\frac{25 - 9}{25}} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \sqrt{\frac{16}{25}}$</div>
+    <div class="step">$\Rightarrow \cos\text{A} = \frac{4}{5} \quad [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain">একইভাবে, আমরা $\sin\text{B}$ এর মান নির্ণয় করি:</div>
+    <div class="step-explain">আমরা জানি, $\sin^2\text{B} = 1 - \cos^2\text{B}$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \sqrt{1 - \cos^2\text{B}} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \sqrt{1 - \left(\frac{12}{13}\right)^2} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \sqrt{1 - \frac{144}{169}} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \sqrt{\frac{169 - 144}{169}} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \sqrt{\frac{25}{169}}$</div>
+    <div class="step">$\Rightarrow \sin\text{B} = \frac{5}{13} \quad [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain"><strong>১ম অংশ: $\sin(\text{A} - \text{B})$ এর মান নির্ণয়:</strong></div>
+    <div class="step-explain">আমরা সূত্র জানি, $\sin(\text{A} - \text{B}) = \sin\text{A} \cdot \cos\text{B} - \cos\text{A} \cdot \sin\text{B}$</div>
+    <div class="step-explain">এখন প্রাপ্ত মানগুলো এই সূত্রে প্রতিস্থাপন করি:</div>
+    <div class="step">$\sin(\text{A} - \text{B}) = \left(\frac{3}{5}\right) \cdot \left(\frac{12}{13}\right) - \left(\frac{4}{5}\right) \cdot \left(\frac{5}{13}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin(\text{A} - \text{B}) = \frac{36}{65} - \frac{20}{65} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \sin(\text{A} - \text{B}) = \frac{36 - 20}{65} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sin(\text{A} - \text{B}) = \frac{16}{65}$</div>
+    
+    <div class="step-explain"><strong>২য় অংশ: $\cos(\text{A} + \text{B})$ এর মান নির্ণয়:</strong></div>
+    <div class="step-explain">আমরা সূত্র জানি, $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$</div>
+    <div class="step-explain">এখন প্রাপ্ত মানগুলো এই সূত্রে প্রতিস্থাপন করি:</div>
+    <div class="step">$\cos(\text{A} + \text{B}) = \left(\frac{4}{5}\right) \cdot \left(\frac{12}{13}\right) - \left(\frac{3}{5}\right) \cdot \left(\frac{5}{13}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \frac{48}{65} - \frac{15}{65} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \frac{48 - 15}{65} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \frac{33}{65}$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\sin(\text{A} - \text{B}) = \frac{16}{65}$ এবং $\cos(\text{A} + \text{B}) = \frac{33}{65}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৭. যদি $\cot\text{A} = \frac{11}{2}$, $\tan\text{B} = \frac{7}{24}$ হয়, তবে $\cot(\text{A} - \text{B})$ এবং $\tan(\text{A} + \text{B})$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত মানগুলো লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\cot\text{A} = \frac{11}{2}$ এবং $\tan\text{B} = \frac{7}{24}$</div>
+    
+    <div class="step-explain">হিসাবের সুবিধার্থে আমরা $\cot\text{A}$ থেকে $\tan\text{A}$ এর মান বের করে নিই, কারণ আমরা জানি $\tan\text{A} = \frac{1}{\cot\text{A}}$।</div>
+    <div class="step">$\tan\text{A} = \frac{1}{\frac{11}{2}} = \frac{2}{11} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">একইভাবে, $\tan\text{B}$ থেকে $\cot\text{B}$ এর মান বের করে নিই, যেখানে $\cot\text{B} = \frac{1}{\tan\text{B}}$।</div>
+    <div class="step">$\cot\text{B} = \frac{1}{\frac{7}{24}} = \frac{24}{7} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain"><strong>১ম অংশ: $\cot(\text{A} - \text{B})$ এর মান নির্ণয়:</strong></div>
+    <div class="step-explain">আমরা কোট্যানজেন্টের যৌগিক কোণের সূত্রটি ব্যবহার করি: $\cot(\text{A} - \text{B}) = \frac{\cot\text{A} \cdot \cot\text{B} + 1}{\cot\text{B} - \cot\text{A}}$</div>
+    <div class="step-explain">এখন সূত্রে মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$\cot(\text{A} - \text{B}) = \frac{\left(\frac{11}{2}\right) \cdot \left(\frac{24}{7}\right) + 1}{\frac{24}{7} - \frac{11}{2}} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = \frac{\frac{11 \cdot 12}{7} + 1}{\frac{24}{7} - \frac{11}{2}} \quad [\text{লব ও হরের ২ এবং ২৪ কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = \frac{\frac{132}{7} + 1}{\frac{24}{7} - \frac{11}{2}} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন লব এবং হর উভয় অংশে আলাদাভাবে লসাগু করি। লবের লসাগু $7$ এবং হরের লসাগু $14$:</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = \frac{\frac{132 + 7}{7}}{\frac{48 - 77}{14}} \quad [\text{লব ও হরে লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = \frac{\frac{139}{7}}{\frac{-29}{14}}$</div>
+    
+    <div class="step-explain">জতিলাকার ভগ্নাংশটিকে সরল করতে গুণ চিহ্ন দিয়ে উল্টে দিই:</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = \frac{139}{7} \cdot \left(-\frac{14}{29}\right) \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = 139 \cdot \left(-\frac{2}{29}\right) \quad [\text{লব ও হরের ৭ ও ১৪ কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \cot(\text{A} - \text{B}) = -\frac{278}{29} \quad [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain"><strong>২য় অংশ: $\tan(\text{A} + \text{B})$ এর মান নির্ণয়:</strong></div>
+    <div class="step-explain">আমরা ট্যানজেন্টের যৌগিক কোণের সূত্রটি জানি: $\tan(\text{A} + \text{B}) = \frac{\tan\text{A} + \tan\text{B}}{1 - \tan\text{A} \cdot \tan\text{B}}$</div>
+    <div class="step-explain">এবার সূত্রে $\tan\text{A}$ ও $\tan\text{B}$ এর মান প্রতিস্থাপন করি:</div>
+    <div class="step">$\tan(\text{A} + \text{B}) = \frac{\frac{2}{11} + \frac{7}{24}}{1 - \left(\frac{2}{11}\right) \cdot \left(\frac{7}{24}\right)} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{\frac{2}{11} + \frac{7}{24}}{1 - \frac{14}{261}} \quad [\text{নিচের হর গুণ করে } 11 \cdot 24 = 264]$</div>
+    <div class="step-explain">ভুল সংশোধন: $11 \cdot 24 = 264$ হবে। সুতরাং সঠিক রূপ লিখি:</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{\frac{2}{11} + \frac{7}{24}}{1 - \frac{14}{264}}$</div>
+    
+    <div class="step-explain">লব এবং হর উভয়ের ক্ষেত্রে লসাগু করি (লব ও হর উভয়েরই লসাগু $264$):</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{\frac{48 + 77}{264}}{\frac{264 - 14}{264}} \quad [\text{লব ও হরে লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{\frac{125}{264}}{\frac{250}{264}}$</div>
+    
+    <div class="step-explain">ভগ্নাংশটিকে সরল করতে নিচের অংশটি উল্টে গুণ করি:</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{125}{264} \cdot \frac{264}{250} \quad [\text{গুণ আকারে উল্টে দিয়ে}]$</div>
+    
+    <div class="step-explain">লব ও হরের $264$ কাটাকাটি যাবে এবং $\frac{125}{250}$ কে কাটাকাটি করলে পাওয়া যায় $\frac{1}{2}$:</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{125}{250} \quad [264 \text{ বাতিল করে}]$</div>
+    <div class="step">$\Rightarrow \tan(\text{A} + \text{B}) = \frac{1}{2} \quad [\text{লব ও হরকে ১২৫ দ্বারা ভাগ করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\cot(\text{A} - \text{B}) = -\frac{278}{29}$ এবং $\tan(\text{A} + \text{B}) = \frac{1}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৮. যদি $\text{A}$ ও $\text{B}$ ধনাত্মক সূক্ষ্মকোণ এবং $\sec\text{A} = \frac{17}{8}$, $\csc\text{B} = \frac{5}{4}$ হয়, তবে $\sec(\text{A} + \text{B})$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত মানগুলো লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\sec\text{A} = \frac{17}{8}$ এবং $\csc\text{B} = \frac{5}{4}$</div>
+    
+    <div class="step-explain">যেহেতু $\sec(\text{A} + \text{B}) = \frac{1}{\cos(\text{A} + \text{B})}$, তাই প্রথমে আমাদের $\cos(\text{A} + \text{B})$ এর মান বের করতে হবে। এর জন্য $\cos\text{A}, \sin\text{A}, \cos\text{B}, \sin\text{B}$ সবার মান প্রয়োজন।</div>
+    
+    <div class="step-explain">প্রদত্ত মান থেকে আমরা সহজেই পাই:</div>
+    <div class="step">$\cos\text{A} = \frac{1}{\sec\text{A}} = \frac{8}{17} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    <div class="step">$\sin\text{B} = \frac{1}{\csc\text{B}} = \frac{4}{5} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain">এখন বর্গের মৌলিক সূত্র ব্যবহার করে বাকি মান দুটি বের করি (যেহেতু সূক্ষ্মকোণ, মান ধনাত্মক হবে):</div>
+    <div class="step">$\sin\text{A} = \sqrt{1 - \cos^2\text{A}} = \sqrt{1 - \left(\frac{8}{17}\right)^2} \quad [\text{সূত্র ও মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{A} = \sqrt{1 - \frac{64}{289}} = \sqrt{\frac{289 - 64}{289}} \quad [\text{বর্গ ও লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \sin\text{A} = \sqrt{\frac{225}{289}} = \frac{15}{17} \quad [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain">একইভাবে $\cos\text{B}$ এর মান বের করি:</div>
+    <div class="step">$\cos\text{B} = \sqrt{1 - \sin^2\text{B}} = \sqrt{1 - \left(\frac{4}{5}\right)^2} \quad [\text{সূত্র ও মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{B} = \sqrt{1 - \frac{16}{25}} = \sqrt{\frac{25 - 16}{25}} \quad [\text{বর্গ ও লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos\text{B} = \sqrt{\frac{9}{25}} = \frac{3}{5} \quad [\text{বর্গমূল করে}]$</div>
+    
+    <div class="step-explain">এখন যৌগিক কোণের সূত্রানুযায়ী $\cos(\text{A} + \text{B})$ এর মান নির্ণয় করি:</div>
+    <div class="step">$\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \left(\frac{8}{17}\right) \cdot \left(\frac{3}{5}\right) - \left(\frac{15}{17}\right) \cdot \left(\frac{4}{5}\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \frac{24}{85} - \frac{60}{85} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = \frac{24 - 60}{85} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \cos(\text{A} + \text{B}) = -\frac{36}{85}$</div>
+    
+    <div class="step-explain">অতএব, চূড়ান্ত মান $\sec(\text{A} + \text{B})$ হবে:</div>
+    <div class="step">$\sec(\text{A} + \text{B}) = \frac{1}{\cos(\text{A} + \text{B})} = \frac{1}{-\frac{36}{85}}$</div>
+    <div class="step">$\Rightarrow \sec(\text{A} + \text{B}) = -\frac{85}{36} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $-\frac{85}{36}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৯. $\tan\text{A} \cdot \tan\text{B} = 1$ হলে, $(\text{A} + \text{B})$ এর মান কত?</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">শুরুতে প্রদত্ত সমীকরণটি লিখে নিই:</div>
+    <div class="step">দেওয়া আছে, $\tan\text{A} \cdot \tan\text{B} = 1$</div>
+    
+    <div class="step-explain">এখান থেকে আমরা $\tan\text{A}$ এর মান বের করার জন্য $\tan\text{B}$ কে ডানপাশে পক্ষান্তর (ভাগ) করি:</div>
+    <div class="step">$\Rightarrow \tan\text{A} = \frac{1}{\tan\text{B}} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, $\frac{1}{\tan\text{B}} = \cot\text{B}$। সুতরাং:</div>
+    <div class="step">$\Rightarrow \tan\text{A} = \cot\text{B} \quad [\because \frac{1}{\tan\theta} = \cot\theta]$</div>
+    
+    <div class="step-explain">এখন বামপাশের $\tan$ অনুপাতের সাথে মেলানোর জন্য ডানপাশের $\cot\text{B}$ কে সংযুক্ত কোণের নিয়মে $\tan$ এ রূপান্তর করব। আমরা জানি, $\tan\left(\frac{\pi}{2} - \theta\right) = \cot\theta$।</div>
+    <div class="step">$\Rightarrow \tan\text{A} = \tan\left(\frac{\pi}{2} - \text{B}\right) \quad [\text{সংযুক্ত কোণের সূত্র অনুযায়ী}]$</div>
+    
+    <div class="step-explain">উভয়পক্ষ থেকে ট্যানজেন্ট ($\tan$) অনুপাত বর্জন বা অপসারণ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{A} = \frac{\pi}{2} - \text{B}$</div>
+    
+    <div class="step-explain">এখন $-\text{B}$ কে বামপাশে পক্ষান্তর করলে আমরা কাঙ্ক্ষিত $(\text{A} + \text{B})$ এর মান পেয়ে যাবো:</div>
+    <div class="step">$\Rightarrow \text{A} + \text{B} = \frac{\pi}{2} \quad [\text{পক্ষান্তর করে}]$</div>
+    
+    <div class="step-explain">ডিগ্রি এককে প্রকাশ করলে আমরা পাই $\frac{\pi}{2} = 90^\circ$।</div>
+    <div class="step">$\therefore \text{A} + \text{B} = 90^\circ \text{ বা } \frac{\pi}{2}$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $90^\circ$ অথবা $\frac{\pi}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১০. $\sin x \sin(x + 30^\circ) + \cos x \sin(x + 120^\circ)$ এর মান কত?</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত ত্রিকোণমিতিক রাশিটি লিখে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \sin x \cdot \sin(x + 30^\circ) + \cos x \cdot \sin(x + 120^\circ)$</div>
+    
+    <div class="step-explain">রাশিটির দ্বিতীয় পদে একটি কোণ আছে $(x + 120^\circ)$। এটিকে আমরা সংযুক্ত কোণের নিয়মে ভাঙার জন্য $90^\circ$ এর সাপেক্ষে প্রকাশ করব।</div>
+    <div class="step-explain">আমরা লিখতে পারি, $x + 120^\circ = x + 90^\circ + 30^\circ = 90^\circ + (x + 30^\circ)$</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \sin x \cdot \sin(x + 30^\circ) + \cos x \cdot \sin\left\{90^\circ + (x + 30^\circ)\right\} \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">আমরা কোয়াড্রেন্ট বা চতুর্ভাগের নিয়ম থেকে জানি, $\sin(90^\circ + \theta) = \cos\theta$ (যেহেতু $90^\circ$ এর বিজোড় গুণিতক এবং কোণটি দ্বিতীয় চতুর্ভাগে পড়ে, যেখানে সাইন ধনাত্মক)। এখানে $\theta = x + 30^\circ$ বিবেচনা করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \sin x \cdot \sin(x + 30^\circ) + \cos x \cdot \cos(x + 30^\circ) \quad [\because \sin(90^\circ + \theta) = \cos\theta]$</div>
+    
+    <div class="step-explain">এখন পদগুলোকে সাজিয়ে লিখি যেন এটি পরিচিত সূত্রে রূপ নেয়:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos(x + 30^\circ) \cdot \cos x + \sin(x + 30^\circ) \cdot \sin x \quad [\text{পদ সাজিয়ে}]$</div>
+    
+    <div class="step-explain">আমরা ত্রিকোণমিতির যৌগিক কোণের সূত্র জানি: $\cos(\text{A} - \text{B}) = \cos\text{A} \cdot \cos\text{B} + \sin\text{A} \cdot \sin\text{B}$। এখানে $\text{A} = x + 30^\circ$ এবং $\text{B} = x$ বিবেচনা করে সূত্রটি প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos\left\{(x + 30^\circ) - x\right\} \quad [\text{सूत्र প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">ব্র্যাকেটের ভেতরে $+x$ এবং $-x$ কাটাকাটি বা বিয়োগ হয়ে শূন্য হয়ে যায়:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 30^\circ \quad [x \text{ বর্জন করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি, আদর্শ কোণের চার্ট অনুযায়ী $\cos 30^\circ$ এর নির্দিষ্ট মান হলো $\frac{\sqrt{3}}{2}$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{\sqrt{3}}{2} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\frac{\sqrt{3}}{2}$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১১. প্রমাণ কর যে, $\cos(x - 60^\circ) \cos(x - 30^\circ) - \sin(x - 60^\circ) \sin(x + 330^\circ) = \sin 2x$</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রমাণের সুবিধার্থে প্রথমে বামপক্ষ (LHS) লিখে নিই:</div>
+    <div class="step">$\text{LHS} = \cos(x - 60^\circ) \cos(x - 30^\circ) - \sin(x - 60^\circ) \sin(x + 330^\circ)$</div>
+    
+    <div class="step-explain">এখানে শেষ কোণটি হলো $(x + 330^\circ)$। এটিকে সূত্রের আকারে আনার জন্য ছোট বা রূপান্তর করতে হবে। আমরা জানি $330^\circ = 360^\circ - 30^\circ$।</div>
+    <div class="step-explain">সুতরাং, $x + 330^\circ = x + 360^\circ - 30^\circ = 360^\circ + (x - 30^\circ)$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos(x - 60^\circ) \cos(x - 30^\circ) - \sin(x - 60^\circ) \sin\left\{360^\circ + (x - 30^\circ)\right\} \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">চতুর্ভাগের নিয়ম অনুযায়ী, $360^\circ$ বা $2\pi$ এর সাথে যেকোনো কোণ যোগ করলে তা প্রথম চতুর্ভাগে (1st Quadrant) ফিরে আসে, যেখানে সব অনুপাত ধনাত্মক এবং অনুপাতের কোনো পরিবর্তন হয় না। অর্থাৎ, $\sin(360^\circ + \theta) = \sin\theta$। এখানে $\theta = x - 30^\circ$ বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos(x - 60^\circ) \cos(x - 30^\circ) - \sin(x - 60^\circ) \sin(x - 30^\circ) \quad [\because \sin(360^\circ + \theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">এবার রাশিটি লক্ষ্য করলে দেখা যায় এটি $\cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$ আকারের সূত্রে পড়েছে, যেখানে $\text{A} = x - 60^\circ$ এবং $\text{B} = x - 30^\circ$।</div>
+    <div class="step-explain">আমরা জানি, $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$। সূত্রটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos\left\{(x - 60^\circ) + (x - 30^\circ)\right\} \quad [\text{सूत्र প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এখন ব্র্যাকেটের ভেতরের পদগুলো যোগ-বিয়োগ করি: $x + x = 2x$ এবং $-60^\circ - 30^\circ = -90^\circ$।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos(2x - 90^\circ) \quad [\text{যোগ করে}]$</div>
+    
+    <div class="step-explain">আমরা জানি $\cos(-\theta) = \cos\theta$। তাই ব্র্যাকেটের ভেতর থেকে একটি মাইনাস ($-$) কমন নিয়ে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos\left\{-(90^\circ - 2x)\right\} \quad [\text{মাইনাস কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{LHS} = \cos(90^\circ - 2x) \quad [\because \cos(-\theta) = \cos\theta]$</div>
+    
+    <div class="step-explain">আমরা জানি, প্রথম চতুর্ভাগে $\cos(90^\circ - \theta) = \sin\theta$ হয়। এখানে $\theta = 2x$ কোণ ধরে পাই:</div>
+    <div class="step">$\Rightarrow \text{LHS} = \sin 2x \quad [\because \cos(90^\circ - \theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">এটি আমাদের ডানপক্ষের (RHS) সাথে হুবহু মিলে গেছে।</div>
+    <div class="step">$\Rightarrow \text{LHS} = \text{RHS}$</div>
+    <div class="step">$\therefore \cos(x - 60^\circ) \cos(x - 30^\circ) - \sin(x - 60^\circ) \sin(x + 330^\circ) = \sin 2x \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">১২. $\cos 30^\circ 32' \cos 29^\circ 28' - \sin 149^\circ 28' \sin 29^\circ 28'$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    
+    <div class="step-explain">প্রথমে প্রদত্ত রাশিটি তুলে নিই:</div>
+    <div class="step">প্রদত্ত রাশি $= \cos 30^\circ 32' \cdot \cos 29^\circ 28' - \sin 149^\circ 28' \cdot \sin 29^\circ 28'$</div>
+    
+    <div class="step-explain">এখানে বড় কোণটি হলো $149^\circ 28'$। এটিকে সূত্রের উপযোগী করার জন্য আমরা $180^\circ$ থেকে বিয়োগফল আকারে প্রকাশ করব।</div>
+    <div class="step-explain">আমরা জানি, $180^\circ = 179^\circ 60'$ (যেহেতু $1^\circ = 60'$)।</div>
+    <div class="step-explain">এখন, $179^\circ 60' - 30^\circ 32' = 149^\circ 28'$। সুতরাং আমরা লিখতে পারি: $149^\circ 28' = 180^\circ - 30^\circ 32'$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 30^\circ 32' \cdot \cos 29^\circ 28' - \sin(180^\circ - 30^\circ 32') \cdot \sin 29^\circ 28' \quad [\text{কোণ ভেঙে}]$</div>
+    
+    <div class="step-explain">সংযুক্ত কোণের নিয়ম অনুযায়ী, $\sin(180^\circ - \theta) = \sin\theta$ (যেহেতু কোণটি দ্বিতীয় চতুর্ভাগে অবস্থিত এবং সেখানে সাইন ধনাত্মক)। এখানে $\theta = 30^\circ 32'$ ধরে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 30^\circ 32' \cdot \cos 29^\circ 28' - \sin 30^\circ 32' \cdot \sin 29^\circ 28' \quad [\because \sin(180^\circ - \theta) = \sin\theta]$</div>
+    
+    <div class="step-explain">এখন এই সম্পূর্ণ রাশিটি $\cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$ সূত্রের রূপ নিয়েছে, যেখানে $\text{A} = 30^\circ 32'$ এবং $\text{B} = 29^\circ 28'$।</div>
+    <div class="step-explain">আমরা জানি, $\cos(\text{A} + \text{B}) = \cos\text{A} \cdot \cos\text{B} - \sin\text{A} \cdot \sin\text{B}$। এই সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos(30^\circ 32' + 29^\circ 28') \quad [\text{সূত্র প্রয়োগ করে}]$</div>
+    
+    <div class="step-explain">এবার ব্র্যাকেটের ভেতরের কোণ দুটি যোগ করি:</div>
+    <div class="step-explain">ডিগ্রি অংশ: $30^\circ + 29^\circ = 59^\circ$ এবং মিনিট অংশ: $32' + 28' = 60'$।</div>
+    <div class="step-explain">আমরা জানি $60' = 1^\circ$। সুতরাং মোট কোণ $= 59^\circ + 1^\circ = 60^\circ$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \cos 60^\circ \quad [\text{কোণ যোগ করে}]$</div>
+    
+    <div class="step-explain">ত্রিকোণমিতিক টেবিল থেকে আমরা জানি $\cos 60^\circ$ এর মান $\frac{1}{2}$ বা $0.5$।</div>
+    <div class="step">$\Rightarrow \text{প্রদত্ত রাশি} = \frac{1}{2} \quad [\text{মান বসিয়ে}]$</div>
+    
+    <div class="step-explain"><strong>উত্তর:</strong> $\frac{1}{2}$</div>
+</div>
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

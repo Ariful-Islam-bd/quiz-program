@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q10</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+    <div class="problem-title">১০. জটিল সংখ্যার অয়লার আকার এবং আর্গুমেন্ট সংক্রান্ত প্রমাণসমূহ:</div>
+
+    <div class="problem-sub-title">(i) $1+\sqrt{3}i=2e^{i\theta}$ হলে দেখাও যে, $\tan\theta=\sqrt{3}$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $1+\sqrt{3}i=2e^{i\theta}$</div>
+    <div class="step-explain">অয়লারের সূত্র অনুসারে আমরা জানি, $e^{i\theta} = \cos\theta + i\sin\theta$। এই মানটি ডানপক্ষে বসিয়ে পাই:</div>
+    <div class="step">$1+\sqrt{3}i = 2\left(\cos\theta + i\sin\theta\right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 1+\sqrt{3}i = 2\cos\theta + i\cdot2\sin\theta \quad [\text{২ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$2\cos\theta = 1 \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$2\sin\theta = \sqrt{3} \quad \dots \quad \text{(২)}$</div>
+    <div class="step-explain">এখন সমীকরণ (২) কে সমীকরণ (১) দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\frac{2\sin\theta}{2\cos\theta} = \frac{\sqrt{3}}{1} \quad [\text{ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{\sin\theta}{\cos\theta} = \sqrt{3} \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\frac{\sin\theta}{\cos\theta} = \tan\theta$। সুতরাং:</div>
+    <div class="step">$\Rightarrow \tan\theta = \sqrt{3}$</div>
+    <div class="step"><b>অতএব, দেখানো হলো যে $\tan\theta = \sqrt{3}$।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $a+ib=e^{i\theta}$ হলে দেখাও যে, $a^2+b^2=1$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $a+ib=e^{i\theta}$</div>
+    <div class="step-explain">অয়লারের সূত্র ব্যবহার করে ডানপক্ষকে ভেঙে পাই:</div>
+    <div class="step">$a+ib = \cos\theta + i\sin\theta \quad [\because e^{i\theta} = \cos\theta + i\sin\theta]$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশ সমীকৃত করে পাই:</div>
+    <div class="step">$a = \cos\theta \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$b = \sin\theta \quad \dots \quad \text{(২)}$</div>
+    <div class="step-explain">এখন সমীকরণ (১) ও (২) কে বর্গ করে যোগ করি:</div>
+    <div class="step">$a^2 + b^2 = (\cos\theta)^2 + (\sin\theta)^2 \quad [\text{বর্গ ও যোগ করে}]$</div>
+    <div class="step">$\Rightarrow a^2 + b^2 = \sin^2\theta + \cos^2\theta \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step-explain">ত্রিকোণমিতির সূত্রানুসারে আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$। অতএব:</div>
+    <div class="step">$\Rightarrow a^2 + b^2 = 1$</div>
+    <div class="step"><b>অতএব, দেখানো হলো যে $a^2+b^2=1$।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $x+iy=2e^{-i\theta}$ হলে প্রমাণ কর যে, $x^2+y^2=4$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $x+iy=2e^{-i\theta}$</div>
+    <div class="step-explain">অয়লারের ঋণাত্মক কোণের সূত্রানুসারে, $e^{-i\theta} = \cos(-\theta) + i\sin(-\theta) = \cos\theta - i\sin\theta$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$x+iy = 2\left(\cos\theta - i\sin\theta\right) \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x+iy = 2\cos\theta - i\cdot2\sin\theta \quad [\text{২ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশ সমীকৃত করে পাই:</div>
+    <div class="step">$x = 2\cos\theta \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$y = -2\sin\theta \quad \dots \quad \text{(২)}$</div>
+    <div class="step-explain">এবার সমীকরণ (১) ও (২) এর উভয় পক্ষকে বর্গ করে যোগ করি:</div>
+    <div class="step">$x^2 + y^2 = (2\cos\theta)^2 + (-2\sin\theta)^2 \quad [\text{বর্গ ও যোগ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 4\cos^2\theta + 4\sin^2\theta \quad \left[\because (-2)^2 = 4\right]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 4\left(\cos^2\theta + \sin^2\theta\right) \quad [৪ \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 4\cdot1 \quad \left[\because \sin^2\theta + \cos^2\theta = 1\right]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 4$</div>
+    <div class="step"><b>অতএব, প্রমাণিত হলো যে $x^2+y^2=4$।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $\arg\left(\frac{z-2}{z+1}\right)=\frac{\pi}{2}$ হলে প্রমাণ কর যে, $x^2+y^2-x-2=0$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">আমরা জানি, সাধারণ জটিল সংখ্যা $z = x+iy$। প্রথমে বন্ধনীর ভেতরের ভগ্নাংশটিকে সরল করে নিই:</div>
+    <div class="step">$\frac{z-2}{z+1} = \frac{x+iy-2}{x+iy+1} \quad [z \text{ এর মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{(x-2)+iy}{(x+1)+iy} \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">হরকে বাস্তব সংখ্যায় রূপান্তর করার জন্য লব ও হরকে হরের অনুবন্ধী জটিল সংখ্যা $\left\{(x+1)-iy\right\}$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{\left\{(x-2)+iy\right\}\cdot\left\{(x+1)-iy\right\}}{\left\{(x+1)+iy\right\}\cdot\left\{(x+1)-iy\right\}}$</div>
+    <div class="step-explain">লব অংশে সাধারণ বীজগণিতীয় গুণ করি এবং হর অংশে $(A+B)(A-B) = A^2-B^2$ এর সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{(x-2)(x+1) - i(x-2)y + i(x+1)y - (iy)^2}{(x+1)^2 - (iy)^2}$</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{(x^2+x-2x-2) + iy\left\{-(x-2)+(x+1)\right\} - i^2y^2}{(x+1)^2 - i^2y^2} \quad [iy \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{(x^2-x-2) + iy(-x+2+x+1) - (-1)y^2}{(x+1)^2 - (-1)y^2} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{(x^2-x-2+y^2) + iy(3)}{(x+1)^2 + y^2} \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ সম্পূর্ণ আলাদা বা পৃথক করে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow \frac{z-2}{z+1} = \frac{x^2+y^2-x-2}{(x+1)^2 + y^2} + i\cdot\frac{3y}{(x+1)^2 + y^2}$</div>
+    <div class="step-explain">যেকোনো জটিল সংখ্যা $Z = X+iY$ হলে তার আর্গুমেন্ট $\arg(Z) = \tan^{-1}\left(\frac{Y}{X}\right)$। শর্তানুসারে:</div>
+    <div class="step">$\arg\left(\frac{z-2}{z+1}\right) = \frac{\pi}{2}$</div>
+    <div class="step">$\Rightarrow \tan^{-1}\left\{\frac{\frac{3y}{(x+1)^2 + y^2}}{\frac{x^2+y^2-x-2}{(x+1)^2 + y^2}}\right\} = \frac{\pi}{2}$</div>
+    <div class="step-explain">উভয় হরের সাধারণ অংশ $\left\{(x+1)^2 + y^2\right\}$ কেটে দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \tan^{-1}\left(\frac{3y}{x^2+y^2-x-2}\right) = \frac{\pi}{2}$</div>
+    <div class="step">$\Rightarrow \frac{3y}{x^2+y^2-x-2} = \tan\left(\frac{\pi}{2}\right) \quad [\text{উভয় পক্ষে } \tan \text{ নিয়ে}]$</div>
+    <div class="step-explain">আমরা জানি, $\tan\left(\frac{\pi}{2}\right) = \frac{1}{0}$ (অসংজ্ঞায়িত)। মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \frac{3y}{x^2+y^2-x-2} = \frac{1}{0}$</div>
+    <div class="step-explain">এখন আড়াআড়ি বা কোণাকুণি গুণ (আর-গুণন) করে পাই:</div>
+    <div class="step">$\Rightarrow 1\cdot\left(x^2+y^2-x-2\right) = 3y\cdot0$</div>
+    <div class="step">$\Rightarrow x^2+y^2-x-2 = 0$</div>
+    <div class="step"><b>অতএব, প্রমাণিত হলো যে $x^2+y^2-x-2=0$।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(v) $z=\frac{2}{3+\cos\theta+i\sin\theta}$ হলে প্রমাণ কর যে, $2(x^2+y^2)=3x-1$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $z=\frac{2}{3+\cos\theta+i\sin\theta}$। আমরা জানি $z = x+iy$। সমীকরণটি ব্যস্তকরণ (উল্টিয়ে) করে পাই:</div>
+    <div class="step">$\frac{1}{z} = \frac{3+\cos\theta+i\sin\theta}{2} \quad [\text{ব্যস্তকরণ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{1}{x+iy} = \frac{(3+\cos\theta)+i\sin\theta}{2} \quad [z \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">বামপক্ষের হরের জটিল সংখ্যা দূর করতে লব ও হরকে $(x-iy)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\frac{1\cdot(x-iy)}{(x+iy)(x-iy)} = \frac{(3+\cos\theta)+i\sin\theta}{2}$</div>
+    <div class="step">$\Rightarrow \frac{x-iy}{x^2 - (iy)^2} = \frac{(3+\cos\theta)+i\sin\theta}{2}$</div>
+    <div class="step">$\Rightarrow \frac{x-iy}{x^2 + y^2} = \frac{(3+\cos\theta)+i\sin\theta}{2} \quad [\because i^2 = -1]$</div>
+    <div class="step-explain">বামপক্ষকে বাস্তব ও কাল্পনিক অংশে আলাদা বা বিভক্ত করে লিখি:</div>
+    <div class="step">$\Rightarrow \frac{x}{x^2+y^2} - i\cdot\frac{y}{x^2+y^2} = \frac{3+\cos\theta}{2} + i\cdot\frac{\sin\theta}{2}$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব অংশদ্বয় এবং কাল্পনিক অংশদ্বয় আলাদাভাবে সমীকৃত করে পাই:</div>
+    <div class="step">$\frac{x}{x^2+y^2} = \frac{3+\cos\theta}{2} \implies 3+\cos\theta = \frac{2x}{x^2+y^2}$</div>
+    <div class="step">$\Rightarrow \cos\theta = \frac{2x}{x^2+y^2} - 3 \quad \dots \quad \text{(১) } [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এবং কাল্পনিক অংশ থেকে পাই:</div>
+    <div class="step">$-\frac{y}{x^2+y^2} = \frac{\sin\theta}{2}$</div>
+    <div class="step">$\Rightarrow \sin\theta = -\frac{2y}{x^2+y^2} \quad \dots \quad \text{(২) } [\text{২ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">$\theta$ অপনোদন করার জন্য সমীকরণ (১) ও (২) কে বর্গ করে যোগ করি:</div>
+    <div class="step">$\cos^2\theta + \sin^2\theta = \left(\frac{2x}{x^2+y^2} - 3\right)^2 + \left(-\frac{2y}{x^2+y^2}\right)^2$</div>
+    <div class="step-explain">আমরা জানি $\cos^2\theta + \sin^2\theta = 1$ এবং ডানপক্ষে $(a-b)^2$ সূত্র ভাঙি:</div>
+    <div class="step">$\Rightarrow 1 = \left(\frac{2x}{x^2+y^2}\right)^2 - 2\cdot\left(\frac{2x}{x^2+y^2}\right)\cdot3 + (3)^2 + \frac{4y^2}{(x^2+y^2)^2}$</div>
+    <div class="step">$\Rightarrow 1 = \frac{4x^2}{(x^2+y^2)^2} - \frac{12x}{x^2+y^2} + 9 + \frac{4y^2}{(x^2+y^2)^2}$</div>
+    <div class="step-explain">সব ধ্রুবক সংখ্যা একপাশে এনে ডানপক্ষের লসাগু করি:</div>
+    <div class="step">$\Rightarrow 1 - 9 = \frac{4x^2 - 12x(x^2+y^2) + 4y^2}{(x^2+y^2)^2} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow -8 = \frac{4(x^2+y^2) - 12x(x^2+y^2)}{(x^2+y^2)^2} \quad [৪ \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">লব থেকে সাধারণ উৎপাদক $(x^2+y^2)$ কমন নিই:</div>
+    <div class="step">$\Rightarrow -8 = \frac{(x^2+y^2)(4 - 12x)}{(x^2+y^2)^2}$</div>
+    <div class="step-explain">লব ও হরের একটি $(x^2+y^2)$ কাটাকাটি করে সমীকরণ সহজ করি:</div>
+    <div class="step">$\Rightarrow -8 = \frac{4 - 12x}{x^2+y^2}$</div>
+    <div class="step-explain">এবার আর-গুণন (কোণাকুণি গুণ) করে পাই:</div>
+    <div class="step">$\Rightarrow -8(x^2+y^2) = 4 - 12x$</div>
+    <div class="step-explain">উভয় পক্ষকে -৪ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{-8(x^2+y^2)}{-4} = \frac{4}{-4} - \frac{12x}{-4}$</div>
+    <div class="step">$\Rightarrow 2(x^2+y^2) = -1 + 3x$</div>
+    <div class="step">$\Rightarrow 2(x^2+y^2) = 3x - 1 \quad [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step"><b>অতএব, প্রমাণিত হলো যে $2(x^2+y^2)=3x-1$।</b></div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q11</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+    <div class="problem-title">১১. অনুবন্ধী জটিল সংখ্যা, মডুলাস-আর্গুমেন্টের ধর্মাবলি এবং জটিল সংখ্যার বৈশিষ্ট্য সংক্রান্ত সমস্যাবলি:</div>
+
+    <div class="problem-sub-title">(i) $x-4i$ ও $-3+iy$ পরস্পর অনুবন্ধী হলে, $x$ ও $y$ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">আমরা জানি, কোনো জটিল সংখ্যা $a+ib$ এর অনুবন্ধী জটিল সংখ্যা হলো $a-ib$ (অর্থাৎ কাল্পনিক অংশের চিহ্ন পরিবর্তিত হয়)।</div>
+    <div class="step-explain">প্রশ্নমতে, $x-4i$ জটিল সংখ্যাটি হলো $-3+iy$ এর অনুবন্ধী।</div>
+    <div class="step">$\Rightarrow x-4i = \overline{-3+iy}$</div>
+    <div class="step">$\Rightarrow x-4i = -3-iy \quad [\text{অনুবন্ধী সংখ্যার নিয়ম অনুসারে}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষের বাস্তব অংশ এবং কাল্পনিক অংশ সমীকৃত (তুলনা) করে পাই:</div>
+    <div class="step">$\text{বাস্তব অংশ: } x = -3$</div>
+    <div class="step">$\text{কাল্পনিক অংশ: } -4 = -y$</div>
+    <div class="step">$\Rightarrow y = 4 \quad [\text{উভয় পক্ষকে } -1 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain"><b>উত্তর:</b> $x = -3$ এবং $y = 4$।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $3+ix^2y$ এবং $x^2+y+4i$ পরস্পর অনুবন্ধী হলে, $x$ এবং $y$ এর বাস্তব মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">প্রশ্নানুসারে, $3+ix^2y$ এবং $x^2+y+4i$ পরস্পর অনুবন্ধী জটিল সংখ্যা।</div>
+    <div class="step-explain">সুতরাং, প্রথম সংখ্যাটি দ্বিতীয় সংখ্যাটির অনুবন্ধীর সমান হবে:</div>
+    <div class="step">$3+ix^2y = \overline{(x^2+y)+4i}$</div>
+    <div class="step">$\Rightarrow 3+i(x^2y) = (x^2+y)-4i \quad [\text{অনুবন্ধী সংখ্যার নিয়ম অনুসারে}]$</div>
+    <div class="step-explain">উভয় পক্ষের বাস্তব ও কাল্পনিক অংশ আলাদাভাবে সমীকৃত করে পাই:</div>
+    <div class="step">$x^2+y = 3 \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$x^2y = -4 \quad \dots \quad \text{(২)}$</div>
+    <div class="step-explain">সমীকরণ (১) হতে $y$ এর মান বের করি:</div>
+    <div class="step">$y = 3-x^2 \quad \dots \quad \text{(৩) } [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন সমীকরণ (৩) হতে $y$ এর মান সমীকরণ (২)-এ বসিয়ে পাই:</div>
+    <div class="step">$x^2\left(3-x^2\right) = -4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow 3x^2 - x^4 = -4 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow -x^4 + 3x^2 + 4 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^4 - 3x^2 - 4 = 0 \quad [\text{উভয় পক্ষকে } -1 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">মধ্যপদ বিশ্লেষণ (Middle term factors) করে পাই:</div>
+    <div class="step">$\Rightarrow x^4 - 4x^2 + x^2 - 4 = 0$</div>
+    <div class="step">$\Rightarrow x^2\left(x^2-4\right) + 1\left(x^2-4\right) = 0 \quad [\text{কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left(x^2-4\right)\left(x^2+1\right) = 0$</div>
+    <div class="step-explain">হয়, $x^2+1 = 0 \implies x^2 = -1 \implies x = \pm\sqrt{-1} = \pm i$</div>
+    <div class="step-explain">যেহেতু আমাদের শুধুমাত্র <b>বাস্তব মান</b> নির্ণয় করতে বলা হয়েছে, তাই $x = \pm i$ গ্রহণযোগ্য নয় ($\because x \in \mathbb{R}$)।</div>
+    <div class="step-explain">অথবা,</div>
+    <div class="step">$x^2-4 = 0$</div>
+    <div class="step">$\Rightarrow x^2 = 4 \implies x = \pm\sqrt{4}$</div>
+    <div class="step">$\Rightarrow x = \pm 2 \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step-explain">এখন $x^2 = 4$ এর মান সমীকরণ (৩)-এ বসিয়ে $y$ এর মান পাই:</div>
+    <div class="step">$y = 3 - 4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow y = -1$</div>
+    <div class="step-explain"><b>উত্তর:</b> $x = \pm 2$ এবং $y = -1$।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) যদি $z_1=-2+3i$ এবং $z_2=5-i$ হয়, তবে দেখাও যে, $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$ এবং $\overline{z_1z_2}=\overline{z_1}\cdot\overline{z_2}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে, $z_1 = -2+3i$ এবং $z_2 = 5-i$</div>
+    <div class="step-explain">সুতরাং এদের অনুবন্ধী জটিল সংখ্যাসমূহ যথাক্রমে:</div>
+    <div class="step">$\overline{z_1} = -2-3i$</div>
+    <div class="step">$\overline{z_2} = 5+i$</div>
+    
+    <div class="step-explain"><b>১ম অংশ প্রমাণ: $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$</b></div>
+    <div class="step-explain">প্রথমে বামপক্ষের জন্য $z_1+z_2$ নির্ণয় করি:</div>
+    <div class="step">$z_1+z_2 = (-2+3i) + (5-i)$</div>
+    <div class="step">$\Rightarrow z_1+z_2 = (-2+5) + i(3-1) = 3+2i \quad [\text{বাস্তব ও কাল্পনিক অংশ যোগ করে}]$</div>
+    <div class="step-explain">সুতরাং বামপক্ষ (L.H.S.):</div>
+    <div class="step">\text{L.H.S.} = \overline{z_1+z_2} = \overline{3+2i} = 3-2i</div>
+    <div class="step-explain">এখন ডানপক্ষ (R.H.S.):</div>
+    <div class="step">\text{R.H.S.} = \overline{z_1}+\overline{z_2} = (-2-3i) + (5+i)</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = (-2+5) + i(-3+1) = 3-2i \quad [\text{যোগ করে}]$</div>
+    <div class="step">যেহেতু $\text{L.H.S.} = \text{R.H.S.}$, সুতরাং $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$ (দেখানো হলো)।</div>
+    
+    <div class="step-explain"><b>২য় অংশ প্রমাণ: $\overline{z_1z_2}=\overline{z_1}\cdot\overline{z_2}$</b></div>
+    <div class="step-explain">প্রথমে বামপক্ষের জন্য $z_1 \cdot z_2$ নির্ণয় করি:</div>
+    <div class="step">$z_1z_2 = (-2+3i)(5-i)$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -2(5) -2(-i) + 3i(5) + 3i(-i) \quad [\text{সাধারণ গুণ করে}]$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -10 + 2i + 15i - 3i^2$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -10 + 17i - 3(-1) \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow z_1z_2 = -10 + 17i + 3 = -7+17i \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step-explain">সুতরাং বামপক্ষ (L.H.S.):</div>
+    <div class="step">\text{L.H.S.} = \overline{z_1z_2} = \overline{-7+17i} = -7-17i</div>
+    <div class="step-explain">এখন ডানপক্ষ (R.H.S.):</div>
+    <div class="step">\text{R.H.S.} = \overline{z_1}\cdot\overline{z_2} = (-2-3i)(5+i)</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = -2(5) -2(i) -3i(5) -3i(i) \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = -10 - 2i - 15i - 3i^2$</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = -10 - 17i - 3(-1) \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = -10 - 17i + 3 = -7-17i \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step">যেহেতু $\text{L.H.S.} = \text{R.H.S.}$, সুতরাং $\overline{z_1z_2}=\overline{z_1}\cdot\overline{z_2}$ (দেখানো হলো)।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) যদি $z$ কোনো জটিল সংখ্যা হয়, তবে প্রমাণ কর যে, $|\overline{z}|=|z|$, $\overline{\overline{z}}=z$, $z\overline{z}=|\overline{z}|^2=|z|^2$, $z+\overline{z}=2\operatorname{Re}(z)$ এবং $z-\overline{z}=2i\,\operatorname{Im}(z)$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">ধরি, যেকোনো একটি জটিল সংখ্যা $z = x+iy$। যেখানে $x, y \in \mathbb{R}$।</div>
+    <div class="step-explain">সুতরাং এর অনুবন্ধী জটিল সংখ্যা $\overline{z} = x-iy$।</div>
+    
+    <div class="step-explain"><b>১ম প্রমাণ: $|\overline{z}|=|z|$</b></div>
+    <div class="step">$\left|z\right| = \left|x+iy\right| = \sqrt{x^2+y^2}$</div>
+    <div class="step">$\left|\overline{z}\right| = \left|x-iy\right| = \sqrt{x^2+(-y)^2} = \sqrt{x^2+y^2} \quad \left[\because (-y)^2 = y^2\right]$</div>
+    <div class="step-explain">অতএব, $|\overline{z}| = |z|$ (প্রমাণিত)।</div>
+
+    <div class="step-explain"><b>২য় প্রমাণ: $\overline{\overline{z}}=z$</b></div>
+    <div class="step">$\overline{\overline{z}} = \overline{(\overline{z})} = \overline{x-iy} = x-(-iy) = x+iy = z \quad [\text{অনুবন্ধীর অনুবন্ধী নিয়ে}]$</div>
+    <div class="step-explain">অতএব, $\overline{\overline{z}}=z$ (প্রমাণিত)।</div>
+
+    <div class="step-explain"><b>৩য় প্রমাণ: $z\overline{z}=|\overline{z}|^2=|z|^2$</b></div>
+    <div class="step">$z\overline{z} = (x+iy)(x-iy) = x^2 - (iy)^2 \quad [\text{বীজগণিতীয় সূত্রে}]$</div>
+    <div class="step">$\Rightarrow z\overline{z} = x^2 - i^2y^2 = x^2 - (-1)y^2 = x^2+y^2 \quad [\because i^2 = -1]$</div>
+    <div class="step-explain">আবার ১ম প্রমাণ থেকে আমরা জানি, $|z|^2 = \left(\sqrt{x^2+y^2}\right)^2 = x^2+y^2$ এবং $|\overline{z}|^2 = x^2+y^2$।</div>
+    <div class="step-explain">অতএব, $z\overline{z}=|\overline{z}|^2=|z|^2$ (প্রমাণিত)।</div>
+
+    <div class="step-explain"><b>৪র্থ প্রমাণ: $z+\overline{z}=2\operatorname{Re}(z)$</b></div>
+    <div class="step">$z+\overline{z} = (x+iy) + (x-iy) = x + x + iy - iy = 2x$</div>
+    <div class="step-explain">যেহেতু $x = \operatorname{Re}(z)$ (জটিল সংখ্যাটির বাস্তব অংশ), সেহেতু:</div>
+    <div class="step">$\Rightarrow z+\overline{z} = 2\operatorname{Re}(z) \quad (\text{প্রমাণিত})$</div>
+
+    <div class="step-explain"><b>৫ম প্রমাণ: $z-\overline{z}=2i\,\operatorname{Im}(z)$</b></div>
+    <div class="step">$z-\overline{z} = (x+iy) - (x-iy) = x + iy - x + iy = 2iy$</div>
+    <div class="step-explain">যেহেতু $y = \operatorname{Im}(z)$ (জটিল সংখ্যাটির কাল্পনিক অংশ), সেহেতু:</div>
+    <div class="step">$\Rightarrow z-\overline{z} = 2i\operatorname{Im}(z) \quad (\text{প্রমাণিত})$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(v) $z=2+4i-i^2$ হলে, $\overline{z}$ এর বর্গমূলের মডুলাস সর্বদা $\sqrt{5}$ সঠিক কি না যাচাই কর, যেখানে $\overline{z}$ হচ্ছে $z$ এর অনুবন্ধী জটিল সংখ্যা।</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">দেওয়া আছে রাশি: $z = 2+4i-i^2$</div>
+    <div class="step-explain">আমরা জানি $i^2 = -1$। এই মানটি বসিয়ে $z$ কে সরল করি:</div>
+    <div class="step">$z = 2+4i-(-1) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow z = 2+4i+1 = 3+4i \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">সুতরাং $z$ এর অনুবন্ধী জটিল সংখ্যা $\overline{z}$:</div>
+    <div class="step">$\overline{z} = \overline{3+4i} = 3-4i$</div>
+    <div class="step-explain">এখন, জটিল সংখ্যার একটি গুরুত্বপূর্ণ বৈশিষ্ট্য বা ধর্ম হলো: <b>"যেকোনো জটিল সংখ্যার বর্গমূলের মডুলাস হলো ওই জটিল সংখ্যার মডুলাসের বর্গমূলের সমান।"</b> অর্থাৎ $\left|\sqrt{Z}\right| = \sqrt{|Z|}$।</div>
+    <div class="step-explain">প্রথমে $\overline{z}$ এর মডুলাস নির্ণয় করি:</div>
+    <div class="step">$\left|\overline{z}\right| = \left|3-4i\right| = \sqrt{3^2 + (-4)^2}$</div>
+    <div class="step">$\Rightarrow \left|\overline{z}\right| = \sqrt{9 + 16} = \sqrt{25} = 5$</div>
+    <div class="step-explain">সুতরাং, $\overline{z}$ এর বর্গমূলের মডুলাস হবে:</div>
+    <div class="step">$\left|\sqrt{\overline{z}}\right| = \sqrt{\left|\overline{z}\right|} = \sqrt{5}$</div>
+    <div class="step-explain"><b>বিকল্প পদ্ধতি (সরাসরি বর্গমূল নির্ণয় করে):</b></div>
+    <div class="step">$\overline{z} = 3-4i = 4 - 4i - 1 = (2)^2 - 2\cdot2\cdot(i) + (i)^2 \quad [\because i^2=-1]$</div>
+    <div class="step">$\Rightarrow \overline{z} = (2-i)^2$</div>
+    <div class="step">$\Rightarrow \sqrt{\overline{z}} = \pm(2-i)$</div>
+    <div class="step-explain">এখন $\pm(2-i)$ এর মডুলাস নিলে পাই:</div>
+    <div class="step">$\left|\sqrt{\overline{z}}\right| = \left|\pm(2-i)\right| = \sqrt{2^2 + (-1)^2} = \sqrt{4+1} = \sqrt{5}$</div>
+    <div class="step"><b>উত্তর:</b> প্রদত্ত উক্তিটি সম্পূর্ণ <b>সঠিক (Verified)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) যদি $z_1=2-3i$ und $z_2=-3+i$ হয়, তবে দেখাও যে, $|z_1+z_2|<|z_1-z_2|<|z_1|+|z_2|$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">দেওয়া আছে, $z_1 = 2-3i$ এবং $z_2 = -3+i$</div>
+    <div class="step-explain">প্রথমে স্বতন্ত্রভাবে এদের মডুলাসের মান বের করি:</div>
+    <div class="step">$\left|z_1\right| = \left|2-3i\right| = \sqrt{2^2 + (-3)^2} = \sqrt{4+9} = \sqrt{13} \approx 3.6056$</div>
+    <div class="step">$\left|z_2\right| = \left|-3+i\right| = \sqrt{(-3)^2 + 1^2} = \sqrt{9+1} = \sqrt{10} \approx 3.1623$</div>
+    <div class="step-explain">সুতরাং ডানপক্ষের সমষ্টি:</div>
+    <div class="step">$\left|z_1\right| + \left|z_2\right| = \sqrt{13} + \sqrt{10} \approx 3.6056 + 3.1623 = 6.7679 \quad \dots \quad \text{(১)}$</div>
+    
+    <div class="step-explain">এখন বামপক্ষের জন্য $(z_1+z_2)$ এবং তার মডুলাস বের করি:</div>
+    <div class="step">$z_1+z_2 = (2-3i) + (-3+i) = (2-3) + i(-3+1) = -1-2i$</div>
+    <div class="step">$\left|z_1+z_2\right| = \left|-1-2i\right| = \sqrt{(-1)^2 + (-2)^2} = \sqrt{1+4} = \sqrt{5} \approx 2.2361 \quad \dots \quad \text{(২)}$</div>
+    
+    <div class="step-explain">এবার মধ্যবর্তী পদের জন্য $(z_1-z_2)$ এবং তার মডuলাস বের করি:</div>
+    <div class="step">$z_1-z_2 = (2-3i) - (-3+i) = 2 - 3i + 3 - i = 5-4i$</div>
+    <div class="step">$\left|z_1-z_2\right| = \left|5-4i\right| = \sqrt{5^2 + (-4)^2} = \sqrt{25+16} = \sqrt{41} \approx 6.4031 \quad \dots \quad \text{(৩)}$</div>
+    
+    <div class="step-explain">প্রাপ্ত মানসমূহ (১), (২) এবং (৩) তুলনা করে পাই:</div>
+    <div class="step">$\sqrt{5} < \sqrt{41} < \sqrt{13}+\sqrt{10}$</div>
+    <div class="step">$\Rightarrow 2.2361 < 6.4031 < 6.7679$</div>
+    <div class="step-explain">অতএব, উপরোক্ত অসমতাটি সত্য।</div>
+    <div class="step"><b>সুতরাং, $|z_1+z_2|<|z_1-z_2|<|z_1|+|z_2|$ (দেখানো হলো)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vii) যদি $z_1=x_1+iy_1$ এবং $z_2=x_2+iy_2$ হয়, তবে দেখাও যে, $|z_1||z_2|=|z_1z_2|$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">দেওয়া আছে, $z_1 = x_1+iy_1$ এবং $z_2 = x_2+iy_2$</div>
+    <div class="step-explain">সুতরাং বামপক্ষের (L.H.S.) জন্য এদের আলাদা মডুলাসের গুণফল নিই:</div>
+    <div class="step">$\left|z_1\right| = \sqrt{x_1^2 + y_1^2}$</div>
+    <div class="step">$\left|z_2\right| = \sqrt{x_2^2 + y_2^2}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \left|z_1\right|\left|z_2\right| = \sqrt{x_1^2 + y_1^2} \cdot \sqrt{x_2^2 + y_2^2}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \sqrt{(x_1^2 + y_1^2)(x_2^2 + y_2^2)}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = \sqrt{x_1^2x_2^2 + x_1^2y_2^2 + y_1^2x_2^2 + y_1^2y_2^2} \quad \dots \quad \text{(১) } [\text{গুণ করে}]$</div>
+    
+    <div class="step-explain">এখন ডানপক্ষের (R.H.S.) জন্য প্রথমে গুণফল $z_1 \cdot z_2$ নির্ণয় করি:</div>
+    <div class="step">$z_1z_2 = (x_1+iy_1)(x_2+iy_2)$</div>
+    <div class="step">$\Rightarrow z_1z_2 = x_1x_2 + i x_1y_2 + i y_1x_2 + i^2 y_1y_2 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow z_1z_2 = x_1x_2 + i(x_1y_2 + y_1x_2) - y_1y_2 \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow z_1z_2 = (x_1x_2 - y_1y_2) + i(x_1y_2 + y_1x_2) \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">এবার গুণফলটির মডুলাস নিলে পাই:</div>
+    <div class="step">$\text{R.H.S.} = \left|z_1z_2\right| = \sqrt{(x_1x_2 - y_1y_2)^2 + (x_1y_2 + y_1x_2)^2}$</div>
+    <div class="step-explain">বর্গের সূত্র $\left((a-b)^2 \text{ ও } (a+b)^2\right)$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = \sqrt{(x_1^2x_2^2 - 2x_1x_2y_1y_2 + y_1^2y_2^2) + (x_1^2y_2^2 + 2x_1y_2y_1x_2 + y_1^2x_2^2)}$</div>
+    <div class="step-explain">কাটাকাটি করে পাই (যেহেতু $-2x_1x_2y_1y_2$ এবং $+2x_1x_2y_1y_2$ বাদ যায়):</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = \sqrt{x_1^2x_2^2 + y_1^2y_2^2 + x_1^2y_2^2 + y_1^2x_2^2}$</div>
+    <div class="step">$\Rightarrow \text{R.H.S.} = \sqrt{x_1^2x_2^2 + x_1^2y_2^2 + y_1^2x_2^2 + y_1^2y_2^2} \quad \dots \quad \text{(২) } [\text{সাজিয়ে লিখে}]$</div>
+    <div class="step-explain">সমীকরণ (১) ও (২) তুলনা করে দেখা যাচ্ছে যে, $\text{L.H.S.} = \text{R.H.S.}$।</div>
+    <div class="step"><b>অতএব, $|z_1||z_2|=|z_1z_2|$ (দেখানো হলো)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(viii) যদি $z_1$ এবং $z_2$ দুটি জটিল সংখ্যা হয়, তবে প্রমাণ কর যে, $|z_1+z_2|^2+|z_1-z_2|^2=2\left(|z_1|^2+|z_2|^2\right)$</div>
+    <div class="solution-title">সমাধান (viii):</div>
+    <div class="step-explain">আমরা জটিল সংখ্যার মডুলাসের ধর্ম থেকে জানি যে, $|Z|^2 = Z \cdot \overline{Z}$।</div>
+    <div class="step-explain">এই সূত্রটি ব্যবহার করে বামপক্ষ (L.H.S.) কে বিস্তৃত করি:</div>
+    <div class="step">$\text{L.H.S.} = \left|z_1+z_2\right|^2 + \left|z_1-z_2\right|^2$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = (z_1+z_2)\overline{(z_1+z_2)} + (z_1-z_2)\overline{(z_1-z_2)} \quad [\text{ধর্ম প্রয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, $\overline{z_1 \pm z_2} = \overline{z_1} \pm \overline{z_2}$। এটি প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = (z_1+z_2)(\overline{z_1}+\overline{z_2}) + (z_1-z_2)(\overline{z_1}-\overline{z_2})$</div>
+    <div class="step-explain">সাধারণ বীজগণিতীয় গুণ সম্পন্ন করি:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = (z_1\overline{z_1} + z_1\overline{z_2} + z_2\overline{z_1} + z_2\overline{z_2}) + (z_1\overline{z_1} - z_1\overline{z_2} - z_2\overline{z_1} + z_2\overline{z_2})$</div>
+    <div class="step-explain">বিপরীত চিহ্নযুক্ত পদসমূহ ($z_1\overline{z_2}$ এবং $z_2\overline{z_1}$) কাটাকাটি করে বা বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = z_1\overline{z_1} + z_2\overline{z_2} + z_1\overline{z_1} + z_2\overline{z_2}$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = 2z_1\overline{z_1} + 2z_2\overline{z_2} \quad [\text{যোগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = 2\left(z_1\overline{z_1} + z_2\overline{z_2}\right) \quad [২ \text{ কমন নিয়ে}]$</div>
+    <div class="step-explain">পুনরায় $Z\overline{Z} = |Z|^2$ ধর্মটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{L.H.S.} = 2\left(|z_1|^2 + |z_2|^2\right) = \text{R.H.S.}$</div>
+    <div class="step"><b>অতএব, $|z_1+z_2|^2+|z_1-z_2|^2=2\left(|z_1|^2+|z_2|^2\right)$ (প্রমাণিত)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ix) দুটি জটিল সংখ্যা নির্ণয় কর যাদের যোগফল $4$ ও গুণফল $8$ হয়।</div>
+    <div class="solution-title">সমাধান (ix):</div>
+    <div class="step-explain">ধরি, জটিল সংখ্যা দুটি যথাক্রমে $\alpha$ এবং $\beta$।</div>
+    <div class="step-explain">শর্তানুসারে:</div>
+    <div class="step">$\alpha + \beta = 4 \quad \dots \quad \text{(১)}$</div>
+    <div class="step">$\alpha \cdot \beta = 8 \quad \dots \quad \text{(২)}$</div>
+    <div class="step-explain">আমরা জানি, কোনো সমীকরণের মূলদ্বয়ের যোগফল এবং গুণফল দেওয়া থাকলে দ্বিঘাত সমীকরণটি হয়: $x^2 - (\text{যোগফল})x + (\text{গুণফল}) = 0$</div>
+    <div class="step-explain">সুতরাং সমীকরণটি হবে:</div>
+    <div class="step">$x^2 - 4x + 8 = 0$</div>
+    <div class="step-explain">দ্বিঘাত সমীকরণের সাধারণ সূত্রের $\left(x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\right)$ সাহায্যে সমাধান করি:</div>
+    <div class="step">এখানে, $a=1, b=-4, c=8$</div>
+    <div class="step">$x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4 \cdot 1 \cdot 8}}{2 \cdot 1}$</div>
+    <div class="step">$\Rightarrow x = \frac{4 \pm \sqrt{16 - 32}}{2} = \frac{4 \pm \sqrt{-16}}{2}$</div>
+    <div class="step-explain">আমরা জানি, $\sqrt{-16} = \sqrt{16 \cdot (-1)} = \sqrt{16} \cdot \sqrt{-1} = 4i$। এই মানটি বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow x = \frac{4 \pm 4i}{2}$</div>
+    <div class="step">$\Rightarrow x = \frac{2(2 \pm 2i)}{2} \quad [২ \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = 2 \pm 2i \quad [\text{লব ও হরের ২ কেটে}]$</div>
+    <div class="stepn"><b>উত্তর:</b> জটিল সংখ্যা দুটি হলো $2+2i$ এবং $2-2i$।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(x) $z=4+3i-i^2-i^3$ হলে, $2z$ ও $\overline{z}$ এর মধ্যবর্তী দূরত্ব নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (x):</div>
+    <div class="step-explain">দেওয়া আছে, $z = 4+3i-i^2-i^3$</div>
+    <div class="step-explain">আমরা জানি, $i^2 = -1$ এবং $i^3 = i^2 \cdot i = -1 \cdot i = -i$। এই মানগুলো বসিয়ে পাই:</div>
+    <div class="step">$z = 4 + 3i - (-1) - (-i) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow z = 4 + 3i + 1 + i$</div>
+    <div class="step">$\Rightarrow z = (4+1) + i(3+1) = 5+4i \quad [\text{বাস্তব ও কাল্পনিক অংশ যোগ করে}]$</div>
+    
+    <div class="step-explain">এখন দূরত্ব বের করার জন্য প্রয়োজনীয় পদ দুটি তৈরি করি:</div>
+    <div class="step">১. $2z = 2(5+4i) = 10+8i$ (কার্তেসীয় স্থানাঙ্ক আকারে এর বিন্দুটি হলো: $P(10, 8)$)</div>
+    <div class="step">২. $\overline{z} = \overline{5+4i} = 5-4i$ (কার্তেসীয় স্থানাঙ্ক আকারে এর বিন্দুটি হলো: $Q(5, -4)$)</div>
+    
+    <div class="step-explain">দুটি জটিল সংখ্যা $Z_1$ এবং $Z_2$ এর মধ্যবর্তী দূরত্ব হলো তাদের অন্তরের মডুলাস, অর্থাৎ $|Z_1 - Z_2|$।</div>
+    <div class="step">$\text{দূরত্ব} = \left|2z - \overline{z}\right|$</div>
+    <div class="step">$\Rightarrow \text{দূরত্ব} = \left|(10+8i) - (5-4i)\right| \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{দূরত্ব} = \left|10 + 8i - 5 + 4i\right| = \left|5 + 12i\right| \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে মান নির্ণয় করি:</div>
+    <div class="step">$\Rightarrow \text{দূরত্ব} = \sqrt{5^2 + 12^2}$</div>
+    <div class="step">$\Rightarrow \text{দূরত্ব} = \sqrt{25 + 144} = \sqrt{169} = 13$</div>
+    <div class="step"><b>উত্তর:</b> $2z$ ও $\overline{z}$ এর মধ্যবর্তী দূরত্ব $13$ একক।</div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

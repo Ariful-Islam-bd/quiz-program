@@ -1,0 +1,256 @@
+<!-- frontend/pages/profile.html -->
+<!-- Version: 1.0.0 - সম্পূর্ণ প্রোফাইল পেজ -->
+
+<div id="profilePageWrapper">
+    <!-- ============================================ -->
+    <!-- প্রোফাইল হেডার (কভার ইমেজ সহ)              -->
+    <!-- ============================================ -->
+    <div class="profile-header-section">
+        <div class="profile-cover" id="profileCover">
+            <div class="cover-overlay"></div>
+            <div class="cover-actions">
+                <button class="cover-btn" id="changeCoverBtn" title="কভার পরিবর্তন করুন">
+                    📷 কভার পরিবর্তন
+                </button>
+            </div>
+        </div>
+        
+        <div class="profile-avatar-section">
+            <div class="profile-avatar-wrapper" id="profileAvatarWrapper">
+                <img id="profileAvatarImg" src="" alt="Avatar" style="display: none;">
+                <span id="profileAvatarInitials" class="profile-avatar-initials">A</span>
+                <div class="avatar-edit-badge" id="profileAvatarEditBtn">
+                    <span>✏️</span>
+                </div>
+            </div>
+            <div class="profile-name-title">
+                <h1 id="profileDisplayName">অতিথি</h1>
+                <p id="profileDisplayOrg">প্রতিষ্ঠান</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- প্রোফাইল কন্টেন্ট (ট্যাব ভিউ)               -->
+    <!-- ============================================ -->
+    <div class="profile-content-area">
+        <!-- ট্যাব নেভিগেশন -->
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="info">📋 তথ্য</button>
+            <button class="tab-btn" data-tab="stats">📊 পরিসংখ্যান</button>
+            <button class="tab-btn" data-tab="activity">📜 কার্যকলাপ</button>
+            <button class="tab-btn" data-tab="avatar">🖼️ অ্যাভাটার</button>
+        </div>
+
+        <!-- ট্যাব: তথ্য -->
+        <div class="tab-content active" id="tab-info">
+            <div class="profile-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>👤 নাম</label>
+                        <input type="text" id="profileName" class="form-control" placeholder="আপনার নাম">
+                    </div>
+                    <div class="form-group">
+                        <label>📧 ইমেইল</label>
+                        <input type="email" id="profileEmail" class="form-control" placeholder="ইমেইল (ঐচ্ছিক)">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>🏫 প্রতিষ্ঠান</label>
+                        <input type="text" id="profileOrg" class="form-control" placeholder="প্রতিষ্ঠানের নাম">
+                    </div>
+                    <div class="form-group">
+                        <label>📚 শ্রেণি</label>
+                        <input type="text" id="profileClass" class="form-control" placeholder="শ্রেণি">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>📂 বিভাগ</label>
+                        <input type="text" id="profileSection" class="form-control" placeholder="বিভাগ">
+                    </div>
+                    <div class="form-group">
+                        <label>📋 বোর্ড</label>
+                        <input type="text" id="profileBoard" class="form-control" placeholder="বোর্ড">
+                    </div>
+                </div>
+                <button id="profileSaveBtn" class="btn btn-primary" style="margin-top: 10px;">
+                    💾 তথ্য সংরক্ষণ করুন
+                </button>
+            </div>
+        </div>
+
+        <!-- ট্যাব: পরিসংখ্যান -->
+        <div class="tab-content" id="tab-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-number" id="statTotalQuizzes">0</div>
+                    <div class="stat-label">মোট কুইজ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" id="statAvgScore">0%</div>
+                    <div class="stat-label">গড় স্কোর</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-number" id="statCorrect">0</div>
+                    <div class="stat-label">সঠিক উত্তর</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❌</div>
+                    <div class="stat-number" id="statWrong">0</div>
+                    <div class="stat-label">ভুল উত্তর</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏭️</div>
+                    <div class="stat-number" id="statSkipped">0</div>
+                    <div class="stat-label">স্কিপ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" id="statHundredCount">0</div>
+                    <div class="stat-label">১০০% করা হয়েছে</div>
+                </div>
+            </div>
+            
+            <!-- প্রগ্রেস বার -->
+            <div class="profile-progress-section">
+                <div class="progress-label">
+                    <span>📈 সামগ্রিক অগ্রগতি</span>
+                    <strong id="profileProgressPct">0%</strong>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress" id="profileProgressBar" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ট্যাব: কার্যকলাপ -->
+        <div class="tab-content" id="tab-activity">
+            <div class="activity-list" id="activityList">
+                <p class="empty-activity">📭 এখনও কোনো কার্যকলাপ নেই</p>
+            </div>
+        </div>
+
+        <!-- ট্যাব: অ্যাভাটার -->
+        <div class="tab-content" id="tab-avatar">
+            <div class="avatar-management">
+                <div class="avatar-preview-large">
+                    <div class="avatar-large-wrapper" id="avatarLargePreview">
+                        <img id="avatarLargeImg" src="" alt="Avatar" style="display: none;">
+                        <span id="avatarLargeInitials" class="avatar-large-initials">A</span>
+                    </div>
+                </div>
+                
+                <div class="avatar-actions-grid">
+                    <button id="uploadAvatarBtn" class="btn btn-primary">
+                        📤 ছবি আপলোড করুন
+                    </button>
+                    <button id="cropAvatarBtn" class="btn btn-secondary" disabled>
+                        ✂️ ক্রপ করুন
+                    </button>
+                    <button id="resetAvatarBtn" class="btn btn-danger">
+                        🔄 ডিফল্ট অ্যাভাটার
+                    </button>
+                </div>
+
+                <!-- ইমোজি গ্যালারি -->
+                <div class="emoji-gallery">
+                    <h4>ইমোজি অ্যাভাটার</h4>
+                    <div class="emoji-grid" id="emojiGrid">
+                        <!-- JS দ্বারা জেনারেট হবে -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ক্রপিং মডাল                                 -->
+    <!-- ============================================ -->
+    <div id="cropModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content crop-modal">
+            <div class="modal-header">
+                <h3>✂️ অ্যাভাটার ক্রপ করুন</h3>
+                <button id="cropModalClose" class="close-btn">✕</button>
+            </div>
+            
+            <div class="crop-container">
+                <div class="crop-wrapper" id="cropWrapper">
+                    <div class="crop-box" id="cropBox">
+                        <img id="cropImage" src="" alt="Crop">
+                        <div class="crop-overlay">
+                            <div class="crop-grid"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="crop-controls">
+                    <div class="crop-slider-group">
+                        <label>🔍 জুম</label>
+                        <input type="range" id="cropZoom" min="0.5" max="3" step="0.01" value="1">
+                        <span id="cropZoomVal">100%</span>
+                    </div>
+                    
+                    <div class="crop-slider-group">
+                        <label>🔄 রোটেশন</label>
+                        <input type="range" id="cropRotate" min="0" max="360" step="1" value="0">
+                        <span id="cropRotateVal">0°</span>
+                    </div>
+                    
+                    <div class="crop-shape-group">
+                        <button class="shape-btn active" data-shape="circle">⭕</button>
+                        <button class="shape-btn" data-shape="square">⬜</button>
+                        <button class="shape-btn" data-shape="rounded">🔲</button>
+                    </div>
+                    
+                    <div class="crop-aspect-group">
+                        <button class="aspect-btn active" data-aspect="1:1">1:1</button>
+                        <button class="aspect-btn" data-aspect="4:3">4:3</button>
+                        <button class="aspect-btn" data-aspect="16:9">16:9</button>
+                        <button class="aspect-btn" data-aspect="free">মুক্ত</button>
+                    </div>
+                    
+                    <div class="crop-actions">
+                        <button id="cropReset" class="btn btn-secondary">🔄 রিসেট</button>
+                        <button id="cropUndo" class="btn btn-secondary" disabled>↩️ আন্ডো</button>
+                        <button id="cropRedo" class="btn btn-secondary" disabled>↪️ রিডু</button>
+                    </div>
+                    
+                    <div class="crop-filter-group">
+                        <button class="filter-btn active" data-filter="none">⚪ আসল</button>
+                        <button class="filter-btn" data-filter="grayscale">⚫ গ্রেস্কেল</button>
+                        <button class="filter-btn" data-filter="sepia">🟫 সেপিয়া</button>
+                        <button class="filter-btn" data-filter="bright">☀️ ব্রাইট</button>
+                        <button class="filter-btn" data-filter="vintage">📜 ভিনটেজ</button>
+                        <button class="filter-btn" data-filter="blur">🌫️ ব্লার</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="cropCancel" class="btn btn-secondary">বাতিল</button>
+                <button id="cropSave" class="btn btn-primary">✅ সেভ করুন</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- লাইভ অ্যাভাটার টগল                         -->
+    <!-- ============================================ -->
+    <div class="live-avatar-toggle">
+        <label class="toggle-switch">
+            <input type="checkbox" id="liveAvatarToggle">
+            <span class="toggle-slider"></span>
+        </label>
+        <span>✨ লাইভ অ্যাভাটার</span>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- হিডেন ফাইল ইনপুট                           -->
+    <!-- ============================================ -->
+    <input type="file" id="hiddenFileInput" accept="image/*" style="display: none;">
+</div>

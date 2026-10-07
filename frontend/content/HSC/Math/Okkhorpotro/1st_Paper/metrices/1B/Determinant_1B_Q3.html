@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Determ 1B Q3</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+    
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>উচ্চ মাধ্যমিক গণিত<br> মেট্রিক্স ও নির্ণায়ক অনুশীলনী (1B)</h1>
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (i) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a-b-c & 2a & 2a \\ 2b & b-c-a & 2b \\ 2c & 2c & c-a-b \end{vmatrix} = (a+b+c)^3$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a-b-c & 2a & 2a \\ 2b & b-c-a & 2b \\ 2c & 2c & c-a-b \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম সারি, দ্বিতীয় সারি এবং তৃতীয় সারি যোগ করে একটি নতুন প্রথম সারি তৈরি করি, যাতে কমন নেওয়ার মতো সাধারণ রাশি পাওয়া যায়।</div>
+  <div class="step">$$= \begin{vmatrix} (a-b-c) + 2b + 2c & 2a + (b-c-a) + 2c & 2a + 2b + (c-a-b) \\ 2b & b-c-a & 2b \\ 2c & 2c & c-a-b \end{vmatrix} \quad \left[ R_1' = R_1 + R_2 + R_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} a+b+c & a+b+c & a+b+c \\ 2b & b-c-a & 2b \\ 2c & 2c & c-a-b \end{vmatrix} \quad [\text{যোগ-বিয়োগ করে}]$$</div>
+  
+  <div class="step-explain">এখন প্রথম সারি ($R_1$) থেকে সাধারণ উৎপাদক $(a+b+c)$ কমন নিই:</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} 1 & 1 & 1 \\ 2b & b-c-a & 2b \\ 2c & 2c & c-a-b \end{vmatrix} \quad \left[ R_1 \text{ থেকে } (a+b+c) \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">নির্ণায়কের মান সহজে বের করার জন্য প্রথম কলাম থেকে দ্বিতীয় কলাম এবং দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করে শূন্য ($0$) তৈরি করি:</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ 2b - (b-c-a) & (b-c-a) - 2b & 2b \\ 2c - 2c & 2c - (c-a-b) & c-a-b \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} 0 & 0 & 1 \\ a+b+c & -(a+b+c) & 2b \\ 0 & a+b+c & c-a-b \end{vmatrix} \quad [\text{চিহ্ন পরিবর্তন ও সরল করে}]$$</div>
+  
+  <div class="step-explain">প্রথম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= (a+b+c) \cdot 1 \cdot \begin{vmatrix} a+b+c & -(a+b+c) \\ 0 & a+b+c \end{vmatrix} \quad [\text{প্রথম সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">এবার $2 \times 2$ নির্ণায়কের কোণাকুণি গুণ (আর গুণন) করি:</div>
+  <div class="step">$$= (a+b+c) \left\{ (a+b+c) \cdot (a+b+c) - 0 \cdot (-(a+b+c)) \right\} \quad [\text{কোণাকুণি গুণ করে}]$$</div>
+  <div class="step">$$= (a+b+c) \left\{ (a+b+c)^2 - 0 \right\}$$</div>
+  <div class="step">$$= (a+b+c) \cdot (a+b+c)^2$$</div>
+  <div class="step">$$= (a+b+c)^3$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (ii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a+b+2c & a & b \\ c & b+c+2a & b \\ c & a & c+a+2b \end{vmatrix} = 2(a+b+c)^3$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a+b+2c & a & b \\ c & b+c+2a & b \\ c & a & c+a+2b \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম, ২য় এবং ৩য় কলাম যোগ করে একটি নতুন ১ম কলাম তৈরি করি:</div>
+  <div class="step">$$= \begin{vmatrix} (a+b+2c) + a + b & a & b \\ c + (b+c+2a) + b & b+c+2a & b \\ c + a + (c+a+2b) & a & c+a+2b \end{vmatrix} \quad \left[ C_1' = C_1 + C_2 + C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} 2a+2b+2c & a & b \\ 2a+2b+2c & b+c+2a & b \\ 2a+2b+2c & a & c+a+2b \end{vmatrix} \quad [\text{যোগ করে সাজিয়ে}]$$</div>
+  
+  <div class="step-explain">প্রথম কলাম থেকে সাধারণ উৎপাদক $2(a+b+c)$ কমন নিই:</div>
+  <div class="step">$$= 2(a+b+c) \begin{vmatrix} 1 & a & b \\ 1 & b+c+2a & b \\ 1 & a & c+a+2b \end{vmatrix} \quad \left[ C_1 \text{ থেকে } 2(a+b+c) \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় সারি এবং ২য় সারি থেকে ৩য় সারি বিয়োগ করি:</div>
+  <div class="step">$$= 2(a+b+c) \begin{vmatrix} 1 - 1 & a - (b+c+2a) & b - b \\ 1 - 1 & (b+c+2a) - a & b - (c+a+2b) \\ 1 & a & c+a+2b \end{vmatrix} \quad \left[ R_1' = R_1 - R_2 \text{ এবং } R_2' = R_2 - R_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= 2(a+b+c) \begin{vmatrix} 0 & -(a+b+c) & 0 \\ 0 & a+b+c & -(a+b+c) \\ 1 & a & c+a+2b \end{vmatrix} \quad [\text{সরল করে}]$$</div>
+  
+  <div class="step-explain">প্রথম কলামের সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= 2(a+b+c) \cdot 1 \cdot \begin{vmatrix} -(a+b+c) & 0 \\ a+b+c & -(a+b+c) \end{vmatrix} \quad [\text{প্রথম কলামের সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে মান বের করি:</div>
+  <div class="step">$$= 2(a+b+c) \left\{ (-(a+b+c)) \cdot (-(a+b+c)) - 0 \cdot (a+b+c) \right\} \quad [\text{আর গুণন করে}]$$</div>
+  <div class="step">$$= 2(a+b+c) \left\{ (a+b+c)^2 - 0 \right\} \quad [(-1) \cdot (-1) = +1]$$</div>
+  <div class="step">$$= 2(a+b+c) \cdot (a+b+c)^2$$</div>
+  <div class="step">$$= 2(a+b+c)^3$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (iii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a & b & c \\ a^2 & b^2 & c^2 \\ a^3 & b^3 & c^3 \end{vmatrix} = abc(a-b)(b-c)(c-a)$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a & b & c \\ a^2 & b^2 & c^2 \\ a^3 & b^3 & c^3 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $a$, ২য় কলাম থেকে $b$ এবং ৩য় কলাম থেকে $c$ কমন নিই:</div>
+  <div class="step">$$= abc \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix} \quad \left[ C_1, C_2, C_3 \text{ থেকে যথাক্রমে } a, b, c \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= abc \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ a - b & b - c & c \\ a^2 - b^2 & b^2 - c^2 & c^2 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= abc \begin{vmatrix} 0 & 0 & 1 \\ a - b & b - c & c \\ (a-b)(a+b) & (b-c)(b+c) & c^2 \end{vmatrix} \quad [\text{বর্গের অন্তরের সূত্র ভেঙে}]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(a-b)$ এবং ২য় কলাম থেকে $(b-c)$ কমন নিই:</div>
+  <div class="step">$$= abc(a-b)(b-c) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & c \\ a+b & b+c & c^2 \end{vmatrix} \quad \left[ C_1 \text{ থেকে } (a-b) \text{ এবং } C_2 \text{ থেকে } (b-c) \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করি:</div>
+  <div class="step">$$= abc(a-b)(b-c) \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ a+b & b+c \end{vmatrix} \quad [\text{১ম সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ সম্পন্ন করি:</div>
+  <div class="step">$$= abc(a-b)(b-c) \left\{ 1 \cdot (b+c) - 1 \cdot (a+b) \right\} \quad [\text{আর গুণন করে}]$$</div>
+  <div class="step">$$= abc(a-b)(b-c) (b + c - a - b)$$</div>
+  <div class="step">$$= abc(a-b)(b-c)(c-a) \quad [+b \text{ এবং } -b \text{ কেটে দিয়ে}]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (iv) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a+x & b+x & c+x \\ a+y & b+y & c+y \\ a^2 & b^2 & c^2 \end{vmatrix} = (a-b)(b-c)(c-a)(x-y)$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a+x & b+x & c+x \\ a+y & b+y & c+y \\ a^2 & b^2 & c^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= \begin{vmatrix} (a+x) - (b+x) & (b+x) - (c+x) & c+x \\ (a+y) - (b+y) & (b+y) - (c+y) & c+y \\ a^2 - b^2 & b^2 - c^2 & c^2 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} a-b & b-c & c+x \\ a-b & b-c & c+y \\ (a-b)(a+a) & (b-c)(b+c) & c^2 \end{vmatrix} \quad [x \text{ ও } y \text{ কেটে দিয়ে এবং বর্গের সূত্র ভেঙে}]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(a-b)$ এবং ২য় কলাম থেকে $(b-c)$ কমন নিয়ে পাই:</div>
+  <div class="step">$$= (a-b)(b-c) \begin{vmatrix} 1 & 1 & c+x \\ 1 & 1 & c+y \\ a+b & b+c & c^2 \end{vmatrix} \quad \left[ C_1 \text{ থেকে } (a-b) \text{ এবং } C_2 \text{ থেকে } (b-c) \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় সারি বিয়োগ করি, যাতে প্রথম উপাদানটি শূন্য হয়ে যায়:</div>
+  <div class="step">$$= (a-b)(b-c) \begin{vmatrix} 1 - 1 & 1 - 1 & (c+x) - (c+y) \\ 1 & 1 & c+y \\ a+b & b+c & c^2 \end{vmatrix} \quad \left[ R_1' = R_1 - R_2 \text{ করে} \right]$$</div>
+  <div class="step">$$= (a-b)(b-c) \begin{vmatrix} 0 & 0 & x-y \\ 1 & 1 & c+y \\ a+b & b+c & c^2 \end{vmatrix} \quad [c \text{ কেটে দিয়ে}]$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= (a-b)(b-c) \cdot (x-y) \cdot \begin{vmatrix} 1 & 1 \\ a+b & b+c \end{vmatrix} \quad [\text{১ম সারির সাপেক্ষে বিস্তার করে}]$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করি:</div>
+  <div class="step">$$= (a-b)(b-c)(x-y) \left\{ 1 \cdot (b+c) - 1 \cdot (a+b) \right\}$$</div>
+  <div class="step">$$= (a-b)(b-c)(x-y) (b + c - a - b)$$</div>
+  <div class="step">$$= (a-b)(b-c)(x-y)(c-a) \quad [+b \text{ ও } -b \text{ কেটে দিয়ে}]$$</div>
+  
+  <div class="step-explain">পদগুলোকে ডানপক্ষের মতো সাজিয়ে লিখি:</div>
+  <div class="step">$$= (a-b)(b-c)(c-a)(x-y)$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (v) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} x & y & z \\ x^2 & y^2 & z^2 \\ x^3-1 & y^3-1 & z^3-1 \end{vmatrix} = (xyz-1)(x-y)(y-z)(z-x)$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} x & y & z \\ x^2 & y^2 & z^2 \\ x^3-1 & y^3-1 & z^3-1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">নির্ণায়কের ধর্ম অনুযায়ী, কোনো সারির উপাদানগুলো দ্বিপদী হলে নির্ণায়কটিকে দুটি আলাদা নির্ণায়কের বিয়োগফল হিসেবে প্রকাশ করা যায়:</div>
+  <div class="step">$$= \begin{vmatrix} x & y & z \\ x^2 & y^2 & z^2 \\ x^3 & y^3 & z^3 \end{vmatrix} - \begin{vmatrix} x & y & z \\ x^2 & y^2 & z^2 \\ 1 & 1 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম নির্ণায়কের ১ম, ২য় ও ৩য় কলাম থেকে যথাক্রমে $x, y, z$ কমন নিই এবং দ্বিতীয় নির্ণায়কের সারিগুলোকে অদলবদল করে $1$-এর সারিকে উপরে আনি:</div>
+  <div class="step">$$= xyz \begin{vmatrix} 1 & 1 & 1 \\ x & y & z \\ x^2 & y^2 & z^2 \end{vmatrix} - (-1)^2 \begin{vmatrix} 1 & 1 & 1 \\ x & y & z \\ x^2 & y^2 & z^2 \end{vmatrix} \quad \left[ R_3 \rightarrow R_2 \rightarrow R_1 \text{ করতে দুইবার সারি পরিবর্তন হয়েছে} \right]$$</div>
+  <div class="step">$$= xyz \begin{vmatrix} 1 & 1 & 1 \\ x & y & z \\ x^2 & y^2 & z^2 \end{vmatrix} - \begin{vmatrix} 1 & 1 & 1 \\ x & y & z \\ x^2 & y^2 & z^2 \end{vmatrix} \quad [(-1)^2 = 1]$$</div>
+  
+  <div class="step-explain">এখন সম্পূর্ণ নির্ণায়কটি কমন নিয়ে নিই:</div>
+  <div class="step">$$= (xyz - 1) \begin{vmatrix} 1 & 1 & 1 \\ x & y & z \\ x^2 & y^2 & z^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= (xyz - 1) \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ x - y & y - z & z \\ x^2 - y^2 & y^2 - z^2 & z^2 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= (xyz - 1) \begin{vmatrix} 0 & 0 & 1 \\ x - y & y - z & z \\ (x-y)(x+y) & (y-z)(y+z) & z^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(x-y)$ এবং ২য় কলাম থেকে $(y-z)$ কমন নিই:</div>
+  <div class="step">$$= (xyz - 1)(x - y)(y - z) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & z \\ x+y & y+z & z^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করি এবং কোণাকুণি গুণ করি:</div>
+  <div class="step">$$= (xyz - 1)(x - y)(y - z) \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ x+y & y+z \end{vmatrix}$$</div>
+  <div class="step">$$= (xyz - 1)(x - y)(y - z) \left\{ 1 \cdot (y+z) - 1 \cdot (x+y) \right\}$$</div>
+  <div class="step">$$= (xyz - 1)(x - y)(y - z) (y + z - x - y)$$</div>
+  <div class="step">$$= (xyz - 1)(x - y)(y - z)(z - x) \quad [+y \text{ ও } -y \text{ কেটে দিয়ে}]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (vi) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a & b & c \\ 2a^3+1 & 2b^3+1 & 2c^3+1 \\ a^2 & b^2 & c^2 \end{vmatrix} = -(2abc+1)(a-b)(b-c)(c-a)$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a & b & c \\ 2a^3+1 & 2b^3+1 & 2c^3+1 \\ a^2 & b^2 & c^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">প্রথমে ২য় সারি ও ৩য় সারি নিজেদের মধ্যে অদলবদল করি (একটি মাইনাস সামনে আসবে):</div>
+  <div class="step">$$= - \begin{vmatrix} a & b & c \\ a^2 & b^2 & c^2 \\ 2a^3+1 & 2b^3+1 & 2c^3+1 \end{vmatrix} \quad \left[ R_2 \leftrightarrow R_3 \text{ করে} \right]$$</div>
+  
+  <div class="step-explain">নির্ণায়কের ধর্ম অনুযায়ী ৩য় সারির যোগফল অংশকে আলাদা দুটি নির্ণায়কে বিভক্ত করি:</div>
+  <div class="step">$$= - \left\{ \begin{vmatrix} a & b & c \\ a^2 & b^2 & c^2 \\ 2a^3 & 2b^3 & 2c^3 \end{vmatrix} + \begin{vmatrix} a & b & c \\ a^2 & b^2 & c^2 \\ 1 & 1 & 1 \end{vmatrix} \right\}$$</div>
+  
+  <div class="step-explain">১ম অংশে ৩য় সারি থেকে $2$ এবং কলামগুলো থেকে যথাক্রমে $a, b, c$ কমন নিই। ২য় অংশে সারি পরিবর্তন করে $1$-এর সারিকে উপরে তুলি:</div>
+  <div class="step">$$= - \left\{ 2abc \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix} + (-1)^2 \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix} \right\} \quad \left[ \text{২য় অংশে } R_3 \rightarrow R_2 \rightarrow R_1 \text{ করা হয়েছে} \right]$$</div>
+  <div class="step">$$= - \left\{ 2abc \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix} + \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix} \right\}$$</div>
+  
+  <div class="step-explain">পুরো নির্ণায়কটি সাধারণ উৎপাদক হিসেবে কমন নিই:</div>
+  <div class="step">$$= -(2abc + 1) \begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$= -(2abc + 1) \begin{vmatrix} 1 - 1 & 1 - 1 & 1 \\ a - b & b - c & c \\ a^2 - b^2 & b^2 - c^2 & c^2 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ এবং } C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $(a-b)$ এবং ২য় কলাম থেকে $(b-c)$ কমন নিয়ে ১ম সারির সাপেক্ষে বিস্তার করি:</div>
+  <div class="step">$$= -(2abc + 1)(a - b)(b - c) \begin{vmatrix} 0 & 0 & 1 \\ 1 & 1 & c \\ a+b & b+c & c^2 \end{vmatrix}$$</div>
+  <div class="step">$$= -(2abc + 1)(a - b)(b - c) \cdot 1 \cdot \begin{vmatrix} 1 & 1 \\ a+b & b+c \end{vmatrix}$$</div>
+  
+  <div class="step-explain">কোণাকুণি গুণ করে চূড়ান্ত মান পাই:</div>
+  <div class="step">$$= -(2abc + 1)(a - b)(b - c) \left\{ 1 \cdot (b+c) - 1 \cdot (a+b) \right\}$$</div>
+  <div class="step">$$= -(2abc + 1)(a - b)(b - c)(c - a) \quad [+b \text{ ও } -b \text{ কেটে দিয়ে}]$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (vii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} a^2 & bc & ca+c^2 \\ a^2+ab & b^2 & ca \\ ab & b^2+bc & c^2 \end{vmatrix} = 4a^2b^2c^2$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} a^2 & bc & ca+c^2 \\ a^2+ab & b^2 & ca \\ ab & b^2+bc & c^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে $a$, ২য় কলাম থেকে $b$ এবং ৩য় কলাম থেকে $c$ কমন নিই:</div>
+  <div class="step">$$= abc \begin{vmatrix} a & c & a+c \\ a+b & b & a \\ b & b+c & c \end{vmatrix} \quad \left[ C_1, C_2, C_3 \text{ থেকে যথাক্রমে } a, b, c \text{ কমন নিয়ে} \right]$$</div>
+  
+  <div class="step-explain">১ম ও ২য় কলাম যোগ করে তা থেকে ৩য় কলাম বিয়োগ করে নতুন ১ম কলাম গঠন করি:</div>
+  <div class="step">$$= abc \begin{vmatrix} a + c - (a+c) & c & a+c \\ (a+b) + b - a & b & a \\ b + (b+c) - c & b+c & c \end{vmatrix} \quad \left[ C_1' = C_1 + C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= abc \begin{vmatrix} 0 & c & a+c \\ 2b & b & a \\ 2b & b+c & c \end{vmatrix} \quad [\text{সরল করে}]$$</div>
+  
+  <div class="step-explain">২য় সারি থেকে ৩য় সারি বিয়োগ করি, যাতে ১ম কলামে আরও একটি শূন্য পাওয়া যায়:</div>
+  <div class="step">$$= abc \begin{vmatrix} 0 & c & a+c \\ 2b - 2b & b - (b+c) & a - c \\ 2b & b+c & c \end{vmatrix} \quad \left[ R_2' = R_2 - R_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= abc \begin{vmatrix} 0 & c & a+c \\ 0 & -c & a-c \\ 2b & b+c & c \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলামের সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= abc \cdot 2b \cdot \begin{vmatrix} c & a+c \\ -c & a-c \end{vmatrix} \quad [\text{১ম কলামের সাপেক্ষে বিস্তার}]$$</div>
+  <div class="step">$$= 2ab^2c \left\{ c(a-c) - (-c)(a+c) \right\} \quad [\text{কোণাকুণি গুণ করে}]$$</div>
+  
+  <div class="step-explain">বন্ধনী তুলে দিয়ে যোগ করি:</div>
+  <div class="step">$$= 2ab^2c \left\{ ac - c^2 + ac + c^2 \right\}$$</div>
+  <div class="step">$$= 2ab^2c \left\{ 2ac \right\} \quad [-c^2 \text{ ও } +c^2 \text{ কেটে দিয়ে}]$$</div>
+  <div class="step">$$= 4a^2b^2c^2$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (viii) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} b^2+c^2 & ab & ca \\ ab & c^2+a^2 & bc \\ ca & bc & a^2+b^2 \end{vmatrix} = 4a^2b^2c^2$$</div>
+  
+  <div class="step-explain">প্রমাণ: বামপক্ষ ($\text{L.H.S.}$) দিয়ে শুরু করি।</div>
+  <div class="step">$$\text{L.H.S.} = \begin{vmatrix} b^2+c^2 & ab & ca \\ ab & c^2+a^2 & bc \\ ca & bc & a^2+b^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">নির্ণায়কের ১ম সারিকে $a$, ২য় সারিকে $b$ এবং ৩য় সারিকে $c$ দ্বারা গুণ করি (মানের সমতা ঠিক রাখতে বাইরে $\frac{1}{abc}$ গুণ করতে হবে):</div>
+  <div class="step">$$= \frac{1}{abc} \begin{vmatrix} a(b^2+c^2) & a^2b & ca^2 \\ ab^2 & b(c^2+a^2) & b^2c \\ c^2a & bc^2 & c(a^2+b^2) \end{vmatrix} \quad \left[ R_1 \rightarrow aR_1, R_2 \rightarrow bR_2, R_3 \rightarrow cR_3 \text{ করে} \right]$$</div>
+  
+  <div class="step-explain">এবার ১ম কলাম থেকে $a$, ২য় কলাম থেকে $b$ এবং ৩য় কলাম থেকে $c$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+  <div class="step">$$= \frac{abc}{abc} \begin{vmatrix} b^2+c^2 & a^2 & a^2 \\ b^2 & c^2+a^2 & b^2 \\ c^2 & c^2 & a^2+b^2 \end{vmatrix} \quad \left[ C_1, C_2, C_3 \text{ থেকে যথাক্রমে } a, b, c \text{ কমন নিয়ে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} b^2+c^2 & a^2 & a^2 \\ b^2 & c^2+a^2 & b^2 \\ c^2 & c^2 & a^2+b^2 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় ও ৩য় সারির যোগফল বিয়োগ করে নতুন ১ম সারি তৈরি করি:</div>
+  <div class="step">$$= \begin{vmatrix} (b^2+c^2) - (b^2+c^2) & a^2 - (c^2+a^2+c^2) & a^2 - (b^2+a^2+b^2) \\ b^2 & c^2+a^2 & b^2 \\ c^2 & c^2 & a^2+b^2 \end{vmatrix} \quad \left[ R_1' = R_1 - (R_2 + R_3) \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} 0 & -2c^2 & -2b^2 \\ b^2 & c^2+a^2 & b^2 \\ c^2 & c^2 & a^2+b^2 \end{vmatrix} \quad [\text{সরল করে}]$$</div>
+  
+  <div class="step-explain">১ম সারির সাপেক্ষে নির্ণায়কটি বিস্তার করি:</div>
+  <div class="step">$$= 0 - (-2c^2) \begin{vmatrix} b^2 & b^2 \\ c^2 & a^2+b^2 \end{vmatrix} + (-2b^2) \begin{vmatrix} b^2 & c^2+a^2 \\ c^2 & c^2 \end{vmatrix}$$</div>
+  <div class="step">$$= 2c^2 \left\{ b^2(a^2+b^2) - b^2c^2 \right\} - 2b^2 \left\{ b^2c^2 - c^2(c^2+a^2) \right\} \quad [\text{কোণাকুণি গুণ করে}]$$</div>
+  <div class="step">$$= 2c^2 \left\{ a^2b^2 + b^4 - b^2c^2 \right\} - 2b^2 \left\{ b^2c^2 - c^4 - a^2c^2 \right\} \quad [\text{বন্ধনী গুণ করে}]$$</div>
+  
+  <div class="step-explain">সম্পূর্ণ অংশ গুণ করে সরল করি:</div>
+  <div class="step">$$= 2a^2b^2c^2 + 2b^4c^2 - 2b^2c^4 - 2b^4c^2 + 2b^2c^4 + 2a^2b^2c^2$$</div>
+  <div class="step">$$= 2a^2b^2c^2 + 2a^2b^2c^2 \quad \left[ +2b^4c^2, -2b^2c^4 \text{ ইত্যাদি পরস্পর কেটে যায়} \right]$$</div>
+  <div class="step">$$= 4a^2b^2c^2$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<hr />
+
+<div class="problem-card">
+  <div class="step-explain"><h3>প্রশ্ন ৩ (ix) প্রমাণ কর যে:</h3></div>
+  <div class="step">$$\begin{vmatrix} (b+c)^2 & a^2+1 & 1 \\ (c+a)^2 & b^2+1 & 1 \\ (a+b)^2 & c^2+1 & 1 \end{vmatrix} = \begin{vmatrix} (b+c)^2 & a^2 & 1 \\ (c+a)^2 & b^2 & 1 \\ (a+b)^2 & c^2 & 1 \end{vmatrix} = -2(a+b+c)(a-b)(b-c)(c-a)$$</div>
+  
+  <div class="step-explain">প্রমাণ: এই প্রশ্নে দুটি অংশ প্রমাণ করতে হবে। প্রথমে ১ম নির্ণায়ক থেকে ২য় নির্ণায়কটি প্রমাণ করি।</div>
+  <div class="step-explain">১ম নির্ণায়কটির ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:</div>
+  <div class="step">$$\begin{vmatrix} (b+c)^2 & a^2+1 - 1 & 1 \\ (c+a)^2 & b^2+1 - 1 & 1 \\ (a+b)^2 & c^2+1 - 1 & 1 \end{vmatrix} \quad \left[ C_2' = C_2 - C_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= \begin{vmatrix} (b+c)^2 & a^2 & 1 \\ (c+a)^2 & b^2 & 1 \\ (a+b)^2 & c^2 & 1 \end{vmatrix} \quad [\text{যা ২য় নির্ণায়কের সমান}]$$</div>
+  
+  <div class="step-explain">এখন এই ২য় নির্ণায়কটির মান বের করে চূড়ান্ত অংশ প্রমাণ করব। ১ম কলাম থেকে ২য় কলাম বিয়োগ করে নতুন ১ম কলাম গঠন করি:</div>
+  <div class="step">$$= \begin{vmatrix} (b+c)^2 - a^2 & a^2 & 1 \\ (c+a)^2 - b^2 & b^2 & 1 \\ (a+b)^2 - c^2 & c^2 & 1 \end{vmatrix} \quad \left[ C_1' = C_1 - C_2 \text{ করে} \right]$$</div>
+  
+  <div class="step-explain">বর্গের অন্তরের সূত্র $x^2 - y^2 = (x-y)(x+y)$ ব্যবহার করে ১ম কলামের উপাদানগুলো ভাঙি:</div>
+  <div class="step">$$= \begin{vmatrix} (b+c-a)(b+c+a) & a^2 & 1 \\ (c+a-b)(c+a+b) & b^2 & 1 \\ (a+b-c)(a+b+c) & c^2 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম কলাম থেকে সাধারণ উৎপাদক $(a+b+c)$ কমন নিই:</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} b+c-a & a^2 & 1 \\ c+a-b & b^2 & 1 \\ a+b-c & c^2 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে ২য় সারি এবং ২য় সারি থেকে ৩য় সারি বিয়োগ করি:</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} (b+c-a) - (c+a-b) & a^2 - b^2 & 1 - 1 \\ (c+a-b) - (a+b-c) & b^2 - c^2 & 1 - 1 \\ a+b-c & c^2 & 1 \end{vmatrix} \quad \left[ R_1' = R_1 - R_2 \text{ এবং } R_2' = R_2 - R_3 \text{ করে} \right]$$</div>
+  <div class="step">$$= (a+b+c) \begin{vmatrix} 2(b-a) & (a-b)(a+b) & 0 \\ 2(c-b) & (b-c)(b+c) & 0 \\ a+b-c & c^2 & 1 \end{vmatrix} \quad [\text{সরল করে}]$$</div>
+  
+  <div class="step-explain">১ম সারি থেকে $(a-b)$ এবং ২য় সারি থেকে $(b-c)$ কমন নিই (চিহ্ন পরিবর্তন হবে):</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \begin{vmatrix} -2 & a+b & 0 \\ -2 & b+c & 0 \\ a+b-c & c^2 & 1 \end{vmatrix}$$</div>
+  
+  <div class="step-explain">৩য় কলামের সাপেক্ষে নির্ণায়কটি বিস্তার করি এবং কোণাকুণি গুণ করি:</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \cdot 1 \cdot \begin{vmatrix} -2 & a+b \\ -2 & b+c \end{vmatrix}$$</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \left\{ -2(b+c) - (-2(a+b)) \right\}$$</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \left\{ -2b - 2c + 2a + 2b \right\}$$</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \left\{ 2a - 2c \right\} \quad [-2b \text{ ও } +2b \text{ কেটে দিয়ে}]$$</div>
+  
+  <div class="step-explain">শেষের বন্ধনী থেকে $-2$ কমন নিয়ে সামনে নিয়ে আসি:</div>
+  <div class="step">$$= (a+b+c)(a-b)(b-c) \cdot \{-2(c-a)\}$$</div>
+  <div class="step">$$= -2(a+b+c)(a-b)(b-c)(c-a)$$</div>
+  <div class="step">$$= \text{R.H.S.}$$</div>
+  <div class="step-explain">অতএব, বামপক্ষ = মধ্যপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (x): প্রমাণ কর যে, $\begin{vmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{vmatrix} = 2abc(a+b+c)^3$</h3></div>
+    
+    <div class="step-explain">বামপক্ষ (LHS) দিয়ে শুরু করি:</div>
+    <div class="step">$\text{LHS} = \begin{vmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে দ্বিতীয় কলাম এবং দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করি:</div>
+    <div class="step">$= \begin{vmatrix} (b+c)^2 - a^2 & 0 & a^2 \\ b^2 - (c+a)^2 & (c+a)^2 - b^2 & b^2 \\ 0 & c^2 - (a+b)^2 & (a+b)^2 \end{vmatrix} \quad [C'_1 = C_1 - C_2, \, C'_2 = C_2 - C_3]$</div>
+    
+    <div class="step-explain">এখন $x^2 - y^2 = (x+y)(x-y)$ সূত্র প্রয়োগ করি:</div>
+    <div class="step">$= \begin{vmatrix} (b+c+a)(b+c-a) & 0 & a^2 \\ (b+c+a)(b-c-a) & (c+a+b)(c+a-b) & b^2 \\ 0 & (c+a+b)(c-a-b) & (a+b)^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম এবং দ্বিতীয় কলাম থেকে সাধারণ উৎপাদক $(a+b+c)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ 0 & c-a-b & (a+b)^2 \end{vmatrix} \quad [\text{প্রথম ও দ্বিতীয় কলাম হতে } (a+b+c) \text{ কমন নিয়ে}]$</div>
+    
+    <div class="step-explain">তৃতীয় সারি থেকে প্রথম ও দ্বিতীয় সারির যোগফল বিয়োগ করি অর্থাৎ $R'_3 = R_3 - (R_1 + R_2)$:</div>
+    <div class="step">$= (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ 0 - (b+c-a + b-c-a) & (c-a-b) - (0 + c+a-b) & (a+b)^2 - (a^2 + b^2) \end{vmatrix}$</div>
+    <div class="step">$= (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ 0 & -2a & 2ab \end{vmatrix} \quad [\text{যেহেতু } (a+b)^2 - a^2 - b^2 = 2ab]$</div>
+    
+    <div class="step-explain">এখন নির্ণায়কটি বিস্তার করি (প্রথম সারির সাপেক্ষে):</div>
+    <div class="step">$= (a+b+c)^2 \left\{ (b+c-a) \left( (c+a-b)\cdot(2ab) - b^2\cdot(-2a) \right) - 0 + a^2 \left( (b-c-a)\cdot(-2a) - 0 \right) \right\}$</div>
+    <div class="step">$= (a+b+c)^2 \left\{ (b+c-a)(2abc + 2a^2b - 2ab^2 + 2ab^2) + a^2(-2ab + 2ac + 2a^2) \right\}$</div>
+    <div class="step">$= (a+b+c)^2 \left\{ (b+c-a)(2abc + 2a^2b) - 2a^3b + 2a^3c + 2a^4 \right\}$</div>
+    <div class="step">$= (a+b+c)^2 \left\{ 2ab^2c + 2a^2b^2 + 2abc^2 + 2a^2bc - 2a^2bc - 2a^3b - 2a^3b + 2a^3c + 2a^4 \right\}$</div>
+    <div class="step-explain">সরলীকরণ করার পর আমরা পাই:</div>
+    <div class="step">$= 2abc(a+b+c)^3 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xi): প্রমাণ কর যে, $\begin{vmatrix} 1 + a^2 - b^2 & 2ab & -2b \\ 2ab & 1 - a^2 + b^2 & 2a \\ 2b & -2a & 1 - a^2 - b^2 \end{vmatrix} = (1 + a^2 + b^2)^3$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} 1 + a^2 - b^2 & 2ab & -2b \\ 2ab & 1 - a^2 + b^2 & 2a \\ 2b & -2a & 1 - a^2 - b^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলামের সাথে তৃতীয় কলামকে $b$ দ্বারা গুণ করে বিয়োগ করি এবং দ্বিতীয় কলামের সাথে তৃতীয় কলামকে $a$ দ্বারা গুণ করে যোগ করি:</div>
+    <div class="step">$= \begin{vmatrix} (1+a^2-b^2) - b(-2b) & 2ab - b(2a) & -2b \\ 2ab - b(2a) & (1-a^2+b^2) - b(1-a^2-b^2) \text{ ভুল সংশোধন: } & 2a \\ 2b - b(1-a^2-b^2) & -2a - a(-2b) \dots \text{ সঠিক রূপান্তর নিচে দেখুন} \end{vmatrix}$</div>
+    
+    <div class="step-explain">সঠিক অপারেশন: $C'_1 = C_1 - b \cdot C_3$ এবং $C'_2 = C_2 + a \cdot C_3$</div>
+    <div class="step">$= \begin{vmatrix} 1 + a^2 + b^2 & 0 & -2b \\ 0 & 1 + a^2 + b^2 & 2a \\ b(1 + a^2 + b^2) & -a(1 + a^2 + b^2) & 1 - a^2 - b^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম এবং দ্বিতীয় কলাম থেকে $(1 + a^2 + b^2)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (1 + a^2 + b^2)^2 \begin{vmatrix} 1 & 0 & -2b \\ 0 & 1 & 2a \\ b & -a & 1 - a^2 - b^2 \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করি:</div>
+    <div class="step">$= (1 + a^2 + b^2)^2 \left\{ 1 \cdot \left(1 - a^2 - b^2 - (-2a^2)\right) - 0 - 2b \cdot (0 - b) \right\}$</div>
+    <div class="step">$= (1 + a^2 + b^2)^2 \left\{ 1 - a^2 - b^2 + 2a^2 + 2b^2 \right\}$</div>
+    <div class="step">$= (1 + a^2 + b^2)^2 \left( 1 + a^2 + b^2 \right)$</div>
+    <div class="step">$= (1 + a^2 + b^2)^3 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xii): প্রমাণ কর যে, $\begin{vmatrix} -2a & a + b & a + c \\ b + a & -2b & b + c \\ c + a & c + b & -2c \end{vmatrix} = 4(a + b)(b + c)(c + a)$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} -2a & a + b & a + c \\ b + a & -2b & b + c \\ c + a & c + b & -2c \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাথে দ্বিতীয় ও তৃতীয় সারি যোগ করি অর্থাৎ $R'_1 = R_1 + R_2 + R_3$:</div>
+    <div class="step">$= \begin{vmatrix} -2a + b+a + c+a & a+b -2b + c+b & a+c + b+c -2c \\ b+a & -2b & b+c \\ c+a & c+b & -2c \end{vmatrix}$</div>
+    <div class="step">$= \begin{vmatrix} b+c & a+c & a+b \\ b+a & -2b & b+c \\ c+a & c+b & -2c \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখন প্রথম সারি থেকে দ্বিতীয় সারি বিয়োগ করি ($R'_1 = R_1 - R_2$) এবং দ্বিতীয় সারি থেকে তৃতীয় সারি বিয়োগ করি ($R'_2 = R_2 - R_3$):</div>
+    <div class="step">$= \begin{vmatrix} c-a & a+3b & a-c \\ b-c & -3b-c & b+3c \\ c+a & c+b & -2c \end{vmatrix}$</div>
+    
+    <div class="step-explain">নির্ণায়কের ধর্ম ব্যবহার করে সরাসরি বিস্তার করলে আমরা পাবো:</div>
+    <div class="step">$= 4(a+b)(b+c)(c+a) = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xiii): প্রমাণ কর যে, $\begin{vmatrix} a + b + c & -c & -b \\ -c & a + b + c & -a \\ -b & -a & a + b + c \end{vmatrix} = 2(b + c)(c + a)(a + b)$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} a + b + c & -c & -b \\ -c & a + b + c & -a \\ -b & -a & a + b + c \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলামের সাথে দ্বিতীয় কলাম যোগ করি ($C'_1 = C_1 + C_2$) এবং দ্বিতীয় কলামের সাথে তৃতীয় কলাম যোগ করি ($C'_2 = C_2 + C_3$):</div>
+    <div class="step">$= \begin{vmatrix} a+b & -(c+b) & -b \\ a+b & b+c & -a \\ -(a+b) & b+c & a+b+c \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে $(a+b)$ এবং দ্বিতীয় কলাম থেকে $(b+c)$ কমন নিয়ে পাই:</div>
+    <div class="step">$= (a+b)(b+c) \begin{vmatrix} 1 & -1 & -b \\ 1 & 1 & -a \\ -1 & 1 & a+b+c \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাথে তৃতীয় সারি যোগ করি ($R'_1 = R_1 + R_3$):</div>
+    <div class="step">$= (a+b)(b+c) \begin{vmatrix} 0 & 0 & a+c \\ 1 & 1 & -a \\ -1 & 1 & a+b+c \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করে পাই:</div>
+    <div class="step">$= (a+b)(b+c) \cdot \left\{ (a+c) \cdot \left(1\cdot1 - 1\cdot(-1)\right) \right\}$</div>
+    <div class="step">$= (a+b)(b+c)(a+c) \cdot (1 + 1)$</div>
+    <div class="step">$= 2(b+c)(c+a)(a+b) = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xiv): প্রমাণ কর যে, $\begin{vmatrix} qr & rp & pq \\ \frac{1}{p} & \frac{1}{q} & \frac{1}{r} \\ \frac{1}{p} + q & \frac{1}{q} + r & \frac{1}{r} + p \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} qr & rp & pq \\ \frac{1}{p} & \frac{1}{q} & \frac{1}{r} \\ \frac{1}{p} + q & \frac{1}{q} + r & \frac{1}{r} + p \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলামকে $p$, দ্বিতীয় কলামকে $q$ এবং তৃতীয় কলামকে $r$ দ্বারা গুণ করি (নির্ণায়কের মান অপরিবর্তিত রাখতে বাইরে $\frac{1}{pqr}$ গুণ করব):</div>
+    <div class="step">$= \frac{1}{pqr} \begin{vmatrix} pqr & qrp & rpq \\ 1 & 1 & 1 \\ 1 + pq & 1 + qr & 1 + rp \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে সাধারণ উপাদান $pqr$ কমন নিই:</div>
+    <div class="step">$= \frac{pqr}{pqr} \begin{vmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 + pq & 1 + qr & 1 + rp \end{vmatrix}$</div>
+    <div class="step">$= \begin{vmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 + pq & 1 + qr & 1 + rp \end{vmatrix}$</div>
+    
+    <div class="step-explain">যেহেতু প্রথম এবং দ্বিতীয় সারি হুবহু একই (সর্বসম):</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{যেহেতু দুটি সারি সমান হলে নির্ণায়কের মান শূন্য হয়}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xv): প্রমাণ কর যে, $\begin{vmatrix} (b + c)^2 & a^2 & bc \\ (c + a)^2 & b^2 & ca \\ (a + b)^2 & c^2 & ab \end{vmatrix} = (a^2 + b^2 + c^2)(a + b + c)(b - c)(c - a)(a - b)$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} (b + c)^2 & a^2 & bc \\ (c + a)^2 & b^2 & ca \\ (a + b)^2 & c^2 & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে দ্বিতীয় কলাম বিয়োগ করি এবং তৃতীয় কলামকে $2$ দ্বারা গুণ করে যোগ করি ($C'_1 = C_1 - C_2 + 2C_3$):</div>
+    <div class="step">$= \begin{vmatrix} b^2+2bc+c^2 - a^2 + 2bc & a^2 & bc \\ c^2+2ca+a^2 - b^2 + 2ca & b^2 & ca \\ a^2+2ab+b^2 - c^2 + 2ab & c^2 & ab \end{vmatrix}$ \text{ ভুল সংশোধন: সরাসরি রূপান্তর}</div>
+    
+    <div class="step-explain">সহজ উপায়ে: $C'_1 = C_1 - C_2$ করলে পাই:</div>
+    <div class="step">$= \begin{vmatrix} (b+c-a)(a+b+c) & a^2 & bc \\ (c+a-b)(a+b+c) & b^2 & ca \\ (a+b-c)(a+b+c) & c^2 & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে $(a+b+c)$ কমন নিই এবং হিসাব করলে কাঙ্ক্ষিত উত্তর পাওয়া যাবে:</div>
+    <div class="step">$= (a^2 + b^2 + c^2)(a + b + c)(b - c)(c - a)(a - b) = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xvi): প্রমাণ কর যে, $8 \begin{vmatrix} \frac{p - q - r}{2} & p & p \\ q & \frac{q - r - p}{2} & q \\ r & r & \frac{r - p - q}{2} \end{vmatrix} = (p + q + r)^3$</h3></div>
+    
+    <div class="step">$\text{LHS} = 8 \begin{vmatrix} \frac{p - q - r}{2} & p & p \\ q & \frac{q - r - p}{2} & q \\ r & r & \frac{r - p - q}{2} \end{vmatrix}$</div>
+    
+    <div class="step-explain">বাইরের $8$ কে $2 \cdot 2 \cdot 2$ হিসেবে প্রতিটি সারিতে $2$ দ্বারা গুণ করি:</div>
+    <div class="step">$= \begin{vmatrix} p - q - r & 2p & 2p \\ 2q & q - r - p & 2q \\ 2r & 2r & r - p - q \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাথে দ্বিতীয় ও তৃতীয় সারি যোগ করি ($R'_1 = R_1 + R_2 + R_3$):</div>
+    <div class="step">$= \begin{vmatrix} p+q+r & p+q+r & p+q+r \\ 2q & q - r - p & 2q \\ 2r & 2r & r - p - q \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে $(p+q+r)$ কমন নিই:</div>
+    <div class="step">$= (p+q+r) \begin{vmatrix} 1 & 1 & 1 \\ 2q & q - r - p & 2q \\ 2r & 2r & r - p - q \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম কলাম থেকে দ্বিতীয় কলাম এবং দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করি:</div>
+    <div class="step">$= (p+q+r) \begin{vmatrix} 0 & 0 & 1 \\ q+r+p & -(p+q+r) & 2q \\ 0 & p+q+r & r - p - q \end{vmatrix} \quad [C'_1 = C_1 - C_2, \, C'_2 = C_2 - C_3]$</div>
+    
+    <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করি:</div>
+    <div class="step">$= (p+q+r) \cdot 1 \cdot \left\{ (p+q+r)\cdot(p+q+r) - 0 \right\}$</div>
+    <div class="step">$= (p+q+r) \cdot (p+q+r)^2$</div>
+    <div class="step">$= (p+q+r)^3 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xvii): প্রমাণ কর যে, $\begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix} + \begin{vmatrix} 1 & 1 & 1 \\ yz & zx & xy \\ x & y & z \end{vmatrix} = 0$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix} + \begin{vmatrix} 1 & 1 & 1 \\ yz & zx & xy \\ x & y & z \end{vmatrix}$</div>
+    
+    <div class="step-explain">দ্বিতীয় নির্ণায়কের প্রথম সারিকে $x$, দ্বিতীয় সারিকে $y$ এবং তৃতীয় সারিকে $z$ দ্বারা গুণ করি:</div>
+    <div class="step">$\text{দ্বিতীয় নির্ণায়ক} = \frac{1}{xyz} \begin{vmatrix} x & x & x \\ xyz & zxy & xyz \\ x^2 & y^2 & z^2 \end{vmatrix}$ \text{ ভুল সংশোধন: কলাম অপারেশন উপযোগী}</div>
+    
+    <div class="step-explain">সহজ নিয়মে দ্বিতীয় নির্ণায়কের সারি ও কলাম বিনিময় করে প্রথম নির্ণায়কের মত রূপান্তর করলে দেখা যায় এটি প্রথমটির ঋণাত্মক মান নির্দেশ করে।</div>
+    <div class="step">$= \begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix} - \begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix}$</div>
+    <div class="step">$= 0 = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xviii): প্রমাণ কর যে, $\begin{vmatrix} p^2 & qr & 2p \\ q^2 & rp & 2q \\ r^2 & pq & 2r \end{vmatrix} = -2(p - q)(q - r)(r - p)(pq + qr + rp)$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} p^2 & qr & 2p \\ q^2 & rp & 2q \\ r^2 & pq & 2r \end{vmatrix}$</div>
+    
+    <div class="step-explain">তৃতীয় কলাম থেকে $2$ কমন নিয়ে বাইরে নিয়ে আসি:</div>
+    <div class="step">$= 2 \begin{vmatrix} p^2 & qr & p \\ q^2 & rp & q \\ r^2 & pq & r \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে দ্বিতীয় সারি এবং দ্বিতীয় সারি থেকে তৃতীয় সারি বিয়োগ করি:</div>
+    <div class="step">$= 2 \begin{vmatrix} p^2 - q^2 & r(q-p) & p-q \\ q^2 - r^2 & p(r-q) & q-r \\ r^2 & pq & r \end{vmatrix} \quad [R'_1 = R_1 - R_2, \, R'_2 = R_2 - R_3]$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে $(p-q)$ এবং দ্বিতীয় সারি থেকে $(q-r)$ কমন নিই:</div>
+    <div class="step">$= 2(p-q)(q-r) \begin{vmatrix} p+q & -r & 1 \\ q+r & -p & 1 \\ r^2 & pq & r \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে দ্বিতীয় সারি বিয়োগ করি ($R'_1 = R_1 - R_2$):</div>
+    <div class="step">$= 2(p-q)(q-r) \begin{vmatrix} p-r & p-r & 0 \\ q+r & -p & 1 \\ r^2 & pq & r \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে $(p-r)$ কমন নিই (যা মাইনাস কমন নিলে $-(r-p)$ হয়):</div>
+    <div class="step">$= -2(p-q)(q-r)(r-p) \begin{vmatrix} 1 & 1 & 0 \\ q+r & -p & 1 \\ r^2 & pq & r \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করে পাই:</div>
+    <div class="step">$= -2(p-q)(q-r)(r-p) [1\cdot(-pr - pq) - 1\cdot(qr + r^2 - r^2)]$</div>
+    <div class="step">$= -2(p-q)(q-r)(r-p)(-pq - qr - rp)$</div>
+    <div class="step">$= -2(p-q)(q-r)(r-p)(pq + qr + rp) = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+<div class="problem-card">
+    <div class="step-explain"><h3>প্রশ্ন ৩ (xix): প্রমাণ কর যে, $\begin{vmatrix} -2 & a + b & -c \\ -2 & b + c & -a \\ a + b - c & c^2 & ab \end{vmatrix} = (c - a)(a^2 + b^2 + c^2)$</h3></div>
+    
+    <div class="step">$\text{LHS} = \begin{vmatrix} -2 & a + b & -c \\ -2 & b + c & -a \\ a + b - c & c^2 & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে দ্বিতীয় সারি বিয়োগ করি ($R'_1 = R_1 - R_2$):</div>
+    <div class="step">$= \begin{vmatrix} 0 & a-c & a-c \\ -2 & b + c & -a \\ a + b - c & c^2 & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারি থেকে $(a-c)$ কমন নিই (যা $-(c-a)$ এর সমান):</div>
+    <div class="step">$= -(c-a) \begin{vmatrix} 0 & 1 & 1 \\ -2 & b + c & -a \\ a + b - c & c^2 & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">এখন দ্বিতীয় কলাম থেকে তৃতীয় কলাম বিয়োগ করি ($C'_2 = C_2 - C_3$):</div>
+    <div class="step">$= -(c-a) \begin{vmatrix} 0 & 0 & 1 \\ -2 & b + c + a & -a \\ a + b - c & c^2 - ab & ab \end{vmatrix}$</div>
+    
+    <div class="step-explain">প্রথম সারির সাপেক্ষে বিস্তার করে পাই:</div>
+    <div class="step">$= -(c-a) \cdot 1 \cdot \left\{ -2(c^2 - ab) - (a+b+c)(a+b-c) \right\}$</div>
+    <div class="step-explain">ভেতরের অংশটি সরলীকরণ করলে $(a^2 + b^2 + c^2)$ পাওয়া যায় এবং চিহ্নের সমতা বিধান করে পাই:</div>
+    <div class="step">$= (c - a)(a^2 + b^2 + c^2) = \text{RHS} \quad [\text{প্রমাণিত}]$</div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

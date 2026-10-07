@@ -1,0 +1,60 @@
+# render.yaml
+# Version: 1.0.0 - Render Blueprint for Quiz Program Backend
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: quiz-program-backend
+    runtime: node
+    plan: free
+    region: singapore  # Choose closest to your users (options: oregon, ohio, virginia, frankfurt, singapore)
+    branch: main
+    rootDir: .
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      # ⚠️ REQUIRED — Set values in Render Dashboard
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false  # Set in dashboard (secret)
+      - key: JWT_SECRET
+        generateValue: true  # Render auto-generates a strong secret
+      - key: JWT_REFRESH_SECRET
+        generateValue: true  # Render auto-generates a strong secret
+      
+      # ⚠️ RECOMMENDED — Set values in Render Dashboard
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: JWT_REFRESH_EXPIRE
+        value: 30d
+      - key: FRONTEND_URL
+        sync: false  # Set in dashboard (e.g., https://your-quiz.pages.dev)
+      - key: BACKEND_URL
+        sync: false  # Optional — only needed for custom domain
+      
+      # ⚠️ EMAIL — Brevo SMTP
+      - key: SMTP_HOST
+        value: smtp-relay.brevo.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      
+      # ⚠️ FILE STORAGE — Cloudflare R2
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: R2_ACCESS_KEY
+        sync: false
+      - key: R2_SECRET_KEY
+        sync: false
+      - key: R2_BUCKET
+        sync: false
+      - key: R2_PUBLIC_URL
+        sync: false

@@ -1,0 +1,22 @@
+/* frontend/css/main.css - Version 1.1.0 Optimized */
+
+:root{--bg:#f0f0f0;--card:#fff;--text:#222;--text-light:#666;--muted:#888;--accent:#2196f3;--accent-dark:#1976d2;--success:#4caf50;--success-dark:#388e3c;--danger:#f44336;--danger-dark:#d32f2f;--warning:#ff9800;--border:#ddd;--shadow:rgba(0,0,0,.1);--topbar-height:60px;--border-radius:8px;--transition:.3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;padding-top:var(--topbar-height);transition:background var(--transition),color var(--transition)}
+.hidden{display:none!important}
+.visible{display:block!important}
+.text-center{text-align:center}
+.mt-2{margin-top:10px}
+.mb-2{margin-bottom:10px}
+.spinner{width:40px;height:40px;border:4px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:20px auto}
+.header-left{display:flex;align-items:center;flex:0 0 auto}
+.header-right{display:flex;align-items:center;margin-left:auto;flex:0 0 auto}
+.header-progress{position:absolute;bottom:0;left:0;right:0;height:4px;background:rgba(255,255,255,.15);overflow:hidden}
+.header-progress .progress{height:100%;background:var(--accent);transition:width .3s ease;width:0}
+.progress-bar-container{width:100%;height:100%}
+.main-header.hidden{visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:translateY(-100%)!important}
+@keyframes spin{to{transform:rotate(360deg)}}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--muted);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--text-light)}

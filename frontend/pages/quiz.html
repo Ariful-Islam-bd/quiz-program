@@ -1,0 +1,142 @@
+<!-- frontend/pages/quiz.html -->
+<!-- Version: 4.0.1 - সম্পূর্ণ কন্টেন্ট pageContainer-এর জন্য -->
+
+<div id="quizPageWrapper">
+    <!-- ============================================ -->
+    <!-- কুইজ পেজের হেডার                           -->
+    <!-- ============================================ -->
+    <header class="main-header" id="quizMainHeader">
+        <button class="menu-btn" id="quizHamburgerBtn" aria-label="Menu">
+            <span class="hamburger-icon">☰</span>
+        </button>
+
+        <div class="header-center">
+            <div id="quizScoreBoard">স্কোর: <strong>0.0</strong></div>
+            <div id="quizTimerBlock">⏱️ <span id="quizTime">00:00</span></div>
+            <div id="quizMetaInfo">প্রশ্ন: <strong>0/0</strong></div>
+        </div>
+
+        <div class="avatar-btn" id="quizAvatarBtn">
+            <span class="avatar-initials" id="quizAvatarInitials">G</span>
+            <img id="quizAvatarImg" src="" alt="Avatar" style="display: none;">
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress" id="quizProgressBar"></div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- সাইড-মেনু                                    -->
+    <!-- ============================================ -->
+    <nav class="side-menu" id="quizSideMenu" aria-hidden="true">
+        <div class="menu-header">
+            <h3>⚙️ কুইজ মেনু</h3>
+            <button class="close-btn" id="quizMenuClose">✕</button>
+        </div>
+        <div class="menu-content">
+            <div class="menu-item" id="quizMenuSettings">
+                <span class="menu-icon">🔧</span> সেটিংস
+            </div>
+            
+            <div class="settings-block" id="quizSettingsBlock" style="display: none;">
+                <div class="settings-row">
+                    <label for="quizTimeSlider">⏱️ প্রতি প্রশ্নের সময়:</label>
+                    <div class="slider-container">
+                        <input type="range" id="quizTimeSlider" min="5" max="90" step="5" value="60">
+                        <span class="slider-value" id="quizSliderVal">60</span> সেকেণ্ড
+                    </div>
+                </div>
+                <div class="settings-row">
+                    <label for="quizFullTimerCheckbox">⏳ ফুল টাইমার মোড:</label>
+                    <input type="checkbox" id="quizFullTimerCheckbox">
+                </div>
+                <div class="settings-row">
+                    <label for="quizMenuDarkToggle">🌙 ডার্ক মোড:</label>
+                    <input type="checkbox" id="quizMenuDarkToggle">
+                </div>
+            </div>
+
+            <div class="menu-item" id="quizMenuKeys">
+                <span class="menu-icon">⌨️</span> কীবোর্ড শর্টকাট
+            </div>
+            
+            <div class="menu-item" id="quizMenuFAQ">
+                <span class="menu-icon">❓</span> সাধারণ জিজ্ঞাসা
+            </div>
+
+            <hr style="border-color: var(--border); margin: 15px 0;">
+            
+            <div class="menu-item menu-close-option" id="quizMenuCloseOption">
+                <span class="menu-icon">🚪</span> মেনু বন্ধ করুন
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- মেইন কন্টেন্ট                               -->
+    <!-- ============================================ -->
+    <div class="app-wrapper" id="quizAppWrap">
+        <!-- ফিল্টার স্ক্রিন -->
+        <div class="quiz-filter-page" id="quizFilter">
+            <div class="filter-content">
+                <h1>কুইজ ফিল্টার</h1>
+                <p>আপনার পছন্দের বিষয় সিলেক্ট করে কুইজ শুরু করুন</p>
+                <div class="filter-section">
+                    <select id="quizBoardSelect" class="filter-select">
+                        <option value="all">-- বোর্ড নির্বাচন করুন --</option>
+                    </select>
+                    <select id="quizClassSelect" class="filter-select" disabled>
+                        <option value="all">-- ক্লাস নির্বাচন করুন --</option>
+                    </select>
+                    <select id="quizSubjectSelect" class="filter-select" disabled>
+                        <option value="all">-- বিষয় নির্বাচন করুন --</option>
+                    </select>
+                    <select id="quizChapterSelect" class="filter-select" disabled>
+                        <option value="all">-- অধ্যায় নির্বাচন করুন --</option>
+                    </select>
+                    <select id="quizExerciseSelect" class="filter-select" disabled>
+                        <option value="all">-- অনুশীলনী নির্বাচন করুন --</option>
+                    </select>
+                </div>
+                <button class="filter-select" id="quizStartBtn" style="background-color: var(--accent); color: white; border: none;" disabled>
+                    কুইজ শুরু করুন
+                </button>
+            </div>
+        </div>
+
+        <!-- কুইজ রেন্ডার কন্টেইনার -->
+        <main class="quiz-container" id="quizContainer" style="display: none;"></main>
+
+        <!-- কন্ট্রোল বাটন সমূহ -->
+        <div class="controls" style="display: none;" id="quizControls">
+            <div class="left-controls">
+                <button id="quizQuitBtn" style="background-color: var(--danger); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
+                    কুইজ শেষ করুন
+                </button>
+            </div>
+            <div class="right-controls">
+                <button id="quizSkipBtn" style="background-color: var(--warning); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
+                    স্কিপ
+                </button>
+                <button id="quizNextBtn" style="background-color: var(--success); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; display: none;">
+                    পরবর্তী প্রশ্ন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- কনফর্মেশন মডাল                             -->
+    <!-- ============================================ -->
+    <div id="quizConfirmOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h3 id="quizConfirmTitle" class="modal-title">নিশ্চিতকরণ</h3>
+            <p id="quizConfirmMessage" class="modal-message"></p>
+            <div class="modal-actions">
+                <button id="quizConfirmCancel" class="btn btn-secondary">বাতিল</button>
+                <button id="quizConfirmOk" class="btn btn-primary">ঠিক আছে</button>
+            </div>
+        </div>
+    </div>
+</div>

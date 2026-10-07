@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSC Differ 9C</title>
+    
+    <link rel="stylesheet" href="../../../../styles_math_sol.css" />
+    
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1>উচ্চ মাধ্যমিক গণিত<br> অন্তরীকরণ অনুশীলনী (9C)</h1>
+<h1>উচ্চ মাধ্যমিক গণিত<br>১ নং প্রশ্নের সমাধান।</h1>
+<div class="problem-card">
+    <div class="problem-title">১. নিম্নলিখিত ফাংশনগুলির নিজ নিজ পরিবর্তনশীল রাশির সাপেক্ষে অন্তরজ নির্ণয় করঃ</div>
+    
+    <div class="problem-sub-title">(i)$\sqrt[3]{3x^2+1}$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \sqrt[3]{3x^2+1}$$</div>
+    <div class="step-explain">ঘনমূলের ধর্ম ব্যবহার করে সূচক আকারে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow y = \left(3x^2+1\right)^{\frac{1}{3}} \quad \left[\text{যেহেতু, } \sqrt[n]{a} = a^{\frac{1}{n}}\right]$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ বা ব্যবকলন করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left\{ \left(3x^2+1\right)^{\frac{1}{3}} \right\}$$</div>
+    <div class="step-explain">অন্তরীকরণের চেইন রুল বা পর্যায়ক্রমিক নিয়ম প্রয়োগ করার জন্য সম্পূর্ণ $\left(3x^2+1\right)$ অংশটিকে মনে মনে $x$ ধরি, এবং $\frac{d}{dx}\left(x^n\right) = n \cdot x^{n-1}$ সূত্র ব্যবহার করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{3} \cdot \left(3x^2+1\right)^{\frac{1}{3}-1} \cdot \frac{d}{dx}\left(3x^2+1\right) \quad [\text{চেইন রুল বা পর্যায়ক্রমিক অন্তরীকরণ করে}]$$</div>
+    <div class="step-explain">সূচকের বিয়োগ এবং বন্ধনীর ভেতরের অংশটিকে আলাদা আলাদাভাবে অন্তরীকরণ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{3} \cdot \left(3x^2+1\right)^{-\frac{2}{3}} \cdot \left\{ \frac{d}{dx}\left(3x^2\right) + \frac{d}{dx}(1) \right\} \quad \left[\text{যেহেতু, } \frac{1}{3}-1 = -\frac{2}{3}\right]$$</div>
+    <div class="step-explain">আমরা জানি, ধ্রুবকের অন্তরজ শূন্য এবং $x^2$ এর অন্তরজ $2x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{3} \cdot \left(3x^2+1\right)^{-\frac{2}{3}} \cdot (3 \cdot 2x + 0) \quad \left[\text{যেহেতু, } \frac{d}{dx}(x^2)=2x \text{ এবং } \frac{d}{dx}(\text{ধ্রুবক})=0\right]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{3} \cdot \left(3x^2+1\right)^{-\frac{2}{3}} \cdot (6x)$$</div>
+    <div class="step-explain">এখন লবের $6x$ কে হরের $3$ দ্বারা ভাগ করি এবং ঋণাত্মক সূচককে হরে নিয়ে ধনাত্মক করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 2x \cdot \frac{1}{\left(3x^2+1\right)^{\frac{2}{3}}} \quad [\text{কাটাকাটি করে এবং সূচকের নিয়ম প্রয়োগ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{2x}{\left(3x^2+1\right)^{\frac{2}{3}}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{2x}{\left(3x^2+1\right)^{\frac{2}{3}}}$</div>
+    
+    <hr>
+
+    <div class="problem-sub-title">(ii) $\dfrac{1}{\sqrt[3]{4-3x}}$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \frac{1}{\sqrt[3]{4-3x}}$$</div>
+    <div class="step-explain">প্রথমে হরটিকে সূচক আকারে রূপান্তর করি:</div>
+    <div class="step">$$\Rightarrow y = \frac{1}{\left(4-3x\right)^{\frac{1}{3}}} \quad \left[\text{যেহেতু, } \sqrt[3]{a} = a^{\frac{1}{3}}\right]$$</div>
+    <div class="step-explain">সূচকটিকে লবে নিয়ে আসলে তা ঋণাত্মক হয়ে যাবে:</div>
+    <div class="step">$$\Rightarrow y = \left(4-3x\right)^{-\frac{1}{3}} \quad \left[\text{যেহেতু, } \frac{1}{a^m} = a^{-m}\right]$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left\{ \left(4-3x\right)^{-\frac{1}{3}} \right\}$$</div>
+    <div class="step-explain">চেইন রুল অনুসারে $\left(4-3x\right)$ কে $x$ বিবেচনা করে $\frac{d}{dx}\left(x^n\right) = n \cdot x^{n-1}$ প্রয়োগ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\frac{1}{3} \cdot \left(4-3x\right)^{-\frac{1}{3}-1} \cdot \frac{d}{dx}\left(4-3x\right) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">সূচকের লসাগু করে বিয়োগ সম্পন্ন করি এবং বন্ধনীর ভেতরের অংশের অন্তরজ বের করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\frac{1}{3} \cdot \left(4-3x\right)^{-\frac{4}{3}} \cdot \left\{ \frac{d}{dx}(4) - \frac{d}{dx}(3x) \right\} \quad \left[\text{যেহেতু, } -\frac{1}{3}-1 = -\frac{4}{3}\right]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\frac{1}{3} \cdot \left(4-3x\right)^{-\frac{4}{3}} \cdot (0 - 3 \cdot 1) \quad \left[\text{যেহেতু, } \frac{d}{dx}(4)=0 \text{ এবং } \frac{d}{dx}(x)=1\right]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\frac{1}{3} \cdot \left(4-3x\right)^{-\frac{4}{3}} \cdot (-3)$$</div>
+    <div class="step-explain">এখানে লবের $(-3)$ এবং হরের $3$ কাটাকাটি যাবে, এবং মাইনাসে মাইনাসে প্লাস হবে:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 1 \cdot \left(4-3x\right)^{-\frac{4}{3}} \quad [\text{চিহ্ন ও সংখ্যা গুণ করে}]$$</div>
+    <div class="step-explain">ঋণাত্মক সূচকটিকে পুনরায় নিচে নামিয়ে হরে রূপান্তর করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{\left(4-3x\right)^{\frac{4}{3}}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{1}{\left(4-3x\right)^{\frac{4}{3}}}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $\sqrt{ax^2+bx+c}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এবং পরিবর্তনশীল রাশি $x$। এখানে $a$, $b$, $c$ হলো ধ্রুবক।</div>
+    <div class="step">$$y = \sqrt{ax^2+bx+c}$$</div>
+    <div class="step-explain">উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left( \sqrt{ax^2+bx+c} \right)$$</div>
+    <div class="step-explain">আমরা জানি, $\frac{d}{dx}(\sqrt{x}) = \frac{1}{2\sqrt{x}}$। চেইন রুল ব্যবহার করে পুরো রুটের ভেতরের অংশকে $x$ ধরে পাই:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{ax^2+bx+c}} \cdot \frac{d}{dx}\left(ax^2+bx+c\right) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">এখন বন্ধনীর ভেতরের প্রতিটি পদের আলাদা আলাদা অন্তরীকরণ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{ax^2+bx+c}} \cdot \left\{ \frac{d}{dx}\left(ax^2\right) + \frac{d}{dx}(bx) + \frac{d}{dx}(c) \right\}$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{ax^2+bx+c}} \cdot (a \cdot 2x + b \cdot 1 + 0) \quad [\text{সূত্র বসিয়ে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{ax^2+bx+c}} \cdot (2ax + b)$$</div>
+    <div class="step-explain">লব ও হর সাজিয়ে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{2ax+b}{2\sqrt{ax^2+bx+c}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{2ax+b}{2\sqrt{ax^2+bx+c}}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $\sin\frac{\theta}{2}+\cos5\theta$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$। লক্ষ্য করি, এখানে পরিবর্তনশীল রাশিটি হলো $\theta$ (থিটা)।</div>
+    <div class="step">$$y = \sin\frac{\theta}{2}+\cos5\theta$$</div>
+    <div class="step-explain">উভয় পক্ষকে $\theta$ এর সাপেক্ষে অন্তরীকরণ বা ব্যবকলন করে পাই:</div>
+    <div class="step">$$\frac{dy}{d\theta} = \frac{d}{d\theta} \left( \sin\frac{\theta}{2}+\cos5\theta \right)$$</div>
+    <div class="step-explain">যোগের নিয়ম অনুসারে অন্তরীকরণকে দুটি পদের মাঝে আলাদা করে দেই:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \frac{d}{d\theta}\left(\sin\frac{\theta}{2}\right) + \frac{d}{d\theta}\left(\cos5\theta\right)$$</div>
+    <div class="step-explain">এখন প্রতিটি পদে চেইন রুল বা পর্যায়ক্রমিক অন্তরীকরণ সূত্র প্রয়োগ করি। আমরা জানি, $\frac{d}{d\theta}(\sin\theta)=\cos\theta$ এবং $\frac{d}{d\theta}(\cos\theta)=-\sin\theta$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \cos\frac{\theta}{2} \cdot \frac{d}{d\theta}\left(\frac{\theta}{2}\right) + (-\sin5\theta) \cdot \frac{d}{d\theta}(5\theta) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">এখন থিটার সাপেক্ষে ভেতরের কোণগুলোর অন্তরজ বের করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \cos\frac{\theta}{2} \cdot \left(\frac{1}{2} \cdot 1\right) - \sin5\theta \cdot (5 \cdot 1) \quad \left[\text{যেহেতু, } \frac{d}{d\theta}(\theta)=1\right]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \frac{1}{2}\cos\frac{\theta}{2} - 5\sin5\theta \quad [\text{ধ্রুবক সংখ্যাগুলো সামনে এনে সাজিয়ে}]$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{1}{2}\cos\dfrac{\theta}{2} - 5\sin5\theta$</div>
+    
+    <hr>
+
+    <div class="problem-sub-title">(v) $\cos^4\theta$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $\theta$ (থিটা)।</div>
+    <div class="step">$$y = \cos^4\theta$$</div>
+    <div class="step-explain">বোঝার সুবিধার জন্য ফাংশনটিকে পুরোটার ওপর পাওয়ার বা সূচক আকারে লিখি:</div>
+    <div class="step">$$\Rightarrow y = \left(\cos\theta\right)^4 \quad \left[\text{যেহেতু, } \cos^n\theta = (\cos\theta)^n\right]$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $\theta$ এর সাপেক্ষে অন্তরীকরণ বা ব্যবকলন করে পাই:</div>
+    <div class="step">$$\frac{dy}{d\theta} = \frac{d}{d\theta} \left\{ \left(\cos\theta\right)^4 \right\}$$</div>
+    <div class="step-explain">চেইন রুল বা পর্যায়ক্রমিক নিয়ম প্রয়োগ করতে সম্পূর্ণ $(\cos\theta)$ অংশটিকে মনে মনে $\theta$ ধরি, এবং $\frac{d}{d\theta}\left(\theta^n\right) = n \cdot \theta^{n-1}$ সূত্র ব্যবহার করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = 4 \cdot \left(\cos\theta\right)^{4-1} \cdot \frac{d}{d\theta}\left(\cos\theta\right) \quad [\text{চেইন রুল বা পর্যায়ক্রমিক অন্তরীকরণ করে}]$$</div>
+    <div class="step-explain">সূচকের বিয়োগ সম্পন্ন করি এবং আমরা জানি $\cos\theta$ এর অন্তরজ হলো $-\sin\theta$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = 4 \cdot \left(\cos\theta\right)^3 \cdot \left(-\sin\theta\right) \quad \left[\text{যেহেতু, } \frac{d}{d\theta}(\cos\theta) = -\sin\theta\right]$$</div>
+    <div class="step-explain">চিহ্ন এবং পদগুলো গুণ করে সাজিয়ে পাই:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = -4\cos^3\theta \cdot \sin\theta$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $-4\cos^3\theta \cdot \sin\theta$</div>
+    
+    <hr>
+
+    <div class="problem-sub-title">(vi) $\sec\sqrt{x}$</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \sec\sqrt{x}$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left( \sec\sqrt{x} \right)$$</div>
+    <div class="step-explain">চেইন রুল অনুসারে $\sqrt{x}$ কে মনে মনে $x$ বিবেচনা করে $\frac{d}{dx}(\sec x) = \sec x \cdot \tan x$ সূত্র প্রয়োগ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \sec\sqrt{x} \cdot \tan\sqrt{x} \cdot \frac{d}{dx}\left(\sqrt{x}\right) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">আমরা জানি, রুটের অন্তরজের সাধারণ সূত্র $\frac{d}{dx}(\sqrt{x}) = \frac{1}{2\sqrt{x}}$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \sec\sqrt{x} \cdot \tan\sqrt{x} \cdot \left( \frac{1}{2\sqrt{x}} \right) \quad \left[\text{মান বসিয়ে}\right]$$</div>
+    <div class="step-explain">লব ও হর আকারে সাজিয়ে সুন্দরভাবে গুছিয়ে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{\sec\sqrt{x} \cdot \tan\sqrt{x}}{2\sqrt{x}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{\sec\sqrt{x} \cdot \tan\sqrt{x}}{2\sqrt{x}}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vii) $\sqrt{\tan\theta}$</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $\theta$।</div>
+    <div class="step">$$y = \sqrt{\tan\theta}$$</div>
+    <div class="step-explain">উভয় পক্ষকে $\theta$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{d\theta} = \frac{d}{d\theta} \left( \sqrt{\tan\theta} \right)$$</div>
+    <div class="step-explain">চেইন রুল ব্যবহার করে পুরো রুটের ভেতরের $(\tan\theta)$ অংশকে $\theta$ ধরি। আমরা জানি, $\frac{d}{d\theta}(\sqrt{\theta}) = \frac{1}{2\sqrt{\theta}}$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \frac{1}{2\sqrt{\tan\theta}} \cdot \frac{d}{d\theta}\left(\tan\theta\right) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">আমরা জানি, $\tan\theta$ এর অন্তরজ হলো $\sec^2\theta$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \frac{1}{2\sqrt{\tan\theta}} \cdot \sec^2\theta \quad \left[\text{যেহেতু, } \frac{d}{d\theta}(\tan\theta) = \sec^2\theta\right]$$</div>
+    <div class="step-explain">এখন লব ও হর সাজিয়ে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{d\theta} = \frac{\sec^2\theta}{2\sqrt{\tan\theta}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{\sec^2\theta}{2\sqrt{\tan\theta}}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(viii) $\sqrt{\tan e^{x^2}}$</div>
+    <div class="solution-title">সমাধান (viii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \sqrt{\tan e^{x^2}}$$</div>
+    <div class="step-explain">উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left( \sqrt{\tan e^{x^2}} \right)$$</div>
+    <div class="step-explain">**ধাপ ১:** চেইন রুল অনুসারে সবার বাইরের বর্গমূল বা রুটের ভেতরের সম্পূর্ণ অংশটিকে $x$ ধরে $\frac{d}{dx}(\sqrt{x}) = \frac{1}{2\sqrt{x}}$ সূত্র প্রয়োগ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{\tan e^{x^2}}} \cdot \frac{d}{dx}\left(\tan e^{x^2}\right) \quad [\text{প্রথমবার চেইন রুল}]$$</div>
+    <div class="step-explain">**ধাপ ২:** এখন $\tan e^{x^2}$ অংশটির অন্তরজ করতে $e^{x^2}$ কে মনে মনে $x$ ধরি। আমরা জানি, $\frac{d}{dx}(\tan x) = \sec^2 x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{\tan e^{x^2}}} \cdot \sec^2\left(e^{x^2}\right) \cdot \frac{d}{dx}\left(e^{x^2}\right) \quad [\text{দ্বিতীয়বার চেইন রুল}]$$</div>
+    <div class="step-explain">**ধাপ ৩:** এবার $e^{x^2}$ এর অন্তরজ করতে তার সূচক $x^2$ কে মনে মনে $x$ ধরি। আমরা জানি, $\frac{d}{dx}(e^x) = e^x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{\tan e^{x^2}}} \cdot \sec^2\left(e^{x^2}\right) \cdot e^{x^2} \cdot \frac{d}{dx}\left(x^2\right) \quad [\text{তৃতীয়বার চেইন রুল}]$$</div>
+    <div class="step-explain">**ধাপ ৪:** সবশেষে $x^2$ এর অন্তরীকরণ করি, যা হলো $2x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{1}{2\sqrt{\tan e^{x^2}}} \cdot \sec^2\left(e^{x^2}\right) \cdot e^{x^2} \cdot (2x) \quad \left[\text{যেহেতু, } \frac{d}{dx}(x^2) = 2x\right]$$</div>
+    <div class="step-explain">লবের $2x$ এর $2$ এবং হরের $2$ কাটাকাটি করি এবং পদগুলোকে গুছিয়ে সুন্দরভাবে সাজিয়ে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{\not{2}x \cdot e^{x^2} \cdot \sec^2\left(e^{x^2}\right)}{\not{2}\sqrt{\tan e^{x^2}}} \quad [\text{লব ও হর কাটাকাটি করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = \frac{x \cdot e^{x^2} \cdot \sec^2\left(e^{x^2}\right)}{\sqrt{\tan e^{x^2}}}$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $\dfrac{x \cdot e^{x^2} \cdot \sec^2\left(e^{x^2}\right)}{\sqrt{\tan e^{x^2}}}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ix) $\cos x^\circ$</div>
+    <div class="solution-title">সমাধান (ix):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \cos x^\circ$$</div>
+    <div class="step-explain">ক্যালকুলাসে ত্রিকোণমিতিক ফাংশনের অন্তরীকরণের জন্য কোণটিকে অবশ্যই রেডিয়ান এককে প্রকাশ করতে হয়। আমরা জানি, $1^\circ = \frac{\pi}{180} \text{ রেডিয়ান}$।</div>
+    <div class="step-explain">সুতরাং, $x^\circ$ কোণকে রেডিয়ানে রূপান্তর করে পাই:</div>
+    <div class="step">$$x^\circ = x \cdot \frac{\pi}{180} = \frac{\pi x}{180}$$</div>
+    <div class="step-explain">কোণের এই রেডিয়ান মানটি মূল ফাংশনে বসিয়ে পাই:</div>
+    <div class="step">$$y = \cos\left(\frac{\pi x}{180}\right)$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ বা ব্যবকলন করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left\{ \cos\left(\frac{\pi x}{180}\right) \right\}$$</div>
+    <div class="step-explain">চেইন রুল বা পর্যায়ক্রমিক নিয়ম প্রয়োগ করার জন্য বন্ধনীর ভেতরের অংশ $\left(\frac{\pi x}{180}\right)$ কে মনে মনে $x$ ধরি। আমরা জানি, $\frac{d}{dx}(\cos x) = -\sin x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\sin\left(\frac{\pi x}{180}\right) \cdot \frac{d}{dx}\left(\frac{\pi x}{180}\right) \quad [\text{চেইন রুল প্রয়োগ করে}]$$</div>
+    <div class="step-explain">এখন $\frac{\pi}{180}$ ধ্রুবক সংখ্যাটিকে সামনে রেখে $x$ এর অন্তরীকরণ করি, যেখানে $\frac{d}{dx}(x) = 1$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\sin\left(\frac{\pi x}{180}\right) \cdot \left(\frac{\pi}{180} \cdot 1\right) \quad \left[\text{যেহেতু, } \frac{d}{dx}(x) = 1\right]$$</div>
+    <div class="step-explain">ধ্রুবক অংশটিকে সামনে নিয়ে আসি এবং রেডিয়ান কোণ $\frac{\pi x}{180}$ কে পুনরায় ডিগ্রিতে ($x^\circ$) রূপান্তর করে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -\frac{\pi}{180}\sin x^\circ \quad \left[\text{যেহেতু, } \frac{\pi x}{180} = x^\circ\right]$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $-\dfrac{\pi}{180}\sin x^\circ$</div>
+    
+    <hr>
+
+    <div class="problem-sub-title">(x) $\cos^2x^2$</div>
+    <div class="solution-title">সমাধান (x):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \cos^2x^2$$</div>
+    <div class="step-explain">শিক্ষার্থীদের বোঝার সুবিধার্থে ফাংশনটির পাওয়ার বা সূচকটিকে পুরোটার ওপর বন্ধনী দিয়ে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow y = \left(\cos x^2\right)^2 \quad \left[\text{যেহেতু, } \cos^n\theta = (\cos\theta)^n\right]$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left\{ \left(\cos x^2\right)^2 \right\}$$</div>
+    <div class="step-explain">**ধাপ ১:** চেইন রুল অনুসারে বন্ধনীর ভেতরের সম্পূর্ণ $\left(\cos x^2\right)$ অংশটিকে মনে মনে $x$ ধরে $\frac{d}{dx}\left(x^n\right) = n \cdot x^{n-1}$ সূত্র প্রয়োগ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 2 \cdot \left(\cos x^2\right)^{2-1} \cdot \frac{d}{dx}\left(\cos x^2\right) \quad [\text{প্রথমবার চেইন রুল}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 2\cos x^2 \cdot \frac{d}{dx}\left(\cos x^2\right)$$</div>
+    <div class="step-explain">**ধাপ ২:** এখন $\cos x^2$ অংশটির অন্তরজ নির্ণয় করতে তার কোণ $x^2$ কে মনে মনে $x$ ধরি। আমরা জানি, $\frac{d}{dx}(\cos x) = -\sin x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 2\cos x^2 \cdot \left(-\sin x^2\right) \cdot \frac{d}{dx}\left(x^2\right) \quad [\text{দ্বিতীয়বার চেইন রুল}]$$</div>
+    <div class="step-explain">**ধাপ ৩:** সবশেষে কোণ $x^2$ এর অন্তরীকরণ করি, যা হলো $2x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -2\cos x^2 \cdot \sin x^2 \cdot (2x) \quad \left[\text{যেহেতু, } \frac{d}{dx}(x^2) = 2x\right]$$</div>
+    <div class="step-explain">ত্রিকোণমিতির গুণিতক কোণের সূত্র গুছিয়ে লেখার জন্য $2\sin x^2 \cdot \cos x^2$ অংশটিকে আলাদা করি এবং আমরা জানি $2\sin\theta \cdot \cos\theta = \sin2\theta$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -(2x) \cdot \left(2\sin x^2 \cdot \cos x^2\right) \quad [\text{পদগুলো সাজিয়ে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = -2x \cdot \sin\left(2x^2\right) \quad \left[\text{যেহেতু, } 2\sin x^2 \cdot \cos x^2 = \sin 2x^2\right]$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $-2x\sin\left(2x^2\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xi) $\sin^3x^3$</div>
+    <div class="solution-title">সমাধান (xi):</div>
+    <div class="step-explain">ধরি, প্রদত্ত ফাংশনটি $y$ এর সমান এবং এখানে পরিবর্তনশীল রাশি হলো $x$।</div>
+    <div class="step">$$y = \sin^3x^3$$</div>
+    <div class="step-explain">শিক্ষার্থীদের বোঝার সুবিধার্থে ফাংশনটির পাওয়ার বা সূচকটিকে পুরোটার ওপর বন্ধনী দিয়ে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow y = \left(\sin x^3\right)^3 \quad \left[\text{যেহেতু, } \sin^n\theta = (\sin\theta)^n\right]$$</div>
+    <div class="step-explain">এখন, উভয় পক্ষকে $x$ এর সাপেক্ষে অন্তরীকরণ করে পাই:</div>
+    <div class="step">$$\frac{dy}{dx} = \frac{d}{dx} \left\{ \left(\sin x^3\right)^3 \right\}$$</div>
+    <div class="step-explain">**ধাপ ১:** চেইন রুল অনুসারে বন্ধনীর ভেতরের সম্পূর্ণ $\left(\sin x^3\right)$ অংশটিকে মনে মনে $x$ ধরে $\frac{d}{dx}\left(x^n\right) = n \cdot x^{n-1}$ সূত্র প্রয়োগ করি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 3 \cdot \left(\sin x^3\right)^{3-1} \cdot \frac{d}{dx}\left(\sin x^3\right) \quad [\text{প্রথমবার চেইন রুল}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 3\left(\sin x^3\right)^2 \cdot \frac{d}{dx}\left(\sin x^3\right)$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 3\sin^2x^3 \cdot \frac{d}{dx}\left(\sin x^3\right) \quad [\text{পাওয়ারকে পুনরায় স্বাভাবিক আকারে লিখে}]$$</div>
+    <div class="step-explain">**ধাপ ২:** এখন $\sin x^3$ অংশটির অন্তরজ নির্ণয় করতে তার কোণ $x^3$ কে মনে মনে $x$ ধরি। আমরা জানি, $\frac{d}{dx}(\sin x) = \cos x$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 3\sin^2x^3 \cdot \cos x^3 \cdot \frac{d}{dx}\left(x^3\right) \quad [\text{দ্বিতীয়বার চেইন রুল}]$$</div>
+    <div class="step-explain">**ধাপ ৩:** সবশেষে কোণ $x^3$ এর অন্তরীকরণ করি, যা হলো $3x^2$:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 3\sin^2x^3 \cdot \cos x^3 \cdot \left(3x^2\right) \quad \left[\text{যেহেতু, } \frac{d}{dx}(x^3) = 3x^2\right]$$</div>
+    <div class="step-explain">ধ্রুবক সংখ্যা ও বীজগণিতীয় রাশিগুলোকে গুণ করে সর্ববামে এনে সুন্দরভাবে সাজিয়ে লিখি:</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = (3 \cdot 3x^2) \cdot \sin^2x^3 \cdot \cos x^3 \quad [\text{গুণ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{dy}{dx} = 9x^2\sin^2x^3 \cdot \cos x^3$$</div>
+    <div class="step-explain">সুতরাং, নির্ণেয় অন্তরজ: $9x^2\sin^2x^3\cos x^3$</div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

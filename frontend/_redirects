@@ -1,0 +1,20 @@
+# ============================================================
+# Cloudflare Pages Redirects & Rewrites
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+# ============================================================
+
+# ✅ Reset Password page — explicit route (query string preserved)
+/reset-password             /reset-password.html            200
+/reset-password/            /reset-password.html            200
+
+# ✅ Static assets — direct serve
+/css/*                      /css/:splat                    200
+/js/*                       /js/:splat                     200
+/katex/*                    /katex/:splat                  200
+/content/*                  /content/:splat                200
+
+# ✅ Config file — direct serve
+/config.json                /config.json                   200
+
+# ✅ SPA fallback — সব অজানা route index.html-এ যাবে (status 200, not 404)
+/*                          /index.html                    200

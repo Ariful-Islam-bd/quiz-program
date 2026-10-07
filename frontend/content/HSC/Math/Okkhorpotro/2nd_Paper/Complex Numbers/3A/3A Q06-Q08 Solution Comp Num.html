@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q06-Q08</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(A)</div>
+
+<div class="container">
+<div class="problem-card">
+    <div class="problem-title">৬. জটিল সংখ্যার মডুলাস, আর্গুমেন্ট এবং পোলার আকার সংক্রান্ত সমস্যা ও সমাধানঃ</div>
+    
+    <div class="problem-sub-title">৬. (i) $\dfrac{1}{2-i}$ এর আর্গুমেন্ট নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান ৬. (i):</div>
+    <div class="step-explain">ধরি, প্রদত্ত জটিল সংখ্যাটি $Z = \frac{1}{2-i}$</div>
+    <div class="step-explain">হরকে বাস্তব সংখ্যায় রূপান্তর করার জন্য হরের অনুবন্ধী জটিল সংখ্যা $2+i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{1 \cdot (2+i)}{(2-i)(2+i)}$</div>
+    <div class="step-explain">হরে $(a-b)(a+b)=a^2-b^2$ সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \frac{2+i}{(2)^2 - (i)^2}$</div>
+    <div class="step-explain">$i^2 = -1$ </div>
+    <div class="step">$\Rightarrow Z = \frac{2+i}{4 - (-1)}$</div>
+    <div class="step">$\Rightarrow Z = \frac{2+i}{4 + 1}$</div>
+    <div class="step">$\Rightarrow Z = \frac{2+i}{5}$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা করে পাই:</div>
+    <div class="step">$\Rightarrow Z = \frac{2}{5} + \frac{1}{5}i$</div>
+    <div class="step-explain">এখানে, বাস্তব অংশ $x = \frac{2}{5}$ এবং কাল্পনিক অংশ $y = \frac{1}{5}$। যেহেতু উভয় অংশই ধনাত্মক, জটিল সংখ্যাটি ১ম চতুর্ভাগে অবস্থিত।</div>
+    <div class="step">সুতরাং, ১ম চতুর্ভাগের সূত্রানুযায়ী আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = \tan^{-1}\left( \frac{|y|}{|x|} \right)$</div>
+    <div class="step">$\theta = \tan^{-1}\left( \frac{1/5}{2/5} \right)$</div>
+    <div class="step">$\Rightarrow \theta = \tan^{-1}\left( \frac{1}{5} \cdot \frac{5}{2} \right)$ <span class="note">[ ভগ্নাংশ উল্টিয়ে গুণ করে ]</span></div>
+    <div class="step">$\Rightarrow \theta = \tan^{-1}\left( \frac{1}{2} \right)$ <span class="note">[ লব ও হর কাটাকাটি করে ]</span></div>
+    <div class="step"><b>উত্তর:</b> আর্গুমেন্ট হলো $\tan^{-1}\left(\frac{1}{2}\right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (ii) $\dfrac{1}{-2+2\sqrt{3}i}$ এর আর্গুমেন্ট নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান ৬. (ii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত জটিল সংখ্যাটি $Z = \frac{1}{-2+2\sqrt{3}i}$</div>
+    <div class="step-explain">হরের অনুবন্ধী জটিল সংখ্যা $-2-2\sqrt{3}i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{1 \cdot (-2-2\sqrt{3}i)}{(-2+2\sqrt{3}i)(-2-2\sqrt{3}i)}$</div>
+    <div class="step-explain">হরে $(a+b)(a-b) = a^2 - b^2$ সূত্র প্রয়োগ করে</div>
+    <div class="step">$\Rightarrow Z = \frac{-2-2\sqrt{3}i}{(-2)^2 - (2\sqrt{3}i)^2}$</div>
+    <div class="step-explain">বর্গ সম্পাদন করে</div>
+    <div class="step">$\Rightarrow Z = \frac{-2-2\sqrt{3}i}{4 - 4 \cdot 3 \cdot i^2}$</div>
+    <div class="step-explain">$\because i^2 = -1$</div>
+    <div class="step">$\Rightarrow Z = \frac{-2-2\sqrt{3}i}{4 - 12(-1)}$</div>
+    <div class="step">$\Rightarrow Z = \frac{-2-2\sqrt{3}i}{4 + 12}$</div>
+    <div class="step">$\Rightarrow Z = \frac{-2-2\sqrt{3}i}{16}$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা করে সরল করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{-2}{16} - \frac{2\sqrt{3}}{16}i$</div>
+    <div class="step-explain">লব ও হরকে ২ দ্বারা ভাগ করে</div>
+    <div class="step">$\Rightarrow Z = -\frac{1}{8} - \frac{\sqrt{3}}{8}i$</div>
+    <div class="step-explain">এখানে, বাস্তব অংশ $x = -\dfrac{1}{8}$ এবং কাল্পনিক অংশ $y = -\dfrac{\sqrt{3}}{8}$। যেহেতু উভয় অংশই ঋণাত্মক, জটিল সংখ্যাটি ৩য় চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">সুতরাং, ৩য় চতুর্ভাগের সূত্রানুযায়ী মুখ্য আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = -\pi + \tan^{-1}\left( \dfrac{|y|}{|x|} \right)$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \dfrac{|-\sqrt{3}/8|}{|-1/8|} \right)$</div>
+    <div class="step-explain">পরমমান লিখে,</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \dfrac{\sqrt{3}/8}{1/8} \right)$</div>
+    <div class="step-explain">ভগ্নাংশকে উল্টিয়ে গুণ করে,</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \dfrac{\sqrt{3}}{8}\cdot\dfrac{8}{1} \right)$</div>
+    <div class="step-explain">লব ও হর এর ৮ কেটে দিয়ে,</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}(\sqrt{3})$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \frac{\pi}{3}$ <span class="note">[ $\because \tan\left(\frac{\pi}{3}\right) = \sqrt{3}$ ]</span></div>
+    <div class="step">$\Rightarrow \theta = \frac{-3\pi + \pi}{3}$ <span class="note">[ লসাগু করে ]</span></div>
+    <div class="step">$\Rightarrow \theta = -\frac{2\pi}{3}$</div>
+    <div class="step"><b>উত্তর:</b> আর্গুমেন্ট হলো $-\frac{2\pi}{3}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (iii) আর্গুমেন্ট নির্ণয় করঃ $1-\dfrac{i}{\,1-\dfrac{1}{1+i}\,}$</div>
+    <div class="solution-title">সমাধান ৬. (iii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত মিশ্র জটিল রাশিটি $Z = 1 - \dfrac{i}{1 - \dfrac{1}{1+i}}$</div>
+    <div class="step-explain">প্রথমে হরের একদম নিচের অংশটিকে সরল করি:</div>
+    <div class="step">$\Rightarrow Z = 1 - \dfrac{i}{\left\{\dfrac{1 \cdot (1+i) - 1}{1+i}\right\}} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow Z = 1 - \dfrac{i}{\left(\dfrac{1+i-1}{1+i}\right)}$</div>
+    <div class="step">$\Rightarrow Z = 1 - \dfrac{i}{\left(\dfrac{i}{1+i}\right)}$</div>
+    <div class="step-explain">এখন নিচের ভগ্নাংশটিকে উল্টিয়ে গুণ করে দিই:</div>
+    <div class="step">$\Rightarrow Z = 1 - i \cdot \left( \frac{1+i}{i} \right)$</div>
+    <div class="step-explain">লব ও হরের $i$ কাটাকাটি করে</div>
+    <div class="step">$\Rightarrow Z = 1 - (1+i)$</div>
+    <div class="step-explain">বন্ধনী তুলে দিই, </div>
+    <div class="step">$\Rightarrow Z = 1 - 1 - i$</div>
+    <div class="step">$\Rightarrow Z = -i$</div>
+    <div class="step-explain">সরলীকৃত জটিল সংখ্যাটি হলো $Z = 0 + (-1)i$</div>
+    <div class="step-explain">এখানে বাস্তব অংশ $x = 0$ এবং কাল্পনিক অংশ $y = -1$। এটি সরাসরি ঋণাত্মক $y$-অক্ষের ওপর অবস্থিত।</div>
+    <div class="step-explain">সুতরাং, এর মুখ্য আর্গুমেন্ট সরাসরি হিসাব করা যায়। ঋণাত্মক $y$ -অক্ষে অবস্থিত হওয়ায় এটি হবে ($- 90^{\circ}$)</div>
+    <div class="step">$\theta = -\frac{\pi}{2}$</div>
+    <div class="step"><b>উত্তর:</b> আর্গুমেন্ট হলো $-\frac{\pi}{2}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (iv) দেখাও যে, $\,\dfrac{3-i}{1-2i}\,$ জটিল সংখ্যাটির মডুলাস $\sqrt{2}$ এবং আর্গুমেন্ট $\dfrac{\pi}{4}$</div>
+    <div class="solution-title">সমাধান ৬. (iv):</div>
+    <div class="step-explain">ধরি, জটিল সংখ্যাটি $Z = \frac{3-i}{1-2i}$</div>
+    <div class="step-explain">হরের অনুবন্ধী জটিল সংখ্যা $1+2i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{(3-i)(1+2i)}{(1-2i)(1+2i)}$</div>
+    <div class="step">$\Rightarrow Z = \frac{3 \cdot 1 + 3 \cdot 2i - i \cdot 1 - i \cdot 2i}{(1)^2 - (2i)^2} \quad [\text{লবে গুণ ও হরে সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow Z = \frac{3 + 6i - i - 2i^2}{1 - 4i^2}$</div>
+    <div class="step">$\Rightarrow Z = \frac{3 + 5i - 2(-1)}{1 - 4(-1)} \quad [\because i^2 = -1 \text{ বসিয়ে এবং সদৃশ পদ যোগ করে}]$</div>
+    <div class="step">$\Rightarrow Z = \frac{3 + 5i + 2}{1 + 4}$</div>
+    <div class="step">$\Rightarrow Z = \frac{5 + 5i}{5}$</div>
+    <div class="step-explain">লব থেকে ৫ কমন নিয়ে হর ও লব কাটাকাটি করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{5(1+i)}{5}$</div>
+    <div class="step">$\Rightarrow Z = 1+i$</div>
+    <div class="step-explain">এখানে বাস্তব অংশ $x = 1$ এবং কাল্পনিক অংশ $y = 1$। সংখ্যাটি ১ম চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">এখন, মডুলাস ($r$):</div>
+    <div class="step">$r = \sqrt{(1)^2 + (1)^2} = \sqrt{1+1} = \sqrt{2} \quad [\text{মডুলাস প্রমাণিত}]$</div>
+    <div class="step-explain">এবং আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = \tan^{-1}\left( \frac{|1|}{|1|} \right) = \tan^{-1}(1) \quad [\text{১ম চতুর্ভাগের সূত্রানুযায়ী}]$</div>
+    <div class="step">$\Rightarrow \theta = \frac{\pi}{4} \quad \left[\because \tan\left(\frac{\pi}{4}\right)=1\right] \quad [\text{আর্গুমেন্ট প্রমাণিত}]$</div>
+    <div class="step"><b>অতএব, জটিল সংখ্যাটির মডুলাস $\sqrt{2}$ এবং আর্গুমেন্ট $\frac{\pi}{4}$ (দেখানো হলো)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (v) $-4-4i$ জটিল সংখ্যার আর্গুমেন্ট নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান ৬. (v):</div>
+    <div class="step-explain">ধরি, প্রদত্ত জটিল সংখ্যা $Z = -4-4i$</div>
+    <div class="step-explain">এখানে, বাস্তব অংশ $x = -4$ এবং কাল্পনিক অংশ $y = -4$। বিন্দুটি $(-4, -4)$ যা ৩য় চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">সুতরাং, ৩য় চতুর্ভাগের নিয়মানুযায়ী মুখ্য আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = -\pi + \tan^{-1}\left( \frac{|y|}{|x|} \right)$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \frac{|-4|}{|-4|} \right) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \frac{4}{4} \right) \quad [\text{পরমমান তুলে}]$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}(1)$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \frac{\pi}{4} \quad \left[\because \tan\left(\frac{\pi}{4}\right) = 1\right]$</div>
+    <div class="step">$\Rightarrow \theta = \frac{-4\pi + \pi}{4} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \theta = -\frac{3\pi}{4}$</div>
+    <div class="step"><b>উত্তর:</b> আর্গুমেন্ট হলো $-\frac{3\pi}{4}$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (vi) $i-\sqrt{3}$ এর মডুলাস ও আর্গুমেন্ট নির্ণয় কর এবং পোলার আকারে প্রকাশ কর।</div>
+    <div class="solution-title">সমাধান ৬. (vi):</div>
+    <div class="step-explain">ধরি, প্রদত্ত জটিল সংখ্যা $Z = i-\sqrt{3}$</div>
+    <div class="step-explain">প্রথমে সংখ্যাটিকে আদর্শ রূপ $x+iy$ আকারে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow Z = -\sqrt{3} + 1 \cdot i$</div>
+    <div class="step-explain">এখানে, বাস্তব অংশ $x = -\sqrt{3}$ এবং কাল্পনিক অংশ $y = 1$। যেহেতু বাস্তব অংশ ঋণাত্মক এবং কাল্পনিক অংশ ধনাত্মক, এটি ২য় চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">মডুলাস ($r$):</div>
+    <div class="step">$r = \sqrt{(-\sqrt{3})^2 + (1)^2} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow r = \sqrt{3 + 1} = \sqrt{4}$</div>
+    <div class="step">$\Rightarrow r = 2$</div>
+    <div class="step-explain">মুখ্য আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = \pi - \tan^{-1}\left( \frac{|1|}{|-\sqrt{3}|} \right) \quad [\text{২য় চতুর্ভাগের সূত্রানুযায়ী}]$</div>
+    <div class="step">$\Rightarrow \theta = \pi - \tan^{-1}\left( \frac{1}{\sqrt{3}} \right) \quad [\text{পরমমান তুলে}]$</div>
+    <div class="step">$\Rightarrow \theta = \pi - \frac{\pi}{6} \quad \left[\because \tan\left(\frac{\pi}{6}\right) = \frac{1}{\sqrt{3}}\right]$</div>
+    <div class="step">$\Rightarrow \theta = \frac{6\pi - \pi}{6} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \theta = \frac{5\pi}{6}$</div>
+    <div class="step-explain">পোলার আকার হলো $r(\cos\theta + i\sin\theta)$, এখানে মান বসিয়ে পাই:</div>
+    <div class="step">$Z = 2\left( \cos\frac{5\pi}{6} + i\sin\frac{5\pi}{6} \right)$</div>
+    <div class="step"><b>উত্তর:</b> মডuলাস: $2$, আর্গুমেন্ট: $\frac{5\pi}{6}$, পোলার আকার: $2\left( \cos\frac{5\pi}{6} + i\sin\frac{5\pi}{6} \right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (vii) $\dfrac{1+2i}{1-3i}$ এর মডুলাস ও আর্গুমেন্ট বের কর এবং পোলার আকারে প্রকাশ কর।</div>
+    <div class="solution-title">সমাধান ৬. (vii):</div>
+    <div class="step-explain">ধরি, প্রদত্ত জটিল সংখ্যা $Z = \frac{1+2i}{1-3i}$</div>
+    <div class="step-explain">হরের অনুবন্ধী জটিল সংখ্যা $1+3i$ দ্বারা লব ও হরকে গুণ করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{(1+2i)(1+3i)}{(1-3i)(1+3i)}$</div>
+    <div class="step">$\Rightarrow Z = \frac{1 \cdot 1 + 1 \cdot 3i + 2i \cdot 1 + 2i \cdot 3i}{(1)^2 - (3i)^2}$</div>
+    <div class="step">$\Rightarrow Z = \frac{1 + 3i + 2i + 6i^2}{1 - 9i^2}$</div>
+    <div class="step">$\Rightarrow Z = \frac{1 + 5i + 6(-1)}{1 - 9(-1)} \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow Z = \frac{1 + 5i - 6}{1 + 9}$</div>
+    <div class="step">$\Rightarrow Z = \frac{-5 + 5i}{10}$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ আলাদা করে কাটাকাটি করি:</div>
+    <div class="step">$\Rightarrow Z = \frac{-5}{10} + \frac{5}{10}i$</div>
+    <div class="step">$\Rightarrow Z = -\frac{1}{2} + \frac{1}{2}i$</div>
+    <div class="step-explain">এখানে, বাস্তব অংশ $x = -\frac{1}{2}$ এবং কাল্পনিক অংশ $y = \frac{1}{2}$। এটি ২য় চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">মডুলাস ($r$):</div>
+    <div class="step">$r = \sqrt{\left(-\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^2}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{\frac{1}{4} + \frac{1}{4}} = \sqrt{\frac{2}{4}} = \sqrt{\frac{1}{2}}$</div>
+    <div class="step">$\Rightarrow r = \frac{1}{\sqrt{2}}$</div>
+    <div class="step-explain">মুখ্য আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = \pi - \tan^{-1}\left( \frac{|1/2|}{|-1/2|} \right) \quad [\text{২য় চতুর্ভাগের সূত্রানুযায়ী}]$</div>
+    <div class="step">$\Rightarrow \theta = \pi - \tan^{-1}(1) \quad [\text{ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \theta = \pi - \frac{\pi}{4} = \frac{4\pi - \pi}{4}$</div>
+    <div class="step">$\Rightarrow \theta = \frac{3\pi}{4}$</div>
+    <div class="step-explain">পোলার আকারে মান বসিয়ে পাই:</div>
+    <div class="step">$Z = \frac{1}{\sqrt{2}}\left( \cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4} \right)$</div>
+    <div class="step"><b>উত্তর:</b> মডুলাস: $\frac{1}{\sqrt{2}}$, আর্গুমেন্ট: $\frac{3\pi}{4}$, পোলার আকার: $\frac{1}{\sqrt{2}}\left( \cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4} \right)$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৬. (viii) $P=\dfrac{1+5i}{1+i}$ এবং $Q=3-2i$ হলে, $\overline{Q}-2P$ এর মডুলাস ও আর্গুমেন্ট নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান ৬. (viii):</div>
+    <div class="step-explain">দেওয়া আছে, $P = \frac{1+5i}{1+i}$ এবং $Q = 3-2i$</div>
+    <div class="step-explain">প্রথমে আমরা $P$ কে সরল আকৃতিতে নিয়ে আসি। লব ও হরকে $(1-i)$ দ্বারা গুণ করি:</div>
+    <div class="step">$P = \frac{(1+5i)(1-i)}{(1+i)(1-i)}$</div>
+    <div class="step">$\Rightarrow P = \frac{1 - i + 5i - 5i^2}{(1)^2 - (i)^2}$</div>
+    <div class="step">$\Rightarrow P = \frac{1 + 4i - 5(-1)}{1 - (-1)} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow P = \frac{1 + 4i + 5}{1 + 1}$</div>
+    <div class="step">$\Rightarrow P = \frac{6 + 4i}{2}$</div>
+    <div class="step">$\Rightarrow P = \frac{6}{2} + \frac{4i}{2} = 3 + 2i \quad [\text{আলাদা করে ভাগ করে}]$</div>
+    
+    <div class="step-explain">এখন দেওয়া আছে $Q = 3-2i$, সুতরাং $Q$ এর অনুবন্ধী জটিল সংখ্যা $\overline{Q}$ হবে:</div>
+    <div class="step">$\overline{Q} = 3+2i \quad [\text{কাল্পনিক অংশের চিহ্নের পরিবর্তন করে}]$</div>
+    
+    <div class="step-explain">এবার আমাদের কাঙ্ক্ষিত রাশি $\overline{Q}-2P$ এর মান নির্ণয় করি:</div>
+    <div class="step">$\text{ধরি, } Z = \overline{Q} - 2P$</div>
+    <div class="step">$\Rightarrow Z = (3+2i) - 2(3+2i) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow Z = 3 + 2i - 6 - 4i \quad [\text{গুণ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow Z = -3 - 2i \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    
+    <div class="step-explain">প্রাপ্ত সরলীকৃত সংখ্যাটির বাস্তব অংশ $x = -3$ এবং কাল্পনিক অংশ $y = -2$। যেহেতু উভয় অংশই ঋণাত্মক, রাশিটি ৩য় চতুর্ভাগে অবস্থিত।</div>
+    <div class="step-explain">মডুলাস ($r$):</div>
+    <div class="step">$r = \sqrt{(-3)^2 + (-2)^2} = \sqrt{9 + 4}$</div>
+    <div class="step">$\Rightarrow r = \sqrt{13}$</div>
+    
+    <div class="step-explain">মুখ্য আর্গুমেন্ট ($\theta$):</div>
+    <div class="step">$\theta = -\pi + \tan^{-1}\left( \frac{|-2|}{|-3|} \right) \quad [\text{৩য় চতুর্ভাগের সূত্রানুযায়ী}]$</div>
+    <div class="step">$\Rightarrow \theta = -\pi + \tan^{-1}\left( \frac{2}{3} \right) \quad [\text{পরমমান তুলে}]$</div>
+    
+    <div class="step"><b>উত্তর:</b> মডুলাস $\sqrt{13}$ এবং আর্গুমেন্ট $-\pi + \tan^{-1}\left(\frac{2}{3}\right)$</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৭. জটিল সংখ্যার সমতা, অনুবন্ধী ও মান নির্ণয় সংক্রান্ত সমস্যা ও সমাধানঃ</div>
+
+    <div class="problem-sub-title">৭. (i) $(a+ib)(c+id)=x+iy$ হলে, দেখাও যে, $(a-ib)(c-id)=x-iy$</div>
+    <div class="solution-title">সমাধান ৭. (i):</div>
+    <div class="step-explain">দেওয়া আছে:</div>
+    <div class="step">$(a+ib)(c+id) = x+iy \quad \dots \text{(equation 1)}$</div>
+    <div class="step-explain">প্রথমে বামপক্ষের গুণফল সম্পন্ন করে বাস্তব ও কাল্পনিক অংশ আলাদা করি:</div>
+    <div class="step">$\Rightarrow a \cdot c + a \cdot id + ib \cdot c + ib \cdot id = x+iy \quad [\text{সাধারণ গুণ করে}]$</div>
+    <div class="step">$\Rightarrow ac + iad + ibc + i^2bd = x+iy$</div>
+    <div class="step">$\Rightarrow ac + i(ad+bc) + (-1)bd = x+iy \quad [\because i^2 = -1 \text{ এবং } i \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow (ac-bd) + i(ad+bc) = x+iy \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$ac-bd = x \quad \dots \text{(equation 2)}$</div>
+    <div class="step">$ad+bc = y \quad \dots \text{(equation 3)}$</div>
+    <div class="step-explain">এখন আমাদের প্রমাণ করতে হবে $(a-ib)(c-id) = x-iy$। বামপক্ষ নিয়ে কাজ শুরু করি:</div>
+    <div class="step">বামপক্ষ $= (a-ib)(c-id)$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = a \cdot c - a \cdot id - ib \cdot c + ib \cdot id \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = ac - iad - ibc + i^2bd$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = ac - i(ad+bc) + (-1)bd \quad [\because i^2 = -1 \text{ এবং } -i \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = (ac-bd) - i(ad+bc) \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">এখন (equation 2) এবং (equation 3) থেকে $x$ ও $y$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = x - iy \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = \text{ডানপক্ষ}$</div>
+    <div class="step">অতএব, $(a-ib)(c-id) = x-iy$ <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (ii) যদি $a$ ও $b$ বাস্তব সংখ্যা এবং $a^2+b^2=1$ হয়, তবে দেখাও যে, $x$ এর একটি বাস্তব মান $\dfrac{1-ix}{1+ix}=a-ib$ সমীকরণটিকে সিদ্ধ করে।</div>
+    <div class="solution-title">সমাধান ৭. (ii):</div>
+    <div class="step-explain">দেওয়া আছে:</div>
+    <div class="step">$\frac{1-ix}{1+ix} = a-ib \quad \dots \text{(equation 1)}$</div>
+    <div class="step-explain">এই সমীকরণ থেকে $x$ এর মান নির্ণয় করার জন্য যোজন-বিয়োজন (বা বিয়োজন-যোজন) করি:</div>
+    <div class="step">$\Rightarrow \frac{(1-ix) - (1+ix)}{(1-ix) + (1+ix)} = \frac{(a-ib) - 1}{(a-ib) + 1} \quad \left[\text{বিয়োজন-যোজন করে; } \frac{\text{লব}-\text{হর}}{\text{লব}+\text{হর}}\right]$</div>
+    <div class="step">$\Rightarrow \frac{1 - ix - 1 - ix}{1 - ix + 1 + ix} = \frac{a - ib - 1}{a - ib + 1} \quad [\text{বন্ধনী তুলে}]$</div>
+    <div class="step">$\Rightarrow \frac{-2ix}{2} = \frac{(a-1) - ib}{(a+1) - ib} \quad [\text{লব ও হরে কাটাকাটি এবং সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow -ix = \frac{(a-1) - ib}{(a+1) - ib} \quad [\text{২ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের হর থেকে $i$ মুক্ত করার জন্য লব ও হরকে হরের অনুবন্ধী সংখ্যা $\{(a+1) + ib\}$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow -ix = \frac{\{(a-1) - ib\}\{(a+1) + ib\}}{\{(a+1) - ib\}\{(a+1) + ib\}}$</div>
+    <div class="step">$\Rightarrow -ix = \frac{(a-1)(a+1) + (a-1)ib - ib(a+1) - i^2b^2}{(a+1)^2 - (ib)^2} \quad [\text{লবে গুণ এবং হরে } (A-B)(A+B)=A^2-B^2 \text{ করে}]$</div>
+    <div class="step">$\Rightarrow -ix = \frac{(a^2-1) + iab - ib - iab - ib - (-1)b^2}{(a+1)^2 - i^2b^2} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow -ix = \frac{a^2 - 1 - 2ib + b^2}{(a+1)^2 - (-1)b^2} \quad [\text{লবে } +iab \text{ ও } -iab \text{ বাদ দিয়ে}]$</div>
+    <div class="step">$\Rightarrow -ix = \frac{(a^2 + b^2) - 1 - 2ib}{(a+1)^2 + b^2} \quad [\text{লব সাজিয়ে}]$</div>
+    <div class="step-explain">শর্ত দেওয়া আছে, $a^2+b^2=1$। এই মানটি লবে বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow -ix = \frac{1 - 1 - 2ib}{(a+1)^2 + b^2} \quad [\because a^2+b^2=1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow -ix = \frac{-2ib}{(a+1)^2 + b^2} \quad [\text{লবে } 1-1=0 \text{ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে $-i$ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow x = \frac{-2ib}{-i\left\{(a+1)^2 + b^2\right\}}$</div>
+    <div class="step">$\Rightarrow x = \frac{2b}{(a+1)^2 + b^2} \quad [\text{লব ও হর থেকে } -i \text{ বর্জন করে}]$</div>
+    <div class="step-explain">যেহেতু প্রশ্নে বলা হয়েছে $a$ এবং $b$ বাস্তব সংখ্যা, সেহেতু $x = \frac{2b}{(a+1)^2 + b^2}$ এর মধ্যে কোনো কাল্পনিক একক $i$ নেই। সুতরাং $x$ এর এই মানটি সম্পূর্ণ বাস্তব।</div>
+    <div class="step">অতএব, $x$ এর একটি বাস্তব মান সমীকরণটিকে সিদ্ধ করে। <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (iii) $\dfrac{x}{y}=\dfrac{a+ib}{c+id}$ হলে, দেখাও যে, (a) $\dfrac{x}{y}=\dfrac{a}{c}=\dfrac{b}{d}$ এবং (b) $(c^2+d^2) x^2-2(ac+bd) xy+(a^2+b^2) y^2=0$</div>
+    <div class="solution-title">সমাধান ৭. (iii):</div>
+    <div class="step-explain">দেওয়া আছে:</div>
+    <div class="step">$\frac{x}{y} = \frac{a+ib}{c+id} \quad \dots \text{(equation 1)}$</div>
+    
+    <div class="step-explain"><b>(a) অংশ প্রমাণ:</b></div>
+    <div class="step-explain">(equation 1) কে আর-গুণন (কোণাকুণি গুণ) করে পাই:</div>
+    <div class="step">$x(c+id) = y(a+ib)$</div>
+    <div class="step">$\Rightarrow cx + icx = ay + iby \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ আলাদা (সমীকৃত) করে পাই:</div>
+    <div class="step">$cx = ay \Rightarrow \frac{x}{y} = \frac{a}{c} \quad \dots \text{(equation 2)}$</div>
+    <div class="step">$dx = by \Rightarrow \frac{x}{y} = \frac{b}{d} \quad \dots \text{(equation 3)}$</div>
+    <div class="step-explain">সমীকরণ (equation 2) এবং (equation 3) তুলনা করে আমরা পাই:</div>
+    <div class="step">$\frac{x}{y} = \frac{a}{c} = \frac{b}{d} \quad \dots \text{(equation 4)}$ <b>(দেখানো হলো)</b></div>
+
+    <div class="step-explain"><b>(b) অংশ প্রমাণ:</b></div>
+    <div class="step-explain">(equation 4) থেকে ধরি, $\frac{a}{c} = \frac{x}{y} \Rightarrow a = \frac{cx}{y}$ এবং $\frac{b}{d} = \frac{x}{y} \Rightarrow b = \frac{dx}{y}$</div>
+    <div class="step-explain">এখন প্রমাণের বামপক্ষ লিখে $a$ ও $b$ এর মান বসাব:</div>
+    <div class="step">বামপক্ষ $= (c^2+d^2)x^2 - 2(ac+bd)xy + (a^2+b^2)y^2$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = (c^2+d^2)x^2 - 2\left(\frac{cx}{y} \cdot c + \frac{dx}{y} \cdot d\right)xy + \left\{\left(\frac{cx}{y}\right)^2 + \left(\frac{dx}{y}\right)^2\right\}y^2 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = (c^2+d^2)x^2 - 2\left(\frac{c^2x + d^2x}{y}\right)xy + \left(\frac{c^2x^2 + d^2x^2}{y^2}\right)y^2 \quad [\text{ব্র্যাকেটের ভেতর সরল করে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = (c^2+d^2)x^2 - 2x(c^2+d^2) \cdot \frac{1}{y} \cdot xy + x^2(c^2+d^2) \cdot \frac{1}{y^2} \cdot y^2 \quad [x \text{ ও } x^2 \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = (c^2+d^2)x^2 - 2x^2(c^2+d^2) + x^2(c^2+d^2) \quad [\text{লব ও হরের } y \text{ এবং } y^2 \text{ কাটাকাটি করে}]$</div>
+    <div class="step-explain">সহজ বোঝার সুবিধার্থে $(c^2+d^2)x^2$ কে একটি সাধারণ পদ বিবেচনা করলে:</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = 2(c^2+d^2)x^2 - 2(c^2+d^2)x^2 \quad [\text{প্রথম ও শেষ পদ যোগ করে}]$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = 0 = \text{ডানপক্ষ}$</div>
+    <div class="step">অতএব, $(c^2+d^2) x^2-2(ac+bd) xy+(a^2+b^2) y^2=0$ <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (iv) $x+iy=\sqrt{\dfrac{p+iq}{r+is}}$ হলে দেখাও যে, $(x^2+y^2)^2=\dfrac{p^2+q^2}{r^2+s^2}$</div>
+    <div class="solution-title">সমাধান ৭. (iv):</div>
+    <div class="step-explain">দেওয়া আছে:</div>
+    <div class="step">$x+iy = \sqrt{\frac{p+iq}{r+is}} \quad \dots \text{(equation 1)}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট ($\sqrt{}$) মুক্ত করি:</div>
+    <div class="step">$\Rightarrow (x+iy)^2 = \frac{p+iq}{r+is} \quad \dots \text{(equation 2)}$</div>
+    <div class="step-explain">আমরা জানি, কোনো জটিল সংখ্যার সমীকরণের অনুবন্ধী সমীকরণও সত্য হয় (অর্থাৎ $i$ এর স্থলে $-i$ বসালে সমতা বজায় থাকে)। (equation 2) এর অনুবন্ধী নিয়ে পাই:</div>
+    <div class="step">$(x-iy)^2 = \frac{p-iq}{r-is} \quad \dots \text{(equation 3)}$</div>
+    <div class="step-explain">এখন সমীকরণ (equation 2) এবং (equation 3) পরস্পর গুণ করি:</div>
+    <div class="step">$(x+iy)^2 \cdot (x-iy)^2 = \left(\frac{p+iq}{r+is}\right) \cdot \left(\frac{p-iq}{r-is}\right)$</div>
+    <div class="step">$\Rightarrow \left\{(x+iy)(x-iy)\right\}^2 = \frac{(p+iq)(p-iq)}{(r+is)(r-is)} \quad \left[\because A^2 B^2 = (AB)^2\right]$</div>
+    <div class="step">$\Rightarrow \left\{x^2 - (iy)^2\right\}^2 = \frac{p^2 - (iq)^2}{r^2 - (is)^2} \quad [\text{সূত্রের সাহায্যে; } (A+B)(A-B)=A^2-B^2]$</div>
+    <div class="step">$\Rightarrow \left\{x^2 - i^2y^2\right\}^2 = \frac{p^2 - i^2q^2}{r^2 - i^2s^2}$</div>
+    <div class="step">$\Rightarrow \left\{x^2 - (-1)y^2\right\}^2 = \frac{p^2 - (-1)q^2}{r^2 - (-1)s^2} \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow (x^2+y^2)^2 = \frac{p^2+q^2}{r^2+s^2} \quad [\text{মাইনাসে মাইনাসে প্লাস করে}]$</div>
+    <div class="step">অতএব, $(x^2+y^2)^2 = \frac{p^2+q^2}{r^2+s^2}$ <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (v) $-2-2i=(a^2+2)+ib$ সমীকরণটির মূল $a$ এবং $b$ এর প্রকৃতি নিরুপণ কর।</div>
+    <div class="solution-title">সমাধান ৭. (v):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ:</div>
+    <div class="step">$-2-2i = (a^2+2)+ib$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ দুই পক্ষ থেকে আলাদা বা সমীকৃত করে পাই:</div>
+    <div class="step">বাস্তব অংশ: $-2 = a^2+2 \quad \dots \text{(equation 1)}$</div>
+    <div class="step">কাল্পনিক অংশ: $-2 = b \Rightarrow b = -2 \quad \dots \text{(equation 2)}$</div>
+    
+    <div class="step-explain">এখন সমীকরণ (equation 1) থেকে $a$ এর মান নির্ণয় করি:</div>
+    <div class="step">$a^2+2 = -2$</div>
+    <div class="step">$\Rightarrow a^2 = -2 - 2 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow a^2 = -4$</div>
+    <div class="step">$\Rightarrow a = \pm\sqrt{-4} \quad [\text{বর্গমূল করে}]$</div>
+    <div class="step">$\Rightarrow a = \pm\sqrt{4 \cdot (-1)} = \pm 2\sqrt{-1}$</div>
+    <div class="step">$\Rightarrow a = \pm 2i \quad [\because \sqrt{-1} = i]$</div>
+    
+    <div class="step-explain"><b>মূলের প্রকৃতি বিশ্লেষণ:</b></div>
+    <div class="step-explain">১. $a = \pm 2i$; যেহেতু $a$ এর মানের সাথে কাল্পনিক একক $i$ বিদ্যমান, তাই $a$ একটি <b>বিশুদ্ধ কাল্পনিক সংখ্যা (Purely Imaginary Number)</b>।</div>
+    <div class="step-explain">২. $b = -2$; যেহেতু $b$ এর মানের মধ্যে কোনো $i$ নেই, তাই $b$ একটি <b>বাস্তব সংখ্যা (Real Number)</b> এবং এটি ঋণাত্মক পূর্ণসংখ্যা।</div>
+    <div class="step"><b>উত্তর:</b> $a$ হলো কাল্পনিক সংখ্যা <br>এবং $b$ হলো বাস্তব সংখ্যা।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (vi) যদি $\dfrac{1-ix}{1+ix}=a-ib$ হয়, তবে দেখাও যে, $a^2+b^2=1$</div>
+    <div class="solution-title">সমাধান ৭. (vi):</div>
+    <div class="step-explain">দেওয়া আছে:</div>
+    <div class="step">$\frac{1-ix}{1+ix} = a-ib \quad \dots \text{(equation 1)}$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার পরমমান বা মডুলাসের ধর্ম অনুযায়ী উভয় পক্ষে মডুলাস নিলে সমতা ঠিক থাকে। উভয় পক্ষে মডুলাস ($\left|\dots\right|$) নিয়ে পাই:</div>
+    <div class="step">$\left|\frac{1-ix}{1+ix}\right| = \left|a-ib\right|$</div>
+    <div class="step">$\Rightarrow \frac{\left|1-ix\right|}{\left|1+ix\right|} = \left|a-ib\right| \quad \left[\because \left|\frac{Z_1}{Z_2}\right| = \frac{|Z_1|}{|Z_2|}\right]$</div>
+    <div class="step-explain">যেকোনো জটিল সংখ্যা $A+iB$ এর মডুলাস সূত্র $\sqrt{A^2+B^2}$ প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{\sqrt{(1)^2 + (-x)^2}}{\sqrt{(1)^2 + (x)^2}} = \sqrt{a^2 + (-b)^2}$</div>
+    <div class="step">$\Rightarrow \frac{\sqrt{1 + x^2}}{\sqrt{1 + x^2}} = \sqrt{a^2 + b^2} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow 1 = \sqrt{a^2 + b^2} \quad [\text{বামপক্ষে লব ও হর একই হওয়ায় কাটাকাটি করে } 1]$</div>
+    <div class="step-explain">এখন উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$(1)^2 = \left(\sqrt{a^2 + b^2}\right)^2$</div>
+    <div class="step">$\Rightarrow 1 = a^2 + b^2 \quad [\text{রুট ও বর্গ বাদ দিয়ে}]$</div>
+    <div class="step">$\Rightarrow a^2 + b^2 = 1 \quad [\text{পক্ষ পরিবর্তন করে}]$</div>
+    <div class="step"><b>অতএব, $a^2+b^2=1$ (দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (vii) দেখাও যে, $\left|\dfrac{x-iy}{x+iy}\right|=1$</div>
+    <div class="solution-title">সমাধান ৭. (vii):</div>
+    <div class="step-explain">প্রদত্ত রাশির বামপক্ষ নিয়ে কাজ শুরু করি:</div>
+    <div class="step">বামপক্ষ $= \left|\frac{x-iy}{x+iy}\right|$</div>
+    <div class="step-explain">মডুলাসের ধর্মাবলি অনুসারে আমরা জানি যে, লব ও হরকে আলাদাভাবে মডুলাস করা যায়, অর্থাৎ $\left|\frac{Z_1}{Z_2}\right| = \frac{|Z_1|}{|Z_2|}$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = \frac{\left|x-iy\right|}{\left|x+iy\right|}$</div>
+    <div class="step-explain">এখন লব ও হরের জটিল সংখ্যা দুটির মডুলাসের সূত্র ($\sqrt{\text{বাস্তব}^2 + \text{কাল্পনিক}^2}$) বসাই:</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = \frac{\sqrt{x^2 + (-y)^2}}{\sqrt{x^2 + y^2}}$</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = \frac{\sqrt{x^2 + y^2}}{\sqrt{x^2 + y^2}} \quad \left[\because (-y)^2 = y^2\right]$</div>
+    <div class="step-explain">যেহেতু লব এবং হর সম্পূর্ণ একই রাশি, তাই কাটাকাটি হয়ে মান ১ হবে:</div>
+    <div class="step">$\Rightarrow \text{বামপক্ষ} = 1 = \text{ডানপক্ষ}$</div>
+    <div class="step">অতএব, $\left|\frac{x-iy}{x+iy}\right|=1$ <b>(দেখানো হলো)</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">৭. (viii) $(2+i)(x+iy)=1+3i$ হলে, $x,\;y$ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান ৭. (viii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ:</div>
+    <div class="step">$(2+i)(x+iy) = 1+3i$</div>
+    <div class="step-explain">বামপক্ষের গুণফল সম্পন্ন করি:</div>
+    <div class="step">$\Rightarrow 2 \cdot x + 2 \cdot iy + i \cdot x + i \cdot iy = 1+3i$</div>
+    <div class="step">$\Rightarrow 2x + 2iy + ix + i^2y = 1+3i$</div>
+    <div class="step">$\Rightarrow 2x + i(2y+x) + (-1)y = 1+3i \quad [\because i^2 = -1 \text{ এবং } i \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow (2x-y) + i(x+2y) = 1+3i \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই দুটি সমীকরণ:</div>
+    <div class="step">$2x - y = 1 \quad \dots \text{(equation 1)}$</div>
+    <div class="step">$x + 2y = 3 \quad \dots \text{(equation 2)}$</div>
+    <div class="step-explain">এখন সমীকরণ দুটির অপনয়ন পদ্ধতিতে সমাধান করার জন্য, (equation 1) কে ২ দ্বারা গুণ করে (equation 2) এর সাথে যোগ করি:</div>
+    <div class="step">$(2x - y) \cdot 2 + (x + 2y) = 1 \cdot 2 + 3$</div>
+    <div class="step">$\Rightarrow 4x - 2y + x + 2y = 2 + 3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow 5x = 5 \quad [-2y \text{ এবং } +2y \text{ বাদ দিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{5}{5} = 1$</div>
+    <div class="step-explain">এখন $x = 1$ এর মান (equation 1) এ বসিয়ে পাই:</div>
+    <div class="step">$2(1) - y = 1$</div>
+    <div class="step">$\Rightarrow 2 - y = 1$</div>
+    <div class="step">$\Rightarrow -y = 1 - 2 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow -y = -1$</div>
+    <div class="step">$\Rightarrow y = 1 \quad [\text{উভয় পক্ষকে } -1 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step"><b>উত্তর:</b> নির্ণেয় মান $x = 1$ <br>এবং $y = 1$।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৮. যদি $z=x+iy$ হয়, তবে নিম্নলিখিত সমীকরণসমূহ দ্বারা নির্দেশিত সঞ্চারপথের নাম উল্লেখসহ সমীকরণ নির্ণয় কর:</div>
+    
+    <div class="step-explain"><b>মৌলিক তথ্য ও সূত্রাবলি:</b></div>
+    <div class="step-explain">১. যেকোনো জটিল সংখ্যা $z = x+iy$ হলে তার অনুবন্ধী জটিল সংখ্যা $\overline{z} = x-iy$।</div>
+    <div class="step-explain">২. মডুলাসের সূত্র: $|z| = |x+iy| = \sqrt{x^2 + y^2}$।</div>
+    <div class="step-explain">৩. $\operatorname{Re}(z)$ দ্বারা বাস্তব অংশ ($x$) এবং $\operatorname{Im}(z)$ দ্বারা কাল্পনিক অংশ ($y$) নির্দেশ করা হয়।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (i) $\left|z-8\right|+\left|z+8\right|=20$</div>
+    <div class="solution-title">সমাধান ৮. (i):</div>
+    <div class="step-explain">দেওয়া আছে, $z = x+iy$। সমীকরণে $z$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy-8\right| + \left|x+iy+8\right| = 20 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left|(x-8)+iy\right| + \left|(x+8)+iy\right| = 20 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x-8)^2 + y^2} + \sqrt{(x+8)^2 + y^2} = 20$</div>
+    <div class="step-explain">হিসাব সহজ করার জন্য একটি রুটকে ডানপক্ষে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow \sqrt{(x-8)^2 + y^2} = 20 - \sqrt{(x+8)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এবার উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow \left(\sqrt{(x-8)^2 + y^2}\right)^2 = \left(20 - \sqrt{(x+8)^2 + y^2}\right)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (x-8)^2 + y^2 = (20)^2 - 2 \cdot 20 \cdot \sqrt{(x+8)^2 + y^2} + \left(\sqrt{(x+8)^2 + y^2}\right)^2 \quad [\text{ডানপক্ষে } (a-b)^2 \text{ সূত্র করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 16x + 64 + y^2 = 400 - 40\sqrt{(x+8)^2 + y^2} + (x+8)^2 + y^2 \quad [\text{বামপক্ষে বর্গ ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 16x + 64 + y^2 = 400 - 40\sqrt{(x+8)^2 + y^2} + x^2 + 16x + 64 + y^2 \quad [\text{ডানপক্ষে বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষের সদৃশ পদ ($x^2, 64, y^2$) বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow -16x = 400 - 40\sqrt{(x+8)^2 + y^2} + 16x$</div>
+    <div class="step">$\Rightarrow 40\sqrt{(x+8)^2 + y^2} = 400 + 16x + 16x \quad [\text{রুট অংশ বামে ও } -16x \text{ ডানে এনে}]$</div>
+    <div class="step">$\Rightarrow 40\sqrt{(x+8)^2 + y^2} = 400 + 32x \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে ৮ দ্বারা ভাগ করে সমীকরণটি ছোট করি:</div>
+    <div class="step">$\Rightarrow 5\sqrt{(x+8)^2 + y^2} = 50 + 4x \quad [\text{৮ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">রুট সম্পূর্ণ দূর করার জন্য পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow \left(5\sqrt{(x+8)^2 + y^2}\right)^2 = (50 + 4x)^2 \quad [\text{পুনরায় বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow 25\left\{(x+8)^2 + y^2\right\} = (50)^2 + 2 \cdot 50 \cdot 4x + (4x)^2 \quad [\text{ডানপক্ষে সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 25(x^2 + 16x + 64 + y^2) = 2500 + 400x + 16x^2$</div>
+    <div class="step">$\Rightarrow 25x^2 + 400x + 1600 + 25y^2 = 2500 + 400x + 16x^2 \quad [25 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $400x$ বাদ দিয়ে এবং চলকগুলো বামে ও ধ্রুবক ডানে এনে পাই:</div>
+    <div class="step">$\Rightarrow 25x^2 - 16x^2 + 25y^2 = 2500 - 1600 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 9x^2 + 25y^2 = 900 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">আদর্শ আকারে প্রকাশের জন্য উভয় পক্ষকে ৯০০ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{9x^2}{900} + \frac{25y^2}{900} = \frac{900}{900}$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{100} + \frac{y^2}{36} = 1 \quad [\text{কাটাকাটি করে}]$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{(10)^2} + \frac{y^2}{(6)^2} = 1$</div>
+    <div class="step">যেহেতু সমীকরণটি $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ আকারের, এটি একটি উপবৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $\frac{x^2}{100} + \frac{y^2}{36} = 1$ <br>এবং সঞ্চারপথটি একটি <b>উপবৃত্ত (Ellipse)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (ii) $\left|2z+3\right|=\left|z+6\right|$</div>
+    <div class="solution-title">সমাধান ৮. (ii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|2z+3| = |z+6|$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|2(x+iy) + 3\right| = \left|(x+iy) + 6\right| \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left|2x + i2y + 3\right| = \left|x + iy + 6\right| \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \left|(2x+3) + i(2y)\right| = \left|(x+6) + iy\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষে মডুলাসের সূত্র বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(2x+3)^2 + (2y)^2} = \sqrt{(x+6)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট বর্জন করি:</div>
+    <div class="step">$\Rightarrow (2x+3)^2 + (2y)^2 = (x+6)^2 + y^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (4x^2 + 2 \cdot 2x \cdot 3 + 9) + 4y^2 = (x^2 + 2 \cdot x \cdot 6 + 36) + y^2 \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 4x^2 + 12x + 9 + 4y^2 = x^2 + 12x + 36 + y^2$</div>
+    <div class="step-explain">সব পদ বামপাশে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 4x^2 - x^2 + 4y^2 - y^2 + 12x - 12x + 9 - 36 = 0$</div>
+    <div class="step">$\Rightarrow 3x^2 + 3y^2 - 27 = 0 \quad [\text{যোগ-বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 3(x^2 + y^2) = 27 \quad [\text{পক্ষান্তর ও ৩ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = \frac{27}{3}$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 9 \Rightarrow x^2 + y^2 = (3)^2$</div>
+    <div class="step">এই সমীকরণটি $x^2+y^2=r^2$ আকারের, যা মূলবিন্দুগামী বৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $x^2+y^2=9$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (iii) $\left|z+i\right|=\left|\overline{z}+2\right|$</div>
+    <div class="solution-title">সমাধান ৮. (iii):</div>
+    <div class="step-explain">এখানে দেওয়া আছে $z = x+iy$ এবং এর অনুবন্ধী $\overline{z} = x-iy$। সমীকরণে মানগুলো বসাই:</div>
+    <div class="step">$\left|x+iy+i\right| = \left|x-iy+2\right| \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left|x + i(y+1)\right| = \left|(x+2) - iy\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষে মডুলাসের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \sqrt{x^2 + (y+1)^2} = \sqrt{(x+2)^2 + (-y)^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow x^2 + (y+1)^2 = (x+2)^2 + y^2 \quad \left[\because (-y)^2 = y^2\right]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 + 2y + 1 = x^2 + 4x + 4 + y^2 \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2$ এবং $y^2$ বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 2y + 1 = 4x + 4$</div>
+    <div class="step-explain">সব পদ ডানপাশে পক্ষান্তর করে সাজাই:</div>
+    <div class="step">$\Rightarrow 4x - 2y + 4 - 1 = 0$</div>
+    <div class="step">$\Rightarrow 4x - 2y + 3 = 0$</div>
+    <div class="step">সমীকরণটিতে চলকসমূহের সর্বোচ্চ ঘাত ১, তাই এটি একটি সরলরেখা নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $4x - 2y + 3 = 0$ <br>এবং সঞ্চারপথটি একটি <b>সরলরেখা (Straight Line)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (iv) $\left|z-5\right|=3$</div>
+    <div class="solution-title">সমাধান ৮. (iv):</div>
+    <div class="step-explain">সমীকরণে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy-5\right| = 3$</div>
+    <div class="step">$\Rightarrow \left|(x-5) + iy\right| = 3 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x-5)^2 + y^2} = 3$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x-5)^2 + y^2 = (3)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 10x + 25 + y^2 = 9 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 - 10x + 25 - 9 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 - 10x + 16 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">এটি $(x-h)^2 + (y-k)^2 = r^2$ আকারের বৃত্তের সমীকরণ যার কেন্দ্র $(5,0)$ এবং ব্যাসার্ধ ৩।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $x^2 + y^2 - 10x + 16 = 0$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (v) $\left|2z+3\right|=\left|3z+1\right|$</div>
+    <div class="solution-title">সমাধান ৮. (v):</div>
+    <div class="step-explain">সমীকরণে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|2(x+iy)+3\right| = \left|3(x+iy)+1\right|$</div>
+    <div class="step">$\Rightarrow \left|2x+2iy+3\right| = \left|3x+3iy+1\right| \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow \left|(2x+3)+i(2y)\right| = \left|(3x+1)+i(3y)\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষে মডুলাসের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow \sqrt{(2x+3)^2 + (2y)^2} = \sqrt{(3x+1)^2 + (3y)^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (2x+3)^2 + 4y^2 = (3x+1)^2 + 9y^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (4x^2 + 12x + 9) + 4y^2 = (9x^2 + 6x + 1) + 9y^2 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step-explain">সব পদ ডানপাশে পক্ষান্তর করি যাতে $x^2$ এর সহগ ধনাত্মক থাকে:</div>
+    <div class="step">$\Rightarrow (9x^2 - 4x^2) + (9y^2 - 4y^2) + 6x - 12x + 1 - 9 = 0$</div>
+    <div class="step">$\Rightarrow 5x^2 + 5y^2 - 6x - 8 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">যেহেতু $x^2$ এবং $y^2$ এর সহগ সমান (৫) এবং এতে $xy$ সংবলিত কোনো পদ নেই, সমীকরণটি একটি বৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $5x^2 + 5y^2 - 6x - 8 = 0$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (vi) $z\overline{z}=4$</div>
+    <div class="solution-title">সমাধান ৮. (vi):</div>
+    <div class="step-explain">আমরা জানি $z = x+iy$ এবং $\overline{z} = x-iy$। মান বসিয়ে পাই:</div>
+    <div class="step">$(x+iy)(x-iy) = 4 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 - (iy)^2 = 4 \quad [\text{বীজগণিতীয় সূত্র প্রয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - i^2y^2 = 4$</div>
+    <div class="step">$\Rightarrow x^2 - (-1)y^2 = 4 \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = 4 \Rightarrow x^2 + y^2 = (2)^2$</div>
+    <div class="step">এটি মূলবিন্দু $(0,0)$ কেন্দ্রবিশিষ্ট এবং ২ একক ব্যাসার্ধের একটি বৃত্তের আদর্শ সমীকরণ।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $x^2 + y^2 = 4$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (vii) $\operatorname{Re}\!\left(\dfrac{1}{z}\right)=1$</div>
+    <div class="solution-title">সমাধান ৮. (vii):</div>
+    <div class="step-explain">প্রথমে আমরা ভগ্নাংশ $\frac{1}{z}$ অংশটিকে সরল করে বাস্তব ও কাল্পনিক অংশ আলাদা করব।</div>
+    <div class="step">$\frac{1}{z} = \frac{1}{x+iy} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">লব ও হরকে হরের অনুবন্ধী জটিল সংখ্যা $(x-iy)$ দ্বারা গুণ করি:</div>
+    <div class="step">$\Rightarrow \frac{1}{z} = \frac{1 \cdot (x-iy)}{(x+iy)(x-iy)}$</div>
+    <div class="step">$\Rightarrow \frac{1}{z} = \frac{x-iy}{x^2 - (iy)^2} = \frac{x-iy}{x^2 - i^2y^2}$</div>
+    <div class="step">$\Rightarrow \frac{1}{z} = \frac{x-iy}{x^2 - (-1)y^2} \quad [\because i^2 = -1]$</div>
+    <div class="step">$\Rightarrow \frac{1}{z} = \frac{x-iy}{x^2 + y^2}$</div>
+    <div class="step-explain">বাস্তব ও কাল্পনিক অংশ পৃথক করে লিখি:</div>
+    <div class="step">$\Rightarrow \frac{1}{z} = \frac{x}{x^2+y^2} - i\left(\frac{y}{x^2+y^2}\right)$</div>
+    <div class="step-explain">সুতরাং, $\frac{1}{z}$ এর বাস্তব অংশ $\operatorname{Re}\left(\frac{1}{z}\right) = \frac{x}{x^2+y^2}$।</div>
+    <div class="step-explain">শর্তানুযায়ী:</div>
+    <div class="step">$\frac{x}{x^2+y^2} = 1$</div>
+    <div class="step">$\Rightarrow x = 1 \cdot (x^2+y^2) \quad [\text{আর-গুণন করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = x$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 - x = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">এটি বৃত্তের সাধারণ সমীকরণ $x^2+y^2+2gx+2fy+c=0$ এর সাথে তুলনীয়।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $x^2 + y^2 - x = 0$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (viii) $\operatorname{Im}\!\left(\dfrac{1}{z}\right)=\dfrac{1}{2}$</div>
+    <div class="solution-title">সমাধান ৮. (viii):</div>
+    <div class="step-explain">প্রশ্ন (vii) থেকে প্রাপ্ত সরলীকৃত রূপটি পাই:</div>
+    <div class="step">$\frac{1}{z} = \frac{x}{x^2+y^2} + i\left(\frac{-y}{x^2+y^2}\right)$</div>
+    <div class="step-explain">সুতরাং, $\frac{1}{z}$ এর কাল্পনিক অংশ $\operatorname{Im}\left(\frac{1}{z}\right) = \frac{-y}{x^2+y^2}$।</div>
+    <div class="step-explain">শর্তানুযায়ী:</div>
+    <div class="step">$\frac{-y}{x^2+y^2} = \frac{1}{2}$</div>
+    <div class="step">$\Rightarrow 1 \cdot (x^2+y^2) = -2y \quad [\text{কোণাকুণি গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 = -2y$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 + 2y = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">এই সমীকরণে $x^2$ ও $y^2$ এর সহগ সমান এবং $xy$ পদ অনুপস্থিত, যা একটি বৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $x^2 + y^2 + 2y = 0$ <br>এবং সঞ্চারপথটি একটি <b>বৃত্ত (Circle)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (ix) $\left|z+4\right|=x$</div>
+    <div class="solution-title">সমাধান ৮. (ix):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+4| = x$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+4\right| = x$</div>
+    <div class="step">$\Rightarrow \left|(x+4) + iy\right| = x \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">বামপক্ষে মডuলাসের সূত্র বসাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+4)^2 + y^2} = x$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট বর্জন করি:</div>
+    <div class="step">$\Rightarrow (x+4)^2 + y^2 = x^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2 \cdot x \cdot 4 + (4)^2 + y^2 = x^2 \quad [\text{সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 8x + 16 + y^2 = x^2$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2$ বিয়োগ বা বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 8x + 16 + y^2 = 0$</div>
+    <div class="step">$\Rightarrow y^2 = -8x - 16 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow y^2 = -8(x + 2) \quad [-8 \text{ কমন নিয়ে}]$</div>
+    <div class="step">এই সমীকরণটি $y^2 = 4ax$ বা $y^2 = -4a(x-h)$ আকারের যা পরাবৃত্তের সমীকরণ নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $y^2 = -8(x+2)$ <br>এবং সঞ্চারপথটি একটি <b>পরাবৃত্ত (Parabola)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (x) $\left|z-3\right|-\left|z+3\right|=4$</div>
+    <div class="solution-title">সমাধান ৮. (x):</div>
+    <div class="step-explain">সমীকরণে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy-3\right| - \left|x+iy+3\right| = 4$</div>
+    <div class="step">$\Rightarrow \left|(x-3)+iy\right| - \left|(x+3)+iy\right| = 4 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x-3)^2 + y^2} - \sqrt{(x+3)^2 + y^2} = 4$</div>
+    <div class="step">$\Rightarrow \sqrt{(x-3)^2 + y^2} = 4 + \sqrt{(x+3)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x-3)^2 + y^2 = (4)^2 + 2 \cdot 4 \cdot \sqrt{(x+3)^2 + y^2} + \left(\sqrt{(x+3)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 - 6x + 9 + y^2 = 16 + 8\sqrt{(x+3)^2 + y^2} + x^2 + 6x + 9 + y^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2, 9, y^2$ বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow -6x = 16 + 8\sqrt{(x+3)^2 + y^2} + 6x$</div>
+    <div class="step">$\Rightarrow -6x - 6x - 16 = 8\sqrt{(x+3)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow -12x - 16 = 8\sqrt{(x+3)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে -৪ দ্বারা ভাগ করে ছোট করি:</div>
+    <div class="step">$\Rightarrow 3x + 4 = -2\sqrt{(x+3)^2 + y^2}$</div>
+    <div class="step-explain">রুট দূর করার জন্য পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (3x + 4)^2 = \left(-2\sqrt{(x+3)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow 9x^2 + 24x + 16 = 4\left\{(x+3)^2 + y^2\right\} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow 9x^2 + 24x + 16 = 4(x^2 + 6x + 9 + y^2)$</div>
+    <div class="step">$\Rightarrow 9x^2 + 24x + 16 = 4x^2 + 24x + 36 + 4y^2 \quad [4 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $24x$ বাদ দিয়ে সব পদ বামপাশে নিয়ে সাজাই:</div>
+    <div class="step">$\Rightarrow 9x^2 - 4x^2 - 4y^2 + 16 - 36 = 0$</div>
+    <div class="step">$\Rightarrow 5x^2 - 4y^2 - 20 = 0$</div>
+    <div class="step">$\Rightarrow 5x^2 - 4y^2 = 20 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে ২০ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{5x^2}{20} - \frac{4y^2}{20} = \frac{20}{20} \Rightarrow \frac{x^2}{4} - \frac{y^2}{5} = 1$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{(2)^2} - \frac{y^2}{(\sqrt{5})^2} = 1$</div>
+    <div class="step">যেহেতু এটি $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ আকারের সমীকরণ, এটি একটি অধিবৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $\frac{x^2}{4} - \frac{y^2}{5} = 1$ <br>এবং সঞ্চারপথটি একটি <b>অধিবৃত্ত (Hyperbola)</b>।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">৮. (xi) $\left|z+4\right|-\left|\overline{z}-4\right|=10$</div>
+    <div class="solution-title">সমাধান ৮. (xi):</div>
+    <div class="step-explain">দেওয়া আছে $z = x+iy$ এবং $\overline{z} = x-iy$। মান বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+4\right| - \left|x-iy-4\right| = 10$</div>
+    <div class="step">$\Rightarrow \left|(x+4)+iy\right| - \left|(x-4)-iy\right| = 10 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডuলাসের সূত্র বসিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+4)^2 + y^2} - \sqrt{(x-4)^2 + (-y)^2} = 10$</div>
+    <div class="step">$\Rightarrow \sqrt{(x+4)^2 + y^2} = 10 + \sqrt{(x-4)^2 + y^2} \quad [\text{পক্ষান্তর করে এবং } (-y)^2=y^2 \text{ লিখে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x+4)^2 + y^2 = (10)^2 + 2 \cdot 10 \cdot \sqrt{(x-4)^2 + y^2} + \left(\sqrt{(x-4)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 + 8x + 16 + y^2 = 100 + 20\sqrt{(x-4)^2 + y^2} + x^2 - 8x + 16 + y^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2, 16, y^2$ বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow 8x = 100 + 20\sqrt{(x-4)^2 + y^2} - 8x$</div>
+    <div class="step">$\Rightarrow 8x + 8x - 100 = 20\sqrt{(x-4)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 16x - 100 = 20\sqrt{(x-4)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে ৪ দ্বারা ভাগ করে সমীকরণ সরল করি:</div>
+    <div class="step">$\Rightarrow 4x - 25 = 5\sqrt{(x-4)^2 + y^2}$</div>
+    <div class="step-explain">পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (4x - 25)^2 = \left(5\sqrt{(x-4)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow 16x^2 - 200x + 625 = 25\left\{(x-4)^2 + y^2\right\}$</div>
+    <div class="step">$\Rightarrow 16x^2 - 200x + 625 = 25(x^2 - 8x + 16 + y^2) \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 16x^2 - 200x + 625 = 25x^2 - 200x + 400 + 25y^2 \quad [25 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের $-200x$ বাদ দিয়ে সব চলক ডানে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 25x^2 - 16x^2 + 25y^2 = 625 - 400$</div>
+    <div class="step">$\Rightarrow 9x^2 + 25y^2 = 225 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে ২২৫ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow \frac{9x^2}{225} + \frac{25y^2}{225} = \frac{225}{225} \Rightarrow \frac{x^2}{25} + \frac{y^2}{9} = 1$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{(5)^2} + \frac{y^2}{(3)^2} = 1$</div>
+    <div class="step">এটি $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ আকারের সমীকরণ, যা একটি উপবৃত্ত নির্দেশ করে।</div>
+    <div class="step"><b>উত্তর:</b> সমীকরণটি $\frac{x^2}{25} + \frac{y^2}{9} = 1$ <br>এবং সঞ্চারপথটি একটি <b>উপবৃত্ত (Ellipse)</b>।</div>
+</div>
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

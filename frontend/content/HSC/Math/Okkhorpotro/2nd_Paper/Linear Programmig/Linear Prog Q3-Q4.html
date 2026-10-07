@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSC Differ 9C</title>
+    
+    <link rel="stylesheet" href="../../../styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../katex/katex.min.css" />
+    <script defer src="../../../katex/katex.min.js"></script>
+    <script defer src="../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+    <div class="problem-title">৩. $a = 1, b = -1, c = 2, f(x) \ge 0, l = 1, m = 1, n = -4, g(x) \le 0$ এবং $x \ge 0, y \ge 0$ হলে, $z = x + 2y$ এর সর্বোচ্চ মান নির্ণয় কর। যেখানে, $f(x) = ax + by + c, g(x) = lx + my + n$</div>
+    
+    <div class="problem-sub-title">উদ্দীপকের মানসমূহ ব্যবহার করে গঠিত যোগাশ্রয়ী প্রোগ্রামিং সমস্যাটির সমাধান ও সম্ভাব্য এলাকার কৌণিক বিন্দু নির্ণয় করে সর্বোচ্চকরণ:</div>
+    
+    <div class="solution-title">সমাধান ৩:</div>
+    
+    <div class="step-explain">দেওয়া আছে, উদ্দেশ্য বা অভীষ্ট ফাংশন (Objective Function):</div>
+    <div class="step">$$z = x + 2y$$</div>
+    
+    <div class="step-explain">উদ্দীপকের শর্তানুযায়ী, প্রথম ফাংশনটি হলো:</div>
+    <div class="step">$$f(x) = ax + by + c$$</div>
+    <div class="step-explain">এখানে $a = 1, b = -1, c = 2$ এবং $f(x) \ge 0$ বসিয়ে পাই:</div>
+    <div class="step">$$1\cdot x + (-1)\cdot y + 2 \ge 0$$</div>
+    <div class="step">$$\Rightarrow x - y + 2 \ge 0$$</div>
+    <div class="step">$$\Rightarrow x - y \ge -2 \quad \text{--- (1)} \quad [\text{পক্ষান্তর করে}]$$</div>
+    
+    <div class="step-explain">উদ্দীপকের দ্বিতীয় ফাংশনটি হলো:</div>
+    <div class="step">$$g(x) = lx + my + n$$</div>
+    <div class="step-explain">এখানে $l = 1, m = 1, n = -4$ এবং $g(x) \le 0$ বসিয়ে পাই:</div>
+    <div class="step">$$1\cdot x + 1\cdot y + (-4) \le 0$$</div>
+    <div class="step">$$\Rightarrow x + y - 4 \le 0$$</div>
+    <div class="step">$$\Rightarrow x + y \le 4 \quad \text{--- (2)} \quad [\text{পক্ষান্তর করে}]$$</div>
+    
+    <div class="step-explain">এবং অন্যান্য অ-ঋণাত্মক শর্তসমূহ:</div>
+    <div class="step">$$x \ge 0, \ y \ge 0 \quad \text{--- (3)}$$</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ১: অসমতাগুলোকে সমীকরণে রূপান্তর এবং অক্ষদ্বয়ের ছেদবিন্দু নির্ণয়**</div>
+    <div class="step-explain">প্রদত্ত অসমতা (1) ও (2) নং শর্তকে সরলরেখার সমীকরণে রূপান্তর করে পাই:</div>
+    
+    <div class="step-explain">(1) নং অসমতার অনুরূপ সীমানা সরলরেখার সমীকরণ:</div>
+    <div class="step">$$x - y = -2$$</div>
+    <div class="step-explain">উভয় পক্ষকে $-2$ দ্বারা ভাগ করে সরলরেখার আদর্শ অক্ষ-ছেদক আকৃতিতে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow \frac{x}{-2} - \frac{y}{-2} = \frac{-2}{-2} \quad [\text{উভয় পক্ষকে -2 দ্বারা ভাগ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{x}{-2} + \frac{y}{2} = 1 \quad \text{--- (4)} \quad [\text{চিহ্নের গুণ করে}]$$</div>
+    <div class="step-explain">সুতরাং, (4) নং সরলরেখাটি $X$-অক্ষকে $A\left(-2, 0\right)$ বিন্দুতে এবং $Y$-অক্ষকে $B\left(0, 2\right)$ বিন্দুতে ছেদ করে।</div>
+    
+    <div class="step-explain">(2) নং অসমতার অনুরূপ সীমানা সরলরেখার সমীকরণ:</div>
+    <div class="step">$$x + y = 4$$</div>
+    <div class="step-explain">উভয় পক্ষকে $4$ দ্বারা ভাগ করে সরলরেখার আদর্শ অক্ষ-ছেদক আকৃতিতে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow \frac{x}{4} + \frac{y}{4} = \frac{4}{4} \quad [\text{উভয় পক্ষকে 4 দ্বারা ভাগ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{x}{4} + \frac{y}{4} = 1 \quad \text{--- (5)}$$</div>
+    <div class="step-explain">সুতরাং, (5) নং সরলরেখাটি $X$-অক্ষকে $C\left(4, 0\right)$ বিন্দুতে এবং $Y$-অক্ষকে $D\left(0, 4\right)$ বিন্দুতে ছেদ করে।</div>
+    
+    <div class="step-explain">শর্ত (3) হতে, $x \ge 0, \ y \ge 0$ নির্দেশ করে যে, সম্ভাব্য অনুকূল সমাধান এলাকাটি সর্বদা প্রথম চতুর্ভাগে (First Quadrant) সীমাবদ্ধ থাকবে।</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ২: মূলবিন্দু পরীক্ষা (Feasible Region বা সত্য অঞ্চল নির্ধারণ)**</div>
+    <div class="step-explain">এখন অসমতাগুলোতে মূলবিন্দু $O\left(0, 0\right)$ বসিয়ে সত্যতা যাচাই করি:</div>
+    <div class="step-explain">(1) নং অসমতায় $x = 0, y = 0$ বসিয়ে পাই: $0 - 0 \ge -2 \Rightarrow 0 \ge -2$, যা সত্য। সুতরাং, (4) নং রেখার সত্য অঞ্চল মূলবিন্দুর দিকে (ডান ও নিচের দিকে) হবে।</div>
+    <div class="step-explain">(2) নং অসমতায় $x = 0, y = 0$ বসিয়ে পাই: $0 + 0 \le 4 \Rightarrow 0 \le 4$, যা সত্য। সুতরাং, (5) নং রেখার সত্য অঞ্চল মূলবিন্দুর দিকে (বাম ও নিচের দিকে) হবে।</div>
+    
+    <hr>
+
+    <div class="step-explain">**ধাপ ৩: লেখচিত্র (SVG Graph) এবং সীমাবদ্ধ সমাধান এলাকা**</div>
+    <div class="step-explain">প্রথম চতুর্ভাগে উভয় শর্তের সাধারণ ঘেরা এলাকাটি ছক কাগজের স্কেল ($১\text{ একক} = ৬০\text{ পিক্সেল}$) অনুযায়ী নিচে দেখানো হলো:</div>
+
+    <div class="step" style="text-align: center; margin: 20px 0;">
+        <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #ffffff; border: 1px solid #cccccc; font-family: Arial, sans-serif;">
+            <line x1="90" y1="20" x2="90" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="150" y1="20" x2="150" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="210" y1="20" x2="210" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="270" y1="20" x2="270" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="330" y1="20" x2="330" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="390" y1="20" x2="390" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="290" x2="450" y2="290" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="230" x2="450" y2="230" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="170" x2="450" y2="170" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="110" x2="450" y2="110" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="50" x2="450" y2="50" stroke="#f2f2f2" stroke-width="1" />
+
+            <polygon points="150,350 390,350 210,170 150,230" fill="#2ecc71" fill-opacity="0.25" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="3" />
+
+            <line x1="50" y1="350" x2="460" y2="350" stroke="#000000" stroke-width="2" /> <line x1="150" y1="20" x2="150" y2="350" stroke="#000000" stroke-width="2" />  <polygon points="460,347 467,350 460,353" fill="#000000" />
+            <polygon points="147,20 150,13 153,20" fill="#000000" />
+            
+            <text x="470" y="355" font-size="14" font-weight="bold">X</text>
+            <text x="145" y="15" font-size="14" font-weight="bold">Y</text>
+
+            <line x1="30" y1="350" x2="250" y2="130" stroke="#2980b9" stroke-width="1.5" />
+            <text x="70" y="300" fill="#2980b9" font-size="11" transform="rotate(-45, 70, 300)">x - y = -2</text>
+            
+            <line x1="390" y1="350" x2="110" y2="70" stroke="#e74c3c" stroke-width="1.5" />
+            <text x="290" y="190" fill="#e74c3c" font-size="11" transform="rotate(-45, 290, 190)">x + y = 4</text>
+
+            <circle cx="150" cy="350" r="4" fill="#000000" />
+            <text x="125" y="365" font-size="11">O(0,0)</text>
+            
+            <circle cx="30" cy="350" r="3" fill="#7f8c8d" />
+            <text x="15" y="340" font-size="10" fill="#7f8c8d">A(-2,0)</text>
+            
+            <circle cx="390" cy="350" r="4" fill="#000000" />
+            <text x="385" y="368" font-size="11" font-weight="bold">C(4,0)</text>
+            
+            <circle cx="210" cy="170" r="4" fill="#000000" />
+            <text x="220" y="170" font-size="11" font-weight="bold">P(1,3)</text>
+            
+            <circle cx="150" cy="230" r="4" fill="#000000" />
+            <text x="110" y="234" font-size="11" font-weight="bold">B(0,2)</text>
+            
+            <circle cx="150" cy="110" r="3" fill="#7f8c8d" />
+            <text x="115" y="114" font-size="10" fill="#7f8c8d">D(0,4)</text>
+
+            <rect x="280" y="25" width="190" height="75" fill="#ffffff" stroke="#cccccc" opacity="0.95" />
+            <circle cx="295" cy="40" r="5" fill="#2ecc71" fill-opacity="0.6" />
+            <text x="310" y="44" font-size="11" fill="#333333">সম্ভাব্যতা এলাকা (OCPB)</text>
+            <text x="295" y="62" font-size="10" fill="#7f8c8d">১ একক = ৬০ পিক্সেল স্কেল</text>
+            <text x="295" y="82" font-size="10" fill="#c0392b" font-weight="bold">সর্বোচ্চ মান P(1,3) বিন্দুতে</text>
+        </svg>
+    </div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ৪: সম্ভাব্য এলাকার কৌণিক বিন্দুসমূহের ছেদবিন্দু নির্ণয়**</div>
+    <div class="step-explain">লেখচিত্র পর্যবেক্ষণ করলে দেখা যায় যে, প্রথম চতুর্ভাগে সবকটি শর্তের সাধারণ ঘেরা এলাকাটি হলো একটি চতুর্ভুজ ক্ষেত্র **$OCPB$**। এর ৪টি প্রান্তিক কৌণিক বিন্দুর মধ্যে $O\left(0,0\right)$, $C\left(4,0\right)$, এবং $B\left(0,2\right)$ এর স্থানাঙ্ক সরাসরি অক্ষ ছেদবিন্দু থেকে জানা গেছে। বাকি ছেদবিন্দু $P$ এর মান গাণিতিকভাবে বের করি:</div>
+    
+    <div class="step-explain">**$P$ বিন্দুর স্থানাঙ্ক নির্ণয় ($x - y = -2$ এবং $x + y = 4$ এর ছেদবিন্দু):**</div>
+    <div class="step-explain">সমীকরণ (4) এবং সমীকরণ (5) যোগ করে পাই:</div>
+    <div class="step">$$\left(x - y\right) + \left(x + y\right) = -2 + 4$$</div>
+    <div class="step">$$\Rightarrow 2x = 2 \quad [\text{যোগ করে, } y \text{ বর্জন করা হলো}]$$</div>
+    <div class="step">$$\Rightarrow x = \frac{2}{2} \Rightarrow x = 1 \quad [\text{ভাগ করে}]$$</div>
+    <div class="step-explain">এখন $x = 1$ মানটি সমীকরণ $x + y = 4$ এ বসিয়ে পাই:</div>
+    <div class="step">$$1 + y = 4 \quad [x \text{ এর মান বসিয়ে}]$$</div>
+    <div class="step">$$\Rightarrow y = 4 - 1 \quad [\text{পক্ষান্তর করে}]$$</div>
+    <div class="step">$$\Rightarrow y = 3 \quad [\text{বিয়োগ করে}]$$</div>
+    <div class="step-explain">সুতরাং, ছেদবিন্দু $P$ এর স্থানাঙ্ক হলো $\left(1, 3\right)$।</div>
+    
+    <div class="step-explain">অতএব, সম্ভাব্য সমাধান এলাকার ৪টি চূড়ান্ত কৌণিক বা প্রান্তিক বিন্দু হলো:</div>
+    <div class="step">$$O\left(0, 0\right), \ C\left(4, 0\right), \ P\left(1, 3\right), \ \text{এবং} \ B\left(0, 2\right)$$</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ৫: উদ্দেশ্য ফাংশনে মান বসিয়ে সর্বোচ্চকরণ**</div>
+    <div class="step-explain">এখন প্রতিটি কৌণিক বিন্দুতে অভীষ্ট ফাংশন $z = x + 2y$ এর মান গণনা করি:</div>
+    
+    <div class="step-explain">১. $O\left(0, 0\right)$ বিন্দুতে $z$ এর মান:</div>
+    <div class="step">$$z = 0 + 2\cdot0 = 0$$</div>
+    
+    <div class="step-explain">২. $C\left(4, 0\right)$ বিন্দুতে $z$ এর মান:</div>
+    <div class="step">$$z = 4 + 2\cdot0 = 4$$</div>
+    
+    <div class="step-explain">৩. $P\left(1, 3\right)$ বিন্দুতে $z$ এর মান:</div>
+    <div class="step">$$z = 1 + 2\cdot3 = 1 + 6 = 7 \quad [\text{সর্বোচ্চ}]$$</div>
+    
+    <div class="step-explain">৪. $B\left(0, 2\right)$ বিন্দুতে $z$ এর মান:</div>
+    <div class="step">$$z = 0 + 2\cdot2 = 4$$</div>
+    
+    <hr>
+    
+    <div class="step-explain">**চূড়ান্ত ফলাফল:**</div>
+    <div class="step-explain">উপরের প্রান্তিক বিন্দুগুলোর মান তুলনা করে দেখা যাচ্ছে যে, $z$ এর মানগুলোর মধ্যে সর্ববৃহৎ বা সর্বোচ্চ মানটি হলো $7$, যা $P\left(1, 3\right)$ বিন্দুতে পাওয়া যায়।</div>
+    <div class="step-explain">সুতরাং, সম্ভাব্য এলাকার কৌণিক বিন্দুসমূহ হলো $O\left(0,0\right)$, $C\left(4,0\right)$, $P\left(1,3\right)$ ও $B\left(0,2\right)$ এবং নির্ণেয় সর্বোচ্চ মান **$7$**।</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৪. $f \le 12$, $g \ge 15$, এবং $x \ge 0, y \ge 0$ হলে, লেখচিত্রের মাধ্যমে সম্ভাব্য ক্ষেত্রটি নির্বাচন কর। শর্তে কী পরিবর্তন করলে সম্ভাব্য ক্ষেত্রটি চতুর্ভুজ হবে? যেখানে $f = 2x + 3y$, $g = 5x + 3y$ এবং $x,y \in \mathbb{R}$।</div>
+    
+    <div class="problem-sub-title">উদ্দীপকের যোগাশ্রয়ী প্রোগ্রামিং সমস্যাটির সমাধান, লেখচিত্র অঙ্কন এবং শর্ত পরিবর্তনের মাধ্যমে চতুর্ভুজ ক্ষেত্র গঠনের বিশ্লেষণ:</div>
+    
+    <div class="solution-title">সমাধান ৪:</div>
+    
+    <div class="step-explain">দেওয়া আছে, সীমাবদ্ধতা বা শর্তসমূহ (Constraints):</div>
+    <div class="step">$$2x + 3y \le 12 \quad \text{--- (1)} \quad [f \le 12 \text{ বসিয়ে}]$$</div>
+    <div class="step">$$5x + 3y \ge 15 \quad \text{--- (2)} \quad [g \ge 15 \text{ বসিয়ে}]$$</div>
+    <div class="step">$$x \ge 0, \ y \ge 0 \quad \text{--- (3)}$$</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ১: অসমতাগুলোকে সমীকরণে রূপান্তর এবং অক্ষদ্বয়ের ছেদবিন্দু নির্ণয়**</div>
+    <div class="step-explain">প্রদত্ত অসমতা (1) ও (2) নং শর্তকে ছক কাগজে সরলরেখা হিসেবে স্থাপন করার জন্য সমীকরণে রূপান্তর করে পাই:</div>
+    
+    <div class="step-explain">(1) নং অসমতার অনুরূপ সীমানা সরলরেখার সমীকরণ:</div>
+    <div class="step">$$2x + 3y = 12$$</div>
+    <div class="step-explain">উভয় পক্ষকে $12$ দ্বারা ভাগ করে সরলরেখার আদর্শ অক্ষ-ছেদক আকৃতিতে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow \frac{2x}{12} + \frac{3y}{12} = \frac{12}{12} \quad [\text{উভয় পক্ষকে 12 দ্বারা ভাগ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{x}{6} + \frac{y}{4} = 1 \quad \text{--- (4)} \quad [\text{লব ও হরকে কাটাকাটি করে}]$$</div>
+    <div class="step-explain">সুতরাং, (4) নং সরলরেখাটি $X$-অক্ষকে $A\left(6, 0\right)$ বিন্দুতে এবং $Y$-অক্ষকে $B\left(0, 4\right)$ বিন্দুতে ছেদ করে।</div>
+    
+    <div class="step-explain">(2) নং অসমতার অনুরূপ সীমানা সরলরেখার সমীকরণ:</div>
+    <div class="step">$$5x + 3y = 15$$</div>
+    <div class="step-explain">উভয় পক্ষকে $15$ দ্বারা ভাগ করে সরলরেখার আদর্শ অক্ষ-ছেদক আকৃতিতে প্রকাশ করি:</div>
+    <div class="step">$$\Rightarrow \frac{5x}{15} + \frac{3y}{15} = \frac{15}{15} \quad [\text{উভয় পক্ষকে 15 দ্বারা ভাগ করে}]$$</div>
+    <div class="step">$$\Rightarrow \frac{x}{3} + \frac{y}{5} = 1 \quad \text{--- (5)} \quad [\text{লব ও হরকে কাটাকাটি করে}]$$</div>
+    <div class="step-explain">সুতরাং, (5) নং সরলরেখাটি $X$-অক্ষকে $C\left(3, 0\right)$ বিন্দুতে এবং $Y$-অক্ষকে $D\left(0, 5\right)$ বিন্দুতে ছেদ করে$.$</div>
+    
+    <div class="step-explain">শর্ত (3) হতে, $x \ge 0, \ y \ge 0$ নির্দেশ করে যে, সম্ভাব্য অনুকূল অঞ্চলটি প্রথম চতুর্ভাগে (First Quadrant) সীমাবদ্ধ থাকবে।</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ২: মূলবিন্দু পরীক্ষা (Feasible Region বা সম্ভাব্য ক্ষেত্র নির্ধারণ)**</div>
+    <div class="step-explain">অসমতাগুলোর সত্য এলাকা কোন দিকে তা জানার জন্য মূলবিন্দু $O\left(0, 0\right)$ বসিয়ে পরীক্ষা করি:</div>
+    <div class="step-explain">(1) নং অসমতায় $x = 0, y = 0$ বসিয়ে পাই: $2\cdot0 + 3\cdot0 \le 12 \Rightarrow 0 \le 12$, যা সত্য। সুতরাং, এই রেখার সমাধান এলাকাটি মূলবিন্দুর দিকে (নিচের দিকে) অবস্থিত।</div>
+    <div class="step-explain">(2) নং অসমতায় $x = 0, y = 0$ বসিয়ে পাই: $5\cdot0 + 3\cdot0 \ge 15 \Rightarrow 0 \ge 15$, যা মিথ্যা। সুতরাং, এই রেখার সমাধান এলাকাটি মূলবিন্দুর বিপরীত দিকে (উপরের দিকে) অবস্থিত।</div>
+    
+    <hr>
+
+    <div class="step-explain">**ধাপ ৩: রেখাদ্বয়ের পারস্পরিক ছেদবিন্দু নির্ণয়**</div>
+    <div class="step-explain">লেখচিত্রে বসানোর আগে রেখা দুটির ছেদবিন্দু $P$ গাণিতিকভাবে বের করি। সমীকরণ (4) থেকে সমীকরণ (5) বিয়োগ করে পাই:</div>
+    <div class="step">$$\left(2x + 3y\right) - \left(5x + 3y\right) = 12 - 15$$</div>
+    <div class="step">$$\Rightarrow -3x = -3 \quad [\text{বিয়োগ করে, } 3y \text{ অপসারিত হয়}]$$</div>
+    <div class="step">$$\Rightarrow x = \frac{-3}{-3} \Rightarrow x = 1 \quad [\text{উভয় পক্ষকে -3 দ্বারা ভাগ করে}]$$</div>
+    
+    <div class="step-explain">এখন, $x = 1$ এর মানটি সমীকরণ (4) এ বসিয়ে পাই:</div>
+    <div class="step">$$2\cdot1 + 3y = 12 \quad [\text{x এর মান বসিয়ে}]$$</div>
+    <div class="step">$$\Rightarrow 2 + 3y = 12$$</div>
+    <div class="step">$$\Rightarrow 3y = 12 - 2 \quad [\text{পক্ষান্তর করে}]$$</div>
+    <div class="step">$$\Rightarrow 3y = 10 \Rightarrow y = \frac{10}{3} \approx 3.33 \quad [\text{৩ দ্বারা ভাগ করে}]$$</div>
+    <div class="step-explain">সুতরাং, রেখাদ্বয়ের ছেদবিন্দু হলো $P\left(1, \frac{10}{3}\right)$ বা $P\left(1, 3.33\right)$।</div>
+
+    <hr>
+
+    <div class="step-explain">**ধাপ ৪: লেখচিত্র (SVG Graph) এবং সম্ভাব্য ক্ষেত্রের বিন্যাস**</div>
+    <div class="step-explain">ছক কাগজের ক্ষুদ্রতম ১ ঘরকে ১ একক ধরে অর্থাৎ $১\text{ একক} = ৬০\text{ পিক্সেল}$ স্কেলে নিচে নিখুঁত এবং সঠিক গ্রাফটি চিত্রায়িত করা হলো:</div>
+
+    <div class="step" style="text-align: center; margin: 20px 0;">
+        <svg width="500" height="400" viewBox="0 0 500 400" style="background-color: #ffffff; border: 1px solid #cccccc; font-family: Arial, sans-serif;">
+            <line x1="110" y1="20" x2="110" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="170" y1="20" x2="170" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="230" y1="20" x2="230" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="290" y1="20" x2="290" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="350" y1="20" x2="350" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="410" y1="20" x2="410" y2="350" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="290" x2="450" y2="290" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="230" x2="450" y2="230" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="170" x2="450" y2="170" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="110" x2="450" y2="110" stroke="#f2f2f2" stroke-width="1" />
+            <line x1="50" y1="50" x2="450" y2="50" stroke="#f2f2f2" stroke-width="1" />
+
+            <polygon points="230,350 410,350 110,150" fill="#2ecc71" fill-opacity="0.25" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="3" />
+
+            <line x1="50" y1="350" x2="460" y2="350" stroke="#000000" stroke-width="2" /> <line x1="50" y1="20" x2="50" y2="350" stroke="#000000" stroke-width="2" />  <polygon points="460,347 467,350 460,353" fill="#000000" />
+            <polygon points="47,20 50,13 53,20" fill="#000000" />
+            
+            <text x="470" y="355" font-size="14" font-weight="bold">X</text>
+            <text x="45" y="15" font-size="14" font-weight="bold">Y</text>
+            
+            <text x="225" y="368" font-size="11" fill="#7f8c8d">3</text>
+            <text x="405" y="368" font-size="11" fill="#7f8c8d">6</text>
+            <text x="35" y="114" font-size="11" fill="#7f8c8d">4</text>
+            <text x="35" y="54" font-size="11" fill="#7f8c8d">5</text>
+
+            <line x1="410" y1="350" x2="50" y2="110" stroke="#2980b9" stroke-width="1.5" />
+            <text x="300" y="240" fill="#2980b9" font-size="11" transform="rotate(-33, 300, 240)">2x + 3y = 12</text>
+            
+            <line x1="230" y1="350" x2="50" y2="50" stroke="#e74c3c" stroke-width="1.5" />
+            <text x="140" y="170" fill="#e74c3c" font-size="11" transform="rotate(-59, 140, 170)">5x + 3y = 15</text>
+
+            <circle cx="50" cy="350" r="3" fill="#000000" opacity="0.3" />
+            <text x="32" y="365" font-size="11" fill="#7f8c8d">O(0,0)</text>
+            
+            <circle cx="230" cy="350" r="4" fill="#000000" />
+            <text x="220" y="342" font-size="11" font-weight="bold">C(3,0)</text>
+            
+            <circle cx="410" cy="350" r="4" fill="#000000" />
+            <text x="415" y="345" font-size="11" font-weight="bold">A(6,0)</text>
+            
+            <circle cx="110" cy="150" r="4" fill="#000000" />
+            <text x="120" y="145" font-size="11" font-weight="bold">P(1, 10/3)</text>
+            
+            <circle cx="50" cy="110" r="3" fill="#7f8c8d" />
+            <text x="58" y="114" font-size="10" fill="#7f8c8d">B(0,4)</text>
+            <circle cx="50" cy="50" r="3" fill="#7f8c8d" />
+            <text x="58" y="54" font-size="10" fill="#7f8c8d">D(0,5)</text>
+
+            <rect x="280" y="30" width="190" height="60" fill="#ffffff" stroke="#cccccc" opacity="0.95" />
+            <circle cx="295" cy="45" r="5" fill="#2ecc71" fill-opacity="0.6" />
+            <text x="310" y="49" font-size="11" fill="#333333">সম্ভাব্যতা এলাকা (ত্রিভুজ CAP)</text>
+            <text x="295" y="70" font-size="10" fill="#7f8c8d">১ একক = ৬০ পিক্সেল স্কেল</text>
+        </svg>
+    </div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ৫: বর্তমান সম্ভাব্য ক্ষেত্র নির্বাচন**</div>
+    <div class="step-explain">লেখচিত্র এবং মূলবিন্দু পরীক্ষা অনুযায়ী, প্রথম চতুর্ভাগে সাধারণ এলাকাটি হলো একটি **ত্রিভুজাকার ক্ষেত্র ($CAP$)**।</div>
+    <div class="step-explain">এই ত্রিভুজাকার সম্ভাব্য ক্ষেত্রের ৩টি কৌণিক বা প্রান্তিক বিন্দু হলো:</div>
+    <div class="step">$$C\left(3, 0\right), \ A\left(6, 0\right), \ \text{এবং} \ P\left(1, \frac{10}{3}\right)$$</div>
+    
+    <hr>
+    
+    <div class="step-explain">**ধাপ ৬: সম্ভাব্য ক্ষেত্রটি চতুর্ভুজ করার শর্ত বিশ্লেষণ**</div>
+    <div class="step-explain">বর্তমানে ক্ষেত্রটি ত্রিভুজাকার হওয়ার প্রধান কারণ হলো দ্বিতীয় অসমতা $5x + 3y \ge 15$ এর দিকটি মূলবিন্দুর বিপরীত দিকে। এর ফলে এটি $Y$-অক্ষের ধনাত্মক অংশকে ছেদ না করে ভেতরের দিকে চলে গেছে এবং ক্ষেত্রের সীমানা $X$-অক্ষের উপর $C(3,0)$ ও $A(6,0)$ এবং ছেদবিন্দু $P$ এর মধ্যেই সীমাবদ্ধ রয়ে গেছে।</div>
+    
+    <div class="step-explain">ক্ষেত্রটি যদি **চতুর্ভুজ** করতে হয়, তবে সমাধান অঞ্চলটিকে এমনভাবে ঘিরতে হবে যেন এটি অক্ষদ্বয়ের অংশকেও নিজের সীমানার অন্তর্ভুক্ত করে নেয়। এটি করার ২টি প্রধান নিখুঁত উপায় নিচে ব্যাখ্যা করা হলো:</div>
+    
+    <div class="step-explain">**পদ্ধতি ১: দ্বিতীয় শর্তের দিক পরিবর্তন করে ($g \le 15$ করলে)**</div>
+    <div class="step-explain">যদি আমরা দ্বিতীয় শর্তটির দিক পরিবর্তন করে $5x + 3y \le 15$ করি, তবে উভয় অসমতাই মূলবিন্দুর দিকে নির্দেশ করবে।</div>
+    <div class="step-explain">তখন প্রথম চতুর্ভাগে সাধারণ সম্ভাব্য ক্ষেত্রটি হবে **$O C P B$** নামক একটি **চতুর্ভুজ**। যার ৪টি কৌণিক বিন্দু হবে:</div>
+    <div class="step">$$O\left(0,0\right), \ C\left(3,0\right), \ P\left(1, \frac{10}{3}\right), \ \text{এবং} \ B\left(0,4\right)$$</div>
+    
+    <div class="step-explain">**পদ্ধতি ২: প্রথম শর্তের দিক পরিবর্তন করে ($f \ge 12$ এবং $y$-এর সর্বোচ্চ সীমা আরোপ করে)**</div>
+    <div class="step-explain">যদি প্রথম শর্তটি $2x + 3y \ge 12$ এবং দ্বিতীয়টি $5x + 3y \le 15$ এর সাথে সাথে অক্ষের কোনো সমান্তরাল রেখা (যেমন: $y \le 5$) যুক্ত করা হয়, তবেও ক্ষেত্রটি চতুর্ভুজাকার রূপ নিতে পারে। তবে সবচেয়ে সহজ এবং সরাসরি পরিবর্তন হলো পদ্ধতি ১।</div>
+    
+    <hr>
+    
+    <div class="step-explain">**চূড়ান্ত উত্তর:**</div>
+    <div class="step-explain">১. উদ্দীপকের শর্তানুযায়ী বর্তমান সম্ভাব্য ক্ষেত্রটি একটি **ত্রিভুজাকার ক্ষেত্র ($CAP$)**, যার কৌণিক বিন্দুত্রয় $C\left(3,0\right)$, $A\left(6,0\right)$ এবং $P\left(1, \frac{10}{3}\right)$।</div>
+    <div class="step-explain">২. উদ্দীপকের শর্তে **$g \ge 15$** এর পরিবর্তে **$g \le 15$** (অর্থাৎ $5x + 3y \le 15$) করলে সম্ভাব্য ক্ষেত্রটি একটি **চতুর্ভুজ ($OCPB$)** হবে।</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

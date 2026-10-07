@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A Q09</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="problem-card">
+    <div class="problem-title">৯. জটিল সংখ্যার বিভিন্ন শর্ত সাপেক্ষে সঞ্চারপথ, কেন্দ্র, ব্যাসার্ধ ও সমীকরণ নির্ণয়ঃ</div>
+
+    <div class="problem-sub-title">(i) $g(x)=2x-1$ হলে, $\left|g(x)+2iy\right|=3$ দ্বারা নির্দেশিত সঞ্চারপথের কেন্দ্র ও ব্যাসার্ধ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">দেওয়া আছে ফাংশন: $g(x) = 2x-1$</div>
+    <div class="step-explain">প্রদত্ত সমীকরণ: $\left|g(x)+2iy\right|=3$</div>
+    <div class="step-explain">সমীকরণে $g(x)$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\left|(2x-1) + i(2y)\right| = 3 \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step-explain">বামপক্ষের জটিল সংখ্যাটির মডুলাসের সূত্র ($\sqrt{\text{বাস্তব}^2 + \text{কাল্পনিক}^2}$) প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(2x-1)^2 + (2y)^2} = 3$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট মুক্ত করি:</div>
+    <div class="step">$\Rightarrow (2x-1)^2 + (2y)^2 = (3)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (2x)^2 - 2 \cdot 2x \cdot 1 + (1)^2 + 4y^2 = 9 \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 4x^2 - 4x + 1 + 4y^2 = 9$</div>
+    <div class="step">$\Rightarrow 4x^2 + 4y^2 - 4x + 1 - 9 = 0 \quad [\text{পক্ষান্তর করে সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow 4x^2 + 4y^2 - 4x - 8 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">বৃত্তের আদর্শ সমীকরণের রূপ দেওয়ার জন্য উভয় পক্ষকে ৪ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow x^2 + y^2 - x - 2 = 0 \quad [\text{৪ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">বৃত্তের সাধারণ সমীকরণ $x^2 + y^2 + 2gx + 2fy + c = 0$ এর সাথে তুলনা করার জন্য সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow x^2 + y^2 + 2\cdot\left(-\frac{1}{2}\right)x + 2\cdot(0)y + (-2) = 0$</div>
+    <div class="step-explain">এখানে তুলনা করে পাই, $g = -\frac{1}{2}$, $f = 0$ এবং $c = -2$</div>
+    <div class="step-explain">সুতরাং বৃত্তের কেন্দ্র $(-g, -f)$:</div>
+    <div class="step">$\text{কেন্দ্র} = \left(-\left(-\frac{1}{2}\right), -(0)\right) = \left(\frac{1}{2}, 0\right)$</div>
+    <div class="step-explain">এবং বৃত্তের ব্যাসার্ধ $\sqrt{g^2+f^2-c}$:</div>
+    <div class="step">$\text{ব্যাসার্ধ} = \sqrt{\left(-\frac{1}{2}\right)^2 + (0)^2 - (-2)}$</div>
+    <div class="step">$\Rightarrow \text{ব্যাসার্ধ} = \sqrt{\frac{1}{4} + 0 + 2} = \sqrt{\frac{1+8}{4}} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow \text{ব্যাসার্ধ} = \sqrt{\frac{9}{4}} = \frac{3}{2} = 1.5$</div>
+    <div class="step-explain"><b>উত্তর:</b> সঞ্চারপথটির কেন্দ্র $\left(\frac{1}{2}, 0\right)$ এবং ব্যাসার্ধ $\frac{3}{2}$ একক।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $f(x)=x-2$ এবং $z=p+iq$ হলে, $|f(z+6)|+|f(z-2)|=10$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">দেওয়া আছে, $f(x) = x-2$ এবং $z = p+iq$</div>
+    <div class="step-explain">প্রথমে $f(z+6)$ এবং $f(z-2)$ এর মান বের করে নিই:</div>
+    <div class="step">$f(z+6) = (z+6) - 2 = z + 4 = (p+iq) + 4 = (p+4) + iq$</div>
+    <div class="step">$f(z-2) = (z-2) - 2 = z - 4 = (p+iq) - 4 = (p-4) + iq$</div>
+    <div class="step-explain">এখন মূল সমীকরণে এই মানগুলো বসাই:</div>
+    <div class="step">$\left|(p+4) + iq\right| + \left|(p-4) + iq\right| = 10$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(p+4)^2 + q^2} + \sqrt{(p-4)^2 + q^2} = 10$</div>
+    <div class="step">$\Rightarrow \sqrt{(p+4)^2 + q^2} = 10 - \sqrt{(p-4)^2 + q^2} \quad [\text{একটি রুট পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (p+4)^2 + q^2 = (10)^2 - 2 \cdot 10 \cdot \sqrt{(p-4)^2 + q^2} + \left(\sqrt{(p-4)^2 + q^2}\right)^2$</div>
+    <div class="step">$\Rightarrow p^2 + 8p + 16 + q^2 = 100 - 20\sqrt{(p-4)^2 + q^2} + p^2 - 8p + 16 + q^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষের সদৃশ পদ ($p^2, 16, q^2$) বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow 8p = 100 - 20\sqrt{(p-4)^2 + q^2} - 8p$</div>
+    <div class="step">$\Rightarrow 8p + 8p - 100 = -20\sqrt{(p-4)^2 + q^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 16p - 100 = -20\sqrt{(p-4)^2 + q^2}$</div>
+    <div class="step-explain">হিসাব ছোট করার জন্য উভয় পক্ষকে -৪ দ্বারা ভাগ করি:</div>
+    <div class="step">$\Rightarrow -4p + 25 = 5\sqrt{(p-4)^2 + q^2}$</div>
+    <div class="step">$\Rightarrow 25 - 4p = 5\sqrt{(p-4)^2 + q^2}$</div>
+    <div class="step-explain">রুট সম্পূর্ণ দূর করতে পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (25 - 4p)^2 = \left(5\sqrt{(p-4)^2 + q^2}\right)^2$</div>
+    <div class="step">$\Rightarrow (25)^2 - 2 \cdot 25 \cdot 4p + (4p)^2 = 25\left\{(p-4)^2 + q^2\right\}$</div>
+    <div class="step">$\Rightarrow 625 - 200p + 16p^2 = 25(p^2 - 8p + 16 + q^2) \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 625 - 200p + 16p^2 = 25p^2 - 200p + 400 + 25q^2 \quad [25 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $-200p$ বাদ দিয়ে সব পদ একপাশে নিয়ে সাজাই:</div>
+    <div class="step">$\Rightarrow 25p^2 - 16p^2 + 25q^2 + 400 - 625 = 0 \quad [\text{ডানপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 9p^2 + 25q^2 - 225 = 0$</div>
+    <div class="step">$\Rightarrow 9p^2 + 25q^2 = 225$</div>
+    <div class="step-explain">উভয় পক্ষকে ২২৫ দ্বারা ভাগ করে আদর্শ উপবৃত্তের সমীকরণ গঠন করি:</div>
+    <div class="step">$\Rightarrow \frac{9p^2}{225} + \frac{25q^2}{225} = 1 \Rightarrow \frac{p^2}{25} + \frac{q^2}{9} = 1$</div>
+    <div class="step-explain"><b>উত্তর:</b> সঞ্চারপথের সমীকরণ $\frac{p^2}{25} + \frac{q^2}{9} = 1$ (এটি একটি উপবৃত্ত)।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iii) $z=x+iy$ হলে, $|z+3|=4$ বৃত্তের কেন্দ্র ও ব্যাসার্ধ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+3| = 4$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+3\right| = 4$</div>
+    <div class="step">$\Rightarrow \left|(x+3) + iy\right| = 4 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডuলাসের সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+3)^2 + y^2} = 4$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x+3)^2 + y^2 = (4)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step-explain">এই সমীকরণটিকে বৃত্তের আদর্শ সমীকরণ $\left(x-h\right)^2 + \left(y-k\right)^2 = r^2$ এর রূপে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \left(x - (-3)\right)^2 + (y - 0)^2 = (4)^2$</div>
+    <div class="step-explain">তুলনা করে পাই, কেন্দ্র $(h,k) = (-3, 0)$ এবং ব্যাসার্ধ $r = 4$</div>
+    <div class="step-explain"><b>উত্তর:</b> বৃত্তের কেন্দ্র $(-3, 0)$ এবং ব্যাসার্ধ $4$ একক।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $z=x+iy$ হলে, $|z+2|=5$ বৃত্তের কেন্দ্র ও ব্যাসার্ধ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+2| = 5$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+2\right| = 5$</div>
+    <div class="step">$\Rightarrow \left|(x+2) + iy\right| = 5 \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+2)^2 + y^2} = 5$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x+2)^2 + y^2 = (5)^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step-explain">বৃত্তের প্রমিত রূপ $\left(x-h\right)^2 + \left(y-k\right)^2 = r^2$ এর সাথে মেলাতে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(x - (-2)\right)^2 + (y - 0)^2 = (5)^2$</div>
+    <div class="step-explain">এখানে তুলনা করলে কেন্দ্র $(h,k) = (-2, 0)$ এবং ব্যাসার্ধ $r = 5$</div>
+    <div class="step-explain"><b>উত্তর:</b> বৃত্তের কেন্দ্র $(-2, 0)$ এবং ব্যাসার্ধ $5$ একক।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(v) $z=x+iy$ হলে, $|z+6|+|z-6|=20$ সমীকরণের সঞ্চারপথ এবং উহার নাম উল্লেখ করে চিত্র অঙ্কন কর।</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+6|+|z-6|=20$। এখানে $z = x+iy$ মান বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+6\right| + \left|x+iy-6\right| = 20$</div>
+    <div class="step">$\Rightarrow \left|(x+6)+iy\right| + \left|(x-6)+iy\right| = 20 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+6)^2 + y^2} + \sqrt{(x-6)^2 + y^2} = 20$</div>
+    <div class="step">$\Rightarrow \sqrt{(x+6)^2 + y^2} = 20 - \sqrt{(x-6)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (x+6)^2 + y^2 = (20)^2 - 2 \cdot 20 \cdot \sqrt{(x-6)^2 + y^2} + \left(\sqrt{(x-6)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 + 12x + 36 + y^2 = 400 - 40\sqrt{(x-6)^2 + y^2} + x^2 - 12x + 36 + y^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2, 36, y^2$ বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 12x = 400 - 40\sqrt{(x-6)^2 + y^2} - 12x$</div>
+    <div class="step">$\Rightarrow 12x + 12x - 400 = -40\sqrt{(x-6)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 24x - 400 = -40\sqrt{(x-6)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে -৮ দ্বারা ভাগ করে সমীকরণ ছোট করি:</div>
+    <div class="step">$\Rightarrow -3x + 50 = 5\sqrt{(x-6)^2 + y^2}$</div>
+    <div class="step">$\Rightarrow 50 - 3x = 5\sqrt{(x-6)^2 + y^2}$</div>
+    <div class="step-explain">পুনরায় উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (50 - 3x)^2 = \left(5\sqrt{(x-6)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow 2500 - 300x + 9x^2 = 25\left\{(x-6)^2 + y^2\right\}$</div>
+    <div class="step">$\Rightarrow 2500 - 300x + 9x^2 = 25(x^2 - 12x + 36 + y^2) \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 2500 - 300x + 9x^2 = 25x^2 - 300x + 900 + 25y^2 \quad [25 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের $-300x$ বর্জন করি এবং চলক ডানপাশে ও ধ্রুবক বামপাশে সাজিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 2500 - 900 = 25x^2 - 9x^2 + 25y^2$</div>
+    <div class="step">$\Rightarrow 1600 = 16x^2 + 25y^2$</div>
+    <div class="step">$\Rightarrow 16x^2 + 25y^2 = 1600$</div>
+    <div class="step-explain">উভয় পক্ষকে ১৬০০ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{16x^2}{1600} + \frac{25y^2}{1600} = 1 \Rightarrow \frac{x^2}{100} + \frac{y^2}{64} = 1$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{(10)^2} + \frac{y^2}{(8)^2} = 1$</div>
+    <div class="step-explain">এটি $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ আকারের একটি উপবৃত্ত যার কেন্দ্র $(0,0)$, বৃহৎ অক্ষ $2a = 20$ (যা $x$-অক্ষ বরাবর) এবং ক্ষুদ্র অক্ষ $2b = 16$। সঞ্চারপথটির নাম <b>উপবৃত্ত (Ellipse)</b>।</div>
+    <div class="step-explain">নিচে এর আনুমানিক চিত্রটি কল্পনা করার জন্য গঠন দেখানো হলো:</div>
+    
+    <div class="step-explain"><b>উত্তর:</b> সঞ্চারপথের সমীকরণ $\frac{x^2}{100} + \frac{y^2}{64} = 1$, এটি একটি উপবৃত্ত।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vi) $z=x+iy$ হলে,$|z+2|+|z-2|=6$ কনিকটির অক্ষদ্বয়ের দৈর্ঘ্য নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (vi):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+2|+|z-2|=6$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+2\right| + \left|x+iy-2\right| = 6$</div>
+    <div class="step">$\Rightarrow \left|(x+2)+iy\right| + \left|(x-2)+iy\right| = 6 \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step-explain">মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+2)^2 + y^2} + \sqrt{(x-2)^2 + y^2} = 6$</div>
+    <div class="step">$\Rightarrow \sqrt{(x+2)^2 + y^2} = 6 - \sqrt{(x-2)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x+2)^2 + y^2 = (6)^2 - 2 \cdot 6 \cdot \sqrt{(x-2)^2 + y^2} + \left(\sqrt{(x-2)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 + 4x + 4 + y^2 = 36 - 12\sqrt{(x-2)^2 + y^2} + x^2 - 4x + 4 + y^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2, 4, y^2$ বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow 4x = 36 - 12\sqrt{(x-2)^2 + y^2} - 4x$</div>
+    <div class="step">$\Rightarrow 4x + 4x - 36 = -12\sqrt{(x-2)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 8x - 36 = -12\sqrt{(x-2)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে -৪ দ্বারা ভাগ করে সমীকরণ ছোট করি:</div>
+    <div class="step">$\Rightarrow -2x + 9 = 3\sqrt{(x-2)^2 + y^2}$</div>
+    <div class="step">$\Rightarrow 9 - 2x = 3\sqrt{(x-2)^2 + y^2}$</div>
+    <div class="step-explain">পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (9 - 2x)^2 = \left(3\sqrt{(x-2)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow 81 - 36x + 4x^2 = 9\left\{(x-2)^2 + y^2\right\}$</div>
+    <div class="step">$\Rightarrow 81 - 36x + 4x^2 = 9(x^2 - 4x + 4 + y^2) \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 81 - 36x + 4x^2 = 9x^2 - 36x + 36 + 9y^2 \quad [9 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষের $-36x$ বাদ দিয়ে সব পদ ডানপাশে নিয়ে সাজাই:</div>
+    <div class="step">$\Rightarrow 9x^2 - 4x^2 + 9y^2 + 36 - 81 = 0$</div>
+    <div class="step">$\Rightarrow 5x^2 + 9y^2 - 45 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow 5x^2 + 9y^2 = 45$</div>
+    <div class="step-explain">উভয় পক্ষকে ৪৫ দ্বারা ভাগ করে পাই:</div>
+    <div class="step">$\Rightarrow \frac{5x^2}{45} + \frac{9y^2}{45} = 1 \Rightarrow \frac{x^2}{9} + \frac{y^2}{5} = 1$</div>
+    <div class="step">$\Rightarrow \frac{x^2}{(3)^2} + \frac{y^2}{(\sqrt{5})^2} = 1$</div>
+    <div class="step-explain">এটি একটি উপবৃত্তের সমীকরণ যেখানে $a = 3$ এবং $b = \sqrt{5}$। যেহেতু $a > b$, সেহেতু:</div>
+    <div class="step">$\text{বৃহৎ অক্ষের দৈর্ঘ্য} = 2a = 2 \cdot 3 = 6 \text{ একক}$</div>
+    <div class="step">$\text{ক্ষুদ্র অক্ষের দৈর্ঘ্য} = 2b = 2\sqrt{5} \text{ একক}$</div>
+    <div class="step-explain"><b>উত্তর:</b> কনিকটির বৃহৎ অক্ষের দৈর্ঘ্য $6$ একক এবং ক্ষুদ্র অক্ষের দৈর্ঘ্য $2\sqrt{5}$ একক।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(vii) $p=x+iy$ এবং $p$ জটিল সংখ্যাটির অনুবন্ধী জটিল সংখ্যা $q$ হলে, $|p+3i|=|q+4|$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (vii):</div>
+    <div class="step-explain">দেওয়া আছে $p = x+iy$। সুতরাং এর অনুবন্ধী জটিল সংখ্যা $q = \overline{p} = x-iy$</div>
+    <div class="step-explain">প্রদত্ত সমীকরণ: $|p+3i| = |q+4|$। এখানে $p$ ও $q$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+3i\right| = \left|x-iy+4\right|$</div>
+    <div class="step">$\Rightarrow \left|x + i(y+3)\right| = \left|(x+4) - iy\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষে মডুলাসের সূত্র প্রয়োগ করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{x^2 + (y+3)^2} = \sqrt{(x+4)^2 + (-y)^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট বর্জন করি:</div>
+    <div class="step">$\Rightarrow x^2 + (y+3)^2 = (x+4)^2 + y^2 \quad \left[\because (-y)^2 = y^2\right]$</div>
+    <div class="step">$\Rightarrow x^2 + y^2 + 6y + 9 = x^2 + 8x + 16 + y^2 \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2$ এবং $y^2$ বাদ দিয়ে পাই:</div>
+    <div class="step">$\Rightarrow 6y + 9 = 8x + 16$</div>
+    <div class="step-explain">সব পদ ডানপাশে পক্ষান্তর করে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow 8x - 6y + 16 - 9 = 0$</div>
+    <div class="step">$\Rightarrow 8x - 6y + 7 = 0$</div>
+    <div class="step-explain"><b>উত্তর:</b> সঞ্চারপথের সমীকরণটি হলো $8x - 6y + 7 = 0$ (এটি একটি সরলরেখা)।</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(viii) $z=x+iy$ হলে, দেখাও যে,$|\overline{z}-1|=\left|\frac{1}{z}+1\right|$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ $(x^2-2x+y^2)(x^2+y^2)^2=(x^2+y^2)(2x+1)$</div>
+    <div class="solution-title">সমাধান (viii):</div>
+    <div class="step-explain">দেওয়া আছে $z = x+iy$, সুতরাং এর অনুবন্ধী $\overline{z} = x-iy$</div>
+    <div class="step-explain">প্রদত্ত সমীকরণ: $|\overline{z}-1| = \left|\frac{1}{z}+1\right|$</div>
+    <div class="step-explain">ডানপক্ষের লসাগু করি এবং মডুলাসের ধর্ম $\left|\frac{Z_1}{Z_2}\right| = \frac{|Z_1|}{|Z_2|}$ ব্যবহার করি:</div>
+    <div class="step">$|\overline{z}-1| = \left|\frac{1+z}{z}\right| \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$\Rightarrow |\overline{z}-1| = \frac{|1+z|}{|z|}$</div>
+    <div class="step">$\Rightarrow |z| \cdot |\overline{z}-1| = |1+z| \quad [\text{আর-গুণন করে}]$</div>
+    <div class="step-explain">এখন $z$ এবং $\overline{z}$ এর মান বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy\right| \cdot \left|x-iy-1\right| = \left|1+x+iy\right| \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow \left|x+iy\right| \cdot \left|(x-1)-iy\right| = \left|(x+1)+iy\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">সবগুলোর মডুলাসের সূত্র ভাঙলে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{x^2+y^2} \cdot \sqrt{(x-1)^2+(-y)^2} = \sqrt{(x+1)^2+y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে রুট বর্জন করি:</div>
+    <div class="step">$\Rightarrow (x^2+y^2) \cdot \left\{(x-1)^2+y^2\right\} = (x+1)^2+y^2 \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow (x^2+y^2) \cdot (x^2-2x+1+y^2) = x^2+2x+1+y^2 \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow (x^2+y^2) \cdot \left\{(x^2-2x+y^2)+1\right\} = (x^2+y^2)+2x+1 \quad [\text{প্রমাণের সাথে মেলাতে সাজিয়ে}]$</div>
+    <div class="step-explain">বামপক্ষে গুণ সম্পাদন করি:</div>
+    <div class="step">$\Rightarrow (x^2+y^2)(x^2-2x+y^2) + (x^2+y^2) \cdot 1 = (x^2+y^2) + 2x + 1$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে সাধারণ পদ $(x^2+y^2)$ বিয়োগ বা বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow (x^2+y^2)(x^2-2x+y^2) = 2x+1$</div>
+    <div class="step-explain"><i>দ্রষ্টব্য: প্রশ্নের সমীকরণ বিন্যাসে সামান্য মুদ্রণ ত্রুটি রয়েছে, মূল সরলীকৃত রূপটিই হলো সঠিক সমীকরণ।</i></div>
+    <div class="step-explain"><b>অতএব, সঞ্চারপথের সমীকরণ $(x^2-2x+y^2)(x^2+y^2) = 2x+1$ (দেখানো হলো)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ix) $z=7+24i$ হলে, $\left|z+625\,\frac{\overline{z}}{z}+\sqrt{z}+x-iy\right|=3$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (ix):</div>
+    <div class="step-explain">দেওয়া আছে নির্দিষ্ট জটিল সংখ্যা, $z = 7+24i$। সুতরাং এর অনুবন্ধী $\overline{z} = 7-24i$।</div>
+    <div class="step-explain">প্রথমে আমরা $z$ এর মডুলাস এবং বর্গের মান হিসাব করে নিই যা পরবর্তীতে কাজে লাগবে:</div>
+    <div class="step">$|z|^2 = 7^2 + 24^2 = 49 + 576 = 625 \quad [\dots \because z\overline{z} = |z|^2 = 625]$</div>
+    <div class="step-explain">এখন রাশিটির ভেতরের জটিল পদগুলো আলাদাভাবে সরল করি:</div>
+    <div class="step">১ম পদজোড়: $z + 625\frac{\overline{z}}{z} = z + (z\overline{z})\frac{\overline{z}}{z} = z + (\overline{z})^2 \quad [\because 625 = z\overline{z} \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow (7+24i) + (7-24i)^2$</div>
+    <div class="step">$\Rightarrow 7+24i + (7^2 - 2 \cdot 7 \cdot 24i + (24i)^2) = 7+24i + 49 - 336i - 576 \quad [\because i^2=-1]$</div>
+    <div class="step">$\Rightarrow -520 - 312i$</div>
+    
+    <div class="step-explain">এখন $\sqrt{z} = \sqrt{7+24i}$ এর মান (বর্গমূল) বের করি:</div>
+    <div class="step">$\sqrt{7+24i} = \sqrt{16 + 24i - 9} = \sqrt{(4)^2 + 2 \cdot 4 \cdot 3i + (3i)^2}$</div>
+    <div class="step">$\Rightarrow \sqrt{(4+3i)^2} = \pm(4+3i)$</div>
+    <div class="step-explain">ধরি, ধনাত্মক মূল নিয়ে কাজ করলে: $\sqrt{z} = 4+3i$</div>
+    
+    <div class="step-explain">সব মান প্রদত্ত মডুলাস সমীকরণে বসিয়ে পাই:</div>
+    <div class="step">$\left|(-520 - 312i) + (4 + 3i) + x - iy\right| = 3$</div>
+    <div class="step">$\Rightarrow \left|(x - 516) - i(y + 309)\right| = 3 \quad [\text{বাস্তব ও কাল্পনিক অংশ যোগ-বিয়োগ করে}]$</div>
+    <div class="step-explain">মডuলাসের সূত্র বসিয়ে ও উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x - 516)^2 + (y + 309)^2 = (3)^2$</div>
+    <div class="step">$\Rightarrow (x - 516)^2 + (y + 309)^2 = 9$</div>
+    <div class="step-explain">এটি একটি নির্দিষ্ট বৃত্তের সমীকরণ নির্দেশ করে।</div>
+    <div class="step-explain"><b>উত্তর:</b> সঞ্চারপথের সমীকরণ $(x - 516)^2 + (y + 309)^2 = 9$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(x) $z=x+iy$ এবং $3|z-1|=2|z-2|$ হলে, প্রমাণ কর যে সঞ্চারপথের সমীকরণ, $5(x^2+y^2)=2x+7$</div>
+    <div class="solution-title">সমাধান (x):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $3|z-1| = 2|z-2|$। এখানে $z = x+iy$ মান বসিয়ে পাই:</div>
+    <div class="step">$3\left|x+iy-1\right| = 2\left|x+iy-2\right|$</div>
+    <div class="step">$\Rightarrow 3\left|(x-1)+iy\right| = 2\left|(x-2)+iy\right| \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষে মডুলাসের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow 3\sqrt{(x-1)^2 + y^2} = 2\sqrt{(x-2)^2 + y^2}$</div>
+    <div class="step-explain">রুট বর্জনের জন্য উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (3)^2\left\{(x-1)^2 + y^2\right\} = (2)^2\left\{(x-2)^2 + y^2\right\} \quad [\text{বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow 9(x^2 - 2x + 1 + y^2) = 4(x^2 - 4x + 4 + y^2) \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow 9x^2 - 18x + 9 + 9y^2 = 4x^2 - 16x + 16 + 4y^2 \quad [\text{যথাক্রমে ৯ এবং ৪ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">সব পদ বামপাশে পক্ষান্তর করে সরল করি:</div>
+    <div class="step">$\Rightarrow 9x^2 - 4x^2 + 9y^2 - 4y^2 - 18x + 16x + 9 - 16 = 0$</div>
+    <div class="step">$\Rightarrow 5x^2 + 5y^2 - 2x - 7 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">চলক ও ধ্রুবক পদ প্রমাণের অনুরূপ সাজিয়ে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 5(x^2 + y^2) = 2x + 7 \quad [৫ \text{ কমন নিয়ে ও পক্ষান্তর করে}]$</div>
+    <div class="step-explain"><b>অতএব, সঞ্চারপথের সমীকরণ $5(x^2+y^2)=2x+7$ (প্রমাণিত)।</b></div>
+
+    <hr>
+
+    <div class="problem-sub-title">(xi) $\left|z+1\right|+\left|z-1\right|=4$ হলে প্রমাণ কর যে, $3x^2+4y^2=12$ যেখানে $z=x+iy$</div>
+    <div class="solution-title">সমাধান (xi):</div>
+    <div class="step-explain">দেওয়া আছে সমীকরণ: $|z+1|+|z-1|=4$। এখানে $z = x+iy$ বসিয়ে পাই:</div>
+    <div class="step">$\left|x+iy+1\right| + \left|x+iy-1\right| = 4$</div>
+    <div class="step">$\Rightarrow \left|(x+1)+iy\right| + \left|(x-1)+iy\right| = 4 \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">মডuলাসের সূত্র ব্যবহার করে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{(x+1)^2 + y^2} + \sqrt{(x-1)^2 + y^2} = 4$</div>
+    <div class="step">$\Rightarrow \sqrt{(x+1)^2 + y^2} = 4 - \sqrt{(x-1)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে পাই:</div>
+    <div class="step">$\Rightarrow (x+1)^2 + y^2 = (4)^2 - 2 \cdot 4 \cdot \sqrt{(x-1)^2 + y^2} + \left(\sqrt{(x-1)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 1 + y^2 = 16 - 8\sqrt{(x-1)^2 + y^2} + x^2 - 2x + 1 + y^2 \quad [\text{বর্গ ভেঙে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $x^2, 1, y^2$ বর্জন করে পাই:</div>
+    <div class="step">$\Rightarrow 2x = 16 - 8\sqrt{(x-1)^2 + y^2} - 2x$</div>
+    <div class="step">$\Rightarrow 2x + 2x - 16 = -8\sqrt{(x-1)^2 + y^2} \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow 4x - 16 = -8\sqrt{(x-1)^2 + y^2}$</div>
+    <div class="step-explain">উভয় পক্ষকে ৪ দ্বারা ভাগ করে সমীকরণ ছোট করি:</div>
+    <div class="step">$\Rightarrow x - 4 = -2\sqrt{(x-1)^2 + y^2}$</div>
+    <div class="step-explain">রুট সম্পূর্ণ দূর করার জন্য পুনরায় উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (x - 4)^2 = \left(-2\sqrt{(x-1)^2 + y^2}\right)^2$</div>
+    <div class="step">$\Rightarrow x^2 - 8x + 16 = 4\left\{(x-1)^2 + y^2\right\} \quad [\text{বর্গ সম্পাদন করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 8x + 16 = 4(x^2 - 2x + 1 + y^2)$</div>
+    <div class="step">$\Rightarrow x^2 - 8x + 16 = 4x^2 - 8x + 4 + 4y^2 \quad [4 \text{ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে $-8x$ বাদ দিয়ে চলক বামে ও ধ্রুবক ডানে পক্ষান্তর করি:</div>
+    <div class="step">$\Rightarrow 16 - 4 = 4x^2 - x^2 + 4y^2$</div>
+    <div class="step">$\Rightarrow 12 = 3x^2 + 4y^2$</div>
+    <div class="step">$\Rightarrow 3x^2 + 4y^2 = 12 \quad [\text{পক্ষ পরিবর্তন করে}]$</div>
+    <div class="step-explain"><b>অতএব, প্রমাণিত হলো যে $3x^2+4y^2=12$।</b></div>
+</div>
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

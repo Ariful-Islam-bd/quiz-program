@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="bn" class="notranslate">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B Complex</title>
+    
+    <link rel="stylesheet" href="../../../../css/styles_math_sol.css" />
+
+    <link rel="stylesheet" href="../../../../katex/katex.min.css" />
+    <script defer src="../../../../katex/katex.min.js"></script>
+    <script defer src="../../../../katex/contrib/auto-render.min.js"></script>
+
+</head>
+<body>
+
+<div class="exercise-title">অধ্যায়: জটিল সংখ্যা<br>অনুশীলনী-৩(B)</div>
+<div class="container">
+<!--  $ <span class="note">[ </span>    \quad $ <span class="equation"> -->
+
+<div class="problem-card">
+    <div class="problem-title">৫. $z = 32 + i$ হলে $z + \bar{z}$ এর ঘনমূল নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রথমে আমাদের প্রশ্নে কী দেওয়া আছে তা লিখে নিতে হবে এবং অনুবন্ধী জটিল সংখ্যার মান বের করতে হবে।</div>
+    <div class="step">দেওয়া আছে, $z = 32 + i$</div>
+    <div class="step-explain">আমরা জানি, কোনো জটিল সংখ্যার অনুবন্ধী জটিল সংখ্যা (Conjugate complex number) বের করতে হলে কাল্পনিক অংশের চিহ্নের পরিবর্তন করতে হয়। সুতরাং $\bar{z}$ এর মান হবে:</div>
+    <div class="step">$\bar{z} = 32 - i \quad [\text{অনুবন্ধী জটিল সংখ্যা নিয়ে}]$</div>
+    <div class="step-explain">এখন আমাদের প্রশ্নে প্রদত্ত রাশি $z + \bar{z}$ এর সরল মান নির্ণয় করতে হবে:</div>
+    <div class="step">$\therefore z + \bar{z} = (32 + i) + (32 - i) \quad [z \text{ ও } \bar{z} \text{ এর মান বসিয়ে}]$</div>
+    <div class="step">$= 32 + i + 32 - i$</div>
+    <div class="step">$= 32 + 32 \quad [\text{কাল্পনিক অংশ } +i \text{ ও } -i \text{ কাটাকাটি করে}]$</div>
+    <div class="step">$= 64 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">সুতরাং, প্রশ্নানুযায়ী আমাদের $z + \bar{z}$ অর্থাৎ $64$ এর ঘনমূল ($\sqrt[3]{64}$) নির্ণয় করতে হবে। ধরি, এই ঘনমূলের মানটি হলো $x$।</div>
+    <div class="step">মনে করি, $x = \sqrt[3]{64}$</div>
+    <div class="step-explain">এখন সমীকরণের উভয় পক্ষকে ঘন (cube) করে রুট বর্জন করি:</div>
+    <div class="step">$\Rightarrow x^3 = 64 \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step-explain">ডানপক্ষের $64$ কে বামপক্ষে নিয়ে এসে ডানপক্ষ শূন্য করি। আমরা জানি $64 = 4^3$।</div>
+    <div class="step">$\Rightarrow x^3 - 64 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^3 - 4^3 = 0 \quad [\because 64 = 4^3]$</div>
+    <div class="step-explain">এখন বামপক্ষে বীজগণিতের $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow (x - 4)\left(x^2 + x \cdot 4 + 4^2\right) = 0 \quad [\text{উৎপাদকের সূত্র ব্যবহার করে}]$</div>
+    <div class="step">$\Rightarrow (x - 4)\left(x^2 + 4x + 16\right) = 0$</div>
+    <div class="step-explain">যেহেতু দুটি উৎপাদকের গুণফল শূন্য, তাই তারা আলাদা আলাদাভাবে শূন্য হবে।</div>
+    <div class="step-explain">হয়,</div>
+    <div class="step">$x - 4 = 0$</div>
+    <div class="step">$\Rightarrow x = 4 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">অথবা,</div>
+    <div class="step">$x^2 + 4x + 16 = 0$</div>
+    <div class="step-explain">এই দ্বিঘাত সমীকরণটিকে আদর্শ দ্বিঘাত সমীকরণ $ax^2 + bx + c = 0$ এর সাথে তুলনা করলে পাই: $a = 1, \ b = 4, \ c = 16$। আমরা জানি দ্বিঘাত সমীকরণের মূল বের করার সূত্র হলো $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$। এই সূত্রে মানগুলো বসাই:</div>
+    <div class="step">$\Rightarrow x = \frac{-4 \pm \sqrt{4^2 - 4 \cdot 1 \cdot 16}}{2 \cdot 1} \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{-4 \pm \sqrt{16 - 64}}{2} \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x = \frac{-4 \pm \sqrt{-48}}{2} \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">রুটের ভেতরের ঋণাত্মক বাস্তব সংখ্যাটিকে জটিল সংখ্যার নিয়মে সরল করি: $\sqrt{-48} = \sqrt{16 \cdot 3 \cdot (-1)} = 4\sqrt{3}i$।</div>
+    <div class="step">$\Rightarrow x = \frac{-4 \pm 4\sqrt{3}i}{2} \quad [\because \sqrt{-1} = i \text{ এবং } \sqrt{48} = 4\sqrt{3}]$</div>
+    <div class="step-explain">এখন লব থেকে $2$ কমন নিয়ে হরের $2$ এর সাথে কাটাকাটি করি:</div>
+    <div class="step">$\Rightarrow x = \frac{2\left(-2 \pm 2\sqrt{3}i\right)}{2} \quad [\text{লব থেকে ২ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow x = -2 \pm 2\sqrt{3}i \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step-explain">নির্ণেয় ঘনমূলের মানসমূহ একত্রিত করে পাই:</div>
+    <div class="step">$\sqrt[3]{64} = 4, \quad -2 + 2\sqrt{3}i, \quad -2 - 2\sqrt{3}i$</div>
+    <div class="step-explain">নির্ণেয় মান: $4, \ -2 \pm 2\sqrt{3}i$</div>
+
+    <hr>
+
+    <div class="problem-title">৬. দেখাও যে, $\sqrt[3]{i} + \sqrt[3]{-i} = 0$</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">এই গাণিতিক সমস্যাটি সমাধান করার জন্য আমাদের প্রথমে $\sqrt[3]{i}$ এবং $\sqrt[3]{-i}$ এর মান আলাদা আলাদাভাবে বের করে নিতে হবে। প্রথমে $\sqrt[3]{i}$ এর মান বের করি।</div>
+    <div class="step-explain">মনে করি, $x = \sqrt[3]{i}$</div>
+    <div class="step">$\Rightarrow x^3 = i \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুসারে $i^3 = i^2 \cdot i = (-1) \cdot i = -i$। সুতরাং, $i = -i^3$ লিখা যায়।</div>
+    <div class="step">$\Rightarrow x^3 = -i^3 \quad [\because i = -i^3 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^3 + i^3 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">বামপক্ষে $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow (x + i)\left(x^2 - x \cdot i + i^2\right) = 0 \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow (x + i)\left(x^2 - ix - 1\right) = 0 \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">হয়, $x + i = 0 \Rightarrow x = -i$। অথবা, $x^2 - ix - 1 = 0$ দ্বিঘাত সমীকরণটি সমাধান করে আমরা পূর্বের পাঠে পেয়েছিলাম $x = \frac{\pm \sqrt{3} + i}{2}$। শিক্ষার্থীদের বোঝার সুবিধার্থে আমরা এখানে কেবল বাস্তবভিত্তিক প্রথম মূলটি ($x = -i$) বিবেচনা করে প্রমাণটি সহজভাবে করতে পারি, অথবা সবকটি মূলের যোগফল শূন্য তাও দেখাতে পারি। চলুন, সবচেয়ে সহজ ও নিখুঁত মূলটি নিয়ে প্রমাণ করি:</div>
+    <div class="step">$\therefore \sqrt[3]{i} = -i$ ---- (১ নং সমীকরণ)</div>
+
+    <div class="step-explain">এখন একইভাবে $\sqrt[3]{-i}$ এর মান বের করি।</div>
+    <div class="step-explain">মনে করি, $y = \sqrt[3]{-1 \cdot i}$</div>
+    <div class="step">$\Rightarrow y^3 = -i \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step-explain">আমরা জানি, $-i = i^3$। এই মানটি ডানপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow y^3 = i^3 \quad [\because i^3 = -i \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow y^3 - i^3 = 0 \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">বামপক্ষে $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ এর উৎপাদকের সূত্র প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow (y - i)\left(y^2 + y \cdot i + i^2\right) = 0 \quad [\text{সূত্রের সাহায্যে}]$</div>
+    <div class="step">$\Rightarrow (y - i)\left(y^2 + iy - 1\right) = 0 \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">প্রথম উৎপাদক থেকে পাই, $y - i = 0 \Rightarrow y = i$। এই মূলটি বিবেচনা করে পাই:</div>
+    <div class="step">$\therefore \sqrt[3]{-i} = i$ ---- (২ নং সমীকরণ)</div>
+
+    <div class="step-explain">এখন বামপক্ষ (L.H.S.) দিয়ে শুরু করে ১ ও ২ নং সমীকরণের প্রাপ্ত মান দুটি বসিয়ে দিই:</div>
+    <div class="step">\text{L.H.S.} = \sqrt[3]{i} + \sqrt[3]{-i}</div>
+    <div class="step">$= (-i) + (i) \quad [\text{১ ও ২ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step">$= -i + i$</div>
+    <div class="step">$= 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $\sqrt[3]{i} + \sqrt[3]{-i} = 0$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৭. মান নির্ণয় ও প্রমাণ সংক্রান্ত গাণিতিক সমস্যা:</div>
+
+    <div class="problem-sub-title">(i) যদি $P = \frac{1 + i}{\sqrt{2}}$ হয়, তবে দেখাও যে, $P^6 + P^4 + P^2 + 1 = 0$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">প্রথমে প্রশ্নে দেওয়া মানটি লিখে নিই এবং সেখান থেকে প্রয়োজনীয় পদের মান বের করার চেষ্টা করি:</div>
+    <div class="step">দেওয়া আছে, $P = \frac{1 + i}{\sqrt{2}}$</div>
+    <div class="step-explain">হিসাব সহজ করার জন্য সমীকরণটির উভয় পক্ষকে বর্গ (square) করি:</div>
+    <div class="step">$\Rightarrow P^2 = \left( \frac{1 + i}{\sqrt{2}} \right)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow P^2 = \frac{(1 + i)^2}{(\sqrt{2})^2} \quad [\text{লব ও হরের বর্গ আলাদা করে}]$</div>
+    <div class="step-explain">লবে $(a+b)^2 = a^2 + 2ab + b^2$ এর সূত্র এবং হরে $(\sqrt{2})^2 = 2$ বসাই:</div>
+    <div class="step">$\Rightarrow P^2 = \frac{1^2 + 2 \cdot 1 \cdot i + i^2}{2} \quad [\text{বর্গের সূত্র ভেঙে}]$</div>
+    <div class="step">$\Rightarrow P^2 = \frac{1 + 2i - 1}{2} \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow P^2 = \frac{2i}{2} \quad [\text{লবে ১ থেকে ১ বিয়োগ করে}]$</div>
+    <div class="step">$\Rightarrow P^2 = i \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step-explain">আমরা $P^2 = i$ পেয়ে গেলাম। এখন বামপক্ষের অন্যান্য পদ যেমন $P^4$ এবং $P^6$ এর মান $P^2$ এর মাধ্যমে বের করি:</div>
+    <div class="step">$P^4 = \left(P^2\right)^2 = (i)^2 = -1 \quad [P^2 \text{ এর মান বসিয়ে এবং } i^2 = -1]$</div>
+    <div class="step">$P^6 = \left(P^2\right)^3 = (i)^3 = i^2 \cdot i = (-1) \cdot i = -i \quad [P^2 \text{ এর মান বসিয়ে}]$</div>
+    <div class="step-explain">এখন মূল বামপক্ষ (L.H.S.) লিখে প্রাপ্ত মানগুলো একে একে বসিয়ে দিই:</div>
+    <div class="step">\text{L.H.S.} = P^6 + P^4 + P^2 + 1</div>
+    <div class="step">$= (-i) + (-1) + (i) + 1 \quad [P^6, P^4, P^2 \text{ এর মান বসিয়ে}]$</div>
+    <div class="step">$= -i - 1 + i + 1 \quad [\text{ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step">$= (-i + i) + (-1 + 1) \quad [\text{বাস্তব ও কাল্পনিক অংশ সাজিয়ে}]$</div>
+    <div class="step">$= 0 + 0 = 0 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $P^6 + P^4 + P^2 + 1 = 0$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) দেখাও যে, $1 + i + i^2 + i^3 + \dots + i^{39} = 0$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">প্রদত্ত রাশিটি লক্ষ্য করলে দেখা যায়, এটি একটি গুণোত্তর ধারা (Geometric Progression)। যার প্রথম পদ $a = 1$, সাধারণ অনুপাত $r = \frac{i}{1} = i$। এখানে মোট পদের সংখ্যা কত তা বের করা প্রয়োজন। ধারাটি $i^0$ (যা ১) থেকে শুরু হয়ে $i^{39}$ পর্যন্ত গেছে। সুতরাং মোট পদের সংখ্যা $n = 39 - 0 + 1 = 40$ টি।</div>
+    <div class="step">এখানে প্রথম পদ, $a = 1$</div>
+    <div class="step">সাধারণ অনুপাত, $r = i$</div>
+    <div class="step">মোট পদ সংখ্যা, $n = 40$</div>
+    <div class="step-explain">আমরা জানি, গুণোত্তর ধারার সমষ্টির সূত্র হলো: $S_n = \frac{a\left(1 - r^n\right)}{1 - r}$। এই সূত্রে মানগুলো বসাই:</div>
+    <div class="step">\text{L.H.S.} = 1 + i + i^2 + i^3 + \dots + i^{39}</div>
+    <div class="step">$= \frac{1 \cdot \left(1 - i^{40}\right)}{1 - i} \quad [\text{গুণোত্তর ধারার সমষ্টির সূত্রানুযায়ী}]$</div>
+    <div class="step">$= \frac{1 - i^{40}}{1 - i} \quad [\text{১ দ্বারা গুণ করে}]$</div>
+    <div class="step-explain">এখন আমাদের $i^{40}$ এর মান বের করতে হবে। আমরা জানি $i^4 = 1$। সূচকের নিয়মে ৪০ কে ৪ এর গুণিতক আকারে সাজালে পাই:</div>
+    <div class="step">$i^{40} = \left(i^4\right)^{10} = (1)^{10} = 1 \quad [\because i^4 = 1]$</div>
+    <div class="step-explain">এখন এই মানটি ভগ্নাংশের লবে বসিয়ে দিই:</div>
+    <div class="step">$= \frac{1 - 1}{1 - i} \quad [\because i^{40} = 1 \text{ বসিয়ে}]$</div>
+    <div class="step">$= \frac{0}{1 - i} \quad [\text{লব বিয়োগ করে}]$</div>
+    <div class="step-explain">আমরা জানি, শূন্যকে যেকোনো অশূন্য সংখ্যা দ্বারা ভাগ করলে ভাগফল সর্বদা শূন্য হয়।</div>
+    <div class="step">$= 0$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain"><b>বিকল্প পদ্ধতি (সহজ নিয়ম):</b> আমরা জানি, $i$ এর পরপর ৪টি ক্রমিক ঘাতের সমষ্টি সর্বদা শূন্য হয়। যেমন: $1 + i + i^2 + i^3 = 1 + i - 1 - i = 0$। প্রদত্ত ধারায় মোট ৪০টি পদ রয়েছে, যা ৪ দ্বারা নিঃশেষে বিভাজ্য ($40 \div 4 = 10$টি দল)। প্রতি ৪টি পদের সমষ্টি ০ হওয়ায় সম্পূর্ণ ধারাটির সমষ্টিও $10 \cdot 0 = 0$ হবে।</div>
+    <div class="step-explain">অতএব, $1 + i + i^2 + i^3 + \dots + i^{39} = 0$ [দেখানো হলো]</div>
+</div>
+
+<div class="problem-card">
+    <div class="problem-title">৭. জটিল সংখ্যার মান বসিয়ে রাশিটির মান নির্ণয় ও প্রমাণ:</div>
+
+    <div class="problem-sub-title">(iii) যদি $x = 2 + i$ হয়, তবে দেখাও যে, $x^4 - 4x^3 + 6x^2 - 4x + 5 = 0$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">প্রথমে প্রদত্ত সমীকরণটি লিখে সেখান থেকে জটিল বা কাল্পনিক অংশটি ($i$) বর্জন করে একটি সাধারণ বাস্তব সমীকরণ তৈরি করব।</div>
+    <div class="step">দেওয়া আছে, $x = 2 + i$</div>
+    <div class="step">$\Rightarrow x - 2 = i \quad [\text{২ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন কাল্পনিক অংশ $i$ কে সরানোর জন্য উভয় পক্ষকে বর্গ (square) করি:</div>
+    <div class="step">$\Rightarrow (x - 2)^2 = i^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step-explain">বামপক্ষে $(a-b)^2 = a^2 - 2ab + b^2$ এর সূত্র এবং ডানপক্ষে $i^2 = -1$ বসাই:</div>
+    <div class="step">$\Rightarrow x^2 - 2 \cdot x \cdot 2 + 2^2 = -1 \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 4 = -1 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 4 + 1 = 0 \quad [\text{-১ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 5 = 0$ ---- (১ নং সমীকরণ)</div>
+    <div class="step-explain">আমরা পেলাম $x^2 - 4x + 5 = 0$। এখন মূল বামপক্ষ (L.H.S.) কে এই উৎপাদকটির মাধ্যমে সাজাবো যেন মান বসিয়ে খুব সহজে উত্তর বের করা যায়।</div>
+    <div class="step">\text{L.H.S.} = x^4 - 4x^3 + 6x^2 - 4x + 5</div>
+    <div class="step-explain">প্রথম দুটি পদ থেকে $x^2$ কমন নিলে আমাদের উৎপাদক $x^2 - 4x + 5$ এর প্রথম দুটি পদের সাথে হুবহু মিলে যায়:</div>
+    <div class="step">$= x^2\left(x^2 - 4x + 5\right) - 5x^2 + 6x^2 - 4x + 5 \quad [\text{১ নং সমীকরণের উৎপাদক সাজিয়ে লিখে ব্যালেন্স করে}]$</div>
+    <div class="step-explain">এখানে অতিরিক্ত আসা $-5x^2$ কে মূল রাশির $+6x^2$ এর সাথে মিলাতে সরল করি:</div>
+    <div class="step">$= x^2\left(x^2 - 4x + 5\right) + x^2 - 4x + 5 \quad [-5x^2 + 6x^2 = x^2 \text{ করে}]$</div>
+    <div class="step-explain">লক্ষ্য করুন, শেষের অংশটি সরাসরি $x^2 - 4x + 5$ এর সমান হয়ে গেছে। এখন ১ নং সমীকরণ হতে এই উৎপাদকের মান $0$ বসিয়ে দিই:</div>
+    <div class="step">$= x^2 \cdot (0) + (0) \quad [\text{১ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step">$= 0 + 0 = 0 \quad [\text{গুণ ও যোগ করে}]$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^4 - 4x^3 + 6x^2 - 4x + 5 = 0$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $x = 2 + \sqrt{-3}$ হলে $3x^4 - 17x^3 + 41x^2 - 35x + 5$ এর মান নির্ণয় কর।</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">প্রথমে প্রদত্ত $x$ এর মান থেকে কাল্পনিক অংশকে সরল করে সমীকরণ তৈরি করি:</div>
+    <div class="step">দেওয়া আছে, $x = 2 + \sqrt{-3}$</div>
+    <div class="step">$\Rightarrow x = 2 + \sqrt{3}i \quad [\because \sqrt{-1} = i \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x - 2 = \sqrt{3}i \quad [\text{২ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন কাল্পনিক বা জটিল অংশ অপসারণের জন্য উভয় পক্ষকে বর্গ করি:</div>
+    <div class="step">$\Rightarrow (x - 2)^2 = \left(\sqrt{3}i\right)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 2 \cdot x \cdot 2 + 2^2 = 3i^2 \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 4 = 3 \cdot (-1) \quad [\text{যেহেতু } i^2 = -1]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 4 = -3 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 4 + 3 = 0 \quad [\text{-৩ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^2 - 4x + 7 = 0$ ---- (১ নং সমীকরণ)</div>
+    <div class="step-explain">এখন প্রদত্ত মূল বহুপদী রাশিটির মান বের করার জন্য বহুপদীটিকে এই উৎপাদক $\left(x^2 - 4x + 7\right)$ দ্বারা ভাগ করার পদ্ধতিতে বা সাজিয়ে লেখার মাধ্যমে সরল করব:</div>
+    <div class="step">\text{প্রদত্ত রাশি} = 3x^4 - 17x^3 + 41x^2 - 35x + 5</div>
+    <div class="step-explain">প্রথম পদ $3x^4$ মেলাতে উৎপাদকটিকে $3x^2$ দ্বারা গুণ করে সাজাই এবং পরবর্তী পদগুলো ধাপে ধাপে ব্যালেন্স করি:</div>
+    <div class="step">$= 3x^2\left(x^2 - 4x + 7\right) - 5x^3 + 20x^2 - 35x + 5 \quad [3x^2(-4x) = -12x^3 \text{ হয়, তাই -৫}x^3 \text{ দিয়ে ব্যালেন্স করে এবং } 3x^2 \cdot 7 = 21x^2 \text{ বিয়োগ করে}]$</div>
+    <div class="step-explain">এখন অবশিষ্ট পদগুলোর প্রথম পদ $-5x^3$ মেলাতে উৎপাদকটিকে $-5x$ দ্বারা গুণ করি:</div>
+    <div class="step">$= 3x^2\left(x^2 - 4x + 7\right) - 5x\left(x^2 - 4x + 7\right) + 5 \quad [-5x(-4x) = 20x^2 \text{ এবং } -5x \cdot 7 = -35x \text{ যা রাশির সাথে মিলে যায়}]$</div>
+    <div class="step-explain">এখন ১ নং সমীকরণ থেকে $\left(x^2 - 4x + 7\right) = 0$ মানটি সমীকরণে বসিয়ে দিই:</div>
+    <div class="step">$= 3x^2 \cdot (0) - 5x \cdot (0) + 5 \quad [\text{১ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step">$= 0 - 0 + 5$</div>
+    <div class="step">$= 5 \quad [\text{সরল করে}]$</div>
+    <div class="step-explain">নির্ণেয় মান: $5$</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(v) $x = -1 + \sqrt{2}i$ হলে দেখাও যে, $x^4 + 4x^3 + 6x^2 + 4x = 3$</div>
+    <div class="solution-title">সমাধান (v):</div>
+    <div class="step-explain">প্রথমে প্রদত্ত $x$ এর মান লিখে পূর্বের নিয়মগুলোর মতো জটিল সংখ্যা বর্জনকারী একটি দ্বিঘাত উৎপাদক তৈরি করি:</div>
+    <div class="step">দেওয়া আছে, $x = -1 + \sqrt{2}i$</div>
+    <div class="step">$\Rightarrow x + 1 = \sqrt{2}i \quad [\text{-১ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step-explain">উভয় পক্ষকে বর্গ করে কাল্পনিক অংশটি তুলে দিই:</div>
+    <div class="step">$\Rightarrow (x + 1)^2 = \left(\sqrt{2}i\right)^2 \quad [\text{উভয় পক্ষকে বর্গ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2 \cdot x \cdot 1 + 1^2 = 2i^2 \quad [(a+b)^2 \text{ এর সূত্রানুযায়ী}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 1 = 2 \cdot (-1) \quad [\because i^2 = -1 \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 1 = -2 \quad [\text{গুণ করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 1 + 2 = 0 \quad [\text{-২ কে বামপক্ষে পক্ষান্তর করে}]$</div>
+    <div class="step">$\Rightarrow x^2 + 2x + 3 = 0$ ---- (১ নং সমীকরণ)</div>
+    <div class="step-explain">আমরা পেলাম $x^2 + 2x + 3 = 0$। এখন প্রমাণের বামপক্ষ (L.H.S.) লিখে উৎপাদকটির সাপেক্ষে সাজিয়ে লিখি:</div>
+    <div class="step">\text{L.H.S.} = x^4 + 4x^3 + 6x^2 + 4x</div>
+    <div class="step-explain">প্রথম পদ $x^4$ মেলাতে উৎপাদকটিকে $x^2$ দ্বারা গুণ করি এবং অবশিষ্ট অংশ ব্যালেন্স করি:</div>
+    <div class="step">$= x^2\left(x^2 + 2x + 3\right) + 2x^3 + 3x^2 + 4x \quad [x^2 \cdot 2x = 2x^3 \text{ হয়, তাই } 4x^3 \text{ মেলাতে আরও ২}x^3 \text{ যোগ করে}]$</div>
+    <div class="step-explain">এখন অবশিষ্ট পদের প্রথম পদ $2x^3$ মেলাতে উৎপাদকের সাথে $2x$ গুণ করি এবং ব্যালেন্স করি:</div>
+    <div class="step">$= x^2\left(x^2 + 2x + 3\right) + 2x\left(x^2 + 2x + 3\right) - x^2 - 2x \quad [2x \cdot 2x = 4x^2 \text{ হয়, তাই } 3x^2 \text{ মেলাতে -}x^2 \text{ করে}]$</div>
+    <div class="step-explain">শেষের দুটি পদ $-x^2 - 2x$ থেকে $-1$ কমন নিলে তা উৎপাদকের প্রথম অংশগুলোর সাথে মিলে যায়:</div>
+    <div class="step">$= x^2\left(x^2 + 2x + 3\right) + 2x\left(x^2 + 2x + 3\right) - 1\left(x^2 + 2x + 3\right) + 3 \quad [\text{-৩ কে ব্যালেন্স করতে বাইরে +৩ যোগ করে}]$</div>
+    <div class="step-explain">এখন ১ নং সমীকরণ হতে $\left(x^2 + 2x + 3\right) = 0$ মানটি সব জায়গায় বসিয়ে পাই:</div>
+    <div class="step">$= x^2 \cdot (0) + 2x \cdot (0) - 1 \cdot (0) + 3 \quad [\text{১ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step">$= 0 + 0 - 0 + 3$</div>
+    <div class="step">$= 3$</div>
+    <div class="step">$= \text{R.H.S.}$</div>
+    <div class="step-explain">অতএব, $x^4 + 4x^3 + 6x^2 + 4x = 3$ [দেখানো হলো]</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">৮. $\sqrt[3]{a + ib} = x + iy$ হলে, প্রমাণ কর যে:</div>
+
+    <div class="problem-sub-title">(i) $\sqrt[3]{a - ib} = x - iy$</div>
+    <div class="solution-title">সমাধান (i):</div>
+    <div class="step-explain">প্রথমে প্রশ্নে প্রদত্ত মূল সমীকরণটি লিখে নিই এবং বামপক্ষের ঘনমূল অপসারণের জন্য উভয় পক্ষকে ঘন করি:</div>
+    <div class="step">দেওয়া আছে, $\sqrt[3]{a + ib} = x + iy$</div>
+    <div class="step">$\Rightarrow \left(\sqrt[3]{a + ib}\right)^3 = (x + iy)^3 \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step">$\Rightarrow a + ib = (x + iy)^3$</div>
+    <div class="step-explain">এখন ডানপক্ষে বীজগণিতের ঘনক নির্ণয়ের সূত্র $(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3 \cdot x^2 \cdot (iy) + 3 \cdot x \cdot (iy)^2 + (iy)^3 \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi + 3xy^2i^2 + y^3i^3 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুসারে $i^2 = -1$ এবং $i^3 = i^2 \cdot i = -i$। এই মানগুলো ডানপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi + 3xy^2(-1) + y^3(-i) \quad [\because i^2 = -1 \text{ এবং } i^3 = -i \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi - 3xy^2 - y^3i \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের পদগুলোকে বাস্তব (রুট বা $i$ মুক্ত) ও কাল্পনিক ($i$ যুক্ত) অংশে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow a + ib = \left(x^3 - 3xy^2\right) + \left(3x^2y - y^3\right)i \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$a = x^3 - 3xy^2$ ---- (১ নং সমীকরণ)</div>
+    <div class="step">$b = 3x^2y - y^3$ ---- (২ নং সমীকরণ)</div>
+    <div class="step-explain">এখন ১ নং সমীকরণ থেকে ২ নং সমীকরণকে জটিল আকারে বিয়োগ করার জন্য আমরা $a - ib$ রাশিটি গঠন করি:</div>
+    <div class="step">$a - ib = \left(x^3 - 3xy^2\right) - \left(3x^2y - y^3\right)i \quad [\text{১ ও ২ নং সমীকরণের মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a - ib = x^3 - 3xy^2 - 3x^2yi + y^3i \quad [\text{ব্র্যাকেট তুলে গুণ করে}]$</div>
+    <div class="step-explain">এই রাশিটিকে পুনরায় বর্গের বা ঘনকের সূত্রে সাজানোর জন্য $i^2 = -1$ এবং $-i = i^3$ এর ধারণাকে বিপরীতভাবে ব্যবহার করি:</div>
+    <div class="step">$\Rightarrow a - ib = x^3 - 3x^2yi + 3xy^2(-1) - y^3(-i) \quad [\text{চিহ্ন ও পদ সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow a - ib = x^3 - 3 \cdot x^2 \cdot (iy) + 3 \cdot x \cdot (iy)^2 - (iy)^3 \quad [\because -1 = i^2 \text{ এবং } -i = i^3 \text{ বসিয়ে}]$</div>
+    <div class="step-explain">ডানপক্ষের রাশিটি এখন নিখুঁতভাবে $(A-B)^3 = A^3 - 3A^2B + 3AB^2 - B^3$ এর সূত্রে রূপ নিয়েছে।</div>
+    <div class="step">$\Rightarrow a - ib = (x - iy)^3 \quad [\text{ঘনকের সূত্র গঠন করে}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষের ঘাত দূর করার জন্য উভয় পক্ষকে ঘনমূল (cube root) করি:</div>
+    <div class="step">$\Rightarrow \sqrt[3]{a - ib} = \sqrt[3]{(x - iy)^3}$</div>
+    <div class="step">$\Rightarrow \sqrt[3]{a - ib} = x - iy \quad [\text{ঘনমূল করে}]$</div>
+    <div class="step-explain">অতএব, $\sqrt[3]{a - ib} = x - iy$ [প্রমাণিত বা দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(ii) $4(x^2 - y^2) = \frac{a}{x} + \frac{b}{y}$</div>
+    <div class="solution-title">সমাধান (ii):</div>
+    <div class="step-explain">এই উপ-প্রশ্নটি প্রমাণ করার জন্য আমরা (i) নং সমাধানের শুরুতে প্রাপ্ত ১ নং ও ২ নং সমীকরণের সাহায্য নেব।</div>
+    <div class="step-explain">(i) নং এর সমীকরণ হতে আমরা জানি:</div>
+    <div class="step">$a = x^3 - 3xy^2$ ---- (১ নং সমীকরণ)</div>
+    <div class="step">$b = 3x^2y - y^3$ ---- (২ নং সমীকরণ)</div>
+    <div class="step-explain">১ নং সমীকরণের ডানপক্ষ থেকে সাধারণ উৎপাদক $x$ কমন নিই:</div>
+    <div class="step">$a = x\left(x^2 - 3y^2\right) \quad [\text{ডানপক্ষ থেকে } x \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{a}{x} = x^2 - 3y^2$ ---- (৩ নং সমীকরণ) $\quad [\text{উভয় পক্ষকে } x \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">একইভাবে, ২ নং সমীকরণের ডানপক্ষ থেকে সাধারণ উৎপাদক $y$ কমন নিই:</div>
+    <div class="step">$b = y\left(3x^2 - y^2\right) \quad [\text{ডানপক্ষ থেকে } y \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{b}{y} = 3x^2 - y^2$ ---- (৪ নং সমীকরণ) $\quad [\text{উভয় পক্ষকে } y \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষ (R.H.S.) তৈরি করার জন্য ৩ নং ও ৪ নং সমীকরণ দুটি যোগ করি:</div>
+    <div class="step">$\frac{a}{x} + \frac{b}{y} = \left(x^2 - 3y^2\right) + \left(3x^2 - y^2\right) \quad [\text{৩ ও ৪ নং সমীকরণ যোগ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{a}{x} + \frac{b}{y} = x^2 - 3y^2 + 3x^2 - y^2 \quad [\text{ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step-explain">একই জাতীয় চলক বা বাস্তব পদগুলো একসাথে হিসাব বা যোগ করি:</div>
+    <div class="step">$\Rightarrow \frac{a}{x} + \frac{b}{y} = \left(x^2 + 3x^2\right) + \left(-3y^2 - y^2\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{a}{x} + \frac{b}{y} = 4x^2 - 4y^2 \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">ডানপক্ষ থেকে সাধারণ ধ্রুবক $4$ কমন নিই:</div>
+    <div class="step">$\Rightarrow \frac{a}{x} + \frac{b}{y} = 4(x^2 - y^2) \quad [\text{৪ কমন নিয়ে}]$</div>
+    <div class="step-explain">সমীকরণটির বামপক্ষ ও ডানপক্ষকে পারস্পরিক বিনিময় করে সাজিয়ে লিখলে পাই:</div>
+    <div class="step">$\therefore 4(x^2 - y^2) = \frac{a}{x} + \frac{b}{y}$</div>
+    <div class="step-explain">অতএব, $4(x^2 - y^2) = \frac{a}{x} + \frac{b}{y}$ [প্রমাণিত বা দেখানো হলো]</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">৮. $\sqrt[3]{a + ib} = x + iy$ হলে, প্রমাণ কর যে:</div>
+
+    <div class="problem-sub-title">(iii) $\sqrt{x^2 + y^2} = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$</div>
+    <div class="solution-title">সমাধান (iii):</div>
+    <div class="step-explain">প্রথমে প্রশ্নে প্রদত্ত মূল সমীকরণটি লিখে নিই এবং বামপক্ষের ঘনমূল অপসারণের জন্য উভয় পক্ষকে ঘন (cube) করি:</div>
+    <div class="step">দেওয়া আছে, $\sqrt[3]{a + ib} = x + iy$</div>
+    <div class="step">$\Rightarrow \left(\sqrt[3]{a + ib}\right)^3 = (x + iy)^3 \quad [\text{উভয় পক্ষকে ঘন করে}]$</div>
+    <div class="step">$\Rightarrow a + ib = (x + iy)^3$</div>
+    <div class="step-explain">এখন ডানপক্ষে বীজগণিতের ঘনক নির্ণয়ের সূত্র $(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3 \cdot x^2 \cdot (iy) + 3 \cdot x \cdot (iy)^2 + (iy)^3 \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi + 3xy^2i^2 + y^3i^3 \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুসারে $i^2 = -1$ এবং $i^3 = i^2 \cdot i = -i$। এই মানগুলো ডানপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi + 3xy^2(-1) + y^3(-i) \quad [\text{মান বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow a + ib = x^3 + 3x^2yi - 3xy^2 - y^3i \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের পদগুলোকে বাস্তব ($i$-মুক্ত) ও কাল্পনিক ($i$-যুক্ত) অংশে সাজিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow a + ib = \left(x^3 - 3xy^2\right) + \left(3x^2y - y^3\right)i \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">উভয় পক্ষ থেকে বাস্তব ও কাল্পনিক অংশ সমীকৃত (আলাদা) করে পাই:</div>
+    <div class="step">$a = x^3 - 3xy^2$ ---- (১ নং সমীকরণ)</div>
+    <div class="step">$b = 3x^2y - y^3$ ---- (২ নং সমীকরণ)</div>
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষের ভেতরের অংশটি তৈরি করার জন্য আমরা প্রথমে $\frac{a}{x}$ এবং $\frac{b}{y}$ এর মান আলাদাভাবে বের করব। ১ নং সমীকরণকে $x$ দ্বারা এবং ২ নং সমীকরণকে $y$ দ্বারা ভাগ করি:</div>
+    <div class="step">$\frac{a}{x} = \frac{x^3 - 3xy^2}{x} \quad [\text{১ নং সমীকরণের উভয় পক্ষকে } x \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{a}{x} = \frac{x\left(x^2 - 3y^2\right)}{x} \quad [\text{লব থেকে } x \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{a}{x} = x^2 - 3y^2$ ---- (৩ নং সমীকরণ) $\quad [\text{লব ও হরের } x \text{ কাটাকাটি করে}]$</div>
+    <div class="step-explain">একইভাবে ২ নং সমীকরণের ক্ষেত্রে পাই:</div>
+    <div class="step">\frac{b}{y} = \frac{3x^2y - y^3}{y} \quad [\text{২ নং সমীকরণের উভয় পক্ষকে } y \text{ দ্বারা ভাগ করে}]$</div>
+    <div class="step">$\Rightarrow \frac{b}{y} = \frac{y\left(3x^2 - y^2\right)}{y} \quad [\text{লব থেকে } y \text{ কমন নিয়ে}]$</div>
+    <div class="step">$\Rightarrow \frac{b}{y} = 3x^2 - y^2$ ---- (৪ নং সমীকরণ) $\quad [\text{লব ও হরের } y \text{ কাটাকাটি করে}]$</div>
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষের রুটের ভেতরের অংশটি তৈরি করার জন্য $\frac{b}{2y} - \frac{a}{2x}$ রাশিটি লিখি এবং ৩ ও ৪ নং সমীকরণের মান ব্যবহার করি:</div>
+    <div class="step">\text{R.H.S. এর ভেতরের অংশ} = \frac{b}{2y} - \frac{a}{2x}</div>
+    <div class="step">$= \frac{1}{2}\left(\frac{b}{y}\right) - \frac{1}{2}\left(\frac{a}{x}\right) \quad [\text{ভগ্নাংশ ভেঙে লিখে}]$</div>
+    <div class="step">$= \frac{1}{2}\left(3x^2 - y^2\right) - \frac{1}{2}\left(x^2 - 3y^2\right) \quad [\text{৩ ও ৪ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(3x^2 - y^2\right) - \left(x^2 - 3y^2\right) \right] \quad [\text{সাধারণ উৎপাদক } \frac{1}{2} \text{ কমন নিয়ে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ 3x^2 - y^2 - x^2 + 3y^2 \right] \quad [\text{মাইনাস চিহ্ন দিয়ে ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left[ \left(3x^2 - x^2\right) + \left(3y^2 - y^2\right) \right] \quad [\text{সদৃশ পদ সাজিয়ে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot \left( 2x^2 + 2y^2 \right) \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step">$= \frac{1}{2} \cdot 2\left(x^2 + y^2\right) \quad [\text{ব্র্যাকেটের ভেতর থেকে ২ কমন নিয়ে}]$</div>
+    <div class="step">$= x^2 + y^2 \quad [\text{লব ও হরের ২ কাটাকাটি করে}]$</div>
+    <div class="step-explain">আমরা পেলাম $\frac{b}{2y} - \frac{a}{2x} = x^2 + y^2$। এখন উভয় পক্ষের উপর বর্গমূল (square root) নিয়ে পাই:</div>
+    <div class="step">$\Rightarrow \sqrt{\frac{b}{2y} - \frac{a}{2x}} = \sqrt{x^2 + y^2}$</div>
+    <div class="step-explain">বামপক্ষ ও ডানপক্ষকে পারস্পরিক বিনিময় করে সাজিয়ে লিখলে পাই:</div>
+    <div class="step">$\therefore \sqrt{x^2 + y^2} = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$</div>
+    <div class="step-explain">অতএব, $\sqrt{x^2 + y^2} = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$ [দেখানো হলো]</div>
+
+    <hr>
+
+    <div class="problem-sub-title">(iv) $-2(x^2 + y^2) = \frac{a}{x} - \frac{b}{y}$</div>
+    <div class="solution-title">সমাধান (iv):</div>
+    <div class="step-explain">এই উপ-প্রশ্নটি প্রমাণ করার জন্য আমরা পূর্বের সমীকরণ দুটি ব্যবহার করব। (iii) নং গাণিতিক সমস্যার সমাধান হতে আমরা প্রাপ্ত ৩ নং ও ৪ নং সমীকরণটি সরাসরি পাই:</div>
+    <div class="step">$\frac{a}{x} = x^2 - 3y^2$ ---- (৩ নং সমীকরণ)</div>
+    <div class="step">$\frac{b}{y} = 3x^2 - y^2$ ---- (৪ নং সমীকরণ)</div>
+    <div class="step-explain">এখন প্রমাণের ডানপক্ষ (R.H.S.) তৈরি করার জন্য ৩ নং সমীকরণ থেকে ৪ নং সমীকরণ বিয়োগ করি:</div>
+    <div class="step">\text{R.H.S.} = \frac{a}{x} - \frac{b}{y}</div>
+    <div class="step">$= \left(x^2 - 3y^2\right) - \left(3x^2 - y^2\right) \quad [\text{৩ নং হতে ৪ নং সমীকরণ বিয়োগ করে}]$</div>
+    <div class="step">$= x^2 - 3y^2 - 3x^2 + y^2 \quad [\text{মাইনাস চিহ্ন দিয়ে ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step-explain">বাস্তব চলক বা সদৃশ পদগুলো একসাথে হিসাব বা সরল করি:</div>
+    <div class="step">$= \left(x^2 - 3x^2\right) + \left(-3y^2 + y^2\right) \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= -2x^2 - 2y^2 \quad [\text{বিয়োগ করে}]$</div>
+    <div class="step-explain">ডানপক্ষের উভয় পদ থেকে সাধারণ উৎপাদক $-2$ কমন নিই:</div>
+    <div class="step">$= -2(x^2 + y^2) \quad [\text{-২ কমন নিয়ে}]$</div>
+    <div class="step-explain">আমরা দেখতে পাচ্ছি যে সরলীকৃত মানটি প্রমাণের বামপক্ষের সমান। সমীকরণটি সাজিয়ে লিখলে পাই:</div>
+    <div class="step">$\Rightarrow \frac{a}{x} - \frac{b}{y} = -2(x^2 + y^2)$</div>
+    <div class="step">$\therefore -2(x^2 + y^2) = \frac{a}{x} - \frac{b}{y}$</div>
+    <div class="step-explain">অতএব, $-2(x^2 + y^2) = \frac{a}{x} - \frac{b}{y}$ [দেখানো হলো]</div>
+</div>
+
+
+<div class="problem-card">
+    <div class="problem-title">৯. $7 + 8i = (p + iq)^3$ হলে, প্রমাণ কর যে, $p^2 - q^2 = \frac{7}{4p} + \frac{2}{q}$</div>
+    <div class="solution-title">সমাধান:</div>
+    <div class="step-explain">প্রথমে প্রশ্নে প্রদত্ত মূল সমীকরণটি লিখে নেব এবং ডানপক্ষের ঘনককে বীজগণিতীয় সূত্রে ভেঙে বাস্তব ও কাল্পনিক অংশ আলাদা করব।</div>
+    <div class="step">দেওয়া আছে, $7 + 8i = (p + iq)^3$</div>
+    <div class="step-explain">ডানপক্ষের সমীকরণটিকে সুবিধার্থে বামপক্ষে এবং বামপক্ষকে ডানপক্ষে নিয়ে পারস্পরিক বিনিময় করি:</div>
+    <div class="step">$\Rightarrow (p + iq)^3 = 7 + 8i \quad [\text{পক্ষান্তর করে}]$</div>
+    <div class="step-explain">এখন বামপক্ষে ঘনক নির্ণয়ের সূত্র $(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$ প্রয়োগ করি:</div>
+    <div class="step">$\Rightarrow p^3 + 3 \cdot p^2 \cdot (iq) + 3 \cdot p \cdot (iq)^2 + (iq)^3 = 7 + 8i \quad [\text{সূত্রে ভেঙে}]$</div>
+    <div class="step">$\Rightarrow p^3 + 3p^2qi + 3pq^2i^2 + q^3i^3 = 7 + 8i \quad [\text{সূচকের নিয়ম অনুযায়ী}]$</div>
+    <div class="step-explain">আমরা জানি, জটিল সংখ্যার ধর্ম অনুসারে $i^2 = -1$ এবং $i^3 = i^2 \cdot i = -i$। এই মানগুলো বামপক্ষে বসাই:</div>
+    <div class="step">$\Rightarrow p^3 + 3p^2qi + 3pq^2(-1) + q^3(-i) = 7 + 8i \quad [\because i^2 = -1 \text{ এবং } i^3 = -i \text{ বসিয়ে}]$</div>
+    <div class="step">$\Rightarrow p^3 + 3p^2qi - 3pq^2 - q^3i = 7 + 8i \quad [\text{গুণ করে}]$</div>
+    <div class="step-explain">বামপক্ষের পদগুলোকে বাস্তব ($i$-মুক্ত) ও কাল্পনিক ($i$-যুক্ত) অংশে সাজিয়ে গুছিয়ে লিখি:</div>
+    <div class="step">$\Rightarrow \left(p^3 - 3pq^2\right) + \left(3p^2q - q^3\right)i = 7 + 8i \quad [\text{বাস্তব ও কাল্পনিক অংশ আলাদা করে}]$</div>
+    <div class="step-explain">এখন উভয় পক্ষ থেকে বাস্তব অংশ ও কাল্পনিক অংশ সমীকৃত (তুলনা) করে পাই:</div>
+    <div class="step">$p^3 - 3pq^2 = 7$ ---- (১ নং সমীকরণ)</div>
+    <div class="step">$3p^2q - q^3 = 8$ ---- (২ নং সমীকরণ)</div>
+    <div class="step-explain">প্রমাণের ডানপক্ষে $\frac{7}{4p} + \frac{2}{q}$ রয়েছে। তাই ১ নং ও ২ নং সমীকরণ থেকে যথাক্রমে $7$ এবং $8$ এর মান প্রমাণের ডানপক্ষে বসিয়ে সরল করব।</div>
+    <div class="step-explain">এখন আমরা ডানপক্ষ (R.H.S.) দিয়ে শুরু করি:</div>
+    <div class="step">\text{R.H.S.} = \frac{7}{4p} + \frac{2}{q}</div>
+    <div class="step-explain">১ নং সমীকরণ হতে $7$ এর মান এবং ২ নং সমীকরণ হতে $8$ এর মান বিবেচনা করে, $2 = \frac{8}{4}$ আকারে ২ কে রূপান্তর করার সুবিধার্থে হর মেলাতে চেষ্টা করি:</div>
+    <div class="step">$= \frac{7}{4p} + \frac{8}{4q} \quad \left[\because \frac{8}{4} = 2 \text{ সাজিয়ে লিখে}\right]$</div>
+    <div class="step-explain">এখন ১ নং ও ২ নং সমীকরণের মান লবগুলোতে বসিয়ে দিই:</div>
+    <div class="step">$= \frac{p^3 - 3pq^2}{4p} + \frac{3p^2q - q^3}{4q} \quad [\text{১ ও ২ নং সমীকরণ হতে মান বসিয়ে}]$</div>
+    <div class="step-explain">প্রথম ভগ্নাংশের লব থেকে $p$ এবং দ্বিতীয় ভগ্নাংশের লব থেকে $q$ কমন নিই:</div>
+    <div class="step">$= \frac{p\left(p^2 - 3q^2\right)}{4p} + \frac{q\left(3p^2 - q^2\right)}{4q} \quad [\text{লব থেকে কমন নিয়ে}]$</div>
+    <div class="step-explain">প্রথম ভগ্নাংশের লব ও হরের $p$ এবং দ্বিতীয় ভগ্নাংশের লব ও হরের $q$ কাটাকাটি করি:</div>
+    <div class="step">$= \frac{p^2 - 3q^2}{4} + \frac{3p^2 - q^2}{4} \quad [\text{লব ও হর কাটাকাটি করে}]$</div>
+    <div class="step-explain">এখন লসাগু করি। যেহেতু উভয় ভগ্নাংশের হর $4$, তাই লসাগু হবে $4$:</div>
+    <div class="step">$= \frac{\left(p^2 - 3q^2\right) + \left(3p^2 - q^2\right)}{4} \quad [\text{লসাগু করে}]$</div>
+    <div class="step">$= \frac{p^2 - 3q^2 + 3p^2 - q^2}{4} \quad [\text{ব্র্যাকেট তুলে দিয়ে}]$</div>
+    <div class="step-explain">সদৃশ পদগুলো একসাথে হিসাব বা যোগ করি:</div>
+    <div class="step">$= \frac{\left(p^2 + 3p^2\right) + \left(-3q^2 - q^2\right)}{4} \quad [\text{পদ সাজিয়ে}]$</div>
+    <div class="step">$= \frac{4p^2 - 4q^2}{4} \quad [\text{যোগ করে}]$</div>
+    <div class="step-explain">লব থেকে সাধারণ ধ্রুবক $4$ কমন নিই:</div>
+    <div class="step">$= \frac{4\left(p^2 - q^2\right)}{4} \quad [\text{৪ কমন নিয়ে}]$</div>
+    <div class="step-explain">লব ও হরের $4$ কাটাকাটি করি:</div>
+    <div class="step">$= p^2 - q^2 \quad [\text{লব ও হরের ৪ কাটাকাটি করে}]$</div>
+    <div class="step">$= \text{L.H.S.}$</div>
+    <div class="step-explain">বামপক্ষ ও ডানপক্ষ সমান প্রমাণিত হলো। সমীকরণটি সাজিয়ে লিখলে পাই:</div>
+    <div class="step">$\therefore p^2 - q^2 = \frac{7}{4p} + \frac{2}{q}$</div>
+    <div class="step-explain">অতএব, $p^2 - q^2 = \frac{7}{4p} + \frac{2}{q}$ [প্রমাণিত]</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>
