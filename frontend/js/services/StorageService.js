@@ -53,6 +53,7 @@ class StorageService {
             section: '',
             board: '',
             avatarDataUrl: null,
+            avatarUrl: null,
             coverImage: null
         };
         this.#storage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(defaultProfile));
@@ -93,15 +94,17 @@ class StorageService {
     }
 
     // ============================================================
-    // ✅ অ্যাভাটার
+    // ✅ অ্যাভাটার (UPDATED for server URL sync)
     // ============================================================
     saveAvatar(avatarDataUrl) {
         const profile = this.getProfile();
         
         if (avatarDataUrl) {
             profile.avatarDataUrl = avatarDataUrl;
+            // ✅ base64 data URL হলেই IndexedDB-তে রাখব (URL নয়)
             const isLarge = avatarDataUrl.length > 500 * 1024;
-            if (isLarge) {
+            const isBase64 = avatarDataUrl.startsWith('data:');
+            if (isLarge && isBase64) {
                 this.#saveToIndexedDB(avatarDataUrl).catch(e => {
                     console.warn('IndexedDB save failed:', e);
                 });
@@ -120,13 +123,36 @@ class StorageService {
         
         try {
             window.dispatchEvent(new CustomEvent('avatar-updated'));
-        } catch (e) {
-            // CustomEvent সাপোর্ট না থাকলে ইগনোর
-        }
+        } catch (e) { }
     }
 
+    // ✅ ✅ ✅ NEW: Save avatar URL from server (Cloudinary)
+    saveAvatarUrl(url) {
+        const profile = this.getProfile();
+        profile.avatarUrl = url || null;               // ✅ আলাদা field
+        this.#storage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(profile));
+        
+        try {
+            window.dispatchEvent(new CustomEvent('avatar-updated'));
+        } catch (e) { /* ignore */ }
+    }
+
+    // ✅ ✅ ✅ NEW: Get best available avatar URL (server URL has priority)
+    getAvatarUrl() {
+        const profile = this.getProfile();
+        return profile.avatarUrl || null;              // ← Server URL
+    }
+
+    // ✅ ✅ ✅ UPDATED: Priority: server URL → LocalStorage → null
     getAvatar() {
         const profile = this.getProfile();
+        
+        // Priority 1: Server URL (Cloudinary)
+        if (profile.avatarUrl) {
+            return profile.avatarUrl;
+        }
+        
+        // Priority 2: LocalStorage base64
         return profile.avatarDataUrl || null;
     }
 
@@ -135,13 +161,14 @@ class StorageService {
         const profile = this.getProfile();
         if (profile) {
             delete profile.avatarDataUrl;
+            delete profile.avatarUrl;
             this.#storage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(profile));
         }
         this.#avatarCache.clear();
         this.#removeFromIndexedDB().catch(e => {
             console.warn('IndexedDB remove failed:', e);
         });
-        console.log('✅ Avatar cleared');
+        console.log('✅ Avatar cleared (local + server URL)');
     }
 
     async #removeFromIndexedDB() {

@@ -705,18 +705,39 @@ export class ProfilePage {
     // ============================================================
     // ✅ অ্যাভাটার ম্যানেজমেন্ট
     // ============================================================
-    #loadAvatar() {
-        const avatar = storageService.getAvatar();
+    async #loadAvatar() {
+        // ✅ Step 1: Sync from server first (if authenticated)
+        const token = storageService.getToken();
+        if (token) {
+            try {
+                const response = await apiService.getProfile();
+                if (response.success && response.user) {
+                    const serverAvatar = response.user.profile?.avatar;
+                    if (serverAvatar) {
+                        storageService.saveAvatarUrl(serverAvatar);   // ✅ Update local cache
+                        console.log('✅ Avatar synced from server:', serverAvatar);
+                    } else {
+                        storageService.saveAvatarUrl(null);           // Clear stale
+                    }
+                }
+            } catch (error) {
+                console.warn('⚠️ Avatar sync from server failed:', error.message);
+                // Continue with local cache
+            }
+        }
+        
+        // ✅ Step 2: Render with priority (server URL → local base64 → initials)
+        const avatar = storageService.getAvatar();      // Now returns best available
         const name = storageService.getProfileName();
         const initials = this.#getInitials(name);
         const color = getAvatarColor(name);
-
+        
         const img = this.#elements.avatarImg;
         const initialsEl = this.#elements.avatarInitials;
         const wrapper = this.#elements.avatarWrapper;
         const largeImg = this.#elements.avatarLargeImg;
         const largeInitials = this.#elements.avatarLargeInitials;
-
+        
         if (avatar) {
             if (img) { img.src = avatar; img.style.display = 'block'; }
             if (initialsEl) initialsEl.style.display = 'none';
@@ -743,7 +764,7 @@ export class ProfilePage {
                 wrapper.style.backgroundImage = color;
             }
         }
-
+        
         const resizedImage = storageService.getResizedImage();
         if (resizedImage && this.#elements.cropBtn) {
             this.#elements.cropBtn.disabled = false;
@@ -784,7 +805,8 @@ export class ProfilePage {
 
                 if (data.success && data.data?.url) {
                     console.log('✅ Cloudinary URL:', data.data.url);
-                    storageService.saveAvatar(data.data.url);
+                    storageService.saveAvatarUrl(data.data.url);
+                    storageService.saveAvatar(resizedDataUrl);
                     this.#loadAvatar();
                     this.#showToast('✅ ছবি Cloudinary-তে আপলোড হয়েছে!', 'success');
                 } else {
@@ -889,46 +911,6 @@ export class ProfilePage {
             if (removeBtn) removeBtn.style.display = 'none';
         }
     }
-
-    /* async uploadCoverImage(file) {
-        if (!file) return;
-        if (file.size > 5 * 1024 * 1024) {
-            this.#showToast('❌ ছবির সাইজ 5MB এর বেশি!', 'error');
-            return;
-        }
-        if (!file.type.startsWith('image/')) {
-            this.#showToast('❌ শুধু ছবি ফাইল আপলোড করুন!', 'error');
-            return;
-        }
-
-        this.#isCoverLoading = true;
-        const cover = this.#elements.coverElement;
-
-        try {
-            if (cover) cover.classList.add('cover-loading');
-            const coverDataUrl = await this.#resizeCoverImage(file);
-            storageService.saveCoverImage(coverDataUrl);
-
-            if (cover) {
-                cover.style.backgroundImage = `url(${coverDataUrl})`;
-                cover.style.backgroundSize = 'cover';
-                cover.style.backgroundPosition = 'center';
-                cover.style.backgroundColor = 'transparent';
-                cover.classList.add('has-cover');
-                cover.classList.remove('cover-loading');
-            }
-            if (this.#elements.removeCoverBtn) {
-                this.#elements.removeCoverBtn.style.display = 'flex';
-            }
-            this.#showToast('✅ কভার ইমেজ আপডেট করা হয়েছে!', 'success');
-        } catch (error) {
-            console.error('Cover upload error:', error);
-            if (cover) cover.classList.remove('cover-loading');
-            this.#showToast('❌ কভার ইমেজ আপলোডে সমস্যা হয়েছে!', 'error');
-        } finally {
-            this.#isCoverLoading = false;
-        }
-    } */
 
     async uploadCoverImage(file) {
         if (!file) return;
@@ -1716,7 +1698,8 @@ export class ProfilePage {
 
                 if (data.success && data.data?.url) {
                     console.log('✅ Cloudinary URL:', data.data.url);
-                    storageService.saveAvatar(data.data.url);
+                    storageService.saveAvatarUrl(data.data.url);
+                    storageService.saveAvatar(dataUrl);
                     this.#loadAvatar();
                     this.#showToast('✅ অ্যাভাটার Cloudinary-তে আপলোড হয়েছে!', 'success');
                 } else {
