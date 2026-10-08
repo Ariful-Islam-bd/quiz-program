@@ -29,9 +29,11 @@ yarn.lock.lock
 *.backup
 *.bak
 *.orig
-backup_db_*/
-*_BACKUP_*/
-*_backup_*/
+*.gmail-backup
+*.backup.*
+*.old
+*_old*
+*_old1*
 
 # ─── OS files ───
 .DS_Store
@@ -143,3 +145,16 @@ nodemailer.log
 config/secrets.json
 secrets.json
 credentials.json
+
+# ─── AI Session notes (personal) ───
+docs/session-*.md
+docs/session_*.md
+docs/chat-*.md
+
+# Test / Debug files (not part of production)
+authentication-Thunder.js
+CodeSamples.js
+
+# Test files (any location)
+**/authentication-Thunder.js
+**/CodeSamples.js

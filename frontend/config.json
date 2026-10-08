@@ -1,6 +1,7 @@
 {
   "API_BASE_URL": "http://localhost:5000/api/v1",
-  "ENVIRONMENT": "development",
+  "PRODUCTION_API_BASE_URL": "https://quiz-program.onrender.com/api/v1",
+  "ENVIRONMENT": "auto",
   "APP_NAME": "Quiz Program",
   "APP_VERSION": "2.0.0"
 }
