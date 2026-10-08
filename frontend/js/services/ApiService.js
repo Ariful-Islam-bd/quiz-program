@@ -36,8 +36,11 @@ class ApiService {
 
     #getHeaders() {
         const headers = { ...this.#defaultHeaders };
-        if (this.#token) {
-            headers['Authorization'] = `Bearer ${this.#token}`;
+        
+        // ✅ FIX: Always read fresh token from storage (avoid stale #token)
+        const freshToken = storageService.getToken();
+        if (freshToken) {
+            headers['Authorization'] = `Bearer ${freshToken}`;
         }
         return headers;
     }
@@ -271,15 +274,17 @@ class ApiService {
     // ✅ Upload methods (added for R2 integration)
     async uploadAvatar(formData) {
         const url = buildApiUrl(API_ENDPOINTS.UPLOADS.AVATAR);
+        
+        // ✅ FIX: Read fresh token from storage
+        const freshToken = storageService.getToken();
         const headers = {};
-        if (this.#token) headers['Authorization'] = `Bearer ${this.#token}`;
+        if (freshToken) headers['Authorization'] = `Bearer ${freshToken}`;
         // ⚠️ Don't set Content-Type — browser sets multipart boundary automatically
 
         const response = await fetch(url, {
             method: 'POST',
             headers,
             body: formData,
-            //credentials: 'include'
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.message || 'Upload failed');
@@ -288,14 +293,16 @@ class ApiService {
 
     async uploadCover(formData) {
         const url = buildApiUrl(API_ENDPOINTS.UPLOADS.COVER);
+        
+        // ✅ FIX: Read fresh token from storage
+        const freshToken = storageService.getToken();
         const headers = {};
-        if (this.#token) headers['Authorization'] = `Bearer ${this.#token}`;
+        if (freshToken) headers['Authorization'] = `Bearer ${freshToken}`;
 
         const response = await fetch(url, {
             method: 'POST',
             headers,
             body: formData,
-            //credentials: 'include'
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.message || 'Upload failed');
