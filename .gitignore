@@ -154,7 +154,9 @@ docs/chat-*.md
 # Test / Debug files (not part of production)
 authentication-Thunder.js
 CodeSamples.js
+CodeSample.js
 
 # Test files (any location)
 **/authentication-Thunder.js
 **/CodeSamples.js
+**/CodeSample.js
