@@ -68,21 +68,21 @@ const CHAPTER_DATA = {
 };
 
 const contentMap = {
-    '3A-All-Q': { name: 'জটিল সংখ্যা - অনুশীলনী ৩(A) (সকল প্রশ্ন)', type: 'note', file: './content/HSC/math/3A/3A All Q Complex Numbers.html' },
-    '3A-Q01-Q02': { name: 'জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q01-Q02 Solution Comp Num.html' },
-    '3A-Q03-Q05': { name: 'জটিল সংখ্যা - প্রশ্ন ৩-৫ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q03-Q05 Solution Comp Num.html' },
-    '3A-Q06-Q08': { name: 'জটিল সংখ্যা - প্রশ্ন ৬-৮ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q06-Q08 Solution Comp Num.html' },
-    '3A-Q09': { name: 'জটিল সংখ্যা - প্রশ্ন ৯ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q09 Solution Comp Num.html' },
-    '3A-Q10': { name: 'জটিল সংখ্যা - প্রশ্ন ১০ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q10 Solution Comp Num.html' },
-    '3A-Q11': { name: 'জটিল সংখ্যা - প্রশ্ন ১১ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q11 Solution Comp Num.html' },
-    '3A-Q12-Q15': { name: 'জটিল সংখ্যা - প্রশ্ন ১২-১৫ সমাধান', type: 'note', file: './content/HSC/math/3A/3A Q12-Q15 Solution Comp Num.html' },
-    '3B-All-Q': { name: 'জটিল সংখ্যা - অনুশীলনী ৩(B) (সকল প্রশ্ন)', type: 'note', file: './content/HSC/math/3B/3B All Q Complex Numbers.html' },
-    '3B-Q01-Q02': { name: 'জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q01-Q02.html' },
-    '3B-Q03-Q04': { name: 'জটিল সংখ্যা - প্রশ্ন ৩-৪ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q03-Q04.html' },
-    '3B-Q05-Q09': { name: 'জটিল সংখ্যা - প্রশ্ন ৫-৯ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q05-Q09.html' },
-    '3B-Q10-Q11': { name: 'জটিল সংখ্যা - প্রশ্ন ১০-১১ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q10-Q11.html' },
-    '3B-Q12': { name: 'জটিল সংখ্যা - প্রশ্ন ১২ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q12.html' },
-    '3B-Q13-Q17': { name: 'জটিল সংখ্যা - প্রশ্ন ১৩-১৭ সমাধান', type: 'note', file: './content/HSC/math/3B/3B Q13-Q17.html' }
+    '3A-All-Q': { name: 'জটিল সংখ্যা - অনুশীলনী ৩(A) (সকল প্রশ্ন)', type: 'note', file: './content/HSC/Math/3A/3A All Q Complex Numbers.html' },
+    '3A-Q01-Q02': { name: 'জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q01-Q02 Solution Comp Num.html' },
+    '3A-Q03-Q05': { name: 'জটিল সংখ্যা - প্রশ্ন ৩-৫ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q03-Q05 Solution Comp Num.html' },
+    '3A-Q06-Q08': { name: 'জটিল সংখ্যা - প্রশ্ন ৬-৮ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q06-Q08 Solution Comp Num.html' },
+    '3A-Q09': { name: 'জটিল সংখ্যা - প্রশ্ন ৯ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q09 Solution Comp Num.html' },
+    '3A-Q10': { name: 'জটিল সংখ্যা - প্রশ্ন ১০ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q10 Solution Comp Num.html' },
+    '3A-Q11': { name: 'জটিল সংখ্যা - প্রশ্ন ১১ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q11 Solution Comp Num.html' },
+    '3A-Q12-Q15': { name: 'জটিল সংখ্যা - প্রশ্ন ১২-১৫ সমাধান', type: 'note', file: './content/HSC/Math/3A/3A Q12-Q15 Solution Comp Num.html' },
+    '3B-All-Q': { name: 'জটিল সংখ্যা - অনুশীলনী ৩(B) (সকল প্রশ্ন)', type: 'note', file: './content/HSC/Math/3B/3B All Q Complex Numbers.html' },
+    '3B-Q01-Q02': { name: 'জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q01-Q02.html' },
+    '3B-Q03-Q04': { name: 'জটিল সংখ্যা - প্রশ্ন ৩-৪ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q03-Q04.html' },
+    '3B-Q05-Q09': { name: 'জটিল সংখ্যা - প্রশ্ন ৫-৯ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q05-Q09.html' },
+    '3B-Q10-Q11': { name: 'জটিল সংখ্যা - প্রশ্ন ১০-১১ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q10-Q11.html' },
+    '3B-Q12': { name: 'জটিল সংখ্যা - প্রশ্ন ১২ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q12.html' },
+    '3B-Q13-Q17': { name: 'জটিল সংখ্যা - প্রশ্ন ১৩-১৭ সমাধান', type: 'note', file: './content/HSC/Math/3B/3B Q13-Q17.html' }
 };
 
 export class AcademiaPage {
