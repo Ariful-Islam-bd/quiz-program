@@ -1,6 +1,6 @@
 // backend/server.js
-// Version: 2.0.0 - Split architecture (Frontend on Cloudflare Pages, Backend on Render)
-// Changes: Removed express.static, added CORS module, health check, env validator
+// Version: 2.1.0 - Added Content API routes
+// Changes: Registered /api/v1/content routes for academia content
 
 const express = require('express');
 const dotenv = require('dotenv');
@@ -27,14 +27,9 @@ const isDev = process.env.NODE_ENV !== 'production';
 // ============================================================
 // ✅ CORS — Split architecture (Cloudflare Pages frontend)
 // ============================================================
-//app.use(cors(getCorsOptions()));
-
 app.use(cors(getCorsOptions()));
 
-// ✅ ✅ ✅ Handle Chrome Private Network Access (PNA) preflight
-// Chrome 130+ sends Access-Control-Request-Private-Network: true
-// for localhost:3000 → localhost:5000 requests.
-// Express 5 compatible: use middleware (no wildcard route)
+// ✅ Handle Chrome Private Network Access (PNA) preflight
 app.use((req, res, next) => {
     if (req.method === 'OPTIONS') {
         res.setHeader('Access-Control-Allow-Private-Network', 'true');
@@ -85,12 +80,13 @@ app.get('/', (req, res) => {
     res.status(200).json({
         success: true,
         message: '🚀 Quiz Program API is running.',
-        version: '2.0.0',
+        version: '2.1.0',
         endpoints: {
             auth: '/api/v1/auth',
             quizzes: '/api/v1/quizzes',
             categories: '/api/v1/categories',
             uploads: '/api/v1/uploads',
+            content: '/api/v1/content',
             health: '/api/v1/health'
         }
     });
@@ -103,12 +99,7 @@ app.use('/api/v1/auth', require('./routes/authRoutes'));
 app.use('/api/v1/quizzes', require('./routes/quizRoutes'));
 app.use('/api/v1/categories', require('./routes/categoryRoutes'));
 app.use('/api/v1/uploads', require('./routes/uploadRoutes'));
-
-// ============================================================
-// ❌ REMOVED: express.static (frontend now on Cloudflare Pages)
-// ❌ REMOVED: /reset-password route (frontend handles this)
-// ❌ REMOVED: SPA fallback (Cloudflare _redirects handles this)
-// ============================================================
+app.use('/api/v1/content', require('./routes/contentRoutes'));  // ✅ NEW
 
 // ============================================================
 // ✅ 404 handler (API-only backend)
@@ -140,6 +131,7 @@ const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`🌐 Backend URL: ${process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`}`);
     console.log(`🎨 Frontend URL: ${process.env.FRONTEND_URL || '(not set)'}`);
     console.log(`💚 Health check: /api/v1/health`);
+    console.log(`📚 Content API: /api/v1/content`);
     console.log('═══════════════════════════════════════════════');
     console.log('');
 });

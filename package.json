@@ -1,6 +1,6 @@
 {
   "name": "quiz_program",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Quiz Program - Split Architecture (Cloudflare Pages + Render)",
   "main": "backend/server.js",
   "engines": {
@@ -10,6 +10,11 @@
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
     "serve:frontend": "cd frontend && npx --yes http-server -p 3000 -a 127.0.0.1 --cors -c-1",
+    "migrate:content": "node backend/scripts/migrate-content.js",
+    "migrate:content:dry": "node backend/scripts/migrate-content.js --dry-run",
+    "migrate:content:verbose": "node backend/scripts/migrate-content.js --verbose",
+    "migrate:content:validate": "node backend/scripts/migrate-content.js --validate",
+    "seed": "node backend/seed/seeder.js -i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["quiz", "education", "nodejs", "express", "mongodb"],
