@@ -356,7 +356,6 @@
 }
 
 .content-body {
-    padding: 20px;
     min-height: 200px;
 }
 
@@ -571,7 +570,7 @@ body.dark .content-header {
     background: var(--card);
     border-left: 4px solid var(--accent);
     border-radius: 12px;
-    padding: 20px 24px;
+    padding: 10px 1px 20px 1px;
     margin-bottom: 20px;
     box-shadow: 0 2px 8px var(--shadow);
 }
@@ -581,7 +580,7 @@ body.dark .content-header {
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 14px;
-    padding-bottom: 8px;
+    padding: 4px 4px 4px 8px;
     border-bottom: 2px solid var(--border);
 }
 
@@ -597,7 +596,7 @@ body.dark .content-header {
 }
 
 .math-content .step-explain {
-    padding: 8px 14px 8px 20px;
+    padding: 8px 4px 8px 4px;
     margin: 6px 0;
     color: var(--text-light);
     font-size: 0.9rem;

@@ -5,7 +5,6 @@
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
     background: var(--card);
     border-radius: var(--border-radius);
 }
@@ -14,10 +13,15 @@
 .problem-card {
     background: var(--card);
     border-radius: var(--border-radius);
-    padding: 24px 28px;
+    padding: 24px 2px;
     margin-bottom: 24px;
     box-shadow: 0 2px 8px var(--shadow);
     border-left: 4px solid var(--accent);
+}
+
+.exercise-title {
+    display: flex;
+    justify-content: center;
 }
 
 .problem-title {
@@ -43,7 +47,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--success);
-    margin: 16px 0 10px 0;
+    margin: 5px 0px 8px 5px;
 }
 
 .step {
