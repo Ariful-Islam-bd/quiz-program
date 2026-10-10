@@ -42,10 +42,13 @@ const SUBJECT_DATA = {
 // ✅ Chapter/topic structure with topicId matching backend
 const CHAPTER_DATA = {
     'hmath-11': [
+        // ============================================================
+        // ✅ Textbook — জটিল সংখ্যা (৩A + ৩B)
+        // ============================================================
         {
             id: 'ch-3A',
             number: 3,
-            name: 'জটিল সংখ্যা (অনুশীলনী ৩A)',
+            name: 'জটিল সংখ্যা (৩A)',
             icon: '📊',
             topics: [
                 { id: 'HSC-Math-3A-All-Q', name: 'সকল প্রশ্ন', icon: '📝', type: 'note' },
@@ -61,7 +64,7 @@ const CHAPTER_DATA = {
         {
             id: 'ch-3B',
             number: 3,
-            name: 'জটিল সংখ্যা (অনুশীলনী ৩B)',
+            name: 'জটিল সংখ্যা (৩B)',
             icon: '📊',
             topics: [
                 { id: 'HSC-Math-3B-All-Q', name: 'সকল প্রশ্ন', icon: '📝', type: 'note' },
@@ -72,8 +75,111 @@ const CHAPTER_DATA = {
                 { id: 'HSC-Math-3B-Q12', name: 'প্রশ্ন ১২ সমাধান', icon: '✅', type: 'note' },
                 { id: 'HSC-Math-3B-Q13-Q17', name: 'প্রশ্ন ১৩-১৭ সমাধান', icon: '✅', type: 'note' }
             ]
+        },
+
+        // ============================================================
+        // 🆕 অক্ষরপত্র — ১ম পত্র (অন্তরীকরণ + নির্ণায়ক)
+        // ============================================================
+        {
+            id: 'okkhorpotro-differ',
+            number: 9,
+            name: 'অন্তরীকরণ (অক্ষরপত্র - ১ম পত্র)',
+            icon: '📈',
+            topics: [
+                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9A', name: 'অনুশীলনী ৯(A)', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9B', name: 'অনুশীলনী ৯(B)', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-All', name: '৯(C) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-Q1', name: '৯(C) - প্রশ্ন ১', icon: '✅', type: 'note' }
+            ]
+        },
+        {
+            id: 'okkhorpotro-determinant',
+            number: 1,
+            name: 'নির্ণায়ক (অক্ষরপত্র - ১ম পত্র)',
+            icon: '🔢',
+            topics: [
+                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B', name: 'অনুশীলনী ১(B)', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q1', name: 'প্রশ্ন ১', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q3', name: 'প্রশ্ন ৩', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q4-Q5', name: 'প্রশ্ন ৪-৫', icon: '✅', type: 'note' }
+            ]
+        },
+
+        // ============================================================
+        // 🆕 অক্ষরপত্র — ২য় পত্র (জটিল সংখ্যা + রৈখিক প্রোগ্রামিং)
+        // ============================================================
+        {
+            id: 'okkhorpotro-complex',
+            number: 3,
+            name: 'জটিল সংখ্যা (অক্ষরপত্র - ২য় পত্র)',
+            icon: '📊',
+            topics: [
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-All', name: '৩(A) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q01-Q02', name: '৩(A) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q03-Q05', name: '৩(A) - প্রশ্ন ৩-৫', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q06-Q08', name: '৩(A) - প্রশ্ন ৬-৮', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q09', name: '৩(A) - প্রশ্ন ৯', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q10', name: '৩(A) - প্রশ্ন ১০', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q11', name: '৩(A) - প্রশ্ন ১১', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q12-Q15', name: '৩(A) - প্রশ্ন ১২-১৫', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-All', name: '৩(B) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q01-Q02', name: '৩(B) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q03-Q04', name: '৩(B) - প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q05-Q09', name: '৩(B) - প্রশ্ন ৫-৯', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q10-Q11', name: '৩(B) - প্রশ্ন ১০-১১', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q12', name: '৩(B) - প্রশ্ন ১২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q13-Q17', name: '৩(B) - প্রশ্ন ১৩-১৭', icon: '✅', type: 'note' }
+            ]
+        },
+        {
+            id: 'okkhorpotro-linearprog',
+            number: 0,
+            name: 'রৈখিক প্রোগ্রামিং (অক্ষরপত্র - ২য় পত্র)',
+            icon: '📐',
+            topics: [
+                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q3-Q4', name: 'প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q5', name: 'প্রশ্ন ৫', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q6', name: 'প্রশ্ন ৬', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q7', name: 'প্রশ্ন ৭', icon: '✅', type: 'note' }
+            ]
+        },
+
+        // ============================================================
+        // 🆕 সিস্টেক — ১ম পত্র (ত্রিকোণমিতি)
+        // ============================================================
+        {
+            id: 'systech-trigono-ch6',
+            number: 6,
+            name: 'ত্রিকোণমিতি - অধ্যায় ৬ (সিস্টেক - ১ম পত্র)',
+            icon: '🔺',
+            topics: [
+                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q01-Q10', name: '৬(A) - প্রশ্ন ১-১০', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q11-Q21', name: '৬(A) - প্রশ্ন ১১-২১', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q22-Q30', name: '৬(A) - প্রশ্ন ২২-৩০', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q1-Q12', name: '৬(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q13-Q24', name: '৬(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q25-Q36', name: '৬(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
+            ]
+        },
+        {
+            id: 'systech-trigono-ch7',
+            number: 7,
+            name: 'ত্রিকোণমিতি - অধ্যায় ৭ (সিস্টেক - ১ম পত্র)',
+            icon: '🔺',
+            topics: [
+                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q01-Q12', name: '৭(A) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q13-Q24', name: '৭(A) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q25-Q36', name: '৭(A) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q01-Q12', name: '৭(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q13-Q24', name: '৭(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q25-Q36', name: '৭(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
+            ]
         }
     ],
+    
+    // ✅ Existing other subjects (unchanged)
     'ict-11': [
         { id: 'ict-ch1', number: 1, name: 'বিশ্ব ও বাংলাদেশ প্রেক্ষিত', icon: '🌍', topics: [{ id: 'ict-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] },
         { id: 'ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি', icon: '🔢', topics: [{ id: 'ict-ch3-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
