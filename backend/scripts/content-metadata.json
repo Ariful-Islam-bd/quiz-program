@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "Content metadata mapping for migration script",
-  "contentRoot": "frontend/content",
+  "contentRoot": "content",
   "items": [
     {
       "topicId": "HSC-Math-3A-All-Q",

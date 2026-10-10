@@ -1,6 +1,6 @@
 // backend/scripts/migrate-content.js
 // Version: 2.0.0 - Auto-discovery with metadata JSON
-// Purpose: Migrate HTML files from frontend/content/ to MongoDB
+// Purpose: Migrate HTML files from content/ to MongoDB
 //
 // Features:
 // ✅ Auto-discovers files from metadata JSON
@@ -281,7 +281,7 @@ async function readFileSafe(filePath) {
 async function validateMode(metadata) {
     log.title('\n📋 VALIDATION MODE — Checking metadata & files...\n');
 
-    const contentRoot = path.join(PROJECT_ROOT, metadata.contentRoot || 'frontend/content');
+    const contentRoot = path.join(PROJECT_ROOT, metadata.contentRoot || 'content');
     log.info(`Content root: ${contentRoot}`);
 
     try {
@@ -344,7 +344,7 @@ async function migrateContent(metadata) {
     log.divider();
     console.log();
 
-    const contentRoot = path.join(PROJECT_ROOT, metadata.contentRoot || 'frontend/content');
+    const contentRoot = path.join(PROJECT_ROOT, metadata.contentRoot || 'content');
 
     // ✅ Verify content root exists
     try {
