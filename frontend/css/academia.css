@@ -446,3 +446,243 @@ body.dark .content-header {
         padding: 8px 12px;
     }
 }
+
+/* ============================================================
+   ✅ Phase 2 Additions: Skeleton, Error States, Loading
+   ============================================================ */
+
+/* ===== Loading Skeleton ===== */
+.content-skeleton {
+    padding: 20px;
+}
+
+.skeleton-line {
+    height: 16px;
+    background: linear-gradient(
+        90deg,
+        var(--bg) 0%,
+        var(--border) 50%,
+        var(--bg) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.skeleton-title {
+    height: 28px;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.skeleton-short {
+    width: 40%;
+}
+
+@keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ===== Error State ===== */
+.content-error {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--card);
+    border-radius: 12px;
+    border: 2px solid var(--danger, #f44336);
+    margin: 10px 0;
+}
+
+.content-error-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+}
+
+.content-error-title {
+    font-size: 1.3rem;
+    color: var(--danger, #f44336);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.content-error-message {
+    color: var(--text);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-error-hint {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.content-error-hint code {
+    background: var(--bg);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.content-error-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== Buttons for content actions ===== */
+.btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+/* ===== Math content scoping (styles_math_sol.css overrides) ===== */
+.math-content {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.math-content .problem-card {
+    background: var(--card);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.math-content .problem-title {
+    color: var(--accent);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+.math-content .step {
+    padding: 8px 14px;
+    margin: 8px 0;
+    background: var(--bg);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-family: 'Times New Roman', serif;
+    overflow-x: auto;
+}
+
+.math-content .step-explain {
+    padding: 8px 14px 8px 20px;
+    margin: 6px 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-left: 3px solid var(--border);
+}
+
+.math-content .katex {
+    font-size: 1.05rem;
+}
+
+.math-content .katex-display {
+    margin: 14px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px 0;
+}
+
+/* ===== Dark mode ===== */
+body.dark .content-skeleton .skeleton-line {
+    background: linear-gradient(
+        90deg,
+        #2d2d2d 0%,
+        #404040 50%,
+        #2d2d2d 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+body.dark .content-error {
+    background: #2d2d2d;
+}
+
+body.dark .math-content .problem-card {
+    background: #2d2d2d;
+}
+
+body.dark .math-content .step {
+    background: #1a1a1a;
+}
+
+body.dark .math-content .step-explain {
+    border-left-color: #404040;
+}
+
+body.dark .btn-secondary {
+    background: #1a1a1a;
+    color: var(--text);
+    border-color: #404040;
+}
+
+body.dark .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .content-error {
+        padding: 40px 16px;
+    }
+
+    .content-error-icon {
+        font-size: 3rem;
+    }
+
+    .content-error-title {
+        font-size: 1.1rem;
+    }
+
+    .content-error-actions {
+        flex-direction: column;
+    }
+
+    .content-error-actions .btn {
+        width: 100%;
+    }
+
+    .math-content .problem-card {
+        padding: 16px;
+    }
+
+    .math-content .step {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}

@@ -98,19 +98,13 @@ export const STORAGE_KEYS = {
 // ============================================================
 // ✅ API Endpoints — resolved dynamically via getApiBase()
 // ============================================================
-/**
- * Build an API endpoint URL using current runtime config.
- * @param {string} path - Endpoint path (e.g., '/auth/login')
- */
 export const buildApiUrl = (path) => {
     const base = getApiBase();
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
     return `${base}${cleanPath}`;
 };
 
-// ✅ Static endpoints structure (relative paths — no domain)
 export const API_ENDPOINTS = {
-    // Base URL — getter returns current value
     get BASE() {
         return getApiBase();
     },
@@ -137,6 +131,11 @@ export const API_ENDPOINTS = {
         SUBMIT: '/quizzes/submit'
     },
     CATEGORIES: '/categories',
+    CONTENT: {
+        BASE: '/content',
+        CATEGORIES: '/content/categories',
+        STATS: '/content/stats/summary'
+    },
     UPLOADS: {
         AVATAR: '/uploads/avatar',
         COVER: '/uploads/cover'
