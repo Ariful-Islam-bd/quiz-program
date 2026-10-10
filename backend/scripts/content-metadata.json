@@ -198,6 +198,539 @@
       },
       "filePath": "HSC/Math/3B/3B Q13-Q17.html",
       "tags": ["complex-numbers", "exercise-3B"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Differ-9A",
+      "name": "অক্ষরপত্র - অন্তরীকরণ - অনুশীলনী ৯(A)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "অন্তরীকরণ",
+        "chapter": "৯(A)",
+        "topic": "সম্পূর্ণ অধ্যায়"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/Differentiation/HSC_Differ_9A.html",
+      "tags": ["okkhhorpotro", "differentiation", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Differ-9B",
+      "name": "অক্ষরপত্র - অন্তরীকরণ - অনুশীলনী ৯(B)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "অন্তরীকরণ",
+        "chapter": "৯(B)",
+        "topic": "সম্পূর্ণ অধ্যায়"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/Differentiation/HSC_Differ_9B.html",
+      "tags": ["okkhhorpotro", "differentiation", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Differ-9C-All",
+      "name": "অক্ষরপত্র - অন্তরীকরণ - অনুশীলনী ৯(C) (সকল প্রশ্ন)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "অন্তরীকরণ",
+        "chapter": "৯(C)",
+        "topic": "সকল প্রশ্ন"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/Differentiation/HSC_Differ_9C/9C_ All Questions HSC Differen.html",
+      "tags": ["okkhhorpotro", "differentiation", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Differ-9C-Q1",
+      "name": "অক্ষরপত্র - অন্তরীকরণ - প্রশ্ন ১ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "অন্তরীকরণ",
+        "chapter": "৯(C)",
+        "topic": "প্রশ্ন ১"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/Differentiation/HSC_Differ_9C/HSC_Differ_9C_Q1.html",
+      "tags": ["okkhhorpotro", "differentiation", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Determinant-1B",
+      "name": "অক্ষরপত্র - নির্ণায়ক - অনুশীলনী ১(B)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "নির্ণায়ক",
+        "chapter": "১(B)",
+        "topic": "সম্পূর্ণ অধ্যায়"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/metrices/1B/Determinant_1B.html",
+      "tags": ["okkhhorpotro", "determinant", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Determinant-1B-Q1",
+      "name": "অক্ষরপত্র - নির্ণায়ক - প্রশ্ন ১",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "নির্ণায়ক",
+        "chapter": "১(B)",
+        "topic": "প্রশ্ন ১"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/metrices/1B/Determinant_1B_Q1.html",
+      "tags": ["okkhhorpotro", "determinant", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Determinant-1B-Q2",
+      "name": "অক্ষরপত্র - নির্ণায়ক - প্রশ্ন ২",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "নির্ণায়ক",
+        "chapter": "১(B)",
+        "topic": "প্রশ্ন ২"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/metrices/1B/Determinant_1B_Q2.html",
+      "tags": ["okkhhorpotro", "determinant", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Determinant-1B-Q3",
+      "name": "অক্ষরপত্র - নির্ণায়ক - প্রশ্ন ৩",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "নির্ণায়ক",
+        "chapter": "১(B)",
+        "topic": "প্রশ্ন ৩"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/metrices/1B/Determinant_1B_Q3.html",
+      "tags": ["okkhhorpotro", "determinant", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-1st-Determinant-1B-Q4-Q5",
+      "name": "অক্ষরপত্র - নির্ণায়ক - প্রশ্ন ৪-৫",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "নির্ণায়ক",
+        "chapter": "১(B)",
+        "topic": "প্রশ্ন ৪-৫"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/1st_Paper/metrices/1B/Determinant_1B_Q4-Q5.html",
+      "tags": ["okkhhorpotro", "determinant", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-All",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - অনুশীলনী ৩(A) (সকল প্রশ্ন)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "সকল প্রশ্ন"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A All Q Complex Numbers.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q01-Q02",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ১-২"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q01-Q02 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q03-Q05",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ৩-৫ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ৩-৫"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q03-Q05 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q06-Q08",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ৬-৮ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ৬-৮"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q06-Q08 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q09",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ৯ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ৯"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q09 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q10",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১০ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ১০"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q10 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q11",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১১ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ১১"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q11 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3A-Q12-Q15",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১২-১৫ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(A)",
+        "topic": "প্রশ্ন ১২-১৫"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3A/3A Q12-Q15 Solution Comp Num.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-All",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - অনুশীলনী ৩(B) (সকল প্রশ্ন)",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "সকল প্রশ্ন"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B All Q Complex Numbers.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q01-Q02",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১-২ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ১-২"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q01-Q02.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q03-Q04",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ৩-৪ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ৩-৪"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q03-Q04.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q05-Q09",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ৫-৯ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ৫-৯"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q05-Q09.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q10-Q11",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১০-১১ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ১০-১১"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q10-Q11.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q12",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১২ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ১২"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q12.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-Complex-3B-Q13-Q17",
+      "name": "অক্ষরপত্র - জটিল সংখ্যা - প্রশ্ন ১৩-১৭ সমাধান",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "জটিল সংখ্যা",
+        "chapter": "৩(B)",
+        "topic": "প্রশ্ন ১৩-১৭"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Complex Numbers/3B/3B Q13-Q17.html",
+      "tags": ["okkhhorpotro", "complex-numbers", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-LinearProg-Q2",
+      "name": "অক্ষরপত্র - রৈখিক প্রোগ্রামিং - প্রশ্ন ২",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "রৈখিক প্রোগ্রামিং",
+        "chapter": "রৈখিক প্রোগ্রামিং",
+        "topic": "প্রশ্ন ২"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Linear Programmig/Linear Prog Q2.html",
+      "tags": ["okkhhorpotro", "linear-programming", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-LinearProg-Q3-Q4",
+      "name": "অক্ষরপত্র - রৈখিক প্রোগ্রামিং - প্রশ্ন ৩-৪",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "রৈখিক প্রোগ্রামিং",
+        "chapter": "রৈখিক প্রোগ্রামিং",
+        "topic": "প্রশ্ন ৩-৪"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Linear Programmig/Linear Prog Q3-Q4.html",
+      "tags": ["okkhhorpotro", "linear-programming", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-LinearProg-Q5",
+      "name": "অক্ষরপত্র - রৈখিক প্রোগ্রামিং - প্রশ্ন ৫",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "রৈখিক প্রোগ্রামিং",
+        "chapter": "রৈখিক প্রোগ্রামিং",
+        "topic": "প্রশ্ন ৫"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Linear Programmig/Linear Prog Q5.html",
+      "tags": ["okkhhorpotro", "linear-programming", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-LinearProg-Q6",
+      "name": "অক্ষরপত্র - রৈখিক প্রোগ্রামিং - প্রশ্ন ৬",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "রৈখিক প্রোগ্রামিং",
+        "chapter": "রৈখিক প্রোগ্রামিং",
+        "topic": "প্রশ্ন ৬"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Linear Programmig/Linear Prog Q6.html",
+      "tags": ["okkhhorpotro", "linear-programming", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Okkhorpotro-2nd-LinearProg-Q7",
+      "name": "অক্ষরপত্র - রৈখিক প্রোগ্রামিং - প্রশ্ন ৭",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "রৈখিক প্রোগ্রামিং",
+        "chapter": "রৈখিক প্রোগ্রামিং",
+        "topic": "প্রশ্ন ৭"
+      },
+      "filePath": "HSC/Math/Okkhorpotro/2nd_Paper/Linear Programmig/Linear Prog Q7.html",
+      "tags": ["okkhhorpotro", "linear-programming", "2nd-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6A-Q01-Q10",
+      "name": "systech - ত্রিকোণমিতি - ৬(A) - প্রশ্ন ১-১০",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(A)",
+        "topic": "প্রশ্ন ১-১০"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_ 6A/6A_Q01_Q10_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6A-Q11-Q21",
+      "name": "systech - ত্রিকোণমিতি - ৬(A) - প্রশ্ন ১১-২১",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(A)",
+        "topic": "প্রশ্ন ১১-২১"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_ 6A/6A_Q11_Q21_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6A-Q22-Q30",
+      "name": "systech - ত্রিকোণমিতি - ৬(A) - প্রশ্ন ২২-৩০",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(A)",
+        "topic": "প্রশ্ন ২২-৩০"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_ 6A/6A_Q22_Q30_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6B-Q1-Q12",
+      "name": "systech - ত্রিকোণমিতি - ৬(B) - প্রশ্ন ১-১২",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(B)",
+        "topic": "প্রশ্ন ১-১২"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_6B/6B_Q1_Q12_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6B-Q13-Q24",
+      "name": "systech - ত্রিকোণমিতি - ৬(B) - প্রশ্ন ১৩-২৪",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(B)",
+        "topic": "প্রশ্ন ১৩-২৪"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_6B/6B_Q13_Q24_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-6B-Q25-Q36",
+      "name": "systech - ত্রিকোণমিতি - ৬(B) - প্রশ্ন ২৫-৩৬",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৬(B)",
+        "topic": "প্রশ্ন ২৫-৩৬"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH6/Trigonometry_6B/6B_Q25_Q36_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7A-Q01-Q12",
+      "name": "systech - ত্রিকোণমিতি - ৭(A) - প্রশ্ন ১-১২",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(A)",
+        "topic": "প্রশ্ন ১-১২"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7A/7A_Q01_Q12_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7A-Q13-Q24",
+      "name": "systech - ত্রিকোণমিতি - ৭(A) - প্রশ্ন ১৩-২৪",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(A)",
+        "topic": "প্রশ্ন ১৩-২৪"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7A/7A_Q13_Q24_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7A-Q25-Q36",
+      "name": "systech - ত্রিকোণমিতি - ৭(A) - প্রশ্ন ২৫-৩৬",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(A)",
+        "topic": "প্রশ্ন ২৫-৩৬"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7A/7A_Q25_Q36_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7B-Q01-Q12",
+      "name": "systech - ত্রিকোণমিতি - ৭(B) - প্রশ্ন ১-১২",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(B)",
+        "topic": "প্রশ্ন ১-১২"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7B/7B_Q01_Q12_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7B-Q13-Q24",
+      "name": "systech - ত্রিকোণমিতি - ৭(B) - প্রশ্ন ১৩-২৪",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(B)",
+        "topic": "প্রশ্ন ১৩-২৪"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7B/7B_Q13_Q24_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "HSC-Math-Systech-1st-Trigono-7B-Q25-Q36",
+      "name": "systech - ত্রিকোণমিতি - ৭(B) - প্রশ্ন ২৫-৩৬",
+      "category": {
+        "board": "HSC",
+        "className": "উচ্চতর গণিত",
+        "subject": "ত্রিকোণমিতি",
+        "chapter": "৭(B)",
+        "topic": "প্রশ্ন ২৫-৩৬"
+      },
+      "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7B/7B_Q25_Q36_HSCTrigonometry.html",
+      "tags": ["systech", "trigonometry", "1st-paper"]
     }
   ]
 }
