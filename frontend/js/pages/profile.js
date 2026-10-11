@@ -7,6 +7,18 @@ import { apiService } from '../services/ApiService.js';
 import { getAvatarColor } from '../utils/AvatarColor.js';
 
 // ============================================================
+// ✅ Upload Limits (keep in sync with backend/config/upload.js)
+// ⚠️ DEVELOPMENT PHASE: 50/100 KB limits for bandwidth optimization
+// ============================================================
+const UPLOAD_LIMITS = {
+    AVATAR_MAX_SIZE_KB: 50,
+    COVER_MAX_SIZE_KB: 100
+};
+const AVATAR_MAX_SIZE_BYTES = UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB * 1024;
+const COVER_MAX_SIZE_BYTES = UPLOAD_LIMITS.COVER_MAX_SIZE_KB * 1024;
+
+
+// ============================================================
 // ✅ ক্রপিং কনফিগারেশন
 // ============================================================
 const CROP_CONFIG = {
@@ -788,6 +800,19 @@ export class ProfilePage {
             console.log('📤 [handleFileUpload] Starting upload...');
             console.log('📤 File:', file.name, '| Size:', file.size, 'bytes | Type:', file.mimetype || file.type);
 
+            // ✅ Client-side size check (raw file must be under 1 MB to be resizable)
+            // Server will reject > 50 KB after resize
+            const RAW_FILE_LIMIT = 1 * 1024 * 1024; // 1 MB raw limit
+            if (file.size > RAW_FILE_LIMIT) {
+                this.#showToast(`❌ মূল ছবি 1 MB এর বেশি হতে পারবে না! (সার্ভার সাইজ: ${UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB} KB)`, 'error');
+                return;
+            }
+
+            if (!file.type.startsWith('image/')) {
+                this.#showToast('❌ শুধু ছবি ফাইল আপলোড করুন!', 'error');
+                return;
+            }
+
             const originalDataUrl = await this.#fileToDataURL(file);
             this.#originalImageData = originalDataUrl;
 
@@ -847,8 +872,8 @@ export class ProfilePage {
             reader.onload = (e) => {
                 const img = new Image();
                 img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    const MAX_SIZE = 800;
+                    // ✅ Resize to max 400x400 first (smaller = less data)
+                    const MAX_SIZE = 400;
                     let width = img.width;
                     let height = img.height;
 
@@ -858,6 +883,7 @@ export class ProfilePage {
                         height = Math.round(height * ratio);
                     }
 
+                    const canvas = document.createElement('canvas');
                     canvas.width = width;
                     canvas.height = height;
 
@@ -866,7 +892,27 @@ export class ProfilePage {
                     ctx.imageSmoothingQuality = 'high';
                     ctx.drawImage(img, 0, 0, width, height);
 
-                    resolve(canvas.toDataURL('image/jpeg', 0.85));
+                    // ✅ Iterative quality reduction to hit target size
+                    const targetBytes = AVATAR_MAX_SIZE_BYTES;
+                    let quality = 0.85;
+                    let dataUrl = canvas.toDataURL('image/jpeg', quality);
+                    let attempts = 0;
+                    const MAX_ATTEMPTS = 15;
+
+                    while (dataUrl.length * 0.75 > targetBytes && quality > 0.05 && attempts < MAX_ATTEMPTS) {
+                        quality -= 0.1;
+                        dataUrl = canvas.toDataURL('image/jpeg', quality);
+                        attempts++;
+                    }
+
+                    const finalKB = (dataUrl.length * 0.75 / 1024).toFixed(1);
+                    console.log(`🖼️ Avatar resized: ${width}x${height} @ q=${quality.toFixed(2)} = ${finalKB} KB (target: ${UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB} KB)`);
+
+                    if (finalKB > UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB) {
+                        console.warn(`⚠️ Could not compress below ${UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB} KB — got ${finalKB} KB`);
+                    }
+
+                    resolve(dataUrl);
                 };
                 img.onerror = reject;
                 img.src = e.target.result;
@@ -914,8 +960,10 @@ export class ProfilePage {
 
     async uploadCoverImage(file) {
         if (!file) return;
-        if (file.size > 5 * 1024 * 1024) {
-            this.#showToast('❌ ছবির সাইজ 5MB এর বেশি!', 'error');
+        // ✅ Raw file check (must be under 2 MB for resizing)
+        const RAW_FILE_LIMIT = 2 * 1024 * 1024; // 2 MB raw limit
+        if (file.size > RAW_FILE_LIMIT) {
+            this.#showToast(`❌ মূল ছবি 2 MB এর বেশি হতে পারবে না! (সার্ভার সাইজ: ${UPLOAD_LIMITS.COVER_MAX_SIZE_KB} KB)`, 'error');
             return;
         }
         if (!file.type.startsWith('image/')) {
@@ -991,8 +1039,8 @@ export class ProfilePage {
                 const img = new Image();
                 img.onload = () => {
                     const canvas = document.createElement('canvas');
-                    const maxWidth = 1200;
-                    const maxHeight = 400;
+                    const maxWidth = 800;   // Reduced from 1200
+                    const maxHeight = 300;  // Reduced from 400
                     let width = img.width;
                     let height = img.height;
 
@@ -1011,7 +1059,28 @@ export class ProfilePage {
                     ctx.imageSmoothingEnabled = true;
                     ctx.imageSmoothingQuality = 'high';
                     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    resolve(canvas.toDataURL('image/jpeg', 0.85));
+
+                    // ✅ Iterative quality reduction to hit target size
+                    const targetBytes = COVER_MAX_SIZE_BYTES;
+                    let quality = 0.85;
+                    let dataUrl = canvas.toDataURL('image/jpeg', quality);
+                    let attempts = 0;
+                    const MAX_ATTEMPTS = 15;
+
+                    while (dataUrl.length * 0.75 > targetBytes && quality > 0.05 && attempts < MAX_ATTEMPTS) {
+                        quality -= 0.1;
+                        dataUrl = canvas.toDataURL('image/jpeg', quality);
+                        attempts++;
+                    }
+
+                    const finalKB = (dataUrl.length * 0.75 / 1024).toFixed(1);
+                    console.log(`🖼️ Cover resized: ${canvas.width}x${canvas.height} @ q=${quality.toFixed(2)} = ${finalKB} KB (target: ${UPLOAD_LIMITS.COVER_MAX_SIZE_KB} KB)`);
+
+                    if (finalKB > UPLOAD_LIMITS.COVER_MAX_SIZE_KB) {
+                        console.warn(`⚠️ Could not compress below ${UPLOAD_LIMITS.COVER_MAX_SIZE_KB} KB — got ${finalKB} KB`);
+                    }
+
+                    resolve(dataUrl);
                 };
                 img.onerror = reject;
                 img.src = e.target.result;

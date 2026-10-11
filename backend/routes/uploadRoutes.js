@@ -1,6 +1,5 @@
 // backend/routes/uploadRoutes.js
-// Version: 1.0.0 - Upload endpoints (Cloudflare R2)
-// Endpoints: avatar upload/delete, cover upload/delete
+// Version: 2.0.0 - Centralized upload limits
 
 const express = require('express');
 const multer = require('multer');
@@ -13,38 +12,57 @@ const {
     deleteCover
 } = require('../controllers/uploadController');
 
+// ✅ Import centralized config
+const {
+    UPLOAD_LIMITS,
+    DEFAULT_MAX_SIZE_BYTES,
+    AVATAR_MAX_SIZE_BYTES,
+    COVER_MAX_SIZE_BYTES,
+    formatSize
+} = require('../config/upload');
+
 // ============================================================
-// ✅ Multer — memory storage (buffer → R2 direct upload)
+// ✅ Multer — memory storage (buffer → Cloudinary direct upload)
 // ============================================================
 const storage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {
-    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif'];
-    if (allowedTypes.includes(file.mimetype)) {
+    if (UPLOAD_LIMITS.ALLOWED_MIME_TYPES.includes(file.mimetype)) {
         cb(null, true);
     } else {
         cb(new Error('শুধুমাত্র image ফাইল আপলোড করা যাবে (jpeg/png/webp/gif)'), false);
     }
 };
 
-const upload = multer({
+// ✅ Avatar upload middleware (50 KB limit)
+const uploadAvatarMiddleware = multer({
     storage,
     fileFilter,
     limits: {
-        fileSize: 5 * 1024 * 1024, // 5 MB
-        files: 1 // একবারে একটি ফাইল
+        fileSize: AVATAR_MAX_SIZE_BYTES,
+        files: 1
+    }
+});
+
+// ✅ Cover upload middleware (100 KB limit)
+const uploadCoverMiddleware = multer({
+    storage,
+    fileFilter,
+    limits: {
+        fileSize: COVER_MAX_SIZE_BYTES,
+        files: 1
     }
 });
 
 // ============================================================
 // ✅ Multer error handler
 // ============================================================
-const handleMulterError = (err, req, res, next) => {
+const handleMulterError = (maxSizeKB) => (err, req, res, next) => {
     if (err instanceof multer.MulterError) {
         if (err.code === 'LIMIT_FILE_SIZE') {
             return res.status(400).json({
                 success: false,
-                message: 'ফাইল সাইজ 5 MB-এর বেশি হতে পারবে না'
+                message: `ফাইল সাইজ ${formatSize(maxSizeKB)}-এর বেশি হতে পারবে না`
             });
         }
         if (err.code === 'LIMIT_FILE_COUNT') {
@@ -72,12 +90,22 @@ const handleMulterError = (err, req, res, next) => {
 // ============================================================
 router.use(protect);
 
-// Avatar
-router.post('/avatar', upload.single('avatar'), handleMulterError, uploadAvatar);
+// Avatar — 50 KB limit
+router.post(
+    '/avatar',
+    uploadAvatarMiddleware.single('avatar'),
+    handleMulterError(UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB),
+    uploadAvatar
+);
 router.delete('/avatar', deleteAvatar);
 
-// Cover
-router.post('/cover', upload.single('cover'), handleMulterError, uploadCover);
+// Cover — 100 KB limit
+router.post(
+    '/cover',
+    uploadCoverMiddleware.single('cover'),
+    handleMulterError(UPLOAD_LIMITS.COVER_MAX_SIZE_KB),
+    uploadCover
+);
 router.delete('/cover', deleteCover);
 
 module.exports = router;

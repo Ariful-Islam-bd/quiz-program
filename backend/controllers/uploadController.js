@@ -1,44 +1,32 @@
 // backend/controllers/uploadController.js
-// Version: 2.0.0 - Cloudinary integration (replaces R2)
+// Version: 3.0.0 - Centralized upload limits (avatar: 50 KB, cover: 100 KB)
 
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const cloudinaryService = require('../services/cloudinaryService');
 const User = require('../models/User');
 
-// ============================================================
-// ✅ Constants
-// ============================================================
-const ALLOWED_MIME_TYPES = [
-    'image/jpeg',
-    'image/jpg',
-    'image/png',
-    'image/webp',
-    'image/gif'
-];
-
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
-
-const EXTENSION_MAP = {
-    'image/jpeg': 'jpg',
-    'image/jpg': 'jpg',
-    'image/png': 'png',
-    'image/webp': 'webp',
-    'image/gif': 'gif'
-};
+// ✅ Import centralized config
+const {
+    UPLOAD_LIMITS,
+    AVATAR_MAX_SIZE_BYTES,
+    COVER_MAX_SIZE_BYTES,
+    DEFAULT_MAX_SIZE_BYTES,
+    formatSize
+} = require('../config/upload');
 
 // ============================================================
-// ✅ Validate uploaded file
+// ✅ Validate uploaded file (type + size)
 // ============================================================
-const validateFile = (file) => {
+const validateFile = (file, maxSizeBytes, maxSizeKB, fileType = 'ফাইল') => {
     if (!file) {
-        throw new AppError('কোনো ফাইল আপলোড করা হয়নি', 400);
+        throw new AppError(`${fileType} আপলোড করা হয়নি`, 400);
     }
-    if (!ALLOWED_MIME_TYPES.includes(file.mimetype)) {
+    if (!UPLOAD_LIMITS.ALLOWED_MIME_TYPES.includes(file.mimetype)) {
         throw new AppError(`শুধুমাত্র image ফাইল আপলোড করা যাবে (jpeg/png/webp/gif)`, 400);
     }
-    if (file.size > MAX_FILE_SIZE) {
-        throw new AppError('ফাইল সাইজ 5 MB-এর বেশি হতে পারবে না', 400);
+    if (file.size > maxSizeBytes) {
+        throw new AppError(`${fileType} সাইজ ${formatSize(maxSizeKB)}-এর বেশি হতে পারবে না`, 400);
     }
 };
 
@@ -57,13 +45,19 @@ const ensureStorageConfigured = () => {
 exports.uploadAvatar = catchAsync(async (req, res, next) => {
     console.log('📤 Avatar upload request received');
     ensureStorageConfigured();
-    validateFile(req.file);
+    
+    // ✅ Validate: max 50 KB
+    validateFile(
+        req.file,
+        AVATAR_MAX_SIZE_BYTES,
+        UPLOAD_LIMITS.AVATAR_MAX_SIZE_KB,
+        'অ্যাভাটার'
+    );
 
     const userId = req.user.id;
-    const extension = EXTENSION_MAP[req.file.mimetype] || 'jpg';
+    const extension = UPLOAD_LIMITS.EXTENSION_MAP[req.file.mimetype] || 'jpg';
     const key = cloudinaryService.generateKey('avatars', userId, extension);
 
-    // ✅ Find user
     const user = await User.findById(userId);
     if (!user) return next(new AppError('ইউজার পাওয়া যায়নি', 404));
 
@@ -73,7 +67,7 @@ exports.uploadAvatar = catchAsync(async (req, res, next) => {
         if (oldKey) {
             try {
                 await cloudinaryService.deleteFile(oldKey);
-                console.log('🗑️ Old avatar deleted from Cloudinary:', oldKey);
+                console.log('🗑️ Old avatar deleted:', oldKey);
             } catch (err) {
                 console.warn('⚠️ Failed to delete old avatar:', err.message);
             }
@@ -87,17 +81,16 @@ exports.uploadAvatar = catchAsync(async (req, res, next) => {
         'avatars'
     );
 
-    // ✅ Update user profile
     if (!user.profile) user.profile = {};
     user.profile.avatar = url;
     await user.save({ validateBeforeSave: false });
 
-    console.log('✅ Avatar uploaded to Cloudinary:', publicId);
+    console.log(`✅ Avatar uploaded: ${publicId} (${formatSize(req.file.size / 1024)})`);
 
     res.status(200).json({
         success: true,
         message: '✅ অ্যাভাটার সফলভাবে আপলোড হয়েছে',
-        data: { url, key: publicId }
+        data: { url, key: publicId, size: req.file.size }
     });
 });
 
@@ -107,10 +100,17 @@ exports.uploadAvatar = catchAsync(async (req, res, next) => {
 exports.uploadCover = catchAsync(async (req, res, next) => {
     console.log('📤 Cover upload request received');
     ensureStorageConfigured();
-    validateFile(req.file);
+    
+    // ✅ Validate: max 100 KB
+    validateFile(
+        req.file,
+        COVER_MAX_SIZE_BYTES,
+        UPLOAD_LIMITS.COVER_MAX_SIZE_KB,
+        'কভার'
+    );
 
     const userId = req.user.id;
-    const extension = EXTENSION_MAP[req.file.mimetype] || 'jpg';
+    const extension = UPLOAD_LIMITS.EXTENSION_MAP[req.file.mimetype] || 'jpg';
     const key = cloudinaryService.generateKey('covers', userId, extension);
 
     const user = await User.findById(userId);
@@ -122,7 +122,7 @@ exports.uploadCover = catchAsync(async (req, res, next) => {
         if (oldKey) {
             try {
                 await cloudinaryService.deleteFile(oldKey);
-                console.log('🗑️ Old cover deleted from Cloudinary:', oldKey);
+                console.log('🗑️ Old cover deleted:', oldKey);
             } catch (err) {
                 console.warn('⚠️ Failed to delete old cover:', err.message);
             }
@@ -140,12 +140,12 @@ exports.uploadCover = catchAsync(async (req, res, next) => {
     user.profile.coverImage = url;
     await user.save({ validateBeforeSave: false });
 
-    console.log('✅ Cover uploaded to Cloudinary:', publicId);
+    console.log(`✅ Cover uploaded: ${publicId} (${formatSize(req.file.size / 1024)})`);
 
     res.status(200).json({
         success: true,
         message: '✅ কভার ইমেজ সফলভাবে আপলোড হয়েছে',
-        data: { url, key: publicId }
+        data: { url, key: publicId, size: req.file.size }
     });
 });
 
@@ -163,7 +163,7 @@ exports.deleteAvatar = catchAsync(async (req, res, next) => {
         if (key) {
             try {
                 await cloudinaryService.deleteFile(key);
-                console.log('🗑️ Avatar deleted from Cloudinary:', key);
+                console.log('🗑️ Avatar deleted:', key);
             } catch (err) {
                 console.warn('⚠️ Failed to delete avatar:', err.message);
             }
@@ -192,7 +192,7 @@ exports.deleteCover = catchAsync(async (req, res, next) => {
         if (key) {
             try {
                 await cloudinaryService.deleteFile(key);
-                console.log('🗑️ Cover deleted from Cloudinary:', key);
+                console.log('🗑️ Cover deleted:', key);
             } catch (err) {
                 console.warn('⚠️ Failed to delete cover:', err.message);
             }
