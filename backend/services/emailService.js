@@ -80,7 +80,7 @@ exports.sendEmail = async (options) => {
         }
 
         const mailOptions = {
-            from: `"কুইজ প্রোগ্রাম" <${process.env.EMAIL_USER}>`,
+            from: `"স্কুল-কলেজ" <${process.env.EMAIL_USER}>`,
             to: options.email,
             subject: options.subject,
             html: options.html || options.text || '',
@@ -128,7 +128,7 @@ exports.sendWelcomeEmail = async (user) => {
             </div>
             <h2 style="color: #2196f3; text-align: center; font-size: 24px; margin-bottom: 16px;">স্বাগতম, ${user.name}!</h2>
             <p style="font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 16px;">
-                আপনি সফলভাবে <strong>কুইজ প্রোগ্রাম</strong>-এ অ্যাকাউন্ট তৈরি করেছেন।
+                আপনি সফলভাবে <strong>স্কুল-কলেজ</strong>-এ অ্যাকাউন্ট তৈরি করেছেন।
             </p>
             <p style="font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 8px;">
                 এখন আপনি:
@@ -141,7 +141,7 @@ exports.sendWelcomeEmail = async (user) => {
             </ul>
             <div style="text-align: center; padding: 16px; background: #f8f9fa; border-radius: 8px;">
                 <p style="font-size: 16px; line-height: 1.6; color: #333; margin: 0;">
-                    🚀 শুরু করুন: <a href="${loginURL}" style="color: #2196f3; text-decoration: none; font-weight: 600;">কুইজ প্রোগ্রাম</a>
+                    🚀 শুরু করুন: <a href="${loginURL}" style="color: #2196f3; text-decoration: none; font-weight: 600;">স্কুল-কলেজ</a>
                 </p>
             </div>
             <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
