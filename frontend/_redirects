@@ -18,3 +18,9 @@
 
 # ✅ SPA fallback — সব অজানা route index.html-এ যাবে (status 200, not 404)
 /*                          /index.html                    200
+
+# Block orphan page files (SPA handles all routes)
+/pages/profile.html  /  301
+/pages/quiz.html     /  301
+/pages/profile       /  301
+/pages/quiz          /  301
