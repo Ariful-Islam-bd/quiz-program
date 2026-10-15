@@ -180,6 +180,33 @@ class App {
         }
     }
 
+    // ============================================================
+    // ✅ A11y Helpers: side menu tabindex management
+    // ============================================================
+    #disableMenuFocus(menu) {
+        if (!menu) return;
+        menu.querySelectorAll('button, input, select, textarea, a[href]').forEach(el => {
+            // Store original tabindex to restore later (default is undefined)
+            if (!el.hasAttribute('data-original-tabindex')) {
+                el.setAttribute('data-original-tabindex', el.getAttribute('tabindex') || '');
+            }
+            el.setAttribute('tabindex', '-1');
+        });
+    }
+
+    #restoreMenuFocus(menu) {
+        if (!menu) return;
+        menu.querySelectorAll('[data-original-tabindex]').forEach(el => {
+            const orig = el.getAttribute('data-original-tabindex');
+            if (orig === '') {
+                el.removeAttribute('tabindex');
+            } else {
+                el.setAttribute('tabindex', orig);
+            }
+            el.removeAttribute('data-original-tabindex');
+        });
+    }
+
     setupGlobalEvents() {
         // ===== মেনু টগল =====
         const menuToggle = document.getElementById('menuToggle');
@@ -190,15 +217,20 @@ class App {
                 const icon = document.querySelector('#menuToggle .hamburger-icon');
                 if (menu) {
                     if (menu.style.left === '0px') {
+                        // ✅ Menu close
                         menu.style.left = '-360px';
                         menu.classList.remove('open');
                         menu.setAttribute('aria-hidden', 'true');
                         if (icon) icon.classList.remove('menu-open');
+                        this.#disableMenuFocus(menu);   // ✅ NEW
                     } else {
+                        // ✅ Menu open
                         menu.style.left = '0px';
                         menu.classList.add('open');
                         menu.setAttribute('aria-hidden', 'false');
                         if (icon) icon.classList.add('menu-open');
+                        this.#restoreMenuFocus(menu);   // ✅ NEW
+                        
                         const pb = document.getElementById('profileBox');
                         if (pb?.style.right === '0px') {
                             pb.style.right = '-320px';
@@ -224,6 +256,7 @@ class App {
                 menu.classList.remove('open');
                 menu.setAttribute('aria-hidden', 'true');
                 if (icon) icon.classList.remove('menu-open');
+                this.#disableMenuFocus(menu);   // ✅ NEW
             }
         });
 
@@ -236,6 +269,7 @@ class App {
                 menu.setAttribute('aria-hidden', 'true');
                 const icon = document.querySelector('#menuToggle .hamburger-icon');
                 if (icon) icon.classList.remove('menu-open');
+                this.#disableMenuFocus(menu);   // ✅ NEW
             }
             const pb = document.getElementById('profileBox');
             if (pb?.classList.contains('visible')) {
@@ -281,15 +315,13 @@ class App {
         // ===== অ্যাভাটার বাটন =====
         const avatarBtn = document.getElementById('userAvatar');
         if (avatarBtn) {
-            // পুরনো ইভেন্ট রিমুভ করুন
             const newAvatarBtn = avatarBtn.cloneNode(true);
             avatarBtn.parentNode.replaceChild(newAvatarBtn, avatarBtn);
-    
+
             newAvatarBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 e.preventDefault();
         
-                // ✅ সবসময় প্রোফাইল বক্স টগল করুন (কুইজ পেজে)
                 const box = document.getElementById('profileBox');
                 if (box) {
                     if (box.style.right === '0px') {
@@ -319,6 +351,7 @@ class App {
                             menu.setAttribute('aria-hidden', 'true');
                             const icon = document.querySelector('#menuToggle .hamburger-icon');
                             if (icon) icon.classList.remove('menu-open');
+                            this.#disableMenuFocus(menu);   // ✅ NEW
                         }
                     }
                 }
@@ -343,7 +376,6 @@ class App {
         // ===== কিবোর্ড শর্টকাট =====
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                // ১. সাইড মেনু বন্ধ করুন
                 const menu = document.getElementById('sideMenu');
                 if (menu?.style.left === '0px') {
                     menu.style.left = '-360px';
@@ -351,9 +383,9 @@ class App {
                     menu.setAttribute('aria-hidden', 'true');
                     const icon = document.querySelector('#menuToggle .hamburger-icon');
                     if (icon) icon.classList.remove('menu-open');
+                    this.#disableMenuFocus(menu);   // ✅ NEW
                 }
         
-                // ২. প্রোফাইল বক্স বন্ধ করুন
                 const pb = document.getElementById('profileBox');
                 if (pb?.style.right === '0px') {
                     pb.style.right = '-320px';
@@ -369,7 +401,6 @@ class App {
                     }
                 }
         
-                // ৩. মডাল বন্ধ করুন (যদি খোলা থাকে)
                 const cropModal = document.getElementById('cropModal');
                 if (cropModal?.style.display === 'flex') {
                     cropModal.style.display = 'none';
@@ -382,10 +413,6 @@ class App {
                     document.body.style.overflow = '';
                 }
         
-                // ৪. ✅ কোনো পেজ নেভিগেশন করবেন না
-                // শুধু UI এলিমেন্ট বন্ধ করবেন
-        
-                // ৫. event propagation বন্ধ করুন
                 e.preventDefault();
                 e.stopPropagation();
             }
@@ -402,6 +429,7 @@ class App {
                     menu.setAttribute('aria-hidden', 'true');
                     const icon = document.querySelector('#menuToggle .hamburger-icon');
                     if (icon) icon.classList.remove('menu-open');
+                    this.#disableMenuFocus(menu);   // ✅ NEW
                 }
             }
             const pb = document.getElementById('profileBox');
@@ -436,7 +464,6 @@ class App {
             menuAuth.addEventListener('click', () => {
                 const action = menuAuth.dataset.action;
                 if (action === 'logout') {
-                    // ✅ লগআউট কনফার্ম
                     if (confirm('আপনি কি লগআউট করতে চান?')) {
                         authService.logout();
                         sessionManager.stop();
@@ -447,14 +474,21 @@ class App {
                         }
                     }
                 } else {
-                    // ✅ লগইন পেজ দেখান
                     this.authPage.show('login');
                 }
             });
         }
         
         // ✅ অথেন্টিকেশন স্টেট আপডেট
-        this._updateAuthUI();        
+        this._updateAuthUI();
+
+        // ============================================================
+        // ✅ INITIAL STATE: মেনু বন্ধ থাকলে tabindex disable
+        // ============================================================
+        const initialMenu = document.getElementById('sideMenu');
+        if (initialMenu && initialMenu.getAttribute('aria-hidden') === 'true') {
+            this.#disableMenuFocus(initialMenu);
+        }
     }
 
     _updateAuthUI() {
@@ -533,12 +567,6 @@ class App {
         }, 3000);
     }
 }
-
-/*/ ✅ DOM লোড হলে অ্যাপ শুরু করুন
-document.addEventListener('DOMContentLoaded', () => {
-    window.app = new App();
-}); */
-
 
 // ✅ Ensure runtime config is loaded BEFORE app starts
 document.addEventListener('DOMContentLoaded', async () => {

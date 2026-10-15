@@ -633,21 +633,6 @@ export class QuizPage {
         }
     }
 
-/*    async #loadInitialData() {
-        try {
-            const data = await apiService.getCategories();
-            if (!data?.success) throw new Error('Invalid response');
-            const cats = data.data || {};
-            this.#populateDropdown(this.#elements.boardSelect, cats.boards || []);
-            if (this.#elements.boardSelect) this.#elements.boardSelect.disabled = false;
-            this.#resetAllSelects();
-        } catch (error) {
-            console.error('Failed to load categories:', error);
-            this.#showToast('ক্যাটাগরি লোড করতে সমস্যা হয়েছে', 'error');
-            if (this.#elements.boardSelect) this.#elements.boardSelect.disabled = false;
-        }
-    }  */
-
     async #loadInitialData() {
         console.log('📥 #loadInitialData() called');
         console.log('🔑 Board element exists:', !!this.#elements.boardSelect);
@@ -1963,19 +1948,34 @@ export class QuizPage {
     #openSideMenu() {
         const sm = document.getElementById('sideMenu');
         if (!sm) return;
-        sm.style.left = '0px'; sm.classList.add('open'); sm.setAttribute('aria-hidden', 'false');
+        sm.style.left = '0px';
+        sm.classList.add('open');
+        sm.setAttribute('aria-hidden', 'false');
         const icon = document.getElementById('menuToggle')?.querySelector('.hamburger-icon');
         if (icon) icon.classList.add('menu-open');
         const pb = document.getElementById('profileBox');
         if (pb?.style.right === '0px') this.#closeProfileBox();
+        
+        // ✅ NEW: ভিতরের element-এ tabindex restore করুন
+        sm.querySelectorAll('[tabindex="-1"]').forEach(el => {
+            el.removeAttribute('tabindex');
+        });
     }
 
     #closeSideMenu() {
         const sm = document.getElementById('sideMenu');
         if (!sm) return;
-        sm.style.left = '-360px'; sm.classList.remove('open'); sm.setAttribute('aria-hidden', 'true');
+        sm.style.left = '-360px';
+        sm.classList.remove('open');
+        sm.setAttribute('aria-hidden', 'true');
         const icon = document.getElementById('menuToggle')?.querySelector('.hamburger-icon');
         if (icon) icon.classList.remove('menu-open');
+        
+        // ✅ NEW: ভিতরের সব focusable element disable করুন
+        sm.querySelectorAll('button, input, select, textarea, a[href], [tabindex]').forEach(el => {
+            el.setAttribute('tabindex', '-1');
+        });
+        
         this.#handlePendingTimerChanges();
     }
 
