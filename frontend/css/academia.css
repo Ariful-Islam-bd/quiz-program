@@ -682,11 +682,11 @@ body.dark .btn-secondary:hover {
         font-size: 0.75rem;
         gap: 3px;
     }
-    .academia-breadcrumb .breadcrumb-item:not(.active):not(:first-child) {
+    /*.academia-breadcrumb .breadcrumb-item:not(.active):not(:first-child) {
         display: none;
-    }
+    }*/
     .academia-breadcrumb .breadcrumb-item:first-child::after {
-        content: ' › ... ›';
+        /*content: ' › ... ›';*/
         color: var(--text-light);
         margin: 0 4px;
     }
