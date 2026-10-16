@@ -452,11 +452,11 @@ body.dark .content-header {
         padding: 8px 12px;
     }
     .step {
-        padding: 4px 6px;       ← Minimal
-        margin: 3px 0;          ← Tighter
+        padding: 4px 6px;
+        margin: 3px 0;
         border-radius: 4px;
-        font-size: 0.9rem;      ← Slightly smaller (was 0.95)
-        line-height: 1.5;       ← Tighter
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     /* Remove background from short steps */
@@ -753,7 +753,7 @@ body.dark .btn-secondary:hover {
     .content-error-actions .btn {
         width: 100%;
     }
-
+/*
     .math-content .problem-card {
         padding: 16px;
     }
@@ -761,5 +761,5 @@ body.dark .btn-secondary:hover {
     .math-content .step {
         font-size: 0.85rem;
         padding: 6px 10px;
-    }
+    } */
 }
