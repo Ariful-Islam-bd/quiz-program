@@ -559,7 +559,31 @@ export class AcademiaPage {
                 const id = header.dataset.chapterToggle;
                 const body = container.querySelector(`[data-chapter-body="${id}"]`);
                 const toggle = container.querySelector(`.chapter-toggle[data-chapter-toggle="${id}"]`);
-                if (body) body.classList.toggle('open');
+                
+                if (!body) return;
+                
+                const isOpen = body.classList.contains('open');
+                
+                if (isOpen) {
+                    // ✅ Closing: বর্তমান height থেকে 0-তে animate
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    // Force reflow
+                    void body.offsetHeight;
+                    body.style.maxHeight = '0';
+                    body.classList.remove('open');
+                } else {
+                    // ✅ Opening: dynamic height-এ animate
+                    body.classList.add('open');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    
+                    // ✅ Animation শেষ হলে max-height: none (long-term stability)
+                    setTimeout(() => {
+                        if (body.classList.contains('open')) {
+                            body.style.maxHeight = 'none';
+                        }
+                    }, 400);
+                }
+                
                 if (toggle) toggle.classList.toggle('open');
             });
         });

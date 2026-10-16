@@ -263,7 +263,8 @@
 }
 
 .chapter-body.open {
-    max-height: 800px;
+    max-height: none;
+    overflow: visible;
 }
 
 /* ===== টপিক লিস্ট ===== */
