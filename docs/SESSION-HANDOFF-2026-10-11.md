@@ -1,3 +1,8 @@
+```markdown
+# Session Handoff — 2026-10-11 (Historical)
+
+> **⚠️ IMPORTANT:** This is a historical document from Phase 1-4.
+> **For latest status, see:** `docs/SESSION-HANDOFF-2026-10-16.md`
 
 # Session Handoff — 2026-10-15 (Updated)
 
