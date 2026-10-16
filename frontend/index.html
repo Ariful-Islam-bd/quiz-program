@@ -6,7 +6,16 @@
     <meta name="description" content="স্কুল-কলেজ — HSC শিক্ষার্থীদের জন্য ইন্টারেক্টিভ কুইজ ও একাডেমিয়া কনটেন্ট প্ল্যাটফর্ম। গণিত, ত্রিকোণমিতি, নির্ণায়ক সহ ৫৬+ টপিক সম্পূর্ণ বাংলায়।">
     <title>স্কুল-কলেজ</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
-    <!-- CSS Files -->
+
+    <!-- ✅ Priority 1: Preconnect (DNS + TLS early) -->
+    <link rel="preconnect" href="https://quiz-program.onrender.com" crossorigin>
+    <link rel="dns-prefetch" href="https://quiz-program.onrender.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+
+    <!-- CSS Files (defer/async not possible for stylesheets — order matters) -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/dark-mode.css" />
@@ -14,11 +23,8 @@
     <link rel="stylesheet" href="css/academia.css" />
     <link rel="stylesheet" href="css/quiz.css" />
     <link rel="stylesheet" href="css/profile.css" />
-    <link rel="stylesheet" href="css/auth.css" /> <!-- ✅ নতুন -->
+    <link rel="stylesheet" href="css/auth.css" />
 
-    <link rel="stylesheet" href="katex/katex.min.css" />
-    <script defer src="katex/katex.min.js"></script>
-    <script defer src="katex/contrib/auto-render.min.js"></script>
 </head>
 <body>
     <header id="mainHeader" class="main-header" style="display: none;">

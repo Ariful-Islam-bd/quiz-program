@@ -27,6 +27,8 @@ export class QuizPage {
     #isQuizActive = false;
     #isQuizStarted = false;
     #selectedFilters = { board: '', class: '', subject: '', chapter: '', exercise: '' };
+    #katexLoaded = false;
+    #katexLoadPromise = null;
 
     constructor(navigation) {
         this.#navigation = navigation;
@@ -1038,6 +1040,70 @@ export class QuizPage {
         });
     }
 
+    async #ensureKaTeXLoaded() {
+        // ✅ Already loaded হলে দ্রুত return
+        if (this.#katexLoaded && typeof renderMathInElement !== 'undefined') {
+            return true;
+        }
+
+        // ✅ In-flight promise থাকলে reuse করুন (duplicate load prevent)
+        if (this.#katexLoadPromise) {
+            return this.#katexLoadPromise;
+        }
+
+        this.#katexLoadPromise = new Promise((resolve) => {
+            const CDN = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist';
+
+            // ✅ Step 1: CSS inject (already না থাকলে)
+            if (!document.querySelector('link[href*="katex.min.css"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = `${CDN}/katex.min.css`;
+                document.head.appendChild(link);
+            }
+
+            // ✅ Step 2: JS loader helper
+            const loadScript = (src) => new Promise((res, rej) => {
+                const existing = document.querySelector(`script[src="${src}"]`);
+                if (existing) {
+                    // Already loaded হলে সাথে সাথে resolve
+                    if (existing.dataset.loaded === 'true') {
+                        res();
+                    } else {
+                        existing.addEventListener('load', res);
+                        existing.addEventListener('error', rej);
+                    }
+                    return;
+                }
+                const s = document.createElement('script');
+                s.src = src;
+                s.async = true;
+                s.onload = () => {
+                    s.dataset.loaded = 'true';
+                    res();
+                };
+                s.onerror = rej;
+                document.head.appendChild(s);
+            });
+
+            // ✅ Step 3: katex.min.js → auto-render.min.js sequential load
+            loadScript(`${CDN}/katex.min.js`)
+                .then(() => loadScript(`${CDN}/contrib/auto-render.min.js`))
+                .then(() => {
+                    this.#katexLoaded = true;
+                    console.log('✅ KaTeX lazy loaded from CDN');
+                    resolve(true);
+                })
+                .catch((err) => {
+                    console.warn('⚠️ KaTeX load failed (quiz will continue without math):', err);
+                    this.#katexLoadPromise = null; // পরেরবার আবার try করা যাবে
+                    resolve(false);
+                });
+        });
+
+        return this.#katexLoadPromise;
+    }
+
     #renderKaTeX() {
         const c = this.#elements.quizContainer;
         if (!c) return;
@@ -1153,8 +1219,11 @@ export class QuizPage {
 
     async #startQuizWithFilters(filters) {
         try {
+            // ✅ ✅ ✅ NEW: KaTeX lazy load (parallel-এ API call-এর সাথে)
+            const katexPromise = this.#ensureKaTeXLoaded();
             if (this.#elements.startBtn) { this.#elements.startBtn.textContent = 'লোড হচ্ছে...'; this.#elements.startBtn.disabled = true; }
             const result = await apiService.getFilteredQuizzes(filters);
+            await katexPromise;
             if (!result?.success) { console.error('API error:', result); this.#showToast('API কল ব্যর্থ হয়েছে!', 'error'); return; }
             if (!result.data?.length) { this.#showToast('এই ফিল্টারে কোনো প্রশ্ন পাওয়া যায়নি!', 'warning'); return; }
             this.#cleanupQuiz();
