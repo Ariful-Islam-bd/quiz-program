@@ -111,12 +111,13 @@
 /* ===== মোবাইল রেসপনসিভ ===== */
 @media (max-width: 600px) {
     .container {
-        padding: 10px;
+        padding: 0px;
     }
     
     .problem-card {
-        padding: 16px;
-        margin-bottom: 16px;
+        padding: 12px 8px;
+        margin-bottom: 12px;
+        border-radius: 8px;
     }
     
     .problem-title {
@@ -129,13 +130,15 @@
     
     .step {
         font-size: 0.85rem;
-        padding: 4px 8px;
+        padding: 6px 8px;
+        margin: 4px 0;
+        border-radius: 4px;
         overflow-x: auto;
     }
     
     .step-explain {
         font-size: 0.82rem;
-        padding: 4px 8px 4px 12px;
+        padding: 6px 8px 6px 10px;
     }
     
     .explanation-table {

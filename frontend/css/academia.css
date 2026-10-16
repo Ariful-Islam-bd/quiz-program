@@ -392,7 +392,10 @@ body.dark .content-header {
 /* ===== রেসপনসিভ ===== */
 @media (max-width: 768px) {
     #academiaPage {
-        padding: 10px 15px;
+        padding: 5px 5px;
+    }
+    #academiaContent {
+        max-width: 100%;
     }
     
     .class-grid {
@@ -421,6 +424,9 @@ body.dark .content-header {
 }
 
 @media (max-width: 480px) {
+    #academiaPage {
+        padding: 4px 4px;
+    }
     .class-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -444,6 +450,19 @@ body.dark .content-header {
     
     .topic-card {
         padding: 8px 12px;
+    }
+    .step {
+        padding: 4px 6px;       ← Minimal
+        margin: 3px 0;          ← Tighter
+        border-radius: 4px;
+        font-size: 0.9rem;      ← Slightly smaller (was 0.95)
+        line-height: 1.5;       ← Tighter
+    }
+    
+    /* Remove background from short steps */
+    .step:has(> .katex:only-child) {
+        background: transparent;
+        padding: 2px 0;
     }
 }
 
@@ -657,6 +676,64 @@ body.dark .btn-secondary:hover {
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
+    .academia-breadcrumb {
+        padding: 6px 0 8px;
+        margin-bottom: 8px;
+        font-size: 0.75rem;
+        gap: 3px;
+    }
+    .academia-breadcrumb .breadcrumb-item:not(.active):not(:first-child) {
+        display: none;
+    }
+    .academia-breadcrumb .breadcrumb-item:first-child::after {
+        content: ' › ... ›';
+        color: var(--text-light);
+        margin: 0 4px;
+    }
+    .content-viewer {
+        border-radius: 6px;
+        margin-top: 4px;
+    }
+    .content-header {
+        padding: 8px 10px;
+        /* Keep horizontal flex on mobile */
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    .content-title {
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .content-title .topic-badge {
+        display: none;      /* Hide "📝 নোট" badge on mobile */
+    }
+    .content-actions {
+        flex-shrink: 0;
+    }
+    .content-actions .btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    .problem-card {
+        border-left: 3px solid var(--accent);
+        padding: 12px 8px;
+        border-radius: 6px;
+    }
+    
+    .problem-title {
+        font-size: 1rem;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+    }
+    .content-actions .btn span:not(:first-child) {
+        display: none;      /* Show only icon: 🔄 */
+    }
     .content-error {
         padding: 40px 16px;
     }
