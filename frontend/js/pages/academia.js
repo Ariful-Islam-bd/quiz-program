@@ -1,7 +1,8 @@
 // frontend/js/pages/academia.js
-// Version: 3.0.0 - API-based content loading
-// Changes: Static file fetch → Backend API calls
-//          Added: Loading skeleton, error states, URL routing
+// Version: 4.0.0 - Nested Publisher→Paper→Chapter structure
+// Changes: CHAPTER_DATA nested for hmath-11, flat for others
+//          New render: renderPublisherList, renderPaperChapters
+//          Breadcrumb: extended with publisher + paper levels
 
 import { contentService } from '../services/ContentService.js';
 
@@ -30,131 +31,184 @@ const SUBJECT_DATA = {
         { id: 'english-2-9', name: 'English 2nd Paper', icon: '🔤', chapters: 10 }
     ],
     'class-11-12': [
-        { id: 'hmath-11', name: 'উচ্চতর গণিত', icon: '📐', chapters: 10 },
-        { id: 'ict-11', name: 'তথ্য ও যোগাযোগ প্রযুক্তি', icon: '💻', chapters: 8 },
-        { id: 'logic-11', name: 'যুক্তিবিদ্যা', icon: '🧠', chapters: 6 },
+        { id: 'hmath-11', name: 'উচ্চতর গণিত', icon: '📐', chapters: 6 },
+        { id: 'ict-11', name: 'তথ্য ও যোগাযোগ প্রযুক্তি', icon: '💻', chapters: 2 },
+        { id: 'logic-11', name: 'যুক্তিবিদ্যা', icon: '🧠', chapters: 1 },
         { id: 'physics-11', name: 'পদার্থবিজ্ঞান', icon: '⚛️', chapters: 12 },
         { id: 'chemistry-11', name: 'রসায়ন', icon: '🧪', chapters: 10 },
         { id: 'biology-11', name: 'জীববিজ্ঞান', icon: '🧬', chapters: 8 }
     ]
 };
 
-// ✅ Chapter/topic structure with topicId matching backend
+// ============================================================
+// ✅ CHAPTER_DATA — Two types:
+//    type: 'publisher-nested' → publisher → paper → chapters
+//    type: 'flat'              → chapters (no publisher)
+// ============================================================
 const CHAPTER_DATA = {
-    'hmath-11': [
 
-        // ============================================================
-        // 🆕 অক্ষরপত্র — ১ম পত্র (নির্ণায়ক + অন্তরীকরণ)
-        // ============================================================
-        {
-            id: 'okkhorpotro-determinant',
-            number: 1,
-            name: 'নির্ণায়ক (অক্ষরপত্র - ১ম পত্র)',
-            icon: '🔢',
-            topics: [
-                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B', name: 'অনুশীলনী ১(B)', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q1', name: 'প্রশ্ন ১', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q3', name: 'প্রশ্ন ৩', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q4-Q5', name: 'প্রশ্ন ৪-৫', icon: '✅', type: 'note' }
-            ]
-        },
-        {
-            id: 'okkhorpotro-differ',
-            number: 9,
-            name: 'অন্তরীকরণ (অক্ষরপত্র - ১ম পত্র)',
-            icon: '📈',
-            topics: [
-                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9A', name: 'অনুশীলনী ৯(A)', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9B', name: 'অনুশীলনী ৯(B)', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-All', name: '৯(C) - সকল প্রশ্ন', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-Q1', name: '৯(C) - প্রশ্ন ১', icon: '✅', type: 'note' }
-            ]
-        },
+    // ════════════════════════════════════════════════════════
+    // HSC → উচ্চতর গণিত (NESTED: Publisher → Paper → Chapter)
+    // ════════════════════════════════════════════════════════
+    'hmath-11': {
+        type: 'publisher-nested',
+        publishers: [
+            // ─────────────────────────────────────────────
+            // 📘 অক্ষরপত্র
+            // ─────────────────────────────────────────────
+            {
+                id: 'okkhorpotro',
+                name: 'অক্ষরপত্র',
+                icon: '📘',
+                description: 'অক্ষরপত্র প্রকাশনী',
+                papers: [
+                    {
+                        id: 'okkhorpotro-1st',
+                        name: '১ম পত্র',
+                        icon: '📕',
+                        chapters: [
+                            {
+                                id: 'okkhorpotro-determinant',
+                                number: 1,
+                                name: 'নির্ণায়ক',
+                                icon: '🔢',
+                                topics: [
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B', name: 'অনুশীলনী ১(B)', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q1', name: 'প্রশ্ন ১', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q3', name: 'প্রশ্ন ৩', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Determinant-1B-Q4-Q5', name: 'প্রশ্ন ৪-৫', icon: '✅', type: 'note' }
+                                ]
+                            },                            
+                            {
+                                id: 'okkhorpotro-differ',
+                                number: 9,
+                                name: 'অন্তরীকরণ',
+                                icon: '📈',
+                                topics: [
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Differ-9A', name: 'অনুশীলনী ৯(A)', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Differ-9B', name: 'অনুশীলনী ৯(B)', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-All', name: '৯(C) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-1st-Differ-9C-Q1', name: '৯(C) - প্রশ্ন ১', icon: '✅', type: 'note' }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        id: 'okkhorpotro-2nd',
+                        name: '২য় পত্র',
+                        icon: '📗',
+                        chapters: [
+                            {
+                                id: 'okkhorpotro-linearprog',
+                                number: 2,
+                                name: 'যোগাশ্রয়ী প্রোগ্রাম',
+                                icon: '📐',
+                                topics: [
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q3-Q4', name: 'প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q5', name: 'প্রশ্ন ৫', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q6', name: 'প্রশ্ন ৬', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q7', name: 'প্রশ্ন ৭', icon: '✅', type: 'note' }
+                                ]
+                            },                            
+                            {
+                                id: 'okkhorpotro-complex',
+                                number: 3,
+                                name: 'জটিল সংখ্যা',
+                                icon: '📊',
+                                topics: [
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-All', name: '৩(A) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q01-Q02', name: '৩(A) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q03-Q05', name: '৩(A) - প্রশ্ন ৩-৫', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q06-Q08', name: '৩(A) - প্রশ্ন ৬-৮', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q09', name: '৩(A) - প্রশ্ন ৯', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q10', name: '৩(A) - প্রশ্ন ১০', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q11', name: '৩(A) - প্রশ্ন ১১', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q12-Q15', name: '৩(A) - প্রশ্ন ১২-১৫', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-All', name: '৩(B) - সকল প্রশ্ন', icon: '📝', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q01-Q02', name: '৩(B) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q03-Q04', name: '৩(B) - প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q05-Q09', name: '৩(B) - প্রশ্ন ৫-৯', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q10-Q11', name: '৩(B) - প্রশ্ন ১০-১১', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q12', name: '৩(B) - প্রশ্ন ১২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q13-Q17', name: '৩(B) - প্রশ্ন ১৩-১৭', icon: '✅', type: 'note' }
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },
 
+            // ─────────────────────────────────────────────
+            // 📗 সিস্টেক
+            // ─────────────────────────────────────────────
+            {
+                id: 'systech',
+                name: 'সিস্টেক',
+                icon: '📗',
+                description: 'সিস্টেক প্রকাশনী',
+                papers: [
+                    {
+                        id: 'systech-1st',
+                        name: '১ম পত্র',
+                        icon: '📕',
+                        chapters: [
+                            {
+                                id: 'systech-trigono-ch6',
+                                number: 6,
+                                name: 'ত্রিকোণমিতি - অধ্যায় ৬',
+                                icon: '🔺',
+                                topics: [
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6A-Q01-Q10', name: '৬(A) - প্রশ্ন ১-১০', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6A-Q11-Q21', name: '৬(A) - প্রশ্ন ১১-২১', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6A-Q22-Q30', name: '৬(A) - প্রশ্ন ২২-৩০', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6B-Q1-Q12', name: '৬(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6B-Q13-Q24', name: '৬(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-6B-Q25-Q36', name: '৬(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
+                                ]
+                            },
+                            {
+                                id: 'systech-trigono-ch7',
+                                number: 7,
+                                name: 'ত্রিকোণমিতি - অধ্যায় ৭',
+                                icon: '🔺',
+                                topics: [
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7A-Q01-Q12', name: '৭(A) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7A-Q13-Q24', name: '৭(A) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7A-Q25-Q36', name: '৭(A) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7B-Q01-Q12', name: '৭(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7B-Q13-Q24', name: '৭(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
+                                    { id: 'HSC-Math-Systech-1st-Trigono-7B-Q25-Q36', name: '৭(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
 
-        // ============================================================
-        // 🆕 অক্ষরপত্র — ২য় পত্র (যোগাশ্রয়ী প্রোগ্রাম + জটিল সংখ্যা)
-        // ============================================================
-        {
-            id: 'okkhorpotro-linearprog',
-            number: 2,
-            name: 'যোগাশ্রয়ী প্রোগ্রাম (অক্ষরপত্র - ২য় পত্র)',
-            icon: '📐',
-            topics: [
-                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q2', name: 'প্রশ্ন ২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q3-Q4', name: 'প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q5', name: 'প্রশ্ন ৫', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q6', name: 'প্রশ্ন ৬', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-LinearProg-Q7', name: 'প্রশ্ন ৭', icon: '✅', type: 'note' }
-            ]
-        },
-        {
-            id: 'okkhorpotro-complex',
-            number: 3,
-            name: 'জটিল সংখ্যা (অক্ষরপত্র - ২য় পত্র)',
-            icon: '📊',
-            topics: [
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-All', name: '৩(A) - সকল প্রশ্ন', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q01-Q02', name: '৩(A) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q03-Q05', name: '৩(A) - প্রশ্ন ৩-৫', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q06-Q08', name: '৩(A) - প্রশ্ন ৬-৮', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q09', name: '৩(A) - প্রশ্ন ৯', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q10', name: '৩(A) - প্রশ্ন ১০', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q11', name: '৩(A) - প্রশ্ন ১১', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3A-Q12-Q15', name: '৩(A) - প্রশ্ন ১২-১৫', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-All', name: '৩(B) - সকল প্রশ্ন', icon: '📝', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q01-Q02', name: '৩(B) - প্রশ্ন ১-২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q03-Q04', name: '৩(B) - প্রশ্ন ৩-৪', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q05-Q09', name: '৩(B) - প্রশ্ন ৫-৯', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q10-Q11', name: '৩(B) - প্রশ্ন ১০-১১', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q12', name: '৩(B) - প্রশ্ন ১২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Okkhorpotro-2nd-Complex-3B-Q13-Q17', name: '৩(B) - প্রশ্ন ১৩-১৭', icon: '✅', type: 'note' }
-            ]
-        },
+    // ════════════════════════════════════════════════════════
+    // HSC → ICT (FLAT: no publisher)
+    // ════════════════════════════════════════════════════════
+    'ict-11': {
+        type: 'flat',
+        chapters: [
+            { id: 'ict-ch1', number: 1, name: 'বিশ্ব ও বাংলাদেশ প্রেক্ষিত', icon: '🌍', topics: [{ id: 'ict-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] },
+            { id: 'ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি', icon: '🔢', topics: [{ id: 'ict-ch3-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
+        ]
+    },
 
-
-        // ============================================================
-        // 🆕 সিস্টেক — ১ম পত্র (ত্রিকোণমিতি)
-        // ============================================================
-        {
-            id: 'systech-trigono-ch6',
-            number: 6,
-            name: 'ত্রিকোণমিতি - অধ্যায় ৬ (সিস্টেক - ১ম পত্র)',
-            icon: '🔺',
-            topics: [
-                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q01-Q10', name: '৬(A) - প্রশ্ন ১-১০', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q11-Q21', name: '৬(A) - প্রশ্ন ১১-২১', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-6A-Q22-Q30', name: '৬(A) - প্রশ্ন ২২-৩০', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q1-Q12', name: '৬(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q13-Q24', name: '৬(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-6B-Q25-Q36', name: '৬(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
-            ]
-        },
-        {
-            id: 'systech-trigono-ch7',
-            number: 7,
-            name: 'ত্রিকোণমিতি - অধ্যায় ৭ (সিস্টেক - ১ম পত্র)',
-            icon: '🔺',
-            topics: [
-                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q01-Q12', name: '৭(A) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q13-Q24', name: '৭(A) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-7A-Q25-Q36', name: '৭(A) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q01-Q12', name: '৭(B) - প্রশ্ন ১-১২', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q13-Q24', name: '৭(B) - প্রশ্ন ১৩-২৪', icon: '✅', type: 'note' },
-                { id: 'HSC-Math-Systech-1st-Trigono-7B-Q25-Q36', name: '৭(B) - প্রশ্ন ২৫-৩৬', icon: '✅', type: 'note' }
-            ]
-        }
-    ],
-    
-    // ✅ Existing other subjects (unchanged)
-    'ict-11': [
-        { id: 'ict-ch1', number: 1, name: 'বিশ্ব ও বাংলাদেশ প্রেক্ষিত', icon: '🌍', topics: [{ id: 'ict-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] },
-        { id: 'ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি', icon: '🔢', topics: [{ id: 'ict-ch3-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
-    ],
-    'logic-11': [
-        { id: 'logic-ch1', number: 1, name: 'যৌক্তিক সংজ্ঞা', icon: '🧠', topics: [{ id: 'logic-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
-    ]
+    // ════════════════════════════════════════════════════════
+    // HSC → যুক্তিবিদ্যা (FLAT)
+    // ════════════════════════════════════════════════════════
+    'logic-11': {
+        type: 'flat',
+        chapters: [
+            { id: 'logic-ch1', number: 1, name: 'যৌক্তিক সংজ্ঞা', icon: '🧠', topics: [{ id: 'logic-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
+        ]
+    }
 };
 
 // ============================================================
@@ -165,6 +219,8 @@ export class AcademiaPage {
         this.navigation = navigation;
         this.currentClass = null;
         this.currentSubject = null;
+        this.currentPublisher = null;   // 🆕
+        this.currentPaper = null;        // 🆕
         this.history = [];
         this.container = null;
 
@@ -192,7 +248,22 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Render: Class Grid
+    // ✅ Helper: Get subject config (with type check)
+    // ============================================================
+    getSubjectConfig(subjectId) {
+        const config = CHAPTER_DATA[subjectId];
+        if (!config) return { type: 'flat', chapters: [] };
+
+        // Backward compat: if it's an array, treat as flat
+        if (Array.isArray(config)) {
+            return { type: 'flat', chapters: config };
+        }
+
+        return config;
+    }
+
+    // ============================================================
+    // ✅ Render: Class Grid (unchanged)
     // ============================================================
     renderClassGrid(container) {
         container.innerHTML = `
@@ -217,13 +288,16 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Render: Subjects
+    // ✅ Render: Subjects (unchanged)
     // ============================================================
     renderSubjects(container, classId) {
         const classData = CLASS_DATA.find(c => c.id === classId);
         const className = classData ? classData.name : 'শ্রেণি';
         const subjects = SUBJECT_DATA[classId] || [];
         this.currentClass = classId;
+        this.currentSubject = null;
+        this.currentPublisher = null;
+        this.currentPaper = null;
 
         container.innerHTML = `
             <div class="academia-breadcrumb">
@@ -251,15 +325,163 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Render: Chapters + Topics
+    // ✅ Render: Chapters — DISPATCHER
     // ============================================================
     renderChapters(container, subjectId) {
+        this.currentSubject = subjectId;
+        this.currentPublisher = null;
+        this.currentPaper = null;
+
+        const config = this.getSubjectConfig(subjectId);
+
+        if (config.type === 'publisher-nested') {
+            this.renderPublisherList(container, config.publishers);
+        } else {
+            // flat
+            this.renderFlatChapters(container, config.chapters);
+        }
+    }
+
+    // ============================================================
+    // ✅ Render: Publisher List (NEW)
+    // ============================================================
+    renderPublisherList(container, publishers) {
         const classData = CLASS_DATA.find(c => c.id === this.currentClass);
         const className = classData ? classData.name : 'শ্রেণি';
-        const subjectData = SUBJECT_DATA[this.currentClass]?.find(s => s.id === subjectId);
+        const subjectData = SUBJECT_DATA[this.currentClass]?.find(s => s.id === this.currentSubject);
         const subjectName = subjectData ? subjectData.name : 'বিষয়';
-        const chapters = CHAPTER_DATA[subjectId] || [];
-        this.currentSubject = subjectId;
+
+        container.innerHTML = `
+            <div class="academia-breadcrumb">
+                <span class="breadcrumb-item"><span class="breadcrumb-link home-link" data-action="go-home">🏠 হোম</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link class-link" data-action="back-to-classes">📚 ${className}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link subject-link" data-action="back-to-subjects">📖 ${subjectName}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item active">📚 প্রকাশনী</span>
+            </div>
+            <div class="publisher-grid">
+                ${publishers.map(pub => `
+                    <div class="publisher-card" data-publisher="${pub.id}">
+                        <div class="publisher-icon">${pub.icon}</div>
+                        <div class="publisher-info">
+                            <div class="publisher-name">${pub.name}</div>
+                            <div class="publisher-desc">${pub.description || ''}</div>
+                        </div>
+                        <div class="publisher-meta">
+                            <span class="publisher-paper-count">${pub.papers.length}টি পত্র</span>
+                        </div>
+                        <span class="publisher-arrow">→</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        this.attachPublisherEvents(container, publishers);
+        this.attachBreadcrumbEvents(container);
+    }
+
+    // ============================================================
+    // ✅ Render: Papers within Publisher (NEW)
+    // ============================================================
+    renderPublisherPapers(container, publisherId) {
+        const config = this.getSubjectConfig(this.currentSubject);
+        const publisher = config.publishers?.find(p => p.id === publisherId);
+        if (!publisher) {
+            console.error('Publisher not found:', publisherId);
+            this.renderChapters(container, this.currentSubject);
+            return;
+        }
+
+        this.currentPublisher = publisherId;
+        this.currentPaper = null;
+
+        const classData = CLASS_DATA.find(c => c.id === this.currentClass);
+        const className = classData ? classData.name : 'শ্রেণি';
+        const subjectData = SUBJECT_DATA[this.currentClass]?.find(s => s.id === this.currentSubject);
+        const subjectName = subjectData ? subjectData.name : 'বিষয়';
+
+        container.innerHTML = `
+            <div class="academia-breadcrumb">
+                <span class="breadcrumb-item"><span class="breadcrumb-link home-link" data-action="go-home">🏠 হোম</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link class-link" data-action="back-to-classes">📚 ${className}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link subject-link" data-action="back-to-subjects">📖 ${subjectName}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link publisher-link" data-action="back-to-publishers">${publisher.icon} ${publisher.name}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item active">📄 পত্র</span>
+            </div>
+            <div class="paper-grid">
+                ${publisher.papers.map(paper => `
+                    <div class="paper-card" data-paper="${paper.id}">
+                        <div class="paper-icon">${paper.icon || '📄'}</div>
+                        <div class="paper-info">
+                            <div class="paper-name">${paper.name}</div>
+                            <div class="paper-desc">${paper.chapters.length}টি অধ্যায়</div>
+                        </div>
+                        <span class="paper-arrow">→</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        this.attachPaperEvents(container, publisher.papers);
+        this.attachBreadcrumbEvents(container);
+    }
+
+    // ============================================================
+    // ✅ Render: Chapters within Paper (NEW)
+    // ============================================================
+    renderPaperChapters(container, paperId) {
+        const config = this.getSubjectConfig(this.currentSubject);
+        const publisher = config.publishers?.find(p => p.id === this.currentPublisher);
+        if (!publisher) {
+            this.renderChapters(container, this.currentSubject);
+            return;
+        }
+        const paper = publisher.papers.find(p => p.id === paperId);
+        if (!paper) {
+            console.error('Paper not found:', paperId);
+            return;
+        }
+
+        this.currentPaper = paperId;
+
+        const classData = CLASS_DATA.find(c => c.id === this.currentClass);
+        const className = classData ? classData.name : 'শ্রেণি';
+        const subjectData = SUBJECT_DATA[this.currentClass]?.find(s => s.id === this.currentSubject);
+        const subjectName = subjectData ? subjectData.name : 'বিষয়';
+
+        container.innerHTML = `
+            <div class="academia-breadcrumb">
+                <span class="breadcrumb-item"><span class="breadcrumb-link home-link" data-action="go-home">🏠 হোম</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link class-link" data-action="back-to-classes">📚 ${className}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link subject-link" data-action="back-to-subjects">📖 ${subjectName}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link publisher-link" data-action="back-to-publishers">${publisher.icon} ${publisher.name}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item"><span class="breadcrumb-link paper-link" data-action="back-to-papers">${paper.icon} ${paper.name}</span></span>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-item active">📑 অধ্যায়</span>
+            </div>
+            ${this.renderChapterListHTML(paper.chapters)}
+        `;
+        this.attachChapterEvents(container);
+        this.attachTopicEvents(container);
+        this.attachBreadcrumbEvents(container);
+    }
+
+    // ============================================================
+    // ✅ Render: Flat Chapters (for non-publisher subjects)
+    // ============================================================
+    renderFlatChapters(container, chapters) {
+        const classData = CLASS_DATA.find(c => c.id === this.currentClass);
+        const className = classData ? classData.name : 'শ্রেণি';
+        const subjectData = SUBJECT_DATA[this.currentClass]?.find(s => s.id === this.currentSubject);
+        const subjectName = subjectData ? subjectData.name : 'বিষয়';
 
         container.innerHTML = `
             <div class="academia-breadcrumb">
@@ -271,6 +493,18 @@ export class AcademiaPage {
                 <span class="breadcrumb-separator">›</span>
                 <span class="breadcrumb-item active">📑 অধ্যায়</span>
             </div>
+            ${this.renderChapterListHTML(chapters)}
+        `;
+        this.attachChapterEvents(container);
+        this.attachTopicEvents(container);
+        this.attachBreadcrumbEvents(container);
+    }
+
+    // ============================================================
+    // ✅ Helper: Chapter list HTML (reused)
+    // ============================================================
+    renderChapterListHTML(chapters) {
+        return `
             <div class="chapter-list">
                 ${chapters.map(chapter => `
                     <div class="chapter-card">
@@ -297,13 +531,10 @@ export class AcademiaPage {
                 `).join('')}
             </div>
         `;
-        this.attachChapterEvents(container);
-        this.attachTopicEvents(container);
-        this.attachBreadcrumbEvents(container);
     }
 
     // ============================================================
-    // ✅ Render: Content (API-based)
+    // ✅ Render: Content (unchanged)
     // ============================================================
     async renderContent(container, topicId) {
         const classData = CLASS_DATA.find(c => c.id === this.currentClass);
@@ -312,9 +543,17 @@ export class AcademiaPage {
         const subjectName = subjectData ? subjectData.name : 'বিষয়';
 
         let chapterName = 'অধ্যায়', topicName = topicId;
-        if (this.currentSubject) {
-            const chapters = CHAPTER_DATA[this.currentSubject] || [];
-            for (const chapter of chapters) {
+        const config = this.getSubjectConfig(this.currentSubject);
+        if (config) {
+            let allChapters = [];
+            if (config.type === 'flat') {
+                allChapters = config.chapters || [];
+            } else if (config.type === 'publisher-nested') {
+                const publisher = config.publishers?.find(p => p.id === this.currentPublisher);
+                const paper = publisher?.papers?.find(p => p.id === this.currentPaper);
+                allChapters = paper?.chapters || [];
+            }
+            for (const chapter of allChapters) {
                 const found = chapter.topics.find(t => t.id === topicId);
                 if (found) {
                     chapterName = chapter.name;
@@ -324,17 +563,38 @@ export class AcademiaPage {
             }
         }
 
+        // Build breadcrumb with publisher/paper if applicable
+        let breadcrumbHTML = `
+            <span class="breadcrumb-item"><span class="breadcrumb-link home-link" data-action="go-home">🏠 হোম</span></span>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-item"><span class="breadcrumb-link class-link" data-action="back-to-classes">📚 ${className}</span></span>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-item"><span class="breadcrumb-link subject-link" data-action="back-to-subjects">📖 ${subjectName}</span></span>
+        `;
+
+        if (config.type === 'publisher-nested' && this.currentPublisher && this.currentPaper) {
+            const publisher = config.publishers.find(p => p.id === this.currentPublisher);
+            const paper = publisher?.papers.find(p => p.id === this.currentPaper);
+            if (publisher && paper) {
+                breadcrumbHTML += `
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-item"><span class="breadcrumb-link publisher-link" data-action="back-to-publishers">${publisher.icon} ${publisher.name}</span></span>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-item"><span class="breadcrumb-link paper-link" data-action="back-to-papers">${paper.icon} ${paper.name}</span></span>
+                `;
+            }
+        }
+
+        breadcrumbHTML += `
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-item"><span class="breadcrumb-link chapter-link" data-action="back-to-chapters">📑 ${chapterName}</span></span>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-item active">📄 ${topicName}</span>
+        `;
+
         container.innerHTML = `
             <div class="academia-breadcrumb">
-                <span class="breadcrumb-item"><span class="breadcrumb-link home-link" data-action="go-home">🏠 হোম</span></span>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-item"><span class="breadcrumb-link class-link" data-action="back-to-classes">📚 ${className}</span></span>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-item"><span class="breadcrumb-link subject-link" data-action="back-to-subjects">📖 ${subjectName}</span></span>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-item"><span class="breadcrumb-link chapter-link" data-action="back-to-chapters">📑 ${chapterName}</span></span>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-item active">📄 ${topicName}</span>
+                ${breadcrumbHTML}
             </div>
             <div class="content-viewer">
                 <div class="content-header">
@@ -347,7 +607,6 @@ export class AcademiaPage {
                     </div>
                 </div>
                 <div class="content-body" id="contentBody">
-                    <!-- Skeleton loader (will be replaced) -->
                     <div class="content-skeleton">
                         <div class="skeleton-line skeleton-title"></div>
                         <div class="skeleton-line"></div>
@@ -362,7 +621,6 @@ export class AcademiaPage {
 
         this.attachBreadcrumbEvents(container);
 
-        // ✅ Reload button
         const reloadBtn = container.querySelector('#reloadContentBtn');
         if (reloadBtn) {
             reloadBtn.addEventListener('click', () => {
@@ -371,12 +629,11 @@ export class AcademiaPage {
             });
         }
 
-        // ✅ Load content from API
         await this.loadContentFromAPI(topicId, container);
     }
 
     // ============================================================
-    // ✅ Load content from backend API
+    // ✅ Load content from backend API (unchanged)
     // ============================================================
     async loadContentFromAPI(topicId, container) {
         const contentBody = container.querySelector('#contentBody');
@@ -390,22 +647,15 @@ export class AcademiaPage {
                 throw new Error('কন্টেন্ট খালি এসেছে');
             }
 
-            // ✅ Inject HTML
             contentBody.innerHTML = data.html;
-
-            // ✅ Apply styles_math_sol.css scoping
             contentBody.classList.add('math-content');
-
-            // ✅ Render KaTeX math
             this.renderMath(contentBody);
 
-            // ✅ Smooth scroll
             setTimeout(() => {
                 container.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 150);
 
             console.log(`✅ Content loaded: ${topicId} (${data.html.length} chars)`);
-
         } catch (error) {
             console.error('❌ Content load failed:', error);
             this.renderContentError(contentBody, topicId, error);
@@ -413,7 +663,7 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Error state for content
+    // ✅ Error state (unchanged)
     // ============================================================
     renderContentError(contentBody, topicId, error) {
         contentBody.innerHTML = `
@@ -421,9 +671,7 @@ export class AcademiaPage {
                 <div class="content-error-icon">❌</div>
                 <h3 class="content-error-title">কন্টেন্ট লোড করতে সমস্যা হয়েছে</h3>
                 <p class="content-error-message">${error.message || 'অজানা ত্রুটি'}</p>
-                <p class="content-error-hint">
-                    📁 <code>${topicId}</code>
-                </p>
+                <p class="content-error-hint">📁 <code>${topicId}</code></p>
                 <div class="content-error-actions">
                     <button class="btn btn-primary" id="retryBtn">🔄 আবার চেষ্টা করুন</button>
                     <button class="btn btn-secondary" id="backBtn">← ফিরে যান</button>
@@ -438,16 +686,12 @@ export class AcademiaPage {
 
         contentBody.querySelector('#backBtn')?.addEventListener('click', () => {
             const container = contentBody.closest('#academiaContent');
-            if (this.currentSubject) {
-                this.renderChapters(container, this.currentSubject);
-            } else {
-                this.renderClassGrid(container);
-            }
+            this.goBack();
         });
     }
 
     // ============================================================
-    // ✅ KaTeX rendering
+    // ✅ KaTeX rendering (unchanged)
     // ============================================================
     renderMath(container) {
         try {
@@ -470,15 +714,12 @@ export class AcademiaPage {
     }
 
     loadKaTeX(container) {
-        // CSS
         if (!document.querySelector('link[href*="katex.min.css"]')) {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
             document.head.appendChild(link);
         }
-
-        // JS
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
         script.onload = () => {
@@ -487,10 +728,7 @@ export class AcademiaPage {
             renderScript.onload = () => {
                 if (typeof renderMathInElement !== 'undefined') {
                     renderMathInElement(container, {
-                        delimiters: [
-                            { left: '$$', right: '$$', display: true },
-                            { left: '$', right: '$', display: false }
-                        ],
+                        delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }],
                         throwOnError: false
                     });
                 }
@@ -501,7 +739,7 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Event attach helpers (unchanged)
+    // ✅ Event attach helpers
     // ============================================================
     attachClassEvents(container) {
         container.querySelectorAll('.class-card').forEach(card => {
@@ -521,37 +759,54 @@ export class AcademiaPage {
         });
     }
 
+    // 🆕 Publisher events
+    attachPublisherEvents(container, publishers) {
+        container.querySelectorAll('.publisher-card').forEach(card => {
+            card.addEventListener('click', () => {
+                this.history.push({
+                    type: 'publishers',
+                    subjectId: this.currentSubject
+                });
+                this.renderPublisherPapers(container, card.dataset.publisher);
+            });
+        });
+    }
+
+    // 🆕 Paper events
+    attachPaperEvents(container, papers) {
+        container.querySelectorAll('.paper-card').forEach(card => {
+            card.addEventListener('click', () => {
+                this.history.push({
+                    type: 'papers',
+                    subjectId: this.currentSubject,
+                    publisherId: this.currentPublisher
+                });
+                this.renderPaperChapters(container, card.dataset.paper);
+            });
+        });
+    }
+
     attachChapterEvents(container) {
         container.querySelectorAll('.chapter-header[data-chapter-toggle]').forEach(header => {
             header.addEventListener('click', () => {
                 const id = header.dataset.chapterToggle;
                 const body = container.querySelector(`[data-chapter-body="${id}"]`);
                 const toggle = container.querySelector(`.chapter-toggle[data-chapter-toggle="${id}"]`);
-                
                 if (!body) return;
-                
+
                 const isOpen = body.classList.contains('open');
-                
                 if (isOpen) {
-                    // ✅ Closing: বর্তমান height থেকে 0-তে animate
                     body.style.maxHeight = body.scrollHeight + 'px';
-                    // Force reflow
                     void body.offsetHeight;
                     body.style.maxHeight = '0';
                     body.classList.remove('open');
                 } else {
-                    // ✅ Opening: dynamic height-এ animate
                     body.classList.add('open');
                     body.style.maxHeight = body.scrollHeight + 'px';
-                    
-                    // ✅ Animation শেষ হলে max-height: none (long-term stability)
                     setTimeout(() => {
-                        if (body.classList.contains('open')) {
-                            body.style.maxHeight = 'none';
-                        }
+                        if (body.classList.contains('open')) body.style.maxHeight = 'none';
                     }, 400);
                 }
-                
                 if (toggle) toggle.classList.toggle('open');
             });
         });
@@ -560,7 +815,12 @@ export class AcademiaPage {
     attachTopicEvents(container) {
         container.querySelectorAll('.topic-card').forEach(card => {
             card.addEventListener('click', () => {
-                this.history.push({ type: 'chapters', subjectId: this.currentSubject });
+                this.history.push({
+                    type: 'topics',
+                    subjectId: this.currentSubject,
+                    publisherId: this.currentPublisher,
+                    paperId: this.currentPaper
+                });
                 this.renderContent(container, card.dataset.topic);
             });
         });
@@ -582,8 +842,18 @@ export class AcademiaPage {
                     case 'back-to-subjects':
                         if (this.currentClass) this.renderSubjects(container, this.currentClass);
                         break;
+                    case 'back-to-publishers':
+                        this.renderChapters(container, this.currentSubject);
+                        break;
+                    case 'back-to-papers':
+                        if (this.currentPublisher) this.renderPublisherPapers(container, this.currentPublisher);
+                        break;
                     case 'back-to-chapters':
-                        if (this.currentSubject) this.renderChapters(container, this.currentSubject);
+                        if (this.currentPaper) {
+                            this.renderPaperChapters(container, this.currentPaper);
+                        } else {
+                            this.renderChapters(container, this.currentSubject);
+                        }
                         break;
                     default:
                         console.warn('Unknown breadcrumb action:', action);
@@ -598,11 +868,9 @@ export class AcademiaPage {
     setupEventListeners() {
         this._escapeHandler = (e) => {
             if (e.key !== 'Escape') return;
-
             const menu = document.getElementById('sideMenu');
             const pb = document.getElementById('profileBox');
             const modals = document.querySelectorAll('.modal-overlay');
-
             let uiClosed = false;
 
             if (menu?.style.left === '0px') {
@@ -613,7 +881,6 @@ export class AcademiaPage {
                 if (icon) icon.classList.remove('menu-open');
                 uiClosed = true;
             }
-
             if (pb?.style.right === '0px') {
                 pb.style.right = '-320px';
                 pb.classList.remove('visible');
@@ -621,14 +888,8 @@ export class AcademiaPage {
                 pb.style.visibility = 'hidden';
                 pb.style.opacity = '0';
                 pb.setAttribute('aria-hidden', 'true');
-                const ab = document.getElementById('userAvatar');
-                if (ab) {
-                    ab.style.borderColor = '';
-                    ab.style.boxShadow = '';
-                }
                 uiClosed = true;
             }
-
             modals.forEach(modal => {
                 if (modal.style.display === 'flex' || modal.style.display === 'block') {
                     modal.style.display = 'none';
@@ -636,15 +897,9 @@ export class AcademiaPage {
                     uiClosed = true;
                 }
             });
-
-            if (!uiClosed) {
-                console.log('🔑 Escape pressed - no UI to close');
-            }
-
             e.preventDefault();
             e.stopPropagation();
         };
-
         document.addEventListener('keydown', this._escapeHandler);
 
         document.addEventListener('keydown', (e) => {
@@ -655,7 +910,7 @@ export class AcademiaPage {
     }
 
     // ============================================================
-    // ✅ Lifecycle (unchanged)
+    // ✅ Lifecycle
     // ============================================================
     goBack() {
         const container = this.container || document.getElementById('academiaContent');
@@ -665,7 +920,14 @@ export class AcademiaPage {
         }
         const last = this.history.pop();
         if (last.type === 'subjects') this.renderSubjects(container, last.classId);
-        else if (last.type === 'chapters') this.renderChapters(container, last.subjectId);
+        else if (last.type === 'publishers') this.renderChapters(container, last.subjectId);
+        else if (last.type === 'papers') this.renderPublisherPapers(container, last.publisherId);
+        else if (last.type === 'topics') {
+            this.currentPublisher = last.publisherId || null;
+            this.currentPaper = last.paperId || null;
+            if (this.currentPaper) this.renderPaperChapters(container, this.currentPaper);
+            else this.renderChapters(container, last.subjectId);
+        }
         else this.renderClassGrid(container);
     }
 

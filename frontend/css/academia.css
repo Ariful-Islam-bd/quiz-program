@@ -763,3 +763,245 @@ body.dark .btn-secondary:hover {
         padding: 6px 10px;
     } */
 }
+
+/* ============================================================
+   ✅ Phase 6: Publisher & Paper Grid Styles
+   ============================================================ */
+
+/* ===== Publisher Grid ===== */
+.publisher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 10px 0;
+}
+
+.publisher-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.publisher-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.publisher-card:hover::before {
+    transform: scaleY(1);
+}
+
+.publisher-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.publisher-icon {
+    font-size: 2.8rem;
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+}
+
+.publisher-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.publisher-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.publisher-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.publisher-meta {
+    flex-shrink: 0;
+}
+
+.publisher-paper-count {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(33, 150, 243, 0.12);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.publisher-arrow {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.publisher-card:hover .publisher-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+}
+
+/* ===== Paper Grid ===== */
+.paper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    padding: 10px 0;
+}
+
+.paper-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.paper-card:hover {
+    transform: translateX(6px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px var(--shadow);
+}
+
+.paper-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px;
+    text-align: center;
+}
+
+.paper-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.paper-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.paper-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+.paper-arrow {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.paper-card:hover .paper-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+}
+
+/* ===== Dark Mode ===== */
+body.dark .publisher-card {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .publisher-card:hover {
+    border-color: var(--accent);
+}
+
+body.dark .paper-card {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark .paper-card:hover {
+    border-color: var(--accent);
+}
+
+body.dark .publisher-paper-count {
+    background: rgba(100, 181, 246, 0.15);
+    color: #64b5f6;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .publisher-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .publisher-card {
+        padding: 16px 18px;
+        gap: 14px;
+    }
+
+    .publisher-icon {
+        font-size: 2.2rem;
+        width: 48px;
+    }
+
+    .publisher-name {
+        font-size: 1rem;
+    }
+
+    .paper-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .paper-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .paper-icon {
+        font-size: 1.6rem;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .publisher-card {
+        padding: 14px 14px;
+    }
+
+    .publisher-icon {
+        font-size: 2rem;
+        width: 44px;
+    }
+
+    .publisher-paper-count {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+
+    .paper-card {
+        padding: 12px 14px;
+    }
+}
