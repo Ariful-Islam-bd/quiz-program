@@ -203,7 +203,7 @@ body.dark .explanation-table td {
 /* ফিক্স ২: কন্টেন্ট বডির ভেতরের ইউটিলিটি টেক্সট (যেমন: [mL কে L এ রূপান্তর]) */
 .math-content .solution-step {
     font-size: 0.95rem;
-    color: var(--text-light);
+    /*color: var(--text-light);*/
     margin: 4px 0;
     font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
 }
