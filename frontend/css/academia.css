@@ -1009,8 +1009,15 @@ body.dark .publisher-paper-count {
 /* KSC Content Page Fix */
 #academiaPage {
     background: var(--bg) !important;
-    display: flex !important;
+    display: none !important; /* ডিফল্টভাবে লুকানো থাকবে */
     flex-direction: column !important;
+    width: 100% !important;
+}
+
+/* জাভাস্ক্রিপ্ট যখন display: block করবে, তখন এটি দেখা যাবে */
+#academiaPage.active, 
+#academiaPage[style*="display: block"] {
+    display: flex !important;
 }
 
 #academiaContent {
