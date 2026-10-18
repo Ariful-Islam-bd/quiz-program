@@ -1005,23 +1005,3 @@ body.dark .publisher-paper-count {
         padding: 12px 14px;
     }
 }
-
-/* KSC Content Page Fix */
-#academiaPage {
-    background: var(--bg) !important;
-    display: none !important; /* ডিফল্টভাবে লুকানো থাকবে */
-    flex-direction: column !important;
-    width: 100% !important;
-}
-
-/* জাভাস্ক্রিপ্ট যখন display: block করবে, তখন এটি দেখা যাবে */
-#academiaPage.active, 
-#academiaPage[style*="display: block"] {
-    display: flex !important;
-}
-
-#academiaContent {
-    width: 100% !important;
-    max-width: 1000px !important;
-    margin: 0 auto !important;
-}
