@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পদার্থবিজ্ঞান ২য় পত্র - পর্যায়বৃত্ত প্রবাহ সংক্রান্ত সৃজনশীল প্রশ্নাবলী</title>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান (২য় পত্র)</h1>
+            <p>অধ্যায়: তাড়িতচৌম্বক আবেশ ও পর্যায়বৃত্ত প্রবাহ | পর্যায়বৃত্ত প্রবাহ সংক্রান্ত সৃজনশীল প্রশ্নাবলী</p>
+        </header>
+
+        <h2 class="chapter-header">সৃজনশীল প্রশ্ন ও সমাধান</h2>
+
+        <!-- Question Card 1 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৩ (পর্যায়বৃত্ত প্রবাহের তরঙ্গ রূপ ও গড়/মূল-গড়-বর্গ মান)</div>
+            <div class="stem-container">
+                <strong>উদ্দীপক:</strong> পরীক্ষাগারে ওসিলোস্কোপ যন্ত্রের সাহায্যে একটি পর্যায়বৃত্ত প্রবাহের তরঙ্গ লক্ষ্য করা হলো। নিচে প্রবাহটির দিক-পরিবর্তন ও মান পরিবর্তনের চিত্র দেওয়া হলো:
+                
+                <!-- Responsive Inline SVG Sine Wave Diagram -->
+                <svg class="stem-svg" width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Grid Axes -->
+                    <line x1="40" y1="100" x2="420" y2="100" stroke="#64748b" stroke-width="2"/>
+                    <line x1="60" y1="20" x2="60" y2="180" stroke="#64748b" stroke-width="2"/>
+                    
+                    <!-- Arrowheads -->
+                    <polygon points="420,96 428,100 420,104" fill="#64748b"/>
+                    <polygon points="56,20 60,12 64,20" fill="#64748b"/>
+
+                    <!-- Labels -->
+                    <text x="410" y="125" fill="#1e293b" font-size="13" font-weight="bold">t (s)</text>
+                    <text x="30" y="25" fill="#1e293b" font-size="13" font-weight="bold">i (A)</text>
+                    
+                    <!-- Peak Dashed Lines -->
+                    <line x1="60" y1="30" x2="140" y2="30" stroke="#cbd5e1" stroke-dasharray="4"/>
+                    <line x1="60" y1="170" x2="300" y2="170" stroke="#cbd5e1" stroke-dasharray="4"/>
+                    <text x="15" y="35" fill="#2563eb" font-size="12" font-weight="bold">+10 A</text>
+                    <text x="12" y="175" fill="#2563eb" font-size="12" font-weight="bold">-10 A</text>
+                    <text x="50" y="115" fill="#64748b" font-size="12">0</text>
+
+                    <!-- Sine Wave Path (200px = 1 full period T = 0.02s) -->
+                    <path d="M 60 100 Q 110 0, 160 100 T 260 100 T 360 100" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+                    <!-- Period Annotations -->
+                    <circle cx="160" cy="100" r="3" fill="#059669"/>
+                    <circle cx="260" cy="100" r="3" fill="#059669"/>
+                    <line x1="160" y1="100" x2="160" y2="135" stroke="#94a3b8" stroke-dasharray="2"/>
+                    <line x1="260" y1="100" x2="260" y2="135" stroke="#94a3b8" stroke-dasharray="2"/>
+                    <text x="145" y="150" fill="#059669" font-size="12" font-weight="bold">0.01 s</text>
+                    <text x="245" y="150" fill="#059669" font-size="12" font-weight="bold">0.02 s</text>
+                </svg>
+                <p>চিত্রের তরঙ্গটির সমীকরণ: $i = I_0 \sin(\omega t)$। তরঙ্গটির শীর্ষ মান $I_0 = 10\text{ A}$ এবং পর্যায়কাল $T = 0.02\text{ s}$।</p>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">পর্যায়বৃত্ত প্রবাহের কম্পাঙ্ক (Frequency) কাকে বলে?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">পর্যায়বৃত্ত প্রবাহের একটি পূর্ণ চক্রে গড় প্রবাহ শূন্য হয় কেন? ব্যাখ্যা কর।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">উদ্দীপকে প্রদর্শিত প্রবাহটির বর্গমূলীয় গড় বর্গ মান ($I_{rms}$) এবং কৌণিক কম্পাঙ্ক ($\omega$) নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">প্রবাহ শুরু হওয়ার পর $t = \frac{1}{600}\text{ s}$ সময়ে তাৎক্ষণিক প্রবাহের মান, ধনাত্মক অর্ধচক্রের গড় প্রবাহের কত গুণ হবে?—গাণিতিকভাবে বিশ্লেষণ করো।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section for Question 1 -->
+            <section class="solution-section">
+                <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+                <!-- (ক) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(ক) জ্ঞানমূলক:</span>
+                    <div class="solution-step">
+                        দিক পর্যায়বৃত্ত প্রবাহের উৎস প্রতি সেকেন্ডে যতগুলি পূর্ণ চক্র (Full Cycle) সম্পন্ন করে, তাকে ওই পর্যায়বৃত্ত প্রবাহের <strong>কম্পাঙ্ক</strong> বলে। এর SI একক হলো হার্টজ ($\text{Hz}$)।
+                    </div>
+                </div>
+
+                <!-- (খ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(খ) অনুধাবনমূলক:</span>
+                    <div class="solution-step">
+                        দিক পর্যায়বৃত্ত প্রবাহ সমমিত সমীকরণ $i = I_0 \sin(\omega t)$ দ্বারা পরিচালিত হয়।
+                    </div>
+                    <div class="solution-step">
+                        একটি পূর্ণ চক্রের ($0$ হতে $T$ সময় পর্যন্ত) প্রথম অর্ধচক্রে ($0$ হতে $\frac{T}{2}$) প্রবাহের দিক ধনাত্মক এবং মান $+I_0$ পর্যন্ত পরিবর্তিত হয়। ফলে এই অর্ধাংশে গড় মান হয় $+ \frac{2I_0}{\pi}$।
+                    </div>
+                    <div class="solution-step">
+                        পরবর্তী অর্ধচক্রে ($\frac{T}{2}$ হতে $T$) প্রবাহের দিক সম্পূর্ণ বিপরীত বা ঋণাত্মক হয় এবং এর গড় মান হয় $- \frac{2I_0}{\pi}$।
+                    </div>
+                    <div class="solution-step">
+                        অতএব, একটি পূর্ণ চক্রে মোট গড় মান: $I_{avg} = \frac{(+\frac{2I_0}{\pi}) + (-\frac{2I_0}{\pi})}{2} = 0$। তাই পর্যায়বৃত্ত প্রবাহের এক পূর্ণ চক্রে গড় প্রবাহ শূন্য হয়।
+                    </div>
+                </div>
+
+                <!-- (গ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(গ) প্রয়োগমূলক:</span>
+                    <div class="solution-step">
+                        <strong>দেওয়া আছে:</strong><br>
+                        প্রবাহের শীর্ষ মান, $I_0 = 10\text{ A}$<br>
+                        পর্যায়কাল, $T = 0.02\text{ s}$
+                    </div>
+                    <div class="solution-step">
+                        <strong>১. কৌণিক কম্পাঙ্ক ($\omega$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$\omega = \frac{2\pi}{T}$$
+                        <span class="sidenote">[কৌণিক কম্পাঙ্ক ও পর্যায়কালের সম্পর্ক]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow \omega = \frac{2 \times 3.1416}{0.02}$$
+                        <span class="sidenote">[$\pi$ এবং $T$ এর মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow \omega = 314.16\text{ rad/s}$$
+                        <span class="sidenote">[কৌণিক কম্পাঙ্কের মান]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>২. বর্গমূলীয় গড় বর্গ মান ($I_{rms}$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$I_{rms} = \frac{I_0}{\sqrt{2}}$$
+                        <span class="sidenote">[$I_{rms}$ এবং শীর্ষ মানের সম্পর্ক]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow I_{rms} = \frac{10}{1.4142}$$
+                        <span class="sidenote">[$I_0$ ও $\sqrt{2}$ এর মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow I_{rms} = 7.071\text{ A}$$
+                        <span class="sidenote">[ভাগফল নির্ণয় করে]</span>
+                    </div>
+                    <div class="final-answer">
+                        $\therefore$ প্রবাহটির কৌণিক কম্পাঙ্ক $314.16\text{ rad/s}$ এবং বর্গমূলীয় গড় বর্গ মান ($I_{rms}$) হলো $7.071\text{ A}$।
+                    </div>
+                </div>
+
+                <!-- (ঘ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতা:</span>
+                    <div class="solution-step">
+                        <strong>ধাপ-১: ধনাত্মক অর্ধচক্রে গড় প্রবাহ ($I_{avg}$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$I_{avg} = \frac{2 I_0}{\pi}$$
+                        <span class="sidenote">[ধনাত্মক অর্ধচক্রে পর্যায়বৃত্ত প্রবাহের গড় মান]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow I_{avg} = \frac{2 \times 10}{\pi} = \frac{20}{3.1416} \approx 6.366\text{ A}$$
+                        <span class="sidenote">[মান বসিয়ে পাই]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>ধাপ-২: $t = \frac{1}{600}\text{ s}$ সময়ে তাৎক্ষণিক প্রবাহ ($i$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$i = I_0 \sin(\omega t)$$
+                        <span class="sidenote">[তাৎক্ষণিক প্রবাহের মূল সমীকরণ]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow i = 10 \times \sin\left(314.16 \times \frac{1}{600}\right)$$
+                        <span class="sidenote">[$\omega$ এবং $t$ এর মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow i = 10 \times \sin\left(\frac{2\pi}{0.02} \times \frac{1}{600}\right) = 10 \times \sin\left(\frac{100\pi}{600}\right) = 10 \times \sin\left(\frac{\pi}{6}\right)$$
+                        <span class="sidenote">[কৌণিক মানকে রেডিয়ান কোণে সরলীকরণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow i = 10 \times \sin(30^\circ) = 10 \times 0.5 = 5\text{ A}$$
+                        <span class="sidenote">[$\sin(30^\circ) = 0.5$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>ধাপ-৩: অনুপাত নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$\text{অনুপাত} = \frac{i}{I_{avg}} = \frac{5}{6.366} \approx 0.785$$
+                        <span class="sidenote">[তাৎক্ষণিক প্রবাহ ও গড় প্রবাহের তুলনা]</span>
+                    </div>
+                    <div class="final-answer">
+                        $\therefore$ নির্দিষ্ট সময় $t = \frac{1}{600}\text{ s}$ এ তাৎক্ষণিক প্রবাহের মান ধনাত্মক অর্ধচক্রের গড় প্রবাহের $0.785$ গুণ (বা $\frac{\pi}{4}$ গুণ)।
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Question Card 2 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৪ (অনুনাদী LCR শ্রেণী বর্তনী)</div>
+            <div class="stem-container">
+                <strong>উদ্দীপক:</strong> অনুভাব একটি $LCR$ শ্রেণী বর্তনী তৈরি করলো যাতে $L = 0.1\text{ H}$ আবেশক, $C = 10\ \mu\text{F}$ ধারক এবং $R = 20\ \Omega$ রোদ শ্রেণী সমবায়ে যুক্ত। বর্তনীটিতে $v = 200 \sin(1000 t)\text{ V}$ তড়িৎ উৎস সরবরাহ করা হলো।
+                
+                <!-- Responsive Inline SVG LCR Circuit Diagram -->
+                <svg class="stem-svg" width="460" height="180" viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Circuit Loop Wire -->
+                    <rect x="50" y="30" width="360" height="120" fill="none" stroke="#334155" stroke-width="2" rx="4"/>
+
+                    <!-- Inductor L -->
+                    <rect x="100" y="20" width="60" height="20" fill="#ffffff"/>
+                    <path d="M 100 30 C 105 15, 115 15, 120 30 C 125 15, 135 15, 140 30 C 145 15, 155 15, 160 30" fill="none" stroke="#2563eb" stroke-width="3"/>
+                    <text x="120" y="12" fill="#2563eb" font-size="12" font-weight="bold">L = 0.1 H</text>
+
+                    <!-- Capacitor C -->
+                    <rect x="223" y="20" width="14" height="20" fill="#ffffff"/>
+                    <line x1="225" y1="18" x2="225" y2="42" stroke="#059669" stroke-width="3"/>
+                    <line x1="235" y1="18" x2="235" y2="42" stroke="#059669" stroke-width="3"/>
+                    <text x="205" y="12" fill="#059669" font-size="12" font-weight="bold">C = 10 µF</text>
+
+                    <!-- Resistor R -->
+                    <rect x="300" y="20" width="50" height="20" fill="#ffffff"/>
+                    <path d="M 300 30 L 305 20 L 315 40 L 325 20 L 335 40 L 345 20 L 350 30" fill="none" stroke="#d97706" stroke-width="2"/>
+                    <text x="310" y="12" fill="#d97706" font-size="12" font-weight="bold">R = 20 Ω</text>
+
+                    <!-- AC Source Bottom -->
+                    <rect x="215" y="140" width="30" height="20" fill="#ffffff"/>
+                    <circle cx="230" cy="150" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+                    <path d="M 222 150 Q 226 142, 230 150 T 238 150" fill="none" stroke="#1e293b" stroke-width="2"/>
+                    <text x="175" y="175" fill="#1e293b" font-size="12" font-weight="bold">v = 200 sin(1000t) V</text>
+                </svg>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">বর্তনীর বাধা বা ইম্পিডেন্স (Impedance) কাকে বলে?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">তড়িৎ অনুনাদ (Electrical Resonance) বলতে কী বোঝায়?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">উদ্দীপকের বর্তনীটির মোট ইম্পিডেন্স ($Z$) কত হবে তা নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">বর্তনীটি অনুনাদী অবস্থায় আছে কি না?—গাণিতিক যুক্তিসহ তোমার মতামত দাও এবং অনুনাদ সৃষ্টিতে কম্পাঙ্কের ভূমিকা আলোচনা করো।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section for Question 2 -->
+            <section class="solution-section">
+                <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+                <!-- (ক) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(ক) জ্ঞানমূলক:</span>
+                    <div class="solution-step">
+                        কোনো পর্যায়বৃত্ত প্রবাহ বা AC বর্তনীতে রোদ ($R$), আবেশক ($L$) এবং ধারক ($C$) এর সম্মিলিত বা নিট বাধাকে <strong>ইম্পিডেন্স</strong> বা <strong>তুল্য বাধা</strong> ($Z$) বলে। এর একক ওহম ($\Omega$)।
+                    </div>
+                </div>
+
+                <!-- (খ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(খ) অনুধাবনমূলক:</span>
+                    <div class="solution-step">
+                        একটি পর্যায়বৃত্ত প্রবাহের $LCR$ শ্রেণী বর্তনীতে যখন আবেশীয় প্রতিক্রিয়া ($X_L$) এবং ধারকীয় প্রতিক্রিয়া ($X_C$) সমান হয় ($X_L = X_C$), তখন বর্তনীর ইম্পিডেন্স সর্বনিম্ন হয় ($Z = R$) এবং বর্তনীতে প্রবাহের মান সর্বোচ্চ বৃদ্ধি পায়।
+                    </div>
+                    <div class="solution-step">
+                        এই বিশেষ অবস্থাকে <strong>তড়িৎ অনুনাদ</strong> (Electrical Resonance) বলা হয়। যে কম্পাঙ্কে এটি ঘটে তাকে অনুনাদী কম্পাঙ্ক ($f_r$) বলে।
+                    </div>
+                </div>
+
+                <!-- (গ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(গ) প্রয়োগমূলক:</span>
+                    <div class="solution-step">
+                        <strong>দেওয়া আছে:</strong><br>
+                        আবেশক, $L = 0.1\text{ H}$<br>
+                        ধারকত্ব, $C = 10\ \mu\text{F} = 10 \times 10^{-6}\text{ F} = 10^{-5}\text{ F}$<br>
+                        রোধ, $R = 20\ \Omega$<br>
+                        উৎসের বিভব, $v = 200 \sin(1000 t)\text{ V}$<br>
+                        তুলনা করে কৌণিক কম্পাঙ্ক, $\omega = 1000\text{ rad/s}$
+                    </div>
+                    <div class="solution-step">
+                        <strong>১. আবেশীয় প্রতিক্রিয়া ($X_L$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$X_L = \omega L = 1000 \times 0.1 = 100\ \Omega$$
+                        <span class="sidenote">[আবেশক দ্বারা সৃষ্ট বাধা]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>২. ধারকীয় প্রতিক্রিয়া ($X_C$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$X_C = \frac{1}{\omega C} = \frac{1}{1000 \times 10^{-5}} = \frac{1}{10^{-2}} = 100\ \Omega$$
+                        <span class="sidenote">[ধারক দ্বারা সৃষ্ট বাধা]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>৩. ইম্পিডেন্স ($Z$) নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        $$Z = \sqrt{R^2 + (X_L - X_C)^2}$$
+                        <span class="sidenote">[$LCR$ শ্রেণী বর্তনীর ইম্পিডেন্সের সূত্র]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow Z = \sqrt{20^2 + (100 - 100)^2}$$
+                        <span class="sidenote">[মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow Z = \sqrt{20^2 + 0^2} = \sqrt{400} = 20\ \Omega$$
+                        <span class="sidenote">[বর্গমূল হিসাব করে]</span>
+                    </div>
+                    <div class="final-answer">
+                        $\therefore$ বর্তনীটির মোট ইম্পিডেন্স বা নিট বাধা $Z = 20\ \Omega$ (যা কেবল রোদ $R$ এর সমান)।
+                    </div>
+                </div>
+
+                <!-- (ঘ) -->
+                <div class="solution-sub-item">
+                    <span class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতা:</span>
+                    <div class="solution-step">
+                        <strong>গাণিতিক যুক্তি:</strong><br>
+                        (গ) হতে পাই,<br>
+                        আবেশীয় প্রতিক্রিয়া $X_L = 100\ \Omega$<br>
+                        ধারকীয় প্রতিক্রিয়া $X_C = 100\ \Omega$
+                    </div>
+                    <div class="solution-step">
+                        যেহেতু $X_L = X_C = 100\ \Omega$, তাই আবেশীয় বাধা ও ধারকীয় বাধা একে অপরকে সম্পূর্ণ নিষ্ক্রিয় করে দেয়।
+                    </div>
+                    <div class="solution-step">
+                        ফলাফলস্বরূপ, বর্তনীর মোট ইম্পিডেন্স সর্বনিম্ন হয় ($Z = R = 20\ \Omega$) এবং বর্তনীতে প্রবাহ সর্বোচ্চ মান ($I_{rms} = \frac{V_{rms}}{R}$) অর্জন করে।
+                    </div>
+                    <div class="solution-step">
+                        <strong>অনুনাদী কম্পাঙ্কের পরীক্ষা:</strong><br>
+                        বর্তনীর অনুনাদী কৌণিক কম্পাঙ্ক $\omega_r$ হওয়া উচিত:
+                    </div>
+                    <div class="solution-step">
+                        $$\omega_r = \frac{1}{\sqrt{LC}}$$
+                        <span class="sidenote">[অনুনাদী কৌণিক কম্পাঙ্কের সূত্র]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\Rightarrow \omega_r = \frac{1}{\sqrt{0.1 \times 10^{-5}}} = \frac{1}{\sqrt{10^{-6}}} = \frac{1}{10^{-3}} = 1000\text{ rad/s}$$
+                        <span class="sidenote">[গাণিতিক হিসাব দ্বারা যাচাই]</span>
+                    </div>
+                    <div class="solution-step">
+                        দেখা যাচ্ছে যে, সরবরাহকৃত উৎসের কৌণিক কম্পাঙ্ক ($\omega = 1000\text{ rad/s}$) ঠিক বর্তনীর প্রাকৃতিক অনুনাদী কৌণিক কম্পাঙ্কের ($\omega_r = 1000\text{ rad/s}$) সমান।
+                    </div>
+                    <div class="final-answer">
+                        $\therefore$ বর্তনীটি বর্তমানে নিখুঁত <strong>তড়িৎ অনুনাদ (Resonance)</strong> অবস্থায় বিদ্যমান।
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    </body>
+</html>

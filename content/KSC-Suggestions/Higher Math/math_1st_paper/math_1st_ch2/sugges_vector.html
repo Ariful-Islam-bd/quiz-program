@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চতর গণিত ১ম পত্র - ভেক্টর সমাধান</title>
+
+    </head>
+<body>s
+
+<div class="container">
+    <header>
+        <h1>উচ্চতর গণিত ১ম পত্র</h1>
+        <p>সৃজনশীল অনুশীলনী ও বিস্তৃত সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">ভেক্টর</h2>
+
+    <!-- Question 1 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$\vec{a} = 3\hat{i} + 2\hat{j} - \hat{k}$ এবং $\vec{b} = 5\hat{i} - 4\hat{j} + \hat{k}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\vec{a}$ ও $\vec{b}$ এর লব্ধির মান নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$\vec{a}$ ও $\vec{b}$ এর মধ্যবর্তী কোণ বের করে তার সাহায্যে $\vec{a}$ বরাবর $\vec{b}$ এর অভিক্ষেপ নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$\vec{a}$ ও $\vec{b}$ ভেক্টর দুটির উপর লম্ব একক ভেক্টর নির্ণয় কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 1 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক নং প্রশ্নের সমাধান:</div>
+                
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{a} = 3\hat{i} + 2\hat{j} - \hat{k}$<br>
+                    $\vec{b} = 5\hat{i} - 4\hat{j} + \hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, দুটি ভেক্টরের লব্ধি হলো তাদের যোগফল। ধরি, লব্ধি ভেক্টর $\vec{R}$।<br>
+                    $$\vec{R} = \vec{a} + \vec{b}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{R} = (3\hat{i} + 2\hat{j} - \hat{k}) + (5\hat{i} - 4\hat{j} + \hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{R} = (3 + 5)\hat{i} + (2 - 4)\hat{j} + (-1 + 1)\hat{k}$$ <span class="sidenote">[সহগগুলো একত্রে সাজিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{R} = 8\hat{i} - 2\hat{j} + 0\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{R} = 8\hat{i} - 2\hat{j}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, লব্ধি ভেক্টরের মান $|\vec{R}|$:<br>
+                    $$|\vec{R}| = \sqrt{(8)^2 + (-2)^2}$$ <span class="sidenote">[ভেক্টরের মানের সূত্র: $|\vec{v}| = \sqrt{x^2 + y^2 + z^2}$]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{R}| = \sqrt{64 + 4}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{R}| = \sqrt{68}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{R}| = \sqrt{4 \times 17}$$ <span class="sidenote">[উৎপাদকে বিশ্লেষণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{R}| = 2\sqrt{17}$$
+                </div>
+
+                <div class="final-answer">$\therefore$ নির্ণেয় লব্ধির মান $2\sqrt{17}$ একক।</div>
+            </div>
+
+            <!-- 1 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{a} = 3\hat{i} + 2\hat{j} - \hat{k}$<br>
+                    $\vec{b} = 5\hat{i} - 4\hat{j} + \hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে, $\vec{a}$ এবং $\vec{b}$ এর ডট গুণন ($\vec{a} \cdot \vec{b}$) নির্ণয় করি:<br>
+                    $$\vec{a} \cdot \vec{b} = (3)(5) + (2)(-4) + (-1)(1)$$ <span class="sidenote">[সহগগুলোর গুণফলের সমষ্টি: $a_x b_x + a_y b_y + a_z b_z$]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \cdot \vec{b} = 15 - 8 - 1$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \cdot \vec{b} = 15 - 9 = 6$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $\vec{a}$ ভেক্টরের মান $|\vec{a}|$:<br>
+                    $$|\vec{a}| = \sqrt{(3)^2 + (2)^2 + (-1)^2} = \sqrt{9 + 4 + 1} = \sqrt{14}$$
+                </div>
+
+                <div class="solution-step">
+                    এবং, $\vec{b}$ ভেক্টরের মান $|\vec{b}|$:<br>
+                    $$|\vec{b}| = \sqrt{(5)^2 + (-4)^2 + (1)^2} = \sqrt{25 + 16 + 1} = \sqrt{42}$$
+                </div>
+
+                <div class="solution-step">
+                    ধরি, $\vec{a}$ ও $\vec{b}$ এর মধ্যবর্তী কোণ $\theta$।<br>
+                    আমরা জানি,
+                    $$\vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos\theta$$
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| |\vec{b}|}$$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{6}{\sqrt{14} \cdot \sqrt{42}}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{6}{\sqrt{14} \cdot \sqrt{14 \times 3}}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{6}{\sqrt{14} \cdot \sqrt{14} \cdot \sqrt{3}}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{6}{14\sqrt{3}}$$ <span class="sidenote">[যেহেতু $\sqrt{14} \cdot \sqrt{14} = 14$]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{3}{7\sqrt{3}}$$ <span class="sidenote">[লব ও হরকে $2$ দ্বারা ভাগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{\sqrt{3} \times \sqrt{3}}{7\sqrt{3}}$$ <span class="sidenote">[যেহেতু $3 = \sqrt{3} \times \sqrt{3}$]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\cos\theta = \frac{\sqrt{3}}{7}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\theta = \cos^{-1}\left(\frac{\sqrt{3}}{7}\right)$$
+                </div>
+
+                <div class="solution-step">
+                    $$\theta \approx 75.68^\circ$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $\vec{a}$ বরাবর $\vec{b}$ এর অভিক্ষেপ হলো $|\vec{b}| \cos\theta$।<br>
+                    আমরা জানি,
+                    $$\text{অভিক্ষেপ} = |\vec{b}| \cos\theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}|}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\text{অভিক্ষেপ} = \frac{6}{\sqrt{14}}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+
+                <div class="final-answer">$\therefore$ মধ্যবর্তী কোণ $\theta = \cos^{-1}\left(\frac{\sqrt{3}}{7}\right) \approx 75.68^\circ$ এবং $\vec{a}$ বরাবর $\vec{b}$ এর অভিক্ষেপ $\frac{6}{\sqrt{14}}$ বা $\frac{3\sqrt{14}}{7}$।</div>
+            </div>
+
+            <!-- 1 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{a} = 3\hat{i} + 2\hat{j} - \hat{k}$<br>
+                    $\vec{b} = 5\hat{i} - 4\hat{j} + \hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    $\vec{a}$ ও $\vec{b}$ উভয় ভেক্টরের উপর লম্ব ভেক্টর হলো তাদের ক্রস গুণন ($\vec{a} \times \vec{b}$)।<br>
+                    $$\vec{a} \times \vec{b} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 3 & 2 & -1 \\ 5 & -4 & 1 \end{vmatrix}$$ <span class="sidenote">[নির্ণায়ক পদ্ধতিতে ক্রস গুণন]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \times \vec{b} = \hat{i} \begin{vmatrix} 2 & -1 \\ -4 & 1 \end{vmatrix} - \hat{j} \begin{vmatrix} 3 & -1 \\ 5 & 1 \end{vmatrix} + \hat{k} \begin{vmatrix} 3 & 2 \\ 5 & -4 \end{vmatrix}$$ <span class="sidenote">[প্রথম সারি বরাবর বিস্তার করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \times \vec{b} = \hat{i} [(2)(1) - (-1)(-4)] - \hat{j} [(3)(1) - (-1)(5)] + \hat{k} [(3)(-4) - (2)(5)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \times \vec{b} = \hat{i} [2 - 4] - \hat{j} [3 - (-5)] + \hat{k} [-12 - 10]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \times \vec{b} = \hat{i} (-2) - \hat{j} (3 + 5) + \hat{k} (-22)$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{a} \times \vec{b} = -2\hat{i} - 8\hat{j} - 22\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $(\vec{a} \times \vec{b})$ ভেক্টরের মান $|\vec{a} \times \vec{b}|$:<br>
+                    $$|\vec{a} \times \vec{b}| = \sqrt{(-2)^2 + (-8)^2 + (-22)^2}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{a} \times \vec{b}| = \sqrt{4 + 64 + 484}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{a} \times \vec{b}| = \sqrt{552}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{a} \times \vec{b}| = \sqrt{4 \times 138} = 2\sqrt{138}$$ <span class="sidenote">[উৎপাদকে ভেঙে বর্গমূল বের করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\vec{a}$ ও $\vec{b}$ ভেক্টর দুটির উপর লম্ব একক ভেক্টর $\hat{\eta}$ নির্ণয়ের সূত্র:<br>
+                    $$\hat{\eta} = \pm \frac{\vec{a} \times \vec{b}}{|\vec{a} \times \vec{b}|}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{-2\hat{i} - 8\hat{j} - 22\hat{k}}{2\sqrt{138}}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{2(-\hat{i} - 4\hat{j} - 11\hat{k})}{2\sqrt{138}}$$ <span class="sidenote">[লব থেকে $2$ কমন নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{-\hat{i} - 4\hat{j} - 11\hat{k}}{\sqrt{138}}$$ <span class="sidenote">[লব ও হরের $2$ কাটাকাটি করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \mp \frac{\hat{i} + 4\hat{j} + 11\hat{k}}{\sqrt{138}}$$ <span class="sidenote">[মাইনাস চিহ্ন $\pm$ এর সাথে সমন্বয় করে]</span>
+                </div>
+
+                <div class="final-answer">$\therefore$ নির্ণেয় লম্ব একক ভেক্টর $\pm \frac{\hat{i} + 4\hat{j} + 11\hat{k}}{\sqrt{138}}$।</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$\vec{P} = 3\hat{i} - 3\hat{j} + 4\hat{k}$, $\vec{Q} = 3\hat{i} - 2\hat{j} + 4\hat{k}$ এবং $\vec{R} = \hat{i} - \hat{j} + 2\hat{k}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\vec{P}$ বিন্দুগামী এবং $\vec{Q}$ ভেক্টরের সমান্তরাল সরলরেখার ভেক্টর সমীকরণ নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">দেখাও যে, $\vec{P} - \vec{Q}$ ভেক্টরটি $\vec{P}$ এবং $\vec{Q}$ ভেক্টর দ্বারা গঠিত সমতলের উপর লম্ব ভেক্টরের সাথে লম্ব।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">উদ্দীপকে উল্লেখিত ভেক্টরগুলির $\hat{i}, \hat{j}, \hat{k}$ এর সহগ দ্বারা গঠিত ম্যাট্রিক্স $A$ হলে, $A^{-1}$ নির্ণয় কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 2 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    নির্দিষ্ট বিন্দুটির অবস্থান ভেক্টর $\vec{a} = \vec{P} = 3\hat{i} - 3\hat{j} + 4\hat{k}$<br>
+                    এবং সমান্তরাল ভেক্টর $\vec{b} = \vec{Q} = 3\hat{i} - 2\hat{j} + 4\hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, $\vec{a}$ অবস্থান ভেক্টরবিশিষ্ট বিন্দুগামী এবং $\vec{b}$ ভেক্টরের সমান্তরাল সরলরেখার ভেক্টর সমীকরণ হলো:
+                    $$\vec{r} = \vec{a} + t\vec{b}$$ <span class="sidenote">[যেখানে $t$ একটি বাস্তব স্কেলার প্যারামিটার]</span>
+                </div>
+
+                <div class="solution-step">
+                    মান বসিয়ে পাই,<br>
+                    $$\vec{r} = (3\hat{i} - 3\hat{j} + 4\hat{k}) + t(3\hat{i} - 2\hat{j} + 4\hat{k})$$
+                </div>
+
+                <div class="final-answer">$\therefore$ নির্ণেয় সরলরেখার ভেক্টর সমীকরণ: $\vec{r} = (3\hat{i} - 3\hat{j} + 4\hat{k}) + t(3\hat{i} - 2\hat{j} + 4\hat{k})$; যেখানে $t \in \mathbb{R}$।</div>
+            </div>
+
+            <!-- 2 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{P} = 3\hat{i} - 3\hat{j} + 4\hat{k}$<br>
+                    $\vec{Q} = 3\hat{i} - 2\hat{j} + 4\hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমেই, $\vec{P} - \vec{Q}$ ভেক্টরটি নির্ণয় করি:<br>
+                    $$\vec{P} - \vec{Q} = (3\hat{i} - 3\hat{j} + 4\hat{k}) - (3\hat{i} - 2\hat{j} + 4\hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{P} - \vec{Q} = (3 - 3)\hat{i} + (-3 - (-2))\hat{j} + (4 - 4)\hat{k}$$ <span class="sidenote">[সহগগুলো বিয়োগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{P} - \vec{Q} = 0\hat{i} + (-3 + 2)\hat{j} + 0\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{P} - \vec{Q} = -\hat{j}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $\vec{P}$ ও $\vec{Q}$ ভেক্টরদ্বয় দ্বারা গঠিত সমতলের উপর লম্ব ভেক্টর হলো তাদের ক্রস গুণন ($\vec{N} = \vec{P} \times \vec{Q}$)।<br>
+                    $$\vec{N} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 3 & -3 & 4 \\ 3 & -2 & 4 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{N} = \hat{i} \begin{vmatrix} -3 & 4 \\ -2 & 4 \end{vmatrix} - \hat{j} \begin{vmatrix} 3 & 4 \\ 3 & 4 \end{vmatrix} + \hat{k} \begin{vmatrix} 3 & -3 \\ 3 & -2 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{N} = \hat{i} [(-3)(4) - (4)(-2)] - \hat{j} [(3)(4) - (4)(3)] + \hat{k} [(3)(-2) - (-3)(3)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{N} = \hat{i} [-12 - (-8)] - \hat{j} [12 - 12] + \hat{k} [-6 - (-9)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{N} = \hat{i} [-12 + 8] - \hat{j} (0) + \hat{k} [-6 + 9]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{N} = -4\hat{i} + 0\hat{j} + 3\hat{k} = -4\hat{i} + 3\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $(\vec{P} - \vec{Q})$ এবং লম্ব ভেক্টর $\vec{N}$ এর ডট গুণন বের করি:<br>
+                    $$(\vec{P} - \vec{Q}) \cdot \vec{N} = (-\hat{j}) \cdot (-4\hat{i} + 3\hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$(\vec{P} - \vec{Q}) \cdot \vec{N} = (0)(-4) + (-1)(0) + (0)(3)$$ <span class="sidenote">[সহগগুলোর গুণফল নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$(\vec{P} - \vec{Q}) \cdot \vec{N} = 0 + 0 + 0 = 0$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $(\vec{P} - \vec{Q}) \cdot \vec{N} = 0$, সুতরাং ভেক্টরদ্বয় পরস্পর লম্ব।
+                </div>
+
+                <div class="final-answer">$\therefore$ দেখানো হলো যে, $\vec{P} - \vec{Q}$ ভেক্টরটি $\vec{P}$ এবং $\vec{Q}$ ভেক্টর দ্বারা গঠিত সমতলের উপর লম্ব ভেক্টরের সাথে লম্ব।</div>
+            </div>
+
+            <!-- 2 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে ভেক্টর তিনটি হলো:<br>
+                    $\vec{P} = 3\hat{i} - 3\hat{j} + 4\hat{k}$<br>
+                    $\vec{Q} = 3\hat{i} - 2\hat{j} + 4\hat{k}$<br>
+                    $\vec{R} = 1\hat{i} - 1\hat{j} + 2\hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    $\hat{i}, \hat{j}, \hat{k}$ এর সহগগুলো যথাক্রমে সারিতে বসিয়ে গঠিত ম্যাট্রিক্স $A$:<br>
+                    $$A = \begin{bmatrix} 3 & -3 & 4 \\ 3 & -2 & 4 \\ 1 & -1 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে ম্যাট্রিক্সের নির্ণায়ক $|A|$ এর মান বের করি:<br>
+                    $$|A| = \begin{vmatrix} 3 & -3 & 4 \\ 3 & -2 & 4 \\ 1 & -1 & 2 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|A| = 3 \begin{vmatrix} -2 & 4 \\ -1 & 2 \end{vmatrix} - (-3) \begin{vmatrix} 3 & 4 \\ 1 & 2 \end{vmatrix} + 4 \begin{vmatrix} 3 & -2 \\ 1 & -1 \end{vmatrix}$$ <span class="sidenote">[প্রথম সারি বরাবর বিস্তৃতি]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|A| = 3 [(-2)(2) - (4)(-1)] + 3 [(3)(2) - (4)(1)] + 4 [(3)(-1) - (-2)(1)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$|A| = 3 [-4 - (-4)] + 3 [6 - 4] + 4 [-3 - (-2)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$|A| = 3 [-4 + 4] + 3 [2] + 4 [-3 + 2]$$
+                </div>
+
+                <div class="solution-step">
+                    $$|A| = 3(0) + 6 + 4(-1) = 0 + 6 - 4 = 2$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $|A| = 2 \neq 0$, সুতরাং $A$ একটি ব্যতিক্রমি নয় (Non-singular) ম্যাট্রিক্স এবং $A^{-1}$ বিদ্যমান।
+                </div>
+
+                <div class="solution-step">
+                    এখন $A$ ম্যাট্রিক্সের প্রতিটি উপাদানের সহগুণক (Cofactors) নির্ণয় করি:<br>
+                    $$A_{11} = + \begin{vmatrix} -2 & 4 \\ -1 & 2 \end{vmatrix} = (-4 - (-4)) = 0$$<br>
+                    $$A_{12} = - \begin{vmatrix} 3 & 4 \\ 1 & 2 \end{vmatrix} = -(6 - 4) = -2$$<br>
+                    $$A_{13} = + \begin{vmatrix} 3 & -2 \\ 1 & -1 \end{vmatrix} = (-3 - (-2)) = -1$$<br>
+                    $$A_{21} = - \begin{vmatrix} -3 & 4 \\ -1 & 2 \end{vmatrix} = -(-6 - (-4)) = -(-2) = 2$$<br>
+                    $$A_{22} = + \begin{vmatrix} 3 & 4 \\ 1 & 2 \end{vmatrix} = (6 - 4) = 2$$<br>
+                    $$A_{23} = - \begin{vmatrix} 3 & -3 \\ 1 & -1 \end{vmatrix} = -(-3 - (-3)) = 0$$<br>
+                    $$A_{31} = + \begin{vmatrix} -3 & 4 \\ -2 & 4 \end{vmatrix} = (-12 - (-8)) = -4$$<br>
+                    $$A_{32} = - \begin{vmatrix} 3 & 4 \\ 3 & 4 \end{vmatrix} = -(12 - 12) = 0$$<br>
+                    $$A_{33} = + \begin{vmatrix} 3 & -3 \\ 3 & -2 \end{vmatrix} = (-6 - (-9)) = 3$$
+                </div>
+
+                <div class="solution-step">
+                    সহগুণকসমূহ নিয়ে গঠিত সহগুণক ম্যাট্রিক্স $C$:<br>
+                    $$C = \begin{bmatrix} 0 & -2 & -1 \\ 2 & 2 & 0 \\ -4 & 0 & 3 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    অনুবন্ধী ম্যাট্রিক্স (Adjoint Matrix) $\text{adj}(A) = C^T$:<br>
+                    $$\text{adj}(A) = \begin{bmatrix} 0 & 2 & -4 \\ -2 & 2 & 0 \\ -1 & 0 & 3 \end{bmatrix}$$ <span class="sidenote">[সারিকে কলামে রূপান্তর করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    বিপরীত ম্যাট্রিক্স নির্ণয়ের সূত্র:<br>
+                    $$A^{-1} = \frac{1}{|A|} \text{adj}(A)$$
+                </div>
+
+                <div class="solution-step">
+                    $$A^{-1} = \frac{1}{2} \begin{bmatrix} 0 & 2 & -4 \\ -2 & 2 & 0 \\ -1 & 0 & 3 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$A^{-1} = \begin{bmatrix} 0 & 1 & -2 \\ -1 & 1 & 0 \\ -1/2 & 0 & 3/2 \end{bmatrix}$$ <span class="sidenote">[$1/2$ দিয়ে প্রতিটি উপাদানকে গুণ করে]</span>
+                </div>
+
+                <div class="final-answer">$\therefore$ নির্ণেয় বিপরীত ম্যাট্রিক্স $A^{-1} = \frac{1}{2} \begin{bmatrix} 0 & 2 & -4 \\ -2 & 2 & 0 \\ -1 & 0 & 3 \end{bmatrix}$ বা $\begin{bmatrix} 0 & 1 & -2 \\ -1 & 1 & 0 \\ -1/2 & 0 & 3/2 \end{bmatrix}$।</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$\vec{A} = 2\hat{i} - 6\hat{j} - 3\hat{k}$ এবং $\vec{B} = 4\hat{i} + 3\hat{j} - \hat{k}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">প্রমাণ কর যে, $\hat{i} - 2\hat{j} + \hat{k}$ এবং $5\hat{i} - 10\hat{j} + 5\hat{k}$ ভেক্টরদ্বয় পরস্পর সমান্তরাল।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$\vec{A}$ বরাবর $\vec{B}$ ভেক্টরের উপাংশ নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$(\vec{A} + \vec{B})$ ও $\vec{B}$ ভেক্টর দুইটির লম্ব একক ভেক্টর নির্ণয় কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 3 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    ধরি,<br>
+                    $\vec{u} = \hat{i} - 2\hat{j} + \hat{k}$<br>
+                    $\vec{v} = 5\hat{i} - 10\hat{j} + 5\hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    <b>পদ্ধতি ১ (সাধারণ গুণিতক নিয়ম):</b><br>
+                    $\vec{v}$ ভেক্টরটি থেকে $5$ কমন নিয়ে পাই:<br>
+                    $$\vec{v} = 5(\hat{i} - 2\hat{j} + \hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{v} = 5\vec{u}$$ <span class="sidenote">[যেহেতু $\vec{u} = \hat{i} - 2\hat{j} + \hat{k}$]</span>
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু একটি ভেক্টর অপর ভেক্টরের স্কেলার গুণিতক ($\vec{v} = k\vec{u}$, যেখানে $k = 5$), তাই ভেক্টরদ্বয় পরস্পর সমান্তরাল।
+                </div>
+
+                <div class="solution-step">
+                    <b>পদ্ধতি ২ (সহগের অনুপাত পরীক্ষা):</b><br>
+                    $\hat{i}, \hat{j}, \hat{k}$ এর সহগগুলোর অনুপাত:<br>
+                    $$\frac{x_1}{x_2} = \frac{1}{5}$$<br>
+                    $$\frac{y_1}{y_2} = \frac{-2}{-10} = \frac{1}{5}$$<br>
+                    $$\frac{z_1}{z_2} = \frac{1}{5}$$
+                </div>
+
+                <div class="solution-step">
+                    দেখা যাচ্ছে, $\frac{x_1}{x_2} = \frac{y_1}{y_2} = \frac{z_1}{z_2} = \frac{1}{5}$।<br>
+                    সুতরাং সহগগুলোর অনুপাত সমান হওয়ায় ভেক্টরদ্বয় পরস্পর সমান্তরাল।
+                </div>
+
+                <div class="final-answer">$\therefore$ প্রমাণিত হলো যে, প্রদত্ত ভেক্টরদ্বয় পরস্পর সমান্তরাল।</div>
+            </div>
+
+            <!-- 3 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{A} = 2\hat{i} - 6\hat{j} - 3\hat{k}$<br>
+                    $\vec{B} = 4\hat{i} + 3\hat{j} - \hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, $\vec{A}$ বরাবর $\vec{B}$ ভেক্টরের উপাংশ (Vector component) হলো একটি ভেক্টর রাশি।<br>
+                    $$\text{উপাংশ} = (\text{অভিক্ষেপ}) \times (\vec{A} \text{ এর দিকবর্তী একক ভেক্টর})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\text{উপাংশ} = \left(\frac{\vec{A} \cdot \vec{B}}{|\vec{A}|}\right) \times \left(\frac{\vec{A}}{|\vec{A}|}\right) = \frac{(\vec{A} \cdot \vec{B})}{|\vec{A}|^2} \vec{A}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন ডট গুণন ($\vec{A} \cdot \vec{B}$) বের করি:<br>
+                    $$\vec{A} \cdot \vec{B} = (2)(4) + (-6)(3) + (-3)(-1)$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{A} \cdot \vec{B} = 8 - 18 + 3 = -7$$
+                </div>
+
+                <div class="solution-step">
+                    $\vec{A}$ ভেক্টরের মান $|\vec{A}|$:<br>
+                    $$|\vec{A}| = \sqrt{(2)^2 + (-6)^2 + (-3)^2} = \sqrt{4 + 36 + 9} = \sqrt{49} = 7$$
+                </div>
+
+                <div class="solution-step">
+                    তাহলে, $|\vec{A}|^2 = (7)^2 = 49$
+                </div>
+
+                <div class="solution-step">
+                    এখন সূত্রে মান বসাই:<br>
+                    $$\text{নির্ণেয় উপাংশ} = \frac{-7}{49} (2\hat{i} - 6\hat{j} - 3\hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\text{নির্ণেয় উপাংশ} = -\frac{1}{7} (2\hat{i} - 6\hat{j} - 3\hat{k})$$ <span class="sidenote">[লব ও হরকে $7$ দিয়ে ভাগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\text{নির্ণেয় উপাংশ} = -\frac{2}{7}\hat{i} + \frac{6}{7}\hat{j} + \frac{3}{7}\hat{k}$$
+                </div>
+
+                <div class="final-answer">$\therefore$ $\vec{A}$ বরাবর $\vec{B}$ ভেক্টরের উপাংশ হলো $-\frac{1}{7}(2\hat{i} - 6\hat{j} - 3\hat{k})$ বা $-\frac{2}{7}\hat{i} + \frac{6}{7}\hat{j} + \frac{3}{7}\hat{k}$।</div>
+            </div>
+
+            <!-- 3 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ নং প্রশ্নের সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে,<br>
+                    $\vec{A} = 2\hat{i} - 6\hat{j} - 3\hat{k}$<br>
+                    $\vec{B} = 4\hat{i} + 3\hat{j} - \hat{k}$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে, $(\vec{A} + \vec{B})$ ভেক্টরটি নির্ণয় করি। ধরি $\vec{C} = \vec{A} + \vec{B}$।<br>
+                    $$\vec{C} = (2\hat{i} - 6\hat{j} - 3\hat{k}) + (4\hat{i} + 3\hat{j} - \hat{k})$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} = (2+4)\hat{i} + (-6+3)\hat{j} + (-3-1)\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} = 6\hat{i} - 3\hat{j} - 4\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $\vec{C}$ এবং $\vec{B}$ ভেক্টরদ্বয়ের ওপর লম্ব ভেক্টর নির্ণয় করতে তাদের ক্রস গুণন ($\vec{C} \times \vec{B}$) নির্ণয় করি:<br>
+                    $$\vec{C} \times \vec{B} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 6 & -3 & -4 \\ 4 & 3 & -1 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} \times \vec{B} = \hat{i} \begin{vmatrix} -3 & -4 \\ 3 & -1 \end{vmatrix} - \hat{j} \begin{vmatrix} 6 & -4 \\ 4 & -1 \end{vmatrix} + \hat{k} \begin{vmatrix} 6 & -3 \\ 4 & 3 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} \times \vec{B} = \hat{i} [(-3)(-1) - (-4)(3)] - \hat{j} [(6)(-1) - (-4)(4)] + \hat{k} [(6)(3) - (-3)(4)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} \times \vec{B} = \hat{i} [3 - (-12)] - \hat{j} [-6 - (-16)] + \hat{k} [18 - (-12)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} \times \vec{B} = \hat{i} [3 + 12] - \hat{j} [-6 + 16] + \hat{k} [18 + 12]$$
+                </div>
+
+                <div class="solution-step">
+                    $$\vec{C} \times \vec{B} = 15\hat{i} - 10\hat{j} + 30\hat{k}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $|\vec{C} \times \vec{B}|$ এর মান বের করি:<br>
+                    $$|\vec{C} \times \vec{B}| = \sqrt{(15)^2 + (-10)^2 + (30)^2}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{C} \times \vec{B}| = \sqrt{225 + 100 + 900}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{C} \times \vec{B}| = \sqrt{1225}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|\vec{C} \times \vec{B}| = 35$$ <span class="sidenote">[যেহেতু $35^2 = 1225$]</span>
+                </div>
+
+                <div class="solution-step">
+                    নির্ণেয় লম্ব একক ভেক্টর $\hat{\eta}$:<br>
+                    $$\hat{\eta} = \pm \frac{\vec{C} \times \vec{B}}{|\vec{C} \times \vec{B}|}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{15\hat{i} - 10\hat{j} + 30\hat{k}}{35}$$
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{5(3\hat{i} - 2\hat{j} + 6\hat{k})}{35}$$ <span class="sidenote">[লব থেকে $5$ কমন নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\hat{\eta} = \pm \frac{3\hat{i} - 2\hat{j} + 6\hat{k}}{7}$$ <span class="sidenote">[$5$ এবং $35$ কাটাকাটি করে নিচে $7$ থাকে]</span>
+                </div>
+
+                <div class="final-answer">$\therefore$ $(\vec{A} + \vec{B})$ ও $\vec{B}$ এর লম্ব একক ভেক্টর $\pm \frac{1}{7}(3\hat{i} - 2\hat{j} + 6\hat{k})$।</div>
+            </div>
+        </div>
+    </article>
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

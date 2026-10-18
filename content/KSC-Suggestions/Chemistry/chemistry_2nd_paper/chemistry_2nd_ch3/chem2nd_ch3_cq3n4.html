@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক রসায়ন ২য় পত্র: পরিমাণগত রসায়ন - সমাধান</title>
+    
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চ মাধ্যমিক রসায়ন ২য় পত্র</h1>
+        <p>অধ্যায় ৩: পরিমাণগত রসায়ন (সৃজনশীল প্রশ্ন ও পূর্ণাঙ্গ সমাধান)</p>
+    </header>
+
+    <h2 class="chapter-header">মিশ্রণের প্রকৃতি ও pH নির্ণয় সংক্রান্ত সৃজনশীল প্রশ্ন</h2>
+
+    <!-- Question Card 1 -->
+    <article class="question-card">
+        <div class="question-header">সৃজনশীল প্রশ্ন ৩</div>
+        
+        <div class="stem-container">
+            <p><strong>উদ্দীপক:</strong> রসায়ন গবেষণাগারে ৩টি পাত্রে নিম্নরূপ দ্রবণ রাখা আছে:</p>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 280" width="100%" height="auto">
+              <defs>
+                <linearGradient id="acidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ff9999" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#ff3333" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="baseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#99ccff" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#3385ff" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="mixGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#d9b3ff" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#884dff" stop-opacity="0.9"/>
+                </linearGradient>
+                <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+                  <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+                </filter>
+              </defs>
+
+              <style>
+                .beaker { fill: #f9fafb; stroke: #374151; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+                .beaker-rim { fill: none; stroke: #374151; stroke-width: 3.5; }
+                .label-title { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: 700; fill: #111827; text-anchor: middle; }
+                .label-text { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 600; fill: #1f2937; text-anchor: middle; }
+                .sub-text { font-size: 12px; font-weight: 500; fill: #4b5563; }
+                .arrow { stroke: #4b5563; stroke-width: 2; stroke-dasharray: 4,4; fill: none; marker-end: url(#arrowhead); }
+              </style>
+
+              <marker id="arrowhead" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563" />
+              </marker>
+
+              <!-- Container A -->
+              <g filter="url(#shadow)">
+                <rect x="50" y="120" width="140" height="90" rx="4" fill="url(#acidGrad)" />
+                <path d="M 45 60 L 45 210 A 10 10 0 0 0 55 220 L 185 220 A 10 10 0 0 0 195 210 L 195 60" class="beaker" fill="none" />
+                <ellipse cx="120" cy="60" rx="75" ry="8" class="beaker-rim" />
+                <text x="120" y="40" class="label-title">পাত্র A</text>
+                <text x="120" y="155" class="label-text">25 mL 0.1 M</text>
+                <text x="120" y="180" class="label-text">H<tspan baseline-shift="sub" class="sub-text">2</tspan>SO<tspan baseline-shift="sub" class="sub-text">4</tspan></text>
+              </g>
+
+              <!-- Container B -->
+              <g filter="url(#shadow)">
+                <rect x="305" y="100" width="140" height="110" rx="4" fill="url(#baseGrad)" />
+                <path d="M 300 60 L 300 210 A 10 10 0 0 0 310 220 L 440 220 A 10 10 0 0 0 450 210 L 450 60" class="beaker" fill="none" />
+                <ellipse cx="375" cy="60" rx="75" ry="8" class="beaker-rim" />
+                <text x="375" y="40" class="label-title">পাত্র B</text>
+                <text x="375" y="145" class="label-text">40 mL 0.15 M</text>
+                <text x="375" y="170" class="label-text">NaOH</text>
+              </g>
+
+              <!-- Container C (Mix) -->
+              <g filter="url(#shadow)">
+                <rect x="560" y="80" width="140" height="130" rx="4" fill="url(#mixGrad)" />
+                <path d="M 555 60 L 555 210 A 10 10 0 0 0 565 220 L 695 220 A 10 10 0 0 0 705 210 L 705 60" class="beaker" fill="none" />
+                <ellipse cx="630" cy="60" rx="75" ry="8" class="beaker-rim" />
+                <text x="630" y="40" class="label-title">পাত্র C</text>
+                <text x="630" y="140" class="label-text">পাত্র (A + B)</text>
+                <text x="630" y="165" class="label-text" fill="#6b21a8">মিশ্রণ</text>
+              </g>
+
+              <!-- Mix Arrows -->
+              <path d="M 200 130 Q 250 100 295 130" class="arrow" />
+              <path d="M 455 130 Q 505 100 550 130" class="arrow" />
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">প্রাইমারি স্ট্যান্ডার্ড পদার্থ কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">$10\%\text{ NaOH}$ দ্রবণের মোলারিটি ঘনমাত্রা হিসাব করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">পাত্র-A এর দ্রবণটি সম্পূর্ণ প্রশমিত করতে কত গ্রাম $\text{Na}_2\text{CO}_3$ প্রয়োজন হবে? গাণিতিকভাবে বের করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">পাত্র-C এর মিশ্রণের প্রকৃতি কী রূপ হবে এবং মিশ্রিত দ্রবণের pH কত হবে? গাণিতিক বিশ্লেষণসহ মতামত দাও।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) এর সমাধান -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ক) জ্ঞানমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    যেসব পদার্থ প্রকৃতিতে বিশুদ্ধ অবস্থায় পাওয়া যায়, বায়ুর উপাদান (যেমন: $\text{O}_2, \text{CO}_2$, জলীয় বাষ্প) দ্বারা আক্রান্ত হয় না, রাসায়নিক নিকতিতে সঠিক মাপা যায় এবং যাদের দ্রবণ প্রস্তুত করলে দীর্ঘদিন ঘনমাত্রা অপরিবর্তিত থাকে, তাদেরকে <strong>প্রাইমারি স্ট্যান্ডার্ড পদার্থ</strong> বলে। <br>
+                    <em>উদাহরণ:</em> নির্জল সোডিয়াম কার্বোনেট ($\text{Na}_2\text{CO}_3$), অক্সালিক এসিড ($\text{H}_2\text{C}_2\text{O}_4\cdot2\text{H}_2\text{O}$)।
+                </div>
+            </div>
+
+            <!-- (খ) এর সমাধান -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(খ) অনুধাবনমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    $10\%\text{ NaOH}$ দ্রবণ বলতে বোঝায় $100\text{ mL}$ দ্রবণে $10\text{ g}$ $\text{NaOH}$ দ্রবীভূত আছে। <br><br>
+                    <strong>গাণিতিক গণনা:</strong>
+                </div>
+                
+                <div class="solution-step">
+                    দেওয়া আছে, <br>
+                    দ্রবের ভর, $w = 10\text{ g}$ <span class="sidenote">[১০% দ্রবণ সংজ্ঞানুসারে]</span> <br>
+                    দ্রবণের আয়তন, $V = 100\text{ mL}$ <span class="sidenote">[শতকরা হার শতকরা ১০০ ভাগের প্রেক্ষিতে]</span> <br>
+                    $\text{NaOH}$-এর আণবিক ভর, $M = 23 + 16 + 1 = 40\text{ g/mol}$ <span class="sidenote">[Na, O, H এর পারমাণবিক ভরের যোগফল]</span> <br>
+                    মোলারিটি ঘনমাত্রা, $S = ?$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি,
+                </div>
+                <div class="solution-step">
+                    $$S = \frac{1000 \times w}{M \times V}$$ <span class="sidenote">[মোলারিটি নির্ণয়ের সূত্র]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow S = \frac{1000 \times 10}{40 \times 100}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow S = \frac{10000}{4000}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow S = 2.5\text{ M}$$ <span class="sidenote">[ভাগ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ $10\%\text{ NaOH}$ দ্রবণের মোলারিটি ঘনমাত্রা $2.5\text{ M}$।
+                </div>
+            </div>
+
+            <!-- (গ) এর সমাধান -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(গ) প্রয়োগমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    <strong>উদ্দীপক অনুসারে পাত্র-A এর তথ্য:</strong> <br>
+                    $\text{H}_2\text{SO}_4$ দ্রবণের আয়তন, $V = 25\text{ mL} = \frac{25}{1000}\text{ L} = 0.025\text{ L}$ <span class="sidenote">[mL কে L এ রূপান্তর করে]</span> <br>
+                    $\text{H}_2\text{SO}_4$ দ্রবণের ঘনমাত্রা, $S = 0.1\text{ M}$ <br>
+                    $\text{Na}_2\text{CO}_3$ এর আণবিক ভর, $M = (23 \times 2) + 12 + (16 \times 3) = 46 + 12 + 48 = 106\text{ g/mol}$ <span class="sidenote">[পারমাণবিক ভর হতে হিসাবকৃত]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: পাত্র-A তে বিদ্যমান $\text{H}_2\text{SO}_4$ এর মোল সংখ্যা নির্ণয়:</strong>
+                </div>
+                <div class="solution-step">
+                    $$n_{\text{H}_2\text{SO}_4} = S \times V$$ <span class="sidenote">[মোল সংখ্যা $n = S \times V (\text{L})$ সূত্র ব্যবহার করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{H}_2\text{SO}_4} = 0.1\text{ M} \times 0.025\text{ L}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{H}_2\text{SO}_4} = 0.0025\text{ mol}$$ <span class="sidenote">[গুণফল নির্ণয় করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: রাসায়নিক বিক্রিয়া ও স্টইকিওমেট্রি বিশ্লেষণ:</strong> <br>
+                    $\text{H}_2\text{SO}_4$ এবং $\text{Na}_2\text{CO}_3$ এর মধ্যে প্রশমন বিক্রিয়াটি নিম্নরূপ:
+                </div>
+                <div class="solution-step">
+                    $$\text{H}_2\text{SO}_4 + \text{Na}_2\text{CO}_3 \rightarrow \text{Na}_2\text{SO}_4 + \text{CO}_2 + \text{H}_2\text{O}$$ <span class="sidenote">[সমতাকৃত সমীকরণ]</span>
+                </div>
+                <div class="solution-step">
+                    সমীকরণ হতে দেখা যায়, <br>
+                    $1\text{ mol }\text{H}_2\text{SO}_4 \equiv 1\text{ mol }\text{Na}_2\text{CO}_3$ <span class="sidenote">[স্টইকিওমেট্রিক অনুপাত ১:১]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: প্রয়োজনীয় $\text{Na}_2\text{CO}_3$ এর ভর হিসাব:</strong> <br>
+                    $\therefore 0.0025\text{ mol }\text{H}_2\text{SO}_4$ কে প্রশমিত করতে প্রয়োজনীয় $\text{Na}_2\text{CO}_3$ এর মোল সংখ্যা, $n_{\text{Na}_2\text{CO}_3} = 0.0025\text{ mol}$।
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, ভর $w = n \times M$ <span class="sidenote">[মোল সংখ্যাকে আণবিক ভর দিয়ে গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow w = 0.0025\text{ mol} \times 106\text{ g/mol}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow w = 0.265\text{ g}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ পাত্র-A এর দ্রবণটি সম্পূর্ণ প্রশমিত করতে $0.265\text{ g}$ $\text{Na}_2\text{CO}_3$ প্রয়োজন হবে।
+                </div>
+            </div>
+
+            <!-- (ঘ) এর সমাধান -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক প্রশ্নের উত্তর:</div>
+                
+                <div class="solution-step">
+                    <strong>উদ্দীপক বিশ্লেষণ ও সংগৃহীত উপাত্ত:</strong> <br>
+                    <u>পাত্র-A ($\text{H}_2\text{SO}_4$):</u> আয়তন $V_A = 25\text{ mL}$, ঘনমাত্রা $S_A = 0.1\text{ M}$ <br>
+                    <u>পাত্র-B ($\text{NaOH}$):</u> আয়তন $V_B = 40\text{ mL}$, ঘনমাত্রা $S_B = 0.15\text{ M}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: এসিড ও ক্ষারের নিজ নিজ মোল সংখ্যা হিসাব:</strong>
+                </div>
+                <div class="solution-step">
+                    $\text{H}_2\text{SO}_4$ এর মোল সংখ্যা, $n_{\text{acid}} = S_A \times V_A(\text{in L})$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{acid}} = 0.1\text{ M} \times \left(\frac{25}{1000}\right)\text{ L} = 0.0025\text{ mol}$$ <span class="sidenote">[লিটারে প্রকাশ করে মান বসানো হলো]</span>
+                </div>
+                <div class="solution-step">
+                    $\text{NaOH}$ এর মোল সংখ্যা, $n_{\text{base}} = S_B \times V_B(\text{in L})$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{base}} = 0.15\text{ M} \times \left(\frac{40}{1000}\right)\text{ L} = 0.006\text{ mol}$$ <span class="sidenote">[লিটারে প্রকাশ করে মান বসানো হলো]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: বিক্রিয়া সমীকরণ ও লিমিটিং বিক্রিয়ক নির্ধারণ:</strong> <br>
+                    $\text{H}_2\text{SO}_4$ ও $\text{NaOH}$ এর প্রশমন বিক্রিয়াটি হলো:
+                </div>
+                <div class="solution-step">
+                    $$\text{H}_2\text{SO}_4 + 2\text{NaOH} \rightarrow \text{Na}_2\text{SO}_4 + 2\text{H}_2\text{O}$$ <span class="sidenote">[সমতাকৃত বিক্রিয়া]</span>
+                </div>
+                <div class="solution-step">
+                    বিক্রিয়া অনুপাতে দেখা যায়, <br>
+                    $1\text{ mol }\text{H}_2\text{SO}_4$ কে প্রশমিত করতে প্রয়োজন $2\text{ mol }\text{NaOH}$। <br>
+                    $\therefore 0.0025\text{ mol }\text{H}_2\text{SO}_4$ কে সম্পূর্ণ প্রশমিত করতে $\text{NaOH}$ প্রয়োজন:
+                </div>
+                <div class="solution-step">
+                    $$n_{\text{NaOH needed}} = 2 \times 0.0025\text{ mol} = 0.005\text{ mol}$$ <span class="sidenote">[২ দিয়ে গুণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: অবশিষ্ট ক্ষারের পরিমাণ ও মিশ্রণের প্রকৃতি নির্ধারণ:</strong> <br>
+                    আমাদের পাত্রে $\text{NaOH}$ এর সরবরাহ আছে $0.006\text{ mol}$, যা প্রয়োজনীয় $0.005\text{ mol}$ অপেক্ষা বেশি। <br>
+                    অতএব, এসিড সম্পূর্ণ প্রশমিত হয়ে যাবে এবং পাত্র-C তে ক্ষার ($\text{NaOH}$) অবশিষ্ট থাকবে। <br>
+                    $\therefore$ <strong>মিশ্রণের প্রকৃতি হবে ক্ষারীয় (Basic)।</strong>
+                </div>
+
+                <div class="solution-step">
+                    অবশিষ্ট $\text{NaOH}$ এর মোল সংখ্যা, $n_{\text{rem}} = 0.006\text{ mol} - 0.005\text{ mol} = 0.001\text{ mol}$ <span class="sidenote">[বিয়োগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: পাত্র-C এর মোট আয়তন ও অবশিষ্ট $\text{OH}^-$ এর ঘনমাত্রা নির্ণয়:</strong> <br>
+                    মিশ্রণের মোট আয়তন, $V_{\text{total}} = V_A + V_B = 25\text{ mL} + 40\text{ mL} = 65\text{ mL} = \frac{65}{1000}\text{ L} = 0.065\text{ L}$ <span class="sidenote">[আয়তন যোগ করে L এ রূপান্তর]</span>
+                </div>
+                <div class="solution-step">
+                    যেহেতু $\text{NaOH}$ একটি তীব্র ক্ষার, তাই এটি সম্পূর্ণরূপে বিয়োজিত হয়ে সমপরিমাণ $\text{OH}^-$ আয়ন দেয়:
+                </div>
+                <div class="solution-step">
+                    $$\text{NaOH} \rightarrow \text{Na}^+ + \text{OH}^-$$
+                </div>
+                <div class="solution-step">
+                    $\therefore [\text{OH}^-] = \frac{n_{\text{rem}}}{V_{\text{total}}}$ <span class="sidenote">[ঘনমাত্রা = মোল সংখ্যা / আয়তন (L)]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow [\text{OH}^-] = \frac{0.001\text{ mol}}{0.065\text{ L}} \approx 0.015385\text{ M}$$ <span class="sidenote">[ভাগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৫: pOH ও pH হিসাব:</strong>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $$\text{pOH} = -\log_{10}[\text{OH}^-]$$ <span class="sidenote">[pOH এর সূত্র]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pOH} = -\log_{10}(0.015385)$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pOH} \approx -(-1.8129) = 1.813$$ <span class="sidenote">[লগারিদম মান হিসাব করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    আবার, আমরা জানি,
+                </div>
+                <div class="solution-step">
+                    $$\text{pH} + \text{pOH} = 14$$ <span class="sidenote">[$25^\circ\text{C}$ তাপমাত্রায় পানির স্বতঃবিয়োজন ধ্রুবক সম্পর্ক]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pH} = 14 - \text{pOH}$$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pH} = 14 - 1.813$$ <span class="sidenote">[pOH এর মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pH} = 12.187 \approx 12.19$$ <span class="sidenote">[বিয়োগ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ পাত্র-C এর মিশ্রণের প্রকৃতি হবে <strong>ক্ষারীয়</strong> এবং মিশ্রিত দ্রবণের $\text{pH}$ হবে <strong>$12.19$</strong>।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <article class="question-card">
+        <div class="question-header">সৃজনশীল প্রশ্ন ৪</div>
+        
+        <div class="stem-container">
+            <p><strong>উদ্দীপক:</strong> নিচে দুটি ভিন্ন পাত্রের দ্রবণ পর্যবেক্ষণ করো:</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 260" width="100%" height="auto">
+                <defs>
+                <linearGradient id="weakAcidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#eab308" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="strongBaseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.9"/>
+                </linearGradient>
+                <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+                    <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.12"/>
+                </filter>
+                </defs>
+
+                <style>
+                .flask { fill: #ffffff; stroke: #1f2937; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+                .title-text { font-family: 'Segoe UI', sans-serif; font-size: 17px; font-weight: 700; fill: #111827; text-anchor: middle; }
+                .body-text { font-family: 'Segoe UI', sans-serif; font-size: 13.5px; font-weight: 600; fill: #1f2937; text-anchor: middle; }
+                </style>
+
+                <!-- Flask 1 -->
+                <g filter="url(#shadow2)">
+                <!-- Liquid -->
+                <path d="M 85 140 L 50 200 A 12 12 0 0 0 60 215 L 180 215 A 12 12 0 0 0 190 200 L 155 140 Z" fill="url(#weakAcidGrad)" />
+                <!-- Flask Shape -->
+                <path d="M 105 50 L 105 100 L 45 200 A 15 15 0 0 0 58 220 L 182 220 A 15 15 0 0 0 195 200 L 135 100 L 135 50 Z" class="flask" fill="none" />
+                <rect x="98" y="42" width="44" height="8" rx="2" fill="#e5e7eb" stroke="#1f2937" stroke-width="2.5"/>
+                <!-- Labels -->
+                <text x="120" y="30" class="title-text">দ্রবণ-১</text>
+                <text x="120" y="170" class="body-text">50 mL 0.2 M</text>
+                <text x="120" y="192" class="body-text">CH<tspan baseline-shift="sub" font-size="10px">3</tspan>COOH</text>
+                <text x="120" y="245" font-family="sans-serif" font-size="12px" fill="#b45309" text-anchor="middle" font-weight="bold">(Ka = 1.8 × 10⁻⁵)</text>
+                </g>
+
+                <!-- Flask 2 -->
+                <g filter="url(#shadow2)">
+                <!-- Liquid -->
+                <path d="M 385 140 L 350 200 A 12 12 0 0 0 360 215 L 480 215 A 12 12 0 0 0 490 200 L 455 140 Z" fill="url(#strongBaseGrad)" />
+                <!-- Flask Shape -->
+                <path d="M 405 50 L 405 100 L 345 200 A 15 15 0 0 0 358 220 L 482 220 A 15 15 0 0 0 495 200 L 435 100 L 435 50 Z" class="flask" fill="none" />
+                <rect x="398" y="42" width="44" height="8" rx="2" fill="#e5e7eb" stroke="#1f2937" stroke-width="2.5"/>
+                <!-- Labels -->
+                <text x="420" y="30" class="title-text">দ্রবণ-২</text>
+                <text x="420" y="175" class="body-text">30 mL 0.1 M</text>
+                <text x="420" y="197" class="body-text">NaOH</text>
+                </g>
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">টাইট্রেশন কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">মৃদু এসিড ও তীব্র ক্ষারের প্রশমন তাপের মান $-57.34\text{ kJ/mol}$ অপেক্ষা কম হয় কেন?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">দ্রবণ-১ এর $\text{CH}_3\text{COOH}$ এর বিয়োজন মাত্রা ($\alpha$) এবং $\text{H}^+$ এর ঘনমাত্রা হিসাব করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">দ্রবণ-১ ও দ্রবণ-২ একত্রিত করে মিশ্রিত করলে উক্ত মিশ্রণটি বাফার দ্রবণ হিসেবে কাজ করবে কি? গাণিতিক হিসাবসহ ব্যাখ্যা করো।</span>
+            </div>
+        </div>
+
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- ক এর উত্তর -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ক) জ্ঞানমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    উপযুক্ত নির্দেশকের উপস্থিতিতে জানা ঘনমাত্রার একটি আদর্শ দ্রবণের নির্দিষ্ট আয়তনের সাহায্যে অজানা ঘনমাত্রার অন্য একটি দ্রবণের ঘনমাত্রা নির্ণয় করার রাসায়নিক বিশ্লেষণ পদ্ধতিকে <strong>টাইট্রেশন (Titration)</strong> বা আয়তনমিতিক বিশ্লেষণ বলে।
+                </div>
+            </div>
+
+            <!-- খ এর উত্তর -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(খ) অনুধাবনমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    যেকোনো তীব্র এসিড ও তীব্র ক্ষারের বিক্রিয়ায় প্রশমন তাপের মান সর্বদা ধ্রুবক এবং তা $-57.34\text{ kJ/mol}$ হয়। কারণ তীব্র এসিড ও তীব্র ক্ষার জলীয় দ্রবণে সম্পূর্ণরূপে বিয়োজিত অবস্থায় থাকে এবং মূলত $\text{H}^+$ ও $\text{OH}^-$ আয়ন যুক্ত হয়ে $1\text{ mol}$ পানি গঠন করে।
+                </div>
+                <div class="solution-step">
+                    কিন্তু মৃদু এসিড (যেমন: $\text{CH}_3\text{COOH}$) একটি দুর্বল তড়িৎ-বিশ্লেষ্য হওয়ায় জলীয় দ্রবণে এটি পূর্ণাঙ্গরূপে বিয়োজিত হয় না, বরং আংশিক আয়নিত অবস্থায় থাকে। 
+                </div>
+                <div class="solution-step">
+                    প্রবল ক্ষারের সাথে প্রশমন বিক্রিয়া সম্পন্ন করার পূর্বে এই অবিয়োজিত মৃদু এসিড অণুগুলোকে সম্পূর্ণরূপে আয়নিত করতে কিছু শক্তির প্রয়োজন হয়। প্রশমন বিক্রিয়ায় উৎপন্ন তাপেরই একটি অংশ (যেমন: $\text{CH}_3\text{COOH}$ এর জন্য প্রায় $1.9\text{ kJ/mol}$) মৃদু এসিডের এই অণুগুলোকে বিয়োজিত বা ভাঙতে ব্যয় হয়ে যায়।
+                </div>
+                <div class="solution-step">
+                    ফলে বিক্রিয়া শেষে অবশিষ্ট নির্গত তাপের পরিমাণ নির্ধারিত মান $-57.34\text{ kJ/mol}$ অপেক্ষা কম হয় (যেমন: $\text{CH}_3\text{COOH}$ ও $\text{NaOH}$ এর প্রশমন তাপ প্রায় $-55.44\text{ kJ/mol}$)।
+                </div>
+            </div>
+
+            <!-- গ এর উত্তর -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(গ) প্রয়োগমূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    <strong>উদ্দীপকের দ্রবণ-১ হতে প্রাপ্ত উপাত্ত:</strong><br>
+                    এসিডের ঘনমাত্রা, $C = 0.2\text{ M}$<br>
+                    ইথানয়িক এসিডের বিয়োজন ধ্রুবক, $K_a = 1.8 \times 10^{-5}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>১ম অংশ: বিয়োজন মাত্রা ($\alpha$) নির্ণয়:</strong><br>
+                    ওস্টওয়াল্ডের লঘুকরণ সূত্রানুসারে দুর্বল এসিডের বিয়োজন মাত্রা,
+                </div>
+                <div class="solution-step">
+                    $$\alpha = \sqrt{\frac{K_a}{C}}$$ <span class="sidenote">[ওস্টওয়াল্ডের লঘুকরণ সূত্র হতে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \alpha = \sqrt{\frac{1.8 \times 10^{-5}}{0.2}}$$ <span class="sidenote">[$K_a$ এবং $C$ এর মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \alpha = \sqrt{9 \times 10^{-5}}$$ <span class="sidenote">[ভাগের কাজ সম্পন্ন করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \alpha = 0.0094868 \approx 9.49 \times 10^{-3}$$ <span class="sidenote">[বর্গমূল করে]</span>
+                </div>
+                <div class="solution-step">
+                    শতকরা প্রকাশে, $\alpha = 9.49 \times 10^{-3} \times 100\% = 0.949\%$
+                </div>
+
+                <div class="solution-step">
+                    <strong>২য় অংশ: $[\text{H}^+]$ এর ঘনমাত্রা নির্ণয়:</strong><br>
+                    মৃদু এসিডের ক্ষেত্রে হাইড্রোজেনের ঘনমাত্রা,
+                </div>
+                <div class="solution-step">
+                    $$[\text{H}^+] = \alpha \times C$$ <span class="sidenote">[মৃদু এসিডের আয়ন ঘনমাত্রার সূত্র]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow [\text{H}^+] = (9.4868 \times 10^{-3}) \times 0.2\text{ M}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow [\text{H}^+] = 1.897 \times 10^{-3}\text{ M}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    <em>বিকল্প পদ্ধতি:</em> $[\text{H}^+] = \sqrt{K_a \times C} = \sqrt{1.8 \times 10^{-5} \times 0.2} = 1.897 \times 10^{-3}\text{ M}$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ দ্রবণ-১ এর $\text{CH}_3\text{COOH}$ এর বিয়োজন মাত্রা $\alpha = 9.49 \times 10^{-3}$ (বা $0.949\%$) এবং $\text{H}^+$ এর ঘনমাত্রা $1.897 \times 10^{-3}\text{ M}$।
+                </div>
+            </div>
+
+            <!-- ঘ এর উত্তর -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক প্রশ্নের উত্তর:</div>
+                <div class="solution-step">
+                    একটি দ্রবণকে <strong>অম্লীয় বাফার দ্রবণ</strong> বলা হয় যদি তাতে মৃদু এসিড এবং উক্ত মৃদু এসিড ও তীব্র ক্ষারের বিক্রিয়ায় উৎপন্ন লবণ একসাথে উপস্থিত থাকে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: দ্রবণ-১ ও দ্রবণ-২ এর মোল সংখ্যা হিসাব:</strong>
+                </div>
+                <div class="solution-step">
+                    দ্রবণ-১ এ বিদ্যমান $\text{CH}_3\text{COOH}$ এর আয়তন, $V_{\text{acid}} = 50\text{ mL} = 0.05\text{ L}$ <span class="sidenote">[$1000\text{ mL} = 1\text{ L}$ দ্বারা ভাগ করে]</span><br>
+                    $\text{CH}_3\text{COOH}$ এর ঘনমাত্রা, $S_{\text{acid}} = 0.2\text{ M}$<br>
+                    $\therefore \text{CH}_3\text{COOH}$ এর মোল সংখ্যা, $n_{\text{acid}} = S_{\text{acid}} \times V_{\text{acid}}$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{acid}} = 0.2 \times 0.05 = 0.01\text{ mol}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    দ্রবণ-২ এ বিদ্যমান $\text{NaOH}$ এর আয়তন, $V_{\text{base}} = 30\text{ mL} = 0.03\text{ L}$<br>
+                    $\text{NaOH}$ এর ঘনমাত্রা, $S_{\text{base}} = 0.1\text{ M}$<br>
+                    $\therefore \text{NaOH}$ এর মোল সংখ্যা, $n_{\text{base}} = S_{\text{base}} \times V_{\text{base}}$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow n_{\text{base}} = 0.1 \times 0.03 = 0.003\text{ mol}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: বিক্রিয়া সমীকরণ ও লিমিটিং বিক্রিয়ক বিশ্লেষণ:</strong><br>
+                    সংগঠিত প্রশমন বিক্রিয়ার সমীকরণটি হলো:
+                </div>
+                <div class="solution-step">
+                    $$\text{CH}_3\text{COOH} + \text{NaOH} \rightarrow \text{CH}_3\text{COONa} + \text{H}_2\text{O}$$ <span class="sidenote">[১:১ মোল অনুপাতের বিক্রিয়া]</span>
+                </div>
+                <div class="solution-step">
+                    বিক্রিয়ার স্টইকিওমেট্রি অনুসারে, $1\text{ mol }\text{NaOH}$ প্রশমিত করে $1\text{ mol }\text{CH}_3\text{COOH}$।<br>
+                    $\therefore 0.003\text{ mol }\text{NaOH}$ সম্পূর্ণ বিক্রিয়া করবে $0.003\text{ mol }\text{CH}_3\text{COOH}$ এর সাথে এবং $0.003\text{ mol }$ লবণ ($\text{CH}_3\text{COONa}$) উৎপন্ন করবে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: বিক্রিয়া শেষে পাত্রে উপস্থিত উপাদানসমূহের পরিমাণ:</strong><br>
+                    অবশিষ্ট $\text{CH}_3\text{COOH}$ (এসিড) এর পরিমাণ = $0.01\text{ mol} - 0.003\text{ mol} = 0.007\text{ mol}$ <span class="sidenote">[মৃদু এসিড অতিরিক্ত থাকে]</span><br>
+                    উৎপন্ন $\text{CH}_3\text{COONa}$ (লবণ) এর পরিমাণ = $0.003\text{ mol}$<br>
+                    অবশিষ্ট $\text{NaOH}$ (ক্ষার) এর পরিমাণ = $0.003\text{ mol} - 0.003\text{ mol} = 0\text{ mol}$ <span class="sidenote">[তীব্র ক্ষার সম্পূর্ণরূপে শেষ হয়ে যায়]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: বাফার দ্রবণ গঠনের মূল্যায়ন ও সিদ্ধান্ত:</strong><br>
+                    যেহেতু বিক্রিয়া শেষে মিশ্রণে মৃদু এসিড ($\text{CH}_3\text{COOH}$) এবং তার লবণ ($\text{CH}_3\text{COONa}$) উভয়ই বিদ্যমান রয়েছে, তাই দ্রবণটি একটি <strong>অম্লীয় বাফার দ্রবণ</strong> হিসেবে কাজ করবে।
+                </div>
+
+                <div class="solution-step">
+                    <em>(অতিরিক্ত তথ্য: হ্যান্ডারসন-হ্যাসেলবালখ সমীকরণ অনুসারে pH হিসাব)</em>
+                </div>
+                <div class="solution-step">
+                    $$\text{pH} = \text{pK}_a + \log\left(\frac{[\text{Salt}]}{[\text{Acid}]}\right)$$ <span class="sidenote">[হ্যান্ডারসন-হ্যাসেলবালখ সমীকরণ]</span>
+                </div>
+                <div class="solution-step">
+                    এখানে, $\text{pK}_a = -\log(1.8 \times 10^{-5}) \approx 4.74$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pH} = 4.74 + \log\left(\frac{0.003}{0.007}\right)$$ <span class="sidenote">[মোল সংখ্যার অনুপাত বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \text{pH} = 4.74 + \log(0.42857) = 4.74 - 0.368 = 4.372$$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ দ্রবণ-১ ও দ্রবণ-২ একত্রিত করলে প্রাপ্ত মিশ্রণে মৃদু এসিড ($\text{CH}_3\text{COOH}$) ও তার লবণ ($\text{CH}_3\text{COONa}$) অবশিষ্টাংশ হিসেবে অবস্থান করে। ফলে উক্ত মিশ্রণটি একটি **কার্যকর অম্লীয় বাফার দ্রবণ** হিসেবে কাজ করবে।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: false},
+                {left: '$', right: '$', display: false}
+            ]
+        });"></script>
+</body>
+
+
+</html>

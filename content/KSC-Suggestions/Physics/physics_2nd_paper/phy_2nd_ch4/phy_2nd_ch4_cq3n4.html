@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান - সৃজনশীল প্রশ্ন সমাধান</title>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান ২য় পত্র</h1>
+            <p>অধ্যায়: চল তড়িৎ (Current Electricity) — আদর্শ সমাধান গাইড</p>
+        </header>
+
+        <h2 class="chapter-header">সৃজনশীল প্রশ্ন ও পূর্ণাঙ্গ সমাধান</h2>
+
+        <!-- Creative Question 3 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৩</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> একটি হুইটস্টোন ব্রীজের চার বাহুতে যথাক্রমে $P = 10\ \Omega$, $Q = 20\ \Omega$, $R = 30\ \Omega$ এবং $S = 80\ \Omega$ রোধ যুক্ত করা হয়েছে। $B$ ও $D$ সংযোগ বিন্দুর মাঝে $G = 50\ \Omega$ রোধের একটি গ্যালভানোমিটার এবং $A$ ও $C$ বিন্দুর মাঝে $E = 12\text{ V}$ তড়িৎচালক বলের একটি ব্যাটারি ও চাবি যুক্ত করা হলো।</p>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="100%" height="300">
+                      <style>
+                        .wire { stroke: #1e293b; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                        .resistor { stroke: #2563eb; stroke-width: 2.5; fill: #eff6ff; stroke-linejoin: round; }
+                        .text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #0f172a; font-weight: 600; }
+                        .node { fill: #0f172a; }
+                        .battery-thick { stroke: #1e293b; stroke-width: 3.5; }
+                        .battery-thin { stroke: #1e293b; stroke-width: 1.5; }
+                        .meter-circle { fill: #f8fafc; stroke: #059669; stroke-width: 2.5; }
+                      </style>
+
+                      <!-- Diamond Layout for Bridge -->
+                      <!-- Nodes: A(60,150), B(250,50), C(440,150), D(250,250) -->
+                      
+                      <!-- Branch AB (P) -->
+                      <path d="M 60 150 L 120 105" class="wire" />
+                      <path d="M 120 105 L 127 96 L 141 110 L 155 96 L 169 110 L 183 96 L 197 110 L 204 101" class="resistor" />
+                      <path d="M 204 101 L 250 66" class="wire" />
+                      <text x="135" y="80" class="text" fill="#2563eb">P = 10 Ω</text>
+
+                      <!-- Branch BC (Q) -->
+                      <path d="M 250 66 L 296 101" class="wire" />
+                      <path d="M 296 101 L 303 110 L 317 96 L 331 110 L 345 96 L 359 110 L 373 96 L 380 105" class="resistor" />
+                      <path d="M 380 105 L 440 150" class="wire" />
+                      <text x="345" y="80" class="text" fill="#2563eb">Q = 20 Ω</text>
+
+                      <!-- Branch AD (R) -->
+                      <path d="M 60 150 L 120 195" class="wire" />
+                      <path d="M 120 195 L 127 204 L 141 190 L 155 204 L 169 190 L 183 204 L 197 190 L 204 199" class="resistor" />
+                      <path d="M 204 199 L 250 234" class="wire" />
+                      <text x="135" y="225" class="text" fill="#2563eb">R = 30 Ω</text>
+
+                      <!-- Branch DC (S) -->
+                      <path d="M 250 234 L 296 199" class="wire" />
+                      <path d="M 296 199 L 303 190 L 317 204 L 331 190 L 345 204 L 359 190 L 373 204 L 380 195" class="resistor" />
+                      <path d="M 380 195 L 440 150" class="wire" />
+                      <text x="345" y="225" class="text" fill="#2563eb">S = 80 Ω</text>
+
+                      <!-- Galvanometer Arm BD -->
+                      <path d="M 250 66 L 250 120" class="wire" />
+                      <circle cx="250" cy="150" r="22" class="meter-circle" />
+                      <text x="244" y="156" class="text" fill="#059669" font-size="18">G</text>
+                      <path d="M 250 180 L 250 234" class="wire" />
+
+                      <!-- Battery Arm AC -->
+                      <path d="M 60 150 L 30 150 L 30 290 L 220 290" class="wire" />
+                      <path d="M 280 290 L 470 290 L 470 150 L 440 150" class="wire" />
+
+                      <!-- Battery Symbol at Bottom -->
+                      <line x1="220" y1="275" x2="220" y2="305" class="battery-thick" />
+                      <line x1="232" y1="282" x2="232" y2="298" class="battery-thin" />
+                      <line x1="244" y1="275" x2="244" y2="305" class="battery-thick" />
+                      <line x1="256" y1="282" x2="256" y2="298" class="battery-thin" />
+
+                      <!-- Key Symbol (K) -->
+                      <circle cx="270" cy="290" r="3" class="node" />
+                      <line x1="270" y1="290" x2="280" y2="280" class="wire" stroke="#1e293b" />
+                      <circle cx="283" cy="290" r="3" class="node" />
+
+                      <text x="210" y="268" class="text">+</text>
+                      <text x="258" y="268" class="text">-</text>
+                      <text x="220" y="318" class="text" fill="#d97706">E = 12V</text>
+                      <text x="272" y="312" class="text">K</text>
+
+                      <!-- Node Labels -->
+                      <circle cx="60" cy="150" r="4" class="node" />
+                      <circle cx="250" cy="66" r="4" class="node" />
+                      <circle cx="440" cy="150" r="4" class="node" />
+                      <circle cx="250" cy="234" r="4" class="node" />
+
+                      <text x="42" y="155" class="text" font-size="16">A</text>
+                      <text x="245" y="52" class="text" font-size="16">B</text>
+                      <text x="450" y="155" class="text" font-size="16">C</text>
+                      <text x="245" y="255" class="text" font-size="16">D</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">হুইটস্টোন ব্রীজের সাম্যাবাস্থার নীতিটি লেখো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">মিটার ব্রীজের সাহায্যে কীভাবে অজানা রোধ নির্ণয় করা হয়— ব্যাখ্যা করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">উদ্দীপকে বর্ণিত অবস্থায় ব্রীজটি সাম্যাবস্থায় আছে কি না— গাণিতিকভাবে যাচাই করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">চতুর্থ বাহুতে কত রোধ কীভাবে যুক্ত করলে ব্রীজটি সাম্যাবস্থায় আসবে? গাণিতিক বিশ্লেষণের মাধ্যমে দেখাও।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>হুইটস্টোন ব্রীজের সাম্যাবস্থার নীতি:</strong> কোনো হুইটস্টোন ব্রীজের চারটি বাহুর রোধ যথাক্রমে $P$, $Q$, $R$ এবং $S$ হলে, ব্রীজটি সাম্যাবস্থায় থাকলে গ্যালভানোমিটারের মধ্য দিয়ে কোনো তড়িৎ প্রবাহিত হয় না (অর্থাৎ, $I_g = 0$); এবং সে অবস্থায় বাহুগুলোর রোধের অনুপাত সমান হয়, অর্থাৎ:
+                        $$\frac{P}{Q} = \frac{R}{S}$$
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>মিটার ব্রীজের সাহায্যে অজানা রোধ নির্ণয়:</strong>
+                    </div>
+                    <div class="solution-step">
+                        মিটার ব্রীজ হলো হুইটস্টোন ব্রীজের নীতির ওপর ভিত্তি করে তৈরি একটি ব্যবহারিক যন্ত্র। এতে $1\text{ m}$ বা $100\text{ cm}$ দীর্ঘ একটি সুষম প্রস্থচ্ছেদের তার ব্যবহার করা হয়।
+                    </div>
+                    <div class="solution-step">
+                        <strong>কার্যপ্রণালী ও ব্যাখ্যা:</strong>
+                        <ol style="margin-top: 5px; padding-left: 20px;">
+                            <li>মিটার ব্রীজের বাম ফাঁকে একটি জানা রোধ $R$ এবং ডান ফাঁকে একটি অজানা রোধ $S$ যুক্ত করা হয়।</li>
+                            <li>তারের ওপর দিয়ে জকিকে ($Jockey$) এমন একটি $D$ বিন্দুতে স্পর্শ করানো হয়, যাতে গ্যালভানোমিটারে কোনো বিক্ষেপ দেখা না যায় (অর্থাৎ নিস্পন্দ বিন্দু পাওয়া যায়)।</li>
+                            <li>ধরি, বাম প্রান্ত $A$ থেকে নিস্পন্দ বিন্দুর দূরত্ব $AD = l\text{ cm}$। তাহলে ডান অংশের দৈর্ঘ্য হবে $DC = (100 - l)\text{ cm}$।</li>
+                            <li>প্রতি সেন্টিমিটার তারের রোধ $r$ হলে, প্রথম বাহুর রোধ $P = l \cdot r$ এবং দ্বিতীয় বাহুর রোধ $Q = (100 - l) \cdot r$।</li>
+                        </ol>
+                    </div>
+                    <div class="solution-step">
+                        হুইটস্টোন ব্রীজের সাম্যাবস্থার নীতি অনুসারে:
+                        $$\frac{P}{Q} = \frac{R}{S} \implies \frac{l \cdot r}{(100 - l) \cdot r} = \frac{R}{S} \implies \frac{l}{100 - l} = \frac{R}{S}$$
+                    </div>
+                    <div class="solution-step">
+                        $\therefore$ অজানা রোধ, $$S = R \left( \frac{100 - l}{l} \right)$$
+                        এই সমীকরণে জানা রোধ $R$ এবং নিস্পন্দ দৈর্ঘ্য $l$ বসিয়ে অজানা রোধ $S$-এর মান অতি সহজে ও নির্ভুলভাবে নির্ণয় করা যায়।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>উদ্দীপক হতে প্রাপ্ত মানসমূহ:</strong></div>
+                    <div class="solution-step">প্রথম বাহুর রোধ, $P = 10\ \Omega$</div>
+                    <div class="solution-step">দ্বিতীয় বাহুর রোধ, $Q = 20\ \Omega$</div>
+                    <div class="solution-step">তৃতীয় বাহুর রোধ, $R = 30\ \Omega$</div>
+                    <div class="solution-step">চতুর্থ বাহুর রোধ, $S = 80\ \Omega$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: ১ম ও ২য় বাহুর রোধের অনুপাত ($\frac{P}{Q}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        $$\frac{P}{Q} = \frac{10}{20} = \frac{1}{2} = 0.5$$ <span class="sidenote">[$P = 10\ \Omega$ এবং $Q = 20\ \Omega$ বসিয়ে কাটাকাটি করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: ৩য় ও ৪র্থ বাহুর রোধের অনুপাত ($\frac{R}{S}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        $$\frac{R}{S} = \frac{30}{80} = \frac{3}{8} = 0.375$$ <span class="sidenote">[$R = 30\ \Omega$ এবং $S = 80\ \Omega$ বসিয়ে কাটাকাটি করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৩: সাম্যাবস্থার শর্তের সাথে তুলনা ও সিদ্ধান্ত:</strong></div>
+                    <div class="solution-step">
+                        হুইটস্টোন ব্রীজের সাম্যাবস্থার শর্ত হলো:
+                        $$\frac{P}{Q} = \frac{R}{S}$$
+                    </div>
+                    <div class="solution-step">
+                        যেহেতু এখানে, $\frac{P}{Q} \neq \frac{R}{S}$ (যেহেতু $0.5 \neq 0.375$), সেহেতু ব্রীজটির গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহ শূন্য হবে না।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ উদ্দীপকে বর্ণিত অবস্থায় হুইটস্টোন ব্রীজটি সাম্যাবস্থায় নেই।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        ব্রীজটিকে সাম্যাবস্থায় আনার জন্য ১ম, ২য় ও ৩য় বাহুর রোধ ($P = 10\ \Omega, Q = 20\ \Omega, R = 30\ \Omega$) অপরিবর্তিত রেখে ৪র্থ বাহুতে প্রয়োজনীয় রোধ নির্ণয় করতে হবে।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: সাম্যাবস্থার জন্য ৪র্থ বাহুর প্রয়োজনীয় তুল্য রোধ ($S'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        হুইটস্টোন ব্রীজের সাম্যাবস্থার নীতি অনুসারে:
+                        $$\frac{P}{Q} = \frac{R}{S'}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{10}{20} = \frac{30}{S'}$ <span class="sidenote">[$P, Q, R$ এর মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{2} = \frac{30}{S'}$ <span class="sidenote">[বামপাশে লঘুকরণ বা কাটাকাটি করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies S' = 30 \times 2$ <span class="sidenote">[আড়গুণন বা কোণাকুণি গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies S' = 60\ \Omega$ <span class="sidenote">[গুণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: বর্তমান রোধ ($S$) এর সাথে তুল্য রোধ ($S'$) এর তুলনা ও সংযোগ নির্বাচন:</strong></div>
+                    <div class="solution-step">
+                        ৪র্থ বাহুর বিদ্যমান রোধ $S = 80\ \Omega$ এবং সাম্যাবস্থার জন্য প্রয়োজনীয় তুল্য রোধ $S' = 60\ \Omega$।
+                    </div>
+                    <div class="solution-step">
+                        যেহেতু প্রয়োজনীয় রোধ $S'$ এর মান বর্তমান রোধ $S$ অপেক্ষা কম ($S' < S$), তাই বর্তমান $80\ \Omega$ রোধের সাথে অতিরিক্ত একটি রোধ $S_x$ <strong>সমান্তরাল সমবায়ে (Parallel Combination)</strong> যুক্ত করতে হবে।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৩: অতিরিক্ত সমান্তরাল রোধ ($S_x$) এর মান হিসাব:</strong></div>
+                    <div class="solution-step">
+                        সমান্তরাল সমবায় সংযোগের সুত্রানুসারে:
+                        $$\frac{1}{S'} = \frac{1}{S} + \frac{1}{S_x}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{S_x} = \frac{1}{S'} - \frac{1}{S}$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{S_x} = \frac{1}{60} - \frac{1}{80}$ <span class="sidenote">[$S' = 60\ \Omega$ ও $S = 80\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{S_x} = \frac{4 - 3}{240}$ <span class="sidenote">[$60$ ও $80$ এর লসাগু $240$ করে বিয়োগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{S_x} = \frac{1}{240}$ <span class="sidenote">[বিয়োগফল প্রকাশ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies S_x = 240\ \Omega$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>গাণিতিক পর্যালোচনা ও সিদ্ধান্ত:</strong></div>
+                    <div class="solution-step">
+                        ব্রীজটি সাম্যাবস্থায় আনতে হলে ৪র্থ বাহুর কার্যকর রোধকে $80\ \Omega$ থেকে কমিয়ে $60\ \Omega$-এ আনতে হবে। কোনো বাহুর মোট রোধ কমাতে হলে সর্বদা অতিরিক্ত রোধকে সমান্তরালে যুক্ত করতে হয়। গাণিতিক হিসাব অনুযায়ী, $80\ \Omega$ রোধের সাথে $240\ \Omega$ রোধ সমান্তরালে যুক্ত করলে তাদের তুল্য রোধ হবে:
+                        $$\frac{80 \times 240}{80 + 240} = \frac{19200}{320} = 60\ \Omega$$
+                        যা সাম্যাবস্থার শর্ত পুরণ করে।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ চতুর্থ বাহুতে বর্তমান $80\ \Omega$ রোধের সাথে $240\ \Omega$ মানের একটি রোধ সমান্তরালে যুক্ত করলে ব্রীজটি সাম্যাবস্থায় আসবে।
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Creative Question 4 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৪</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> পদার্থবিজ্ঞান গবেষণাগারে একজন শিক্ষার্থী 4টি রোধ যথাক্রমে $12\ \Omega$, $18\ \Omega$, $24\ \Omega$ এবং $36\ \Omega$ নিয়ে একটি হুইটস্টোন ব্রীজ গঠন করলো। ১ম ও ২য় বাহুর রোধ দুটি অপরিবর্তিত রেখে, ৩য় বাহুর রোধের সাথে $6\ \Omega$ মানের একটি রোধ শ্রেণীতে যুক্ত করা হলো। ব্যাটারির সংযোগ প্রদান করার পর দেখা গেল গ্যালভানোমিটারের মধ্য দিয়ে তড়িৎ প্রবাহিত হচ্ছে।</p>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">গ্যালভানোমিটারের শান্ট কাকে বলে?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">হুইটস্টোন ব্রীজের সুবেদিতা কোন কোন বিষয়ের উপর নির্ভর করে? ব্যাখ্যা করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">পরিবর্তিত অবস্থায় ৩য় বাহুর নতুন রোধের প্রেক্ষিতে ব্রীজটিকে সাম্যাবস্থায় আনতে ৪র্থ বাহুর প্রয়োজনীয় রোধ ($S'$) নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">৪র্থ বাহুর মূল রোধ $36\ \Omega$ এর সাথে কোনো রোধ সমান্তরালে যুক্ত করে কি ব্রীজটিকে সাম্যাবস্থায় আনা সম্ভব? গাণিতিক বিশ্লেষণপূর্বক তোমার মতামত দাও।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>গ্যালভানোমিটারের শান্ট:</strong> সূক্ষ্ম ও সংবেদনশীল গ্যালভানোমিটারকে উচ্চ তড়িৎ প্রবাহের ক্ষতিকর প্রভাব থেকে রক্ষা করার জন্য এবং বিকল্প পথ তৈরির উদ্দেশ্যে এর সাথে সমান্তরাল সমবায়ে যুক্ত খুব অল্প মানের রোধকে <strong>শান্ট (Shunt)</strong> বলে।
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>হুইটস্টোন ব্রীজের সুবেদিতা (Sensitivity of Wheatstone Bridge):</strong>
+                    </div>
+                    <div class="solution-step">
+                        হুইটস্টোন ব্রীজের সুবেদিতা মূলত তিনটি প্রধান বিষয়ের উপর নির্ভর করে:
+                    </div>
+                    <div class="solution-step">
+                        <strong>১. বাহুগুলোর রোধের মান:</strong> ব্রীজের চারটি বাহুর রোধের মান সমান বা কাছাকাছি মানের ($P \approx Q \approx R \approx S$) হলে ব্রীজটি সবচেয়ে বেশি সুবেদী হয়।
+                    </div>
+                    <div class="solution-step">
+                        <strong>২. গ্যালভানোমিটারের সুবেদিতা ও রোধ:</strong> গ্যালভানোমিটারের অভ্যন্তরীণ রোধের মান চার বাহুর প্রতিটি রোধের সমমানের বা কাছাকাছি হলে এবং এটি সামান্য তড়িৎ প্রবাহেই অধিক বিক্ষেপ দিতে সক্ষম হলে ব্রীজের সুবেদিতা বা সংবেদনশীলতা বৃদ্ধি পায়।
+                    </div>
+                    <div class="solution-step">
+                        <strong>৩. ব্যাটারির উৎস ও সংযোগ ব্যবস্থা:</strong> ব্যাটারির অভ্যন্তরীণ রোধ কম হওয়া এবং উপযুক্ত তড়িৎ চালক বল থাকা আবশ্যক। এছাড়া গ্যালভানোমিটার ও ব্যাটারির অবস্থান সঠিক সংযোগে থাকা ব্রীজের সুবেদিতাকে প্রভাবিত করে।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>উদ্দীপক হতে প্রাপ্ত তথ্যাবলী:</strong></div>
+                    <div class="solution-step">১ম বাহুর রোধ, $P = 12\ \Omega$</div>
+                    <div class="solution-step">২য় বাহুর রোধ, $Q = 18\ \Omega$</div>
+                    <div class="solution-step">৩য় বাহুর প্রাথমিক রোধ, $R_{1} = 24\ \Omega$</div>
+                    <div class="solution-step">৩য় বাহুতে শ্রেণী সমবায়ে যুক্ত অতিরিক্ত রোধ, $r = 6\ \Omega$</div>
+                    <div class="solution-step">৪র্থ বাহুর প্রয়োজনীয় নতুন রোধ = $S'$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: ৩য় বাহুর নতুন মোট রোধ ($R'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        যেহেতু ৩য় বাহুর রোধ $24\ \Omega$ এর সাথে $6\ \Omega$ রোধ শ্রেণীতে যুক্ত করা হয়েছে, তাই পরিবর্তিত অবস্থায় ৩য় বাহুর মোট তুল্য রোধ হবে:
+                    </div>
+                    <div class="solution-step">
+                        $$R' = R_{1} + r$$ <span class="sidenote">[শ্রেণী সমবায়ের সুত্রানুসারে: $R_s = R_1 + R_2$]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies R' = 24 + 6$$ <span class="sidenote">[$R_1 = 24\ \Omega$ এবং $r = 6\ \Omega$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies R' = 30\ \Omega$$ <span class="sidenote">[যোগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: হুইটস্টোন ব্রীজের সাম্যাবস্থার নীতি প্রয়োগ করে $S'$ নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        পরিবর্তিত অবস্থায় ব্রীজটি সাম্যাবস্থায় আসার শর্তানুসারে:
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{P}{Q} = \frac{R'}{S'}$$ <span class="sidenote">[হুইটস্টোন ব্রীজের সাম্যাবস্থার সুত্রানুসারে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{12}{18} = \frac{30}{S'}$$ <span class="sidenote">[$P = 12\ \Omega$, $Q = 18\ \Omega$ এবং $R' = 30\ \Omega$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{2}{3} = \frac{30}{S'}$$ <span class="sidenote">[বামপাশের ভগ্নাংশকে $6$ দিয়ে লঘুকরণ/কাটাকাটি করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 2 \times S' = 30 \times 3$$ <span class="sidenote">[আড়গুণন বা কোণাকুণি গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 2S' = 90$$ <span class="sidenote">[গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S' = \frac{90}{2}$$ <span class="sidenote">[পক্ষান্তর করে $2$ দিয়ে ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S' = 45\ \Omega$$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ পরিবর্তিত অবস্থায় ৩য় বাহুর নতুন রোধের প্রেক্ষিতে ব্রীজটিকে সাম্যাবস্থায় আনতে ৪র্থ বাহুর প্রয়োজনীয় রোধ $S' = 45\ \Omega$।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        'গ' হতে প্রাপ্ত তথ্যানুযায়ী, ৩য় বাহুতে পরিবর্তন আনার পর ব্রীজটিকে সাম্যাবস্থায় আনতে ৪র্থ বাহুর মোট কার্যকর বা তুল্য রোধ প্রয়োজন $S' = 45\ \Omega$।
+                    </div>
+                    <div class="solution-step">
+                        উদ্দীপকে ৪র্থ বাহুর মূল রোধ দেওয়া আছে, $S = 36\ \Omega$।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: সমান্তরাল সংযোগের নীতি বিশ্লেষণ:</strong></div>
+                    <div class="solution-step">
+                        আমরা জানি, কোনো রোধের সাথে অন্য একটি রোধ <strong>সমান্তরাল সমবায়ে (Parallel Combination)</strong> যুক্ত করলে তাদের তুল্য রোধের মান যুক্তকৃত যেকোনো একক রোধের চেয়ে সবসময় <strong>কম</strong> হয়।
+                    </div>
+                    <div class="solution-step">
+                        অর্থাৎ, $36\ \Omega$ রোধের সাথে যেকোনো মানের ধনাত্মক রোধ $S_x$ সমান্তরালে যুক্ত করা হলে নতুন তুল্য রোধ $S_{eq}$ এর মান অবশ্যই $36\ \Omega$ অপেক্ষা কম হবে ($S_{eq} < 36\ \Omega$)।
+                    </div>
+                    <div class="solution-step">
+                        কিন্তু ব্রীজটিকে সাম্যাবস্থায় আনতে আমাদের ৪র্থ বাহুর প্রয়োজনীয় তুল্য রোধ $S' = 45\ \Omega$, যা মূল রোধ $36\ \Omega$ থেকে <strong>বেশি</strong> ($45\ \Omega > 36\ \Omega$)।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: গাণিতিক প্রমাণ:</strong></div>
+                    <div class="solution-step">
+                        ধরি, $36\ \Omega$ রোধের সাথে $S_x$ রোধ সমান্তরালে যুক্ত করা হলো যেন তুল্য রোধ $S' = 45\ \Omega$ হয়।
+                    </div>
+                    <div class="solution-step">
+                        সমান্তরাল সমবায়ের সুত্রানুসারে:
+                        $$\frac{1}{S'} = \frac{1}{S} + \frac{1}{S_x}$$
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{1}{45} = \frac{1}{36} + \frac{1}{S_x}$$ <span class="sidenote">[$S' = 45\ \Omega$ এবং $S = 36\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{1}{S_x} = \frac{1}{45} - \frac{1}{36}$$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{1}{S_x} = \frac{4 - 5}{180}$$ <span class="sidenote">[$45$ ও $36$ এর লসাগু $180$ করে বিয়োগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{1}{S_x} = -\frac{1}{180}$$ <span class="sidenote">[বিয়োগফল প্রকাশ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S_x = -180\ \Omega$$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>গাণিতিক পর্যালোচনা ও সিদ্ধান্ত:</strong></div>
+                    <div class="solution-step">
+                        গাণিতিক বিচারে অতিরিক্ত রোধের মান $S_x = -180\ \Omega$ পাওয়া যাচ্ছে। কিন্তু বাস্তব ক্ষেত্রে কোনো রোধের মান ঋণাত্মক (Negative Resistance) হতে পারে না।
+                    </div>
+                    <div class="solution-step">
+                        ৪র্থ বাহুর বর্তমান রোধ $36\ \Omega$ কে বাড়িয়ে $45\ \Omega$ বানাতে হলে সমান্তরাল সংযোগের পরিবর্তে <strong>শ্রেণী সমবায় (Series Combination)</strong> ব্যবহার করতে হবে। সেক্ষেত্রে অতিরিক্ত $S_{series} = 45 - 36 = 9\ \Omega$ রোধ শ্রেণীতে যুক্ত করলে ব্রীজটি সাম্যাবস্থায় আসত।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ ৪র্থ বাহুর মূল রোধ $36\ \Omega$ এর সাথে যেকোনো রোধ সমান্তরালে যুক্ত করে ব্রীজটিকে সাম্যাবস্থায় আনা <strong>সম্ভব নয়</strong>।
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: false},
+                    {left: '$', right: '$', display: false}
+                ]
+            });"></script>
+</body>
+</html>

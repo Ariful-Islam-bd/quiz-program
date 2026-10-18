@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigono উচ্চতর গণিত ২য় পত্র - বিপরীত ত্রিকোণমিতিক ফাংশন ও ত্রিকোণমিতিক সমীকরণ (সমাধান সহ)</title>
+
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চতর গণিত ২য় পত্র</h1>
+        <p>সৃজনশীল প্রশ্নব্যাংক ও ব্যাখ্যামূলক সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">বিপরীত ত্রিকোণমিতিক ফাংশন ও ত্রিকোণমিতিক সমীকরণ (৭.১, ৭.২)</h2>
+
+    <!-- Question 1 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">উদ্দীপক: $f(x) = \sin^{-1}x$ এবং $g(x) = \cos x$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\tan^{-1}\frac{1}{2} + \tan^{-1}\frac{1}{3}$ এর মান নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$f\left\{\sqrt{2}\ g\left(\frac{\pi}{2} - \theta\right)\right\} + f\left\{\sqrt{g(2\theta)}\right\}$ এর মান নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">সমাধান কর: $\sqrt{3}\ g(x) - g\left(\frac{\pi}{2} + x\right) = 1$ যখন $-2\pi < x < 2\pi$</span>
+            </div>
+        </div>
+
+        <!-- Solution for Question 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 1 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক. সমাধান:</div>
+                <div class="solution-step">
+                    প্রদত্ত রাশি, $\tan^{-1}\frac{1}{2} + \tan^{-1}\frac{1}{3}$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{1}{2} + \frac{1}{3}}{1 - \frac{1}{2} \cdot \frac{1}{3}} \right)$ <br><span class="sidenote">[সূত্র: $\tan^{-1}x + \tan^{-1}y = \tan^{-1}\frac{x+y}{1-xy}$ প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{3 + 2}{6}}{1 - \frac{1}{6}} \right)$ <br><span class="sidenote">[লব ও হরে লসাগু করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{5}{6}}{\frac{6 - 1}{6}} \right)$ <br><span class="sidenote">[হরে বিয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{5}{6}}{\frac{5}{6}} \right)$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}(1)$ <br><span class="sidenote">[লব ও হর কাটাকাটি করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left(\tan\frac{\pi}{4}\right)$ <br><span class="sidenote">[যেহেতু $\tan\frac{\pi}{4} = 1$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{\pi}{4}$ <br><span class="sidenote">[যেহেতু $\tan^{-1}(\tan \theta) = \theta$]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় মান: $\frac{\pi}{4}$
+                </div>
+            </div>
+
+            <!-- 1 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে প্রাপ্ত: $f(x) = \sin^{-1}x$ এবং $g(x) = \cos x$
+                </div>
+                <div class="solution-step">
+                    <strong>প্রথম অংশের বিশ্লেষণ:</strong>
+                    <br>$g\left(\frac{\pi}{2} - \theta\right) = \cos\left(\frac{\pi}{2} - \theta\right) = \sin\theta$ <br><span class="sidenote">[যেহেতু $\cos(\frac{\pi}{2} - \theta) = \sin\theta$]</span>
+                    <br>অতএব, $f\left\{\sqrt{2}\ g\left(\frac{\pi}{2} - \theta\right)\right\} = f\left(\sqrt{2}\sin\theta\right) = \sin^{-1}\left(\sqrt{2}\sin\theta\right)$
+                </div>
+                <div class="solution-step">
+                    <strong>দ্বিতীয় অংশের বিশ্লেষণ:</strong>
+                    <br>$g(2\theta) = \cos 2\theta$
+                    <br>অতএব, $f\left\{\sqrt{g(2\theta)}\right\} = f\left(\sqrt{\cos 2\theta}\right) = \sin^{-1}\left(\sqrt{\cos 2\theta}\right)$
+                </div>
+                <div class="solution-step">
+                    সুতরাং, প্রদত্ত রাশি $= \sin^{-1}\left(\sqrt{2}\sin\theta\right) + \sin^{-1}\left(\sqrt{\cos 2\theta}\right)$
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ \left(\sqrt{2}\sin\theta\right)\sqrt{1 - \left(\sqrt{\cos 2\theta}\right)^2} + \left(\sqrt{\cos 2\theta}\right)\sqrt{1 - \left(\sqrt{2}\sin\theta\right)^2} \right]$ <br><span class="sidenote">[সূত্র: $\sin^{-1}x + \sin^{-1}y = \sin^{-1}\left(x\sqrt{1-y^2} + y\sqrt{1-x^2}\right)$ প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ \sqrt{2}\sin\theta \sqrt{1 - \cos 2\theta} + \sqrt{\cos 2\theta} \sqrt{1 - 2\sin^2\theta} \right]$ <br><span class="sidenote">[বর্গমূল ও স্কয়ার উঠে গিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ \sqrt{2}\sin\theta \cdot \sqrt{2\sin^2\theta} + \sqrt{\cos 2\theta} \cdot \sqrt{\cos 2\theta} \right]$ <br><span class="sidenote">[যেহেতু $1 - \cos 2\theta = 2\sin^2\theta$ এবং $1 - 2\sin^2\theta = \cos 2\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ \sqrt{2}\sin\theta \cdot \left(\sqrt{2}\sin\theta\right) + \cos 2\theta \right]$ <br><span class="sidenote">[বর্গমূল সরল করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ 2\sin^2\theta + \cos 2\theta \right]$
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left[ 2\sin^2\theta + (1 - 2\sin^2\theta) \right]$ <br><span class="sidenote">[যেহেতু $\cos 2\theta = 1 - 2\sin^2\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left( 1 \right)$ <br><span class="sidenote">[$2\sin^2\theta$ কেটে গিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin^{-1}\left( \sin \frac{\pi}{2} \right) = \frac{\pi}{2}$ <br><span class="sidenote">[যেহেতু $\sin\frac{\pi}{2} = 1$]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় মান: $\frac{\pi}{2}$
+                </div>
+            </div>
+
+            <!-- 1 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে $g(x) = \cos x$
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $\sqrt{3}\ g(x) - g\left(\frac{\pi}{2} + x\right) = 1$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{3}\cos x - \cos\left(\frac{\pi}{2} + x\right) = 1$ <br><span class="sidenote">[$g(x)$ এর মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{3}\cos x - (-\sin x) = 1$ <br><span class="sidenote">[যেহেতু $\cos(\frac{\pi}{2} + x) = -\sin x$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{3}\cos x + \sin x = 1$
+                </div>
+                <div class="solution-step">
+                    সহগদ্বয়ের বর্গের সমষ্টির বর্গমূল $= \sqrt{(\sqrt{3})^2 + 1^2} = \sqrt{3+1} = \sqrt{4} = 2$
+                </div>
+                <div class="solution-step">
+                    সমীকরণের উভয়পক্ষকে $2$ দ্বারা ভাগ করে পাই:
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{\sqrt{3}}{2}\cos x + \frac{1}{2}\sin x = \frac{1}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos x \cdot \cos\frac{\pi}{6} + \sin x \cdot \sin\frac{\pi}{6} = \frac{1}{2}$ <br><span class="sidenote">[যেহেতু $\cos\frac{\pi}{6} = \frac{\sqrt{3}}{2}$ এবং $\sin\frac{\pi}{6} = \frac{1}{2}$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos\left(x - \frac{\pi}{6}\right) = \cos\frac{\pi}{3}$ <br><span class="sidenote">[সূত্র: $\cos A \cos B + \sin A \sin B = \cos(A - B)$]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\cos \theta = \cos \alpha$ হলে $\theta = 2n\pi \pm \alpha$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x - \frac{\pi}{6} = 2n\pi \pm \frac{\pi}{3}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = 2n\pi \pm \frac{\pi}{3} + \frac{\pi}{6}$ <br><span class="sidenote">[$\frac{\pi}{6}$ কে পক্ষান্তর করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধনাত্মক (+) চিহ্ন নিয়ে:</strong> $x = 2n\pi + \frac{\pi}{3} + \frac{\pi}{6} = 2n\pi + \frac{\pi}{2}$
+                </div>
+                <div class="solution-step">
+                    <strong>ঋণাত্মক (-) চিহ্ন নিয়ে:</strong> $x = 2n\pi - \frac{\pi}{3} + \frac{\pi}{6} = 2n\pi - \frac{\pi}{6}$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    এখন, প্রদত্ত সীমার মধ্যে ($-2\pi < x < 2\pi$) $n$ এর মান বসাই:
+                </div>
+                <div class="solution-step">
+                    • $n = 0$ হলে:
+                    <br>&nbsp;&nbsp; $x = 0 + \frac{\pi}{2} = \frac{\pi}{2}$ (গ্রহণযোগ্য)
+                    <br>&nbsp;&nbsp; $x = 0 - \frac{\pi}{6} = -\frac{\pi}{6}$ (গ্রহণযোগ্য)
+                </div>
+                <div class="solution-step">
+                    • $n = 1$ হলে:
+                    <br>&nbsp;&nbsp; $x = 2\pi + \frac{\pi}{2} = \frac{5\pi}{2}$ (সীমার বাইরে)
+                    <br>&nbsp;&nbsp; $x = 2\pi - \frac{\pi}{6} = \frac{11\pi}{6}$ (গ্রহণযোগ্য)
+                </div>
+                <div class="solution-step">
+                    • $n = -1$ হলে:
+                    <br>&nbsp;&nbsp; $x = -2\pi + \frac{\pi}{2} = -\frac{3\pi}{2}$ (গ্রহণযোগ্য)
+                    <br>&nbsp;&nbsp; $x = -2\pi - \frac{\pi}{6} = -\frac{13\pi}{6}$ (সীমার বাইরে)
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সমাধান: $x = -\frac{3\pi}{2}, -\frac{\pi}{6}, \frac{\pi}{2}, \frac{11\pi}{6}$
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            <p class="stem-text"><strong>দৃশ্যকল্প - ১:</strong></p>
+            <div class="svg-container">
+                <svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="170,30 170,140 50,140" fill="none" stroke="#1e293b" stroke-width="2"/>
+                    <polyline points="158,140 158,128 170,128" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <path d="M 80,140 A 30,30 0 0,0 72,124" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="170" y="22" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">A</text>
+                    <text x="182" y="148" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="start">B</text>
+                    <text x="35" y="148" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="end">C</text>
+                    <text x="82" y="132" font-family="sans-serif" font-size="15" fill="#1e293b">θ</text>
+                    <text x="102" y="78" font-family="sans-serif" font-size="16" font-style="italic" fill="#1e293b">x</text>
+                    <text x="110" y="162" font-family="sans-serif" font-size="16" font-style="italic" fill="#1e293b">y</text>
+                </svg>
+            </div>
+            <p class="stem-text"><strong>দৃশ্যকল্প - ২:</strong> $1 + \sin^2 x - 2\cos^2 x + 3\cos x = 3 - \cos^2 x$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">প্রমাণ কর যে, $\sin^{-1}x + \cos^{-1}x = \frac{\pi}{2}$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">প্রমাণ কর যে, $\sin^2\left(\cos^{-1}\frac{1}{x}\right) - \cos^2\left(\sin^{-1}\frac{1}{\sqrt{x}}\right) = \frac{2}{9}\ ;$ যেখানে $AB = 2, y = \sqrt{5}$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">দৃশ্যকল্প - ২ এ বর্ণিত সমীকরণটির সাধারণ সমাধান নির্ণয় কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution for Question 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 2 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক. সমাধান:</div>
+                <div class="solution-step">
+                    ধরি, $\sin^{-1}x = \theta$ ---------- (১)
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \sin \theta$ <br><span class="sidenote">[বিপরীত ফাংশনের সংজ্ঞানুসারে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\cos\left(\frac{\pi}{2} - \theta\right) = \sin \theta$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \cos\left(\frac{\pi}{2} - \theta\right)$ <br><span class="sidenote">[$\sin \theta = x$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos^{-1}x = \frac{\pi}{2} - \theta$ <br><span class="sidenote">[উভয়পাশে বিপরীত কসাইন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \theta + \cos^{-1}x = \frac{\pi}{2}$ <br><span class="sidenote">[$-\theta$ কে পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sin^{-1}x + \cos^{-1}x = \frac{\pi}{2}$ <br><span class="sidenote">[(১) নং হতে $\theta = \sin^{-1}x$ বসিয়ে]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore \sin^{-1}x + \cos^{-1}x = \frac{\pi}{2}$ (প্রমাণিত)
+                </div>
+            </div>
+
+            <!-- 2 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ. সমাধান:</div>
+                <div class="solution-step">
+                    <strong>দৃশ্যকল্প - ১ চিত্র বিশ্লেষণ:</strong> সমকোণী ত্রিভুজ $\triangle ABC$-এ $\angle B = 90^\circ$। লম্ব $AB = 2$, ভূমি $BC = y = \sqrt{5}$ এবং অতিভুজ $AC = x$।
+                </div>
+                <div class="solution-step">
+                    পিথাগোরাসের উপপাদ্য হতে: $AC^2 = AB^2 + BC^2$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x^2 = 2^2 + (\sqrt{5})^2 = 4 + 5 = 9$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \sqrt{9} = 3$ <br><span class="sidenote">[দৈর্ঘ্য সর্বদা ধনাত্মক $x > 0$]</span>
+                </div>
+                <div class="solution-step">
+                    বামপক্ষ $= \sin^2\left(\cos^{-1}\frac{1}{x}\right) - \cos^2\left(\sin^{-1}\frac{1}{\sqrt{x}}\right)$
+                </div>
+                <div class="solution-step">
+                    $= \left[\sin\left(\cos^{-1}\frac{1}{3}\right)\right]^2 - \left[\cos\left(\sin^{-1}\frac{1}{\sqrt{3}}\right)\right]^2$ <br><span class="sidenote">[$x = 3$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \left[\sqrt{1 - \left(\frac{1}{3}\right)^2}\right]^2 - \left[\sqrt{1 - \left(\frac{1}{\sqrt{3}}\right)^2}\right]^2$ <br><span class="sidenote">[সূত্র: $\sin(\cos^{-1} A) = \sqrt{1-A^2}$ এবং $\cos(\sin^{-1} B) = \sqrt{1-B^2}$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \left(1 - \frac{1}{9}\right) - \left(1 - \frac{1}{3}\right)$ <br><span class="sidenote">[বর্গমূল ও স্কয়ার উঠে গিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{8}{9} - \frac{2}{3} = \frac{8 - 6}{9} = \frac{2}{9} =$ ডানপক্ষ
+                </div>
+                <div class="final-answer">
+                    $\therefore \sin^2\left(\cos^{-1}\frac{1}{x}\right) - \cos^2\left(\sin^{-1}\frac{1}{\sqrt{x}}\right) = \frac{2}{9}$ (প্রমাণিত)
+                </div>
+            </div>
+
+            <!-- 2 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ. সমাধান:</div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $1 + \sin^2 x - 2\cos^2 x + 3\cos x = 3 - \cos^2 x$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow 1 + (1 - \cos^2 x) - 2\cos^2 x + 3\cos x - 3 + \cos^2 x = 0$ <br><span class="sidenote">[$\sin^2 x = 1 - \cos^2 x$ বসিয়ে ও পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow -2\cos^2 x + 3\cos x - 1 = 0$ <br><span class="sidenote">[যোগ-বিয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow 2\cos^2 x - 3\cos x + 1 = 0$ <br><span class="sidenote">[উভয়পক্ষকে (-1) দ্বারা গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow 2\cos^2 x - 2\cos x - \cos x + 1 = 0$ <br><span class="sidenote">[উৎপাদকে বিশ্লেষণ (Middle Term) করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow 2\cos x(\cos x - 1) - 1(\cos x - 1) = 0$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow (\cos x - 1)(2\cos x - 1) = 0$
+                </div>
+                <div class="solution-step" style="margin-top: 10px;">
+                    হয়, $\cos x - 1 = 0 \Rightarrow \cos x = 1 \Rightarrow x = 2n\pi$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+                <div class="solution-step">
+                    অথবা, $2\cos x - 1 = 0 \Rightarrow \cos x = \frac{1}{2} \Rightarrow \cos x = \cos\frac{\pi}{3} \Rightarrow x = 2n\pi \pm \frac{\pi}{3}$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সাধারণ সমাধান: $x = 2n\pi$ অথবা $x = 2n\pi \pm \frac{\pi}{3}$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">উদ্দীপক: $f(x) = \cos x$, $g(x) = \tan^{-1}x$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">দেখাও যে, $g\left(\frac{1}{2}\right) + g\left(\frac{1}{3}\right) = \frac{\pi}{4}$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">প্রমাণ কর যে, $2g\left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right) = \cos^{-1}\frac{b+af(\theta)}{a+bf(\theta)}$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">সমাধান কর: $\sqrt{3}f(x) + f\left(\frac{\pi}{2}-x\right) = 1$, $-2\pi < x < 2\pi$</span>
+            </div>
+        </div>
+
+        <!-- Solution for Question 3 -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 3 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে প্রাপ্ত, $g(x) = \tan^{-1}x$
+                </div>
+                <div class="solution-step">
+                    অতএব, $g\left(\frac{1}{2}\right) = \tan^{-1}\left(\frac{1}{2}\right)$ <br><span class="sidenote">[$x = \frac{1}{2}$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    এবং $g\left(\frac{1}{3}\right) = \tan^{-1}\left(\frac{1}{3}\right)$ <br><span class="sidenote">[$x = \frac{1}{3}$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    বামপক্ষ $= g\left(\frac{1}{2}\right) + g\left(\frac{1}{3}\right)$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left(\frac{1}{2}\right) + \tan^{-1}\left(\frac{1}{3}\right)$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{1}{2} + \frac{1}{3}}{1 - \frac{1}{2} \cdot \frac{1}{3}} \right)$ <br><span class="sidenote">[সূত্র: $\tan^{-1}x + \tan^{-1}y = \tan^{-1}\left(\frac{x+y}{1-xy}\right)$ প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{3 + 2}{6}}{1 - \frac{1}{6}} \right)$ <br><span class="sidenote">[লব ও হরে লসাগু করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{5}{6}}{\frac{6 - 1}{6}} \right)$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left( \frac{\frac{5}{6}}{\frac{5}{6}} \right)$
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}(1)$ <br><span class="sidenote">[লব ও হর কাটাকাটি করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \tan^{-1}\left(\tan \frac{\pi}{4}\right)$ <br><span class="sidenote">[যেহেতু $\tan \frac{\pi}{4} = 1$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{\pi}{4} =$ ডানপক্ষ <br><span class="sidenote">[যেহেতু $\tan^{-1}(\tan \theta) = \theta$]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore g\left(\frac{1}{2}\right) + g\left(\frac{1}{3}\right) = \frac{\pi}{4}$ (দেখানো হলো)
+                </div>
+            </div>
+
+            <!-- 3 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে প্রাপ্ত, $f(x) = \cos x$ এবং $g(x) = \tan^{-1}x$
+                </div>
+                <div class="solution-step">
+                    অতএব, $f(\theta) = \cos\theta$
+                </div>
+                <div class="solution-step">
+                    বামপক্ষ $= 2g\left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right)$
+                </div>
+                <div class="solution-step">
+                    $= 2\tan^{-1}\left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right)$ <br><span class="sidenote">[$g(x) = \tan^{-1}x$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $2\tan^{-1}x = \cos^{-1}\left(\frac{1-x^2}{1+x^2}\right)$ <br><span class="sidenote">[ত্রিকোণমিতিক সূত্র]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{1 - \left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right)^2}{1 + \left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right)^2} \right]$
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{1 - \frac{a-b}{a+b}\tan^2\frac{\theta}{2}}{1 + \frac{a-b}{a+b}\tan^2\frac{\theta}{2}} \right]$ <br><span class="sidenote">[বর্গমূল ও স্কয়ার উঠে গিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{\frac{(a+b) - (a-b)\tan^2\frac{\theta}{2}}{a+b}}{\frac{(a+b) + (a-b)\tan^2\frac{\theta}{2}}{a+b}} \right]$ <br><span class="sidenote">[লব ও হরে $(a+b)$ লসাগু করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{(a+b) - (a-b)\tan^2\frac{\theta}{2}}{(a+b) + (a-b)\tan^2\frac{\theta}{2}} \right]$ <br><span class="sidenote">[উভয় স্থান থেকে হর $(a+b)$ বাদ দিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{a + b - a\tan^2\frac{\theta}{2} + b\tan^2\frac{\theta}{2}}{a + b + a\tan^2\frac{\theta}{2} - b\tan^2\frac{\theta}{2}} \right]$ <br><span class="sidenote">[গুণ করে ব্র্যাকেট তুলে দিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{b\left(1 + \tan^2\frac{\theta}{2}\right) + a\left(1 - \tan^2\frac{\theta}{2}\right)}{a\left(1 + \tan^2\frac{\theta}{2}\right) + b\left(1 - \tan^2\frac{\theta}{2}\right)} \right]$ <br><span class="sidenote">[$a$ ও $b$ এর পদসমূহ কমন নিয়ে সাজিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{b + a \cdot \frac{1 - \tan^2\frac{\theta}{2}}{1 + \tan^2\frac{\theta}{2}}}{a + b \cdot \frac{1 - \tan^2\frac{\theta}{2}}{1 + \tan^2\frac{\theta}{2}}} \right]$ <br><span class="sidenote">[লব ও হরকে $\left(1 + \tan^2\frac{\theta}{2}\right)$ দিয়ে ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{b + a\cos\theta}{a + b\cos\theta} \right]$ <br><span class="sidenote">[যেহেতু $\cos\theta = \frac{1 - \tan^2\frac{\theta}{2}}{1 + \tan^2\frac{\theta}{2}}$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \cos^{-1}\left[ \frac{b + af(\theta)}{a + bf(\theta)} \right] =$ ডানপক্ষ <br><span class="sidenote">[যেহেতু $f(\theta) = \cos\theta$]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore 2g\left(\sqrt{\frac{a-b}{a+b}}\tan\frac{\theta}{2}\right) = \cos^{-1}\frac{b+af(\theta)}{a+bf(\theta)}$ (প্রমাণিত)
+                </div>
+            </div>
+
+            <!-- 3 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুযায়ী, $f(x) = \cos x$
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $\sqrt{3}f(x) + f\left(\frac{\pi}{2}-x\right) = 1$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{3}\cos x + \cos\left(\frac{\pi}{2}-x\right) = 1$ <br><span class="sidenote">[$f(x)$ এর মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{3}\cos x + \sin x = 1$ <br><span class="sidenote">[যেহেতু $\cos\left(\frac{\pi}{2}-x\right) = \sin x$]</span>
+                </div>
+                <div class="solution-step">
+                    সহগদ্বয়ের বর্গের সমষ্টির বর্গমূল $= \sqrt{(\sqrt{3})^2 + 1^2} = \sqrt{3 + 1} = \sqrt{4} = 2$
+                </div>
+                <div class="solution-step">
+                    সমীকরণের উভয়পক্ষকে $2$ দ্বারা ভাগ করে পাই:
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{\sqrt{3}}{2}\cos x + \frac{1}{2}\sin x = \frac{1}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos x \cdot \cos\frac{\pi}{6} + \sin x \cdot \sin\frac{\pi}{6} = \frac{1}{2}$ <br><span class="sidenote">[যেহেতু $\cos\frac{\pi}{6} = \frac{\sqrt{3}}{2}$ এবং $\sin\frac{\pi}{6} = \frac{1}{2}$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos\left(x - \frac{\pi}{6}\right) = \cos\frac{\pi}{3}$ <br><span class="sidenote">[সূত্র: $\cos A \cos B + \sin A \sin B = \cos(A-B)$]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\cos\theta = \cos\alpha$ হলে সাধারণ সমাধান $\theta = 2n\pi \pm \alpha$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x - \frac{\pi}{6} = 2n\pi \pm \frac{\pi}{3} \Rightarrow x = 2n\pi \pm \frac{\pi}{3} + \frac{\pi}{6}$
+                </div>
+                
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধনাত্মক (+) চিহ্ন নিয়ে:</strong> $x = 2n\pi + \frac{\pi}{3} + \frac{\pi}{6} = 2n\pi + \frac{\pi}{2}$
+                </div>
+                <div class="solution-step">
+                    <strong>ঋণাত্মক (-) চিহ্ন নিয়ে:</strong> $x = 2n\pi - \frac{\pi}{3} + \frac{\pi}{6} = 2n\pi - \frac{\pi}{6}$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    এখন, প্রদত্ত সীমার মধ্যে ($-2\pi < x < 2\pi$) $n$ এর মান বসাই:
+                </div>
+                <div class="solution-step">
+                    • $n = 0$ হলে: $x = \frac{\pi}{2}$ (গ্রহণযোগ্য), $x = -\frac{\pi}{6}$ (গ্রহণযোগ্য)
+                    <br>• $n = 1$ হলে: $x = \frac{5\pi}{2}$ (সীমার বাইরে), $x = \frac{11\pi}{6}$ (গ্রহণযোগ্য)
+                    <br>• $n = -1$ হলে: $x = -\frac{3\pi}{2}$ (গ্রহণযোগ্য), $x = -\frac{13\pi}{6}$ (সীমার বাইরে)
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সমাধান: $x = -\frac{3\pi}{2}, -\frac{\pi}{6}, \frac{\pi}{2}, \frac{11\pi}{6}$
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 4 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৪</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">উদ্দীপক: $f(x) = \sin^{-1}x$ একটি বিপরীত ত্রিকোণমিতিক ফাংশন।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$f(x) = \tan^{-1}a$ হলে, $a = ?$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$f(x) + f(y) = \frac{\pi}{2}$ হলে, দেখাও যে, $x^2 + y^2 = 1$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$f(x) + f(y) + f(z) = \pi$ হলে, প্রমাণ কর যে, $x\sqrt{1-x^2} + y\sqrt{1-y^2} + z\sqrt{1-z^2} = 2xyz$</span>
+            </div>
+        </div>
+
+        <!-- Solution for Question 4 -->
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 4 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে প্রাপ্ত, $f(x) = \sin^{-1}x$
+                </div>
+                <div class="solution-step">
+                    প্রশ্নমতে, $f(x) = \tan^{-1}a \Rightarrow \sin^{-1}x = \tan^{-1}a$
+                </div>
+                <div class="solution-step">
+                    ধরি, $\theta = \sin^{-1}x \Rightarrow \sin\theta = x = \frac{x}{1}$
+                </div>
+                <div class="solution-step">
+                    সমকোণী ত্রিভুজ হতে: লম্ব $= x$, অতিভুজ $= 1$, ভূমি $= \sqrt{1 - x^2}$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\tan\theta = \frac{\text{লম্ব}}{\text{ভূমি}} = \frac{x}{\sqrt{1-x^2}} \Rightarrow \theta = \tan^{-1}\left(\frac{x}{\sqrt{1-x^2}}\right)$
+                </div>
+                <div class="solution-step">
+                    অতএব, $\sin^{-1}x = \tan^{-1}\left(\frac{x}{\sqrt{1-x^2}}\right)$
+                </div>
+                <div class="solution-step">
+                    সমীকরণে মান বসিয়ে পাই: $\tan^{-1}\left(\frac{x}{\sqrt{1-x^2}}\right) = \tan^{-1}a$
+                </div>
+                <div class="final-answer">
+                    $\therefore a = \frac{x}{\sqrt{1-x^2}}$
+                </div>
+            </div>
+
+            <!-- 4 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ. সমাধান:</div>
+                <div class="solution-step">
+                    দেওয়া আছে, $f(x) + f(y) = \frac{\pi}{2} \Rightarrow \sin^{-1}x + \sin^{-1}y = \frac{\pi}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sin^{-1}x = \frac{\pi}{2} - \sin^{-1}y$ <br><span class="sidenote">[পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \sin\left(\frac{\pi}{2} - \sin^{-1}y\right)$ <br><span class="sidenote">[উভয়পাশে $\sin$ নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \cos(\sin^{-1}y)$ <br><span class="sidenote">[যেহেতু $\sin\left(\frac{\pi}{2} - \theta\right) = \cos\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \cos\left(\cos^{-1}\sqrt{1-y^2}\right)$ <br><span class="sidenote">[যেহেতু $\sin^{-1}y = \cos^{-1}\sqrt{1-y^2}$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x = \sqrt{1-y^2}$ <br><span class="sidenote">[যেহেতু $\cos(\cos^{-1}\theta) = \theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x^2 = 1 - y^2$ <br><span class="sidenote">[বর্গ করে]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore x^2 + y^2 = 1$ (দেখানো হলো)
+                </div>
+            </div>
+
+            <!-- 4 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ. সমাধান:</div>
+                <div class="solution-step">
+                    দেওয়া আছে, $f(x) + f(y) + f(z) = \pi \Rightarrow \sin^{-1}x + \sin^{-1}y + \sin^{-1}z = \pi$
+                </div>
+                <div class="solution-step">
+                    ধরি, $\sin^{-1}x = A \Rightarrow x = \sin A$, $\sin^{-1}y = B \Rightarrow y = \sin B$, $\sin^{-1}z = C \Rightarrow z = \sin C$
+                </div>
+                <div class="solution-step">
+                    তাহলে, $A + B + C = \pi$ এবং $\cos A = \sqrt{1-x^2}, \cos B = \sqrt{1-y^2}, \cos C = \sqrt{1-z^2}$
+                </div>
+                <div class="solution-step">
+                    বামপক্ষ $= x\sqrt{1-x^2} + y\sqrt{1-y^2} + z\sqrt{1-z^2}$
+                </div>
+                <div class="solution-step">
+                    $= \sin A \cos A + \sin B \cos B + \sin C \cos C$
+                </div>
+                <div class="solution-step">
+                    $= \frac{1}{2} \cdot [2\sin A \cos A + 2\sin B \cos B + 2\sin C \cos C]$ <br><span class="sidenote">[$2$ দিয়ে গুণ ও ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{1}{2} [\sin 2A + \sin 2B + \sin 2C]$ <br><span class="sidenote">[সূত্র: $2\sin\theta\cos\theta = \sin 2\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{1}{2} [2\sin(A+B)\cos(A-B) + 2\sin C \cos C]$ <br><span class="sidenote">[প্রথম দুটি পদে $\sin C + \sin D$ এর সূত্র প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \frac{1}{2} [2\sin C \cos(A-B) + 2\sin C \cos C]$ <br><span class="sidenote">[যেহেতু $\sin(A+B) = \sin(\pi - C) = \sin C$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin C [\cos(A-B) + \cos(\pi - (A+B))]$ <br><span class="sidenote">[$2\sin C$ কমন নিয়ে ও $C = \pi - (A+B)$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin C [\cos(A-B) - \cos(A+B)]$ <br><span class="sidenote">[যেহেতু $\cos(\pi - \theta) = -\cos\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $= \sin C [2\sin A \sin B] = 2\sin A \sin B \sin C = 2xyz =$ ডানপক্ষ
+                </div>
+                <div class="final-answer">
+                    $\therefore x\sqrt{1-x^2} + y\sqrt{1-y^2} + z\sqrt{1-z^2} = 2xyz$ (প্রমাণিত)
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 5 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৫</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">উদ্দীপক: $f(x) = \cos x$, $A = \sec^{-1}\frac{2}{x}$, $B = \sec^{-1}\frac{3}{y}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">সমাধান কর: $\tan 2x - \tan x = 0$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">সমাধান কর: $\sqrt{2}f(x) - \sqrt{2}f\left(\frac{\pi}{2}-x\right) = 1$ ; যখন $-\pi < x < \pi$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">দেখাও যে, $A + B = \frac{\pi}{2}$ সমীকরণটি একটি উপবৃত্ত নির্দেশ করে।</span>
+            </div>
+        </div>
+
+        <!-- Solution for Question 5 -->
+        <div class="solution-section">
+            <div class="solution-title">৫ নং প্রশ্নের সমাধান:</div>
+
+            <!-- 5 (ক) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক. সমাধান:</div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $\tan 2x - \tan x = 0$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{\sin 2x}{\cos 2x} - \frac{\sin x}{\cos x} = 0 \Rightarrow \frac{\sin 2x \cos x - \cos 2x \sin x}{\cos 2x \cos x} = 0$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sin 2x \cos x - \cos 2x \sin x = 0$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sin(2x - x) = 0 \Rightarrow \sin x = 0$ <br><span class="sidenote">[সূত্র: $\sin A \cos B - \cos A \sin B = \sin(A-B)$]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\sin\theta = 0$ হলে সাধারণ সমাধান $\theta = n\pi$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সমাধান: $x = n\pi$ ; যেখানে $n \in \mathbb{Z}$
+                </div>
+            </div>
+
+            <!-- 5 (খ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুযায়ী, $f(x) = \cos x$
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $\sqrt{2}f(x) - \sqrt{2}f\left(\frac{\pi}{2}-x\right) = 1 \Rightarrow \sqrt{2}\cos x - \sqrt{2}\sin x = 1$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos x - \sin x = \frac{1}{\sqrt{2}}$ <br><span class="sidenote">[উভয়পক্ষকে $\sqrt{2}$ দ্বারা ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে আবার $\sqrt{2}$ দ্বারা ভাগ করে পাই:
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{1}{\sqrt{2}}\cos x - \frac{1}{\sqrt{2}}\sin x = \frac{1}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos x \cdot \cos\frac{\pi}{4} - \sin x \cdot \sin\frac{\pi}{4} = \frac{1}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos\left(x + \frac{\pi}{4}\right) = \cos\frac{\pi}{3}$ <br><span class="sidenote">[সূত্র: $\cos A \cos B - \sin A \sin B = \cos(A+B)$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x + \frac{\pi}{4} = 2n\pi \pm \frac{\pi}{3} \Rightarrow x = 2n\pi \pm \frac{\pi}{3} - \frac{\pi}{4}$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধনাত্মক (+) চিহ্ন নিয়ে:</strong> $x = 2n\pi + \frac{\pi}{12}$
+                </div>
+                <div class="solution-step">
+                    <strong>ঋণাত্মক (-) চিহ্ন নিয়ে:</strong> $x = 2n\pi - \frac{7\pi}{12}$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    এখন, প্রদত্ত সীমার মধ্যে ($-\pi < x < \pi$) $n$ এর মান বসাই:
+                </div>
+                <div class="solution-step">
+                    • $n = 0$ হলে: $x = \frac{\pi}{12}$ (গ্রহণযোগ্য), $x = -\frac{7\pi}{12}$ (গ্রহণযোগ্য)
+                    <br>• $n = 1, -1$ এর ক্ষেত্রে প্রাপ্ত মানগুলো $-\pi < x < \pi$ সীমার বাইরে চলে যায়।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সমাধান: $x = \frac{\pi}{12}, -\frac{7\pi}{12}$
+                </div>
+            </div>
+
+            <!-- 5 (গ) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ. সমাধান:</div>
+                <div class="solution-step">
+                    উদ্দীপক হতে: $A = \sec^{-1}\frac{2}{x} = \cos^{-1}\left(\frac{x}{2}\right)$ এবং $B = \sec^{-1}\frac{3}{y} = \cos^{-1}\left(\frac{y}{3}\right)$
+                </div>
+                <div class="solution-step">
+                    দেওয়া আছে, $A + B = \frac{\pi}{2} \Rightarrow \cos^{-1}\left(\frac{x}{2}\right) + \cos^{-1}\left(\frac{y}{3}\right) = \frac{\pi}{2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \cos^{-1}\left(\frac{x}{2}\right) = \frac{\pi}{2} - \cos^{-1}\left(\frac{y}{3}\right)$ <br><span class="sidenote">[পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{x}{2} = \cos\left(\frac{\pi}{2} - \cos^{-1}\left(\frac{y}{3}\right)\right)$ <br><span class="sidenote">[উভয়পাশে $\cos$ নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{x}{2} = \sin\left(\cos^{-1}\left(\frac{y}{3}\right)\right)$ <br><span class="sidenote">[যেহেতু $\cos\left(\frac{\pi}{2} - \theta\right) = \sin\theta$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{x}{2} = \sin\left(\sin^{-1}\sqrt{1 - \frac{y^2}{9}}\right)$ <br><span class="sidenote">[যেহেতু $\cos^{-1}\left(\frac{y}{3}\right) = \sin^{-1}\sqrt{1 - \frac{y^2}{9}}$]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{x}{2} = \sqrt{1 - \frac{y^2}{9}}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \left(\frac{x}{2}\right)^2 = 1 - \frac{y^2}{9}$ <br><span class="sidenote">[উভয়পক্ষে বর্গ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \frac{x^2}{4} + \frac{y^2}{9} = 1 \Rightarrow \frac{x^2}{2^2} + \frac{y^2}{3^2} = 1$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ হলো একটি **উপবৃত্তের (Ellipse)** আদর্শ সমীকরণ।
+                </div>
+                <div class="final-answer">
+                    $\therefore A + B = \frac{\pi}{2}$ সমীকরণটি একটি উপবৃত্ত প্রকাশ করে। (দেখানো হলো)
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

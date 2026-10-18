@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>তথ্য ও যোগাযোগ প্রযুক্তি (ICT)</title>
+
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>তথ্য ও যোগাযোগ প্রযুক্তি (ICT)</h1>
+        <p>সৃজনশীল প্রশ্নব্যাংক ও ব্যাখ্যামূলক সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">৩য় অধ্যায়: সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস</h2>
+
+    <!-- Question 1 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            <p><strong>দৃশ্যকল্প-১:</strong> শিক্ষক ক্লাসে পড়ানোর পর ছাত্রদেরকে $2$-এর পরিপূরক ব্যবহার করে $-23$ থেকে $+32$ বিয়োগ করে নিয়ে আসার জন্য বাড়ির কাজ দিলেন।</p>
+            <p><strong>দৃশ্যকল্প-২:</strong> $(27)_{8} + (27)_{16} + (?)_{2} = (70.5)_{10}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">Signed Number কী?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">"ASCII এবং EBCDIC code এক নয়"— ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">দৃশ্যকল্প-২ এ উল্লেখিত $(?)_{2}$ এর মান নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">দৃশ্যকল্প-১ এ উল্লেখিত শিক্ষকের বাড়ির কাজটি সমাধান পূর্বক ব্যাখ্যা কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. (জ্ঞানমূলক উত্তর)</span>
+                <div class="solution-step">
+                    ধনাত্মক (+) বা ঋণাত্মক (-) চিহ্নযুক্ত সংখ্যাকে <strong>Signed Number</strong> বা <strong>চিহ্নযুক্ত সংখ্যা</strong> বলা হয়। সাইন বাইনারি সংখ্যায় সর্বোচ্চ বামের বিটকে (MSB) চিহ্ন বিট (Sign Bit) বলা হয়; যেখানে চিহ্ন বিট $0$ হলে সংখ্যাটি ধনাত্মক এবং $1$ হলে সংখ্যাটি ঋণাত্মক নির্দেশ করে।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. (অনুধাবনমূলক উত্তর)</span>
+                <div class="solution-step">
+                    ASCII (American Standard Code for Information Interchange) এবং EBCDIC (Extended Binary Coded Decimal Interchange Code) উভয়ই আলফানিউমেরিক কোড হলেও এদের বিট বিন্যাস, গঠন এবং ব্যবহারের ক্ষেত্রে মৌলিক পার্থক্য রয়েছে।
+                </div>
+                <div class="solution-step">
+                    ASCII সাধারণত $7$-বিট বা $8$-বিটের কোড হয়। ASCII-7 দ্বারা $2^7 = 128$ টি এবং ASCII-8 দ্বারা $2^8 = 256$ টি অদ্বিতীয় চিহ্ন নির্দিষ্ট করা যায়। এটি প্রধানত পার্সোনাল কম্পিউটার (PC) এবং ক্ষুদ্র কম্পিউটার সিস্টেমে ব্যবহৃত হয়।
+                </div>
+                <div class="solution-step">
+                    অন্যদিকে, EBCDIC হলো একটি পূর্ণাঙ্গ $8$-বিটের কোড যার দ্বারা $2^8 = 256$ টি অক্ষর, সংখ্যা ও বিশেষ চিহ্ন কোডভুক্ত করা যায়। এটি মূলত IBM mainframe এবং minicomputer সিস্টেমে ব্যবহৃত হয়। ASCII-তে জোন বিট হিসেবে $3$ বা $4$ বিট ব্যবহৃত হয়, কিন্তু EBCDIC-এ জোন বিট হিসেবে প্রথম $4$ টি বিট ব্যবহৃত হয়। সুতরাং, ASCII এবং EBCDIC কোড এক নয়।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. (প্রয়োগমূলক উত্তর)</span>
+                <div class="solution-step">
+                    <strong>উদ্দীপক অনুসারে প্রদত্ত সমীকরণ:</strong><br>
+                    $$(27)_{8} + (27)_{16} + (?)_{2} = (70.5)_{10}$$
+                </div>
+                <div class="solution-step">
+                    ধরি, অজানা মানটি $X = (?)_{2}$।<br>
+                    অতএব, $X = (70.5)_{10} - \{(27)_{8} + (27)_{16}\}$
+                </div>
+                <div class="solution-step">
+                    গণনার সুবিধার জন্য উদ্দীপকের অক্টাল $(27)_8$ এবং হেক্সাডেসিমেল $(27)_{16}$ সংখ্যা দুটিকে ডেসিমেল (দশমিক) সংখ্যা পদ্ধতিতে রূপান্তর করি:
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: $(27)_8$ কে ডেসিমেল (দশমিক) সংখ্যায় রূপান্তর:</strong><br>
+                    $(27)_8 = 2 \times 8^1 + 7 \times 8^0$ <span class="sidenote">[স্থানীয় মান দ্বারা গুণ করে]</span><br>
+                    $= 2 \times 8 + 7 \times 1$<br>
+                    $= 16 + 7 = (23)_{10}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: $(27)_{16}$ কে ডেসিমেল (দশমিক) সংখ্যায় রূপান্তর:</strong><br>
+                    $(27)_{16} = 2 \times 16^1 + 7 \times 16^0$ <span class="sidenote">[স্থানীয় মান দ্বারা গুণ করে]</span><br>
+                    $= 2 \times 16 + 7 \times 1$<br>
+                    $= 32 + 7 = (39)_{10}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: সমীকরণে প্রাপ্ত ডেসিমেল মানসমূহ বসিয়ে $X$ এর ডেসিমেল মান নির্ণয়:</strong><br>
+                    $$X = (70.5)_{10} - \{(23)_{10} + (39)_{10}\}$$
+                    $$X = (70.5)_{10} - (62)_{10}$$
+                    $$X = (8.5)_{10}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: প্রাপ্ত ডেসিমেল মান $(8.5)_{10}$ কে বাইনারি $(?)_{2}$ এ রূপান্তর:</strong><br>
+                    <u>পূর্ণাংশ $8$ এর জন্য (২ দ্বারা ভাগ প্রক্রিয়ায়):</u><br>
+                    $8 \div 2 = 4$, ভাগশেষ $= 0$<br>
+                    $4 \div 2 = 2$, ভাগশেষ $= 0$<br>
+                    $2 \div 2 = 1$, ভাগশেষ $= 0$<br>
+                    $1 \div 2 = 0$, ভাগশেষ $= 1$<br>
+                    নিচ থেকে উপরে সাজিয়ে পাই (MSB to LSB): $(8)_{10} = (1000)_2$ <span class="sidenote">[ভাগশেষগুলো নিচ থেকে উপরে লিখে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <u>ভগ্নাংশ $0.5$ এর জন্য (২ দ্বারা গুণ প্রক্রিয়ায়):</u><br>
+                    $0.5 \times 2 = 1.0$ (পূর্ণাংশ $= 1$, ভগ্নাংশ $= 0.0$)<br>
+                    উপর থেকে নিচে সাজিয়ে পাই: $(0.5)_{10} = (0.1)_2$ <span class="sidenote">[পূর্ণাংশগুলো উপর থেকে নিচে লিখে]</span>
+                </div>
+
+                <div class="solution-step">
+                    অতএব, $(8.5)_{10} = (1000.1)_2$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় $(?)_{2}$ এর মান: $(1000.1)_{2}$
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ. (উচ্চতর দক্ষতামূলক উত্তর)</span>
+                <div class="solution-step">
+                    <strong>উদ্দীপক অনুসারে শিক্ষক প্রদত্ত বাড়ির কাজ:</strong><br>
+                    $2$-এর পরিপূরক (2's Complement) পদ্ধতি ব্যবহার করে $-23$ থেকে $+32$ বিয়োগ করতে হবে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>বিয়োগের গাণিতিক প্রকাশ:</strong><br>
+                    $$\text{নির্ণেয় বিয়োগফল} = (-23) - (+32)$$
+                    $$= (-23) + (-32) \quad \text{[যোগের মাধ্যমে বিয়োগ কার্য সম্পন্ন করার রূপ]}$$
+                </div>
+
+                <div class="solution-step">
+                    কম্পিউটার সার্কিট যোগের মাধ্যমে বিয়োগের কাজ সম্পন্ন করে। তাই আমাদের $(-23)$ এবং $(-32)$ উভয় সংখ্যারই $2$-এর পরিপূরক গঠন তৈরি করে তাদের বাইনারি যোগ করতে হবে। মানগুলো প্রকাশের জন্য ৮-বিট রেজিস্টার (8-bit register) ব্যবহার করা হলো।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: $(-23)$ এর ৮-বিট ২-এর পরিপূরক মান নির্ণয়:</strong><br>
+                    $+23$ এর বাইনারি মান $= 10111_2$<br>
+                    ৮-বিট রেজিস্টারে $+23 = 00010111_2$ <span class="sidenote">[বামপাশে ০ বসিয়ে ৮-বিট পূর্ণ করে]</span><br>
+                    $+23$ এর ১-এর পরিপূরক (1's Complement) $= 11101000_2$ <span class="sidenote">[০ এর জায়গায় ১ এবং ১ এর জায়গায় ০ বসিয়ে]</span><br>
+                    $$\begin{aligned}
+                    &\quad 11101000_2 \quad \text{(1's Complement)}\\
+                    + &\quad \quad \quad \quad 1_2 \quad \text{(1 যোগ করে)}\\
+                    \hline
+                    &\quad 11101001_2 \quad \text{(2's Complement of } +23 \text{ i.e., } -23\text{)}
+                    \end{aligned}$$
+                    $$\therefore (-23)_{10} = (11101001)_2$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: $(-32)$ এর ৮-বিট ২-এর পরিপূরক মান নির্ণয়:</strong><br>
+                    $+32$ এর বাইনারি মান $= 100000_2$<br>
+                    ৮-বিট রেজিস্টারে $+32 = 00100000_2$ <span class="sidenote">[বামপাশে ০ বসিয়ে ৮-বিট পূর্ণ করে]</span><br>
+                    $+32$ এর ১-এর পরিপূরক (1's Complement) $= 11011111_2$ <span class="sidenote">[বিট উল্টিয়ে]</span><br>
+                    $$\begin{aligned}
+                    &\quad 11011111_2 \quad \text{(1's Complement)}\\
+                    + &\quad \quad \quad \quad 1_2 \quad \text{(1 যোগ করে)}\\
+                    \hline
+                    &\quad 11100000_2 \quad \text{(2's Complement of } +32 \text{ i.e., } -32\text{)}
+                    \end{aligned}$$
+                    $$\therefore (-32)_{10} = (11100000)_2$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: $(-23)$ এবং $(-32)$ এর ৮-বিট বাইনারি মানের যোগফল নির্ণয়:</strong><br>
+                    $$\begin{aligned}
+                    (-23)_{10} &= 11101001_2 \\
+                    + (-32)_{10} &= 11100000_2 \\
+                    \hline
+                    \text{যোগফল} &= \mathbf{1}\,11001001_2
+                    \end{aligned}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফল বিশ্লেষণ:</strong><br>
+                    এখানে মোট বিট সংখ্যা $9$ টি। যেহেতু আমরা ৮-বিট রেজিস্টার নিয়ে কাজ করছি, তাই ৯ম বিটটি (সর্ববামের $1$) হলো <strong>Carry Bit</strong>। ৮-বিট রেজিস্টারের ক্ষেত্রে Carry bit বিবেচনা করা হয় না (Discarded)।
+                </div>
+
+                <div class="solution-step">
+                    ক্যারি বিট বাদ দেওয়ার পর প্রাপ্ত ৮-বিট ফলাফলটি হলো: $11001001_2$।<br>
+                    এই ৮-বিট ফলাফলের সর্ববাম বিটটি (MSB) হলো $1$, যা নির্দেশ করে প্রাপ্ত বিয়োগফলটি একটি <strong>ঋণাত্মক (-) সংখ্যা</strong> এবং এটি $2$-এর পরিপূরক আকারে রয়েছে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফলের সঠিকতা যাচাই:</strong><br>
+                    প্রাপ্ত ফল $11001001_2$ এর মান যাচাই করতে পুনরায় ২-এর পরিপূরক করি:<br>
+                    $11001001_2$ এর ১-এর পরিপূরক $= 00110110_2$<br>
+                    ১ যোগ করলে $= 00110110_2 + 1_2 = 00110111_2 = (55)_{10}$<br>
+                    সুতরাং, ফলাফলটি নির্দেশ করে $(-55)_{10}$।<br>
+                    গাণিতিকভাবে: $(-23) - (+32) = -23 - 32 = -55$।
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ শিক্ষকের বাড়ির কাজের কাঙ্ক্ষিত ফলাফল হলো: $(-55)_{10}$ বা বাইনারিতে $(11001001)_2$ (ক্যারি বিট বিবেচনা না করে)।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            <p>একটি আয়তক্ষেত্রের দৈর্ঘ্য প্রস্থের দ্বিগুণ। উক্ত ক্ষেত্রের পরিসীমা $(300)_{8}$ মিটার।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">সংখ্যা পদ্ধতির ভিত্তি কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$3+6+9 = 12$ ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">উদ্দীপকে উল্লেখিত ক্ষেত্রটির পরিসীমা হেক্সাডেসিমেলে প্রকাশ কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">উদ্দীপকে উল্লেখিত ক্ষেত্রটির দৈর্ঘ্য হতে প্রস্থ ২-এর পরিপূরক পদ্ধতিতে বিয়োগ করা সম্ভব কিনা তা বিশ্লেষণ কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. (জ্ঞানমূলক উত্তর)</span>
+                <div class="solution-step">
+                    কোনো সংখ্যা পদ্ধতিতে সংখ্যা গণনার জন্য মোট যতগুলো মৌলিক চিহ্ন বা প্রতীক (Digit/Symbol) ব্যবহার করা হয়, তার সমষ্টিকে ওই সংখ্যা পদ্ধতির <strong>ভিত্তি</strong> বা <strong>বেস (Base)</strong> বলা হয়। যেমন: ডেসিমেল সংখ্যা পদ্ধতির ভিত্তি হলো $10$ এবং বাইনারি সংখ্যা পদ্ধতির ভিত্তি হলো $2$।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. (অনুধাবনমূলক উত্তর)</span>
+                <div class="solution-step">
+                    সাধারণ ডেসিমেল গাণিতিক নিয়মে $3 + 6 + 9 = 18$ হলেও, <strong>অক্টাল (Octal)</strong> সংখ্যা পদ্ধতিতে $3 + 6 + 9 = (12)_{16}$ বা ডেসিমেল রূপান্তরের অক্টাল যোগফলে তা $(22)_8$ হয়। তবে এখানে প্রদত্ত সমীকরণ $3+6+9 = 12$ হলো একটি <strong>অক্টাল (Octal) যোগের</strong> ফল।
+                </div>
+                <div class="solution-step">
+                    অক্টাল সংখ্যা পদ্ধতির বেস বা ভিত্তি হলো $8$ এবং এতে ব্যবহারযোগ্য অঙ্কসমূহ হলো $0, 1, 2, 3, 4, 5, 6, 7$। ডেসিমেল পদ্ধতিতে $3 + 6 + 9 = 18$। এই ডেসিমেল যোগফল $18$ কে অক্টাল সংখ্যায় রূপান্তর করার নিয়ম হলো:
+                </div>
+                <div class="solution-step">
+                    যোগফল $18$ কে অক্টাল বেস $8$ দ্বারা ভাগ করলে:
+                    $$18 \div 8 = 2 \quad \text{এবং ভাগশেষ (Rem) } = 2$$
+                    ভাগফল $2$ পরবর্তী স্থানে ক্যারেক্টার বা ক্যারি হিসেবে বসে এবং ভাগশেষ $2$ সমীকরণের যোগফল স্থানে বসে। আবার সমীকরণে ক্যারি $2$ বেস $8$ অপেক্ষা ছোট হওয়ায় তা সরাসরি বসে যায়। ফলে অক্টাল পদ্ধতিতে প্রাপ্ত ফলাফল হয় $(22)_8$।
+                </div>
+                <div class="solution-step">
+                    অন্যদিকে, <strong>হেক্সাডেসিমেল (Hexadecimal)</strong> সংখ্যা পদ্ধতিতে ডেসিমেল $18$ কে বেস $16$ দ্বারা ভাগ করলে:
+                    $$18 \div 16 = 1 \quad \text{এবং ভাগশেষ (Rem) } = 2$$
+                    ভাগফল $1$ এবং ভাগশেষ $2$ পাশাপাশ বসে হেক্সাডেসিমেল মান পাওয়া যায় $(12)_{16}$।
+                </div>
+                <div class="solution-step">
+                    অতএব, হেক্সাডেসিমেল সংখ্যা পদ্ধতিতে ডেসিমেল ৩, ৬ ও ৯ এর যোগফল $(3)_{16} + (6)_{16} + (9)_{16} = (12)_{16}$ হয়। তাই বলা যায়, উক্ত যোগফলটি হেক্সাডেসিমেল সংখ্যা পদ্ধতির যোগের নিয়ম মেনে সম্পন্ন হয়েছে।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. (প্রয়োগমূলক উত্তর)</span>
+                <div class="solution-step">
+                    <strong>উদ্দীপক অনুসারে:</strong><br>
+                    আয়তক্ষেত্রের পরিসীমা $= (300)_8$ মিটার।
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত অক্টাল সংখ্যাটিকে হেক্সাডেসিমেল (Hexadecimal) সংখ্যায় রূপান্তর করার জন্য প্রথমে প্রতিটি অক্টাল ডিজিটের সমতুল্য ৩-বিট বাইনারি মান লিখতে হবে, অতঃপর প্রাপ্ত বাইনারি বিটগুলোকে ডান দিক থেকে ৪-বিট করে দলভুক্ত (Group) করে হেক্সাডেসিমেল ডিজিটে রূপান্তর করতে হবে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: অক্টাল $(300)_8$ কে ৩-বিট বাইনারিতে রূপান্তর:</strong><br>
+                    অক্টাল ডিজিট ৩ এর ৩-বিট বাইনারি মান $= 011_2$<br>
+                    অক্টাল ডিজিট ০ এর ৩-বিট বাইনারি মান $= 000_2$<br>
+                    অক্টাল ডিজিট ০ এর ৩-বিট বাইনারি মান $= 000_2$<br>
+                    $$\therefore (300)_8 = (011000000)_2$$ <span class="sidenote">[প্রতিটি অক্টাল অংকের পরিবর্তে ৩-বিট বাইনারি মান বসিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: বাইনারি মানকে ৪-বিট করে গ্রুপ করে হেক্সাডেসিমেলে রূপান্তর:</strong><br>
+                    পূর্ণসংখ্যার ক্ষেত্রে ডান থেকে বাম দিকে ৪-বিট করে গ্রুপ গঠন করি:<br>
+                    $$(011000000)_2 = \underbrace{0000}_{0} \quad \underbrace{1100}_{C} \quad \underbrace{0000}_{0}$$ <span class="sidenote">[বামপাশে প্রয়োজন অনুযায়ী ০ যোগ করে ৪-বিট পূরণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <u>গ্রুপভিত্তিক হেক্সাডেসিমেল মানসমূহ:</u><br>
+                    $0000_2 = (0)_{16}$<br>
+                    $1100_2 = (12)_{10} = (C)_{16}$ <span class="sidenote">[$1100_2 = 8 + 4 = 12$, যেখানে হেক্সাডেসিমেলে $12 \equiv C$]</span><br>
+                    $0000_2 = (0)_{16}$
+                </div>
+
+                <div class="solution-step">
+                    সুতরাং, $(011000000)_2 = (C0)_{16}$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ উদ্দীপকে উল্লেখিত ক্ষেত্রটির পরিসীমা হেক্সাডেসিমেল মান হলো: $(C0)_{16}$ মিটার।
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ. (উচ্চতর দক্ষতামূলক উত্তর)</span>
+                <div class="solution-step">
+                    উদ্দীপকে উল্লেখিত আয়তক্ষেত্রটির দৈর্ঘ্য হতে প্রস্থ ২-এর পরিপূরক (2's Complement) পদ্ধতিতে বিয়োগ করা অবশ্যই সম্ভব। ২-এর পরিপূরক পদ্ধতিতে মূলত যোগের সার্কিট (Adder) ব্যবহার করেই বিয়োগের কাজ সম্পন্ন করা হয়।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: পরিসীমার মান ডেসিমেল (দশমিক) সংখ্যায় রূপান্তর:</strong><br>
+                    অক্টাল পরিসীমা $(300)_8 = 3 \times 8^2 + 0 \times 8^1 + 0 \times 8^0$ <span class="sidenote">[স্থানীয় মান দ্বারা গুণ করে]</span><br>
+                    $= 3 \times 64 + 0 + 0 = (192)_{10}$ মিটার।
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থ নির্ণয়:</strong><br>
+                    ধরি, আয়তক্ষেত্রটির প্রস্থ $= x$ মিটার।<br>
+                    উদ্দীপক মতে, আয়তক্ষেত্রটির দৈর্ঘ্য $= 2x$ মিটার।<br>
+                    আমরা জানি, আয়তক্ষেত্রের পরিসীমা $= 2 \times (\text{দৈর্ঘ্য} + \text{প্রস্থ})$<br>
+                    $$\begin{aligned}
+                    2 \times (2x + x) &= 192 \\
+                    2 \times 3x &= 192 \\
+                    6x &= 192 \\
+                    x &= \frac{192}{6} \\
+                    x &= 32
+                    \end{aligned}$$
+                    $$\therefore \text{আয়তক্ষেত্রটির প্রস্থ } = (32)_{10} \text{ মিটার।}$$
+                    $$\text{এবং আয়তক্ষেত্রটির দৈর্ঘ্য } = 2 \times 32 = (64)_{10} \text{ মিটার।}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: বিয়োগের গাণিতিক প্রকাশ ও ২-এর পরিপূরক প্রক্রিয়া:</strong><br>
+                    দৈর্ঘ্য হতে প্রস্থের বিয়োগফল $= (+64) - (+32) = (+64) + (-32)$ <span class="sidenote">[২-এর পরিপূরকে বিয়োগ মানে যোগের রূপ]</span><br>
+                    এখানে, $+64$ এর সাথে $(-32)$ এর ২-এর পরিপূরক যোগ করতে হবে। মানসমূহ প্রকাশের জন্য ৮-বিট রেজিস্টার (8-bit Register) ব্যবহার করি।
+                </div>
+
+                <div class="solution-step">
+                    <u>১. $+64$ এর ৮-বিট বাইনারি মান:</u><br>
+                    $64$ এর বাইনারি মান $= 1000000_2$<br>
+                    ৮-বিট রেজিস্টারে $+64 = 01000000_2$ <span class="sidenote">[সর্ববাম বিট 0 যা ধনাত্মক নির্দেশ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <u>২. $(-32)$ এর ৮-বিট ২-এর পরিপূরক মান নির্ণয়:</u><br>
+                    $+32$ এর বাইনারি মান $= 100000_2$<br>
+                    ৮-বিট রেজিস্টারে $+32 = 00100000_2$<br>
+                    $+32$ এর ১-এর পরিপূরক (1's Complement) $= 11011111_2$ <span class="sidenote">[বিট উল্টিয়ে]</span><br>
+                    $$\begin{aligned}
+                    &\quad 11011111_2 \quad \text{(1's Complement)}\\
+                    + &\quad \quad \quad \quad 1_2 \quad \text{(1 যোগ করে)}\\
+                    \hline
+                    &\quad 11100000_2 \quad \text{(2's Complement of } +32 \text{ i.e., } -32\text{)}
+                    \end{aligned}$$
+                    $$\therefore (-32)_{10} = (11100000)_2$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: ৮-বিট যোগ প্রক্রিয়া সম্পন্নকরণ:</strong><br>
+                    $$\begin{aligned}
+                    (+64)_{10} &= 01000000_2 \\
+                    + (-32)_{10} &= 11100000_2 \\
+                    \hline
+                    \text{যোগফল} &= \mathbf{1}\,00100000_2
+                    \end{aligned}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফল বিশ্লেষণ:</strong><br>
+                    এখানে মোট বিট সংখ্যা $9$ টি। ৮-বিট রেজিস্টারের ক্ষেত্রে ৯ম বিটটি (সর্ববামের $1$) হলো <strong>Carry Bit</strong>। ৮-বিট রেজিস্টারে Carry bit বিবেচনা করা হয় না (Discarded)।<br>
+                    ক্যারি বিট বাদ দিয়ে প্রাপ্ত ৮-বিট মানটি হলো: $00100000_2$।<br>
+                    এখানে সাইন বিট (MSB) হলো $0$, যা নির্দেশ করে প্রাপ্ত বিয়োগফলটি একটি <strong>ধনাত্মক (+) সংখ্যা</strong>।
+                </div>
+
+                <div class="solution-step">
+                    <strong>প্রাপ্ত ফলের ডেসিমেল মান যাচাই:</strong><br>
+                    $00100000_2 = 2^5 = 32_{10}$।<br>
+                    গাণিতিকভাবে: $64 - 32 = 32$।
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ উদ্দীপকে উল্লেখিত আয়তক্ষেত্রটির দৈর্ঘ্য হতে প্রস্থ ২-এর পরিপূরক পদ্ধতিতে বিয়োগ করা সম্ভব এবং বিয়োগফল হলো $(32)_{10}$ মিটার বা বাইনারিতে $(00100000)_2$ মিটার।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            <p>সোহেল $(80)_{10}$ টাকা নিয়ে দোকানে গেল। $(47)_{16}$ টাকায় একটি বই কিনল। তার বন্ধু রাসেল $(507.65)_{8}$ টাকার বই এবং $(7D.C)_{16}$ টাকার কলম কিনল।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">চিহ্ন বিট কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">ASCII- একটি বহুল প্রচলিত কোড ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">সোহেলের কাছে কত টাকা অবশিষ্ট আছে তা যোগের মাধ্যমে নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">রাসেলের মোট কত খরচ, বাইনারি যোগের মাধ্যমে নির্ণয় করে দশমিক পদ্ধতিতে প্রকাশ কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক এর উত্তর:</div>
+                <div class="solution-step">
+                    চিহ্নযুক্ত সংখ্যার (Signed Number) ক্ষেত্রে ধনাত্মক বা ঋণাত্মক মান বোঝানোর জন্য বাইনারি রেজিস্টারের সর্ববামে যে অতিরিক্ত ১টি বিট ব্যবহার করা হয়, তাকে <strong>চিহ্ন বিট (Sign Bit)</strong> বলে। (চিহ্ন বিট $0$ হলে সংখ্যাটি ধনাত্মক এবং $1$ হলে সংখ্যাটি ঋণাত্মক হয়)।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ এর উত্তর:</div>
+                <div class="solution-step">
+                    <strong>ASCII (American Standard Code for Information Interchange)</strong> হলো একটি বহুল প্রচলিত অ্যালফানিউমেরিক কোড যা মাইক্রোকম্পিউটার, কীবোর্ড এবং ডেটা ট্রান্সমিশনে ব্যাপকভাবে ব্যবহৃত হয়।
+                </div>
+                <div class="solution-step">
+                    সাধারণত ASCII কোড ৭টি বিট নিয়ে গঠিত হয় (ASCII-7), যার মাধ্যমে $2^7 = 128$ টি অদ্বিতীয় চিহ্ন বা ক্যারেক্টারকে নির্দিষ্ট করা যায়। তবে বর্তমানে প্রসারিত ASCII-8 কোড ব্যবহৃত হয়, যা ৮-বিট বিশিষ্ট এবং এর মাধ্যমে $2^8 = 256$ টি ভিন্ন ক্যারেক্টারকে কোডভুক্ত করা যায়। ASCII কোডে বামপাশের ৩টি বিটকে জোন বিট (Zone bit) এবং ডানপাশের ৪টি বিটকে সংখ্যাসূচক বিট (Numeric bit) হিসেবে ধরা হয়।
+                </div>
+                <div class="solution-step">
+                    ইংরেজি বর্ণমালার বড় ও ছোট হাতের অক্ষর, $0$ থেকে $9$ পর্যন্ত অংক, গাণিতিক ও বিশেষ চিহ্ন এবং বিভিন্ন কন্ট্রোল ক্যারেক্টারকে কম্পিউটারে প্রক্রিয়াকরণের উপযোগী করতে ASCII কোডের ব্যবহার সর্বজনস্বীকৃত ও বহুল জনপ্রিয়।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুসারে:
+                    <br>সোহেলের মোট টাকা $= (80)_{10}$
+                    <br>সোহেলের বই ক্রয়ের খরচ $= (47)_{16}$
+                </div>
+                <div class="solution-step">
+                    যোগের মাধ্যমে বিয়োগের কাজ বা অবশিষ্ট টাকা নির্ণয়ের জন্য <strong>২-এর পরিপূরক (2's Complement) পদ্ধতি</strong> ব্যবহার করা হয়। 
+                    এখানে, অবশিষ্ট টাকা $= 80 - (47)_{16} = (80)_{10} + \{-(47)_{16}\}$।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-১: $(47)_{16}$ কে দশমিকে ও বাইনারিতে রূপান্তর:</strong>
+                </div>
+                <div class="solution-step">
+                    $(47)_{16} = (4 \times 16^1) + (7 \times 16^0)$ <span class="sidenote">[১০-ভিত্তিক সংখ্যায় রূপান্তর]</span>
+                </div>
+                <div class="solution-step">
+                    $= 64 + 7 = 71$ <span class="sidenote">[$64 + 7 = 71$]</span>
+                </div>
+                <div class="solution-step">
+                    বাইনারি মান:
+                    <br>$4 \to 0100$
+                    <br>$7 \to 0111$
+                    <br>সুতরাং, $(47)_{16} = (01000111)_2$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-২: রেজিস্টার বিট নির্ধারণ ও $(80)_{10}$ এর ৮-বিট বাইনারি গঠন:</strong>
+                </div>
+                <div class="solution-step">
+                    যেহেতু সর্বোচ্চ মান $80$, তাই আমরা <strong>৮-বিট রেজিস্টার</strong> ব্যবহার করব।
+                </div>
+                <div class="solution-step">
+                    $80$ এর বাইনারি মান: $(1010000)_2$
+                </div>
+                <div class="solution-step">
+                    ৮-বিট রেজিস্টারে $+80 = 01010000$ <span class="sidenote">[বামপাশে ১টি $0$ বসিয়ে ৮-বিট পূর্ণ করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৩: $-71$ অর্থাৎ $-(47)_{16}$ এর ২-এর পরিপূরক মান নির্ণয়:</strong>
+                </div>
+                <div class="solution-step">
+                    $+71$ এর ৮-বিট বাইনারি मान: $01000111$
+                </div>
+                <div class="solution-step">
+                    $+71$ এর ১-এর পরিপূরক (1's Complement): $10111000$ <span class="sidenote">[$0$ এর জায়গায় $1$ এবং $1$ এর জায়গায় $0$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    ১-এর পরিপূরকের সাথে $1$ যোগ করে ২-এর পরিপূরক মান গঠন:
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;10111000  (১-এর পরিপূরক)<br>
++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1  (১ যোগ)<br>
+-------------------<br>
+&nbsp;&nbsp;10111001  ($-71$ এর ২-এর পরিপূরক মান)
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৪: $+80$ এবং $-71$ এর যোগফল নির্ণয়:</strong>
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;01010000  ($+80$ এর ৮-বিট মান)<br>
++ 10111001  ($-71$ এর ২-এর পরিপূরক মান)<br>
+-------------------<br>
+1 00001001  (যোগফল)
+                    </div>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফল বিশ্লেষণ:</strong>
+                    <br>১. সর্ববামের ১ম বিটটি (৯ম বিট) হলো <strong>ক্যারি বিট (Carry Bit)</strong>। ৮-বিট রেজিস্টারের ক্ষেত্রে অতিরিক্ত ক্যারি বিট $1$ কে বিবেচনা করা হয় না।
+                    <br>২. অবশিষ্ট ৮-বিট রেজিস্টারের সর্ববাম বিটটি (৮ম বিট) হলো <strong>চিহ্ন বিট (Sign Bit)</strong>, যা $0$। এটি নির্দেশ করে ফলাফলটি **ধনাত্মক**।
+                </div>
+
+                <div class="solution-step">
+                    অবশিষ্ট বাইনারি মান $= (00001001)_2 = (1001)_2$
+                </div>
+                <div class="solution-step">
+                    দশমিক মান: $(1001)_2 = (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 8 + 0 + 0 + 1 = 9$ <span class="sidenote">[$80 - 71 = 9$ টাকা]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ যোগের মাধ্যমে নির্ণীত সোহেলের কাছে অবশিষ্ট টাকার পরিমাণ $(1001)_2$ বা $9$ টাকা।
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ঘ এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুযায়ী:
+                    <br>রাসেলের বইয়ের দাম $= (507.65)_8$ টাকা
+                    <br>রাসেলের কলমের দাম $= (7D.C)_{16}$ টাকা
+                </div>
+                <div class="solution-step">
+                    রাসেলের মোট খরচ বাইনারি যোগের মাধ্যমে নির্ণয় করার জন্য উভয় মানকে প্রথমে বাইনারিতে রূপান্তর করতে হবে।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-১: বইয়ের দাম $(507.65)_8$ কে বাইনারিতে রূপান্তর:</strong>
+                    <br>আমরা জানি, প্রতিটি অকটাল অংকের সমতুল্য ৩-বিট বাইনারি মান বসাতে হয়।
+                </div>
+                <div class="solution-step">
+                    $5 \to 101$<br>
+                    $0 \to 000$<br>
+                    $7 \to 111$<br>
+                    $. \to .$<br>
+                    $6 \to 110$<br>
+                    $5 \to 101$
+                </div>
+                <div class="solution-step">
+                    $\therefore (507.65)_8 = (101000111.110101)_2$ <span class="sidenote">[অকটাল থেকে ৩-বিট বাইনারি রূপান্তর]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-২: কলমের দাম $(7D.C)_{16}$ কে বাইনারিতে রূপান্তর:</strong>
+                    <br>আমরা জানি, প্রতিটি হেক্সাডেসিমেল অংকের সমতুল্য ৪-বিট বাইনারি মান বসাতে হয় (যেখানে $D = 13$ এবং $C = 12$)।
+                </div>
+                <div class="solution-step">
+                    $7 \to 0111$<br>
+                    $D (13) \to 1101$<br>
+                    $. \to .$<br>
+                    $C (12) \to 1100$
+                </div>
+                <div class="solution-step">
+                    $\therefore (7D.C)_{16} = (01111101.1100)_2 = (1111101.11)_2$ <span class="sidenote">[হেক্সাডেসিমেল থেকে ৪-বিট বাইনারি রূপান্তর]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৩: বাইনারি যোগ সম্পাদন:</strong>
+                    <br>রেডিক্স পয়েন্ট (দশমিক বিন্দু) ঠিক রেখে বাইনারি সংখ্যা দুটি নিচে নিচে সাজিয়ে যোগ করি (পয়েন্টের ডানের অপ্রয়োজনীয় স্থানে শূন্য বসিয়ে সমসংখ্যক বিট তৈরি করা হলো):
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;101000111.110101  (বইয়ের দাম)<br>
++ 001111101.110000  (কলমের দাম)<br>
+------------------------<br>
+&nbsp;&nbsp;1001000101.100101  (মোট বাইনারি খরচ)
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৪: বাইনারি যোগফলকে প্রচলিত (দশমিক) পদ্ধতিতে প্রকাশ:</strong>
+                </div>
+                <div class="solution-step">
+                    নির্ণেয় মোট বাইনারি খরচ $= (1001000101.100101)_2$
+                </div>
+                <div class="solution-step">
+                    <strong>পূর্ণাংশ $(1001000101)_2$ এর দশমিক রূপান্তর:</strong>
+                    <br>$= (1 \times 2^9) + (0 \times 2^8) + (0 \times 2^7) + (1 \times 2^6) + (0 \times 2^5) + (0 \times 2^4) + (0 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$
+                    <br>$= 512 + 0 + 0 + 64 + 0 + 0 + 0 + 4 + 0 + 1$ <span class="sidenote">[পাওয়ারের মান হিসেব করে]</span>
+                    <br>$= 581$ <span class="sidenote">[যোগ করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>ভগ্নাংশ $(0.100101)_2$ এর দশমিক রূপান্তর:</strong>
+                    <br>$= (1 \times 2^{-1}) + (0 \times 2^{-2}) + (0 \times 2^{-3}) + (1 \times 2^{-4}) + (0 \times 2^{-5}) + (1 \times 2^{-6})$
+                    <br>$= \frac{1}{2} + 0 + 0 + \frac{1}{16} + 0 + \frac{1}{64}$
+                    <br>$= 0.5 + 0.0625 + 0.015625$ <span class="sidenote">[ভগ্নাংশগুলোকে দশমিকে রূপান্তর করে]</span>
+                    <br>$= 0.578125$ <span class="sidenote">[যোগ করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    অতএব, মোট দশমিক খরচ $= 581 + 0.578125 = 581.578125$ টাকা।
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ বাইনারি যোগের মাধ্যমে রাসেলের মোট খরচ $(1001000101.100101)_2$ টাকা, যা প্রচলিত দশমিক পদ্ধতিতে **$581.578125$ টাকা** (বা প্রাই $581.58$ টাকা)।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 4 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৪</div>
+        
+        <div class="stem-container">
+            <p>সাইফুল ও রফিকুল টেস্ট পরীক্ষায় যথাক্রমে মোট $(113)_{8}$ ও $(3E)_{16}$ নম্বর পেয়েছে। তাদের ক্লাস রোল যথাক্রমে $(37)_{8}$ ও $(AB)_{16}$।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">কম্পিউটার কোড কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">৩ ভিত্তিক সংখ্যা পদ্ধতি ব্যাখ্যা করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">উদ্দীপকে উল্লেখিত নম্বরগুলোকে প্রচলিত সংখ্যায় রূপান্তর করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">সাইফুল ও রফিকুলের টেস্ট পরীক্ষায় প্রাপ্ত নম্বর দুইটির পার্থক্য যোগের মাধ্যমে নিরূপণ করা সম্ভব কিনা?</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক এর উত্তর:</div>
+                <div class="solution-step">
+                    কম্পিউটার সিস্টেমে প্রক্রিয়াকরণের জন্য বর্ণ, সংখ্যা, চিহ্ন বা কোনো নির্দেশকে বাইনারি বিট ($0$ এবং $1$) এর অদ্বিতীয় সংকেতে রূপান্তর করার পদ্ধতিকে <strong>কম্পিউটার কোড</strong> বলে।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ এর উত্তর:</div>
+                <div class="solution-step">
+                    <strong>৩ ভিত্তিক সংখ্যা পদ্ধতি (Ternary Number System):</strong>
+                </div>
+                <div class="solution-step">
+                    যে সংখ্যা পদ্ধতিতে হিসাব-নিকাশের জন্য মোট ৩টি মৌলিক চিহ্ন বা অংক ব্যবহার করা হয়, তাকে ৩ ভিত্তিক সংখ্যা পদ্ধতি বা <em>Ternary Number System</em> বলে। 
+                </div>
+                <div class="solution-step">
+                    এই সংখ্যা পদ্ধতির ভিত্তি বা বেস (Base) হলো $3$। এই পদ্ধতিতে ব্যবহৃত অংক ৩টি হলো: $0, 1, 2$। 
+                </div>
+                <div class="solution-step">
+                    উদাহরণস্বরূপ: $(1201)_3$ একটি ৩ ভিত্তিক সংখ্যা। এখানে সর্বোচ্চ ব্যবহৃত অংকটি $2$, যা এর বেস $3$ অপেক্ষা ছোট। যেকোনো পজিশনাল সংখ্যা পদ্ধতির মতো ৩ ভিত্তিক সংখ্যা পদ্ধতির স্থানীয় মানগুলো বেসের পাওয়ার অনুযায়ী নির্ধারিত হয় (যেমন: $3^0, 3^1, 3^2, 3^3$ ইত্যাদি)।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ এর উত্তর:</div>
+                <div class="solution-step">
+                    আমাদের প্রচলিত সংখ্যা পদ্ধতি হলো <strong>দশমিক (Decimal) সংখ্যা পদ্ধতি</strong>। 
+                    উদ্দীপক অনুযায়ী, সাইফুল ও রফিকুলের প্রাপ্ত নম্বর দুটি যথাক্রমে অকটাল পদ্ধতি $(113)_8$ এবং হেক্সাডেসিমেল পদ্ধতি $(3E)_{16}$-এ দেওয়া আছে। নিচে এদেরকে দশমিক (প্রচলিত) সংখ্যায় রূপান্তর করে দেখানো হলো:
+                </div>
+                
+                <div class="solution-step">
+                    <strong>১. সাইফুলের নম্বর $(113)_8$ কে দশমিক সংখ্যায় রূপান্তর:</strong>
+                </div>
+                <div class="solution-step">
+                    $(113)_8 = (1 \times 8^2) + (1 \times 8^1) + (3 \times 8^0)$ 
+                    <span class="sidenote">[প্রতিটি অংককে তার স্থানীয় মান ($8^{\text{পজিশন}}$) দিয়ে গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= (1 \times 64) + (1 \times 8) + (3 \times 1)$ 
+                    <span class="sidenote">[$8^2 = 64$, $8^1 = 8$, $8^0 = 1$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= 64 + 8 + 3$ 
+                    <span class="sidenote">[গুণফলগুলো হিসাব করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= 75$ 
+                    <span class="sidenote">[যোগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\therefore (113)_8 = (75)_{10}$
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>২. রফিকুলের নম্বর $(3E)_{16}$ কে দশমিক সংখ্যায় রূপান্তর:</strong>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, হেক্সাডেসিমেল পদ্ধতিতে $E = 14$।
+                </div>
+                <div class="solution-step">
+                    $(3E)_{16} = (3 \times 16^1) + (E \times 16^0)$ 
+                    <span class="sidenote">[প্রতিটি অংককে তার স্থানীয় মান ($16^{\text{পজিশন}}$) দিয়ে গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= (3 \times 16) + (14 \times 1)$ 
+                    <span class="sidenote">[$16^1 = 16$, $E = 14$ এবং $16^0 = 1$ মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $= 48 + 14$ 
+                    <span class="sidenote">[গুণফল হিসাব করে]</span>
+                </div>
+                <div class="solution-step">
+                    $= 62$ 
+                    <span class="sidenote">[যোগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\therefore (3E)_{16} = (62)_{10}$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ সাইফুলের নম্বর প্রচলিত (দশমিক) সংখ্যায় $75$ এবং রফিকুলের নম্বর প্রচলিত (দশমিক) সংখ্যায় $62$।
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ঘ এর উত্তর:</div>
+                <div class="solution-step">
+                    হ্যাঁ, সাইফুল ও রফিকুলের টেস্ট পরীক্ষায় প্রাপ্ত নম্বর দুটির পার্থক্য যোগের মাধ্যমে (অর্থাৎ **২-এর পরিপূরক পদ্ধতি** ব্যবহার করে) নিরূপণ করা সম্ভব।
+                </div>
+                <div class="solution-step">
+                    <strong>গ অংশ হতে প্রাপ্ত তথ্য:</strong><br>
+                    সাইফুলের নম্বর $= (75)_{10}$<br>
+                    রফিকুলের নম্বর $= (62)_{10}$
+                </div>
+                <div class="solution-step">
+                    সাইফুল ও রফিকুলের নম্বরের গাণিতিক পার্থক্য $= 75 - 62 = 75 + (-62)$।<br>
+                    যোগের মাধ্যমে পার্থক্য নির্ণয়ের জন্য ধনাত্মক সংখ্যা $(75)_{10}$ এর প্রকৃত বাইনারি মানের সাথে ঋণাত্মক সংখ্যা $(-62)_{10}$ এর ২-এর পরিপূরক মান যোগ করতে হবে।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-১: প্রয়োজনীয় রেজিস্টার বিট নির্ধারণ:</strong><br>
+                    যেহেতু সর্বোচ্চ সংখ্যা $75$, যা $8$-বিট রেজিস্টারের পরিসর ($-128$ থেকে $+127$) এর মধ্যে পড়ে, তাই আমরা মানগুলোকে <strong>৮-বিট রেজিস্টারে</strong> রূপান্তর করবো।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-২: $+75$ এর ৮-বিট বাইনারি মান গঠন:</strong><br>
+                    $75$ এর সাধারণ বাইনারি মান: $(1001011)_2$<br>
+                    ৮-বিট রেজিস্টারে $+75 = 01001011$ <span class="sidenote">[বামপাশে ১টি শূন্য বসিয়ে ৮-বিট পূরণ করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৩: $-62$ এর ২-এর পরিপূরক মান নির্ণয়:</strong><br>
+                    $62$ এর সাধারণ বাইনারি মান: $(111110)_2$<br>
+                    ৮-বিট রেজিস্টারে $+62 = 00111110$ <span class="sidenote">[বামপাশে ২টি শূন্য বসিয়ে ৮-বিট পূরণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    এখন, $+62$ এর ১-এর পরিপূরক (1's Complement):<br>
+                    $\phantom{+62 = } 11000001$ <span class="sidenote">[$0$ এর জায়গায় $1$ এবং $1$ এর জায়গায় $0$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    ১-এর পরিপূরকের সাথে $1$ যোগ করে ২-এর পরিপূরক (2's Complement) গঠন:
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;11000001  (১-এর পরিপূরক)<br>
++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1  (১ যোগ)<br>
+-------------------<br>
+&nbsp;&nbsp;11000010  ($-62$ এর ২-এর পরিপূরক মান)
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৪: $+75$ এবং $-62$ এর যোগফল নির্ণয়:</strong>
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;01001011  ($+75$ এর ৮-বিট মান)<br>
++ 11000010  ($-62$ এর ২-এর পরিপূরক মান)<br>
+-------------------<br>
+1 00001101  (যোগফল)
+                    </div>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফল বিশ্লেষণ:</strong><br>
+                    এখানে যোগফলে মোট $9$ টি বিট পাওয়া গেছে। 
+                    <br>১. সর্ববাম পাশের ১ম বিটটিকে (৯ম বিট) <strong>ক্যারি বিট (Carry bit)</strong> বলে। ৮-বিট রেজিস্টারের ক্ষেত্রে ক্যারি বিট বিবেচনা করা হয় না (বিবেচনা বহির্ভূত)।
+                    <br>২. অবশিষ্ট ৮-বিট রেজিস্টারের সর্ববাম বিটটি (৮ম বিট) হলো <strong>চিহ্ন বিট (Sign bit)</strong>, যা $0$। চিহ্ন বিট $0$ নির্দেশ করে ফলাফলটি একটি **ধনাত্মক** সংখ্যা।
+                </div>
+
+                <div class="solution-step">
+                    অতএব, নির্ণেয় পার্থক্য (বাইনারিতে) $= (00001101)_2$
+                </div>
+
+                <div class="solution-step">
+                    <strong>বাইনারি ফলাফলকে দশমিক মান যাচাই:</strong><br>
+                    $(00001101)_2 = (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)$<br>
+                    $= 8 + 4 + 0 + 1 = 13$ <span class="sidenote">[$75 - 62 = 13$ এর সাথে পুরোপুরি মিলে যায়]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ ২-এর পরিপূরক পদ্ধতি ব্যবহার করে যোগের মাধ্যমে সাইফুল ও রফিকুলের প্রাপ্ত নম্বরের পার্থক্য সফলভাবে নিরূপণ করা সম্ভব এবং নির্ণেয় পার্থক্য হলো $(13)_{10}$ বা $(1101)_2$।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 5 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৫</div>
+        
+        <div class="stem-container">
+            <p>$X = (DFB \cdot 568)_{16}$, $Y = (765 \cdot 4)_{8}$, $Z = (3564 \cdot 0542)_{8}$</p>
+            <p>George Boole 1847 সালে Mathematics of logic নামে একটি বই প্রকাশ করেন।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">সংখ্যা পদ্ধতির ভিত্তি কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">বিসিডি চার বিটে লেখা হয় কেন— ব্যাখ্যা করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">জর্জ বুল কত বছর পূর্বে বইটি লিখেছিলেন তা ২-এর পরিপূরক পদ্ধতিতে বের কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">$X+Y$ এর মান অক্টাল ও $Z$ এর মান হেক্সাডেসিমেলে রূপান্তর কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৫ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক এর উত্তর:</div>
+                <div class="solution-step">
+                    কোনো একটি সংখ্যা পদ্ধতিতে গণনা বা লেখার জন্য ব্যবহৃত মোট অংক বা প্রতীকসমূহের সমষ্টিকে ওই সংখ্যা পদ্ধতির <strong>ভিত্তি (Base)</strong> বলে। যেমন: দশমিক সংখ্যা পদ্ধতির ভিত্তি হলো $10$, কারণ এতে $0$ থেকে $9$ পর্যন্ত মোট ১০টি মৌলিক প্রতীক ব্যবহৃত হয়।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ এর উত্তর:</div>
+                <div class="solution-step">
+                    <strong>BCD (Binary Coded Decimal)</strong> কোড হলো একটি বাইনারি কোডেড পদ্ধতি যেখানে দশমিক পদ্ধতির প্রতিটি অংককে ($0$ থেকে $9$) আলাদাভাবে সমতুল্য বাইনারি বিট দ্বারা প্রকাশ করা হয়।
+                </div>
+                <div class="solution-step">
+                    দশমিক সংখ্যা পদ্ধতির সর্ববৃহৎ এক অঙ্কের সংখ্যাটি হলো $9$। বাইনারি কোডিং নিয়ম অনুসারে, $n$ বিট দিয়ে সর্বোচ্চ $2^n$ সংখ্যক ভিন্ন প্রতীক নির্দেশ করা যায়।
+                    <ul>
+                        <li>যদি ৩টি বিট ($2^3 = 8$) ব্যবহার করা হয়, তবে সর্বোচ্চ $0$ থেকে $7$ পর্যন্ত মোট ৮টি প্রতীক প্রকাশ করা সম্ভব, যা দশমিক অংক $8$ এবং $9$ কে প্রকাশের জন্য পর্যাপ্ত নয়।</li>
+                        <li>কিন্তু ৪টি বিট ($2^4 = 16$) ব্যবহার করলে $0$ থেকে $15$ পর্যন্ত মোট ১৬টি ভিন্ন অবস্থান প্রকাশ করা যায়। এর মধ্যে প্রথম ১০টি অবস্থান ($0000$ থেকে $1001$) দিয়ে দশমিকের সর্ববৃহৎ অংক $9$ সহ $0$ থেকে $9$ পর্যন্ত সবকটি অংককে সফলভাবে প্রকাশ করা যায়।</li>
+                    </ul>
+                </div>
+                <div class="solution-step">
+                    অতএব, দশমিকের বৃহত্তম অংক $9$ কে বাইনারিতে প্রকাশ করতে নূন্যতম ৪টি বিটের ($1001_2$) প্রয়োজন হয় বলেই বিসিডি (BCD) কোড ৪ বিটে লেখা হয়।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুসারে:
+                    <br>জর্জ বুল বইটি প্রকাশ করেছিলেন $= 1847$ সালে।
+                    <br>বর্তমান বছর $= 2026$ সাল।
+                </div>
+                <div class="solution-step">
+                    জর্জ বুল কত বছর পূর্বে বইটি লিখেছিলেন তা নির্ণয় করতে বর্তমান বছর থেকে বই প্রকাশের বছর বিয়োগ করতে হবে।
+                    <br>সময় ব্যবধান (বছরের সংখ্যা) $= (2026 - 1847)_{10} = 179$ বছর।
+                </div>
+                <div class="solution-step">
+                    ২-এর পরিপূরক পদ্ধতিতে বিয়োগ সম্পাদনের জন্য আমরা $2026 + (-1847)$ বা ২-এর পরিপূরকের সাহায্যে যোগের মাধ্যমে বিয়োগফল নির্ণয় করতে পারি। অথবা, সরাসরি সময়ের পার্থক্যের ধনাত্মক মান $179$ এর ২-এর পরিপূরক সম্পর্কিত প্রক্রিয়ায় উপস্থাপন করা যায়। সংজ্ঞায়িত নিয়মে ২-এর পরিপূরক পদ্ধতিতে $+2026$ এবং $-1847$ এর বাইনারি যোগফল নির্ণয় করি:
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-১: প্রয়োজনীয় বিট সংখ্যা (Register Bit) নির্ধারণ:</strong>
+                    <br>যেহেতু সর্বোচ্চ মান $2026$, যা $2^{10} = 1024$ অপেক্ষা বড় কিন্তু $2^{11} = 2048$ অপেক্ষা ছোট, তাই চিহ্ন বিট সহ নির্ভুল হিসাবের জন্য আমাদের <strong>১২-বিট রেজিস্টার (12-bit Register)</strong> ব্যবহার করতে হবে।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-২: $+2026$ এর ১২-বিট বাইনারি গঠন:</strong>
+                    <br>$2026$ কে ২ দিয়ে ক্রমাগত ভাগ করে বাইনারি মান পাই:
+                    <br>$2026 = 1024 + 512 + 256 + 128 + 64 + 32 + 8 + 2 = (11111101010)_2$ (১১ বিট)
+                    <br>১২-বিট রেজিস্টারে $+2026 = 011111101010$ <span class="sidenote">[সর্ববামে ১টি $0$ বসিয়ে ১২-বিট পূর্ণ করে]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৩: $-1847$ এর ২-এর পরিপূরক মান নির্ণয়:</strong>
+                    <br>$1847 = 1024 + 512 + 256 + 32 + 16 + 4 + 2 + 1 = (11100110111)_2$ (১১ বিট)
+                    <br>১২-বিট রেজিস্টারে $+1847 = 011100110111$ <span class="sidenote">[সর্ববামে ১টি $0$ বসিয়ে ১২-বিট পূর্ণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $+1847$ এর ১-এর পরিপূরক (1's Complement): $100011001000$ <span class="sidenote">[$0$ এর জায়গায় $1$ এবং $1$ এর জায়গায় $0$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    ১-এর পরিপূরকের সাথে $1$ যোগ করে $-1847$ এর ২-এর পরিপূরক মান গঠন:
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;100011001000  (১-এর পরিপূরক)<br>
++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1  (১ যোগ)<br>
+----------------------<br>
+&nbsp;&nbsp;100011001001  ($-1847$ এর ২-এর পরিপূরক মান)
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px;">
+                    <strong>ধাপ-৪: $+2026$ এবং $-1847$ এর বাইনারি যোগ সম্পাদন:</strong>
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;011111101010  ($+2026$ এর ১২-বিট মান)<br>
++ 100011001001  ($-1847$ এর ২-এর পরিপূরক মান)<br>
+----------------------<br>
+1 000010110011  (যোগফল)
+                    </div>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ফলাফল বিশ্লেষণ:</strong>
+                    <br>১. সর্ববামের ১ম বিটটি (১৩তম বিট) হলো <strong>ক্যারি বিট (Carry Bit)</strong>। ১২-বিট রেজিস্টারের ক্ষেত্রে অতিরিক্ত ক্যারি বিট $1$ কে বিবেচনা করা হয় না (Disregard)।
+                    <br>২. অবশিষ্ট ১২-বিট রেজিস্টারের সর্ববাম বিটটি (১২তম বিট) হলো <strong>চিহ্ন বিট (Sign Bit)</strong>, যা $0$। এটি নির্দেশ করে ফলাফলটি **ধনাত্মক**।
+                </div>
+
+                <div class="solution-step">
+                    অবশিষ্ট বাইনারি মান $= (000010110011)_2 = (10110011)_2$
+                </div>
+                <div class="solution-step">
+                    <strong>বাইনারি মান $(10110011)_2$ কে দশমিকে রূপান্তর:</strong>
+                    <br>$= (1 \times 2^7) + (0 \times 2^6) + (1 \times 2^5) + (1 \times 2^4) + (0 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (1 \times 2^0)$
+                    <br>$= 128 + 0 + 32 + 16 + 0 + 0 + 2 + 1$ <span class="sidenote">[পাওয়ারের মান হিসেব করে]</span>
+                    <br>$= 179$ <span class="sidenote">[$2026 - 1847 = 179$]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ ২-এর পরিপূরক পদ্ধতিতে নির্ণীত, জর্জ বুল বর্তমানে $(10110011)_2$ বা $179$ বছর পূর্বে বইটি লিখেছিলেন।
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ঘ এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপক অনুসারে:
+                    <br>$X = (DFB \cdot 568)_{16}$
+                    <br>$Y = (765 \cdot 4)_{8}$
+                    <br>$Z = (3564 \cdot 0542)_{8}$
+                </div>
+                <div class="solution-step">
+                    প্রশ্নের প্রথম অংশে $X+Y$ এর মান অক্টালে এবং দ্বিতীয় অংশে $Z$ এর মান হেক্সাডেসিমেলে রূপান্তর করতে বলা হয়েছে।
+                </div>
+
+                <div class="solution-step" style="margin-top: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">
+                    <strong style="color: #1e3a8a; font-size: 16px;">অংশ ১: $X+Y$ এর মান অক্টাল সংখ্যা পদ্ধতিতে রূপান্তর</strong>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>১ (ক). $X = (DFB \cdot 568)_{16}$ এর বিশ্লেষণ ও সঠিক মান গঠন:</strong>
+                    <br><em>বিশেষ দ্রষ্টব্য:</em> হেক্সাডেসিমেল পদ্ধতিতে অংকসমূহ হলো $0-9$ এবং $A-F$ ($10-15$)। কিন্তু উদ্দীপকের $X = (DFB \cdot 568)_{16}$ সংখ্যাটির ভগ্নাংশের শেষে থাকা অংকটি '$8$' (যা হেক্সাডেসিমেলে বৈধ)। তবে স্ট্যান্ডার্ড রূপান্তরের সুবিধার্থে এটিকে ৪-বিট হেক্সাডেসিমেল ডিজিট হিসেবে ধরে সরাসরি ৪-বিট বাইনারিতে রূপান্তর করা যাক:
+                    <br>($D = 13$, $F = 15$, $B = 11$)
+                    <br>$D (13) \to 1101$
+                    <br>$F (15) \to 1111$
+                    <br>$B (11) \to 1011$
+                    <br>$. \to .$
+                    <br>$5 \to 0101$
+                    <br>$6 \to 0110$
+                    <br>$8 \to 1000$
+                    <br>$\therefore X = (DFB \cdot 568)_{16} = (110111111011 \cdot 010101101000)_2$ <span class="sidenote">[প্রতিটি হেক্সাডেসিমেল অংকের ৪-বিট বাইনারি রূপ]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>১ (খ). $Y = (765 \cdot 4)_{8}$ কে বাইনারিতে রূপান্তর:</strong>
+                    <br>প্রতিটি অক্টাল অংকের সমতুল্য ৩-বিট বাইনারি মান বসাই:
+                    <br>$7 \to 111$
+                    <br>$6 \to 110$
+                    <br>$5 \to 101$
+                    <br>$. \to .$
+                    <br>$4 \to 100$
+                    <br>$\therefore Y = (765 \cdot 4)_{8} = (111110101 \cdot 100)_2$ <span class="sidenote">[প্রতিটি অক্টাল অংকের ৩-বিট বাইনারি রূপ]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>১ (গ). $X$ এবং $Y$ এর বাইনারি যোগফল ($X+Y$) নির্ণয়:</strong>
+                    <br>রেডিক্স পয়েন্ট ঠিক রেখে সমসংখ্যক বিট করতে প্রয়োজনীয় শূন্য যুক্ত করে যোগ করি:
+                    <div class="code-block" style="background:#f1f5f9; color:#1e293b; border:1px solid #cbd5e1;">
+&nbsp;&nbsp;110111111011.010101101000  (X এর বাইনারি মান)<br>
++ 000111110101.100000000000  (Y এর বাইনারি মান)<br>
+------------------------------------<br>
+&nbsp;&nbsp;111111101000.110101101000  (X + Y এর যোগফল বাইনারিতে)
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>১ (ঘ). বাইনারি যোগফলকে অক্টাল সংখ্যায় রূপান্তর:</strong>
+                    <br>অক্টাল সংখ্যায় রূপান্তরের জন্য রেডিক্স পয়েন্টের বামে এবং ডানে ৩-বিট করে গ্রুপ (বিটগুচ্ছ) তৈরি করি:
+                    <br>পূর্ণাংশ (ডান থেকে বামে): $111 \quad 111 \quad 101 \quad 000$
+                    <br>ভগ্নাংশ (বাম থেকে ডানে): $110 \quad 101 \quad 101 \quad 000$
+                    
+                    <div class="solution-step" style="margin-top: 8px;">
+                        তিন বিট গ্রুপের অক্টাল মান বসাই:
+                        <br>$111_2 = 7$
+                        <br>$111_2 = 7$
+                        <br>$101_2 = 5$
+                        <br>$000_2 = 0$
+                        <br>$. = .$
+                        <br>$110_2 = 6$
+                        <br>$101_2 = 5$
+                        <br>$101_2 = 5$
+                        <br>$000_2 = 0$
+                    </div>
+                    <div class="solution-step">
+                        $\therefore (X+Y) = (7750 \cdot 655)_{8}$ <span class="sidenote">[৩-বিট বাইনারি গুচ্ছকে অক্টালে রূপান্তর করে]</span>
+                    </div>
+                </div>
+
+                <div class="solution-step" style="margin-top: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">
+                    <strong style="color: #1e3a8a; font-size: 16px;">অংশ ২: $Z$ এর মান হেক্সাডেসিমেলে রূপান্তর</strong>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    উদ্দীপকে $Z = (3564 \cdot 0542)_{8}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>২ (ক). অক্টাল সংখ্যা $Z$ কে প্রথমে বাইনারিতে রূপান্তর:</strong>
+                    <br>প্রতিটি অক্টাল অংককে ৩-বিট বাইনারিতে রূপান্তর করি:
+                    <br>$3 \to 011$
+                    <br>$5 \to 101$
+                    <br>$6 \to 110$
+                    <br>$4 \to 100$
+                    <br>$. \to .$
+                    <br>$0 \to 000$
+                    <br>$5 \to 101$
+                    <br>$4 \to 100$
+                    <br>$2 \to 010$
+                    <br>$\therefore Z = (011101110100 \cdot 000101100010)_2$ <span class="sidenote">[অকটাল থেকে ৩-বিট বাইনারি মান]</span>
+                </div>
+
+                <div class="solution-step" style="margin-top: 10px;">
+                    <strong>২ (খ). বাইনারি মানকে হেক্সাডেসিমেলে রূপান্তরের জন্য ৪-বিট গ্রুপে সাজানো:</strong>
+                    <br>রেডিক্স পয়েন্টের বামে এবং ডানে ৪-বিট করে সাজাই:
+                    <br>পূর্ণাংশ (ডান থেকে বামে): $0111 \quad 0111 \quad 0100$
+                    <br>ভগ্নাংশ (বাম থেকে ডানে): $0001 \quad 0110 \quad 0010$
+                </div>
+
+                <div class="solution-step" style="margin-top: 8px;">
+                    প্রতিটি ৪-বিট বাইনারি গ্রুপের সমতুল্য হেক্সাডেসিমেল অংক বসাই:
+                    <br>$0111_2 = 7$
+                    <br>$0111_2 = 7$
+                    <br>$0100_2 = 4$
+                    <br>$. = .$
+                    <br>$0001_2 = 1$
+                    <br>$0110_2 = 6$
+                    <br>$0010_2 = 2$
+                </div>
+
+                <div class="solution-step">
+                    $\therefore Z = (774 \cdot 162)_{16}$ <span class="sidenote">[৪-বিট বাইনারি গুচ্ছকে হেক্সাডেসিমেলে রূপান্তর করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় $X+Y$ এর অক্টাল মান <strong>$(7750 \cdot 655)_8$</strong> এবং $Z$ এর হেক্সাডেসিমেল মান <strong>$(774 \cdot 162)_{16}$</strong>।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+
+</body>
+</html>

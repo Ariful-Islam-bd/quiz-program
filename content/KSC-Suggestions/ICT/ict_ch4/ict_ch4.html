@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক ICT - ৪র্থ অধ্যায় সৃজনশীল সমাধান</title>
+
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চ মাধ্যমিক তথ্য ও যোগাযোগ প্রযুক্তি (ICT)</h1>
+        <p>সৃজনশীল প্রশ্নব্যাংক ও ব্যাখ্যামূলক সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">৪র্থ অধ্যায়: ওয়েব ডিজাইন পরিচিতি এবং এইচটিএমএল</h2>
+    <!-- Question 1 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            <svg class="svg-responsive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 280">
+              <style>
+                .box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .arrow { stroke: #000000; stroke-width: 2; marker-end: url(#arrowhead); }
+                .table-cell { stroke: #000000; stroke-width: 2; fill: none; }
+              </style>
+
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#000000" />
+                </marker>
+              </defs>
+
+              <!-- Figure 1 -->
+              <g transform="translate(10, 20)">
+                <rect x="10" y="30" width="60" height="40" class="box"/>
+                <text x="40" y="50" class="text">P-1</text>
+
+                <rect x="110" y="30" width="60" height="40" class="box"/>
+                <text x="140" y="50" class="text">P-2</text>
+
+                <rect x="210" y="30" width="60" height="40" class="box"/>
+                <text x="240" y="50" class="text">P-3</text>
+
+                <rect x="310" y="30" width="60" height="40" class="box"/>
+                <text x="340" y="50" class="text">P-4</text>
+
+                <line x1="70" y1="42" x2="110" y2="42" class="arrow"/>
+                <line x1="110" y1="58" x2="70" y2="58" class="arrow"/>
+
+                <line x1="170" y1="42" x2="210" y2="42" class="arrow"/>
+                <line x1="210" y1="58" x2="170" y2="58" class="arrow"/>
+
+                <line x1="270" y1="42" x2="310" y2="42" class="arrow"/>
+                <line x1="310" y1="58" x2="270" y2="58" class="arrow"/>
+
+                <text x="190" y="120" class="caption">চিত্র - ১</text>
+              </g>
+
+              <!-- Figure 2 -->
+              <g transform="translate(420, 20)">
+                <rect x="0" y="0" width="300" height="200" class="box"/>
+
+                <line x1="0" y1="40" x2="300" y2="40" class="table-cell"/>
+                <text x="150" y="22" class="text" font-weight="bold">BANGLADESH</text>
+
+                <line x1="120" y1="40" x2="120" y2="200" class="table-cell"/>
+
+                <rect x="35" y="60" width="50" height="45" class="box"/>
+                <text x="60" y="125" class="text">x.jpg</text>
+                <text x="60" y="150" class="text">(90×60)</text>
+
+                <line x1="120" y1="75" x2="300" y2="75" class="table-cell"/>
+                <text x="210" y="60" class="text">X Division</text>
+
+                <line x1="120" y1="120" x2="300" y2="120" class="table-cell"/>
+                <line x1="210" y1="75" x2="210" y2="200" class="table-cell"/>
+                
+                <text x="165" y="98" class="text">M</text>
+                <text x="255" y="98" class="text">S</text>
+
+                <text x="190" y="160" class="text">H</text>
+
+                <text x="150" y="225" class="caption">চিত্র - ২</text>
+              </g>
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">আইপি এড্রেস কী?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text"><code>&lt;a&gt;</code> ট্যাগ ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">উদ্দীপকের চিত্র-১ এর ওয়েবসাইট কাঠামোটি ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">উদ্দীপকের চিত্র-২ কে ওয়েব পেজে প্রদর্শনের জন্য প্রয়োজনীয় HTML কোড সমূহ লিখ।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Answer to (a) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ক-এর উত্তর:</div>
+                <div class="solution-step">
+                    ইন্টারনেটে বা যেকোনো নেটওয়ার্কে যুক্ত প্রতিটি কম্পিউটার বা ডিভাইসকে অদ্বিতীয়ভাবে (Uniquely) সনাক্ত করার জন্য ব্যবহৃত নির্দিষ্ট নিউমেরিক বা সংখ্যাসূচক ঠিকানাকে <strong>আইপি অ্যাড্রেস (IP Address)</strong> বলা হয়।
+                </div>
+            </div>
+
+            <!-- Answer to (b) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">খ-এর উত্তর:</div>
+                <div class="solution-step">
+                    HTML-এ <code>&lt;a&gt;</code> ট্যাগটি <strong>Anchor Tag</strong> নামে পরিচিত। এটি একটি কন্টেইনার ট্যাগ, যা ওয়েব পেজে হাইপারলিঙ্ক (Hyperlink) তৈরি করার জন্য ব্যবহৃত হয়। এই ট্যাগের মাধ্যমে একটি ওয়েব পেজের সাথে অন্য কোনো ওয়েব পেজ, ওয়েবসাইটের সুনির্দিষ্ট অংশ বা বাইরের কোনো ইউআরএল (URL)-কে সংযুক্ত করা যায়।
+                </div>
+                <div class="solution-step">
+                    <code>&lt;a&gt;</code> ট্যাগের প্রধান ও বাধ্যতামূলক অ্যাট্রিবিউট হলো <code>href</code> (Hypertext Reference)। এই অ্যাট্রিবিউটের মান হিসেবে গন্তব্য পেজের লিঙ্ক বা ঠিকানা নির্ধারণ করে দেওয়া হয়। 
+                </div>
+                <div class="solution-step">
+                    <strong>উদাহরণ:</strong><br>
+                    <code>&lt;a href="https://www.google.com"&gt;Google-এ যান&lt;/a&gt;</code><br>
+                    এখানে <code>href</code> অ্যাট্রিবিউট দ্বারা নির্দেশিত লিঙ্কে ব্যবহারকারী ক্লিক করলে কাঙ্ক্ষিত ওয়েবসাইটে পৌঁছে যাবে।
+                </div>
+            </div>
+
+            <!-- Answer to (c) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">গ-এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-১ এ প্রদর্শিত ওয়েবসাইট কাঠামোটি হলো <strong>লিনিয়ার বা সিকোয়েন্সিয়াল কাঠামো (Linear / Sequential Structure)</strong>।
+                </div>
+                <div class="solution-step">
+                    <strong>লিনিয়ার কাঠামোর বৈশিষ্ট্য ও ব্যাখ্যা:</strong>
+                    <ul>
+                        <li>যে ওয়েব কাঠামোতে পেজগুলো একটি নির্দিষ্ট অনুক্রম বা পর্যায়ক্রম (Sequence) অনুযায়ী সাজানো থাকে, তাকে লিনিয়ার কাঠামো বলে।</li>
+                        <li>চিত্র-১ এ দেখা যাচ্ছে, ওয়েব পেজগুলো ($P-1, P-2, P-3, P-4$) পরপর সাজানো এবং দ্বিমুখী তীরচিহ্ন দ্বারা সংযুক্ত। এর অর্থ হলো ব্যবহারকারী চাইলে $P-1$ থেকে সরাসরি $P-2$ তে যেতে পারবে, আবার $P-2$ থেকে ব্যাক করে $P-1$ এ ফিরে আসতে পারবে। কিন্তু অনুক্রম না মেনে সরাসরি $P-1$ থেকে $P-4$ এ লাফিয়ে যাওয়া যাবে না।</li>
+                        <li>এ ধরনের কাঠামোতে প্রতিটি পেজে সাধারণত 'Next', 'Previous', 'First', 'Last' ইত্যাদি নেভিগেশন লিঙ্ক থাকে।</li>
+                    </ul>
+                </div>
+                <div class="solution-step">
+                    <strong>ব্যবহারিক ক্ষেত্র:</strong> ডিজিটাল বই, টিউটোরিয়াল, অনলাইন পরীক্ষা বা প্রশিক্ষণমূলক ওয়েবসাইটে যেখানে ধাপ অনুসরণে তথ্য পরিবেশন করা আবশ্যক, সেখানে এই কাঠামো সবচেয়ে উপযোগী।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ উদ্দীপকের চিত্র-১ এর কাঠামোটি লিনিয়ার বা সিকোয়েন্সিয়াল ওয়েব স্ট্রাকচার।
+                </div>
+            </div>
+
+            <!-- Answer to (d) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">ঘ-এর উত্তর:</div>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-২ পর্যবেক্ষণ করলে দেখা যায় যে, এটি একটি HTML টেবিল (Table)। টেবিলটির গঠন ও লেআউট নিম্নরূপ:
+                    <ul>
+                        <li><strong>ক্যাপশন / হেডার:</strong> "BANGLADESH" লেখাটি সম্পূর্ণ টেবিলের শীর্ষে স্প্যান বা মার্জ আকারে অবস্থান করছে। এটি ৩টি কলামের সমান বিস্তৃত, তাই এখানে <code>colspan="3"</code> ব্যবহার করতে হবে।</li>
+                        <li><strong>প্রথম কলাম (বাম দিক):</strong> চিত্র <code>x.jpg</code> (সাইজ $90 \times 60$) ধারণকারী ঘরটি পর পর ২টি সারির (Row) সমান জায়গা দখল করে আছে। তাই এখানে <code>rowspan="2"</code> প্রযোজ্য হবে।</li>
+                        <li><strong>প্রথম সারি (ডান দিক):</strong> "X Division" লেখা ঘরটি ২টি কলামের সমান বিস্তৃত, তাই এখানে <code>colspan="2"</code> ব্যবহার করতে হবে।</li>
+                        <li><strong>দ্বিতীয় সারি (ডান দিক):</strong> দুটি পৃথক সেল রয়েছে, যাদের মান যথাক্রমে "M" এবং "S"।</li>
+                        <li><strong>তৃতীয় সারি (ডান দিক):</strong> "H" লেখা ঘরটি ২টি কলামের সমান বিস্তৃত, তাই এখানেও <code>colspan="2"</code> হবে।</li>
+                    </ul>
+                </div>
+
+                <div class="solution-step">
+                    <strong>প্রয়োজনীয় HTML কোড:</strong>
+                    <div class="code-block">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;চিত্র-২ এর জন্য HTML কোড&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;table border="1" cellpadding="8" cellspacing="0" align="center" style="text-align: center;"&gt;
+        &lt;!-- হেডার / শিরোনাম সারি --&gt;
+        &lt;tr&gt;
+            &lt;th colspan="3"&gt;BANGLADESH&lt;/th&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ১ম ডাটা সারি --&gt;
+        &lt;tr&gt;
+            &lt;!-- বামে ছবি, যা ২টি সারি দখল করে --&gt;
+            &lt;td rowspan="2"&gt;
+                &lt;img src="x.jpg" width="90" height="60" alt="x.jpg"&gt;
+            &lt;/td&gt;
+            &lt;!-- ডানে X Division, যা ২টি কলাম দখল করে --&gt;
+            &lt;td colspan="2"&gt;X Division&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ২য় ডাটা সারি --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;M&lt;/td&gt;
+            &lt;td&gt;S&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ৩য় ডাটা সারি --&gt;
+        &lt;tr&gt;
+            &lt;!-- ১ম কলাম খালি রাখার জন্য ফাঁকা সেল বা সমন্বিত সেল ব্যবহার --&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt; 
+            &lt;td colspan="2"&gt;H&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="solution-step">
+                    <strong>কোডের ব্যাখ্যা:</strong>
+                    <ol>
+                        <li><code>&lt;table border="1"&gt;</code> দ্বারা টেবিলের চারপাশের সীমানা দৃশ্যমান করা হয়েছে।</li>
+                        <li><code>colspan="3"</code> ব্যবহারের মাধ্যমে "BANGLADESH" টেবিলের ৩টি কলামের সমান প্রশস্ততায় প্রদর্শিত হবে।</li>
+                        <li><code>rowspan="2"</code> এর মাধ্যমে <code>x.jpg</code> চিত্র বিশিষ্ট সেলটিকে দুটি সারির উচ্চতা প্রদান করা হয়েছে।</li>
+                        <li><code>colspan="2"</code> ব্যবহার করে "X Division" এবং "H" ঘর দুটিকে ২টি কলামের প্রশস্ততা দেওয়া হয়েছে।</li>
+                    </ol>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ উপরিউক্ত HTML কোডটি ব্রাউজারে রান করলে উদ্দীপকের চিত্র-২ এর অনুরূপ টেবিল লেআউট প্রদর্শিত হবে।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            <svg class="svg-responsive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380">
+              <style>
+                .box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .circle { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .line { stroke: #000000; stroke-width: 2; }
+                .text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; fill: #000000; }
+                .center-text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+                .caption { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; fill: #000000; }
+              </style>
+
+              <!-- Figure 1 -->
+              <g transform="translate(20, 20)">
+                <rect x="0" y="0" width="190" height="290" class="box"/>
+                <text x="90" y="25" class="center-text" font-weight="bold">HTML</text>
+                <line x1="60" y1="40" x2="120" y2="40" class="line"/>
+
+                <text x="55" y="65" class="text">AA. Cricket</text>
+                <text x="75" y="90" class="text">iv. Saif</text>
+                <text x="85" y="115" class="text">v. Tanim</text>
+                <text x="85" y="140" class="text">vi. Emon</text>
+
+                <text x="60" y="170" class="text">AB. Foot Ball</text>
+                <rect x="55" y="192" width="8" height="8" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="100" y="195" class="text">Hamza</text>
+                
+                <rect x="55" y="217" width="8" height="8" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="97" y="220" class="text">Zayan</text>
+                
+                <rect x="55" y="242" width="8" height="8" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="107" y="245" class="text">Mursalin</text>
+
+                <text x="68" y="275" class="text">AC. Badminton</text>
+
+                <text x="120" y="325" class="caption">চিত্র - ১</text>
+              </g>
+
+              <!-- Figure 2 -->
+              <g transform="translate(320, 20)">
+                <line x1="220" y1="140" x2="110" y2="60" class="line"/>
+                <line x1="220" y1="140" x2="330" y2="60" class="line"/>
+                <line x1="220" y1="140" x2="110" y2="230" class="line"/>
+                <line x1="220" y1="140" x2="330" y2="230" class="line"/>
+
+                <circle cx="220" cy="140" r="45" class="circle"/>
+                <text x="220" y="132" class="center-text">Home</text>
+                <text x="220" y="152" class="center-text">page</text>
+
+                <circle cx="110" cy="60" r="35" class="circle"/>
+                <text x="110" y="60" class="center-text">Page-2</text>
+
+                <circle cx="330" cy="60" r="35" class="circle"/>
+                <text x="330" y="60" class="center-text">Page-1</text>
+
+                <circle cx="110" cy="230" r="35" class="circle"/>
+                <text x="110" y="230" class="center-text">Page-4</text>
+
+                <circle cx="330" cy="230" r="35" class="circle"/>
+                <text x="330" y="230" class="center-text">Page-3</text>
+
+                <text x="220" y="325" class="caption">চিত্র - ২</text>
+              </g>
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">এম্পটি ট্যাগ কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">IPv4 এড্রেস কী- ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">চিত্র-১ তৈরির জন্য HTML কোড লিখ।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">চিত্র-২ এর ওয়েবসাইট কাঠামো বিশ্লেষণ কর।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর উত্তর:</span>
+                <div class="solution-step">
+                    যে সকল HTML ট্যাগের কেবল শুরুর ট্যাগ (Opening Tag) থাকে কিন্তু কোনো শেষ ট্যাগ (Closing Tag) এবং কনটেন্ট থাকে না, তাদেরকে <strong>এম্পটি ট্যাগ (Empty Tag)</strong> বলা হয়।
+                    <br>
+                    <strong>উদাহরণ:</strong> <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code> ইত্যাদি।
+                </div>
+            </div>
+
+            <!-- Solution (b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর উত্তর:</span>
+                <div class="solution-step">
+                    <strong>IPv4 (Internet Protocol Version 4)</strong> হলো ইন্টারনেটে যুক্ত প্রতিটি ডিভাইসকে দেওয়া ৩২-বিটের একটি অদ্বিতীয় (Unique) গাণিতিক ঠিকানা, যার মাধ্যমে নেটওয়ার্কে অবস্থিত নির্দিষ্ট ডিভাইসকে শনাক্ত করা যায়।
+                </div>
+                <div class="solution-step">
+                    IPv4 এড্রেসকে মোট ৪টি অক্টেট বা বাইটে ( $4 \times 8 = 32$ বিট ) বিভক্ত করা হয়। এই ৪টি অংশকে পরস্পর থেকে পৃথক করার জন্য ডট (<code>.</code>) চিহ্ন ব্যবহার করা হয়। একে <strong>Dotted Decimal Notation</strong> বলা হয়।
+                </div>
+                <div class="solution-step">
+                    উদাহরণস্বরূপ: $192.168.1.1$ একটি IPv4 এড্রেস। এখানে প্রতিটি অক্টেটের মান দশমিক সংখ্যায় $0$ থেকে $255$ পর্যন্ত হতে পারে। মোট $2^{32}$ টি বা প্রায় ৪৩০ কোটির মতো অদ্বিতীয় ঠিকানা IPv4 এর মাধ্যমে তৈরি করা সম্ভব।
+                </div>
+            </div>
+
+            <!-- Solution (g) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-১ পর্যালোচনা করলে দেখা যায়, এটি একটি নেস্টেড তালিকা (Nested List)। এখানে প্রধান তালিকাটিতে অর্ডারড লিস্ট (Ordered List) ব্যবহার করা হয়েছে যার টাইপ ইংরেজি বড় হাতের বর্ণ (A, B, C...) নির্দেশ করছে এবং এর শুরুর মান <code>type="A"</code>।
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-১ এর গঠন বিশ্লেষণ:</strong>
+                    <ul>
+                        <li><strong>প্রধান তালিকা:</strong> Ordered List <code>&lt;ol type="A"&gt;</code>
+                            <ul>
+                                <li><code>AA. Cricket</code> : ছোট হাতের রোমান সংখ্যা এবং শুরুর মান $4$ (iv থেকে শুরু) সংবলিত নেস্টেড তালিকা <code>&lt;ol type="i" start="4"&gt;</code>।</li>
+                                <li><code>AB. Foot Ball</code> : চারকোনা বা বর্গাকৃতি বুলেট সংবলিত আনঅর্ডারড তালিকা <code>&lt;ul type="square"&gt;</code>।</li>
+                                <li><code>AC. Badminton</code> : সাধারণ আইটেম।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="solution-step">
+                    <strong>চিত্র-১ ওয়েবে প্রদর্শনের জন্য প্রয়োজনীয় HTML কোড:</strong>
+                </div>
+
+                <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Sports List&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;ol type="A"&gt;
+        &lt;!-- AA. Cricket --&gt;
+        &lt;li&gt;Cricket
+            &lt;ol type="i" start="4"&gt;
+                &lt;li&gt;Saif&lt;/li&gt;
+                &lt;li&gt;Tanim&lt;/li&gt;
+                &lt;li&gt;Emon&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+
+        &lt;!-- AB. Foot Ball --&gt;
+        &lt;li&gt;Foot Ball
+            &lt;ul type="square"&gt;
+                &lt;li&gt;Hamza&lt;/li&gt;
+                &lt;li&gt;Zayan&lt;/li&gt;
+                &lt;li&gt;Mursalin&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+
+        &lt;!-- AC. Badminton --&gt;
+        &lt;li&gt;Badminton&lt;/li&gt;
+    &lt;/ol&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="final-answer">
+                    $\therefore$ উপরোক্ত HTML কোডটি রান করলে চিত্র-১ এ প্রদর্শিত আউটপুটটি সঠিকভাবে ব্রাউজারে দেখাবে।
+                </div>
+            </div>
+
+            <!-- Solution (gh) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-২ একটি ওয়েবসাইটের কাঠামো (Website Structure) প্রদর্শন করছে। চিত্রটি মনোযোগ দিয়ে পর্যবেক্ষণ করলে দেখা যায়, মূল <strong>Home page</strong> থেকে অন্যান্য সমস্ত সাব-পেজ (Page-1, Page-2, Page-3, Page-4) সরাসরি যুক্ত রয়েছে এবং মূল পেজের কেন্দ্রস্থল থেকে স্টার (Star) বা স্টারের মতো শাখা বিস্তারের সংযোগ দেখা যাচ্ছে।
+                </div>
+                <div class="solution-step">
+                    <strong>কাঠামোগত বিশ্লেষণ:</strong>
+                    ওয়েবসাইট কাঠামোর প্রধান চার প্রকার রূপের মধ্যে চিত্র-২ এ প্রদর্শিত কাঠামোটি হলো <strong>স্টার বা হাইব্রিড/কম্বিনেশনাল কাঠামোর একটি রূপ (বিশেষভাবে স্টার/হায়ারার্কিক্যাল-স্টার টপোলজি নির্ভর)</strong>। তবে আধুনিক ওয়েবসাইটের পরিভাষায় সরাসরি কেন্দ্রীয় হোম পেজ থেকে চারপাশে সকল পেজের সরাসরি সংযোগকে <strong>স্টার কাঠামো (Star Structure)</strong> হিসেবে চিহ্নিত করা হয়।
+                </div>
+                <div class="solution-step">
+                    <strong>স্টার ওয়েবলিঙ্ক কাঠামোর বৈশিষ্ট্যসমূহ:</strong>
+                    <ol>
+                        <li><strong>কেন্দ্রীয় নিয়ন্ত্রণ (Central Control):</strong> এই কাঠামোতে 'Home page' বা মূল পেজটি নেটওয়ার্কের কেন্দ্রস্থল হিসেবে কাজ করে।</li>
+                        <li><strong>সহজ নেভিগেশন (Easy Navigation):</strong> ব্যবহারকারী যেকোনো পেজে থাকা অবস্থায় সরাসরি হোম পেজে ফিরে আসতে পারে এবং হোম পেজ থেকে এক ক্লিকেই যেকোনো সাব-পেজে যেতে পারে।</li>
+                        <li><strong>স্বতন্ত্র লিঙ্ক ব্যবস্থাপনা:</strong> যেকোনো একটি সাব-পেজের সংযোগ নষ্ট বা মুছে গেলেও ওয়েবসাইটের অন্যান্য পেজগুলো সচল থাকে।</li>
+                    </ol>
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-২ কাঠামোর মূল্যায়ন ও তাৎপর্য:</strong>
+                    <br>
+                    চিত্র-২ এ মূল 'Home page' এর সাথে অন্য চারটি পেজ (Page-1, Page-2, Page-3, Page-4) দ্বি-মুখী লিঙ্কের মতো সম্পর্ক তৈরি করে সংযুক্ত আছে। ফলে কোনো ব্যবহারকারী যদি Page-1 এ থাকে, তবে সে খুব সহজেই Home page-এর মাধ্যমে Page-4 এ গমন করতে পারবে। 
+                </div>
+                <div class="solution-step">
+                    <strong>উপসংহার:</strong>
+                    ছোট এবং মাঝারি আকারের ওয়েবসাইটের ক্ষেত্রে যেখানে পেজের সংখ্যা কম এবং প্রতিটি পেজের গুরুত্ব সমান, সেখানে চিত্র-২ এর মতো স্টার ওয়েবসাইট কাঠামো ব্যবহার করা অত্যন্ত সুবিধাজনক ও কার্যকর। এটি ব্যবহারকারীকে দ্রুত কাঙ্ক্ষিত তথ্য খুঁজে পেতে সাহায্য করে।
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ অতএব, উদ্দীপকের চিত্র-২ হলো একটি 'স্টার ওয়েব কাঠামো (Star Web Structure)', যা দ্রুত ও সহজ নেভিগেশনের জন্য অত্যন্ত উপযোগী।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            <svg class="svg-responsive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 320">
+              <style>
+                .box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .circle { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .line { stroke: #000000; stroke-width: 2; }
+                .table-cell { stroke: #000000; stroke-width: 1.5; }
+                .text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; fill: #000000; }
+                .center-text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+                .caption { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; fill: #000000; }
+              </style>
+
+              <!-- Figure 1 -->
+              <g transform="translate(20, 20)">
+                <line x1="60" y1="40" x2="220" y2="40" class="line"/>
+                <line x1="220" y1="40" x2="260" y2="180" class="line"/>
+                <line x1="260" y1="180" x2="20" y2="180" class="line"/>
+                <line x1="20" y1="180" x2="60" y2="40" class="line"/>
+
+                <line x1="60" y1="40" x2="260" y2="180" class="line"/>
+                <line x1="220" y1="40" x2="20" y2="180" class="line"/>
+                <line x1="140" y1="110" x2="60" y2="40" class="line"/>
+                <line x1="140" y1="110" x2="220" y2="40" class="line"/>
+                <line x1="140" y1="110" x2="260" y2="180" class="line"/>
+                <line x1="140" y1="110" x2="20" y2="180" class="line"/>
+
+                <rect x="35" y="20" width="50" height="40" class="box"/>
+                <text x="60" y="45" class="center-text">P5</text>
+
+                <rect x="195" y="20" width="50" height="40" class="box"/>
+                <text x="220" y="45" class="center-text">P2</text>
+
+                <rect x="115" y="90" width="50" height="40" class="box"/>
+                <text x="140" y="115" class="center-text">P1</text>
+
+                <rect x="-5" y="160" width="50" height="40" class="box"/>
+                <text x="20" y="185" class="center-text">P4</text>
+
+                <rect x="235" y="160" width="50" height="40" class="box"/>
+                <text x="260" y="185" class="center-text">P3</text>
+
+                <text x="140" y="250" class="caption">চিত্র - ১</text>
+              </g>
+
+              <!-- Figure 2 -->
+              <g transform="translate(400, 20)">
+                <rect x="0" y="0" width="300" height="200" class="box"/>
+
+                <line x1="0" y1="40" x2="300" y2="40" class="table-cell"/>
+                <text x="150" y="25" class="center-text">Result</text>
+
+                <line x1="0" y1="100" x2="300" y2="100" class="table-cell"/>
+                <line x1="120" y1="40" x2="120" y2="200" class="table-cell"/>
+                <line x1="210" y1="40" x2="210" y2="150" class="table-cell"/>
+
+                <text x="60" y="70" class="center-text">ICT</text>
+                <text x="165" y="70" class="center-text">CQ</text>
+                <text x="255" y="70" class="center-text">MCQ</text>
+
+                <line x1="120" y1="150" x2="300" y2="150" class="table-cell"/>
+                <text x="165" y="125" class="center-text">40</text>
+                <text x="255" y="125" class="center-text">20</text>
+
+                <text x="60" y="150" class="center-text">Ban</text>
+                <text x="210" y="175" class="center-text">40</text>
+
+                <text x="150" y="250" class="caption">চিত্র - ২</text>
+              </g>
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">TLD কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text"><code>"http://www.dmrc.edu.bd"</code> – প্রতিটি অংশ চিহ্নিত করে ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">চিত্র-১ এ ব্যবহৃত কাঠামো বর্ণনা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">চিত্র-২ এর টেবিলটি ওয়েবপেজে প্রদর্শনের জন্য HTML কোড লিখ।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর উত্তর:</span>
+                <div class="solution-step">
+                    <strong>TLD</strong> এর পূর্ণরূপ হলো <strong>Top-Level Domain</strong> (টপ-লেভেল ডোমেইন); এটি কোনো ডোমেইন নেমের শেষ ডট (<code>.</code>) চিহ্নের পরের অংশ (যেমন: <code>.com</code>, <code>.edu</code>, <code>.gov</code>, <code>.org</code>), যা একটি ওয়েবসাইটের ধরন, প্রকৃতি বা ভৌগোলিক পরিচয় নির্দেশ করে।
+                </div>
+            </div>
+
+            <!-- Solution (b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর উত্তর:</span>
+                <div class="solution-step">
+                    <code>"http://www.dmrc.edu.bd"</code> হলো একটি পূর্ণাঙ্গ ইউআরএল (URL - Uniform Resource Locator)। এর বিভিন্ন অংশগুলো নিচে চিহ্নিত করে বিস্তারিত ব্যাখ্যা করা হলো:
+                </div>
+                <div class="solution-step">
+                    <ol>
+                        <li><strong><code>http://</code> (Protocol):</strong> Hypertext Transfer Protocol; এটি ক্লায়েন্ট বা ব্রাউজার এবং ওয়েব সার্ভারের মধ্যে তথ্য আদান-প্রদান বা ডেটা স্থানান্তরের নিয়মাবলী নির্ধারণ করে।</li>
+                        <li><strong><code>www.</code> (Sub-domain / World Wide Web):</strong> এটি নির্দেশ করে যে ওয়েবপেজটি ওয়ার্ল্ড ওয়াইড ওয়েব নেটওয়ার্ক সার্ভারে সংরক্ষিত রয়েছে।</li>
+                        <li><strong><code>dmrc</code> (Domain Name / Second-Level Domain):</strong> এটি ওয়েবসাইটের মূল ও অদ্বিতীয় নাম (যেমন: Dhaka Mega City College বা নির্দিষ্ট প্রতিষ্ঠানের সংক্ষেপ নাম)।</li>
+                        <li><strong><code>.edu</code> (Top-Level Generic Domain):</strong> এটি জেনোটাইপ ডোমেইন টাইপ নির্দেশ করে। <code>.edu</code> দ্বারা বোঝায় এটি একটি শিক্ষা বিষয়ক (Educational) প্রতিষ্ঠান।</li>
+                        <li><strong><code>.bd</code> (Country Code Top-Level Domain - ccTLD):</strong> এটি কান্ট্রি কোড ডোমেইন, যা নির্দেশ করে ওয়েবসাইটটি বাংলাদেশের (Bangladesh) সীমানার অন্তর্ভুক্ত।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Solution (g) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-১ এ প্রদর্শিত ওয়েব কাঠামোটি পর্যালোচনা করলে দেখা যায়, এখানে ওয়েবসাইটের প্রতিটি পেজ ( $P_1, P_2, P_3, P_4, P_5$ ) অন্য প্রতিটি পেজের সাথে সরাসরি বা উভয়মুখী লিঙ্কের মাধ্যমে যুক্ত রয়েছে।
+                </div>
+                <div class="solution-step">
+                    ওয়েবসাইট কাঠামোর পরিভাষায়, যে কাঠামোতে একটি ওয়েবসাইটের প্রতিটি ওয়েবপেজ অন্য সকল ওয়েবপেজের সাথে সরাসরি বা ইন্টারলিঙ্কড্ (Interlinked) থাকে, তাকে <strong>নেটওয়ার্ক কাঠামো (Network Structure)</strong> বা <strong>ওয়েব লিঙ্কড কাঠামো (Web-linked Structure)</strong> বা <strong>ম্যাশ/কমপ্লিটলি লিঙ্কড স্ট্রাকচার</strong> বলা হয়।
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-১ এর ব্যবহৃত কাঠামোর গঠন ও বৈশিষ্ট্যসমূহ:</strong>
+                    <ul>
+                        <li><strong>সর্বোচ্চ সংযোগ (Full Connectivity):</strong> যদি ওয়েবসাইটে মোট $n$ সংখ্যক পেজ থাকে, তবে সর্বোচ্চ $n(n-1)$ সংখ্যক সংযোগ স্থাপন সম্ভব। উদ্দীপকে $n = 5$ টি পেজ রয়েছে, ফলে প্রতিটি পেজ থেকে বাকি $4$ টি পেজে সরাসরি যাওয়া যায় <span class="sidenote">মোট সরাসরি লিঙ্ক সংখ্যা $5 \times 4 = 20$ টি</span>।</li>
+                        <li><strong>দ্রুততম নেভিগেশন (Fastest Navigation):</strong> ব্যবহারকারী যেকোনো পেজ (যেমন: $P_4$) থেকে যেকোনো মুহূর্তে অন্য যেকোনো পেজে (যেমন: $P_2$ বা $P_5$) এক ক্লিকেই সরাসরি প্রবেশ করতে পারে। এতে সময় অপচয় হয় না।</li>
+                        <li><strong>কোনো নির্দিষ্ট রুট পেজ নির্ভরতা নেই:</strong> হাইরার্কিক্যাল বা লিনিয়ার কাঠামোর মতো এতে কোনো নির্দিষ্ট বাধ্যবাধকতা নেই যে মূল পেজ হয়েই অন্য পেজে যেতে হবে।</li>
+                    </ul>
+                </div>
+                <div class="solution-step">
+                    <strong>সুবিধা ও সীমাবদ্ধতা:</strong>
+                    <br>
+                    <strong>সুবিধা:</strong> ভিজটররা খুব দ্রুত তথ্য ব্রাউজ করতে পারে এবং এক পেজ থেকে অন্য পেজে যাওয়া অত্যন্ত সহজ।
+                    <br>
+                    <strong>সীমাবদ্ধতা:</strong> ওয়েবসাইটের পেজ সংখ্যা বৃদ্ধি পেলে লিঙ্কের সংখ্যা অত্যধিক বেড়ে যায়, যা কোডিং ও রক্ষণাবেক্ষণকে জটিল করে তোলে।
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ অতএব, চিত্র-১ এ ব্যবহৃত কাঠামোটি হলো একটি 'নেটওয়ার্ক ওয়েব কাঠামো (Network Structure)', যা ওয়েবপেজগুলোর মধ্যে সর্বাধিক আন্তঃসংযুক্ততা নিশ্চিত করে।
+                </div>
+            </div>
+
+            <!-- Solution (gh) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-২ এ প্রদর্শিত টেবিলটি ভালোভাবে পর্যবেক্ষণ করলে রো (Row) এবং কলাম (Column) স্প্যানিং এর সমন্বয় লক্ষ্য করা যায়:
+                </div>
+                <div class="solution-step">
+                    <strong>টেবিলের স্ট্রাকচার বিশ্লেষণ:</strong>
+                    <ol>
+                        <li><strong>১ম সারি (Heading Row):</strong> "Result" লেখাটি মোট ৩টি কলাম জুড়ে বিস্তৃত। ফলে এখানে <code>colspan="3"</code> ব্যবহার করতে হবে।</li>
+                        <li><strong>২য় সারি:</strong> 
+                            <ul>
+                                <li>১ম সেল: "ICT" লেখাটি পরের সারির সাথে ২টা রো জুড়ে বিস্তৃত। সুতরাং এতে <code>rowspan="2"</code> ব্যবহার হবে।</li>
+                                <li>২য় সেল: "CQ" (সাধারণ <code>&lt;th&gt;</code> বা <code>&lt;td&gt;</code> সেল)।</li>
+                                <li>৩য় সেল: "MCQ" (সাধারণ <code>&lt;th&gt;</code> বা <code>&lt;td&gt;</code> সেল)।</li>
+                            </ul>
+                        </li>
+                        <li><strong>৩য় সারি:</strong> 
+                            <ul>
+                                <li>১ম সেল: "ICT" আগের সারি থেকে স্প্যান করায় এ সারিতে ১ম সেল নেই।</li>
+                                <li>২য় সেল: "40" ডেটা সেল।</li>
+                                <li>৩য় সেল: "20" ডেটা সেল।</li>
+                            </ul>
+                        </li>
+                        <li><strong>৪র্থ সারি:</strong>
+                            <ul>
+                                <li>১ম সেল: "Ban" (সাধারণ সেল)।</li>
+                                <li>২য় সেল: "40" লেখাটি ২টি কলাম জুড়ে বিস্তৃত। ফলে এখানে <code>colspan="2"</code> ব্যবহার করতে হবে।</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="solution-step">
+                    <strong>চিত্র-২ এর টেবিলটি ওয়েবপেজে প্রদর্শনের জন্য প্রয়োজনীয় HTML কোড:</strong>
+                </div>
+
+                <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Result Table&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 8px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;table style="width: 300px;"&gt;
+        &lt;!-- ১ম সারি: Result --&gt;
+        &lt;tr&gt;
+            &lt;th colspan="3"&gt;Result&lt;/th&gt;
+        &lt;/tr&gt;
+        
+        &lt;!-- ২য় সারি: ICT, CQ, MCQ --&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;ICT&lt;/td&gt;
+            &lt;td&gt;CQ&lt;/td&gt;
+            &lt;td&gt;MCQ&lt;/td&gt;
+        &lt;/tr&gt;
+        
+        &lt;!-- ৩য় সারি: 40, 20 --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;40&lt;/td&gt;
+            &lt;td&gt;20&lt;/td&gt;
+        &lt;/tr&gt;
+        
+        &lt;!-- ৪র্থ সারি: Ban, 40 --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ban&lt;/td&gt;
+            &lt;td colspan="2"&gt;40&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="final-answer">
+                    $\therefore$ উপরোক্ত HTML কোডটি যেকোনো ওয়েব ব্রাউজারে রান করালে উদ্দীপকের চিত্র-২ এর মতো হুবহু টেবিল তৈরি হবে।
+                </div>
+            </div>
+
+        </div>
+    </article>   
+    
+    <!-- Question 4 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৪</div>
+        
+        <div class="stem-container">
+            <svg class="svg-responsive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 320">
+              <style>
+                .box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .circle { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+                .line { stroke: #000000; stroke-width: 2; }
+                .text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; fill: #000000; }
+                .center-text { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 16px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+                .caption { font-family: 'SolaimanLipi', 'Kalpurush', 'Arial', sans-serif; font-size: 20px; font-weight: bold; text-anchor: middle; fill: #000000; }
+              </style>
+
+              <!-- Figure 1 -->
+              <g transform="translate(20, 20)">
+                <text x="35" y="25" class="text" font-weight="bold">Science</text>
+                
+                <polygon points="40,55 48,68 32,68" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="92" y="65" class="text">Physics</text>
+
+                <circle cx="39" cy="98" r="7" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="100" y="103" class="text">Chemistry</text>
+
+                <rect x="32" y="132" width="12" height="12" fill="none" stroke="#000" stroke-width="1.5"/>
+                <text x="90" y="140" class="text">Biology</text>
+
+                <text x="120" y="230" class="caption">চিত্র - ১</text>
+              </g>
+
+              <!-- Figure 2 -->
+              <g transform="translate(320, 20)">
+                <rect x="0" y="0" width="360" height="180" class="box"/>
+
+                <line x1="0" y1="45" x2="360" y2="45" class="line"/>
+                <line x1="180" y1="90" x2="360" y2="90" class="line"/>
+                <line x1="180" y1="135" x2="360" y2="135" class="line"/>
+
+                <line x1="180" y1="0" x2="180" y2="180" class="line"/>
+
+                <text x="90" y="20" class="center-text">Govt Kaliganj</text>
+                <text x="90" y="35" class="center-text">Shramik College</text>
+
+                <text x="270" y="22" class="center-text">Logo.jpg (100×80)</text>
+
+                <text x="90" y="112" class="center-text" font-size="20">Group</text>
+
+                <text x="270" y="68" class="center-text">Science</text>
+                <text x="270" y="112" class="center-text">Humanities</text>
+                <text x="270" y="158" class="center-text">B. Studies</text>
+
+                <text x="180" y="230" class="caption">চিত্র - ২</text>
+              </g>
+            </svg>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">URL কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">HTML কে markup language বলা হয় কেন ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">চিত্র-১ এর জন্য HTML কোড লিখ।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">উদ্দীপকের চিত্র-২ এর জন্য প্রয়োজনীয় HTML কোড লিখ।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION SECTION -->
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর উত্তর:</span>
+                <div class="solution-step">
+                    <strong>URL</strong> (পূর্ণরূপ: <strong>Uniform Resource Locator</strong>) হলো ওয়েবে সংরক্ষিত যেকোনো রিসোর্স (যেমন: ওয়েবপেজ, ছবি, ডকুমেন্ট বা ফাইল)-এর সুনির্দিষ্ট, অনন্য এবং সার্বজনীন ঠিকানা।
+                </div>
+            </div>
+
+            <!-- Solution (b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর উত্তর:</span>
+                <div class="solution-step">
+                    <strong>HTML</strong> (HyperText Markup Language) কোনো প্রোগ্রামিং ভাষা (Programming Language) নয়; এটি একটি <strong>মার্কআপ ল্যাঙ্গুয়েজ (Markup Language)</strong>।
+                </div>
+                <div class="solution-step">
+                    নিচে এটিকে মার্কআপ ল্যাঙ্গুয়েজ বলার মূল কারণগুলো ব্যাখ্যা করা হলো:
+                    <ol>
+                        <li><strong>ট্যাগ (Tag) কেন্দ্রিক গঠন:</strong> মার্কআপ ল্যাঙ্গুয়েজ মূলত একাধিক 'ট্যাগ' (যেমন: <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;div&gt;</code>) দ্বারা গঠিত। HTML-এ ওয়েবপেজের বিষয়বস্তু বা কনটেন্টকে ট্যাগের ভেতরে আবদ্ধ করে মার্কআপ বা চিহ্নিত করা হয়।</li>
+                        <li><strong>ফরম্যাটিং ও কাঠামোগত নির্দেশ প্রদান:</strong> ব্রাউজারকে নির্দেশ দেওয়ার জন্য HTML বিভিন্ন ফরম্যাটিং ট্যাগ ব্যবহার করে—যেমন কোনো লেখা বড় দেখাবে নাকি বোল্ড হবে, কোথায় ছবি বা টেবিল বসবে ইত্যাদি। অর্থাৎ এটি কনটেন্টকে প্রসেস বা হিসাব-নিকাশ করে না, বরং ব্রাউজারে কীভাবে প্রদর্শিত হবে তা 'চিহ্নিত' বা 'মার্কআপ' করে।</li>
+                        <li><strong>যৌক্তিক ও প্রোগ্রামিং লজিকের অনুপস্থিতি:</strong> অন্যান্য প্রোগ্রামিং ভাষার মতো HTML-এ লুপ (Loop), কন্ডিশন (If-Else), ভ্যারিয়েবল বা গাণিতিক লজিক প্রসেসিংয়ের ব্যবস্থা নেই। এটি কেবল ওয়েবপেজের গঠন এবং তথ্য সাজানোর কাঠামো তৈরি করে।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Solution (g) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-১ পর্যালোচনা করলে দেখা যায়, এটি একটি অক্রমিক বা অর্ডারহীন তালিকা (Unordered List)। যেখানে তালিকাটি "Science" শিরোনামের অধীনে তিনটি আইটেম (Physics, Chemistry, Biology) ধারণ করে।
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-১ এর আইটেম সংকেত (List Style Type) বিশ্লেষণ:</strong>
+                    <ul>
+                        <li><strong>Physics:</strong> ত্রিভুজাকার বুলেট সংকেত (যা সাধারণ HTML নির্দেশনার বাইরে স্ট্যান্ডার্ড অক্রমিক তালিকার জন্য চিহ্নিত)। সাধারণ HTML-এ স্ট্যান্ডার্ড অক্রমিক তালিকার তিন ধরণের টাইপ থাকে: <code>disc</code> (ভরাট বৃত্ত), <code>circle</code> (ফাঁপা বৃত্ত), এবং <code>square</code> (চারকোনা/বর্গ)। তবে এখানে তালিকার ধরন ভিন্ন ভিন্ন হওয়ায় আমরা সিএসএস ক্লাস বা ইনলাইন স্টাইল (<code>list-style-type</code>) অথবা সাধারণ অক্রমিক তালিকায় কাস্টমাইজেশন ট্যাগ ব্যবহার করতে পারি।</li>
+                        <li><strong>Physics:</strong> ত্রিভুজ সংকেত সাধারণ HTML টাইপে সরাসরি সমর্থিত নয়, তবে এর পরিবর্তে <code>list-style-type: square;</code> বা ইনলাইন কাস্টমাইজেশন অথবা স্ট্যান্ডার্ড অক্রমিক তালিকায় উপস্থাপন করা যায়। সাধারণ বোর্ড মানদণ্ডে এটিকে অক্রমিক তালিকার তিন রূপ <code>square</code>, <code>circle</code>, এবং <code>square</code> দিয়ে অথবা ইনলাইন কাস্টম স্টাইল দিয়ে নির্দেশ করা হয়।</li>
+                        <li><strong>Chemistry:</strong> ফাঁপা বৃত্ত সংকেত $\rightarrow$ <code>type="circle"</code> বা <code>list-style-type: circle;</code> <span class="sidenote">ফাঁপা বৃত্তের জন্য circle ব্যবহার হয়</span></li>
+                        <li><strong>Biology:</strong> চারকোনা ঘর সংকেত $\rightarrow$ <code>type="square"</code> বা <code>list-style-type: square;</code> <span class="sidenote">বর্গক্ষেত্রের জন্য square ব্যবহার হয়</span></li>
+                    </ul>
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-১ এর জন্য প্রয়োজনীয় HTML কোড:</strong>
+                </div>
+
+                <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Unordered List - Science&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h3&gt;Science&lt;/h3&gt;
+    
+    &lt;ul&gt;
+        &lt;!-- Physics: ত্রিভুজ সংকেত বা বিশেষ স্টাইল --&gt;
+        &lt;li style="list-style-type: triangle; opacity: 0.9;"&gt;Physics&lt;/li&gt;
+        
+        &lt;!-- Chemistry: ফাঁপা বৃত্ত সংকেত (Circle) --&gt;
+        &lt;li style="list-style-type: circle;"&gt;Chemistry&lt;/li&gt;
+        
+        &lt;!-- Biology: চারকোনা ঘর সংকেত (Square) --&gt;
+        &lt;li style="list-style-type: square;"&gt;Biology&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="final-answer">
+                    $\therefore$ উপরোক্ত HTML কোডটি ব্যবহার করে চিত্র-১ এ প্রদর্শিত বিভিন্ন বুলেট সংকেতযুক্ত তালিকাটি সফলভাবে তৈরি করা যাবে।
+                </div>
+            </div>
+
+            <!-- Solution (gh) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ. এর উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকের চিত্র-২ এ প্রদর্শিত ওয়েব উপাদানটি একটি জটিল HTML টেবিল। টেবিলটিতে রো-স্প্যান (Rowspan) এবং কলাম-স্প্যান (Colspan) এর পাশাপাশি ছবি সংযোজনের নির্দেশনাবলী রয়েছে।
+                </div>
+                <div class="solution-step">
+                    <strong>চিত্র-২ এর টেবিল গঠন ও বৈশিষ্ট্য বিশ্লেষণ:</strong>
+                    <ol>
+                        <li><strong>১ম সারি:</strong>
+                            <ul>
+                                <li>১ম সেল: "Govt Kaliganj<br>Shramik College" লেখাটি রয়েছে।</li>
+                                <li>২য় সেল: "Logo.jpg (100×80)" অর্থাৎ এখানে <code>Logo.jpg</code> নামের একটি ছবি যুক্ত করতে হবে যার প্রস্থ $100$ পিক্সেল এবং উচ্চতা $80$ পিক্সেল ($\text{width}="100" \text{ height}="80"$).</li>
+                            </ul>
+                        </li>
+                        <li><strong>পরবর্তী সারিসমূহ (Group ও সাব-ক্যাটাগরি):</strong>
+                            <ul>
+                                <li>"Group" সেলটি উলম্বভাবে ৩টি সারির জায়গা দখল করে আছে। তাই এতে <code>rowspan="3"</code> ব্যবহার করতে হবে <span class="sidenote">৩টি সারি একত্রিত করার জন্য rowspan="3"</span>।</li>
+                                <li>ডানপাশের কলামে ধারাবাহিকভাবে "Science", "Humanities", এবং "B. Studies" ৩টি পৃথক সারিতে বিভক্ত হয়ে অবস্থান করছে।</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="solution-step">
+                    <strong>চিত্র-২ প্রদর্শনের জন্য প্রয়োজনীয় HTML কোড:</strong>
+                </div>
+
+                <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;College Information Table&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 8px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;table style="width: 360px;"&gt;
+        &lt;!-- ১ম সারি: কলেজের নাম এবং লোগো --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Govt Kaliganj&lt;br&gt;
+                Shramik College
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;img src="Logo.jpg" alt="College Logo" width="100" height="80"&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ২য় সারি: Group এবং ১ম বিষয় (Science) --&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="3" style="font-size: 20px; font-weight: bold;"&gt;
+                Group
+            &lt;/td&gt;
+            &lt;td&gt;Science&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ৩য় সারি: Humanities --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Humanities&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;!-- ৪র্থ সারি: B. Studies --&gt;
+        &lt;tr&gt;
+            &lt;td&gt;B. Studies&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="final-answer">
+                    $\therefore$ উক্ত HTML কোডটি ব্রাউজারে রান করলে উদ্দীপকের চিত্র-২ অনুযায়ী 'Govt Kaliganj Shramik College' এর লোগোসহ গ্রুপভিত্তিক টেবিলটি নিখুঁতভাবে প্রদর্শিত হবে।
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 5 Card -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৫</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">
+                মারুফ শুধু HTML ব্যবহার করে First, Last, Next, Previous লিংকবিশিষ্ট একটি ওয়েব সাইট তৈরি করল। ওয়েব সাইটটি ব্যবহারকারীর নিকট থেকে মতামত নিতে এবং আপডেট তথ্য প্রদর্শন করতে পারে না।
+            </p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">ওয়েব সার্ভার কি?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">ওয়েবসাইট পাবলিশিংয়ে হোস্টিং গুরুত্বপূর্ণ কেন?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">ওয়েব সাইটটির কাঠামো ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ঘ.</span>
+                <span class="sub-question-text">উদ্দীপকে উল্লিখিত সমস্যা সমাধানের জন্য প্রয়োজনীয় পদক্ষেপসমূহ বিশ্লেষণ কর।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <section class="solution-section">
+            <div class="solution-title">৫ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক নং প্রশ্নের উত্তর:</span>
+                <p>
+                    যে বিশেষ শক্তিশালি কম্পিউটার বা সফটওয়্যার ইন্টারনেট বা নেটওয়ার্কের সাথে সার্বক্ষণিক যুক্ত থেকে ওয়েবসাইটের সকল ডাটা ও ফাইল সংরক্ষণ করে এবং ক্লায়েন্ট বা ব্যবহারকারীর অনুরোধে তা সরবরাহ করে, তাকে <strong>ওয়েব সার্ভার</strong> বলে।
+                </p>
+            </div>
+
+            <!-- Solution (b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ নং প্রশ্নের উত্তর:</span>
+                <p>
+                    ওয়েবসাইট পাবলিশিং বা প্রকাশের ক্ষেত্রে হোস্টিং অত্যন্ত গুরুত্বপূর্ণ, কারণ কোনো ওয়েবসাইটকে বিশ্বব্যাপী ইন্টারনেটে দৃশ্যমান ও প্রবেশযোগ্য করার মূল মাধ্যম হলো ওয়েব হোস্টিং।
+                </p>
+                <p>
+                    আমরা যখন লোকাল কম্পিউটারে কোনো ওয়েবসাইট তৈরি করি, তখন তা কেবল সেই কম্পিউটারে পর্যবেক্ষণ করা যায়। বিশ্বজুড়ে সাধারণ ব্যবহারকারীদের কাছে ওয়েবসাইটটিকে সহজলভ্য করার জন্য ওয়েবের ফাইলসমূহকে (যেমন: HTML, CSS, ছবি, ডাটাবেজ ইত্যাদি) ২৪ ঘণ্টা ইন্টারনেটে সংযুক্ত কোনো বিশেষ সার্ভারে সংরক্ষণ করতে হয়। এই বিশেষ সার্ভারে জায়গা বা স্পেস ভাড়া নেওয়ার প্রক্রিয়াটিকেই ওয়েব হোস্টিং বলে।
+                </p>
+                <p>
+                    হোস্টিং ছাড়া একটি নির্দিষ্ট ডোমেইন নেম রেজিস্টার করলেও সাইটটিতে প্রবেশ করলে কোনো তথ্য বা কনটেন্ট প্রদর্শিত হবে না। অতএব, যেকোনো ওয়েবসাইটকে সার্বক্ষণিক সচল, নিরাপদ ও সর্বসাধারণের ব্যবহারের উপযোগী করতে হোস্টিং অপরিহার্য।
+                </p>
+            </div>
+
+            <!-- Solution (c) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ নং প্রশ্নের উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকে উল্লিখিত মারুফের তৈরি করা ওয়েবসাইটটিতে "First", "Last", "Next", "Previous" ইত্যাদি সিকুয়েন্সিয়াল বা পর্যায়ক্রমিক লিংক ব্যবহার করা হয়েছে। ওয়েব পেজগুলোর এ ধরনের গঠন পর্যবেক্ষণ করে বলা যায় যে, ওয়েবসাইটটির কাঠামো হলো <strong>লিনিয়ার কাঠামো (Linear Structure)</strong>।
+                </div>
+                
+                <div class="solution-step">
+                    <strong>লিনিয়ার কাঠামোর ব্যাখ্যা:</strong><br>
+                    যে ওয়েব স্ট্রাকচারে পেজগুলো নির্দিষ্ট ক্রমানুসারে একটির পর একটি সাজানো থাকে এবং ব্যবহারকারী পর্যায়ক্রমে (Sequence অনুযায়ী) এক পেজ থেকে অন্য পেজে গমন করতে পারেন, তাকে লিনিয়ার স্ট্রাকচার বা সিকুয়েন্সিয়াল কাঠামো বলে।
+                </div>
+
+                <div class="structure-diagram">
+                    [ পেজ ১ (First) ] $\rightleftharpoons$ [ পেজ ২ (Previous/Next) ] $\rightleftharpoons$ [ পেজ ৩ (Next/Previous) ] $\rightleftharpoons$ [ পেজ ৪ (Last) ]
+                </div>
+
+                <div class="solution-step">
+                    <strong>উদ্দীপকের সাথে সাদৃশ্য ও বৈশিষ্ট্য:</strong>
+                    <ul>
+                        <li>উদ্দীপকে প্রদর্শিত "First" লিংকের মাধ্যমে প্রথম পেজে, "Last" লিংকের মাধ্যমে শেষ পেজে, "Next" লিংকের মাধ্যমে পরবর্তী পেজে এবং "Previous" লিংকের মাধ্যমে পূর্ববর্তী পেজে ভিজিট করা সম্ভব।</li>
+                        <li>এই ধরনের স্ট্রাকচারে কোনো পেজ এড়িয়ে সরাসরি ভিন্ন কোনো পেজে লাফিয়ে যাওয়া যায় না; বরং ধাপে ধাপে ক্রমানুসারে ভিজিট করতে হয়।</li>
+                        <li>সাধারণত নির্দিষ্ট ধারাক্রমিক টিউটোরিয়াল, বইয়ের অধ্যায়সমূহ, কোনো প্রশিক্ষণ কর্মশালা বা নির্দিষ্ট অনুক্রমিক বিষয়বস্তু প্রদর্শনের জন্য লিনিয়ার কাঠামো ব্যবহার করা হয়।</li>
+                    </ul>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ অতএব, মারুফের ওয়েবসাইটটি সম্পূর্ণভাবে লিনিয়ার (Linear) অবকাঠামো অনুসরণ করে তৈরি করা হয়েছে।
+                </div>
+            </div>
+
+            <!-- Solution (d) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ঘ নং প্রশ্নের উত্তর:</span>
+                <div class="solution-step">
+                    উদ্দীপকে উল্লেখ রয়েছে, মারুফের তৈরি ওয়েবসাইটটি ব্যবহারকারীর নিকট থেকে কোনো মতামত গ্রহণ করতে পারে না এবং আপডেট তথ্য স্বয়ংক্রিয়ভাবে প্রদর্শন করতে পারে না। এর কারণ হলো ওয়েবসাইটটি কেবল সাধারণ <strong>HTML</strong> দিয়ে নির্মিত একটি <strong>স্ট্যাটিক ওয়েবসাইট (Static Website)</strong>। 
+                </div>
+
+                <div class="solution-step">
+                    সমস্যাসমূহ স্থায়ীভাবে সমাধানের জন্য ওয়েবসাইটটিকে একটি <strong>ডায়নামিক ওয়েবসাইটে (Dynamic Website)</strong> রূপান্তর করতে হবে। নিচে প্রয়োজনীয় পদক্ষেপসমূহ বিস্তারিত বিশ্লেষণ করা হলো:
+                </div>
+
+                <div class="solution-step">
+                    <strong>১. ক্লায়েন্ট-সাইড স্ক্রিপ্টিং যুক্ত করা (Client-Side Scripting):</strong>
+                    <br>
+                    শুধুমাত্র HTML দিয়ে ইন্টারেক্টিভ ফর্ম তৈরি করা সম্ভব নয়। মতামত নেওয়ার ইন্টারফেস তৈরি ও ডাটা ভ্যালিডেশনের জন্য HTML ফর্মে <strong>JavaScript</strong> ব্যবহার করতে হবে।
+                    <span class="sidenote">[ভ্যালিডেশন ও ইউজার ইন্টারঅ্যাকশন বৃদ্ধি]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>২. সার্ভার-সাইড স্ক্রিপ্টিং ভাষার ব্যবহার (Server-Side Scripting):</strong>
+                    <br>
+                    ব্যবহারকারীর মতামত সার্ভারে প্রক্রিয়াকরণ এবং আপডেট তথ্য স্বয়ংক্রিয়ভাবে প্রদর্শনের জন্য সার্ভার-সাইড ল্যাঙ্গুয়েজ যেমন: <strong>PHP, Python (Django/Flask), Node.js, অথবা ASP.NET</strong> যুক্ত করতে হবে।
+                    <span class="sidenote">[সার্ভার লজিক ও ডাটা প্রসেসিংয়ের জন্য]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>৩. ডাটাবেজ সিস্টেম সংযোজন (Database Integration):</strong>
+                    <br>
+                    ব্যবহারকারীর প্রেরিত মতামত স্থায়ীভাবে সংরক্ষণ করা এবং রিয়েল-টাইম তথ্য ডায়নামিকালি তুলে ধরার জন্য ডাটাবেজ ম্যানেজমেন্ট সিস্টেম যেমন: <strong>MySQL, PostgreSQL, অথবা MongoDB</strong> যুক্ত করতে হবে।
+                    <span class="sidenote">[ডাটা সংরক্ষণ ও দ্রুত পুনরুদ্ধারের জন্য]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>৪. কন্টেন্ট ম্যানেজমেন্ট সিস্টেম (CMS) অথবা এডমিন প্যানেল তৈরি:</strong>
+                    <br>
+                    প্রতিবার কোড পরিবর্তন না করে সহজেই নতুন তথ্য আপডেট বা ওয়েবসাইট আপডেট করার জন্য একটি এডমিন ড্যাশবোর্ড তৈরি করতে হবে অথবা WordPress, Joomla-এর মতো CMS ব্যবহার করা যেতে পারে।
+                </div>
+
+                <div class="solution-step">
+                    <strong>নমুনা কোড রূপান্তর (HTML Form Example):</strong><br>
+                    ব্যবহারকারীর নিকট থেকে মতামত গ্রহণের জন্য একটি এইচটিএমএল ফর্মের গঠন নিচে দেওয়া হলো:
+                    <div class="code-block">
+<pre><code>&lt;!-- ব্যবহারকারীর মতামত গ্রহণের জন্য ফর্ম --&gt;
+&lt;form action="submit_feedback.php" method="POST"&gt;
+    &lt;label for="name"&gt;নাম:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="name" name="username" required&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="feedback"&gt;আপনার মতামত:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="feedback" name="user_feedback" rows="4" cols="50" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="মতামত পাঠান"&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="final-answer">
+                    $\text{সিদ্ধান্ত: }$ সুতরাং, মারুফ যদি সার্ভার-সাইড ল্যাঙ্গুয়েজ (যেমন- PHP) এবং ডাটাবেজ (যেমন- MySQL) সমন্বয়ে স্ট্যাটিক ওয়েবসাইটটিকে ডায়নামিক ওয়েবসাইটে রূপান্তর করে, তবে তার ওয়েবসাইটটি স্বয়ংক্রিয়ভাবে আপডেট তথ্য প্রদর্শন এবং ব্যবহারকারীদের নিকট থেকে মতামত গ্রহণে সক্ষম হবে।
+                </div>
+            </div>
+        </section>
+    </article>
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>

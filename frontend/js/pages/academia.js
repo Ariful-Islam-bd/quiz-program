@@ -15,7 +15,8 @@ const CLASS_DATA = [
     { id: 'class-9-10', name: '৯ম - ১০ম শ্রেণি', icon: '📕', subjects: ['গণিত', 'বাংলা', 'ইংরেজি', 'বিজ্ঞান', 'সাধারণ গণিত'] },
     { id: 'class-11-12', name: 'উচ্চমাধ্যমিক (HSC)', icon: '📙', subjects: ['উচ্চতর গণিত', 'পদার্থবিজ্ঞান', 'রসায়ন', 'জীববিজ্ঞান', 'ICT', 'যুক্তিবিদ্যা'] },
     { id: 'ssc-2027', name: 'SSC 2027', icon: '🎯', subjects: ['গণিত', 'বাংলা', 'ইংরেজি', 'সাধারণ বিজ্ঞান'] },
-    { id: 'hsc-2027', name: 'HSC 2027', icon: '🏆', subjects: ['উচ্চতর গণিত', 'পদার্থবিজ্ঞান', 'রসায়ন'] }
+    { id: 'hsc-2027', name: 'HSC 2027', icon: '🏆', subjects: ['উচ্চতর গণিত', 'পদার্থবিজ্ঞান', 'রসায়ন'] },
+    { id: 'ksc-suggestions', name: 'KSC Suggestions', icon: '📚', subjects: ['রসায়ন ১ম', 'রসায়ন ২য়', 'উচ্চতর গণিত ১ম', 'উচ্চতর গণিত ২য়', 'পদার্থ ১ম', 'পদার্থ ২য়', 'তথ্য ও যোগাযোগ'] }
 ];
 
 const SUBJECT_DATA = {
@@ -37,6 +38,15 @@ const SUBJECT_DATA = {
         { id: 'physics-11', name: 'পদার্থবিজ্ঞান', icon: '⚛️', chapters: 12 },
         { id: 'chemistry-11', name: 'রসায়ন', icon: '🧪', chapters: 10 },
         { id: 'biology-11', name: 'জীববিজ্ঞান', icon: '🧬', chapters: 8 }
+    ],
+    'ksc-suggestions': [
+        { id: 'ksc-chem-1', name: 'রসায়ন ১ম পত্র', icon: '🧪', chapters: 2 },
+        { id: 'ksc-chem-2', name: 'রসায়ন ২য় পত্র', icon: '🧪', chapters: 2 },
+        { id: 'ksc-hmath-1', name: 'উচ্চতর গণিত ১ম পত্র', icon: '📐', chapters: 2 },
+        { id: 'ksc-hmath-2', name: 'উচ্চতর গণিত ২য় পত্র', icon: '📐', chapters: 2 },
+        { id: 'ksc-phy-1', name: 'পদার্থবিজ্ঞান ১ম পত্র', icon: '⚛️', chapters: 2 },
+        { id: 'ksc-phy-2', name: 'পদার্থবিজ্ঞান ২য় পত্র', icon: '⚛️', chapters: 2 },
+        { id: 'ksc-ict', name: 'তথ্য ও যোগাযোগ প্রযুক্তি', icon: '💻', chapters: 2 }
     ]
 };
 
@@ -207,6 +217,134 @@ const CHAPTER_DATA = {
         type: 'flat',
         chapters: [
             { id: 'logic-ch1', number: 1, name: 'যৌক্তিক সংজ্ঞা', icon: '🧠', topics: [{ id: 'logic-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → রসায়ন ১ম পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-chem-1': {
+        type: 'flat',
+        chapters: [
+            {
+                id: 'ksc-chem1-ch2', number: 2, name: 'গুণগত রসায়ন', icon: '🧪',
+                topics: [
+                    { id: 'KSC-Chem1-Ch2-Sugg1', name: 'সাজেশন ১', icon: '📝', type: 'note' },
+                    { id: 'KSC-Chem1-Ch2-Sugg2', name: 'সাজেশন ২', icon: '📝', type: 'note' }
+                ]
+            },
+            {
+                id: 'ksc-chem1-ch4', number: 4, name: 'রাসায়নিক পরিবর্তন', icon: '⚗️',
+                topics: [
+                    { id: 'KSC-Chem1-Ch4-Sugg1', name: 'সাজেশন ১', icon: '📝', type: 'note' },
+                    { id: 'KSC-Chem1-Ch4-Sugg2', name: 'সাজেশন ২', icon: '📝', type: 'note' },
+                    { id: 'KSC-Chem1-Ch4-Sugg3', name: 'সাজেশন ৩', icon: '📝', type: 'note' },
+                    { id: 'KSC-Chem1-Ch4-Sugg4', name: 'সাজেশন ৪', icon: '📝', type: 'note' },
+                    { id: 'KSC-Chem1-Ch4-Sugg5', name: 'সাজেশন ৫', icon: '📝', type: 'note' }
+                ]
+            }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → রসায়ন ২য় পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-chem-2': {
+        type: 'flat',
+        chapters: [
+            {
+                id: 'ksc-chem2-ch3', number: 3, name: 'জৈব রসায়ন', icon: '🧬',
+                topics: [
+                    { id: 'KSC-Chem2-Ch3-CQ1-2', name: 'সৃজনশীল ১-২', icon: '✅', type: 'note' },
+                    { id: 'KSC-Chem2-Ch3-CQ3-4', name: 'সৃজনশীল ৩-৪', icon: '✅', type: 'note' },
+                    { id: 'KSC-Chem2-Ch3-CQ5-6', name: 'সৃজনশীল ৫-৬', icon: '✅', type: 'note' },
+                    { id: 'KSC-Chem2-Ch3-SQ', name: 'বহুনির্বাচনি', icon: '📝', type: 'note' }
+                ]
+            },
+            {
+                id: 'ksc-chem2-ch4', number: 4, name: 'বিশ্লেষণমূলক রসায়ন', icon: '🔬',
+                topics: [
+                    { id: 'KSC-Chem2-Ch4-CQ', name: 'সৃজনশীল', icon: '✅', type: 'note' },
+                    { id: 'KSC-Chem2-Ch4-SQ', name: 'বহুনির্বাচনি', icon: '📝', type: 'note' }
+                ]
+            }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → উচ্চতর গণিত ১ম পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-hmath-1': {
+        type: 'flat',
+        chapters: [
+            { id: 'ksc-hmath1-ch1', number: 1, name: 'ম্যাট্রিক্স ও নির্ণায়ক', icon: '🔢',
+              topics: [{ id: 'KSC-HMath1-Ch1-Matrices', name: 'ম্যাট্রিক্স সাজেশন', icon: '📝', type: 'note' }] },
+            { id: 'ksc-hmath1-ch2', number: 2, name: 'ভেক্টর', icon: '➡️',
+              topics: [{ id: 'KSC-HMath1-Ch2-Vector', name: 'ভেক্টর সাজেশন', icon: '📝', type: 'note' }] }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → উচ্চতর গণিত ২য় পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-hmath-2': {
+        type: 'flat',
+        chapters: [
+            { id: 'ksc-hmath2-ch3', number: 3, name: 'জটিল সংখ্যা', icon: '🔮',
+              topics: [{ id: 'KSC-HMath2-Ch3-Complex', name: 'জটিল সংখ্যা সাজেশন', icon: '📝', type: 'note' }] },
+            { id: 'ksc-hmath2-ch7', number: 7, name: 'বিপরীত ত্রিকোণমিতি', icon: '📐',
+              topics: [{ id: 'KSC-HMath2-Ch7-TrigRev', name: 'বিপরীত ত্রিকোণমিতি সাজেশন', icon: '📝', type: 'note' }] }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → পদার্থবিজ্ঞান ১ম পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-phy-1': {
+        type: 'flat',
+        chapters: [
+            { id: 'ksc-phy1-ch4', number: 4, name: 'নিউটনীয় বলবিদ্যা', icon: '🍎',
+              topics: [{ id: 'KSC-Phy1-Ch4-Sugg', name: 'সাজেশন', icon: '📝', type: 'note' }] },
+            { id: 'ksc-phy1-ch5', number: 5, name: 'কাজ, ক্ষমতা ও শক্তি', icon: '⚡',
+              topics: [{ id: 'KSC-Phy1-Ch5-Sugg', name: 'সাজেশন', icon: '📝', type: 'note' }] }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → পদার্থবিজ্ঞান ২য় পত্র
+    // ════════════════════════════════════════════════════════
+    'ksc-phy-2': {
+        type: 'flat',
+        chapters: [
+            { id: 'ksc-phy2-ch3', number: 3, name: 'তড়িৎ প্রবাহ', icon: '⚡',
+              topics: [
+                    { id: 'KSC-Phy2-Ch3-CQ1-2', name: 'সৃজনশীল ১-২', icon: '✅', type: 'note' },
+                    { id: 'KSC-Phy2-Ch3-CQ3-4', name: 'সৃজনশীল ৩-৪', icon: '✅', type: 'note' },
+                    { id: 'KSC-Phy2-Ch3-Q1', name: 'প্রশ্ন ১', icon: '📝', type: 'note' }
+              ] },
+            { id: 'ksc-phy2-ch4', number: 4, name: 'চৌম্বকক্ষেত্র ও বল', icon: '🧲',
+              topics: [
+                    { id: 'KSC-Phy2-Ch4-CQ1-2', name: 'সৃজনশীল ১-২', icon: '✅', type: 'note' },
+                    { id: 'KSC-Phy2-Ch4-CQ3-4', name: 'সৃজনশীল ৩-৪', icon: '✅', type: 'note' },
+                    { id: 'KSC-Phy2-Ch4-CQ5-6', name: 'সৃজনশীল ৫-৬', icon: '✅', type: 'note' },
+                    { id: 'KSC-Phy2-Ch4-SQ1', name: 'বহুনির্বাচনি ১', icon: '📝', type: 'note' }
+              ] }
+        ]
+    },
+
+    // ════════════════════════════════════════════════════════
+    // KSC Suggestions → তথ্য ও যোগাযোগ প্রযুক্তি
+    // ════════════════════════════════════════════════════════
+    'ksc-ict': {
+        type: 'flat',
+        chapters: [
+            { id: 'ksc-ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস', icon: '💻',
+              topics: [
+                    { id: 'KSC-ICT-Ch3-Digital', name: 'ডিজিটাল ডিভাইস', icon: '📝', type: 'note' },
+                    { id: 'KSC-ICT-Ch3-Numbers', name: 'সংখ্যা পদ্ধতি', icon: '📝', type: 'note' }
+              ] },
+            { id: 'ksc-ict-ch4', number: 4, name: 'ওয়েব ডিজাইন ও HTML', icon: '🌐',
+              topics: [{ id: 'KSC-ICT-Ch4-Web', name: 'সকল সৃজনশীল', icon: '📝', type: 'note' }] }
         ]
     }
 };

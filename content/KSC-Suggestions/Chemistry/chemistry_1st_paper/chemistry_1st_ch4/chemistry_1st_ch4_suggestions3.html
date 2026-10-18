@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক রসায়ন - বাফার দ্রবণের pH নির্ণয় (সৃজনশীল প্রশ্ন ও সমাধান)</title>
+    <!-- KaTeX CSS CDN -->
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চ মাধ্যমিক রসায়ন ১ম পত্র</h1>
+        <p>অধ্যায় ৪: রাসায়নিক পরিবর্তন (অম্ল-ক্ষারক সাম্যাবস্থা ও বাফার দ্রবণের $\text{pH}$ গাণিতিক বিশ্লেষণ)</p>
+    </header>
+
+    <!-- Stem Component -->
+    <div class="stem-container">
+        <strong>উদ্দীপক:</strong> নিচে তিনটি পাত্রে ভিন্ন ভিন্ন দ্রবণ প্রস্তুত করে রাখা আছে। পাত্র-১ এ মৃদু অম্ল ইথানয়িক এসিড, পাত্র-২ এ তীব্র ক্ষার সোডিয়াম হাইড্রোক্সাইড এবং পাত্র-৩ এ এসিড ও ক্ষারের সামঞ্জস্যপূর্ণ মিশ্রণ রাখা হয়েছে। ($25^\circ\text{C}$ তাপমাত্রায় $\text{CH}_3\text{COOH}$ এর $K_a = 1.8 \times 10^{-5}$)
+        <br><br>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 360" width="100%" height="auto" style="background-color: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; font-family: 'SolaimanLipi', Arial, sans-serif;">
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#64748b" />
+            </marker>
+          </defs>
+
+          <!-- Container 1 -->
+          <g id="beaker-1" transform="translate(40, 40)">
+            <rect x="25" y="80" width="170" height="180" rx="5" class="liquid-a" />
+            <path d="M 25 80 Q 67.5 75, 110 80 T 195 80 L 195 260 C 195 262, 193 264, 190 264 L 30 264 C 27 264, 25 262, 25 260 Z" fill="#0284c7" opacity="0.4" />
+            <path d="M 15 30 L 25 30 L 25 260 C 25 268, 32 275, 40 275 L 180 275 C 188 275, 195 268, 195 260 L 195 30 L 205 30" class="beaker" fill="none" />
+            
+            <line x1="160" y1="120" x2="190" y2="120" class="axis-line" />
+            <line x1="160" y1="180" x2="190" y2="180" class="axis-line" />
+
+            <text x="110" y="-10" class="label-title">পাত্র-১</text>
+            <text x="110" y="130" class="label-text" font-weight="bold">100 mL CH₃COOH</text>
+            <text x="110" y="160" class="label-text">0.2 M</text>
+            <text x="110" y="190" class="label-text">(Ka = 1.8 × 10⁻⁵)</text>
+          </g>
+
+          <!-- Container 2 -->
+          <g id="beaker-2" transform="translate(320, 40)">
+            <rect x="25" y="80" width="170" height="180" rx="5" class="liquid-b" />
+            <path d="M 25 80 Q 67.5 85, 110 80 T 195 80 L 195 260 C 195 262, 193 264, 190 264 L 30 264 C 27 264, 25 262, 25 260 Z" fill="#059669" opacity="0.4" />
+            <path d="M 15 30 L 25 30 L 25 260 C 25 268, 32 275, 40 275 L 180 275 C 188 275, 195 268, 195 260 L 195 30 L 205 30" class="beaker" fill="none" />
+            
+            <line x1="160" y1="120" x2="190" y2="120" class="axis-line" />
+            <line x1="160" y1="180" x2="190" y2="180" class="axis-line" />
+
+            <text x="110" y="-10" class="label-title">পাত্র-২</text>
+            <text x="110" y="140" class="label-text" font-weight="bold">50 mL NaOH</text>
+            <text x="110" y="170" class="label-text">0.1 M</text>
+          </g>
+
+          <!-- Mixing Arrows -->
+          <path d="M 235 150 Q 280 120, 310 150" class="arrow" fill="none" />
+          <path d="M 515 150 Q 565 120, 590 150" class="arrow" fill="none" />
+
+          <!-- Container 3 (Mixed/Buffer) -->
+          <g id="beaker-3" transform="translate(600, 40)">
+            <rect x="25" y="80" width="170" height="180" rx="5" class="liquid-c" />
+            <path d="M 25 80 Q 67.5 75, 110 80 T 195 80 L 195 260 C 195 262, 193 264, 190 264 L 30 264 C 27 264, 25 262, 25 260 Z" fill="#d97706" opacity="0.4" />
+            <path d="M 15 30 L 25 30 L 25 260 C 25 268, 32 275, 40 275 L 180 275 C 188 275, 195 268, 195 260 L 195 30 L 205 30" class="beaker" fill="none" />
+            
+            <line x1="160" y1="100" x2="190" y2="100" class="axis-line" />
+            <line x1="160" y1="150" x2="190" y2="150" class="axis-line" />
+
+            <text x="110" y="-10" class="label-title">পাত্র-৩ (মিশ্রণ)</text>
+            <text x="110" y="130" class="label-text" font-weight="bold">পাত্র-১ + পাত্র-২</text>
+            <text x="110" y="160" class="label-text">মোট আয়তন = 150 mL</text>
+            <text x="110" y="190" class="label-text">(বিক্রিয়োত্তর দ্রবণ)</text>
+          </g>
+        </svg>
+    </div>
+
+    <!-- ==================== CQ - 1 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০১ (অম্লীয় বাফার ও হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ)</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">বাফার দ্রবণ (Buffer Solution) কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">রক্তের $\text{pH}$ নিয়ন্ত্রণে কীভাবে বাফার ক্রিয়া কাজ করে? সংক্ষেপে ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">পাত্র-১ এবং পাত্র-২ এর দ্রবণদ্বয়কে একত্রে মিশিয়ে পাত্র-৩ এ গঠিত মিশ্রণের $\text{pH}$ হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণের সাহায্যে গাণিতিকভাবে নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">উক্ত পাত্র-৩ এর মিশ্রণে $2\text{ mL } 0.1\text{ M HCl}$ দ্রবণ যোগ করা হলে মিশ্রণের $\text{pH}$ উল্লেখযোগ্যভাবে পরিবর্তিত হবে কি? গাণিতিক বিশ্লেষণের মাধ্যমে তোমার মতামত দাও।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>বাফার দ্রবণ:</strong> যে দ্রবণে সামান্য পরিমানে তীব্র এসিড ($\text{H}^+$) বা তীব্র ক্ষার ($\text{OH}^-$) যোগ করা সত্ত্বেও দ্রবণের $\text{pH}$ এর মান প্রায় অপরিবর্তিত থাকে অর্থাৎ $\text{pH}$ পরিবর্তনের প্রতিরোধ ঘটে, সেই দ্রবণকে বাফার দ্রবণ বলে।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    মানব রক্তের $\text{pH}$ এর মান অত্যন্ত নির্দিষ্ট ($7.35 - 7.45$)। এই মান বজায় রাখার জন্য রক্তে তিনটি প্রধান বাফার সিস্টেম কাজ করে:
+                </div>
+                <div class="solution-step">
+                    ১. <strong>বাইকার্বোনেট বাফার System:</strong> $\text{H}_2\text{CO}_3 / \text{HCO}_3^-$ (এটি রক্তের মূল বাফার)।
+                    <br>২. <strong>ফসফেট বাফার System:</strong> $\text{H}_2\text{PO}_4^- / \text{HPO}_4^{2-}$
+                    <br>৩. <strong>প্রোটিন বাফার System:</strong> প্লাজমা প্রোটিন ও হিমোগ্লোবিন।
+                </div>
+                <div class="solution-step">
+                    <strong>কৌশল:</strong> বিপাকের ফলে রক্তে অতিরিক্ত $\text{H}^+$ আয়ন প্রবেশ করলে তা బైকার্বোনেট আয়ন ($\text{HCO}_3^-$) দ্বারা প্রশমিত হয়ে মৃদু carbonic এসিড ($\text{H}_2\text{CO}_3$) তৈরি করে, যা পরে $\text{CO}_2$ ও $\text{H}_2\text{O}$ হয়ে ফুসফুসের মাধ্যমে বের হয়ে যায়:
+                    $$\text{H}^+ + \text{HCO}_3^- \rightleftharpoons \text{H}_2\text{CO}_3 \rightleftharpoons \text{H}_2\text{O} + \text{CO}_2\uparrow$$
+                    আবার ক্ষার বা $\text{OH}^-$ প্রবেশ করলে তা $\text{H}_2\text{CO}_3$ এর সাথে বিক্রিয়া করে পানি ও $\text{HCO}_3^-$ আয়ন তৈরি করে। ফলে রক্তের $\text{pH}$ ধ্রুব থাকে।
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>ধাপ ১: পাত্র-১ ও পাত্র-২ এর দ্রবণের মোল সংখ্যা নির্ণয়</strong>
+                    <br>পাত্র-১ এ $\text{CH}_3\text{COOH}$ এর মোল সংখ্যা ($n_{\text{acid}}$):
+                    $$n_{\text{acid}} = V \times C = \frac{100}{1000}\text{ L} \times 0.2\text{ mol/L}$$ <span class="sidenote">[mL কে L এ রূপান্তর করে]</span>
+                    $$\implies n_{\text{acid}} = 0.1 \times 0.2 = 0.02\text{ mol}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    পাত্র-২ এ $\text{NaOH}$ এর মোল সংখ্যা ($n_{\text{base}}$):
+                    $$n_{\text{base}} = V \times C = \frac{50}{1000}\text{ L} \times 0.1\text{ mol/L}$$ <span class="sidenote">[mL কে L এ রূপান্তর করে]</span>
+                    $$\implies n_{\text{base}} = 0.05 \times 0.1 = 0.005\text{ mol}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ২: বিক্রিয়া সমীকরণ ও অবশিষ্টাংশ হিসাব</strong>
+                    <br>পাত্র-১ ও পাত্র-২ মেশালে প্রশমন বিক্রিয়া সংঘটিত হয়:
+                    $$\text{CH}_3\text{COOH} + \text{NaOH} \rightarrow \text{CH}_3\text{COONa} + \text{H}_2\text{O}$$
+                </div>
+                <div class="solution-step">
+                    <br>বিক্রিয়ার প্রারম্ভে: $\text{CH}_3\text{COOH} = 0.02\text{ mol}$, $\text{NaOH} = 0.005\text{ mol}$, $\text{CH}_3\text{COONa} = 0\text{ mol}$
+                    <br>বিক্রিয়া শেষে:
+                    <br>অবশিষ্ট $\text{CH}_3\text{COOH} = 0.02 - 0.005 = 0.015\text{ mol}$ <span class="sidenote">[সীমিত বিক্রিয়ক NaOH সমাপ্ত]</span>
+                    <br>উৎপন্ন লবণ $\text{CH}_3\text{COONa} = 0.005\text{ mol}$
+                </div>
+                <div class="solution-step">
+                    যেহেতু বিক্রিয়োত্তর দ্রবণে মৃদু অম্ল ($\text{CH}_3\text{COOH}$) অবশিষ্ট থাকে এবং তীব্র ক্ষারের সাথে প্রশমনে মৃদু অম্লের লবণ ($\text{CH}_3\text{COONa}$) উৎপন্ন হয়, তাই এটি একটি <strong>অম্লীয় বাফার দ্রবণ</strong>।
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ৩: হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ প্রয়োগে $\text{pH}$ নির্ণয়</strong>
+                    <br>আমরা জানি, অম্লীয় বাফার দ্রবণের ক্ষেত্রে হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ:
+                    $$\text{pH} = \text{pK}_a + \log_{10}\left(\frac{[\text{লবণ}]}{[\text{এসিড}]}\right)$$ <span class="sidenote">[হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ]</span>
+                </div>
+                <div class="solution-step">
+                    এখানে, $\text{pK}_a = -\log_{10}(K_a) = -\log_{10}(1.8 \times 10^{-5}) = 4.745$ <span class="sidenote">[pK_a এর মান নির্ণয়]</span>
+                    <br>অনুপাত: $\frac{[\text{লবণ}]}{[\text{এসিড}]} = \frac{n_{\text{salt}}}{n_{\text{acid}}} = \frac{0.005}{0.015} = \frac{1}{3}$ <span class="sidenote">[আয়তন সমান বলে মোলার অনুপাতই ঘনমাত্রার অনুপাত]</span>
+                </div>
+                <div class="solution-step">
+                    সমীকরণে মান বসিয়ে পাই:
+                    $$\text{pH} = 4.745 + \log_{10}\left(\frac{1}{3}\right)$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \text{pH} = 4.745 + (-0.477)$$ <span class="sidenote">[লগারিদম হিসাব করে]</span>
+                    $$\implies \text{pH} = 4.268$$ <span class="sidenote">[বিয়োগ করে]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ পাত্র-৩ এর বাফার মিশ্রণটির নির্ণেয় $\text{pH} = 4.268$
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>ধাপ ১: যোগকৃত $\text{HCl}$ এর মোল সংখ্যা নির্ণয়</strong>
+                    <br>যোগকৃত $\text{HCl}$ এর আয়তন = $2\text{ mL} = 0.002\text{ L}$
+                    <br>ঘনমাত্রা = $0.1\text{ M}$
+                    $$n_{\text{HCl}} = 0.002\text{ L} \times 0.1\text{ mol/L} = 0.0002\text{ mol}$$ <span class="sidenote">[$n = V \times C$ সূত্র প্রয়োগে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ২: বাফার ক্রিয়া ও নতুন মোল সংখ্যা হিসাব</strong>
+                    <br>তীব্র এসিড $\text{HCl}$ যোগ করলে তা পুরোপুরি বিয়োজিত হয়ে $0.0002\text{ mol } \text{H}^+$ প্রদান করে। এই অতিরিক্ত $\text{H}^+$ বাফারের লবণ অংশ ($\text{CH}_3\text{COO}^-$) এর সাথে বিক্রিয়া করে মৃদু ইথানয়িক এসিডে রূপান্তরিত হয়:
+                    $$\text{CH}_3\text{COO}^- + \text{H}^+ \rightarrow \text{CH}_3\text{COOH}$$
+                </div>
+                <div class="solution-step">
+                    এর ফলে:
+                    <br>লবণের মোল সংখ্যা হ্রাস পাবে = $0.005 - 0.0002 = 0.0048\text{ mol}$ <span class="sidenote">[লবণের পরিমাণ কমে]</span>
+                    <br>এসিডের মোল সংখ্যা বৃদ্ধি পাবে = $0.015 + 0.0002 = 0.0152\text{ mol}$ <span class="sidenote">[এসিডের পরিমাণ বাড়ে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ৩: নতুন $\text{pH}$ নির্ণয়</strong>
+                    <br>পুনরায় হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ প্রয়োগ করে:
+                    $$\text{pH}_{\text{new}} = \text{pK}_a + \log_{10}\left(\frac{n_{\text{salt, new}}}{n_{\text{acid, new}}}\right)$$
+                    $$\implies \text{pH}_{\text{new}} = 4.745 + \log_{10}\left(\frac{0.0048}{0.0152}\right)$$ <span class="sidenote">[নতুন মান বসিয়ে]</span>
+                    $$\implies \text{pH}_{\text{new}} = 4.745 + \log_{10}(0.3158)$$ <span class="sidenote">[ভাগ করে]</span>
+                    $$\implies \text{pH}_{\text{new}} = 4.745 + (-0.5006)$$ <span class="sidenote">[লগ এর মান বসিয়ে]</span>
+                    $$\implies \text{pH}_{\text{new}} = 4.244$$ <span class="sidenote">[হিসাব করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>$\text{pH}$ এর পরিবর্তন:</strong>
+                    $$\Delta \text{pH} = |4.268 - 4.244| = 0.024$$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ দেখা যাচ্ছে যে, তীব্র এসিড $\text{HCl}$ যোগ করা সত্ত্বেও $\text{pH}$ এর পরিবর্তন অত্যন্ত সামান্য ($\Delta \text{pH} = 0.024$)। সুতরাং পাত্র-৩ এর বাফার ক্রিয়ার কারণে দ্রবণের $\text{pH}$ উল্লেখযোগ্যভাবে পরিবর্তিত হবে না।
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- ==================== CQ - 2 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০২ (ক্ষারিয় বাফার ও বাফার ক্ষমতা সংক্রান্ত)</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">বাফার ক্ষমতা (Buffer Capacity) কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">সর্বোচ্চ বাফার ক্ষমতার জন্য শর্তটি সমীকরণসহ ব্যাখ্যা করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">যদি পাত্র-১ এর দ্রবণ পরিবর্তন করে $100\text{ mL } 0.2\text{ M } \text{NH}_4\text{OH}$ (যার $K_b = 1.8 \times 10^{-5}$) এবং পাত্র-২ এর দ্রবণ হিসেবে $50\text{ mL } 0.1\text{ M HCl}$ ব্যবহার করে নতুন মিশ্রণ তৈরি করা হয়, তবে উক্ত মিশ্রণের $\text{pOH}$ ও $\text{pH}$ কত হবে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">উক্ত (গ) অনুচ্ছেদের ক্ষারীয় বাফার দ্রবণে বাফার ক্ষমতা সর্বাধিক করার জন্য আরও কী পরিমাণ তীব্র এসিড বা ক্ষার উপাদান পরিবর্তন করতে হবে?— গাণিতিক বিশ্লেষণপূর্বক দেখাও।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>বাফার ক্ষমতা:</strong> কোনো বাফার দ্রবণের $1\text{ L}$ আয়তনের $\text{pH}$ এর মান এক একক ($1.0$) পরিবর্ধন বা হ্রাস করতে যে পরিমাণ তীব্র এসিড বা তীব্র ক্ষারের মোল সংখ্যা যোগ করতে হয়, তাকে ওই বাফার দ্রবণের বাফার ক্ষমতা ($\beta$) বলে।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    একটি বাফার দ্রবণ সবচেয়ে কার্যকরভাবে কাজ করে এবং তার বাফার ক্ষমতা সর্বোচ্চ হয় যখন দ্রবণটিতে অনুবন্ধী এসিড-ক্ষারক জোড়ের ঘনমাত্রা সমান থাকে।
+                </div>
+                <div class="solution-step">
+                    হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ অনুসারে:
+                    $$\text{pH} = \text{pK}_a + \log_{10}\left(\frac{[\text{লবণ}]}{[\text{এসিড}]}\right)$$
+                </div>
+                <div class="solution-step">
+                    যখন $[\text{লবণ}] = [\text{এসিড}]$ হয়, তখন:
+                    $$\frac{[\text{লবণ}]}{[\text{এসিড}]} = 1$$
+                    $$\implies \log_{10}(1) = 0$$
+                    $$\therefore \text{pH} = \text{pK}_a \quad (\text{অম্লীয় বাফারের ক্ষেত্রে})$$
+                    অনুরূপভাবে, ক্ষারীয় বাফারের ক্ষেত্রে সর্বোচ্চ বাফার ক্ষমতার শর্ত হলো:
+                    $$\text{pOH} = \text{pK}_b \quad (\text{যখন } [\text{লবণ}] = [\text{ক্ষার}])$$
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>দেওয়া আছে:</strong>
+                    <br>$\text{NH}_4\text{OH}$ এর মোল সংখ্যা ($n_{\text{base}}$) = $0.1\text{ L} \times 0.2\text{ M} = 0.02\text{ mol}$
+                    <br>$\text{HCl}$ এর মোল সংখ্যা ($n_{\text{acid}}$) = $0.05\text{ L} \times 0.1\text{ M} = 0.005\text{ mol}$
+                    <br>$\text{NH}_4\text{OH}$ এর $K_b = 1.8 \times 10^{-5}$
+                </div>
+                <div class="solution-step">
+                    <strong>বিক্রিয়া সমীকরণ:</strong>
+                    $$\text{NH}_4\text{OH} + \text{HCl} \rightarrow \text{NH}_4\text{Cl} + \text{H}_2\text{O}$$
+                </div>
+                <div class="solution-step">
+                    <strong>বিক্রিয়োত্তর সাম্যাবস্থায় মোল হিসাব:</strong>
+                    <br>অবশিষ্ট মৃদু ক্ষার ($\text{NH}_4\text{OH}$) = $0.02 - 0.005 = 0.015\text{ mol}$ <span class="sidenote">[নিয়ন্ত্রক বিক্রিয়ক HCl প্রশমিত]</span>
+                    <br>উৎপন্ন লবণ ($\text{NH}_4\text{Cl}$) = $0.005\text{ mol}$
+                </div>
+                <div class="solution-step">
+                    এটি একটি <strong>ক্ষারীয় বাফার দ্রবণ</strong>। ক্ষারীয় বাফারের ক্ষেত্রে হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ:
+                    $$\text{pOH} = \text{pK}_b + \log_{10}\left(\frac{[\text{লবণ}]}{[\text{ক্ষার}]}\right)$$
+                </div>
+                <div class="solution-step">
+                    মান বসিয়ে:
+                    <br>$\text{pK}_b = -\log_{10}(1.8 \times 10^{-5}) = 4.745$
+                    $$\text{pOH} = 4.745 + \log_{10}\left(\frac{0.005}{0.015}\right)$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \text{pOH} = 4.745 + \log_{10}\left(\frac{1}{3}\right)$$
+                    $$\implies \text{pOH} = 4.745 - 0.477 = 4.268$$ <span class="sidenote">[pOH নির্ণীত]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $25^\circ\text{C}$ তাপমাত্রায়:
+                    $$\text{pH} + \text{pOH} = 14$$ <span class="sidenote">[পানির স্বত:-আয়নায়ন সম্পর্ক]</span>
+                    $$\implies \text{pH} = 14 - \text{pOH}$$
+                    $$\implies \text{pH} = 14 - 4.268 = 9.732$$ <span class="sidenote">[বিয়োগ করে]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ মিশ্রণটির নির্ণেয় $\text{pOH} = 4.268$ এবং $\text{pH} = 9.732$
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    (খ) হতে প্রাপ্ত শর্তানুসারে, ক্ষারীয় বাফার দ্রবণের বাফার ক্ষমতা সর্বাধিক হবে যখন:
+                    $$[\text{লবণ}] = [\text{ক্ষার}] \implies n_{\text{salt}} = n_{\text{base, অবশিষ্ট}}$$
+                </div>
+                <div class="solution-step">
+                    উক্ত বিক্রিয়ায়:
+                    <br>প্রাথমিক $\text{NH}_4\text{OH}$ এর মোল সংখ্যা = $0.02\text{ mol}$
+                    <br>ধরি, সর্বাধিক বাফার ক্ষমতার জন্য প্রয়োজনীয় $\text{HCl}$ এর নতুন মোল সংখ্যা = $x\text{ mol}$।
+                </div>
+                <div class="solution-step">
+                    বিক্রিয়ার পর:
+                    <br>উৎপন্ন লবণ ($\text{NH}_4\text{Cl}$) এর মোল সংখ্যা = $x\text{ mol}$
+                    <br>অবশিষ্ট $\text{NH}_4\text{OH}$ এর মোল সংখ্যা = $(0.02 - x)\text{ mol}$
+                </div>
+                <div class="solution-step">
+                    সর্বোচ্চ বাফার ক্ষমতার শর্ত বসিয়ে পাই:
+                    $$x = 0.02 - x$$ <span class="sidenote">[লবণ = অবশিষ্ট ক্ষার]</span>
+                    $$\implies 2x = 0.02$$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                    $$\implies x = 0.01\text{ mol}$$ <span class="sidenote">[ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>প্রয়োজনীয় additional $\text{HCl}$ হিসাব:</strong>
+                    <br>পূর্বে ব্যবহৃত $\text{HCl}$ এর মোল সংখ্যা = $0.005\text{ mol}$
+                    <br>সর্বোচ্চ বাফার ক্ষমতার জন্য মোট প্রয়োজনীয় $\text{HCl}$ = $0.01\text{ mol}$
+                    <br>অতিরিক্ত $\text{HCl}$ যোগ করতে হবে = $0.01 - 0.005 = 0.005\text{ mol}$
+                </div>
+                <div class="solution-step">
+                    যদি $0.1\text{ M HCl}$ দ্রবণ ব্যবহার করা হয়, তবে প্রয়োজনীয় আয়তন:
+                    $$V = \frac{n}{C} = \frac{0.005\text{ mol}}{0.1\text{ mol/L}} = 0.05\text{ L} = 50\text{ mL}$$ <span class="sidenote">[mL এ রূপান্তর]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ উক্ত বাফার দ্রবণটির বাফার ক্ষমতা সর্বাধিক করার জন্য পাত্র-২ এর দ্রবণে আরও অতিরিক্ত $0.005\text{ mol}$ বা $50\text{ mL } 0.1\text{ M HCl}$ যোগ করতে হবে, যেন মিশ্রণে অবশিষ্ট ক্ষার ও উৎপন্ন লবণের মোল সংখ্যা সমান ($0.01\text{ mol}$) হয়।
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+</body>
+</html>

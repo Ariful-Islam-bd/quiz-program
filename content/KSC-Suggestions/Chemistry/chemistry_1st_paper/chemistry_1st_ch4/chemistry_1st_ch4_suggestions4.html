@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক রসায়ন - অসওয়াল্ডের লঘুকরণ সূত্র ও pH নির্ণয়</title>
+    <!-- KaTeX CSS CDN -->
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চ মাধ্যমিক রসায়ন ১ম পত্র</h1>
+        <p>অধ্যায় ৪: রাসায়নিক পরিবর্তন (অসওয়াল্ডের লঘুকরণ সূত্র ও $\text{pH}$ গাণিতিক সমস্যাবলি)</p>
+    </header>
+
+    <!-- Stem Component -->
+    <div class="stem-container">
+        <strong>উদ্দীপক:</strong> $25^\circ\text{C}$ তাপমাত্রায় $0.1\text{ M}$ ঘনমাত্রার একটি মৃদু এক-ক্ষারকীয় এসিড ($\text{HA}$) দ্রবণের বিয়োজন মাত্রা ($\alpha$) হলো $1.34 \times 10^{-2}$। একই তাপমাত্রায় অন্য একটি পাত্রে $0.05\text{ M}$ ঘনমাত্রার ইথানয়িক এসিড ($\text{CH}_3\text{COOH}$) দ্রবণ রাখা আছে, যার বিয়োজন ধ্রুবক $K_a = 1.8 \times 10^{-5}$।
+        <br><br>
+        <strong>নিচে দ্রবণদ্বয়ের একটি চিত্র দেওয়া হলো:</strong>
+        <br><br>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="100%" height="auto" style="background-color: #f8fafc; border-radius: 8px; font-family: 'SolaimanLipi', Arial, sans-serif;">
+          <!-- Container A -->
+          <g id="beaker-a" transform="translate(80, 40)">
+            <!-- Liquid -->
+            <rect x="25" y="80" width="170" height="180" rx="5" class="liquid" />
+            <path d="M 25 80 Q 67.5 75, 110 80 T 195 80 L 195 260 C 195 262, 193 264, 190 264 L 30 264 C 27 264, 25 262, 25 260 Z" fill="#38bdf8" opacity="0.6" />
+            
+            <!-- Beaker Body -->
+            <path d="M 15 30 L 25 30 L 25 260 C 25 268, 32 275, 40 275 L 180 275 C 188 275, 195 268, 195 260 L 195 30 L 205 30" class="beaker" fill="none" />
+            
+            <!-- Graduations -->
+            <line x1="170" y1="100" x2="190" y2="100" class="axis-line" />
+            <line x1="160" y1="140" x2="190" y2="140" class="axis-line" />
+            <line x1="170" y1="180" x2="190" y2="180" class="axis-line" />
+            <line x1="160" y1="220" x2="190" y2="220" class="axis-line" />
+
+            <!-- Labels -->
+            <text x="110" y="-10" class="label-title">পাত্র-১ (HA)</text>
+            <text x="110" y="140" class="label-text" font-weight="bold">C₁ = 0.1 M</text>
+            <text x="110" y="170" class="label-text">α₁ = 1.34 × 10⁻²</text>
+            <text x="110" y="200" class="label-text">আয়তন = 250 mL</text>
+          </g>
+
+          <!-- Container B -->
+          <g id="beaker-b" transform="translate(420, 40)">
+            <!-- Liquid -->
+            <rect x="25" y="80" width="170" height="180" rx="5" class="liquid" fill="#a855f7" />
+            <path d="M 25 80 Q 67.5 85, 110 80 T 195 80 L 195 260 C 195 262, 193 264, 190 264 L 30 264 C 27 264, 25 262, 25 260 Z" fill="#c084fc" opacity="0.5" />
+            
+            <!-- Beaker Body -->
+            <path d="M 15 30 L 25 30 L 25 260 C 25 268, 32 275, 40 275 L 180 275 C 188 275, 195 268, 195 260 L 195 30 L 205 30" class="beaker" fill="none" />
+            
+            <!-- Graduations -->
+            <line x1="170" y1="100" x2="190" y2="100" class="axis-line" />
+            <line x1="160" y1="140" x2="190" y2="140" class="axis-line" />
+            <line x1="170" y1="180" x2="190" y2="180" class="axis-line" />
+            <line x1="160" y1="220" x2="190" y2="220" class="axis-line" />
+
+            <!-- Labels -->
+            <text x="110" y="-10" class="label-title">পাত্র-২ (CH₃COOH)</text>
+            <text x="110" y="140" class="label-text" font-weight="bold">C₂ = 0.05 M</text>
+            <text x="110" y="170" class="label-text">Ka = 1.8 × 10⁻⁵</text>
+            <text x="110" y="200" class="label-text">আয়তন = 250 mL</text>
+          </g>
+        </svg>
+    </div>
+
+    <!-- ==================== CQ - 1 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০১</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">অসওয়াল্ডের লঘুকরণ সূত্রটি লেখ।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">তাপমাত্রা বৃদ্ধিতে মৃদু এসিডের বিয়োজন মাত্রার কীরূপ পরিবর্তন ঘটে এবং কেন? ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">পাত্র-১ এর মৃদু এসিড ($\text{HA}$) দ্রবণটির বিয়োজন ধ্রুবক ($K_a$) এবং $\text{pH}$ নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">অসওয়াল্ডের লঘুকরণ সূত্র প্রয়োগ করে গাণিতিক বিশ্লেষণের মাধ্যমে দেখাও যে, পাত্র-১ এবং পাত্র-২ এর দ্রবণের মধ্যে কোনটি অধিক অম্লীয়?</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>অসওয়াল্ডের লঘুকরণ সূত্র:</strong> নির্দিষ্ট তাপমাত্রায় কোনো মৃদু তড়িৎ-বিশ্লেষ্যের (মৃদু এসিড বা মৃদু ক্ষার) বিয়োজন মাত্রা ($\alpha$) তার মোলার ঘনমাত্রার ($C$) বর্গমূলের ব্যস্তানুপাতিক অথবা দ্রবণটির মোলার আয়তনের ($V$) বর্গমূলের সমানুপাতিক।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    তাপমাত্রা বৃদ্ধি করলে মৃদু এসিডের বিয়োজন মাত্রা ($\alpha$) বৃদ্ধি পায়।
+                </div>
+                <div class="solution-step">
+                    <strong>ব্যাখ্যা:</strong> যেকোনো মৃদু এসিডের (যেমন: $\text{HA}$) জলীয় দ্রবণে বিয়োজন একটি তাপহারী ($\text{Endothermic}$) প্রক্রিয়া:
+                    $$\text{HA}(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{H}_3\text{O}^+(aq) + \text{A}^-(aq); \quad \Delta H > 0$$
+                </div>
+                <div class="solution-step">
+                    লা-শাতেলিয়ার নীতি অনুসারে, তাপহারী বিক্রিয়ায় তাপমাত্রা বাড়ালে সাম্যাবস্থা তাপ শোষণের লক্ষ্যে ডানদিকে (সামনের দিকে) স্থানান্তরিত হয়। এর ফলে এসিডের অধিক পরিমাণ অণু বিয়োজিত হয়ে আয়নিত অবস্থায় রূপান্তরিত হয়। তাই তাপমাত্রা বৃদ্ধি পেলে মৃদু এসিডের বিয়োজন মাত্রা ($\alpha$) এবং বিয়োজন ধ্রুবক ($K_a$) উভয়ের মানই বৃদ্ধি পায়।
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>দেওয়া আছে:</strong>
+                    <br>পাত্র-১ এর এসিডের ঘনমাত্রা ($C_1$) = $0.1\text{ M}$
+                    <br>এসিডের বিয়োজন মাত্রা ($\alpha_1$) = $1.34 \times 10^{-2}$
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ১: এসিডের বিয়োজন ধ্রুবক ($K_a$) নির্ণয়</strong>
+                    <br>অসওয়াল্ডের লঘুকরণ সূত্রানুসারে আমরা জানি,
+                    $$K_a = \frac{\alpha_1^2 \cdot C_1}{1 - \alpha_1}$$ <span class="sidenote">[মৃদু এসিডের বিয়োজন ধ্রুবকের মূল সমীকরণ]</span>
+                </div>
+                <div class="solution-step">
+                    যেহেতু $\alpha_1 = 1.34 \times 10^{-2} = 0.0134 \ll 1$, তাই $(1 - \alpha_1) \approx 1$ ধরা যায়।
+                    <br>অতএব, সরলীকৃত সমীকরণ:
+                    $$K_a = \alpha_1^2 \cdot C_1$$ <span class="sidenote">[$1 - \alpha \approx 1$ বিবেচনা করে]</span>
+                    $$\implies K_a = (1.34 \times 10^{-2})^2 \times 0.1$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies K_a = (1.7956 \times 10^{-4}) \times 0.1$$ <span class="sidenote">[বর্গ করে]</span>
+                    $$\implies K_a = 1.7956 \times 10^{-5}\text{ M}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ২: হাইড্রোজেন আয়নের ঘনমাত্রা $[\text{H}^+]$ ও $\text{pH}$ নির্ণয়</strong>
+                    <br>এক-ক্ষারকীয় মৃদু এসিডের ক্ষেত্রে:
+                    $$[\text{H}^+] = \alpha_1 \cdot C_1$$ <span class="sidenote">[$[\text{H}^+] = \alpha C$ সূত্রানুসারে]</span>
+                    $$\implies [\text{H}^+] = (1.34 \times 10^{-2}) \times 0.1\text{ M}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies [\text{H}^+] = 1.34 \times 10^{-3}\text{ M}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    এখন, $\text{pH}$ এর সংজ্ঞায়ানুসারে:
+                    $$\text{pH} = -\log_{10}[\text{H}^+]$$ <span class="sidenote">[pH এর ঋণাত্মক লগারিদম সূত্র]</span>
+                    $$\implies \text{pH} = -\log_{10}(1.34 \times 10^{-3})$$ <span class="sidenote">[$[\text{H}^+]$ এর মান বসিয়ে]</span>
+                    $$\implies \text{pH} = -(-2.8729)$$ <span class="sidenote">[লগারিদম হিসাব করে]</span>
+                    $$\implies \text{pH} = 2.873$$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ পাত্র-১ এর দ্রবণটির বিয়োজন ধ্রুবক $K_a = 1.796 \times 10^{-5}\text{ M}$ এবং $\text{pH} = 2.873$
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    কোনো দ্রবণে $[\text{H}^+]$ আয়নের ঘনমাত্রা যত বেশি হয়, দ্রবণটির $\text{pH}$ এর মান তত কম হয় এবং দ্রবণটি তত অধিক অম্লীয় হয়।
+                </div>
+                <div class="solution-step">
+                    <strong>পাত্র-১ এর ক্ষেত্রে:</strong>
+                    <br>(গ) হতে প্রাপ্ত, পাত্র-১ এর দ্রবণটির হাইড্রোজেন আয়নের ঘনমাত্রা:
+                    $$[\text{H}^+]_1 = 1.34 \times 10^{-3}\text{ M}$$
+                    $$\text{pH}_1 = 2.873$$
+                </div>
+                <div class="solution-step">
+                    <strong>পাত্র-২ এর ক্ষেত্রে:</strong>
+                    <br>দেওয়া আছে:
+                    <br>ইথানয়িক এসিডের ঘনমাত্রা ($C_2$) = $0.05\text{ M}$
+                    <br>ইথানয়িক এসিডের বিয়োজন ধ্রুবক ($K_a$) = $1.8 \times 10^{-5}$
+                </div>
+                <div class="solution-step">
+                    অসওয়াল্ডের লঘুকরণ সূত্রানুসারে পাত্র-২ এর ইথানয়িক এসিডের বিয়োজন মাত্রা ($\alpha_2$):
+                    $$\alpha_2 = \sqrt{\frac{K_a}{C_2}}$$ <span class="sidenote">[অসওয়াল্ডের লঘুকরণ সমীকরণ]</span>
+                    $$\implies \alpha_2 = \sqrt{\frac{1.8 \times 10^{-5}}{0.05}}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \alpha_2 = \sqrt{3.6 \times 10^{-4}}$$ <span class="sidenote">[ভাগ করে]</span>
+                    $$\implies \alpha_2 = 0.01897 = 1.897 \times 10^{-2}$$ <span class="sidenote">[বর্গমূল করে]</span>
+                </div>
+                <div class="solution-step">
+                    অতএব, পাত্র-২ এর দ্রবণে $[\text{H}^+]$ আয়নের ঘনমাত্রা:
+                    $$[\text{H}^+]_2 = \alpha_2 \cdot C_2$$ <span class="sidenote">[$[\text{H}^+] = \alpha C$ সূত্রানুসারে]</span>
+                    $$\implies [\text{H}^+]_2 = 0.01897 \times 0.05\text{ M}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies [\text{H}^+]_2 = 9.487 \times 10^{-4}\text{ M}$$ <span class="sidenote">[গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    পাত্র-২ এর $\text{pH}$ নির্ণয়:
+                    $$\text{pH}_2 = -\log_{10}[\text{H}^+]_2$$
+                    $$\implies \text{pH}_2 = -\log_{10}(9.487 \times 10^{-4})$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \text{pH}_2 = 3.023$$ <span class="sidenote">[হিসাব করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>তুলনা ও গাণিতিক বিশ্লেষণ:</strong>
+                    <br>পাত্র-১ এর $[\text{H}^+]_1 = 1.34 \times 10^{-3}\text{ M}$
+                    <br>পাত্র-২ এর $[\text{H}^+]_2 = 9.487 \times 10^{-4}\text{ M}$
+                    <br>দেখা যাচ্ছে যে, $[\text{H}^+]_1 > [\text{H}^+]_2$ এবং $\text{pH}_1 (2.873) < \text{pH}_2 (3.023)$।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ গাণিতিক বিশ্লেষণে দেখা যায় পাত্র-১ এর দ্রবণে $[\text{H}^+]$ আয়নের ঘনমাত্রা পাত্র-২ অপেক্ষা বেশি এবং $\text{pH}$ কম। সুতরাং, পাত্র-১ এর দ্রবণটি পাত্র-২ এর দ্রবণ অপেক্ষা অধিক অম্লীয়।
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- ==================== CQ - 2 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০২</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">সাধারণ আয়ন প্রভাব (Common Ion Effect) কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">তীব্র এসিডের ক্ষেত্রে অসওয়াল্ডের লঘুকরণ সূত্র প্রযোজ্য নয় কেন? ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">পাত্র-২ এর ইথানয়িক এসিড দ্রবণটিতে আরও $750\text{ mL}$ পাতিত পানি যোগ করে দ্রবণটি লঘুকৃত করা হলে লঘুকৃত দ্রবণের বিয়োজন মাত্রা ($\alpha$) কত হবে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">পাত্র-১ এবং পাত্র-২ এর দ্রবণদ্বয়কে একত্রে মিশ্রিত করা হলে প্রাপ্ত মিশ্রণের $\text{pH}$ এর মান অপরিবর্তিত থাকবে নাকি পরিবর্তন ঘটবে?— অসওয়াল্ডের লঘুকরণ সূত্র ও সাধারণ আয়ন প্রভাবের নিরিখে গাণিতিকভাবে বিশ্লেষণ করো।</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>সাধারণ আয়ন প্রভাব:</strong> কোনো মৃদু তড়িৎ-বিশ্লেষ্যের দ্রবণে একই সাধারণ আয়ন বিশিষ্ট কোনো তীব্র তড়িৎ-বিশ্লেষ্য যোগ করলে মৃদু তড়িৎ-বিশ্লেষ্যের বিয়োজন মাত্রা পূর্বে অপেক্ষা হ্রাস পায়, এই ঘটনাকে সাধারণ আয়ন প্রভাব বলে।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    তীব্র এসিডের (যেমন: $\text{HCl}, \text{HNO}_3, \text{H}_2\text{SO}_4$) ক্ষেত্রে অসওয়াল্ডের লঘুকরণ सूत्र প্রযোজ্য হয় না।
+                </div>
+                <div class="solution-step">
+                    <strong>ব্যাখ্যা:</strong> তীব্র এসিডসমূহ জলীয় দ্রবণে সকল ঘনমাত্রায় প্রায় ১০০% সম্পূর্ণভাবে আয়নিত বা বিয়োজিত হয়ে যায়। অর্থাৎ তীব্র এসিডের বিয়োজন মাত্রা $\alpha \approx 1$ থাকে, যা লঘুকরণ বা পানি যোগ করার ওপর নির্ভর করে পরিবর্তিত হয় না।
+                </div>
+                <div class="solution-step">
+                    যেহেতু অসওয়াল্ডের লঘুকরণ সূত্রটি মূলত অ-বিয়োজিত এসিড অণু এবং বিয়োজিত আয়নসমূহের মধ্যকার গতিশীল সাম্যাবস্থার ওপর ভিত্তি করে প্রতিষ্ঠিত, কিন্তু তীব্র এসিডের ক্ষেত্রে আণবিক অবস্থার কোনো অস্তিত্ব থাকে না এবং কোনো সাম্যাবস্থা তৈরি হয় না, তাই তীব্র এসিডের ক্ষেত্রে এই সূত্রটি প্রযোজ্য নয়।
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>দেওয়া আছে:</strong>
+                    <br>পাত্র-২ এর প্রাথমিক আয়তন ($V_1$) = $250\text{ mL} = 0.25\text{ L}$
+                    <br>প্রাথমিক ঘনমাত্রা ($C_2$) = $0.05\text{ M}$
+                    <br>যোগকৃত পানির আয়তন = $750\text{ mL}$
+                    <br>ইথানয়িক এসিডের $K_a = 1.8 \times 10^{-5}$
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ১: লঘুকৃত দ্রবণের নতুন ঘনমাত্রা ($C_2'$) নির্ণয়</strong>
+                    <br>লঘুকরণের পর মোট শেষ আয়তন ($V_2$) = $250\text{ mL} + 750\text{ mL} = 1000\text{ mL} = 1.0\text{ L}$ <span class="sidenote">[আয়তন যোগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $V_1 \cdot C_2 = V_2 \cdot C_2'$ <span class="sidenote">[লঘুকরণ সূত্র অনুসারে]</span>
+                    $$\implies 250 \times 0.05 = 1000 \times C_2'$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies 12.5 = 1000 \times C_2'$$
+                    $$\implies C_2' = \frac{12.5}{1000} = 0.0125\text{ M}$$ <span class="sidenote">[ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ২: লঘুকৃত দ্রবণের নতুন বিয়োজন মাত্রা ($\alpha'$) নির্ণয়</strong>
+                    <br>অসওয়াল্ডের লঘুকরণ সূত্রানুসারে:
+                    $$\alpha' = \sqrt{\frac{K_a}{C_2'}}$$ <span class="sidenote">[অসওয়াল্ডের সূত্র]</span>
+                    $$\implies \alpha' = \sqrt{\frac{1.8 \times 10^{-5}}{0.0125}}$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \alpha' = \sqrt{0.00144}$$ <span class="sidenote">[ভাগ করে]</span>
+                    $$\implies \alpha' = 0.03795 \approx 3.795 \times 10^{-2}$$ <span class="sidenote">[বর্গমূল করে]</span>
+                </div>
+                <div class="solution-step">
+                    শতকরা প্রকাশে: $\alpha' = 0.03795 \times 100\% = 3.795\%$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ পাত্র-২ এর দ্রবণটি লঘুকৃত করার পর নতুন বিয়োজন মাত্রা হবে $\alpha' = 0.03795$ বা $3.795\%$
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    পাত্র-১ এবং পাত্র-২ এর দ্রবণ দুইটিই মৃদু এসিডের দ্রবণ।
+                    <br>পাত্র-১ এ আছে $\text{HA}$ এসিড এবং পাত্র-২ এ আছে $\text{CH}_3\text{COOH}$ এসিড।
+                </div>
+                <div class="solution-step">
+                    <strong>প্রাথমিক উপাত্ত ও একক ঘনমাত্রা:</strong>
+                    <br>পাত্র-১: $V_1 = 250\text{ mL}$, $C_1 = 0.1\text{ M}$, $[\text{H}^+]_1 = 1.34 \times 10^{-3}\text{ M}$
+                    <br>পাত্র-২: $V_2 = 250\text{ mL}$, $C_2 = 0.05\text{ M}$, $[\text{H}^+]_2 = 9.487 \times 10^{-4}\text{ M}$
+                    <br>মিশ্রণের মোট আয়তন ($V_T$) = $250\text{ mL} + 250\text{ mL} = 500\text{ mL} = 0.5\text{ L}$ <span class="sidenote">[মোট আয়তন]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>মিশ্রণে উভয় এসিডের নতুন ঘনমাত্রা নির্ণয় ($V_1 C_1 = V_T C_T$):</strong>
+                    <br>মিশ্রণে $\text{HA}$ এর ঘনমাত্রা, $C_{\text{HA}} = \frac{250 \times 0.1}{500} = 0.05\text{ M}$ <span class="sidenote">[আয়তন দ্বিগুণ হওয়ায় ঘনমাত্রা অর্ধেক]</span>
+                    <br>মিশ্রণে $\text{CH}_3\text{COOH}$ এর ঘনমাত্রা, $C_{\text{AA}} = \frac{250 \times 0.05}{500} = 0.025\text{ M}$ <span class="sidenote">[আয়তন দ্বিগুণ হওয়ায় ঘনমাত্রা অর্ধেক]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>সাধারণ আয়ন প্রভাব ও অসওয়াল্ডের সূত্রের নিরিখে বিশ্লেষণ:</strong>
+                    <br>উভয় এসিডই জলীয় দ্রবণে আয়নিত হয়ে সাধারণ আণবিক আয়ন হিসেবে $\text{H}^+$ উৎপন্ন করে:
+                    $$\text{HA}(aq) \rightleftharpoons \text{H}^+(aq) + \text{A}^-(aq)$$
+                    $$\text{CH}_3\text{COOH}(aq) \rightleftharpoons \text{H}^+(aq) + \text{CH}_3\text{COO}^-(aq)$$
+                    উভয় এসিড হতে উৎপন্ন $\text{H}^+$ আয়ন সাধারণ আয়ন হিসেবে কাজ করে। ফলে সাধারণ আয়ন প্রভাবের কারণে প্রতিটি এসিডের উপস্থিতি অপর এসিডের বিয়োজন মাত্রাকে আরও কমিয়ে দেয় ($\alpha$ কমে যায়)।
+                </div>
+                <div class="solution-step">
+                    <strong>মিশ্রণে মোট $[\text{H}^+]$ এর নির্ভুল হিসাব:</strong>
+                    <br>ধরি মিশ্রণে নতুন সাম্যাবস্থায় $\text{HA}$ হতে উৎপন্ন $[\text{H}^+] = x$ এবং $\text{CH}_3\text{COOH}$ হতে উৎপন্ন $[\text{H}^+] = y$।
+                    <br>সুতরাং মিশ্রণে মোট $[\text{H}^+]_{\text{mix}} = (x + y)$।
+                </div>
+                <div class="solution-step">
+                    বিয়োজন ধ্রুবকের সমীকরণ থেকে:
+                    <br>১. $\text{HA}$ এর ক্ষেত্রে: $K_{a1} = \frac{x(x + y)}{C_{\text{HA}}} \implies x(x + y) = K_{a1} \cdot C_{\text{HA}}$
+                    <br>২. $\text{CH}_3\text{COOH}$ এর ক্ষেত্রে: $K_{a2} = \frac{y(x + y)}{C_{\text{AA}}} \implies y(x + y) = K_{a2} \cdot C_{\text{AA}}$
+                </div>
+                <div class="solution-step">
+                    সমীকরণ দুটি যোগ করে পাই:
+                    $$x(x + y) + y(x + y) = K_{a1} \cdot C_{\text{HA}} + K_{a2} \cdot C_{\text{AA}}$$ <span class="sidenote">[যোগ করে]</span>
+                    $$\implies (x + y)^2 = K_{a1} \cdot C_{\text{HA}} + K_{a2} \cdot C_{\text{AA}}$$ <span class="sidenote">[(x + y) কমন নিয়ে]</span>
+                    $$\implies [\text{H}^+]_{\text{mix}} = \sqrt{K_{a1} \cdot C_{\text{HA}} + K_{a2} \cdot C_{\text{AA}}}$$ <span class="sidenote">[বর্গমূল করে]</span>
+                </div>
+                <div class="solution-step">
+                    মান বসিয়ে পাই:
+                    <br>এখানে, $K_{a1} = 1.7956 \times 10^{-5}$, $C_{\text{HA}} = 0.05\text{ M}$
+                    <br>$K_{a2} = 1.8 \times 10^{-5}$, $C_{\text{AA}} = 0.025\text{ M}$
+                    $$[\text{H}^+]_{\text{mix}} = \sqrt{(1.7956 \times 10^{-5} \times 0.05) + (1.8 \times 10^{-5} \times 0.025)}$$
+                    $$\implies [\text{H}^+]_{\text{mix}} = \sqrt{(8.978 \times 10^{-7}) + (4.5 \times 10^{-7})}$$ <span class="sidenote">[গুণ করে]</span>
+                    $$\implies [\text{H}^+]_{\text{mix}} = \sqrt{1.3478 \times 10^{-6}}$$ <span class="sidenote">[যোগ করে]</span>
+                    $$\implies [\text{H}^+]_{\text{mix}} = 1.1609 \times 10^{-3}\text{ M}$$ <span class="sidenote">[বর্গমূল করে]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>মিশ্রণের $\text{pH}$ নির্ণয়:</strong>
+                    $$\text{pH}_{\text{mix}} = -\log_{10}[\text{H}^+]_{\text{mix}}$$
+                    $$\implies \text{pH}_{\text{mix}} = -\log_{10}(1.1609 \times 10^{-3})$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \text{pH}_{\text{mix}} = 2.935$$
+                </div>
+                <div class="solution-step">
+                    <strong>তুলনা:</strong>
+                    <br>মিশ্রণের পূর্বে পাত্র-১ এর $\text{pH} = 2.873$ এবং পাত্র-২ এর $\text{pH} = 3.023$ ছিল।
+                    <br>একত্রে মিশ্রিত করার পর প্রাপ্ত মিশ্রণের $\text{pH} = 2.935$, যা পূর্বে পৃথকভাবে থাকা পাত্রদ্বয়ের $\text{pH}$ এর মানের চেয়ে ভিন্ন।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ পাত্র-১ ও পাত্র-২ এর দ্রবণদ্বয়কে মিশ্রিত করা হলে আয়তন বৃদ্ধি (লঘুকরণ) এবং সাধারণ আয়ন প্রভাবের কারণে উভয় এসিডের বিয়োজন হ্রাস পেয়ে নতুন $[\text{H}^+]$ তৈরি হওয়ায় মিশ্রণের $\text{pH}$ এর মানের পরিবর্তন ঘটবে এবং নতুন $\text{pH}$ হবে $2.935$।
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+</body>
+</html>

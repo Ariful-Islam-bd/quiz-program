@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান - চল তড়িৎ সৃজনশীল সমাধান</title>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান ২য় পত্র</h1>
+            <p>অধ্যায়: চল তড়িৎ (Current Electricity)</p>
+        </header>
+
+        <h2 class="chapter-header">সৃজনশীল প্রশ্ন ও পূর্ণাঙ্গ সমাধান</h2>
+
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ১</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> নিচে তিনটি রোধ বিশিষ্ট একটি ইলেকট্রনিক বর্তনী প্রদর্শিত হলো:</p>
+                
+                <div style="text-align: center; margin: 15px 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%" height="240">
+                      <style>
+                        .wire { stroke: #1e293b; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                        .resistor { stroke: #2563eb; stroke-width: 2.5; fill: #eff6ff; stroke-linejoin: round; }
+                        .text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #0f172a; font-weight: 600; }
+                        .node { fill: #0f172a; }
+                        .battery-thick { stroke: #1e293b; stroke-width: 3.5; }
+                        .battery-thin { stroke: #1e293b; stroke-width: 1.5; }
+                      </style>
+
+                      <!-- Main Outer Loop -->
+                      <!-- Battery and Main Wires -->
+                      <path d="M 50 120 L 100 120" class="wire" />
+                      <path d="M 400 120 L 450 120 L 450 200 L 50 200 L 50 120" class="wire" />
+
+                      <!-- Battery Symbol at Bottom -->
+                      <line x1="230" y1="200" x2="270" y2="200" class="wire" opacity="0" />
+                      <path d="M 450 200 L 270 200" class="wire" />
+                      <path d="M 230 200 L 50 200" class="wire" />
+                      <!-- Battery Lines -->
+                      <line x1="230" y1="185" x2="230" y2="215" class="battery-thick" />
+                      <line x1="240" y1="192" x2="240" y2="208" class="battery-thin" />
+                      <line x1="250" y1="185" x2="250" y2="215" class="battery-thick" />
+                      <line x1="260" y1="192" x2="260" y2="208" class="battery-thin" />
+                      
+                      <text x="215" y="180" class="text">+</text>
+                      <text x="265" y="180" class="text">-</text>
+                      <text x="225" y="230" class="text" fill="#d97706">E = 12V</text>
+
+                      <!-- Node A and Node B -->
+                      <circle cx="100" cy="120" r="4" class="node" />
+                      <circle cx="400" cy="120" r="4" class="node" />
+                      <text x="90" y="110" class="text">A</text>
+                      <text x="400" y="110" class="text">B</text>
+
+                      <!-- Top Branch (R1) -->
+                      <path d="M 100 120 L 100 50 L 180 50" class="wire" />
+                      <!-- Resistor R1 -->
+                      <path d="M 180 50 L 190 40 L 210 60 L 230 40 L 250 60 L 270 40 L 290 60 L 300 50" class="resistor" />
+                      <path d="M 300 50 L 380 50 L 380 120" class="wire" />
+                      <text x="225" y="30" class="text" text-anchor="middle">R₁ = 6 Ω</text>
+
+                      <!-- Middle Branch Parallel (R2 and R3) -->
+                      <path d="M 100 120 L 150 120" class="wire" />
+                      
+                      <!-- Parallel Split inside Middle Branch -->
+                      <path d="M 150 120 L 150 90 L 180 90" class="wire" />
+                      <path d="M 150 120 L 150 150 L 180 150" class="wire" />
+                      
+                      <!-- Resistor R2 -->
+                      <path d="M 180 90 L 190 80 L 210 100 L 230 80 L 250 100 L 270 80 L 290 100 L 300 90" class="resistor" />
+                      <text x="240" y="75" class="text" text-anchor="middle">R₂ = 12 Ω</text>
+                      
+                      <!-- Resistor R3 -->
+                      <path d="M 180 150 L 190 140 L 210 160 L 230 140 L 250 160 L 270 140 L 290 160 L 300 150" class="resistor" />
+                      <text x="240" y="180" class="text" text-anchor="middle">R₃ = 4 Ω</text>
+
+                      <!-- Parallel Join -->
+                      <path d="M 300 90 L 330 90 L 330 120" class="wire" />
+                      <path d="M 300 150 L 330 150 L 330 120" class="wire" />
+                      <path d="M 330 120 L 400 120" class="wire" />
+
+                      <!-- Internal resistance note -->
+                      <text x="320" y="230" class="text" fill="#64748b">(আভ্যন্তরীণ রোধ, r = 1 Ω)</text>
+                    </svg>
+                </div>
+                <p>উদ্দীপকের বর্তনীতে $E = 12\text{ V}$ তড়িৎচালক বল এবং $r = 1\ \Omega$ অভ্যন্তরীণ রোধ বিশিষ্ট একটি ব্যাটারি যুক্ত করা হয়েছে। $R_1 = 6\ \Omega$, $R_2 = 12\ \Omega$, এবং $R_3 = 4\ \Omega$ রোধসমূহ চিত্রে প্রদর্শিত উপায়ে $A$ ও $B$ সংযোগ বিন্দুর মধ্যে যুক্ত রয়েছে।</p>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">তুল্য রোধ কাকে বলে?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">“কোনো পরিবাহীর রোধ এর দৈর্ঘ্যের সমানুপাতিক”— ব্যাখ্যা করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">প্রদত্ত উদ্দীপক হতে $A$ ও $B$ বিন্দুর মধ্যবর্তী তুল্য রোধ ($R_{AB}$) নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">$R_1$, $R_2$ এবং $R_3$ রোধগুলির মধ্য দিয়ে প্রবাহিত তড়িৎপ্রবাহের মান সমান হবে কি না— গাণিতিক বিশ্লেষণের মাধ্যমে মতামত দাও।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        কোনো বর্তনীতে বিদ্যমান রোধসমূহের একটি সজ্জা বা সমবায়ের পরিবর্তে যে একটিমাত্র রোধ ব্যবহার করলে বর্তনীর মোট তড়িৎপ্রবাহ এবং বিভব পার্থক্যের কোনো পরিবর্তন হয় না, সেই একক রোধকে উক্ত সমবায়ের <strong>তুল্য রোধ</strong> বলে।
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        নির্দিষ্ট তাপমাত্রায় এবং নির্দিষ্ট উপাদানের কোনো পরিবাহীর প্রস্থচ্ছেদের ক্ষেত্রফল ($A$) অপরিবর্তিত বা স্থির থাকলে, পরিবাহীর রোধ ($R$) তার দৈর্ঘ্যের ($L$) সরাসরি সমানুপাতিক হয়। একে <strong>রোধের প্রথম সূত্র বা দৈর্ঘ্যের সূত্র</strong> বলা হয়।
+                    </div>
+                    <div class="solution-step">
+                        গাণিতিকভাবে, $R \propto L$ <span class="sidenote">[যখন তাপমাত্রা, উপাদান ও প্রস্থচ্ছেদের ক্ষেত্রফল $A$ স্থির]</span>
+                    </div>
+                    <div class="solution-step">
+                        <strong>ব্যাখ্যা:</strong> পরিবাহীর দৈর্ঘ্য যত বৃদ্ধি পায়, মুক্ত ইলেকট্রনগুলোকে পরিবাহীর মধ্য দিয়ে প্রবাহিত হওয়ার সময় তার ভেতরের অণু-পরমাণুর সাথে তত বেশি সংখ্যক সংঘর্ষের সম্মুখীন হতে হয়। ফলে ইলেকট্রন প্রবাহে বাধার পরিমাণ বৃদ্ধি পায়। সুতরাং, কোনো পরিবাহীর দৈর্ঘ্য দ্বিগুণ করা হলে তার রোধও দ্বিগুণ হয়ে যায়।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>দেওয়া আছে,</strong></div>
+                    <div class="solution-step">প্রথম রোধ, $R_1 = 6\ \Omega$</div>
+                    <div class="solution-step">দ্বিতীয় রোধ, $R_2 = 12\ \Omega$</div>
+                    <div class="solution-step">তৃতীয় রোধ, $R_3 = 4\ \Omega$</div>
+                    <div class="solution-step">ব্যাটারির তড়িৎচালক বল, $E = 12\text{ V}$</div>
+                    <div class="solution-step">আভ্যন্তরীণ রোধ, $r = 1\ \Omega$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: $R_2$ ও $R_3$ রোধদ্বয়ের সমান্তরাল তুল্য রোধ ($R_{p1}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        চিত্র লক্ষ্য করলে দেখা যায়, $R_2$ এবং $R_3$ রোধ দুটি নিজেদের মধ্যে সমান্তরাল সমবায়ে (Parallel Combination) যুক্ত রয়েছে।
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{1}{R_{p1}} = \frac{1}{R_2} + \frac{1}{R_3}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{1}{12} + \frac{1}{4}$ <span class="sidenote">[$R_2 = 12\ \Omega, R_3 = 4\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{1 + 3}{12}$ <span class="sidenote">[লসাগু করে ($12$ ও $4$ এর লসাগু $12$)]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{4}{12}$ <span class="sidenote">[যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{1}{3}$ <span class="sidenote">[লঘুকরণ বা কাটাকাটি করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies R_{p1} = 3\ \Omega$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: $A$ ও $B$ বিন্দুর মধ্যবর্তী সামগ্রিক তুল্য রোধ ($R_{AB}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        এখন, উপরের শাখার $R_1$ রোধ এবং মাঝের শাখার তুল্য রোধ $R_{p1}$ দুটি সরাসরি $A$ এবং $B$ বিন্দুর মধ্যে সমান্তরাল সমবায়ে যুক্ত।
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{1}{R_{AB}} = \frac{1}{R_1} + \frac{1}{R_{p1}}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{AB}} = \frac{1}{6} + \frac{1}{3}$ <span class="sidenote">[$R_1 = 6\ \Omega$ এবং $R_{p1} = 3\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{AB}} = \frac{1 + 2}{6}$ <span class="sidenote">[লসাগু করে ($6$ ও $3$ এর লসাগু $6$)]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{AB}} = \frac{3}{6}$ <span class="sidenote">[যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{AB}} = \frac{1}{2}$ <span class="sidenote">[লঘুকরণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies R_{AB} = 2\ \Omega$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ $A$ ও $B$ বিন্দুর মধ্যবর্তী তুল্য রোধ $R_{AB} = 2\ \Omega$।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        $R_1$, $R_2$ এবং $R_3$ রোধগুলির মধ্য দিয়ে প্রবাহিত তড়িৎপ্রবাহের মান সমান হবে কি না তা জানার জন্য প্রতিটি রোধের প্রবাহ পৃথকভাবে নির্ণয় করতে হবে।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: বর্তনীর মোট প্রবাহ ($I$) এবং $A$ ও $B$ বিন্দুর বিভব পার্থক্য ($V_{AB}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        গ হতে প্রাপ্ত $A$ ও $B$ বিন্দুর তুল্য রোধ, $R_{AB} = 2\ \Omega$
+                    </div>
+                    <div class="solution-step">
+                        বর্তনীর মোট তড়িৎপ্রবাহ, $$I = \frac{E}{R_{AB} + r}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = \frac{12}{2 + 1}$ <span class="sidenote">[$E = 12\text{ V}, R_{AB} = 2\ \Omega, r = 1\ \Omega$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = \frac{12}{3}$ <span class="sidenote">[হর যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = 4\text{ A}$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        অতএব, $A$ ও $B$ বিন্দুর মধ্যকার প্রান্তীয় বিভব পার্থক্য,
+                        $$V_{AB} = I \times R_{AB}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies V_{AB} = 4 \times 2 = 8\text{ V}$ <span class="sidenote">[গুণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: $R_1$ রোধের মধ্য দিয়ে প্রবাহিত প্রবাহ ($I_1$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        যেহেতু $R_1$ রোধটি সরাসরি $A$ ও $B$ বিন্দুর মধ্যে যুক্ত, তাই এর প্রান্তীয় বিভব পার্থক্য $V_{AB} = 8\text{ V}$।
+                    </div>
+                    <div class="solution-step">
+                        $$I_1 = \frac{V_{AB}}{R_1}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_1 = \frac{8}{6}$ <span class="sidenote">[$V_{AB} = 8\text{ V}$ এবং $R_1 = 6\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_1 = \frac{4}{3}\text{ A} \approx 1.333\text{ A}$ <span class="sidenote">[দশমিকে রূপান্তর করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৩: $R_2$ ও $R_3$ রোধের মধ্য দিয়ে প্রবাহিত প্রবাহ ($I_2$ ও $I_3$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        মাঝের শাখার মোট প্রবাহ, $I_{\text{mid}} = I - I_1 = 4 - 1.333 = 2.667\text{ A}$
+                    </div>
+                    <div class="solution-step">
+                        অথবা, মাঝের শাখার বিভব পার্থক্যও $V_{AB} = 8\text{ V}$। তাই $R_2$ এর মধ্য দিয়ে প্রবাহ:
+                        $$I_2 = \frac{V_{AB}}{R_2}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_2 = \frac{8}{12}$ <span class="sidenote">[$V_{AB} = 8\text{ V}$ এবং $R_2 = 12\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_2 = \frac{2}{3}\text{ A} \approx 0.667\text{ A}$ <span class="sidenote">[লঘুকরণ করে]</span>
+                    </div>
+                    <div class="solution-step" style="margin-top: 8px;">
+                        এবং $R_3$ রোধের মধ্য দিয়ে প্রবাহিত প্রবাহ:
+                        $$I_3 = \frac{V_{AB}}{R_3}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_3 = \frac{8}{4}$ <span class="sidenote">[$V_{AB} = 8\text{ V}$ এবং $R_3 = 4\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I_3 = 2\text{ A}$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৪: প্রাপ্ত মানসমূহের তুলনা ও সিদ্ধান্ত:</strong></div>
+                    <div class="solution-step">
+                        নির্ণীত প্রবাহের মানসমূহ হলো:
+                        <ul>
+                            <li>$R_1$ এর মধ্য দিয়ে প্রবাহ, $I_1 = 1.333\text{ A}$</li>
+                            <li>$R_2$ এর মধ্য দিয়ে প্রবাহ, $I_2 = 0.667\text{ A}$</li>
+                            <li>$R_3$ এর মধ্য দিয়ে প্রবাহ, $I_3 = 2\text{ A}$</li>
+                        </ul>
+                    </div>
+                    <div class="solution-step">
+                        আমরা দেখতে পাচ্ছি যে, $I_1 \neq I_2 \neq I_3$।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ গাণিতিক বিশ্লেষণ হতে দেখা যাচ্ছে যে, $R_1$, $R_2$ এবং $R_3$ রোধগুলির মান ভিন্ন হওয়ায় এবং এরা সমান্তরাল সমবায় ও মিশ্র সজ্জায় যুক্ত থাকায় এদের মধ্য দিয়ে প্রবাহিত তড়িৎপ্রবাহের মান সমান হবে না।
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ২</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> নিচে তিনটি রোধ বিশিষ্ট একটি ইলেকট্রনিক বর্তনী প্রদর্শিত হলো:</p>
+                
+                <div style="text-align: center; margin: 15px 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%" height="240">
+                      <style>
+                        .wire { stroke: #1e293b; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                        .resistor { stroke: #2563eb; stroke-width: 2.5; fill: #eff6ff; stroke-linejoin: round; }
+                        .text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #0f172a; font-weight: 600; }
+                        .node { fill: #0f172a; }
+                        .battery-thick { stroke: #1e293b; stroke-width: 3.5; }
+                        .battery-thin { stroke: #1e293b; stroke-width: 1.5; }
+                      </style>
+
+                      <!-- Main Outer Loop -->
+                      <!-- Battery and Main Wires -->
+                      <path d="M 50 120 L 100 120" class="wire" />
+                      <path d="M 400 120 L 450 120 L 450 200 L 50 200 L 50 120" class="wire" />
+
+                      <!-- Battery Symbol at Bottom -->
+                      <line x1="230" y1="200" x2="270" y2="200" class="wire" opacity="0" />
+                      <path d="M 450 200 L 270 200" class="wire" />
+                      <path d="M 230 200 L 50 200" class="wire" />
+                      <!-- Battery Lines -->
+                      <line x1="230" y1="185" x2="230" y2="215" class="battery-thick" />
+                      <line x1="240" y1="192" x2="240" y2="208" class="battery-thin" />
+                      <line x1="250" y1="185" x2="250" y2="215" class="battery-thick" />
+                      <line x1="260" y1="192" x2="260" y2="208" class="battery-thin" />
+                      
+                      <text x="215" y="180" class="text">+</text>
+                      <text x="265" y="180" class="text">-</text>
+                      <text x="225" y="230" class="text" fill="#d97706">E = 12V</text>
+
+                      <!-- Node A and Node B -->
+                      <circle cx="100" cy="120" r="4" class="node" />
+                      <circle cx="400" cy="120" r="4" class="node" />
+                      <text x="90" y="110" class="text">A</text>
+                      <text x="400" y="110" class="text">B</text>
+
+                      <!-- Top Branch (R1) -->
+                      <path d="M 100 120 L 100 50 L 180 50" class="wire" />
+                      <!-- Resistor R1 -->
+                      <path d="M 180 50 L 190 40 L 210 60 L 230 40 L 250 60 L 270 40 L 290 60 L 300 50" class="resistor" />
+                      <path d="M 300 50 L 380 50 L 380 120" class="wire" />
+                      <text x="225" y="30" class="text" text-anchor="middle">R₁ = 6 Ω</text>
+
+                      <!-- Middle Branch Parallel (R2 and R3) -->
+                      <path d="M 100 120 L 150 120" class="wire" />
+                      
+                      <!-- Parallel Split inside Middle Branch -->
+                      <path d="M 150 120 L 150 90 L 180 90" class="wire" />
+                      <path d="M 150 120 L 150 150 L 180 150" class="wire" />
+                      
+                      <!-- Resistor R2 -->
+                      <path d="M 180 90 L 190 80 L 210 100 L 230 80 L 250 100 L 270 80 L 290 100 L 300 90" class="resistor" />
+                      <text x="240" y="75" class="text" text-anchor="middle">R₂ = 12 Ω</text>
+                      
+                      <!-- Resistor R3 -->
+                      <path d="M 180 150 L 190 140 L 210 160 L 230 140 L 250 160 L 270 140 L 290 160 L 300 150" class="resistor" />
+                      <text x="240" y="180" class="text" text-anchor="middle">R₃ = 4 Ω</text>
+
+                      <!-- Parallel Join -->
+                      <path d="M 300 90 L 330 90 L 330 120" class="wire" />
+                      <path d="M 300 150 L 330 150 L 330 120" class="wire" />
+                      <path d="M 330 120 L 400 120" class="wire" />
+
+                      <!-- Internal resistance note -->
+                      <text x="320" y="230" class="text" fill="#64748b">(আভ্যন্তরীণ রোধ, r = 1 Ω)</text>
+                    </svg>
+                </div>
+                <p>উদ্দীপকের বর্তনীতে $E = 12\text{ V}$ তড়িৎচালক বল এবং $r = 1\ \Omega$ অভ্যন্তরীণ রোধ বিশিষ্ট একটি ব্যাটারি যুক্ত করা হয়েছে। $R_1 = 6\ \Omega$, $R_2 = 12\ \Omega$, এবং $R_3 = 4\ \Omega$ রোধসমূহ চিত্রে প্রদর্শিত উপায়ে $A$ ও $B$ সংযোগ বিন্দুর মধ্যে যুক্ত রয়েছে।</p>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">ওহমের সূত্রটি লেখো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">কোষের অভ্যন্তরীণ রোধ বলতে কী বোঝায়?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">বর্তনীর মূল তড়িৎপ্রবাহ ($I$) এবং ব্যাটারির হারানো ভোল্টেজ ($V_{\text{lost}}$) নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">যদি $R_2$ রোধটি হঠাৎ পুড়ে বা নষ্ট হয়ে গিয়ে সংযোগ বিচ্ছিন্ন হয়ে যায়, তবে ব্যাটারির মোট সরবরাহকৃত শক্তিতে বা বর্তনীর মূল প্রবাহে কী রূপ পরিবর্তন আসবে? গাণিতিকভাবে বিশ্লেষণ করো।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>ওহমের সূত্র:</strong> তাপমাত্রা ও অন্যান্য ভৌত অবস্থা অপরিবর্তিত থাকলে, কোনো পরিবাহীর মধ্য দিয়ে যে তড়িৎপ্রবাহ চলে, তা পরিবাহীর দুই প্রান্তের বিভব পার্থক্যের সরাসরি সমানুপাতিক।
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        কোনো তড়িৎ কোষের ভেতর দিয়ে (ঋণাত্মক পাত হতে ধনাত্মক পাতে) তড়িৎ প্রবাহ চলার সময় কোষের ভেতরের তরল বা রাসায়নিক উপাদান তড়িৎ প্রবাহকে যে বাধা প্রদান করে, তাকে কোষের <strong>আভ্যন্তরীণ রোধ</strong> (Internal Resistance) বলে। একে সাধারণত $r$ দ্বারা প্রকাশ করা হয়।
+                    </div>
+                    <div class="solution-step">
+                        <strong>ব্যাখ্যা:</strong> একটি বর্তনীতে যখন ব্যাটারি থেকে তড়িৎ প্রবাহিত হয়, তখন কেবল বাইরের বহিসংযোগ রোধেই বাধা পায় না, বরং কোষের ভেতরের সক্রিয় দ্রবণ বা ইলেকট্রোলাইটের মধ্য দিয়ে ইলেকট্রন ও আয়ন চলাচলের সময়ও কিছুটা বাধার সম্মুখীন হয়। এই বাধার কারণে কোষের নিজস্ব তড়িৎচালক বলের ($E$) কিছু অংশ কোষের ভেতরেই অপচয় হয়, যা বাইরে বিভব পার্থক্য হিসেবে পাওয়া যায় না। ফলে প্রান্তীয় বিভব পার্থক্য ($V$), তড়িৎচালক বল ($E$) অপেক্ষা কম হয় (অর্থাৎ, $V = E - Ir$)।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>উদ্দীপক হতে প্রাপ্ত মানসমূহ:</strong></div>
+                    <div class="solution-step">প্রথম রোধ, $R_1 = 6\ \Omega$</div>
+                    <div class="solution-step">দ্বিতীয় রোধ, $R_2 = 12\ \Omega$</div>
+                    <div class="solution-step">তৃতীয় রোধ, $R_3 = 4\ \Omega$</div>
+                    <div class="solution-step">ব্যাটারির তড়িৎচালক বল, $E = 12\text{ V}$</div>
+                    <div class="solution-step">ব্যাটারির অভ্যন্তরীণ রোধ, $r = 1\ \Omega$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: বর্তনীর বহিঃস্থ তুল্য রোধ ($R_p$ বা $R_{AB}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        চিত্র অনুযায়ী, $R_2$ এবং $R_3$ রোধদ্বয় নিজেদের মধ্যে সমান্তরালে যুক্ত। এদের তুল্য রোধ $R_{p1}$ হলে:
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{1}{R_{p1}} = \frac{1}{R_2} + \frac{1}{R_3}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{1}{12} + \frac{1}{4}$ <span class="sidenote">[$R_2 = 12\ \Omega, R_3 = 4\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{1 + 3}{12}$ <span class="sidenote">[$12$ ও $4$ এর লসাগু $12$ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_{p1}} = \frac{4}{12} = \frac{1}{3}$ <span class="sidenote">[লঘুকরণ বা কাটাকাটি করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies R_{p1} = 3\ \Omega$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+                    <div class="solution-step" style="margin-top: 10px;">
+                        এখন, উপরের শাখার $R_1$ এবং এই মাঝের শাখার তুল্য রোধ $R_{p1}$ পরস্পর সমান্তরালে $A$ ও $B$ বিন্দুর মাঝে যুক্ত। সুতরাং, বর্তনীর মোট বহিঃস্থ তুল্য রোধ $R_p$:
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{1}{R_p} = \frac{1}{R_1} + \frac{1}{R_{p1}}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_p} = \frac{1}{6} + \frac{1}{3}$ <span class="sidenote">[$R_1 = 6\ \Omega$ ও $R_{p1} = 3\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_p} = \frac{1 + 2}{6} = \frac{3}{6} = \frac{1}{2}$ <span class="sidenote">[যোগ ও লঘুকরণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies R_p = 2\ \Omega$ <span class="sidenote">[ব্যস্তকরণ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: বর্তনীর মূল তড়িৎপ্রবাহ ($I$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        আমরা জানি, অভ্যন্তরীণ রোধসহ সম্পূর্ণ বর্তনীর মূল প্রবাহের সূত্র:
+                        $$I = \frac{E}{R_p + r}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = \frac{12}{2 + 1}$ <span class="sidenote">[$E = 12\text{ V}, R_p = 2\ \Omega, r = 1\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = \frac{12}{3}$ <span class="sidenote">[হর যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I = 4\text{ A}$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৩: ব্যাটারির হারানো ভোল্টেজ ($V_{\text{lost}}$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        ব্যাটারির অভ্যন্তরে $r$ রোধ অতিক্রম করতে যে ভোল্টেজ অপচয় বা ড্রপ হয়, তাকে হারানো ভোল্টেজ বলা হয়:
+                        $$V_{\text{lost}} = I \times r$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies V_{\text{lost}} = 4 \times 1$ <span class="sidenote">[$I = 4\text{ A}$ এবং $r = 1\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies V_{\text{lost}} = 4\text{ V}$ <span class="sidenote">[গুণ করে]</span>
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ বর্তনীর মূল তড়িৎপ্রবাহ $I = 4\text{ A}$ এবং ব্যাটারির হারানো ভোল্টেজ $V_{\text{lost}} = 4\text{ V}$।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        যদি $R_2$ রোধটি নষ্ট হয়ে সংযোগ বিচ্ছিন্ন হয়ে যায়, তবে মাঝের শাখায় কেবল $R_3$ রোধটি অবস্থান করবে। এর ফলে বর্তনীর তুল্য রোধ পরিবর্তিত হবে, যার প্রভাবে মূল তড়িৎপ্রবাহ ও ব্যাটারির মোট সরবরাহকৃত শক্তিতে পরিবর্তন আসবে।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: $R_2$ বিচ্ছিন্ন হওয়ার পর নতুন তুল্য রোধ ($R_p'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        $R_2$ না থাকলে বর্তনীতে কেবল $R_1$ এবং $R_3$ রোধ দুটি সমান্তরালে যুক্ত থাকবে।
+                    </div>
+                    <div class="solution-step">
+                        $$\frac{1}{R_p'} = \frac{1}{R_1} + \frac{1}{R_3}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_p'} = \frac{1}{6} + \frac{1}{4}$ <span class="sidenote">[$R_1 = 6\ \Omega$ ও $R_3 = 4\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_p'} = \frac{2 + 3}{12}$ <span class="sidenote">[$6$ ও $4$ এর লসাগু $12$ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies \frac{1}{R_p'} = \frac{5}{12}$ <span class="sidenote">[যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies R_p' = \frac{12}{5} = 2.4\ \Omega$ <span class="sidenote">[ব্যস্তকরণ ও ভগ্নাংশ ভাঙ্গিয়ে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: নতুন মূল তড়িৎপ্রবাহ ($I'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        $$I' = \frac{E}{R_p' + r}$$
+                    </div>
+                    <div class="solution-step">
+                        $\implies I' = \frac{12}{2.4 + 1}$ <span class="sidenote">[$E = 12\text{ V}, R_p' = 2.4\ \Omega, r = 1\ \Omega$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I' = \frac{12}{3.4}$ <span class="sidenote">[হর যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $\implies I' \approx 3.529\text{ A}$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৩: মূল প্রবাহের পরিবর্তন হিসাব:</strong></div>
+                    <div class="solution-step">
+                        পূর্বের মূল প্রবাহ $I = 4\text{ A}$ এবং বর্তমান মূল প্রবাহ $I' = 3.529\text{ A}$।
+                    </div>
+                    <div class="solution-step">
+                        প্রবাহের হ্রাস, $\Delta I = I - I' = 4 - 3.529 = 0.471\text{ A}$।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৪: প্রতি সেকেন্ডে ব্যাটারির সরবরাহকৃত মোট শক্তির পরিবর্তন বিশ্লেষণ:</strong></div>
+                    <div class="solution-step">
+                        ব্যাটারি দ্বারা প্রতি সেকেন্ডে সরবরাহকৃত মোট শক্তি বা মোট ক্ষমতা ($P$) হলো: $P = E \times I$
+                    </div>
+                    <div class="solution-step">
+                        <strong>পূর্বে প্রতি সেকেন্ডে সরবরাহকৃত শক্তি ($P_1$):</strong>
+                        $$P_1 = E \times I = 12 \times 4 = 48\text{ J/s (বা Watt)}$$ <span class="sidenote">[মান বসিয়ে গুণ করে]</span>
+                    </div>
+                    <div class="solution-step" style="margin-top: 8px;">
+                        <strong>$R_2$ বিচ্ছিন্ন হওয়ার পর প্রতি সেকেন্ডে সরবরাহকৃত শক্তি ($P_2$):</strong>
+                        $$P_2 = E \times I' = 12 \times 3.529 \approx 42.348\text{ J/s (বা Watt)}$$ <span class="sidenote">[মান বসিয়ে গুণ করে]</span>
+                    </div>
+                    <div class="solution-step" style="margin-top: 8px;">
+                        শক্তি হ্রাসের পরিমাণ, $\Delta P = P_1 - P_2 = 48 - 42.348 = 5.652\text{ J/s}$।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ৫: গাণিতিক পর্যালোচনা ও সিদ্ধান্ত:</strong></div>
+                    <div class="solution-step">
+                        $R_2$ রোধটি বিচ্ছিন্ন হয়ে যাওয়ার ফলে বর্তনীর মোট বহিঃস্থ তুল্য রোধ $2\ \Omega$ থেকে বৃদ্ধি পেয়ে $2.4\ \Omega$ হয়। রোধ বৃদ্ধি পাওয়ার কারণে:
+                        <ol>
+                            <li>বর্তনীর মূল তড়িৎপ্রবাহ $4\text{ A}$ থেকে $0.471\text{ A}$ হ্রাস পেয়ে $3.529\text{ A}$ হবে।</li>
+                            <li>ব্যাটারি হতে সরবরাহকৃত মোট ক্ষমতা বা প্রতি সেকেন্ডে মোট শক্তির হার $48\text{ W}$ থেকে $5.652\text{ W}$ হ্রাস পেয়ে $42.348\text{ W}$ হবে।</li>
+                        </ol>
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ $R_2$ রোধটি নষ্ট হয়ে গেলে বর্তনীর মূল তড়িৎপ্রবাহ $0.471\text{ A}$ হ্রাস পাবে এবং ব্যাটারির মোট সরবরাহকৃত ক্ষমতার হার $5.652\text{ W}$ (বা জুল/সেকেন্ড) হ্রাস পাবে।
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: false},
+                    {left: '$', right: '$', display: false}
+                ]
+            });"></script>
+</body>
+</html>

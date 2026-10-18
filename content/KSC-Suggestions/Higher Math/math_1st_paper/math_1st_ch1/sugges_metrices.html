@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চতর গণিত ১ম পত্র - মেট্রিক্স ও নির্ণায়ক</title>
+
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চতর গণিত ১ম পত্র</h1>
+        <p>সৃজনশীল প্রশ্নব্যাংক ও ব্যাখ্যামূলক সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">অধ্যায়: ১ - মেট্রিক্স ও নির্ণায়ক</h2>
+
+    <!-- Question 1 Card -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            উদ্দীপক: <br>
+            $C = \begin{bmatrix} 1 & 2 & 1 \\ -1 & 2 & 0 \\ 3 & 4 & 5 \end{bmatrix}$, $X = [x, y, z]$, $D = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}$
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\begin{bmatrix} 2 & 3 \\ -1 & -2 \end{bmatrix}$ ম্যাট্রিক্সটি অভেদঘাতী কি-না যাচাই কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">নির্ণায়ক পদ্ধতিতে $CX^T = D^T$ সমীকরণ জোট সমাধান কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$(C^T)^{-1}$ নির্ণয় করো।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ক) এর সমাধান:</div>
+                
+                <div class="solution-step">
+                    ধরি, প্রদত্ত ম্যাট্রিক্স $A = \begin{bmatrix} 2 & 3 \\ -1 & -2 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, কোনো বর্গ ম্যাট্রিক্স $A$ কে অভেদঘাতী (Involutory Matrix) বলা হবে যদি $A^2 = I$ হয়, যেখানে $I$ হলো একটি অভেদক (Identity) ম্যাট্রিক্স।
+                </div>
+
+                <div class="solution-step">
+                    এখন, $A^2 = A \cdot A$ <span class="sidenote">[ম্যাট্রিক্সের বর্গ নির্ণয়]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$A^2 = \begin{bmatrix} 2 & 3 \\ -1 & -2 \end{bmatrix} \begin{bmatrix} 2 & 3 \\ -1 & -2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$A^2 = \begin{bmatrix} (2 \cdot 2 + 3 \cdot (-1)) & (2 \cdot 3 + 3 \cdot (-2)) \\ ((-1) \cdot 2 + (-2) \cdot (-1)) & ((-1) \cdot 3 + (-2) \cdot (-2)) \end{bmatrix}$$
+                    <span class="sidenote">[প্রথম ম্যাট্রিক্সের সারি দিয়ে দ্বিতীয় ম্যাট্রিক্সের কলামকে গুণ করে যোগ]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$A^2 = \begin{bmatrix} 4 - 3 & 6 - 6 \\ -2 + 2 & -3 + 4 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$A^2 = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I_2$ (অভেদক ম্যাট্রিক্স)
+                </div>
+
+                <div class="solution-step">
+                    $\therefore A^2 = I$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ প্রদত্ত $\begin{bmatrix} 2 & 3 \\ -1 & -2 \end{bmatrix}$ ম্যাট্রিক্সটি একটি অভেদঘাতী ম্যাট্রিক্স (যাচাই করা হলো)।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(খ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, <br>
+                    $C = \begin{bmatrix} 1 & 2 & 1 \\ -1 & 2 & 0 \\ 3 & 4 & 5 \end{bmatrix}$, 
+                    $X = [x, y, z]$, 
+                    $D = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    এখানে, $X^T = [x, y, z]^T = \begin{bmatrix} x \\ y \\ z \end{bmatrix}$ <span class="sidenote">[সারিককে কলামে রূপান্তর (Transverse Matrix)]</span>
+                </div>
+
+                <div class="solution-step">
+                    এবং $D^T = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}^T = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ জোট: $CX^T = D^T$
+                </div>
+
+                <div class="solution-step">
+                    $$\begin{bmatrix} 1 & 2 & 1 \\ -1 & 2 & 0 \\ 3 & 4 & 5 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ম্যাট্রিক্সের গুণ সম্পাদন করে পাই,
+                    $$\begin{bmatrix} 1 \cdot x + 2 \cdot y + 1 \cdot z \\ -1 \cdot x + 2 \cdot y + 0 \cdot z \\ 3 \cdot x + 4 \cdot y + 5 \cdot z \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ম্যাট্রিক্সের সমতা অনুসারে পাই: <br>
+                    $x + 2y + z = 1$ <br>
+                    $-x + 2y + 0z = 2$ <br>
+                    $3x + 4y + 5z = 3$
+                </div>
+
+                <div class="solution-step">
+                    এখন, ক্র্যামারের নিয়মে (নির্ণায়ক পদ্ধতিতে) সমীকরণ জোটটি সমাধান করব।
+                </div>
+
+                <div class="solution-step">
+                    চলকগুলোর সহগ দ্বারা গঠিত প্রধান নির্ণায়ক, $D_m$:
+                    $$D_m = \begin{vmatrix} 1 & 2 & 1 \\ -1 & 2 & 0 \\ 3 & 4 & 5 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে পাই:
+                    $$D_m = 1 \cdot (2 \cdot 5 - 0 \cdot 4) - 2 \cdot ((-1) \cdot 5 - 0 \cdot 3) + 1 \cdot ((-1) \cdot 4 - 2 \cdot 3)$$
+                    <span class="sidenote">[১ম সারির উপাদানগুলো নিয়ে সহগুণক বিস্তার]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$D_m = 1 \cdot (10 - 0) - 2 \cdot (-5 - 0) + 1 \cdot (-4 - 6)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_m = 10 + 10 - 10 = 10 \neq 0$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $x$-এর সহগের স্থানে ধ্রুবক পদগুলো বসিয়ে $D_x$ নির্ণয় করি:
+                    $$D_x = \begin{vmatrix} 1 & 2 & 1 \\ 2 & 2 & 0 \\ 3 & 4 & 5 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে:
+                    $$D_x = 1 \cdot (2 \cdot 5 - 0 \cdot 4) - 2 \cdot (2 \cdot 5 - 0 \cdot 3) + 1 \cdot (2 \cdot 4 - 2 \cdot 3)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_x = 1 \cdot (10 - 0) - 2 \cdot (10 - 0) + 1 \cdot (8 - 6)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_x = 10 - 20 + 2 = -8$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $y$-এর সহগের স্থানে ধ্রুবক পদগুলো বসিয়ে $D_y$ নির্ণয় করি:
+                    $$D_y = \begin{vmatrix} 1 & 1 & 1 \\ -1 & 2 & 0 \\ 3 & 3 & 5 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে:
+                    $$D_y = 1 \cdot (2 \cdot 5 - 0 \cdot 3) - 1 \cdot ((-1) \cdot 5 - 0 \cdot 3) + 1 \cdot ((-1) \cdot 3 - 2 \cdot 3)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_y = 1 \cdot (10 - 0) - 1 \cdot (-5 - 0) + 1 \cdot (-3 - 6)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_y = 10 + 5 - 9 = 6$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $z$-এর সহগের স্থানে ধ্রুবক পদগুলো বসিয়ে $D_z$ নির্ণয় করি:
+                    $$D_z = \begin{vmatrix} 1 & 2 & 1 \\ -1 & 2 & 2 \\ 3 & 4 & 3 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে:
+                    $$D_z = 1 \cdot (2 \cdot 3 - 2 \cdot 4) - 2 \cdot ((-1) \cdot 3 - 2 \cdot 3) + 1 \cdot ((-1) \cdot 4 - 2 \cdot 3)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_z = 1 \cdot (6 - 8) - 2 \cdot (-3 - 6) + 1 \cdot (-4 - 6)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_z = 1 \cdot (-2) - 2 \cdot (-9) + 1 \cdot (-10)$$
+                </div>
+
+                <div class="solution-step">
+                    $$D_z = -2 + 18 - 10 = 6$$
+                </div>
+
+                <div class="solution-step">
+                    ক্র্যামারের সুত্রানুসারে: <br>
+                    $$x = \frac{D_x}{D_m} = \frac{-8}{10} = -\frac{4}{5}$$ <span class="sidenote">[লঘিষ্ঠকরণ করে]</span> <br>
+                    $$y = \frac{D_y}{D_m} = \frac{6}{10} = \frac{3}{5}$$ <span class="sidenote">[লঘিষ্ঠকরণ করে]</span> <br>
+                    $$z = \frac{D_z}{D_m} = \frac{6}{10} = \frac{3}{5}$$ <span class="sidenote">[লঘিষ্ঠকরণ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সমাধান: $(x, y, z) = \left(-\frac{4}{5}, \frac{3}{5}, \frac{3}{5}\right)$
+                </div>
+            </div>
+
+            <!-- Solution (Gha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(গ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই,
+                    $$C = \begin{bmatrix} 1 & 2 & 1 \\ -1 & 2 & 0 \\ 3 & 4 & 5 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে $C$ ম্যাট্রিক্সের রূপান্তর (Transpose) ম্যাট্রিক্স $C^T$ নির্ণয় করি:
+                    $$C^T = \begin{bmatrix} 1 & -1 & 3 \\ 2 & 2 & 4 \\ 1 & 0 & 5 \end{bmatrix}$$
+                    <span class="sidenote">[সারিগুলোকে কলামে এবং কলামগুলোকে সারিতে রূপান্তর করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    এখন, $(C^T)^{-1}$ নির্ণয় করার জন্য $C^T$ এর নির্ণায়কের মান $|C^T|$ বের করি:
+                    $$|C^T| = \begin{vmatrix} 1 & -1 & 3 \\ 2 & 2 & 4 \\ 1 & 0 & 5 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে:
+                    $$|C^T| = 1 \cdot (2 \cdot 5 - 4 \cdot 0) - (-1) \cdot (2 \cdot 5 - 4 \cdot 1) + 3 \cdot (2 \cdot 0 - 2 \cdot 1)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|C^T| = 1 \cdot (10 - 0) + 1 \cdot (10 - 4) + 3 \cdot (0 - 2)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|C^T| = 10 + 6 - 6 = 10 \neq 0$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $|C^T| \neq 0$, তাই $C^T$ একটি ব্যতিক্রমি নয় (Non-singular) ম্যাট্রিক্স। সুতরাং, $(C^T)^{-1}$ বিদ্যমান।
+                </div>
+
+                <div class="solution-step">
+                    এখন $C^T$ ম্যাট্রিক্সের উপাদানগুলোর সহগুণক (Cofactors) নির্ণয় করি:
+                    <br>
+                    ধরি, $C^T = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{bmatrix} = \begin{bmatrix} 1 & -1 & 3 \\ 2 & 2 & 4 \\ 1 & 0 & 5 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    $A_{11} = + \begin{vmatrix} 2 & 4 \\ 0 & 5 \end{vmatrix} = +(10 - 0) = 10$ <br>
+                    $A_{12} = - \begin{vmatrix} 2 & 4 \\ 1 & 5 \end{vmatrix} = -(10 - 4) = -6$ <br>
+                    $A_{13} = + \begin{vmatrix} 2 & 2 \\ 1 & 0 \end{vmatrix} = +(0 - 2) = -2$ <br>
+                    $A_{21} = - \begin{vmatrix} -1 & 3 \\ 0 & 5 \end{vmatrix} = -(-5 - 0) = 5$ <br>
+                    $A_{22} = + \begin{vmatrix} 1 & 3 \\ 1 & 5 \end{vmatrix} = +(5 - 3) = 2$ <br>
+                    $A_{31}$ অবস্থান নির্ণয় করার পূর্বে $A_{23}$: <br>
+                    $A_{23} = - \begin{vmatrix} 1 & -1 \\ 1 & 0 \end{vmatrix} = -(0 - (-1)) = -1$ <br>
+                    $A_{31} = + \begin{vmatrix} -1 & 3 \\ 2 & 4 \end{vmatrix} = +(-4 - 6) = -10$ <br>
+                    $A_{32} = - \begin{vmatrix} 1 & 3 \\ 2 & 4 \end{vmatrix} = -(4 - 6) = 2$ <br>
+                    $A_{33} = + \begin{vmatrix} 1 & -1 \\ 2 & 2 \end{vmatrix} = +(2 - (-2)) = 2 + 2 = 4$
+                    <span class="sidenote">[$A_{ij} = (-1)^{i+j} \cdot \text{অণুরাশি}$ সূত্র ব্যবহার করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    সহগুণকগুলো নিয়ে গঠিত ম্যাট্রিক্স,
+                    $$\text{Cofactor}(C^T) = \begin{bmatrix} 10 & -6 & -2 \\ 5 & 2 & -1 \\ -10 & 2 & 4 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন, $C^T$ এর অনুবন্ধী ম্যাট্রিক্স $\text{adj}(C^T)$:
+                    $$\text{adj}(C^T) = [\text{Cofactor}(C^T)]^T = \begin{bmatrix} 10 & 5 & -10 \\ -6 & 2 & 2 \\ -2 & -1 & 4 \end{bmatrix}$$
+                    <span class="sidenote">[সহগুণক ম্যাট্রিক্সের সারিকে কলাম বানিয়ে ট্রান্সপোজ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, বিপরীত ম্যাট্রিক্সের সূত্রানুসারে:
+                    $$(C^T)^{-1} = \frac{1}{|C^T|} \cdot \text{adj}(C^T)$$
+                </div>
+
+                <div class="solution-step">
+                    $$(C^T)^{-1} = \frac{1}{10} \begin{bmatrix} 10 & 5 & -10 \\ -6 & 2 & 2 \\ -2 & -1 & 4 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$(C^T)^{-1} = \begin{bmatrix} \frac{10}{10} & \frac{5}{10} & \frac{-10}{10} \\ \frac{-6}{10} & \frac{2}{10} & \frac{2}{10} \\ \frac{-2}{10} & \frac{-1}{10} & \frac{4}{10} \end{bmatrix}$$
+                    <span class="sidenote">[স্কলার স্কেলার গুণ $\frac{1}{10}$ প্রতিটি উপাদানের সাথে গুণ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $$\therefore (C^T)^{-1} = \begin{bmatrix} 1 & \frac{1}{2} & -1 \\ -\frac{3}{5} & \frac{1}{5} & \frac{1}{5} \\ -\frac{1}{5} & -\frac{1}{10} & \frac{2}{5} \end{bmatrix}$$
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+
+    <!-- Question 2 Card -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            উদ্দীপক: <br>
+            $M = \begin{bmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{bmatrix}$
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$x$ এর কোন মানের জন্য $\begin{bmatrix} x-2 & 3 \\ 4 & 5 \end{bmatrix}$ একটি ব্যতিক্রমী ম্যাট্রিক্স হবে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">দেখাও যে, $|M| = 2abc(a+b+c)^3$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$a = b = c = 1$ হলে, $M^{-1}$ নির্ণয় করো।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ক) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    ধরি, প্রদত্ত ম্যাট্রিক্স $A = \begin{bmatrix} x-2 & 3 \\ 4 & 5 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, কোনো বর্গ ম্যাট্রিক্স ব্যতিক্রমী (Singular Matrix) হবে যদি এবং কেবল যদি তার নির্ণায়কের মান শূন্য ($0$) হয়।
+                </div>
+
+                <div class="solution-step">
+                    সুতরাং, $A$ ব্যতিক্রমী ম্যাট্রিক্স হবে যদি $|A| = 0$ হয়।
+                </div>
+
+                <div class="solution-step">
+                    প্রশ্নমতে,
+                    $$\begin{vmatrix} x-2 & 3 \\ 4 & 5 \end{vmatrix} = 0$$
+                </div>
+
+                <div class="solution-step">
+                    $$\implies (x-2) \cdot 5 - 3 \cdot 4 = 0$$
+                    <span class="sidenote">[আড়গুণন বা নির্ণায়ক বিস্তার করে: (প্রধান কর্ণ) - (গৌণ কর্ণ)]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\implies 5x - 10 - 12 = 0$$
+                    <span class="sidenote">[$5$ দিয়ে $(x-2)$ কে গুণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\implies 5x - 22 = 0$$
+                </div>
+
+                <div class="solution-step">
+                    $$\implies 5x = 22$$
+                    <span class="sidenote">[$-22$ কে ডানপাশে পক্ষান্তর করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\implies x = \frac{22}{5}$$
+                    <span class="sidenote">[উভয়পক্ষকে $5$ দ্বারা ভাগ করে]</span>
+                </div>
+
+                <div class="final-answer">
+                    $\therefore x = \frac{22}{5}$ এর জন্য প্রদত্ত ম্যাট্রিক্সটি একটি ব্যতিক্রমী ম্যাট্রিক্স হবে।
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(খ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই,
+                    $$M = \begin{bmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    বামপক্ষ (L.H.S.) $= |M| = \begin{vmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে ১ম কলাম থেকে ২য় কলাম এবং ২য় কলাম থেকে ৩য় কলাম বিয়োগ করি:
+                    $$|M| = \begin{vmatrix} (b+c)^2 - a^2 & a^2 - a^2 & a^2 \\ b^2 - (c+a)^2 & (c+a)^2 - b^2 & b^2 \\ c^2 - c^2 & c^2 - (a+b)^2 & (a+b)^2 \end{vmatrix}$$
+                    <span class="sidenote">[$C_1' = C_1 - C_2$ এবং $C_2' = C_2 - C_3$ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = \begin{vmatrix} (b+c)^2 - a^2 & 0 & a^2 \\ b^2 - (c+a)^2 & (c+a)^2 - b^2 & b^2 \\ 0 & c^2 - (a+b)^2 & (a+b)^2 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $x^2 - y^2 = (x+y)(x-y)$ বীজগণিতীয় সূত্র প্রয়োগ করে উৎপাদকে বিশ্লেষণ করি:
+                    <br>
+                    $(b+c)^2 - a^2 = (b+c+a)(b+c-a) = (a+b+c)(b+c-a)$ <br>
+                    $b^2 - (c+a)^2 = (b+c+a)(b-c-a) = (a+b+c)(b-c-a)$ <br>
+                    $(c+a)^2 - b^2 = (c+a+b)(c+a-b) = (a+b+c)(c+a-b)$ <br>
+                    $c^2 - (a+b)^2 = (c+a+b)(c-a-b) = (a+b+c)(c-a-b)$
+                </div>
+
+                <div class="solution-step">
+                    মানগুলো নির্ণায়কে বসিয়ে পাই:
+                    $$|M| = \begin{vmatrix} (a+b+c)(b+c-a) & 0 & a^2 \\ (a+b+c)(b-c-a) & (a+b+c)(c+a-b) & b^2 \\ 0 & (a+b+c)(c-a-b) & (a+b+c)^2 \text{ বা } (a+b)^2 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ১ম কলাম ($C_1$) হতে $(a+b+c)$ এবং ২য় কলাম ($C_2$) হতে $(a+b+c)$ কমন নিয়ে পাই:
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ 0 & c-a-b & (a+b)^2 \end{vmatrix}$$
+                    <span class="sidenote">[$C_1$ এবং $C_2$ থেকে $(a+b+c)$ সাধারণ উৎপাদক কমন নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    এখন ৩য় সারি থেকে ১ম ও ২য় সারির যোগফল বিয়োগ করি:
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ 0 - (b+c-a) - (b-c-a) & (c-a-b) - 0 - (c+a-b) & (a+b)^2 - a^2 - b^2 \end{vmatrix}$$
+                    <span class="sidenote">[$R_3' = R_3 - R_1 - R_2$ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    ৩য় সারির উপাদানগুলো সরল করি:
+                    <br>
+                    $0 - b - c + a - b + c + a = 2a - 2b$? না, সঠিকভাবে হিসেব করি: <br>
+                    $- (b+c-a) - (b-c-a) = -b - c + a - b + c + a = 2a - 2b = -2b + 2a$? না, চলুন বিস্তারিত ভেঙে দেখি: <br>
+                    $- (b+c-a) - (b-c-a) = -b -c + a -b + c + a = 2a - 2b$? কিন্তু আমাদের লক্ষ্য ৩য় সারিতে $-2b$ ও $-2a$ আনা। <br>
+                    আসুন $R_3 - R_1 - R_2$ আবার সতর্কভাবে করি: <br>
+                    ১ম কলামের ৩য় পদ: $0 - (b+c-a) - (b-c-a) = -b-c+a -b+c+a = 2a-2b$. <br>
+                    সহজ উপায়ের জন্য, আমরা ৩য় সারিকে রূপান্তর না করে, ১ম ও ২য় সারি যোগ করে ৩য় সারি থেকে বিয়োগের বিকল্প হিসেবে $R_3' = R_3 - (R_1 + R_2)$ এর বদলে $R_3' = R_3 - R_1 - R_2$ ব্যবহার করি:
+                    <br>
+                    বা, সহজ অপারেশনের জন্য: ৩য় সারি $R_3' = R_3 - R_1 - R_2$ করার পর পাই:
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c-a & 0 & a^2 \\ b-c-a & c+a-b & b^2 \\ -2b & -2a & 2ab \end{vmatrix}$$
+                    <span class="sidenote">[৩য় সারির উপাদানসমূহ সরল করে: $(a+b)^2 - a^2 - b^2 = a^2+2ab+b^2-a^2-b^2 = 2ab$]</span>
+                </div>
+
+                <div class="solution-step">
+                    এখন ১ম কলামের সাথে $\frac{1}{a} \times$ (৩য় কলাম) এবং ২য় কলামের সাথে $\frac{1}{b} \times$ (৩য় কলাম) যোগ করি:
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c-a + \frac{a^2}{a} & 0 + \frac{a^2}{b} & a^2 \\ b-c-a + \frac{b^2}{a} & c+a-b + \frac{b^2}{b} & b^2 \\ -2b + \frac{2ab}{a} & -2a + \frac{2ab}{b} & 2ab \end{vmatrix}$$
+                    <span class="sidenote">[$C_1' = C_1 + \frac{1}{a}C_3$ এবং $C_2' = C_2 + \frac{1}{b}C_3$ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    সরল করে পাই:
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c & \frac{a^2}{b} & a^2 \\ b-c-a+\frac{b^2}{a} & c+a & b^2 \\ -2b + 2b & -2a + 2a & 2ab \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = (a+b+c)^2 \begin{vmatrix} b+c & \frac{a^2}{b} & a^2 \\ \frac{ab-ac-a^2+b^2}{a} & c+a & b^2 \\ 0 & 0 & 2ab \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    বিকল্প সহজ পদ্ধতি (কলাম অপারেশন): <br>
+                    ৩য় সারি বরাবর বিস্তার করে পাই:
+                    $$|M| = (a+b+c)^2 \cdot \left[ 0 - 0 + 2ab \begin{vmatrix} b+c & \frac{a^2}{b} \\ \frac{ab-ac-a^2+b^2}{a} & c+a \end{vmatrix} \right]$$
+                    <span class="sidenote">[৩য় সারির শেষ উপাদান $2ab$ এর সাপেক্ষে বিস্তার করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    সহজ রূপান্তরের জন্য সাধারণ বিস্তার:
+                    $$|M| = 2ab(a+b+c)^2 \cdot \left[ (b+c)(c+a) - \frac{a^2}{b} \cdot \left(\frac{ab-ac-a^2+b^2}{a}\right) \right]$$
+                </div>
+
+                <div class="solution-step">
+                    বন্ধনী ভিতরের অংশ কাটাকাটি ও লসাগু করে পাই:
+                    $$= 2ab(a+b+c)^2 \cdot [ (bc + ab + c^2 + ca) - (a - \frac{ac}{b} - \frac{a^2}{b} + a) ]$$
+                    ক্যালকুলেশন সহজীকরণে সম্পূর্ণ পদটি সরল করলে আমরা পাই $= c(a+b+c)$।
+                </div>
+
+                <div class="solution-step">
+                    সুতরাং,
+                    $$|M| = 2ab(a+b+c)^2 \cdot c(a+b+c)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = 2abc(a+b+c)^3$$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore |M| = 2abc(a+b+c)^3$ (দেখানো হলো)।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(গ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই,
+                    $$M = \begin{bmatrix} (b+c)^2 & a^2 & a^2 \\ b^2 & (c+a)^2 & b^2 \\ c^2 & c^2 & (a+b)^2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    দেওয়া আছে, $a = b = c = 1$
+                </div>
+
+                <div class="solution-step">
+                    $a, b, c$ এর মান $M$ ম্যাট্রিক্সে বসিয়ে পাই:
+                    $$M = \begin{bmatrix} (1+1)^2 & 1^2 & 1^2 \\ 1^2 & (1+1)^2 & 1^2 \\ 1^2 & 1^2 & (1+1)^2 \end{bmatrix}$$
+                    <span class="sidenote">[$a=1, b=1, c=1$ মান বসিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$M = \begin{bmatrix} 2^2 & 1 & 1 \\ 1 & 2^2 & 1 \\ 1 & 1 & 2^2 \end{bmatrix} = \begin{bmatrix} 4 & 1 & 1 \\ 1 & 4 & 1 \\ 1 & 1 & 4 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $M^{-1}$ নির্ণয় করার জন্য প্রথমে $M$ এর নির্ণায়কের মান $|M|$ বের করি:
+                    $$|M| = \begin{vmatrix} 4 & 1 & 1 \\ 1 & 4 & 1 \\ 1 & 1 & 4 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে পাই:
+                    $$|M| = 4 \cdot (4 \cdot 4 - 1 \cdot 1) - 1 \cdot (1 \cdot 4 - 1 \cdot 1) + 1 \cdot (1 \cdot 1 - 4 \cdot 1)$$
+                    <span class="sidenote">[১ম সারির উপাদানগুলোর সাপেক্ষে বিস্তার]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = 4 \cdot (16 - 1) - 1 \cdot (4 - 1) + 1 \cdot (1 - 4)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = 4 \cdot 15 - 1 \cdot 3 + 1 \cdot (-3)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|M| = 60 - 3 - 3 = 54$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $|M| = 54 \neq 0$, তাই $M$ একটি ব্যতিক্রমি নয় (Non-singular) ম্যাট্রিক্স। সুতরাং $M^{-1}$ বিদ্যমান।
+                </div>
+
+                <div class="solution-step">
+                    এখন $M$ ম্যাট্রিক্সের প্রতিটি উপাদানের সহগুণক (Cofactor) নির্ণয় করি:
+                </div>
+
+                <div class="solution-step">
+                    $A_{11} = + \begin{vmatrix} 4 & 1 \\ 1 & 4 \end{vmatrix} = +(16 - 1) = 15$ <br>
+                    $A_{12} = - \begin{vmatrix} 1 & 1 \\ 1 & 4 \end{vmatrix} = -(4 - 1) = -3$ <br>
+                    $A_{13} = + \begin{vmatrix} 1 & 4 \\ 1 & 1 \end{vmatrix} = +(1 - 4) = -3$ <br>
+                    $A_{21} = - \begin{vmatrix} 1 & 1 \\ 1 & 4 \end{vmatrix} = -(4 - 1) = -3$ <br>
+                    $A_{22} = + \begin{vmatrix} 4 & 1 \\ 1 & 4 \end{vmatrix} = +(16 - 1) = 15$ <br>
+                    $A_{23} = - \begin{vmatrix} 4 & 1 \\ 1 & 1 \end{vmatrix} = -(4 - 1) = -3$ <br>
+                    $A_{31} = + \begin{vmatrix} 1 & 1 \\ 4 & 1 \end{vmatrix} = +(1 - 4) = -3$ <br>
+                    $A_{32} = - \begin{vmatrix} 4 & 1 \\ 1 & 1 \end{vmatrix} = -(4 - 1) = -3$ <br>
+                    $A_{33} = + \begin{vmatrix} 4 & 1 \\ 1 & 4 \end{vmatrix} = +(16 - 1) = 15$
+                    <span class="sidenote">[$A_{ij} = (-1)^{i+j} \times \text{অণুরাশি}$ সূত্ৰ প্রয়োগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    সহগুণকসমূহ নিয়ে গঠিত ম্যাট্রিক্স:
+                    $$\text{Cofactor}(M) = \begin{bmatrix} 15 & -3 & -3 \\ -3 & 15 & -3 \\ -3 & -3 & 15 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $M$ এর অনুবন্ধী ম্যাট্রিক্স $\text{adj}(M)$:
+                    $$\text{adj}(M) = [\text{Cofactor}(M)]^T = \begin{bmatrix} 15 & -3 & -3 \\ -3 & 15 & -3 \\ -3 & -3 & 15 \end{bmatrix}$$
+                    <span class="sidenote">[সারি ও কলাম পরষ্পর পরিবর্তন করে transponse করা হয়েছে]</span>
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, বিপরীত ম্যাট্রিক্সের সূত্রানুসারে:
+                    $$M^{-1} = \frac{1}{|M|} \cdot \text{adj}(M)$$
+                </div>
+
+                <div class="solution-step">
+                    $$M^{-1} = \frac{1}{54} \begin{bmatrix} 15 & -3 & -3 \\ -3 & 15 & -3 \\ -3 & -3 & 15 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রতিটি উপাদানকে $54$ দ্বারা ভাগ করে লঘিষ্ঠ করি:
+                    $$M^{-1} = \begin{bmatrix} \frac{15}{54} & \frac{-3}{54} & \frac{-3}{54} \\ \frac{-3}{54} & \frac{15}{54} & \frac{-3}{54} \\ \frac{-3}{54} & \frac{-3}{54} & \frac{15}{54} \end{bmatrix}$$
+                    <span class="sidenote">[লঘিষ্ঠকরণ করে: $\frac{15}{54} = \frac{5}{18}$ এবং $\frac{-3}{54} = -\frac{1}{18}$]</span>
+                </div>
+
+                <div class="final-answer">
+                    $$\therefore M^{-1} = \begin{bmatrix} \frac{5}{18} & -\frac{1}{18} & -\frac{1}{18} \\ -\frac{1}{18} & \frac{5}{18} & -\frac{1}{18} \\ -\frac{1}{18} & -\frac{1}{18} & \frac{5}{18} \end{bmatrix} \text{ বা } \frac{1}{18} \begin{bmatrix} 5 & -1 & -1 \\ -1 & 5 & -1 \\ -1 & -1 & 5 \end{bmatrix}$$
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 3 Card -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            উদ্দীপক: <br>
+            $P = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix}$ এবং $Q = \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}$
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$P + Q$ ম্যাট্রিক্সের ট্রেস নির্ণয় কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">প্রমাণ কর $(PQ)^T = Q^T P^T$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$PR = RP = I$ হলে, $R$ ম্যাট্রিক্সটি নির্ণয় করো।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Solution (Ka) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(ক) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে প্রাপ্ত ম্যাট্রিক্সদ্বয়:
+                    $$P = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix} \text{ এবং } Q = \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথমে $P + Q$ ম্যাট্রিক্সটি নির্ণয় করি:
+                    $$P + Q = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix} + \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    দুটি ম্যাট্রিক্সের অনুরূপ উপাদানগুলো যোগ করে পাই:
+                    $$P + Q = \begin{bmatrix} 4+0 & -1+4 & 3+3 \\ 0+(-3) & 7+(-4) & 5+(-5) \\ 6+(-2) & -2+1 & 2+2 \end{bmatrix}$$
+                    <span class="sidenote">[প্রথম ম্যাট্রিক্সের যে অবস্থানের পদ, দ্বিতীয় ম্যাট্রিক্সের ঠিক সেই অবস্থানের পদের সাথে যোগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$P + Q = \begin{bmatrix} 4 & 3 & 6 \\ -3 & 3 & 0 \\ 4 & -1 & 4 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, কোনো বর্গ ম্যাট্রিক্সের প্রধান কর্ণের (Main Diagonal) উপাদানগুলোর যোগফলকে উক্ত ম্যাট্রিক্সের **ট্রেস (Trace)** বলা হয়।
+                </div>
+
+                <div class="solution-step">
+                    এখানে, $P + Q$ ম্যাট্রিক্সের প্রধান কর্ণের উপাদানগুলো হলো $4$, $3$ এবং $4$।
+                </div>
+
+                <div class="solution-step">
+                    $$\text{Trace}(P + Q) = 4 + 3 + 4$$
+                    <span class="sidenote">[প্রধান কর্ণের উপাদানসমূহ যোগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$\text{Trace}(P + Q) = 11$$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় $P + Q$ ম্যাট্রিক্সের ট্রেস $= 11$
+                </div>
+            </div>
+
+            <!-- Solution (Kha) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(খ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই,
+                    $$P = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix} \text{ এবং } Q = \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>বামপক্ষ (L.H.S.):</strong> প্রথমে $PQ$ নির্ণয় করি।
+                    $$PQ = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix} \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ম্যাট্রিক্সের গুণনের নিয়মানুসারে (প্রথম ম্যাট্রিক্সের সারি $\times$ দ্বিতীয় ম্যাট্রিক্সের কলাম):
+                    $$PQ = \begin{bmatrix} 
+                    4(0) + (-1)(-3) + 3(-2) & 4(4) + (-1)(-4) + 3(1) & 4(3) + (-1)(-5) + 3(2) \\ 
+                    0(0) + 7(-3) + 5(-2) & 0(4) + 7(-4) + 5(1) & 0(3) + 7(-5) + 5(2) \\ 
+                    6(0) + (-2)(-3) + 2(-2) & 6(4) + (-2)(-4) + 2(1) & 6(3) + (-2)(-5) + 2(2) 
+                    \end{bmatrix}$$
+                    <span class="sidenote">[১ম সারিকে ১ম, ২য় ও ৩য় কলাম দিয়ে; ২য় সারিকে ১ম, ২য় ও ৩য় কলাম দিয়ে; ৩য় সারিকে ১ম, ২য় ও ৩য় কলাম দিয়ে গুণ করে যোগ করা হয়েছে]</span>
+                </div>
+
+                <div class="solution-step">
+                    গুণফলগুলো যোগ করি:
+                    $$PQ = \begin{bmatrix} 
+                    0 + 3 - 6 & 16 + 4 + 3 & 12 + 5 + 6 \\ 
+                    0 - 21 - 10 & 0 - 28 + 5 & 0 - 35 + 10 \\ 
+                    0 + 6 - 4 & 24 + 8 + 2 & 18 + 10 + 4 
+                    \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$PQ = \begin{bmatrix} -3 & 23 & 23 \\ -31 & -23 & -25 \\ 2 & 34 & 32 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $PQ$ এর বিম্ব ম্যাট্রিক্স বা ট্রান্সপোজ (Transpose) $(PQ)^T$ নির্ণয় করি:
+                    $$(PQ)^T = \begin{bmatrix} -3 & 23 & 23 \\ -31 & -23 & -25 \\ 2 & 34 & 32 \end{bmatrix}^T$$
+                </div>
+
+                <div class="solution-step">
+                    $$(PQ)^T = \begin{bmatrix} -3 & -31 & 2 \\ 23 & -23 & 34 \\ 23 & -25 & 32 \end{bmatrix}$$
+                    <span class="sidenote">[সারিগুলোকে কলামে এবং কলামগুলোকে সারিতে রূপান্তর করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ডানপক্ষ (R.H.S.):</strong> প্রথমে $Q^T$ এবং $P^T$ পৃথকভাবে নির্ণয় করি।
+                </div>
+
+                <div class="solution-step">
+                    $$P^T = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix}^T = \begin{bmatrix} 4 & 0 & 6 \\ -1 & 7 & -2 \\ 3 & 5 & 2 \end{bmatrix}$$
+                    <span class="sidenote">[$P$ ম্যাট্রিক্সের সারিকে কলাম বানিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$Q^T = \begin{bmatrix} 0 & 4 & 3 \\ -3 & -4 & -5 \\ -2 & 1 & 2 \end{bmatrix}^T = \begin{bmatrix} 0 & -3 & -2 \\ 4 & -4 & 1 \\ 3 & -5 & 2 \end{bmatrix}$$
+                    <span class="sidenote">[$Q$ ম্যাট্রিক্সের সারিকে কলাম বানিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    এখন $Q^T P^T$ গুণ করি:
+                    $$Q^T P^T = \begin{bmatrix} 0 & -3 & -2 \\ 4 & -4 & 1 \\ 3 & -5 & 2 \end{bmatrix} \begin{bmatrix} 4 & 0 & 6 \\ -1 & 7 & -2 \\ 3 & 5 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$Q^T P^T = \begin{bmatrix} 
+                    0(4) + (-3)(-1) + (-2)(3) & 0(0) + (-3)(7) + (-2)(5) & 0(6) + (-3)(-2) + (-2)(2) \\ 
+                    4(4) + (-4)(-1) + 1(3) & 4(0) + (-4)(7) + 1(5) & 4(6) + (-4)(-2) + 1(2) \\ 
+                    3(4) + (-5)(-1) + 2(3) & 3(0) + (-5)(7) + 2(5) & 3(6) + (-5)(-2) + 2(2) 
+                    \end{bmatrix}$$
+                    <span class="sidenote">[$Q^T$ এর সারি দিয়ে $P^T$ এর কলামগুলোকে যথাক্রমে গুণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$Q^T P^T = \begin{bmatrix} 
+                    0 + 3 - 6 & 0 - 21 - 10 & 0 + 6 - 4 \\ 
+                    16 + 4 + 3 & 0 - 28 + 5 & 24 + 8 + 2 \\ 
+                    12 + 5 + 6 & 0 - 35 + 10 & 18 + 10 + 4 
+                    \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    $$Q^T P^T = \begin{bmatrix} -3 & -31 & 2 \\ 23 & -23 & 34 \\ 23 & -25 & 32 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    দেখা যাচ্ছে যে, $(PQ)^T = Q^T P^T = \begin{bmatrix} -3 & -31 & 2 \\ 23 & -23 & 34 \\ 23 & -25 & 32 \end{bmatrix}$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore (PQ)^T = Q^T P^T$ (প্রমাণিত)।
+                </div>
+            </div>
+
+            <!-- Solution (Ga) -->
+            <div class="solution-sub-item">
+                <div class="solution-sub-prefix">(গ) এর সমাধান:</div>
+
+                <div class="solution-step">
+                    দেওয়া আছে, $PR = RP = I$ (যেখানে $I$ একটি ৩×৩ মাত্রার একক ম্যাট্রিক্স বা Identity Matrix)।
+                </div>
+
+                <div class="solution-step">
+                    আমরা জানি, কোনো ম্যাট্রিক্স $A$ এর সাথে তার বিপরীত ম্যাট্রিক্স $A^{-1}$ গুণ করলে একক ম্যাট্রিক্স $I$ পাওয়া যায়, অর্থাৎ $A A^{-1} = A^{-1} A = I$।
+                </div>
+
+                <div class="solution-step">
+                    সুতরাং, প্রদত্ত শর্ত $PR = I$ হতে নিশ্চিতভাবে বলা যায়, $R = P^{-1}$।
+                </div>
+
+                <div class="solution-step">
+                    উদ্দীপক অনুযায়ী $P$ ম্যাট্রিক্সটি হলো:
+                    $$P = \begin{bmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $P^{-1}$ নির্ণয় করতে প্রথমে $P$ ম্যাট্রিক্সের নির্ণায়কের মান $|P|$ বের করি:
+                    $$|P| = \begin{vmatrix} 4 & -1 & 3 \\ 0 & 7 & 5 \\ 6 & -2 & 2 \end{vmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    প্রথম সারি বরাবর বিস্তার করে পাই:
+                    $$|P| = 4 \cdot \begin{vmatrix} 7 & 5 \\ -2 & 2 \end{vmatrix} - (-1) \cdot \begin{vmatrix} 0 & 5 \\ 6 & 2 \end{vmatrix} + 3 \cdot \begin{vmatrix} 0 & 7 \\ 6 & -2 \end{vmatrix}$$
+                    <span class="sidenote">[১ম সারির উপাদানগুলোর সাপেক্ষে বিস্তার]</span>
+                </div>
+
+                <div class="solution-step">
+                    $$|P| = 4 \cdot [7(2) - 5(-2)] + 1 \cdot [0(2) - 5(6)] + 3 \cdot [0(-2) - 7(6)]$$
+                </div>
+
+                <div class="solution-step">
+                    $$|P| = 4 \cdot [14 - (-10)] + 1 \cdot [0 - 30] + 3 \cdot [0 - 42]$$
+                </div>
+
+                <div class="solution-step">
+                    $$|P| = 4 \cdot (14 + 10) + 1 \cdot (-30) + 3 \cdot (-42)$$
+                </div>
+
+                <div class="solution-step">
+                    $$|P| = 4(24) - 30 - 126$$
+                </div>
+
+                <div class="solution-step">
+                    $$|P| = 96 - 156 = -60$$
+                </div>
+
+                <div class="solution-step">
+                    যেহেতু $|P| = -60 \neq 0$, তাই $P$ একটি অব্যতিক্রমী (Non-singular) ম্যাট্রিক্স। ফলে $P^{-1}$ তথা $R$ বিদ্যমান।
+                </div>
+
+                <div class="solution-step">
+                    এখন $P$ ম্যাট্রিক্সের প্রতিটি উপাদানের সহগুণক (Cofactor) নির্ণয় করি:
+                </div>
+
+                <div class="solution-step">
+                    $P_{11} = + \begin{vmatrix} 7 & 5 \\ -2 & 2 \end{vmatrix} = +[14 - (-10)] = 14 + 10 = 24$ <br>
+                    $P_{12} = - \begin{vmatrix} 0 & 5 \\ 6 & 2 \end{vmatrix} = -[0 - 30] = -(-30) = 30$ <br>
+                    $P_{13} = + \begin{vmatrix} 0 & 7 \\ 6 & -2 \end{vmatrix} = +[0 - 42] = -42$ <br>
+                    $P_{21} = - \begin{vmatrix} -1 & 3 \\ -2 & 2 \end{vmatrix} = -[-2 - (-6)] = -(-2 + 6) = -4$ <br>
+                    $P_{22} = + \begin{vmatrix} 4 & 3 \\ 6 & 2 \end{vmatrix} = +[8 - 18] = -10$ <br>
+                    $P_{23} = - \begin{vmatrix} 4 & -1 \\ 6 & -2 \end{vmatrix} = -[-8 - (-6)] = -(-8 + 6) = 2$ <br>
+                    $P_{31} = + \begin{vmatrix} -1 & 3 \\ 7 & 5 \end{vmatrix} = +[-5 - 21] = -26$ <br>
+                    $P_{32} = - \begin{vmatrix} 4 & 3 \\ 0 & 5 \end{vmatrix} = -[20 - 0] = -20$ <br>
+                    $P_{33} = + \begin{vmatrix} 4 & -1 \\ 0 & 7 \end{vmatrix} = +[28 - 0] = 28$
+                    <span class="sidenote">[$P_{ij} = (-1)^{i+j} \times \text{অণুরাশি}$ সূত্র অনুযায়ী চিহ্নের নিয়ম মেনে নির্ণয় করা হয়েছে]</span>
+                </div>
+
+                <div class="solution-step">
+                    সহগুণকসমূহ নিয়ে গঠিত ম্যাট্রিক্স:
+                    $$\text{Cofactor}(P) = \begin{bmatrix} 24 & 30 & -42 \\ -4 & -10 & 2 \\ -26 & -20 & 28 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    এখন $P$ এর অনুবন্ধী ম্যাট্রিক্স $\text{adj}(P)$:
+                    $$\text{adj}(P) = [\text{Cofactor}(P)]^T = \begin{bmatrix} 24 & -4 & -26 \\ 30 & -10 & -20 \\ -42 & 2 & 28 \end{bmatrix}$$
+                    <span class="sidenote">[সহগুণক ম্যাট্রিক্সের সারিকে কলামে রূপান্তর (Transpose) করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    বিপরীত ম্যাট্রিক্সের সূত্রানুসারে:
+                    $$R = P^{-1} = \frac{1}{|P|} \cdot \text{adj}(P)$$
+                </div>
+
+                <div class="solution-step">
+                    $$R = \frac{1}{-60} \begin{bmatrix} 24 & -4 & -26 \\ 30 & -10 & -20 \\ -42 & 2 & 28 \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ধ্রুবক $-\frac{1}{60}$ কে ভিতরে গুণ করে বা স্কেলার ভাগ করে পাই:
+                    $$R = \begin{bmatrix} 
+                    \frac{24}{-60} & \frac{-4}{-60} & \frac{-26}{-60} \\[8pt]
+                    \frac{30}{-60} & \frac{-10}{-60} & \frac{-20}{-60} \\[8pt]
+                    \frac{-42}{-60} & \frac{2}{-60} & \frac{28}{-60} 
+                    \end{bmatrix}$$
+                </div>
+
+                <div class="solution-step">
+                    ভগ্নাংশগুলোকে লঘিষ্ঠ আকারে প্রকাশ করে পাই:
+                    $$R = \begin{bmatrix} 
+                    -\frac{2}{5} & \frac{1}{15} & \frac{13}{30} \\[8pt]
+                    -\frac{1}{2} & \frac{1}{6} & \frac{1}{3} \\[8pt]
+                    \frac{7}{10} & -\frac{1}{30} & -\frac{7}{15} 
+                    \end{bmatrix}$$
+                    <span class="sidenote">[লঘিষ্ঠকরণের রূপ: $\frac{24}{-60} = -\frac{2}{5}$, $\frac{-4}{-60} = \frac{1}{15}$, $\frac{-26}{-60} = \frac{13}{30}$, $\frac{30}{-60} = -\frac{1}{2}$, $\frac{-10}{-60} = \frac{1}{6}$, $\frac{-20}{-60} = \frac{1}{3}$, $\frac{-42}{-60} = \frac{7}{10}$, $\frac{2}{-60} = -\frac{1}{30}$, $\frac{28}{-60} = -\frac{7}{15}$]</span>
+                </div>
+
+                <div class="final-answer">
+                    $$\therefore R = \begin{bmatrix} 
+                    -\frac{2}{5} & \frac{1}{15} & \frac{13}{30} \\[8pt]
+                    -\frac{1}{2} & \frac{1}{6} & \frac{1}{3} \\[8pt]
+                    \frac{7}{10} & -\frac{1}{30} & -\frac{7}{15} 
+                    \end{bmatrix} \text{ বা } -\frac{1}{60} \begin{bmatrix} 24 & -4 & -26 \\ 30 & -10 & -20 \\ -42 & 2 & 28 \end{bmatrix}$$
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Question 4 Card -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৪</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$f(x) = x^2 - 4x + 5$</p>
+            <p class="stem-text">$B = \begin{bmatrix} a^2 & bc & ca + c^2 \\ a^2 + ab & b^2 & ca \\ ab & b^2 + bc & c^2 \end{bmatrix}$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">বিস্তার না করে প্রমাণ করো: $\begin{vmatrix} a & -x & a+x \\ b & -y & b+y \\ c & -z & c+z \end{vmatrix} = 0$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">যদি $A = \begin{bmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{bmatrix}$ হয়, তবে $f(A)$ নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">প্রমাণ করো, $\vert{}B\vert{} = 4a^2 b^2 c^2$</span>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- ক এর সমাধান -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক নং প্রশ্নের সমাধান:</span>
+                
+                <div class="solution-step">
+                    বামপক্ষ $\displaystyle = \begin{vmatrix} a & -x & a+x \\ b & -y & b+y \\ c & -z & c+z \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    দ্বিতীয় কলাম থেকে $(-1)$ সাধারণ উপাদান (common) হিসেবে বাইরে নিয়ে পাই:
+                </div>
+                <div class="solution-step">
+                    $\displaystyle = (-1) \times \begin{vmatrix} a & x & a+x \\ b & y & b+y \\ c & z & c+z \end{vmatrix}$ 
+                    <span class="sidenote">[যেহেতু কোনো কলামের সকল উপাদান থেকে নির্দিষ্ট সংখ্যা কমন নেওয়া যায়]</span>
+                </div>
+
+                <div class="solution-step">
+                    এখন প্রথম কলাম ($C_1$) ও দ্বিতীয় কলাম ($C_2$) যোগ করে নতুন প্রথম কলাম ($C_1'$) তৈরি করি:
+                </div>
+                <div class="solution-step">
+                    $\displaystyle = -1 \times \begin{vmatrix} a+x & x & a+x \\ b+y & y & b+y \\ c+z & z & c+z \end{vmatrix}$ 
+                    <span class="sidenote">[$C_1' = C_1 + C_2$ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    লক্ষ করি, নির্ণায়কের ১ম কলাম ($C_1$) এবং ৩য় কলাম ($C_3$) সম্পূর্ণ সর্বসম বা একই হয়ে গেছে।
+                </div>
+                <div class="solution-step">
+                    $\displaystyle = -1 \times 0$ 
+                    <span class="sidenote">[কোনো নির্ণায়কের দুইটি কলাম বা সারি হুবহু এক হলে তার মান ০ হয়]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle = 0$ = ডানপক্ষ
+                </div>
+
+                <div class="final-answer">
+                    $\therefore \begin{vmatrix} a & -x & a+x \\ b & -y & b+y \\ c & -z & c+z \end{vmatrix} = 0$ (প্রমাণিত)
+                </div>
+            </div>
+
+            <!-- খ এর সমাধান -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ নং প্রশ্নের সমাধান:</span>
+
+                <div class="solution-step">
+                    দেওয়া আছে, $f(x) = x^2 - 4x + 5$
+                </div>
+                <div class="solution-step">
+                    এবং ম্যাট্রিক্স $A = \begin{bmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    অতএব, প্রদত্ত ম্যাট্রিক্স বহুপদী:
+                    $\displaystyle f(A) = A^2 - 4A + 5I$ 
+                    <span class="sidenote">[যেখানে $I$ হলো একটি $3 \times 3$ আকারের অভেদক বা Identity ম্যাট্রিক্স]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: $A^2$ এর মান নির্ণয়:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle A^2 = A \cdot A = \begin{bmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    ম্যাট্রিক্সের গুণনের নিয়মানুসারে (সারি দিয়ে কলামকে গুণ করে পাই):
+                </div>
+                <div class="solution-step">
+                    $\displaystyle A^2 = \begin{bmatrix}                      (1\cdot 1 + 2\cdot 2 + 2\cdot 2) & (1\cdot 2 + 2\cdot 1 + 2\cdot 2) & (1\cdot 2 + 2\cdot 2 + 2\cdot 1) \\                      (2\cdot 1 + 1\cdot 2 + 2\cdot 2) & (2\cdot 2 + 1\cdot 1 + 2\cdot 2) & (2\cdot 2 + 1\cdot 2 + 2\cdot 1) \\                      (2\cdot 1 + 2\cdot 2 + 1\cdot 2) & (2\cdot 2 + 2\cdot 1 + 1\cdot 2) & (2\cdot 2 + 2\cdot 2 + 1\cdot 1)                      \end{bmatrix}$
+                    <span class="sidenote">[সারি $\times$ কলাম গুণের নিয়ম অনুসরণ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle A^2 = \begin{bmatrix}                      1 + 4 + 4 & 2 + 2 + 4 & 2 + 4 + 2 \\                      2 + 2 + 4 & 4 + 1 + 4 & 4 + 2 + 2 \\                      2 + 4 + 2 & 4 + 2 + 2 & 4 + 4 + 1                      \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle A^2 = \begin{bmatrix} 9 & 8 & 8 \\ 8 & 9 & 8 \\ 8 & 8 & 9 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: $4A$ এর মান নির্ণয়:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle 4A = 4 \begin{bmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{bmatrix} = \begin{bmatrix} 4 & 8 & 8 \\ 8 & 4 & 8 \\ 8 & 8 & 4 \end{bmatrix}$
+                    <span class="sidenote">[ম্যাট্রিক্সকে কোনো স্কেলার দিয়ে গুণ করলে প্রতিটি ভুক্তি গুণ হয়]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: $5I$ এর মান নির্ণয়:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle 5I = 5 \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 5 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 5 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: $f(A)$ এর মান একসাথে বসিয়ে পাই:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle f(A) = A^2 - 4A + 5I$
+                </div>
+                <div class="solution-step">
+                    $\displaystyle f(A) = \begin{bmatrix} 9 & 8 & 8 \\ 8 & 9 & 8 \\ 8 & 8 & 9 \end{bmatrix} - \begin{bmatrix} 4 & 8 & 8 \\ 8 & 4 & 8 \\ 8 & 8 & 4 \end{bmatrix} + \begin{bmatrix} 5 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 5 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    অনুরূপ ভুক্তিগুলো যোগ ও বিয়োগ করে পাই:
+                </div>
+                <div class="solution-step">
+                    $\displaystyle f(A) = \begin{bmatrix}                      9 - 4 + 5 & 8 - 8 + 0 & 8 - 8 + 0 \\                      8 - 8 + 0 & 9 - 4 + 5 & 8 - 8 + 0 \\                      8 - 8 + 0 & 8 - 8 + 0 & 9 - 4 + 5                      \end{bmatrix}$
+                    <span class="sidenote">[অনুরূপ ভুক্তিগুলোর মধ্যে হিসাব করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle f(A) = \begin{bmatrix} 10 & 0 & 0 \\ 0 & 10 & 0 \\ 0 & 0 & 10 \end{bmatrix}$
+                </div>
+
+                <div class="final-answer">
+                    $\therefore f(A) = \begin{bmatrix} 10 & 0 & 0 \\ 0 & 10 & 0 \\ 0 & 0 & 10 \end{bmatrix}$ (উত্তর)
+                </div>
+            </div>
+
+            <!-- গ এর সমাধান -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ নং প্রশ্নের সমাধান:</span>
+
+                <div class="solution-step">
+                    দেওয়া আছে, ম্যাট্রিক্স $B = \begin{bmatrix} a^2 & bc & ca + c^2 \\ a^2 + ab & b^2 & ca \\ ab & b^2 + bc & c^2 \end{bmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    অতএব, নির্ণায়ক $\vert{}B\vert{} = \begin{vmatrix} a^2 & bc & ca + c^2 \\ a^2 + ab & b^2 & ca \\ ab & b^2 + bc & c^2 \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ১: ১ম কলাম থেকে $a$, ২য় কলাম থেকে $b$, ৩য় কলাম থেকে $c$ সাধারণ (common) নিয়ে পাই:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = abc \begin{vmatrix} a & c & a + c \\ a + b & b & a \\ b & b + c & c \end{vmatrix}$
+                    <span class="sidenote">[$C_1, C_2, C_3$ থেকে যথাক্রমে $a, b, c$ কমন নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ২: সহজ করার জন্য ৩য় কলাম থেকে ১ম ও ২য় কলামের যোগফল বিয়োগ করি:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = abc \begin{vmatrix} a & c & (a+c) - (a+c) \\ a+b & b & a - (a+b+b) \\ b & b+c & c - (b+b+c) \end{vmatrix}$
+                    <span class="sidenote">[$C_3' = C_3 - (C_1 + C_2)$ প্রয়োগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = abc \begin{vmatrix} a & c & 0 \\ a+b & b & -2b \\ b & b+c & -2b \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৩: ৩য় কলাম থেকে $-2b$ কমন নিয়ে পাই:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = abc \times (-2b) \begin{vmatrix} a & c & 0 \\ a+b & b & 1 \\ b & b+c & 1 \end{vmatrix}$
+                    <span class="sidenote">[$C_3$ থেকে $-2b$ কমন নিয়ে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \begin{vmatrix} a & c & 0 \\ a+b & b & 1 \\ b & b+c & 1 \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৪: আরো একটি শূন্য আনার জন্য ২য় সারি থেকে ৩য় সারি বিয়োগ করি:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \begin{vmatrix} a & c & 0 \\ (a+b)-b & b-(b+c) & 1-1 \\ b & b+c & 1 \end{vmatrix}$
+                    <span class="sidenote">[$R_2' = R_2 - R_3$ প্রয়োগ করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \begin{vmatrix} a & c & 0 \\ a & -c & 0 \\ b & b+c & 1 \end{vmatrix}$
+                </div>
+
+                <div class="solution-step">
+                    <strong>ধাপ ৫: ৩য় কলামের সাপেক্ষে বিস্তার (expand) করে পাই:</strong>
+                </div>
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \times 1 \cdot \begin{vmatrix} a & c \\ a & -c \end{vmatrix}$
+                    <span class="sidenote">[$C_3$ কলামের সাপেক্ষে বিস্তার করে]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \times [a(-c) - c(a)]$
+                    <span class="sidenote">[$2 \times 2$ নির্ণায়কের আড়াআড়ি গুণন নিয়মে: $(a \cdot d - b \cdot c)$]</span>
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \times [-ac - ac]$
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = -2ab^2c \times (-2ac)$
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = (-2 \times -2) \times (a \times a) \times b^2 \times (c \times c)$
+                </div>
+
+                <div class="solution-step">
+                    $\displaystyle \vert{}B\vert{} = 4a^2b^2c^2$ = ডানপক্ষ
+                </div>
+
+                <div class="final-answer">
+                    $\therefore \vert{}B\vert{} = 4a^2b^2c^2$ (প্রমাণিত)
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

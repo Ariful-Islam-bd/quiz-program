@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex উচ্চতর গণিত ২য় পত্র - জটিল সংখ্যা</title>
+
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চতর গণিত ২য় পত্র</h1>
+        <p>সৃজনশীল প্রশ্নব্যাংক ও ব্যাখ্যামূলক সমাধান</p>
+    </header>
+
+    <h2 class="chapter-header">অধ্যায়: ৩ - জটিল সংখ্যা</h2>
+
+    <!-- Question 1 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ১</div>
+        
+        <div class="stem-container">
+            <p class="stem-text"><strong>দৃশ্যকল্প - ১:</strong> $z = x + iy$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\frac{i}{1+i}$ এর মডুলাস নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$|3z + 1| = |z - 3i|$ দ্বারা নির্দেশিত সঞ্চারপথের সমীকরণ নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$z = \sqrt[3]{3 + 5i}$ হলে, প্রমাণ কর যে, $\sqrt{\frac{3}{4x} + \frac{5}{4y}} = \sqrt{x^2 - y^2}$</span>
+            </div>
+        </div>
+
+        <!-- Solution Section 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Sub Question 1(a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর সমাধান:</span>
+                <div class="solution-step">
+                    ধরি, প্রদত্ত জটিল সংখ্যা, $Z = \frac{i}{1+i}$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, দুইটি জটিল সংখ্যার ভাগফলের মডুলাস হলো তাদের আলাদা আলাদা মডুলাসের ভাগফলের সমান। অর্থাৎ, $\left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$ <span class="sidenote">[মডুলাসের অনুপাত সূত্র ব্যবহার করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\therefore |Z| = \left|\frac{i}{1+i}\right| = \frac{|i|}{|1+i|}$
+                </div>
+                <div class="solution-step">
+                    এখানে, $i = 0 + 1 \cdot i$, সুতরাং $|i| = \sqrt{0^2 + 1^2} = \sqrt{1} = 1$ <span class="sidenote">[$|a+ib| = \sqrt{a^2+b^2}$ সূত্র প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    এবং, $|1+i| = \sqrt{1^2 + 1^2} = \sqrt{1+1} = \sqrt{2}$
+                </div>
+                <div class="solution-step">
+                    $\therefore |Z| = \frac{1}{\sqrt{2}}$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় মডুলাস: $\frac{1}{\sqrt{2}}$
+                </div>
+            </div>
+
+            <!-- Sub Question 1(b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z = x + iy$
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $|3z + 1| = |z - 3i|$
+                </div>
+                <div class="solution-step">
+                    $z$-এর মান বসিয়ে পাই,
+                    $|3(x + iy) + 1| = |(x + iy) - 3i|$ <span class="sidenote">[$z = x + iy$ মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow |3x + 3iy + 1| = |x + i(y - 3)|$ <span class="sidenote">[ব্র্যাকেট তুলে গুণ করা হলো]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow |(3x + 1) + i(3y)| = |x + i(y - 3)|$ <span class="sidenote">[বাস্তব ও কাল্পনিক অংশ আলাদা করে সাজিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষে মডুলাসের সূত্র $|a + ib| = \sqrt{a^2 + b^2}$ প্রয়োগ করে পাই,
+                    $\sqrt{(3x + 1)^2 + (3y)^2} = \sqrt{x^2 + (y - 3)^2}$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে বর্গ করে পাই,
+                    $(3x + 1)^2 + (3y)^2 = x^2 + (y - 3)^2$ <span class="sidenote">[উভয়পক্ষকে বর্গ করে বর্গমূল চিহ্ন তুলে দেয়া হলো]</span>
+                </div>
+                <div class="solution-step">
+                    বর্গ নির্ণয়ের সূত্র $(a+b)^2 = a^2 + 2ab + b^2$ ও $(a-b)^2 = a^2 - 2ab + b^2$ প্রসারিত করে,
+                    $(9x^2 + 6x + 1) + 9y^2 = x^2 + (y^2 - 6y + 9)$
+                </div>
+                <div class="solution-step">
+                    সব পদ বামপাশে পক্ষান্তর করে পাই,
+                    $9x^2 + 6x + 1 + 9y^2 - x^2 - y^2 + 6y - 9 = 0$ <span class="sidenote">[ডানপাশের সকল পদ বামপাশে এনে চিহ্ন পরিবর্তন করা হলো]</span>
+                </div>
+                <div class="solution-step">
+                    সদৃশ পদগুলো যোগ-বিয়োগ করে,
+                    $8x^2 + 8y^2 + 6x + 6y - 8 = 0$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে $2$ দ্বারা ভাগ করে পাই,
+                    $4x^2 + 4y^2 + 3x + 3y - 4 = 0$ <span class="sidenote">[উভয়পক্ষকে ২ দ্বারা ভাগ করে সমীকরণটি সহজ করা হলো]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় সঞ্চারপথের সমীকরণ: $4x^2 + 4y^2 + 3x + 3y - 4 = 0$ (যা একটি বৃত্তের সমীকরণ)।
+                </div>
+            </div>
+
+            <!-- Sub Question 1(c) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z = x + iy$
+                </div>
+                <div class="solution-step">
+                    প্রশ্নমতে, $z = \sqrt[3]{3 + 5i}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x + iy = \sqrt[3]{3 + 5i}$ <span class="sidenote">[$z = x + iy$ মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে ঘন (Cube) করে পাই,
+                    $(x + iy)^3 = 3 + 5i$ <span class="sidenote">[উভয়পক্ষকে ঘন করে ঘনমূল তুলে দেয়া হলো]</span>
+                </div>
+                <div class="solution-step">
+                    বামপাশে $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$ সূত্র প্রয়োগ করে,
+                    $x^3 + 3x^2(iy) + 3x(iy)^2 + (iy)^3 = 3 + 5i$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x^3 + i(3x^2y) + 3x(i^2y^2) + i^3y^3 = 3 + 5i$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি,<br> $i^2 = -1$<br> এবং $i^3 = -i$,<br> সুতরাং মান বসিয়ে,<br>
+                    $\Rightarrow x^3 + i(3x^2y) + 3x(-1 \cdot y^2) + (-i)y^3 = 3 + 5i$ <span class="sidenote">[$i^2 = -1$ এবং $i^3 = -i$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow x^3 + i(3x^2y) - 3xy^2 - i y^3 = 3 + 5i$
+                </div>
+                <div class="solution-step">
+                    বাস্তব ও কাল্পনিক অংশ আলাদা করে পাই,<br>
+                    $(x^3 - 3xy^2) + i(3x^2y - y^3) = 3 + 5i$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষ হতে বাস্তব ও কাল্পনিক অংশ সমীকৃত (Equating real and imaginary parts) করে পাই,<br>
+                    $x^3 - 3xy^2 = 3 \quad \text{--- (i)}$<br>
+                    $3x^2y - y^3 = 5 \quad \text{--- (ii)}$<br>
+                </div>
+                <div class="solution-step">
+                    সমীকরণ (i) এর উভয়পক্ষকে $x$ দ্বারা এবং সমীকরণ (ii) এর উভয়পক্ষকে $y$ দ্বারা ভাগ করে পাই,<br>
+                    $\frac{x^3 - 3xy^2}{x} = \frac{3}{x} \Rightarrow x^2 - 3y^2 = \frac{3}{x} \quad \text{--- (iii)}$ <span class="sidenote">[$x$ কমন নিয়ে ভাগ করা হলো]</span><br>
+                    $\frac{3x^2y - y^3}{y} = \frac{5}{y} \Rightarrow 3x^2 - y^2 = \frac{5}{y} \quad \text{--- (iv)}$ <span class="sidenote">[$y$ কমন নিয়ে ভাগ করা হলো]</span>
+                </div>
+                <div class="solution-step">
+                    এখন, প্রমাণের বামপক্ষ (LHS) বিবেচনা করি:<br>
+                    $\text{L.H.S.} = \sqrt{\frac{3}{4x} + \frac{5}{4y}}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{\frac{1}{4} \left(\frac{3}{x} + \frac{5}{y}\right)}$ <span class="sidenote">[$\frac{1}{4}$ কমন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    সমীকরণ (iii) ও (iv) হতে $\frac{3}{x}$ এবং $\frac{5}{y}$ এর মান বসিয়ে পাই,<br>
+                    $\Rightarrow \sqrt{\frac{1}{4} \left[(x^2 - 3y^2) + (3x^2 - y^2)\right]}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{\frac{1}{4} \left[4x^2 - 4y^2\right]}$ <span class="sidenote">[$x^2+3x^2 = 4x^2$ এবং $-3y^2-y^2 = -4y^2$ যোগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{\frac{1}{4} \cdot 4(x^2 - y^2)}$ <span class="sidenote">[$4$ কমন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{x^2 - y^2} = \text{R.H.S.}$
+                </div>
+                <div class="final-answer">
+                    $\therefore \sqrt{\frac{3}{4x} + \frac{5}{4y}} = \sqrt{x^2 - y^2}$ (প্রমাণিত)।
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ২</div>
+        
+        <div class="stem-container">
+            <p class="stem-text"><strong>দৃশ্যকল্প - ১:</strong> $z_1 = -1 + \sqrt{3}i$ এবং $z_2 = 1 - \sqrt{3}i$</p>
+            <p class="stem-text"><strong>দৃশ্যকল্প - ২:</strong> $g(x) = l + mx + nx^2$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$i$ এর বর্গমূল নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">প্রমাণ কর যে, $\arg(z_1 z_2) = \arg(z_1) + \arg(z_2)$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">উদ্দীপক-২ এ, $l + m + n = 0$ হলে, প্রমাণ কর যে, $\{g(\omega)\}^3 + \{g(\omega^2)\}^3 = 27lmn$</span>
+            </div>
+        </div>
+
+        <!-- Solution Section 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Sub Question 2(a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর সমাধান:</span>
+                <div class="solution-step">
+                    ধরি, $A = \sqrt{i}$
+                </div>
+                <div class="solution-step">
+                    বর্গমূলের সুবিধার্থে $2$ দিয়ে গুণ ও ভাগ করি,
+                    $A = \sqrt{\frac{1}{2} \cdot 2i}$ <span class="sidenote">[$2i$ তৈরি করার জন্য]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow A = \pm \frac{1}{\sqrt{2}} \sqrt{2i}$
+                </div>
+                <div class="solution-step">
+                    এখন, $2i$ কে পূর্ণবর্গ আকারে সাজাই:<br>
+                    $2i = 1 + 2i - 1$<br>
+                    $\Rightarrow 2i = 1 + 2i + i^2$ <span class="sidenote">[$ -1 = i^2 $ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow 2i = (1)^2 + 2 \cdot 1 \cdot i + (i)^2$<br>
+                    $\Rightarrow 2i = (1 + i)^2$ <span class="sidenote">[$a^2+2ab+b^2 = (a+b)^2$ সূত্র প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    অতএব, $i$ এর বর্গমূল:
+                    $\sqrt{i} = \pm \frac{1}{\sqrt{2}} \sqrt{(1+i)^2}$
+                </div>
+                <div class="solution-step">
+                    $\Rightarrow \sqrt{i} = \pm \frac{1}{\sqrt{2}} (1 + i)$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় বর্গমূল: $\pm \frac{1}{\sqrt{2}} (1 + i)$
+                </div>
+            </div>
+
+            <!-- Sub Question 2(b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z_1 = -1 + \sqrt{3}i$ এবং $z_2 = 1 - \sqrt{3}i$
+                </div>
+                <div class="solution-step">
+                    <strong>১ম ধাপ: $\arg(z_1)$ নির্ণয়:</strong><br>
+                    $z_1 = -1 + \sqrt{3}i$ বিন্দুটি দ্বিতীয় চতুর্ভাগে (2nd Quadrant) অবস্থিত। <span class="sidenote">[$x < 0, y > 0$ হওয়ায় ২য় চতুর্ভাগ]</span><br>
+                    $$\therefore \arg(z_1) = \pi - \tan^{-1}\left|\frac{y}{x}\right|$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \arg(z_1) = \pi - \tan^{-1}\left|\frac{\sqrt{3}}{-1}\right| = \pi - \tan^{-1}(\sqrt{3})$$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\tan\frac{\pi}{3} = \sqrt{3}$, সুতরাং:
+                    $$\Rightarrow \arg(z_1) = \pi - \frac{\pi}{3} = \frac{3\pi - \pi}{3} = \frac{2\pi}{3}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>২য় ধাপ: $\arg(z_2)$ নির্ণয়:</strong><br>
+                    $z_2 = 1 - \sqrt{3}i$ বিন্দুটি চতুর্থ চতুর্ভাগে (4th Quadrant) অবস্থিত। <span class="sidenote">[$x > 0, y < 0$ হওয়ায় ৪র্থ চতুর্ভাগ]</span><br>
+                    $$\therefore \arg(z_2) = -\tan^{-1}\left|\frac{y}{x}\right|$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \arg(z_2) = -\tan^{-1}\left|\frac{-\sqrt{3}}{1}\right| = -\tan^{-1}(\sqrt{3}) = -\frac{\pi}{3}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>৩য় ধাপ: $\arg(z_1 z_2)$ নির্ণয়:</strong><br>
+                    প্রথমে $z_1 \cdot z_2$ এর গুণফল বের করি:
+                    $$z_1 z_2 = (-1 + \sqrt{3}i)(1 - \sqrt{3}i)$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow z_1 z_2 = -1(1 - \sqrt{3}i) + \sqrt{3}i(1 - \sqrt{3}i)$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow z_1 z_2 = -1 + \sqrt{3}i + \sqrt{3}i - 3i^2$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow z_1 z_2 = -1 + 2\sqrt{3}i - 3(-1)$$ <span class="sidenote">[$i^2 = -1$ বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow z_1 z_2 = -1 + 2\sqrt{3}i + 3 = 2 + 2\sqrt{3}i$$
+                </div>
+                <div class="solution-step">
+                    এখানে $z_1 z_2 = 2 + 2\sqrt{3}i$ বিন্দুটি প্রথম চতুর্ভাগে (1st Quadrant) অবস্থিত।<br>
+                    $$\therefore \arg(z_1 z_2) = \tan^{-1}\left|\frac{2\sqrt{3}}{2}\right| = \tan^{-1}(\sqrt{3}) = \frac{\pi}{3}$$
+                </div>
+
+                <div class="solution-step">
+                    <strong>৪র্থ ধাপ: ডানপক্ষ ও বামপক্ষ তুলনা:</strong><br>
+                    $$\text{R.H.S.} = \arg(z_1) + \arg(z_2) = \frac{2\pi}{3} + \left(-\frac{\pi}{3}\right) = \frac{2\pi}{3} - \frac{\pi}{3} = \frac{\pi}{3}$$
+                </div>
+                <div class="solution-step">
+                    আমরা দেখতে পাচ্ছি, $\arg(z_1 z_2) = \frac{\pi}{3}$ এবং $\arg(z_1) + \arg(z_2) = \frac{\pi}{3}$
+                </div>
+                <div class="final-answer">
+                    $\therefore \arg(z_1 z_2) = \arg(z_1) + \arg(z_2)$ (প্রমাণিত)।
+                </div>
+            </div>
+
+            <!-- Sub Question 2(c) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $g(x) = l + mx + nx^2$ এবং শর্ত দেয়া আছে, $l + m + n = 0 \Rightarrow l = -(m + n)$
+                </div>
+                <div class="solution-step">
+                    ১ম ফাংশন: $x = \omega$ বসিয়ে পাই,
+                    $$g(\omega) = l + m\omega + n\omega^2$$
+                </div>
+                <div class="solution-step">
+                    এখানে $l = -(m+n)$ বসিয়ে,
+                    $$g(\omega) = -(m + n) + m\omega + n\omega^2 = m(\omega - 1) + n(\omega^2 - 1)$$ <span class="sidenote">[$m$ ও $n$ কমন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $\omega^2 - 1 = (\omega - 1)(\omega + 1)$
+                    $$\Rightarrow g(\omega) = m(\omega - 1) + n(\omega - 1)(\omega + 1) = (\omega - 1)[m + n(\omega + 1)]$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow g(\omega) = (\omega - 1)(m + n\omega + n)$$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $1 + \omega + \omega^2 = 0 \Rightarrow 1 + \omega = -\omega^2$<br>
+                    আবার বিকল্প উপায়ে সহজ রূপান্তর করি:<br>
+                    $g(\omega) = l + m\omega + n\omega^2$<br>
+                    যেহেতু $l+m+n = 0 \Rightarrow l = -m-n$<br>
+                    $g(\omega) = -m - n + m\omega + n\omega^2 = m(\omega - 1) + n(\omega^2 - 1)$
+                </div>
+                <div class="solution-step">
+                    একইভাবে, $x = \omega^2$ বসিয়ে পাই,
+                    $$g(\omega^2) = l + m\omega^2 + n\omega^4 = l + m\omega^2 + n\omega$$ <span class="sidenote">[যেহেতু $\omega^4 = \omega^3 \cdot \omega = 1 \cdot \omega = \omega$]</span>
+                </div>
+                <div class="solution-step">
+                    এখানে $l = -(m+n)$ বসিয়ে,
+                    $$g(\omega^2) = -(m + n) + m\omega^2 + n\omega = m(\omega^2 - 1) + n(\omega - 1)$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow g(\omega^2) = m(\omega - 1)(\omega + 1) + n(\omega - 1) = (\omega - 1)[m(\omega + 1) + n]$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow g(\omega^2) = (\omega - 1)(m\omega + m + n)$$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি $m+n = -l$, সুতরাং:<br>
+                    $$g(\omega) = l + m\omega + n\omega^2 = (l - l) + m\omega + n\omega^2 \dots$$
+                    আরো সহজভাবে এককের জটিল ঘনমূলের ধর্ম ব্যবহার করি:<br>
+                    $1 + \omega + \omega^2 = 0 \Rightarrow m + m\omega + m\omega^2 = 0 \Rightarrow m\omega = -m - m\omega^2$<br>
+                    অতএব,<br>
+                    $$g(\omega) = l + m\omega + n\omega^2 = l + (-m - m\omega^2) + n\omega^2 = (l-m) + (n-m)\omega^2$$
+                </div>
+                <div class="solution-step">
+                    আরেকটি মানসম্মত ও সহজতম পদ্ধতি হলো সরাসরি উৎপাদকে বিশ্লেষণ সূত্রের সাহায্যে করা:<br>
+                    আমরা জানি, $a^3 + b^3 = (a+b)(a+\omega b)(a+\omega^2 b)$ ধরণে বিস্তৃত করা যায়।<br>
+                    তবে মান বসিয়ে মানগুলো পাই:<br>
+                    $g(\omega) = l + m\omega + n\omega^2$<br>
+                    $g(\omega^2) = l + m\omega^2 + n\omega$<br>
+                    যেহেতু $l+m+n = 0$, তাহলে $l = -(m+n)$<br>
+                    $g(\omega) = -(m+n) + m\omega + n\omega^2 = m(\omega - 1) + n(\omega^2 - 1) = (\omega - 1)(m + n + n\omega) = (\omega - 1)(-l + n\omega)$ 
+                </div>
+                <div class="solution-step">
+                    সহজ রূপ রূপান্তর করে পাই:
+                    $$g(\omega) = (l-m) + (n-m)\omega^2$$
+                    যেহেতু $l+m+n=0 \Rightarrow l-m = -2m-n$<br>
+                    মূল পরিচিত রাশিমালা প্রয়োগ করে:<br>
+                    $$g(\omega) = m(\omega - 1) + n(\omega^2 - 1)$$
+                    $$g(\omega^2) = m(\omega^2 - 1) + n(\omega - 1)$$
+                </div>
+                <div class="solution-step">
+                    এখন, $g(1) = l + m(1) + n(1)^2 = l + m + n = 0$<br>
+                    আমরা জানি, $g(1) + g(\omega) + g(\omega^2) = 3l + m(1+\omega+\omega^2) + n(1+\omega^2+\omega) = 3l + 0 + 0 = 3l$<br>
+                    যেহেতু $g(1) = 0$, তাই $g(\omega) + g(\omega^2) = 3l$<br>
+                    একইভাবে গুণ করে পাই, $g(\omega) \cdot g(\omega^2) = (l + m\omega + n\omega^2)(l + m\omega^2 + n\omega) = l^2 + m^2 + n^2 - lm - mn - nl$<br>
+                    আমরা জানি, $l+m+n = 0 \Rightarrow (l+m+n)^2 = 0 \Rightarrow l^2+m^2+n^2 + 2(lm+mn+nl) = 0$<br>
+                    $\Rightarrow l^2+m^2+n^2 - lm - mn - nl = -3(lm+mn+nl)$<br>
+                    সুতরাং, $g(\omega) \cdot g(\omega^2) = -3(lm+mn+nl) = 3(l^2 + m^2 + n^2)$ [যেহেতু $l+m+n=0$]
+                </div>
+                <div class="solution-step">
+                    ধরি $A = g(\omega)$ এবং $B = g(\omega^2)$<br>
+                    তাহলে, $A + B = 3l$ এবং $AB = 3(lm + mn + nl)$ নয়, বীজগণিতীয় সূত্র মতে $AB = l^2 + m^2 + n^2 - lm - mn - nl = -3(lm + mn + nl)$<br>
+                    যেহেতু $l+m+n=0 \Rightarrow l^2+m^2+n^2 = -2(lm+mn+nl)$<br>
+                    অতএব, $AB = -2(lm+mn+nl) - (lm+mn+nl) = -3(lm+mn+nl)$
+                </div>
+                <div class="solution-step">
+                    এখন $A^3 + B^3$ এর মান নির্ণয় করি:
+                    $$A^3 + B^3 = (A + B)^3 - 3AB(A + B)$$ <span class="sidenote">[$a^3+b^3 = (a+b)^3 - 3ab(a+b)$ সূত্র দ্বারা]</span>
+                </div>
+                <div class="solution-step">
+                    মান বসিয়ে পাই,
+                    $$\{g(\omega)\}^3 + \{g(\omega^2)\}^3 = (3l)^3 - 3[-3(lm + mn + nl)](3l)$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow 27l^3 + 27l(lm + mn + nl)$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow 27l [l^2 + lm + mn + nl]$$ <span class="sidenote">[$27l$ কমন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow 27l [l(l + m) + n(m + l)]$$ <span class="sidenote">[উৎপাদকে বিশ্লেষণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow 27l (l + m)(l + n)$$
+                </div>
+                <div class="solution-step">
+                    যেহেতু $l + m + n = 0$, তাই $l + m = -n$ এবং $l + n = -m$<br>
+                    মান বসিয়ে পাই,
+                    $$\Rightarrow 27l (-n)(-m) = 27lmn$$
+                </div>
+                <div class="final-answer">
+                    $\therefore \{g(\omega)\}^3 + \{g(\omega^2)\}^3 = 27lmn$ (প্রমাণিত)।
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৩</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$z = x + iy$</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$\frac{2i}{4+i}$ কে $A + iB$ আকারে প্রকাশ করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$z = \sqrt[3]{p + iq}$ হলে প্রমাণ কর যে, $qx + py = 4xy(x^2 - y^2)$</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$|z - 3| + |z + 3| = 16$ এর কেন্দ্র নির্ণয় করো।</span>
+            </div>
+        </div>
+
+        <!-- Solution Section 3 -->
+        <div class="solution-section">
+            <div class="solution-title">৩ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Sub Question 3(a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর সমাধান:</span>
+                <div class="solution-step">
+                    প্রদত্ত রাশি: $$\frac{2i}{4+i}$$
+                </div>
+                <div class="solution-step">
+                    হরকে বাস্তব সংখ্যায় পরিণত করতে হরের অনুবন্ধী (Conjugate) জটিল সংখ্যা $(4-i)$ দ্বারা লব ও হরকে গুণ করি:
+                    $$\frac{2i(4-i)}{(4+i)(4-i)}$$ <span class="sidenote">[লব ও হরকে $(4-i)$ দ্বারা গুণ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \frac{8i - 2i^2}{4^2 - i^2}$$ <span class="sidenote">[হৰে $(a+b)(a-b) = a^2 - b^2$ সূত্র প্রয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি $i^2 = -1$, তাই মান বসিয়ে পাই,
+                    $$\Rightarrow \frac{8i - 2(-1)}{16 - (-1)} = \frac{8i + 2}{16 + 1} = \frac{2 + 8i}{17}$$
+                </div>
+                <div class="solution-step">
+                    বাস্তব ও কাল্পনিক অংশ পৃথক করে $A + iB$ আকারে সাজিয়ে পাই,
+                    $$\Rightarrow \frac{2}{17} + i \left(\frac{8}{17}\right)$$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় $A + iB$ আকার: $\frac{2}{17} + i \frac{8}{17}$ (যেখানে $A = \frac{2}{17}, B = \frac{8}{17}$)।
+                </div>
+            </div>
+
+            <!-- Sub Question 3(b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z = x + iy$
+                </div>
+                <div class="solution-step">
+                    প্রশ্নমতে, $$z = \sqrt[3]{p + iq}$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow x + iy = \sqrt[3]{p + iq}$$ <span class="sidenote">[$z = x + iy$ মান বসিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে ঘন (Cube) করে পাই,
+                    $$(x + iy)^3 = p + iq$$ <span class="sidenote">[উভয়পক্ষকে ঘন করে]</span>
+                </div>
+                <div class="solution-step">
+                    বামপাশে $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$ সূত্র প্রয়োগ করে,
+                    $$x^3 + 3x^2(iy) + 3x(iy)^2 + (iy)^3 = p + iq$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow x^3 + i(3x^2y) + 3x(i^2y^2) + i^3y^3 = p + iq$$
+                </div>
+                <div class="solution-step">
+                    $i^2 = -1$ এবং $i^3 = -i$ বসিয়ে,
+                    $$x^3 + i(3x^2y) - 3xy^2 - iy^3 = p + iq$$
+                </div>
+                <div class="solution-step">
+                    বাস্তব ও কাল্পনিক অংশ আলাদা করে সাজাই,
+                    $$(x^3 - 3xy^2) + i(3x^2y - y^3) = p + iq$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষ হতে বাস্তব ও কাল্পনিক অংশ সমীকৃত (Equating real and imaginary parts) করে পাই,
+                    $$p = x^3 - 3xy^2 = x(x^2 - 3y^2) \quad \text{--- (i)}$$
+                    $$q = 3x^2y - y^3 = y(3x^2 - y^2) \quad \text{--- (ii)}$$
+                </div>
+                <div class="solution-step">
+                    এখন, প্রমাণের বামপক্ষ (L.H.S.) বিবেচনা করি:
+                    $$\text{L.H.S.} = qx + py$$
+                </div>
+                <div class="solution-step">
+                    $p$ ও $q$ এর মান বসিয়ে পাই,
+                    $$\text{L.H.S.} = (3x^2y - y^3)x + (x^3 - 3xy^2)y$$
+                </div>
+                <div class="solution-step">
+                    ব্র্যাকেট তুলে গুণ করি,
+                    $$= 3x^3y - xy^3 + x^3y - 3xy^3$$
+                </div>
+                <div class="solution-step">
+                    সদৃশ পদগুলো যোগ করি,
+                    $$= 4x^3y - 4xy^3$$
+                </div>
+                <div class="solution-step">
+                    সাধারণ পদ $4xy$ কমন নিয়ে পাই,
+                    $$= 4xy(x^2 - y^2) = \text{R.H.S.}$$ <span class="sidenote">[$4xy$ কমন নিয়ে]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore qx + py = 4xy(x^2 - y^2)$ (প্রমাণিত)।
+                </div>
+            </div>
+
+            <!-- Sub Question 3(c) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z = x + iy$
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত সমীকরণ: $$|z - 3| + |z + 3| = 16$$
+                </div>
+                <div class="solution-step">
+                    $z = x + iy$ বসিয়ে পাই,
+                    $$|(x - 3) + iy| + |(x + 3) + iy| = 16$$ <span class="sidenote">[বাস্তব অংশগুলো এক বন্ধনীতে এনে]</span>
+                </div>
+                <div class="solution-step">
+                    মডুলাসের সূত্র $|a+ib| = \sqrt{a^2+b^2}$ প্রয়োগ করে,
+                    $$\sqrt{(x-3)^2 + y^2} + \sqrt{(x+3)^2 + y^2} = 16$$
+                </div>
+                <div class="solution-step">
+                    একটি বর্গমূল পদকে ডানপাশে পক্ষান্তর করি,
+                    $$\sqrt{(x-3)^2 + y^2} = 16 - \sqrt{(x+3)^2 + y^2}$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে বর্গ করে পাই,
+                    $$(x-3)^2 + y^2 = \left(16 - \sqrt{(x+3)^2 + y^2}\right)^2$$ <span class="sidenote">[উভয়পক্ষ বর্গ করে]</span>
+                </div>
+                <div class="solution-step">
+                    ডানপাশে $(a-b)^2 = a^2 - 2ab + b^2$ প্রয়োগ করে,
+                    $$(x-3)^2 + y^2 = 256 - 32\sqrt{(x+3)^2 + y^2} + (x+3)^2 + y^2$$
+                </div>
+                <div class="solution-step">
+                    বাম ও ডানপাশের $y^2$ বাদ দিয়ে এবং বর্গ বিস্তৃত করে পাই,
+                    $$x^2 - 6x + 9 = 256 - 32\sqrt{(x+3)^2 + y^2} + x^2 + 6x + 9$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষ থেকে $x^2$ এবং $9$ বাদ দিয়ে পাই,
+                    $$-6x = 256 - 32\sqrt{(x+3)^2 + y^2} + 6x$$
+                </div>
+                <div class="solution-step">
+                    বর্গমূল পদটি বামপাশে এবং বাকিগুলো ডানপাশে এনে,
+                    $$32\sqrt{(x+3)^2 + y^2} = 256 + 12x$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে $4$ দ্বারা ভাগ করে পাই,
+                    $$8\sqrt{(x+3)^2 + y^2} = 64 + 3x$$ <span class="sidenote">[উভয়পক্ষকে $4$ দ্বারা ভাগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    পুনরায় উভয়পক্ষকে বর্গ করে পাই,
+                    $$64[(x+3)^2 + y^2] = (64 + 3x)^2$$ <span class="sidenote">[বর্গমূল সম্পূর্ণ দূর করতে পুনঃবর্গ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$64[x^2 + 6x + 9 + y^2] = 4096 + 384x + 9x^2$$
+                </div>
+                <div class="solution-step">
+                    $$64x^2 + 384x + 576 + 64y^2 = 4096 + 384x + 9x^2$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষ থেকে $384x$ বাদ দিয়ে এবং $x^2, y^2$ সহ পদগুলো বামে এনে,
+                    $$64x^2 - 9x^2 + 64y^2 = 4096 - 576$$
+                </div>
+                <div class="solution-step">
+                    $$55x^2 + 64y^2 = 3520$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে $3520$ দ্বারা ভাগ করে পাই,
+                    $$\frac{55x^2}{3520} + \frac{64y^2}{3520} = 1 \Rightarrow \frac{x^2}{64} + \frac{y^2}{55} = 1$$
+                </div>
+                <div class="solution-step">
+                    এটি আদর্শ উপবৃত্তের সমীকরণ $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ এর নির্দেশক, যেখানে $(h, k)$ হলো উপবৃত্তের কেন্দ্র।
+                </div>
+                <div class="solution-step">
+                    এখানে $h = 0$ এবং $k = 0$।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ সঞ্চারপথটি একটি উপবৃত্ত এবং এর কেন্দ্র হলো $(0, 0)$।
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Question 4 -->
+    <article class="question-card">
+        <div class="question-header">প্রশ্ন - ৪</div>
+        
+        <div class="stem-container">
+            <p class="stem-text">$z_1 = 1 + ix$, $z_2 = a + ib$ এবং $z_3 = x + iy$ তিনটি জটিল সংখ্যা।</p>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">ক.</span>
+                <span class="sub-question-text">$i - \sqrt{3}$ এর আর্গুমেন্ট নির্ণয় করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">খ.</span>
+                <span class="sub-question-text">$|z_1|^2 = 1$ হলে, দেখাও যে $x$ এর একটি বাস্তব মান।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">গ.</span>
+                <span class="sub-question-text">$\sqrt[3]{z_2} = z_3$ হলে প্রমাণ কর যে, $|z_3| = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$</span>
+            </div>
+        </div>
+
+        <!-- Solution Section 4 -->
+        <div class="solution-section">
+            <div class="solution-title">৪ নং প্রশ্নের সমাধান:</div>
+
+            <!-- Sub Question 4(a) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">ক. এর সমাধান:</span>
+                <div class="solution-step">
+                    প্রদত্ত জটিল সংখ্যা: $Z = i - \sqrt{3}$
+                </div>
+                <div class="solution-step">
+                    আদর্শ আকারে সাজিয়ে পাই: $Z = -\sqrt{3} + i$ <span class="sidenote">[$a + ib$ আকারে প্রকাশ করে, যেখানে $a = -\sqrt{3}, b = 1$]</span>
+                </div>
+                <div class="solution-step">
+                    যেহেতু বাস্তব অংশ $a = -\sqrt{3} < 0$ এবং কাল্পনিক অংশ $b = 1 > 0$, তাই সংখ্যাটি ২য় চতুর্ভাগে (2nd Quadrant) অবস্থিত।
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, ২য় চতুর্ভাগে অবস্থিত জটিল সংখ্যার প্রধান আর্গুমেন্ট,
+                    $$\theta = \pi - \tan^{-1}\left|\frac{b}{a}\right|$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow \theta = \pi - \tan^{-1}\left|\frac{1}{-\sqrt{3}}\right| = \pi - \tan^{-1}\left(\frac{1}{\sqrt{3}}\right)$$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি $\tan\left(\frac{\pi}{6}\right) = \frac{1}{\sqrt{3}}$, তাই:
+                    $$\Rightarrow \theta = \pi - \frac{\pi}{6} = \frac{6\pi - \pi}{6} = \frac{5\pi}{6}$$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ নির্ণেয় আর্গুমেন্ট: $\frac{5\pi}{6}$ (বা $150^\circ$)
+                </div>
+            </div>
+
+            <!-- Sub Question 4(b) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">খ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z_1 = 1 + ix$ (এখানে ধরে নিচ্ছি $x$ কোনো মান নির্দেশ করে)।
+                </div>
+                <div class="solution-step">
+                    প্রশ্নমতে, $$|z_1|^2 = 1$$
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $z_1 = 1 + ix$ এর মডুলাস $|z_1| = \sqrt{1^2 + x^2}$
+                </div>
+                <div class="solution-step">
+                    অতএব, $|z_1|^2 = (\sqrt{1 + x^2})^2 = 1 + x^2$ <span class="sidenote">[বর্গ করার কারণে বর্গমূল উঠে গেল]</span>
+                </div>
+                <div class="solution-step">
+                    প্রদত্ত শর্তানুসারে,
+                    $$1 + x^2 = 1$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow x^2 = 1 - 1$$ <span class="sidenote">[$1$ ডানপাশে পক্ষান্তর করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow x^2 = 0$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow x = 0$$
+                </div>
+                <div class="solution-step">
+                    যেহেতু $0$ একটি বাস্তব সংখ্যা (Real Number), তাই $x$ এর মান বাস্তব।
+                </div>
+                <div class="final-answer">
+                    $\therefore x = 0$, যা একটি বাস্তব মান (দেখানো হলো)।
+                </div>
+            </div>
+
+            <!-- Sub Question 4(c) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">গ. এর সমাধান:</span>
+                <div class="solution-step">
+                    উদ্দীপক হতে পাই, $z_2 = a + ib$ এবং $z_3 = x + iy$
+                </div>
+                <div class="solution-step">
+                    প্রশ্নমতে, $$\sqrt[3]{z_2} = z_3$$
+                </div>
+                <div class="solution-step">
+                    $$z_2$$ এবং $$z_3$$ এর মান বসিয়ে পাই,
+                    $$\sqrt[3]{a + ib} = x + iy$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষকে ঘন (Cube) করে পাই,
+                    $$a + ib = (x + iy)^3$$ <span class="sidenote">[উভয়পক্ষকে ঘন করে]</span>
+                </div>
+                <div class="solution-step">
+                    ডানপাশে $(u+v)^3 = u^3 + 3u^2v + 3uv^2 + v^3$ সূত্র প্রয়োগ করে,
+                    $$a + ib = x^3 + 3x^2(iy) + 3x(iy)^2 + (iy)^3$$
+                </div>
+                <div class="solution-step">
+                    $$\Rightarrow a + ib = x^3 + i(3x^2y) + 3x(i^2y^2) + i^3y^3$$
+                </div>
+                <div class="solution-step">
+                    $i^2 = -1$ এবং $i^3 = -i$ বসিয়ে,
+                    $$a + ib = x^3 + i(3x^2y) - 3xy^2 - iy^3$$
+                </div>
+                <div class="solution-step">
+                    বাস্তব ও কাল্পনিক অংশ আলাদা করে পাই,
+                    $$a + ib = (x^3 - 3xy^2) + i(3x^2y - y^3)$$
+                </div>
+                <div class="solution-step">
+                    উভয়পক্ষ হতে বাস্তব ও কাল্পনিক অংশ সমীকৃত করে পাই,
+                    $$a = x^3 - 3xy^2 \quad \text{--- (i)}$$
+                    $$b = 3x^2y - y^3 \quad \text{--- (ii)}$$
+                </div>
+                <div class="solution-step">
+                    সমীকরণ (i) কে $x$ দ্বারা এবং সমীকরণ (ii) কে $y$ দ্বারা ভাগ করে পাই,
+                    $$\frac{a}{x} = \frac{x^3 - 3xy^2}{x} = x^2 - 3y^2 \quad \text{--- (iii)}$$
+                    $$\frac{b}{y} = \frac{3x^2y - y^3}{y} = 3x^2 - y^2 \quad \text{--- (iv)}$$
+                </div>
+                <div class="solution-step">
+                    এখন, প্রমাণের ডানপাশের রাশি $\left(\frac{b}{2y} - \frac{a}{2x}\right)$ বিবেচনা করি:
+                    $$\frac{b}{2y} - \frac{a}{2x} = \frac{1}{2} \left( \frac{b}{y} - \frac{a}{x} \right)$$ <span class="sidenote">[$\frac{1}{2}$ কমন নিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    সমীকরণ (iv) হতে (iii) বিয়োগ করে মান বসাই,
+                    $$= \frac{1}{2} \left[ (3x^2 - y^2) - (x^2 - 3y^2) \right]$$
+                </div>
+                <div class="solution-step">
+                    $$= \frac{1}{2} \left[ 3x^2 - y^2 - x^2 + 3y^2 \right]$$
+                </div>
+                <div class="solution-step">
+                    $$= \frac{1}{2} \left[ 2x^2 + 2y^2 \right]$$ <span class="sidenote">[$3x^2-x^2 = 2x^2$ এবং $-y^2+3y^2 = 2y^2$ যোগ বিয়োগ করে]</span>
+                </div>
+                <div class="solution-step">
+                    $$= \frac{1}{2} \cdot 2(x^2 + y^2) = x^2 + y^2$$ <span class="sidenote">[$2$ কমন নিয়ে কেটে দিয়ে]</span>
+                </div>
+                <div class="solution-step">
+                    আমরা জানি, $z_3 = x + iy$ এর মডুলাস $|z_3| = \sqrt{x^2 + y^2}$
+                    $$\Rightarrow |z_3|^2 = x^2 + y^2$$
+                </div>
+                <div class="solution-step">
+                    সুতরাং,
+                    $$|z_3|^2 = \frac{b}{2y} - \frac{a}{2x}$$
+                </div>
+                <div class="solution-step">
+                    উভয়পাশে বর্গমূল করে পাই,
+                    $$|z_3| = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$$
+                </div>
+                <div class="final-answer">
+                    $\therefore |z_3| = \sqrt{\frac{b}{2y} - \frac{a}{2x}}$ (প্রমাণিত)।
+                </div>
+            </div>
+        </div>
+    </article>
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // KaTeX রেন্ডারার রান করা
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

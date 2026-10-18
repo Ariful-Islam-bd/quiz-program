@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান - গ্যালভানোমিটার ও শান্টের সমাধান</title>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>উচ্চ মাধ্যমিক পদার্থবিজ্ঞান ২য় পত্র</h1>
+            <p>অধ্যায়: চল তড়িৎ (Current Electricity)</p>
+        </header>
+
+        <h2 class="chapter-header">সৃজনশীল প্রশ্ন ও পূর্ণাঙ্গ সমাধান</h2>
+
+        <!-- Creative Question 5 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৫</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> $99\ \Omega$ রোধের একটি গ্যালভানোমিটারের সাথে $1\ \Omega$ এর একটি শান্ট যুক্ত করা হলো। বর্তনীতে $10\text{ A}$ এর একটি মূল প্রবাহ পরিচালনা করা হলো। পরবর্তীতে পরীক্ষা করার সময় দেখা গেল, গ্যালভানোমিটারের সুরক্ষার জন্য এর মূল প্রবাহের মাত্র $1\%$ অংশ গ্যালভানোমিটারের মধ্য দিয়ে যাওয়া নিরাপদ।</p>
+                
+                <div class="svg-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="100%" height="200">
+                      <style>
+                        .wire { stroke: #1e293b; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                        .resistor { stroke: #2563eb; stroke-width: 2.5; fill: #eff6ff; stroke-linejoin: round; }
+                        .text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #0f172a; font-weight: 600; }
+                        .node { fill: #0f172a; }
+                        .arrow { fill: #dc2626; stroke: #dc2626; }
+                        .meter-circle { fill: #f8fafc; stroke: #059669; stroke-width: 2.5; }
+                      </style>
+
+                      <!-- Main Circuit Wires -->
+                      <path d="M 40 100 L 120 100" class="wire" />
+                      <path d="M 380 100 L 460 100" class="wire" />
+                      
+                      <!-- Nodes A & B -->
+                      <circle cx="120" cy="100" r="5" class="node" />
+                      <circle cx="380" cy="100" r="5" class="node" />
+                      <text x="115" y="85" class="text" font-size="16">A</text>
+                      <text x="375" y="85" class="text" font-size="16">B</text>
+
+                      <!-- Galvanometer Branch (Top) -->
+                      <path d="M 120 100 L 120 40 L 220 40" class="wire" />
+                      <circle cx="250" cy="40" r="22" class="meter-circle" />
+                      <text x="244" y="46" class="text" fill="#059669" font-size="18">G</text>
+                      <path d="M 280 40 L 380 40 L 380 100" class="wire" />
+                      <text x="220" y="80" class="text" fill="#059669">G = 99 Ω</text>
+
+                      <!-- Shunt Branch (Bottom) -->
+                      <path d="M 120 100 L 120 160 L 200 160" class="wire" />
+                      <path d="M 200 160 L 207 151 L 221 169 L 235 151 L 249 169 L 263 151 L 277 169 L 284 160" class="resistor" />
+                      <path d="M 284 160 L 380 160 L 380 100" class="wire" />
+                      <text x="225" y="195" class="text" fill="#2563eb">S = 1 Ω</text>
+
+                      <!-- Current Indicators & Arrows -->
+                      <!-- Main Current I -->
+                      <path d="M 50 90 L 80 90" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-head)" />
+                      <text x="60" y="80" class="text" fill="#dc2626">I = 10A</text>
+
+                      <!-- Ig -->
+                      <path d="M 140 30 L 170 30" stroke="#dc2626" stroke-width="2" />
+                      <polygon points="170,30 162,26 162,34" class="arrow" />
+                      <text x="145" y="22" class="text" fill="#dc2626">I_g</text>
+
+                      <!-- Is -->
+                      <path d="M 140 150 L 170 150" stroke="#dc2626" stroke-width="2" />
+                      <polygon points="170,150 162,146 162,154" class="arrow" />
+                      <text x="145" y="142" class="text" fill="#dc2626">I_s</text>
+
+                      <defs>
+                        <marker id="arrow-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                          <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626" />
+                        </marker>
+                      </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">শান্টের গুণন কী বা শান্টের ক্ষমতা গুণক (Multiplier) কাকে বলে?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">কোনো গ্যালভানোমিটারের সাথে শান্ট যুক্ত করলে এর বর্তনীর মূল প্রবাহ বৃদ্ধি পায় কেন? ব্যাখ্যা করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">উদ্দীপকে প্রথম অবস্থায় গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত প্রবাহ ($I_g$) এবং শান্টের মধ্য দিয়ে প্রবাহিত প্রবাহ ($I_s$) নির্ণয় করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">উদ্দীপকে উল্লিখিত শান্টের পরিবর্তন ঘটিয়ে গ্যালভানোমিটারটিকে সম্পূর্ণ নিরাপদ রাখা সম্ভব কি না?— গাণিতিক বিশ্লেষণের মাধ্যমে মতামত দাও।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">৫ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>শান্টের গুণন বা শান্টের ক্ষমতা গুণক (Multiplier):</strong> বর্তনীর মূল তড়িৎ প্রবাহ ($I$), শান্টযুক্ত গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত তড়িৎ প্রবাহের ($I_g$) যত গুণ, অর্থাৎ মূল প্রবাহ এবং গ্যালভানোমিটার প্রবাহের অনুপাতকে <strong>শান্টের গুণন</strong> বা <strong>গুণক (Multiplier, $m$)</strong> বলা হয়।
+                    </div>
+                    <div class="solution-step">
+                        গাণিতিকভাবে, $$m = \frac{I}{I_g} = 1 + \frac{G}{S}$$
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        কোনো গ্যালভানোমিটারের সাথে শান্ট যুক্ত করলে বর্তনীর মূল প্রবাহ বৃদ্ধি পাওয়ার কারণ নিচে ব্যাখ্যা করা হলো:
+                    </div>
+                    <div class="solution-step">
+                        গ্যালভানোমিটার একটি উচ্চ রোধ বিশিষ্ট ও সংবেদনশীল যন্ত্র। বর্তনীতে যখন শুধু গ্যালভানোমিটার যুক্ত থাকে, তখন এর রোধ ($G$) বেশি হওয়ায় বর্তনীর মোট রোধ বৃদ্ধি পায়, ফলে ওহমের সূত্র ($I = \frac{V}{R_{eq}}$) অনুযায়ী মূল তড়িৎ প্রবাহ হ্রাস পায়।
+                    </div>
+                    <div class="solution-step">
+                        কিন্তু গ্যালভানোমিটারের সাথে খুব অল্প মানের একটি রোধ (শান্ট, $S$) সমান্তরাল সমবায়ে যুক্ত করা হলে, তাদের তুল্য রোধ ($R_p = \frac{G \times S}{G + S}$) গ্যালভানোমিটারের একক রোধ ($G$) অপেক্ষা অনেক কমে যায়।
+                    </div>
+                    <div class="solution-step">
+                        বর্তনীর মোট রোধ হ্রাস পাওয়ার কারণে সরবরাহকৃত স্থির বিভব পার্থক্যে ওহমের সূত্র অনুসারে সমগ্র বর্তনীর তুল্য প্রবাহ বা মূল প্রবাহ ($I$) বৃদ্ধি পায়।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>উদ্দীপক হতে প্রাপ্ত তথ্যাবলী:</strong></div>
+                    <div class="solution-step">গ্যালভানোমিটারের রোধ, $G = 99\ \Omega$</div>
+                    <div class="solution-step">শান্টের রোধ, $S = 1\ \Omega$</div>
+                    <div class="solution-step">বর্তনীর মূল প্রবাহ, $I = 10\text{ A}$</div>
+                    <div class="solution-step">গ্যালভানোমিটার প্রবাহ = $I_g$</div>
+                    <div class="solution-step">শান্ট প্রবাহ = $I_s$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: গ্যালভানোমিটার প্রবাহ ($I_g$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        আমরা জানি, সমান্তরাল সমবায়ের প্রবাহ বিভাজন সূত্রানুসারে:
+                    </div>
+                    <div class="solution-step">
+                        $$I_g = \left( \frac{S}{G + S} \right) \times I$$ <span class="sidenote">[গ্যালভানোমিটার প্রবাহের সূত্র]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g = \left( \frac{1}{99 + 1} \right) \times 10$$ <span class="sidenote">[$S = 1$, $G = 99$ এবং $I = 10$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g = \left( \frac{1}{100} \right) \times 10$$ <span class="sidenote">[হর যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g = \frac{10}{100}$$ <span class="sidenote">[গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g = 0.1\text{ A}$$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: শান্ট প্রবাহ ($I_s$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        আবার, কার্শফের প্রথম সূত্র বা প্রবাহ বিভাজন নীতি অনুসারে:
+                    </div>
+                    <div class="solution-step">
+                        $$I = I_g + I_s$$ <span class="sidenote">[মূল প্রবাহের সমীকরণ]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_s = I - I_g$$ <span class="sidenote">[পক্ষান্তর করে $I_s$ কে বামপাশে এনে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_s = 10 - 0.1$$ <span class="sidenote">[$I = 10\text{ A}$ এবং $I_g = 0.1\text{ A}$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_s = 9.9\text{ A}$$ <span class="sidenote">[বিয়োগ করে]</span>
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত প্রবাহ $I_g = 0.1\text{ A}$ এবং শান্টের মধ্য দিয়ে প্রবাহিত প্রবাহ $I_s = 9.9\text{ A}$।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        উদ্দীপক অনুসারে, গ্যালভানোমিটারটির সুরক্ষার জন্য মূল প্রবাহের ($I = 10\text{ A}$) সর্বোচ্চ $1\%$ অংশ গ্যালভানোমিটারের মধ্য দিয়ে যাওয়া নিরাপদ।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: নিরাপদ গ্যালভানোমিটার প্রবাহ ($I_g'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        নিরাপদ গ্যালভানোমিটার প্রবাহ, $$I_g' = I \text{ এর } 1\%$$
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' = 10 \times \frac{1}{100}$$ <span class="sidenote">[শতকরা মান ভেঙে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' = 0.1\text{ A}$$ <span class="sidenote">[গুণ ও ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: বর্তমান অবস্থার সাথে তুলনা ও শান্টের প্রয়োজনীয় নতুন মান ($S'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        'গ' হতে আমরা পেয়েছি, বর্তমান $S = 1\ \Omega$ শান্ট যুক্ত থাকা অবস্থায় গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত প্রবাহ $I_g = 0.1\text{ A}$।
+                    </div>
+                    <div class="solution-step">
+                        দেখা যাচ্ছে যে, বর্তমান প্রবাহ $I_g$ ($0.1\text{ A}$) ঠিক নিরাপদ সীমা $I_g'$ ($0.1\text{ A}$) এর <strong>সমান</strong>।
+                    </div>
+                    <div class="solution-step">
+                        তা সত্ত্বেও, গাণিতিক সূত্রের সাহায্যে $1\%$ নিরাপদ প্রবাহ বজায় রাখতে প্রয়োজনীয় নতুন শান্ট রোধ $S'$ কত হওয়া উচিত তা নিচে নির্ণয় করে যাচাই করা হলো:
+                    </div>
+                    <div class="solution-step">
+                        $$I_g' = \left( \frac{S'}{G + S'} \right) \times I$$ <span class="sidenote">[নিরাপদ প্রবাহের জন্য শান্টের সূত্র]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.1 = \left( \frac{S'}{99 + S'} \right) \times 10$$ <span class="sidenote">[$I_g' = 0.1\text{ A}$, $G = 99\ \Omega$, $I = 10\text{ A}$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies \frac{0.1}{10} = \frac{S'}{99 + S'}$$ <span class="sidenote">[পক্ষান্তর করে $10$ দিয়ে বামপাশে ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.01 = \frac{S'}{99 + S'}$$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.01 \times (99 + S') = S'$$ <span class="sidenote">[কোণাকুণি/আড়গুণন করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.99 + 0.01S' = S'$$ <span class="sidenote">[ব্র্যাকেট তুলে গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S' - 0.01S' = 0.99$$ <span class="sidenote">[$S'$ পদগুলোকে একপাশে এনে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.99S' = 0.99$$ <span class="sidenote">[$1 - 0.01 = 0.99$ বিয়োগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S' = \frac{0.99}{0.99}$$ <span class="sidenote">[ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S' = 1\ \Omega$$ <span class="sidenote">[ফলাফল]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>গাণিতিক মূল্যায়ন ও মতামত:</strong></div>
+                    <div class="solution-step">
+                        গাণিতিক বিশ্লেষণে দেখা যাচ্ছে যে, গ্যালভানোমিটারটিকে সম্পূর্ণ নিরাপদ (অর্থাৎ মূল প্রবাহের $1\%$ বা $0.1\text{ A}$ প্রবাহে) রাখতে প্রয়োজনীয় শান্টের রোধের মান $S' = 1\ \Omega$।
+                    </div>
+                    <div class="solution-step">
+                        যেহেতু উদ্দীপকে পূর্ব থেকেই $1\ \Omega$ মানের শান্ট যুক্ত ছিল, তাই বর্তমান অবস্থাতেই গ্যালভানোমিটারটির মধ্য দিয়ে ঠিক $0.1\text{ A}$ (যা মূল প্রবাহের $1\%$) প্রবাহ অতিক্রম করছে।
+                    </div>
+                    <div class="solution-step">
+                        সুতরাং, উদ্দীপকের শান্টের কোনো পরিবর্তনের প্রয়োজন নেই (অথবা $0\ \Omega$ পরিবর্তন ঘটিয়ে), অর্থাৎ বর্তমান মান বহাল রাখলেই গ্যালভানোমিটারটি সম্পূর্ণ নিরাপদ থাকবে।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ উদ্দীপকে উল্লিখিত শান্টের মান $1\ \Omega$ অপরিবর্তিত রেখে (অথবা প্রয়োজনীয় $1\ \Omega$ শান্ট বজায় রেখে) গ্যালভানোমিটারটিকে সম্পূর্ণ নিরাপদ রাখা <strong>সম্ভব</strong>।
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Creative Question 6 -->
+        <article class="question-card">
+            <div class="question-header">সৃজনশীল প্রশ্ন ৬</div>
+            
+            <div class="stem-container">
+                <p><strong>উদ্দীপক:</strong> একটি পরীক্ষাগারে $100\ \Omega$ রোধের একটি গ্যালভানোমিটার সর্বোচ্চ $10\text{ mA}$ তড়িৎ প্রবাহ নিরাপদে গ্রহণ করতে পারে। উক্ত গ্যালভানোমিটার দিয়ে সর্বোচ্চ $5\text{ A}$ প্রবাহ পরিমাপ করার জন্য একজন শিক্ষার্থী এর সাথে সমান্তরালে $0.2\ \Omega$ এর একটি শান্ট রোধ যুক্ত করল। অন্য একজন শিক্ষার্থী দাবি করল যে, শান্ট রোধের মান পরিবর্তন না করেই গ্যালভানোমিটারের শ্রেণী সমবায়ে উপযুক্ত রোধ যুক্ত করে এর পাল্লা $10\text{ A}$ পর্যন্ত বাড়ানো সম্ভব।</p>
+            </div>
+
+            <div class="sub-questions">
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ক)</span>
+                    <span class="sub-question-text">অ্যামিটার কী?</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(খ)</span>
+                    <span class="sub-question-text">অ্যামিটারকে কেন সর্বদা বর্তনীতে শ্রেণী সমবায়ে যুক্ত করা হয়? ব্যাখ্যা করো।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(গ)</span>
+                    <span class="sub-question-text">প্রথম শিক্ষার্থীর ব্যবহৃত শান্টটি গ্যালভানোমিটারের নিরাপত্তা বিধান করে $5\text{ A}$ প্রবাহ মাপার জন্য উপযুক্ত ছিল কি না?— গাণিতিক হিসাবের সাহায্যে দেখাও।</span>
+                </div>
+                <div class="sub-question-item">
+                    <span class="sub-question-prefix">(ঘ)</span>
+                    <span class="sub-question-text">দ্বিতীয় শিক্ষার্থীর দাবিটি গাণিতিক যুক্তির মাধ্যমে যাচাই করো।</span>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <section class="solution-section">
+                <div class="solution-title">৬ নং প্রশ্নের সমাধান:</div>
+
+                <!-- Solution (Ka) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ক) জ্ঞানমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>অ্যামিটার:</strong> অ্যামিটার হলো এমন একটি গ্যালাভানোমিটার-ভিত্তিক তড়িৎ যন্ত্র, যার সাহায্যে তড়িৎ বর্তনীর মূল প্রবাহকে সরাসরি অ্যাম্পিয়ার ($\text{A}$) এককে পরিমাপ করা যায়।
+                    </div>
+                </div>
+
+                <!-- Solution (Kha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(খ) অনুধাবনমূলক উত্তর:</div>
+                    <div class="solution-step">
+                        অ্যামিটারকে সর্বদা বর্তনীতে শ্রেণী সমবায়ে (Series Combination) যুক্ত করার কারণ নিচে ব্যাখ্যা করা হলো:
+                    </div>
+                    <div class="solution-step">
+                        ১. <strong>সমগ্র প্রবাহ পরিমাপের জন্য:</strong> শ্রেণী সমবায়ের বৈশিষ্ট্য হলো— এতে যুক্ত সকল উপাদানের মধ্য দিয়ে একই মানের তড়িৎ প্রবাহ পরিচালিত হয়। অ্যামিটারকে বর্তনীর শ্রেণী সমবায়ে যুক্ত করলে বর্তনীর মূল প্রবাহ সম্পূর্ণটাই অ্যামিটারের ভেতর দিয়ে অতিক্রম করে, ফলে এটি সঠিক ও নির্ভুল প্রবাহের মান নির্দেশ করতে পারে।
+                    </div>
+                    <div class="solution-step">
+                        ২. <strong>বর্তনীর মূল প্রবাহ অপরিবর্তিত রাখা:</strong> একটি আদর্শ অ্যামিটারের রোধ শূন্য ($0\ \Omega$) ধরে নেওয়া হয় এবং সাধারণ অ্যামিটারের রোধ খুবই নগণ্য ($R \approx 0$) থাকে। তাই এটিকে শ্রেণী সমবায়ে যুক্ত করলে বর্তনীর মোট রোধে কোনো উল্লেখযোগ্য প্রভাব পড়ে না, ফলে মূল তড়িৎ প্রবাহ হ্রাস পায় না বা পরিবর্তিত হয় না।
+                    </div>
+                    <div class="solution-step">
+                        পক্ষান্তরে, অ্যামিটারকে সমান্তরাল সমবায়ে যুক্ত করলে এর অতি নিম্ন রোধের কারণে অধিকাংশ প্রবাহ অ্যামিটারের মধ্য দিয়ে প্রবাহিত হয়ে বর্তনীতে শর্ট সার্কিট (Short Circuit) ঘটাবে এবং যন্ত্রটি নষ্ট হয়ে যাবে।
+                    </div>
+                </div>
+
+                <!-- Solution (Ga) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(গ) প্রয়োগমূলক উত্তর:</div>
+                    <div class="solution-step"><strong>উদ্দীপক হতে প্রাপ্ত তথ্যসমূহ:</strong></div>
+                    <div class="solution-step">গ্যালভানোমিটারের রোধ, $G = 100\ \Omega$</div>
+                    <div class="solution-step">গ্যালভানোমিটারের সর্বোচ্চ নিরাপদ প্রবাহ, $I_g = 10\text{ mA} = 10 \times 10^{-3}\text{ A} = 0.01\text{ A}$ <span class="sidenote">[$1\text{ mA} = 10^{-3}\text{ A}$ দ্বারা গুণ করে]</span></div>
+                    <div class="solution-step">পরিমাপযোগ্য মূল প্রবাহ, $I = 5\text{ A}$</div>
+                    <div class="solution-step">প্রথম শিক্ষার্থী কর্তৃক ব্যবহৃত শান্টের রোধ, $S_1 = 0.2\ \Omega$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: $5\text{ A}$ প্রবাহ পরিমাপ করার জন্য প্রয়োজনীয় আদর্শ শান্টের মান ($S$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        আমরা জানি, গ্যালভানোমিটারকে অ্যামিটারে রূপান্তরের ক্ষেত্রে শান্টের সমীকরণ:
+                    </div>
+                    <div class="solution-step">
+                        $$S = \left( \frac{I_g}{I - I_g} \right) \times G$$ <span class="sidenote">[শান্ট রোধ নির্ণয়ের মূল সূত্র]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S = \left( \frac{0.01}{5 - 0.01} \right) \times 100$$ <span class="sidenote">[$I_g = 0.01\text{ A}$, $I = 5\text{ A}$, $G = 100\ \Omega$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S = \left( \frac{0.01}{4.99} \right) \times 100$$ <span class="sidenote">[হরের বিয়োগফল $5 - 0.01 = 4.99$ নির্ণয় করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S = \frac{1}{4.99}$$ <span class="sidenote">[$0.01 \times 100 = 1$ গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies S \approx 0.2004\ \Omega$$ <span class="sidenote">[ক্যালকুলেটরের সাহায্যে ভাগ করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: প্রথম শিক্ষার্থীর ব্যবহৃত $S_1 = 0.2\ \Omega$ শান্ট যুক্ত করলে গ্যালভানোমিটার দিয়ে প্রবাহিত বর্তমান প্রবাহ ($I_g'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        যখন মূল প্রবাহ $I = 5\text{ A}$ এবং শান্ট $S_1 = 0.2\ \Omega$, তখন গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত প্রবাহ:
+                    </div>
+                    <div class="solution-step">
+                        $$I_g' = \left( \frac{S_1}{G + S_1} \right) \times I$$ <span class="sidenote">[প্রবাহ বিভাজন নীতি অনুসারে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' = \left( \frac{0.2}{100 + 0.2} \right) \times 5$$ <span class="sidenote">[$S_1 = 0.2$, $G = 100$, $I = 5$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' = \left( \frac{0.2}{100.2} \right) \times 5$$ <span class="sidenote">[হর যোগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' = \frac{1}{100.2}$$ <span class="sidenote">[$0.2 \times 5 = 1$ গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies I_g' \approx 0.00998\text{ A} = 9.98\text{ mA}$$ <span class="sidenote">[$1000$ দিয়ে গুণ করে $\text{mA}$ এককে রূপান্তর করে]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>তুলনা ও গাণিতিক সিদ্বান্ত:</strong></div>
+                    <div class="solution-step">
+                        এখানে, গ্যালভানোমিটারটি সর্বোচ্চ সহ্য করতে পারে $I_g = 10\text{ mA}$।
+                    </div>
+                    <div class="solution-step">
+                        প্রথম শিক্ষার্থীর $0.2\ \Omega$ শান্ট ব্যবহার করায় গ্যালভানোমিটারের মধ্য দিয়ে প্রবাহিত হয় $I_g' = 9.98\text{ mA}$।
+                    </div>
+                    <div class="solution-step">
+                        যেহেতু $9.98\text{ mA} < 10\text{ mA}$ (অর্থাৎ $I_g' \le I_g$), তাই গ্যালভানোমিটারটি পুড়ে যাওয়া থেকে রক্ষা পাবে এবং সম্পূর্ণ নিরাপদ থাকবে।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ প্রথম শিক্ষার্থীর ব্যবহৃত শান্টটি গ্যালভানোমিটারের নিরাপত্তা বিধান করে $5\text{ A}$ প্রবাহ পরিমাপের জন্য সম্পূর্ণ <strong>উপযুক্ত ছিল</strong>।
+                    </div>
+                </div>
+
+                <!-- Solution (Gha) -->
+                <div class="solution-sub-item">
+                    <div class="solution-sub-prefix">(ঘ) উচ্চতর দক্ষতামূলক উত্তর:</div>
+                    <div class="solution-step">
+                        <strong>উদ্দীপক ও 'গ' হতে প্রাপ্ত তথ্যাবলী:</strong>
+                    </div>
+                    <div class="solution-step">গ্যালভানোমিটারের রোধ, $G = 100\ \Omega$</div>
+                    <div class="solution-step">গ্যালভানোমিটারের সর্বোচ্চ সহনশীল প্রবাহ, $I_g = 10\text{ mA} = 0.01\text{ A}$</div>
+                    <div class="solution-step">বিদ্যমান শান্ট রোধ, $S = 0.2\ \Omega$</div>
+                    <div class="solution-step">নতুন পরিমাপযোগ্য কাঙ্ক্ষিত মূল প্রবাহ, $I_{new} = 10\text{ A}$</div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>বিষয়টি বোঝার সহজ রূপরেখা:</strong></div>
+                    <div class="solution-step">
+                        দ্বিতীয় শিক্ষার্থীর প্রস্তাব অনুসারে, শান্টের মান ($S = 0.2\ \Omega$) অপরিবর্তিত রেখে গ্যালভানোমিটারের সাথে শ্রেণী সমবায়ে একটি অতিরিক্ত রোধ $R_x$ যুক্ত করতে হবে। 
+                    </div>
+                    <div class="solution-step">
+                        যদি $R_x$ যুক্ত করা হয়, তবে গ্যালভানোমিটার শাখার মোট রোধ হবে $G' = G + R_x$।
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ১: নতুন মূল প্রবাহ $I_{new} = 10\text{ A}$ এর জন্য গ্যালভানোমিটার শাখার প্রয়োজনীয় মোট রোধ ($G'$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        আমরা জানি, শান্টের মধ্য দিয়ে ও গ্যালভানোমিটার শাখার মধ্য দিয়ে প্রবাহ বিভাজনের সমীকরণ:
+                    </div>
+                    <div class="solution-step">
+                        $$I_g = \left( \frac{S}{G' + S} \right) \times I_{new}$$ <span class="sidenote">[নতুন মোট রোধ $G'$ ধরে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.01 = \left( \frac{0.2}{G' + 0.2} \right) \times 10$$ <span class="sidenote">[$I_g = 0.01\text{ A}$, $S = 0.2\ \Omega$, $I_{new} = 10\text{ A}$ মান বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.01 = \frac{2}{G' + 0.2}$$ <span class="sidenote">[$0.2 \times 10 = 2$ গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies 0.01 \times (G' + 0.2) = 2$$ <span class="sidenote">[আড়গুণন/কোণাকুণি গুণ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies G' + 0.2 = \frac{2}{0.01}$$ <span class="sidenote">[$0.01$ দিয়ে উভয়পক্ষকে ভাগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies G' + 0.2 = 200$$ <span class="sidenote">[$2 \div 0.01 = 200$ নির্ণয় করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies G' = 200 - 0.2$$ <span class="sidenote">[$0.2$ কে ডানপাশে বিয়োগ করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies G' = 199.8\ \Omega$$ <span class="sidenote">[বিয়োগফল]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>ধাপ ২: গ্যালভানোমিটারের শ্রেণীতে প্রয়োজনীয় অতিরিক্ত রোধ ($R_x$) নির্ণয়:</strong></div>
+                    <div class="solution-step">
+                        যেহেতু $G' = G + R_x$
+                    </div>
+                    <div class="solution-step">
+                        $$\implies R_x = G' - G$$ <span class="sidenote">[পক্ষান্তর করে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies R_x = 199.8 - 100$$ <span class="sidenote">[$G' = 199.8\ \Omega$ এবং $G = 100\ \Omega$ বসিয়ে]</span>
+                    </div>
+                    <div class="solution-step">
+                        $$\implies R_x = 99.8\ \Omega$$ <span class="sidenote">[বিয়োগফল]</span>
+                    </div>
+
+                    <div class="solution-step" style="margin-top: 15px;"><strong>গাণিতিক যুক্তি ও মতামত:</strong></div>
+                    <div class="solution-step">
+                        গাণিতিক হিসাব থেকে দেখা যায় যে, বিদ্যমান শান্টের মান ($0.2\ \Omega$) অপরিবর্তিত রেখে যদি গ্যালভানোমিটারের সাথে শ্রেণী সমবায়ে ঠিক $99.8\ \Omega$ মানের একটি রোধ যুক্ত করা হয়, তবে গ্যালভানোমিটারের মধ্য দিয়ে নিরাপদ প্রবাহ $10\text{ mA}$ বজায় রেখেই মূল প্রবাহ $10\text{ A}$ পরিমাপ করা সম্ভব হবে।
+                    </div>
+                    <div class="solution-step">
+                        শ্রেণীতে $99.8\ \Omega$ রোধ যোগ করলে গ্যালভানোমিটার শাখার রোধ বৃদ্ধি পাবে, ফলে $10\text{ A}$ প্রবাহের মাত্র $0.01\text{ A}$ (বা $10\text{ mA}$) অংশ গ্যালভানোমিটার দিয়ে যাবে এবং অবশিষ্টাংশ ($9.99\text{ A}$) শান্টের মধ্য দিয়ে বাইপাস হয়ে যাবে।
+                    </div>
+
+                    <div class="final-answer">
+                        $\therefore$ গ্যালভানোমিটারের শ্রেণী সমবায়ে $99.8\ \Omega$ রোধ যুক্ত করে শান্ট পরিবর্তন না করেই এর পাল্লা $10\text{ A}$ পর্যন্ত বাড়ানো সম্ভব। অতএব, <strong>দ্বিতীয় শিক্ষার্থীর দাবিটি সম্পূর্ণ সত্য ও গ্রহণযোগ্য</strong>।
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: false},
+                    {left: '$', right: '$', display: false}
+                ]
+            });"></script>
+</body>
+</html>

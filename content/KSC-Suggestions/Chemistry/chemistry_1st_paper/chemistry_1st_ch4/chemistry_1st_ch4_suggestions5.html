@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ মাধ্যমিক রসায়ন - অম্লীয় ও ক্ষারীয় বাফার দ্রবণের ক্রিয়া কৌশল (সৃজনশীল প্রশ্ন ও সমাধান)</title>
+    <!-- KaTeX CSS CDN -->
+    </head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>উচ্চ মাধ্যমিক রসায়ন ১ম পত্র</h1>
+        <p>অধ্যায় ৪: রাসায়নিক পরিবর্তন (অম্লীয় ও ক্ষারীয় বাফার দ্রবণের ক্রিয়া কৌশল)</p>
+    </header>
+
+    <!-- Stem Component -->
+    <div class="stem-container">
+        <strong>উদ্দীপক:</strong> রসায়ন গবেষণাগারে $25^\circ\text{C}$ তাপমাত্রায় দুইটি ভিন্ন বিকারে বাফার দ্রবণ তৈরি করা হলো। পাত্র 'X' এ ইথানয়িক এসিড ($\text{CH}_3\text{COOH}$) এবং সোডিয়াম ইথানয়েটের ($\text{CH}_3\text{COONa}$) মিশ্রণ এবং পাত্র 'Y' এ অ্যামোনিয়াম হাইড্রোক্সাইড ($\text{NH}_4\text{OH}$) ও অ্যামোনিয়াম ক্লোরাইডের ($\text{NH}_4\text{Cl}$) মিশ্রণ প্রস্তুত করা হলো। উভয় পাত্রেই বাহিরে থেকে সামান্য পরিমাণ তীব্র এসিড ($\text{H}^+$) বা তীব্র ক্ষার ($\text{OH}^-$) যোগ করলেও $\text{pH}$ মানের কোনো উল্লেখযোগ্য পরিবর্তন ঘটে না।
+        <br><br>
+        <!-- Interactive Vector Graphic Representation -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 370" width="100%" height="auto" style="background-color: #f8fafc; border-radius: 8px; border: 1px solid #cbd5e1; font-family: 'SolaimanLipi', Arial, sans-serif;">
+            
+            <!-- Container X (Acidic Buffer) -->
+            <g id="beaker-x" transform="translate(80, 40)">
+                <!-- Liquid Body -->
+                <rect x="25" y="70" width="180" height="190" rx="6" class="liquid-acid" />
+                <path d="M 25 70 Q 70 65, 115 70 T 205 70 L 205 254 C 205 258, 201 260, 195 260 L 35 260 C 29 260, 25 258, 25 254 Z" fill="#ef4444" opacity="0.35" />
+                
+                <!-- Beaker Frame -->
+                <path d="M 15 20 L 25 20 L 25 260 C 25 268, 32 275, 40 275 L 190 275 C 198 275, 205 268, 205 260 L 205 20 L 215 20" class="beaker" fill="none" />
+                
+                <!-- Labels & Ions -->
+                <text x="115" y="-10" class="label-title">পাত্র 'X' (অম্লীয় বাফার)</text>
+                <text x="115" y="105" class="label-sub" font-weight="bold">CH₃COOH ⇌ CH₃COO⁻ + H⁺</text>
+                <text x="115" y="130" class="label-sub" font-weight="bold">CH₃COONa → CH₃COO⁻ + Na⁺</text>
+
+                <!-- Action Representation -->
+                <rect x="40" y="160" width="150" height="80" rx="6" fill="#ffffff" opacity="0.9" stroke="#f87171" stroke-width="1.5" />
+                <text x="115" y="182" class="ion-tag" fill="#dc2626">+ H⁺ যোগে ➔ CH₃COOH তৈরি</text>
+                <text x="115" y="215" class="ion-tag" fill="#2563eb">+ OH⁻ যোগে ➔ H₂O তৈরি</text>
+            </g>
+
+            <!-- Container Y (Basic Buffer) -->
+            <g id="beaker-y" transform="translate(500, 40)">
+                <!-- Liquid Body -->
+                <rect x="25" y="70" width="180" height="190" rx="6" class="liquid-base" />
+                <path d="M 25 70 Q 70 75, 115 70 T 205 70 L 205 254 C 205 258, 201 260, 195 260 L 35 260 C 29 260, 25 258, 25 254 Z" fill="#3b82f6" opacity="0.35" />
+                
+                <!-- Beaker Frame -->
+                <path d="M 15 20 L 25 20 L 25 260 C 25 268, 32 275, 40 275 L 190 275 C 198 275, 205 268, 205 260 L 205 20 L 215 20" class="beaker" fill="none" />
+                
+                <!-- Labels & Ions -->
+                <text x="115" y="-10" class="label-title">পাত্র 'Y' (ক্ষারীয় বাফার)</text>
+                <text x="115" y="105" class="label-sub" font-weight="bold">NH₄OH ⇌ NH₄⁺ + OH⁻</text>
+                <text x="115" y="130" class="label-sub" font-weight="bold">NH₄Cl → NH₄⁺ + Cl⁻</text>
+
+                <!-- Action Representation -->
+                <rect x="40" y="160" width="150" height="80" rx="6" fill="#ffffff" opacity="0.9" stroke="#60a5fa" stroke-width="1.5" />
+                <text x="115" y="182" class="ion-tag" fill="#dc2626">+ H⁺ যোগে ➔ H₂O তৈরি</text>
+                <text x="115" y="215" class="ion-tag" fill="#2563eb">+ OH⁻ যোগে ➔ NH₄OH তৈরি</text>
+            </g>
+        </svg>
+    </div>
+
+    <!-- ==================== CQ - 1 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০১ (অম্লীয় বাফার দ্রবণের ক্রিয়া কৌশল)</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">অনুবন্ধী এসিড-ক্ষারক জোড় (Conjugate Acid-Base Pair) কাকে বলে?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">বিশুদ্ধ পানিতে সামান্য এসিড যোগ করলে $\text{pH}$ এর দ্রুত পরিবর্তন ঘটলেও বাফার দ্রবণে কেন ঘটে না? ব্যাখ্যা কর।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">উদ্দীপকের পাত্র 'X' এর অম্লীয় বাফার দ্রবণে সামান্য পরিমাণ তীব্র এসিড ($\text{HCl}$) এবং তীব্র ক্ষার ($\text{NaOH}$) যোগ করলে দ্রবণটি কীভাবে $\text{pH}$ স্থির রাখে?— আয়নিক সমীকরণসহ ক্রিয়া কৌশল বিশদভাবে ব্যাখ্যা করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">যদি পাত্র 'X' এ মৃদু এসিড $\text{CH}_3\text{COOH}$ ($100\text{ mL}, 0.1\text{ M}$) এর সাথে $50\text{ mL }, 0.1\text{ M } \text{NaOH}$ মেশানো হয়, তবে প্রাপ্ত দ্রবণে বাফার ক্রিয়া বজায় থাকবে কি না?— গাণিতিক বিশ্লেষণের মাধ্যমে সিদ্ধান্ত দাও। ($25^\circ\text{C}$ এ $\text{CH}_3\text{COOH}$ এর $K_a = 1.8 \times 10^{-5}$)</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 1 -->
+        <div class="solution-section">
+            <div class="solution-title">১ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>অনুবন্ধী এসিড-ক্ষারক জোড়:</strong> একটি মাত্র প্রোটনের ($\text{H}^+$) পার্থক্যের মাধ্যমে সম্পর্কিত দুটি রাসায়নিক সত্তাকে (অণু বা আয়ন) পরস্পরের অনুবন্ধী এসিড-ক্ষারক জোড় বলে। যেমন: $\text{CH}_3\text{COOH}$ (এসিড) এবং তার অনুবন্ধী ক্ষারক হলো $\text{CH}_3\text{COO}^-$।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    বিশুদ্ধ পানিতে কোনো বাফার সিস্টেম থাকে না। ফলে মাত্র কয়েক ফোঁটা তীব্র এসিড ($\text{H}^+$) যোগ করলে পানিতে মুক্ত $[\text{H}^+]$ এর ঘনমাত্রা বহুগুণ বেড়ে যায় এবং $\text{pH} = -\log_{10}[\text{H}^+]$ সূত্রানুসারে $\text{pH}$ এর মান দ্রুত হ্রাস পায়।
+                </div>
+                <div class="solution-step">
+                    কিন্তু বাফার দ্রবণে প্রোটন গ্রহণকারী (অনুবন্ধী ক্ষারক) এবং প্রোটন প্রদানকারী (মৃদু এসিড) উভয় উপাদানই বিদ্যমান থাকে। বাহিরে থেকে সামান্য এসিড বা ক্ষার যোগ করা হলে বাফারের এই উপাদানগুলো অতিরিক্ত $\text{H}^+$ বা $\text{OH}^-$ এর সাথে সাথে বিক্রিয়া করে সেগুলোকে মৃদু বা অ-বিয়োজিত যৌগ (যেমন: $\text{H}_2\text{O}$ বা অ-আয়নিত এসিড) এ পরিণত করে। ফলে দ্রবণে মুক্ত $[\text{H}^+]$ বা $[\text{OH}^-]$ প্রায় অপরিবর্তিত থাকে এবং $\text{pH}$ স্থির থাকে।
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>পাত্র 'X' এর দ্রবণটির রাসায়নিক সাম্যাবস্থা:</strong>
+                    <br>১. মৃদু অম্ল ইথানয়িক এসিড আংশিক আয়নিত হয়:
+                    $$\text{CH}_3\text{COOH}(aq) \rightleftharpoons \text{CH}_3\text{COO}^-(aq) + \text{H}^+(aq)$$
+                    <br>২. সোডিয়াম ইথানয়েট লবণ তীব্র তড়িৎ-বিশ্লেষ্য হওয়ায় সম্পূর্ণ আয়নিত হয়:
+                    $$\text{CH}_3\text{COONa}(aq) \rightarrow \text{CH}_3\text{COO}^-(aq) + \text{Na}^+(aq)$$
+                    <br>ফলে দ্রবণে বিপুল পরিমাণ অনুবন্ধী ক্ষারক $\text{CH}_3\text{COO}^-$ এবং অ-বিয়োজিত মৃদু এসিড $\text{CH}_3\text{COOH}$ এর রিজার্ভ গড়ে ওঠে।
+                </div>
+                <div class="solution-step">
+                    <strong>সামান্য তীব্র এসিড ($\text{H}^+$) যোগ করলে:</strong>
+                    <br>বাহিরে থেকে যোগকৃত $\text{H}^+$ আয়ন বাফারে বিদ্যমান অতিরিক্ত $\text{CH}_3\text{COO}^-$ আয়নের সাথে যুক্ত হয়ে মৃদু বিয়োজিত $\text{CH}_3\text{COOH}$ গঠন করে:
+                    $$\text{H}^+(aq) + \text{CH}_3\text{COO}^-(aq) \rightleftharpoons \text{CH}_3\text{COOH}(aq)$$ <span class="sidenote">[মুক্ত H⁺ হ্রাস পায়]</span>
+                    যেহেতু উৎপন্ন $\text{CH}_3\text{COOH}$ অত্যন্ত মৃদু, তাই এটি পুনরায় আয়নিত হয় না। ফলে বাইরে থেকে যোগ করা অতিরিক্ত $\text{H}^+$ দ্রবণ থেকে অপসারিত হয় এবং $\text{pH}$ অপরিবর্তিত থাকে।
+                </div>
+                <div class="solution-step">
+                    <strong>সামান্য তীব্র ক্ষার ($\text{OH}^-$) যোগ করলে:</strong>
+                    <br>বাহিরে থেকে যোগকৃত $\text{OH}^-$ আয়ন অম্লীয় বাফারে উপস্থিত অ-বিয়োজিত $\text{CH}_3\text{COOH}$ অণুর সাথে বিক্রিয়া করে অবিয়োজিত পানি ও ইথানয়েট আয়ন তৈরি করে:
+                    $$\text{OH}^-(aq) + \text{CH}_3\text{COOH}(aq) \rightleftharpoons \text{H}_2\text{O}(l) + \text{CH}_3\text{COO}^-(aq)$$ <span class="sidenote">[মুক্ত OH⁻ পানি তৈরি করে]</span>
+                    অথবা, যোগকৃত $\text{OH}^-$ দ্রবণস্থিত $\text{H}^+$ এর সাথে যুক্ত হয়ে $\text{H}_2\text{O}$ গঠন করে। ফলে সাম্যাবস্থা ডানে সরে গিয়ে $\text{CH}_3\text{COOH}$ হতে পুনরায় $\text{H}^+$ সরবরাহ হয়।
+                </div>
+                <div class="final-answer">
+                    $\therefore$ পাত্র 'X' এর বাফার দ্রবণে রিজার্ভ এসিড ও রিজার্ভ ক্ষারক উপস্থিত থাকার কারণে এটি বাহিরের এসিড ও ক্ষার প্রশমিত করে এবং নিজস্ব $\text{pH}$ মান ধ্রুব রাখে।
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>দেওয়া আছে:</strong>
+                    <br>$\text{CH}_3\text{COOH}$ এর আয়তন ($V_1$) = $100\text{ mL} = 0.1\text{ L}$, ঘনমাত্রা ($C_1$) = $0.1\text{ M}$
+                    <br>$\text{NaOH}$ এর আয়তন ($V_2$) = $50\text{ mL} = 0.05\text{ L}$, ঘনমাত্রা ($C_2$) = $0.1\text{ M}$
+                </div>
+                <div class="solution-step">
+                    <strong>মোল সংখ্যা নির্ণয়:</strong>
+                    $$n(\text{CH}_3\text{COOH}) = 0.1\text{ L} \times 0.1\text{ mol/L} = 0.01\text{ mol}$$ <span class="sidenote">[$n = V \times C$ সূত্রানুসারে]</span>
+                    $$n(\text{NaOH}) = 0.05\text{ L} \times 0.1\text{ mol/L} = 0.005\text{ mol}$$ <span class="sidenote">[ঘনমাত্রা গুণন আয়তন]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>সংঘটিত বিক্রিয়া ও অবশিষ্টাংশ হিসাব:</strong>
+                    $$\text{CH}_3\text{COOH} + \text{NaOH} \rightarrow \text{CH}_3\text{COONa} + \text{H}_2\text{O}$$
+                    <br>প্রারম্ভে: $\text{CH}_3\text{COOH} = 0.01\text{ mol}$, $\text{NaOH} = 0.005\text{ mol}$, $\text{CH}_3\text{COONa} = 0\text{ mol}$
+                    <br>বিক্রিয়া শেষে:
+                    <br>অবশিষ্ট $\text{CH}_3\text{COOH} = 0.01 - 0.005 = 0.005\text{ mol}$ <span class="sidenote">[মৃদু এসিড অতিরিক্ত থাকে]</span>
+                    <br>উৎপন্ন $\text{CH}_3\text{COONa} = 0.005\text{ mol}$ <span class="sidenote">[লবণ তৈরি হয়]</span>
+                    <br>অবশিষ্ট $\text{NaOH} = 0\text{ mol}$ <span class="sidenote">[তীব্র ক্ষার নিঃশেষিত]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>বাফার দ্রবণ গঠনের শর্ত বিশ্লেষণ:</strong>
+                    <br>একটি অম্লীয় বাফার দ্রবণ তৈরি হওয়ার প্রধান শর্ত হলো দ্রবণে একই সাথে মৃদু অম্ল এবং উক্ত অম্লের সাথে তীব্র ক্ষারের প্রশমনে প্রাপ্ত লবণ বিদ্যমান থাকতে হবে।
+                    <br>এখানে প্রাপ্ত মিশ্রণে $0.005\text{ mol}$ মৃদু এসিড ($\text{CH}_3\text{COOH}$) এবং $0.005\text{ mol}$ অনুবন্ধী ক্ষারক বিশিষ্ট লবণ ($\text{CH}_3\text{COONa}$) অবস্থান করছে।
+                </div>
+                <div class="solution-step">
+                    <strong>প্রাপ্ত দ্রবণের $\text{pH}$ নির্ণয় (হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ):</strong>
+                    $$\text{pH} = \text{pK}_a + \log_{10}\left(\frac{n_{\text{salt}}}{n_{\text{acid}}}\right)$$
+                    $$\implies \text{pK}_a = -\log_{10}(1.8 \times 10^{-5}) = 4.745$$ <span class="sidenote">[pK_a হিসাব]</span>
+                    $$\implies \text{pH} = 4.745 + \log_{10}\left(\frac{0.005}{0.005}\right)$$ <span class="sidenote">[মান বসিয়ে]</span>
+                    $$\implies \text{pH} = 4.745 + \log_{10}(1) = 4.745$$ <span class="sidenote">[যেহেতু log(1) = 0]</span>
+                </div>
+                <div class="final-answer">
+                    $\therefore$ গাণিতিক বিশ্লেষণে দেখা যায় যে, প্রাপ্ত মিশ্রণে মৃদু এসিড ও লবণ সমান মোলার অনুপাতে বিদ্যমান থাকায় দ্রবণটি একটি কার্যকর অম্লীয় বাফার হিসেবে কাজ করবে এবং বাফার ক্রিয়া সম্পূর্ণরূপে বজায় থাকবে।
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- ==================== CQ - 2 ==================== -->
+    <article class="question-card">
+        <div class="question-header">
+            <span>📌 সৃজনশীল প্রশ্ন - ০২ (ক্ষারীয় বাফার দ্রবণ ও শিল্পক্ষেত্রে প্রয়োগ)</span>
+        </div>
+
+        <div class="sub-questions">
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ক)</span>
+                <span class="sub-question-text">বাফার পরিসর (Buffer Range) বলতে কী বোঝায়?</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(খ)</span>
+                <span class="sub-question-text">কৃষি জমি ও ঔষধ শিল্পে বাফার দ্রবণের গুরুত্ব ব্যাখ্যা করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(গ)</span>
+                <span class="sub-question-text">উদ্দীপকের পাত্র 'Y' এর ক্ষারীয় বাফার দ্রবণটির ক্রিয়া কৌশল রাসায়নিক সমীকরণ সম্বলিত ধাপের মাধ্যমে প্রদর্শন করো।</span>
+            </div>
+            <div class="sub-question-item">
+                <span class="sub-question-prefix">(ঘ)</span>
+                <span class="sub-question-text">পাত্র 'Y' এর দ্রবণ তৈরি করতে যদি $200\text{ mL }, 0.15\text{ M } \text{NH}_4\text{OH}$ এর সাথে $100\text{ mL }, 0.1\text{ M } \text{NH}_4\text{Cl}$ যোগ করা হয়, তবে উৎপন্ন ক্ষারীয় বাফারটিতে $5\text{ mL }, 0.1\text{ M } \text{NaOH}$ মেশালে $\text{pH}$ মান কতটা পরিবর্তিত হবে?— গাণিতিক বিশ্লেষণ দাও। ($25^\circ\text{C}$ এ $\text{NH}_4\text{OH}$ এর $K_b = 1.8 \times 10^{-5}$)</span>
+            </div>
+        </div>
+
+        <!-- SOLUTION FOR CQ - 2 -->
+        <div class="solution-section">
+            <div class="solution-title">২ নং প্রশ্নের সমাধান:</div>
+
+            <!-- (ক) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ক) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>বাফার পরিসর:</strong> $\text{pH}$ এর যে নির্দিষ্ট সীমার মধ্যে কোনো বাফার দ্রবণ কার্যকরভাবে তার বাফার ক্রিয়া প্রদর্শন করতে পারে (অর্থাৎ অতিরিক্ত এসিড বা ক্ষার যোগ প্রতিরোধ করতে পারে), তাকে ওই বাফার দ্রবণের বাফার পরিসর বলে। অম্লীয় বাফারের ক্ষেত্রে বাফার পরিসর হলো $\text{pH} = \text{pK}_a \pm 1$।
+                </div>
+            </div>
+
+            <!-- (খ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(খ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>১. কৃষি জমিতে:</strong> মাটির $\text{pH}$ উদ্ভিদের পুষ্টি উপাদান (যেমন- $\text{N, P, K}$) শোষণের জন্য অত্যন্ত গুরুত্বপূর্ণ। মাটিতে উপস্থিত কার্বোনেট ও ফসফেট লবণসমূহ স্বভাবজাত বাফার হিসেবে কাজ করে মাটির $\text{pH}$ নিয়ন্ত্রিত রাখে। কৃত্রিম সারের মাত্রাতিরিক্ত ব্যবহারে বাফার ক্রিয়া ব্যাহত হলে মাটিতে চুন ($\text{CaO}$) বা জিপসাম ব্যবহার করে $\text{pH}$ পুনরায় সামঞ্জস্য করা হয়।
+                </div>
+                <div class="solution-step">
+                    <strong>২. ঔষধ শিল্পে:</strong> মানুষের চোখ বা ত্বকে ব্যবহারের ড্রপ, ইঞ্জেকশন এবং বিভিন্ন সিরাপের $\text{pH}$ নির্দিষ্ট রাখা বাধ্যতামূলক। উদাহরণস্বরূপ, চোখের ড্রপের $\text{pH}$ আনুমানিক $7.4$ এ স্থিত রাখতে বাফার দ্রবণ ব্যবহার করা হয়, অন্যথায় চোখে তীব্র জ্বালা বা কোষের ক্ষতি হতে পারে।
+                </div>
+            </div>
+
+            <!-- (গ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(গ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>পাত্র 'Y' এর ক্ষারীয় বাফারের অভ্যন্তরীণ সাম্যাবস্থা:</strong>
+                    <br>১. মৃদু ক্ষার $\text{NH}_4\text{OH}$ জলীয় দ্রবণে আংশিক বিয়োজিত অবস্থায় থাকে:
+                    $$\text{NH}_4\text{OH}(aq) \rightleftharpoons \text{NH}_4^+(aq) + \text{OH}^-(aq)$$
+                    <br>২. এর লবণ $\text{NH}_4\text{Cl}$ তীব্র তড়িৎ-বিশ্লেষ্য হওয়ায় শতভাগ আয়নিত হয়:
+                    $$\text{NH}_4\text{Cl}(aq) \rightarrow \text{NH}_4^+(aq) + \text{Cl}^-(aq)$$
+                    এর ফলে সাম্যাবস্থায় প্রচুর পরিমাণে অনুবন্ধী এসিড $\text{NH}_4^+$ আয়ন এবং অ-বিয়োজিত মৃদু ক্ষার $\text{NH}_4\text{OH}$ জমা থাকে।
+                </div>
+                <div class="solution-step">
+                    <strong>১. সামান্য তীব্র এসিড ($\text{H}^+$) যোগ করা হলে:</strong>
+                    <br>বাইরে থেকে আগত $\text{H}^+$ আয়ন দ্রবণে উপস্থিত মৃদু ক্ষার $\text{NH}_4\text{OH}$ দ্বারা প্রশমিত হয়ে পানিতে রূপান্তরিত হয়:
+                    $$\text{H}^+(aq) + \text{NH}_4\text{OH}(aq) \rightleftharpoons \text{NH}_4^+(aq) + \text{H}_2\text{O}(l)$$ <span class="sidenote">[H⁺ দ্রবণ থেকে অপসারিত]</span>
+                    অথবা, $\text{H}^+$ আয়ন মুক্ত $\text{OH}^-$ এর সাথে যুক্ত হয়ে $\text{H}_2\text{O}$ তৈরি করে। ফলে সাম্যাবস্থা ডানে সরে গিয়ে $\text{NH}_4\text{OH}$ পুনঃআয়নিত হয়।
+                </div>
+                <div class="solution-step">
+                    <strong>২. সামান্য তীব্র ক্ষার ($\text{OH}^-$) যোগ করা হলে:</strong>
+                    <br>বাইরে থেকে আসা অতিরিক্ত $\text{OH}^-$ আয়ন বাফারে মজুদ থাকা বিপুল পরিমাণ $\text{NH}_4^+$ আয়নের সাথে যুক্ত হয়ে মৃদু ক্ষার অণু $\text{NH}_4\text{OH}$ গঠন করে:
+                    $$\text{OH}^-(aq) + \text{NH}_4^+(aq) \rightleftharpoons \text{NH}_4\text{OH}(aq)$$ <span class="sidenote">[অ-বিয়োজিত ক্ষার গঠিত হয়]</span>
+                    উৎপন্ন $\text{NH}_4\text{OH}$ অত্যন্ত মৃদু ক্ষারীয় হওয়ায় এটি পুনরায় আয়নিত হয় না। ফলে অতিরিক্ত $[\text{OH}^-]$ প্রশমিত হয় এবং দ্রবণের $\text{pOH}$ তথা $\text{pH}$ অপরিবর্তিত থাকে।
+                </div>
+            </div>
+
+            <!-- (ঘ) -->
+            <div class="solution-sub-item">
+                <span class="solution-sub-prefix">(ঘ) এর সমাধান:</span>
+                <div class="solution-step">
+                    <strong>ধাপ ১: প্রারম্ভিক উপাদানসমূহের মোল সংখ্যা নির্ণয়</strong>
+                    <br>$n(\text{NH}_4\text{OH}) = 0.2\text{ L} \times 0.15\text{ M} = 0.03\text{ mol}$ <span class="sidenote">[ক্ষারক এর মোল]</span>
+                    <br>$n(\text{NH}_4\text{Cl}) = 0.1\text{ L} \times 0.1\text{ M} = 0.01\text{ mol}$ <span class="sidenote">[লবণ এর মোল]</span>
+                    <br>$\text{pK}_b = -\log_{10}(1.8 \times 10^{-5}) = 4.745$ <span class="sidenote">[pK_b মান]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ২: প্রাথমিক বাফারের $\text{pH}_1$ নির্ণয়</strong>
+                    $$\text{pOH}_1 = \text{pK}_b + \log_{10}\left(\frac{n_{\text{salt}}}{n_{\text{base}}}\right)$$ <span class="sidenote">[হ্যান্ডারসন-হ্যাসেলবাখ সমীকরণ]</span>
+                    $$\implies \text{pOH}_1 = 4.745 + \log_{10}\left(\frac{0.01}{0.03}\right) = 4.745 + (-0.477) = 4.268$$
+                    $$\therefore \text{pH}_1 = 14 - \text{pOH}_1 = 14 - 4.268 = 9.732$$ <span class="sidenote">[প্রাথমিক pH]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ৩: যোগকৃত $\text{NaOH}$ এর মোল ও বাফারে প্রভাব হিসাব</strong>
+                    <br>যোগকৃত $\text{NaOH}$ এর মোল ($n_{\text{OH^-}}$) = $0.005\text{ L} \times 0.1\text{ M} = 0.0005\text{ mol}$
+                    <br>এই যোগকৃত $\text{OH}^-$ ক্ষারীয় বাফারের অনুবন্ধী এসিড ($\text{NH}_4^+$) এর সাথে বিক্রিয়া করবে:
+                    $$\text{NH}_4^+ + \text{OH}^- \rightarrow \text{NH}_4\text{OH}$$
+                    <br>ফলে নতুন মোলার সংখ্যা হবে:
+                    <br>নতুন ক্ষারক ($n_{\text{base, new}}$) = $0.03 + 0.0005 = 0.0305\text{ mol}$ <span class="sidenote">[ক্ষারক বৃদ্ধি পায়]</span>
+                    <br>নতুন লবণ ($n_{\text{salt, new}}$) = $0.01 - 0.0005 = 0.0095\text{ mol}$ <span class="sidenote">[লবণ হ্রাস পায়]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>ধাপ ৪: $\text{NaOH}$ যোগ করার পর নতুন $\text{pH}_2$ নির্ণয়</strong>
+                    $$\text{pOH}_2 = 4.745 + \log_{10}\left(\frac{0.0095}{0.0305}\right)$$
+                    $$\implies \text{pOH}_2 = 4.745 + \log_{10}(0.3115) = 4.745 + (-0.5065) = 4.2385$$
+                    $$\therefore \text{pH}_2 = 14 - 4.2385 = 9.7615$$ <span class="sidenote">[নতুন pH]</span>
+                </div>
+                <div class="solution-step">
+                    <strong>$\text{pH}$ এর পরিবর্তন ($\Delta \text{pH}$):</strong>
+                    $$\Delta \text{pH} = |\text{pH}_2 - \text{pH}_1| = |9.7615 - 9.732| = 0.0295 \approx 0.03$$
+                </div>
+                <div class="final-answer">
+                    $\therefore$ গাণিতিক বিশ্লেষণে স্পষ্ট যে, $5\text{ mL } 0.1\text{ M } \text{NaOH}$ যোগ করার পর দ্রবণের $\text{pH}$ অতি নগণ্য মাত্রায় ($\Delta \text{pH} \approx 0.03$) বৃদ্ধি পাবে। অর্থাৎ বাফার ক্রিয়া সফলভাবে বজায় থাকবে।
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+</body>
+</html>

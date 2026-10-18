@@ -535,6 +535,383 @@
       },
       "filePath": "HSC/Math/Systech/1st_Paper/Trigono_CH7/Trigonometry7B/7B_Q25_Q36_HSCTrigonometry.html",
       "tags": ["systech", "trigonometry", "1st-paper"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch2-Sugg1",
+      "name": "রসায়ন ১ম - অধ্যায় ২ - সাজেশন ১",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "গুণগত রসায়ন",
+        "topic": "সাজেশন ১"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch2/chemistry_1st_ch2_suggestions1.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch2"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch2-Sugg2",
+      "name": "রসায়ন ১ম - অধ্যায় ২ - সাজেশন ২",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "গুণগত রসায়ন",
+        "topic": "সাজেশন ২"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch2/chemistry_1st_ch2_suggestions2.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch2"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch4-Sugg1",
+      "name": "রসায়ন ১ম - অধ্যায় ৪ - সাজেশন ১",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "রাসায়নিক পরিবর্তন",
+        "topic": "সাজেশন ১"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch4/chemistry_1st_ch4_suggestions1.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch4-Sugg2",
+      "name": "রসায়ন ১ম - অধ্যায় ৪ - সাজেশন ২",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "রাসায়নিক পরিবর্তন",
+        "topic": "সাজেশন ২"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch4/chemistry_1st_ch4_suggestions2.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch4-Sugg3",
+      "name": "রসায়ন ১ম - অধ্যায় ৪ - সাজেশন ৩",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "রাসায়নিক পরিবর্তন",
+        "topic": "সাজেশন ৩"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch4/chemistry_1st_ch4_suggestions3.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch4-Sugg4",
+      "name": "রসায়ন ১ম - অধ্যায় ৪ - সাজেশন ৪",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "রাসায়নিক পরিবর্তন",
+        "topic": "সাজেশন ৪"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch4/chemistry_1st_ch4_suggestions4.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Chem1-Ch4-Sugg5",
+      "name": "রসায়ন ১ম - অধ্যায় ৪ - সাজেশন ৫",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ১ম পত্র",
+        "chapter": "রাসায়নিক পরিবর্তন",
+        "topic": "সাজেশন ৫"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_1st_paper/chemistry_1st_ch4/chemistry_1st_ch4_suggestions5.html",
+      "tags": ["ksc", "chemistry", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch3-CQ1-2",
+      "name": "রসায়ন ২য় - অধ্যায় ৩ - সৃজনশীল ১-২",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "জৈব রসায়ন",
+        "topic": "সৃজনশীল ১-২"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch3/chem2nd_ch3_cq1n2.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch3", "cq"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch3-CQ3-4",
+      "name": "রসায়ন ২য় - অধ্যায় ৩ - সৃজনশীল ৩-৪",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "জৈব রসায়ন",
+        "topic": "সৃজনশীল ৩-৪"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch3/chem2nd_ch3_cq3n4.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch3", "cq"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch3-CQ5-6",
+      "name": "রসায়ন ২য় - অধ্যায় ৩ - সৃজনশীল ৫-৬",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "জৈব রসায়ন",
+        "topic": "সৃজনশীল ৫-৬"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch3/chem2nd_ch3_cq5n6.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch3", "cq"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch3-SQ",
+      "name": "রসায়ন ২য় - অধ্যায় ৩ - বহুনির্বাচনি",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "জৈব রসায়ন",
+        "topic": "বহুনির্বাচনি"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch3/chem2nd_ch3_sq.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch3", "sq"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch4-CQ",
+      "name": "রসায়ন ২য় - অধ্যায় ৪ - সৃজনশীল",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "বিশ্লেষণমূলক রসায়ন",
+        "topic": "সৃজনশীল"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch4/chem2nd_ch4_cq.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch4", "cq"]
+    },
+    {
+      "topicId": "KSC-Chem2-Ch4-SQ",
+      "name": "রসায়ন ২য় - অধ্যায় ৪ - বহুনির্বাচনি",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "রসায়ন ২য় পত্র",
+        "chapter": "বিশ্লেষণমূলক রসায়ন",
+        "topic": "বহুনির্বাচনি"
+      },
+      "filePath": "KSC-Suggestions/Chemistry/chemistry_2nd_paper/chemistry_2nd_ch4/chem2nd_ch4_sq.html",
+      "tags": ["ksc", "chemistry", "2nd-paper", "ch4", "sq"]
+    },
+    {
+      "topicId": "KSC-HMath1-Ch1-Matrices",
+      "name": "উচ্চতর গণিত ১ম - অধ্যায় ১ - ম্যাট্রিক্স",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "উচ্চতর গণিত ১ম পত্র",
+        "chapter": "ম্যাট্রিক্স ও নির্ণায়ক",
+        "topic": "ম্যাট্রিক্স সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Higher Math/math_1st_paper/math_1st_ch1/sugges_metrices.html",
+      "tags": ["ksc", "hmath", "1st-paper", "ch1", "matrices"]
+    },
+    {
+      "topicId": "KSC-HMath1-Ch2-Vector",
+      "name": "উচ্চতর গণিত ১ম - অধ্যায় ২ - ভেক্টর",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "উচ্চতর গণিত ১ম পত্র",
+        "chapter": "ভেক্টর",
+        "topic": "ভেক্টর সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Higher Math/math_1st_paper/math_1st_ch2/sugges_vector.html",
+      "tags": ["ksc", "hmath", "1st-paper", "ch2", "vector"]
+    },
+    {
+      "topicId": "KSC-HMath2-Ch3-Complex",
+      "name": "উচ্চতর গণিত ২য় - অধ্যায় ৩ - জটিল সংখ্যা",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "উচ্চতর গণিত ২য় পত্র",
+        "chapter": "জটিল সংখ্যা",
+        "topic": "জটিল সংখ্যা সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Higher Math/math_2nd_paper/math_2nd_ch3/sugges_complex.html",
+      "tags": ["ksc", "hmath", "2nd-paper", "ch3", "complex"]
+    },
+    {
+      "topicId": "KSC-HMath2-Ch7-TrigRev",
+      "name": "উচ্চতর গণিত ২য় - অধ্যায় ৭ - বিপরীত ত্রিকোণমিতি",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "উচ্চতর গণিত ২য় পত্র",
+        "chapter": "বিপরীত ত্রিকোণমিতি",
+        "topic": "বিপরীত ত্রিকোণমিতি সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Higher Math/math_2nd_paper/math_2nd_ch7/sugges_trig_rev_fn.html",
+      "tags": ["ksc", "hmath", "2nd-paper", "ch7", "trigonometry"]
+    },
+    {
+      "topicId": "KSC-ICT-Ch3-Digital",
+      "name": "তথ্য ও যোগাযোগ - অধ্যায় ৩ - ডিজিটাল ডিভাইস",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "chapter": "সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস",
+        "topic": "ডিজিটাল ডিভাইস"
+      },
+      "filePath": "KSC-Suggestions/ICT/ict_ch3/ict_ch3_digital_device.html",
+      "tags": ["ksc", "ict", "ch3", "digital"]
+    },
+    {
+      "topicId": "KSC-ICT-Ch3-Numbers",
+      "name": "তথ্য ও যোগাযোগ - অধ্যায় ৩ - সংখ্যা পদ্ধতি",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "chapter": "সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস",
+        "topic": "সংখ্যা পদ্ধতি"
+      },
+      "filePath": "KSC-Suggestions/ICT/ict_ch3/ict_ch3_numbers.html",
+      "tags": ["ksc", "ict", "ch3", "numbers"]
+    },
+    {
+      "topicId": "KSC-ICT-Ch4-Web",
+      "name": "তথ্য ও যোগাযোগ - অধ্যায় ৪ - ওয়েব ডিজাইন",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "chapter": "ওয়েব ডিজাইন পরিচিতি এবং এইচটিএমএল",
+        "topic": "সকল সৃজনশীল"
+      },
+      "filePath": "KSC-Suggestions/ICT/ict_ch4/ict_ch4.html",
+      "tags": ["ksc", "ict", "ch4", "web", "html"]
+    },
+    {
+      "topicId": "KSC-Phy1-Ch4-Sugg",
+      "name": "পদার্থ ১ম - অধ্যায় ৪ - সাজেশন",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ১ম পত্র",
+        "chapter": "নিউটনীয় বলবিদ্যা",
+        "topic": "সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_1st_paper/phy_1st_ch4/phy_1st_ch4_suggestions.html",
+      "tags": ["ksc", "physics", "1st-paper", "ch4"]
+    },
+    {
+      "topicId": "KSC-Phy1-Ch5-Sugg",
+      "name": "পদার্থ ১ম - অধ্যায় ৫ - সাজেশন",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ১ম পত্র",
+        "chapter": "কাজ, ক্ষমতা ও শক্তি",
+        "topic": "সাজেশন"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_1st_paper/phy_1st_ch5/phy_1st_ch5_suggestions.html",
+      "tags": ["ksc", "physics", "1st-paper", "ch5"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch3-CQ1-2",
+      "name": "পদার্থ ২য় - অধ্যায় ৩ - সৃজনশীল ১-২",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "তড়িৎ প্রবাহ",
+        "topic": "সৃজনশীল ১-২"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch3/phy_2nd_ch3_cq1n2.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch3", "cq"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch3-CQ3-4",
+      "name": "পদার্থ ২য় - অধ্যায় ৩ - সৃজনশীল ৩-৪",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "তড়িৎ প্রবাহ",
+        "topic": "সৃজনশীল ৩-৪"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch3/phy_2nd_ch3_cq3n4.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch3", "cq"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch3-Q1",
+      "name": "পদার্থ ২য় - অধ্যায় ৩ - প্রশ্ন ১",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "তড়িৎ প্রবাহ",
+        "topic": "প্রশ্ন ১"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch3/phy_2nd_ch3_q1.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch3"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch4-CQ1-2",
+      "name": "পদার্থ ২য় - অধ্যায় ৪ - সৃজনশীল ১-২",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "চৌম্বকক্ষেত্র ও বল",
+        "topic": "সৃজনশীল ১-২"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch4/phy_2nd_ch4_cq1n2.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch4", "cq"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch4-CQ3-4",
+      "name": "পদার্থ ২য় - অধ্যায় ৪ - সৃজনশীল ৩-৪",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "চৌম্বকক্ষেত্র ও বল",
+        "topic": "সৃজনশীল ৩-৪"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch4/phy_2nd_ch4_cq3n4.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch4", "cq"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch4-CQ5-6",
+      "name": "পদার্থ ২য় - অধ্যায় ৪ - সৃজনশীল ৫-৬",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "চৌম্বকক্ষেত্র ও বল",
+        "topic": "সৃজনশীল ৫-৬"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch4/phy_2nd_ch4_cq5n6.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch4", "cq"]
+    },
+    {
+      "topicId": "KSC-Phy2-Ch4-SQ1",
+      "name": "পদার্থ ২য় - অধ্যায় ৪ - বহুনির্বাচনি ১",
+      "category": {
+        "board": "KSC",
+        "className": "KSC Suggestions",
+        "subject": "পদার্থবিজ্ঞান ২য় পত্র",
+        "chapter": "চৌম্বকক্ষেত্র ও বল",
+        "topic": "বহুনির্বাচনি ১"
+      },
+      "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch4/phy_2nd_ch4_sq1.html",
+      "tags": ["ksc", "physics", "2nd-paper", "ch4", "sq"]
     }
   ]
 }

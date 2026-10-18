@@ -1005,3 +1005,16 @@ body.dark .publisher-paper-count {
         padding: 12px 14px;
     }
 }
+
+/* KSC Content Page Fix */
+#academiaPage {
+    background: var(--bg) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#academiaContent {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}

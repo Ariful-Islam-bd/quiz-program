@@ -184,3 +184,46 @@ body.dark .explanation-table td {
     overflow-y: hidden;
     padding: 4px 0;
 }
+
+/* ============================================================
+   KSC Suggestions CSS Fix (Scoping for Academia Page)
+   ============================================================ */
+
+/* ফিক্স ১: Academy পেজের মূল লেআউট যেন সাদা না হয়ে যায় */
+#academiaPage .page,
+#academiaContent {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background: transparent !important;
+}
+
+/* ফিক্স ২: কন্টেন্ট বডির ভেতরের ইউটিলিটি টেক্সট (যেমন: [mL কে L এ রূপান্তর]) */
+.math-content .solution-step {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 4px 0;
+    font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+}
+
+/* ফিক্স ৩: ম্যাথ ম্যাট্রিক্স বা লম্বা সূত্র যেন স্ক্রিনের বাইরে না যায় */
+.math-content .katex-display {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 8px 0 !important;
+    max-width: 100% !important;
+}
+
+.math-content .problem-card {
+    overflow: hidden; 
+    width: 100% !important;
+}
+
+/* ফিক্স ৪: মোবাইল রেসপনসিভ ফিক্স */
+@media (max-width: 768px) {
+    #academiaContent {
+        padding: 10px !important;
+    }
+}
