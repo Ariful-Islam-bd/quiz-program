@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ১০: সিম্যান্টিক ও লেআউট</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'🧱'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* div vs span ডেমো */
+.div-span-demo{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px; margin:16px 0;
+}
+.demo-panel{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px;
+}
+.demo-panel h4{
+  font-size:.9rem; color:var(--primary);
+  margin-bottom:10px;
+  padding-bottom:6px;
+  border-bottom:2px dashed #e0e7ff;
+}
+.demo-panel .box-div{
+  display:block;
+  background:#e0e7ff;
+  color:var(--primary);
+  padding:10px; margin:4px 0;
+  border-radius:6px;
+  font-weight:600;
+}
+.demo-panel .span-inline{
+  display:inline;
+  background:#fef3c7;
+  color:#92400e;
+  padding:2px 6px;
+  border-radius:4px;
+  font-weight:600;
+}
+
+/* সিম্যান্টিক ডায়াগ্রাম */
+.semantic-diagram{
+  background:#f8fafc;
+  border:2px solid var(--primary);
+  border-radius:12px;
+  padding:12px;
+  margin:16px 0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.semantic-diagram .row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.semantic-diagram .box{
+  flex:1;
+  min-width:80px;
+  padding:10px 6px;
+  text-align:center;
+  border-radius:6px;
+  font-size:.78rem;
+  font-weight:600;
+  color:#fff;
+  font-family:monospace;
+}
+.box-header{background:linear-gradient(135deg,#6366f1,#818cf8);}
+.box-nav{background:linear-gradient(135deg,#8b5cf6,#a78bfa);}
+.box-main{background:linear-gradient(135deg,#10b981,#34d399);flex:2 !important;}
+.box-aside{background:linear-gradient(135deg,#f59e0b,#fbbf24);}
+.box-footer{background:linear-gradient(135deg,#64748b,#94a3b8);}
+.box-section{background:linear-gradient(135deg,#3b82f6,#60a5fa);}
+.box-article{background:linear-gradient(135deg,#ec4899,#f472b6);flex:2 !important;}
+
+/* সিম্যান্টিক লাইভ পেজ */
+.semantic-page{
+  border:2px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  font-size:.85rem;
+}
+.semantic-page .page-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;
+  padding:14px 16px;
+  font-weight:700;
+}
+.semantic-page .page-header small{
+  display:block;
+  font-weight:400;
+  opacity:.85;
+  font-size:.75rem;
+  margin-top:2px;
+}
+.semantic-page .page-nav{
+  background:#a78bfa;
+  color:#fff;
+  padding:10px 16px;
+  font-size:.82rem;
+}
+.semantic-page .page-nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-right:14px;
+  font-weight:600;
+}
+.semantic-page .page-nav a:hover{text-decoration:underline;}
+.semantic-page .page-main{
+  display:flex;
+  gap:0;
+  background:#fff;
+}
+.semantic-page .page-main .content{
+  flex:2;
+  padding:16px;
+  border-right:1px solid var(--border);
+}
+.semantic-page .page-main .content h4{
+  color:var(--primary);
+  margin-bottom:8px;
+}
+.semantic-page .page-main .content p{
+  font-size:.82rem;
+  margin-bottom:8px;
+  color:var(--text);
+}
+.semantic-page .page-main .sidebar{
+  flex:1;
+  padding:16px;
+  background:#fef3c7;
+  font-size:.8rem;
+  color:#92400e;
+}
+.semantic-page .page-main .sidebar strong{
+  display:block;
+  margin-bottom:6px;
+  color:#92400e;
+}
+.semantic-page .page-footer{
+  background:var(--dark);
+  color:#cbd5e1;
+  padding:12px 16px;
+  text-align:center;
+  font-size:.8rem;
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .div-span-demo{grid-template-columns:1fr;}
+  .semantic-page .page-main{flex-direction:column;}
+  .semantic-page .page-main .content{border-right:none;border-bottom:1px solid var(--border);}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="10-semantic">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ১০</span>
+    <h1>🧱 সিম্যান্টিক ও লেআউট</h1>
+    <p>div/span, header, nav, main, section, article, aside, footer — সঠিক পেজ গঠন শিখুন উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১ -->
+  <section class="ict-topic">
+    <h2>🔰 div ও span</h2>
+    <p>এরা দুটোই কনটেইনার ট্যাগ — কিন্তু কাজ আলাদা:</p>
+
+    <div class="div-span-demo">
+      <div class="demo-panel">
+        <h4>🔹 &lt;div&gt; — Block</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;div&gt;...&lt;/div&gt;</code>
+        <div class="box-div">বক্স ১</div>
+        <div class="box-div">বক্স ২</div>
+        <p style="font-size:.8rem;color:var(--muted);margin-top:8px;">
+          পুরো প্রস্থ নেয়, উপরে-নিচে সাজে, নতুন লাইন থেকে শুরু হয়।
+        </p>
+      </div>
+      <div class="demo-panel">
+        <h4>🔸 &lt;span&gt; — Inline</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;span&gt;...&lt;/span&gt;</code>
+        <p style="font-size:.9rem;line-height:1.9;">
+          এটি একটি বাক্য যেখানে <span class="span-inline">স্প্যান</span> ব্যবহার করা হয়েছে। আরও একটি <span class="span-inline">স্প্যান</span>।
+        </p>
+        <p style="font-size:.8rem;color:var(--muted);margin-top:8px;">
+          শুধু প্রয়োজনীয় অংশ জুড়ে থাকে, একই লাইনে থাকে।
+        </p>
+      </div>
+    </div>
+
+    <h3>📋 div vs span তুলনা</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>বৈশিষ্ট্য</th><th>&lt;div&gt;</th><th>&lt;span&gt;</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ডিসপ্লে</td><td>Block</td><td>Inline</td></tr>
+        <tr><td>পুরো প্রস্থ নেয়?</td><td>✅ হ্যাঁ</td><td>❌ না</td></tr>
+        <tr><td>নতুন লাইনে যায়?</td><td>✅ হ্যাঁ</td><td>❌ না</td></tr>
+        <tr><td>ব্যবহার</td><td>বড় সেকশন/লেআউট</td><td>টেক্সটের অংশ হাইলাইট</td></tr>
+      </tbody>
+    </table>
+
+    <div class="code-block">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"card"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h2&gt;</span>শিরোনাম<span class="tag">&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;</span>
+    এটি একটি প্যারাগ্রাফ যেখানে <span class="tag">&lt;span</span> <span class="attr">style</span>=<span class="val">"color:red"</span><span class="tag">&gt;</span>গুরুত্বপূর্ণ<span class="tag">&lt;/span&gt;</span> অংশ আছে।
+  <span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+    </div>
+  </section>
+
+  <!-- টপিক ২ -->
+  <section class="ict-topic">
+    <h2>🎯 সিম্যান্টিক ট্যাগ কী?</h2>
+    <p><strong>সিম্যান্টিক ট্যাগ</strong> হলো এমন ট্যাগ যা নিজের নামেই তার কাজ বোঝায়। <code>&lt;div&gt;</code> দেখে বোঝা যায় না এতে কী আছে, কিন্তু <code>&lt;header&gt;</code> দেখলেই বোঝা যায় এটি পেজের হেডার।</p>
+
+    <div class="ict-note">
+      <strong>💡 কেন সিম্যান্টিক ট্যাগ ব্যবহার করব?</strong>
+      • <strong>SEO:</strong> সার্চ ইঞ্জিন পেজের গঠন বুঝতে পারে<br>
+      • <strong>অ্যাক্সেসিবিলিটি:</strong> স্ক্রিন রিডার ব্যবহারকারীরা দ্রুত না���ভিগেট করতে পারেন<br>
+      • <strong>রক্ষণাবেক্ষণ:</strong> অন্য ডেভেলপাররা সহজে বুঝতে পারেন<br>
+      • <strong>কোড পাঠযোগ্যতা:</strong> <code>&lt;nav&gt;</code> দেখেই বোঝা যায় — মেনু
+    </div>
+  </section>
+
+  <!-- টপিক ৩ -->
+  <section class="ict-topic">
+    <h2>🧩 সিম্যান্টিক ট্যাগসমূহ</h2>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th><th>কোথায় থাকে</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;header&gt;</code></td><td>পেজ বা সেকশনের হেডার</td><td>উপরে</td></tr>
+        <tr><td><code>&lt;nav&gt;</code></td><td>নেভিগেশন মেনু</td><td>হেডারের ভিতরে/পরে</td></tr>
+        <tr><td><code>&lt;main&gt;</code></td><td>মূল কনটেন্ট</td><td>পেজে একবার</td></tr>
+        <tr><td><code>&lt;section&gt;</code></td><td>থিমভিত্তিক সেকশন</td><td>main-এর ভিতরে</td></tr>
+        <tr><td><code>&lt;article&gt;</code></td><td>স্বতন্ত্র কনটেন্ট (ব্লগ পোস্ট)</td><td>main/section-এর ভিতরে</td></tr>
+        <tr><td><code>&lt;aside&gt;</code></td><td>সাইড কনটেন্ট (সাইডবার)</td><td>main-এর পাশে</td></tr>
+        <tr><td><code>&lt;footer&gt;</code></td><td>পেজ বা সেকশনের ফুটার</td><td>নিচে</td></tr>
+        <tr><td><code>&lt;figure&gt;</code></td><td>ছবি + ক্যাপশন</td><td>যেকোনো জায়গায়</td></tr>
+        <tr><td><code>&lt;time&gt;</code></td><td>তারিখ/সময়</td><td>article-এর ভিতরে</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৪ -->
+  <section class="ict-topic">
+    <h2>🗺️ পেজ লেআউট ডায়াগ্রাম</h2>
+    <p>একটি সাধারণ ওয়েবপেজের সিম্যান্টিক গঠন:</p>
+
+    <div class="semantic-diagram">
+      <div class="row">
+        <div class="box box-header">&lt;header&gt;</div>
+      </div>
+      <div class="row">
+        <div class="box box-nav">&lt;nav&gt;</div>
+      </div>
+      <div class="row">
+        <div class="box box-main">&lt;main&gt;</div>
+        <div class="box box-aside">&lt;aside&gt;</div>
+      </div>
+      <div class="row">
+        <div class="box box-section">&lt;section&gt;</div>
+        <div class="box box-article">&lt;article&gt;</div>
+      </div>
+      <div class="row">
+        <div class="box box-footer">&lt;footer&gt;</div>
+      </div>
+    </div>
+
+    <div class="code-block">
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>আমার সাইট<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;nav&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">&gt;</span>হোম<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">&gt;</span>সম্পর্কে<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+
+  <span class="tag">&lt;main&gt;</span>
+    <span class="tag">&lt;section&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>সাম্প্রতিক পোস্ট<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;article&gt;</span>
+        <span class="tag">&lt;h3&gt;</span>প্রথম ব্লগ<span class="tag">&lt;/h3&gt;</span>
+        <span class="tag">&lt;p&gt;</span>ব্লগের কনটেন্ট...<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;/article&gt;</span>
+    <span class="tag">&lt;/section&gt;</span>
+
+    <span class="tag">&lt;aside&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>সাইডবার<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;p&gt;</span>বিজ্ঞাপন...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/aside&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+
+  <span class="tag">&lt;footer&gt;</span>
+    <span class="tag">&lt;p&gt;</span>© ২০২৪ আমার সাইট<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/footer&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+    </div>
+  </section>
+
+  <!-- টপিক ৫ -->
+  <section class="ict-topic">
+    <h2>👀 লাইভ ডেমো — সম্পূর্ণ সিম্যান্টিক পেজ</h2>
+    <p>উপরের কোডটি যদি ব্রাউজারে চালান, তাহলে নিচের মতো একটি পেজ তৈরি হবে:</p>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner" style="padding:0;">
+        <div class="semantic-page">
+          <header class="page-header">
+            🌐 আমার সাইট
+            <small>সিম্যান্টিক HTML পেজের উদাহরণ</small>
+          </header>
+          <nav class="page-nav">
+            <a href="#">হোম</a>
+            <a href="#">ব্লগ</a>
+            <a href="#">সম্পর্কে</a>
+            <a href="#">যোগাযোগ</a>
+          </nav>
+          <div class="page-main">
+            <div class="content">
+              <h4>📰 সাম্প্রতিক পোস্ট</h4>
+              <p><strong>HTML শেখার সহজ উপায়</strong> — এই ব্লগে HTML-এর মৌলিক বিষয়গুলো সহজ ভাষায় ব্যাখ্যা করা হয়েছে।</p>
+              <p><strong>CSS দিয়ে সাজসজ্জা</strong> — HTML কাঠামো তৈরি করলে CSS দিয়ে সাজানো যায়।</p>
+            </div>
+            <aside class="sidebar">
+              <strong>📌 সাইডবার</strong>
+              • জনপ্রিয় পোস্ট<br>
+              • ক্যাটাগরি<br>
+              • ট্যাগ ক্লাউড
+            </aside>
+          </div>
+          <footer class="page-footer">
+            © ২০২৪ আমার সাইট — সর্বস্বত্ব সংরক্ষিত
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৬ -->
+  <section class="ict-topic">
+    <h2>🔍 প্রতিটি ট্যাগের বিস্তারিত</h2>
+
+    <h3>🔹 &lt;header&gt;</h3>
+    <p>পেজ বা সেকশনের শিরোনাম অংশ। এতে লোগো, সাইটের নাম, নেভিগেশন থাকতে পারে।</p>
+    <div class="code-block">
+<span class="tag">&lt;header&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>আমার ব্লগ<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>লেখালেখির জায়গা<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+    </div>
+
+    <h3>🔹 &lt;nav&gt;</h3>
+    <p>নেভিগেশন লিংকের গ্রুপ।</p>
+    <div class="code-block">
+<span class="tag">&lt;nav&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"index.html"</span><span class="tag">&gt;</span>হোম<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"about.html"</span><span class="tag">&gt;</span>সম্পর্কে<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+    </div>
+
+    <h3>🔹 &lt;main&gt;</h3>
+    <p>পেজের মূল কনটেন্ট। একটি পেজে শুধু একটি <code>&lt;main&gt;</code> থাকা উচিত।</p>
+
+    <h3>🔹 &lt;section&gt;</h3>
+    <p>একটি থিমভিত্তিক গ্রুপ। সাধারণত একটি শিরোনাম (<code>&lt;h2&gt;</code>) থাকে।</p>
+    <div class="code-block">
+<span class="tag">&lt;section&gt;</span>
+  <span class="tag">&lt;h2&gt;</span>আমাদের সার্ভিস<span class="tag">&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;</span>আমরা যা যা করি...<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+    </div>
+
+    <h3>🔹 &lt;article&gt;</h3>
+    <p>স্বতন্ত্র কনটেন্ট — যেমন ব্লগ পোস্ট, নিউজ আর্টিকেল, ফোরাম পোস্ট। এটি আলাদা করে অন্য জায়গায় রাখলেও অর্থপূর্ণ থাকে।</p>
+    <div class="code-block">
+<span class="tag">&lt;article&gt;</span>
+  <span class="tag">&lt;h2&gt;</span>HTML শেখার ৫টি টিপস<span class="tag">&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;</span>লেখকের নাম<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;p&gt;</span>ব্লগের মূল কনটেন্ট...<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/article&gt;</span>
+    </div>
+
+    <h3>🔹 &lt;aside&gt;</h3>
+    <p>মূল কনটেন্টের সাথে সম্পর্কিত কিন্তু আলাদা রাখা যায় এমন তথ্য — বিজ্ঞাপন, সাইডবার, সম্পর্কিত লিংক।</p>
+
+    <h3>🔹 &lt;footer&gt;</h3>
+    <p>পেজ বা সেকশনের নিচের অংশ। কপিরাইট, যোগাযোগ, লিংক ইত্যাদি থাকে।</p>
+    <div class="code-block">
+<span class="tag">&lt;footer&gt;</span>
+  <span class="tag">&lt;p&gt;</span>© ২০২৪ আমার সাইট<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"privacy.html"</span><span class="tag">&gt;</span>প্রাইভেসি<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/footer&gt;</span>
+    </div>
+
+    <h3>🔹 &lt;figure&gt; + &lt;figcaption&gt;</h3>
+    <p>ছবি ও তার ক্যাপশন একসাথে।</p>
+
+    <h3>🔹 &lt;time&gt;</h3>
+    <p>তারিখ বা সময় বোঝাতে। সার্চ ইঞ্জিন ও স্ক্রিন রিডার বুঝতে পারে।</p>
+    <div class="code-block">
+<span class="tag">&lt;time</span> <span class="attr">datetime</span>=<span class="val">"2024-12-25"</span><span class="tag">&gt;</span>২৫ ডিসেম্বর, ২০২৪<span class="tag">&lt;/time&gt;</span>
+    </div>
+  </section>
+
+  <!-- টপিক ৭ -->
+  <section class="ict-topic">
+    <h2>📊 div vs সিম্যান্টিক ট্যাগ</h2>
+
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>div দিয়ে (খারাপ)</th><th>সিম্যান্টিক দিয়ে (ভালো)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&lt;div class="header"&gt;</code></td><td><code>&lt;header&gt;</code></td></tr>
+          <tr><td><code>&lt;div class="nav"&gt;</code></td><td><code>&lt;nav&gt;</code></td></tr>
+          <tr><td><code>&lt;div class="main"&gt;</code></td><td><code>&lt;main&gt;</code></td></tr>
+          <tr><td><code>&lt;div class="content"&gt;</code></td><td><code>&lt;article&gt;</code></td></tr>
+          <tr><td><code>&lt;div class="sidebar"&gt;</code></td><td><code>&lt;aside&gt;</code></td></tr>
+          <tr><td><code>&lt;div class="footer"&gt;</code></td><td><code>&lt;footer&gt;</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      সিম্যান্টিক ট্যাগের কাজ <code>&lt;div&gt;</code>-ও করা যায়, কিন্তু সিম্যান্টিক ট্যাগ ব্যবহার করলে ব্রাউজার, সার্চ ইঞ্জিন ও স্ক্রিন রিডার সবাই পেজের গঠন ভালো বুঝতে পারে।
+    </div>
+  </section>
+
+  <!-- টপিক ৮ -->
+  <section class="ict-topic">
+    <h2>🎨 সিম্যান্টিক ট্যাগে CSS</h2>
+    <p>সিম্যান্টিক ট্যাগগুলোতে CSS দিয়ে ডিজাইন করা যায়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  header {
+    background: #6366f1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background: #1e293b;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+
+  main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  article {
+    flex: 2;
+    background: #f8fafc;
+    padding: 20px;
+  }
+
+  aside {
+    flex: 1;
+    background: #fef3c7;
+    padding: 20px;
+  }
+
+  footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 টিপস:</strong>
+      <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> ইত্যাদি সিম্যান্টিক ট্যাগকে সরাসরি CSS সিলেক্টর হিসেবে ব্যবহার করা যায় — আলাদা ক্লাসের দরকার নেই।
+    </div>
+  </section>
+
+  <!-- টপিক ৯ -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ সবকিছুতেই <code>&lt;div&gt;</code> ব্যবহার — সিম্যান্টিক ট্যাগ এড়িয়ে যাওয়া</li>
+        <li>❌ একাধিক <code>&lt;main&gt;</code> একটি পেজে রাখা</li>
+        <li>❌ <code>&lt;article&gt;</code> এর ভিতরে <code>&lt;main&gt;</code> রাখা — main শুধু একবার, শীর্ষ লেভেলে</li>
+        <li>❌ <code>&lt;header&gt;</code>/<code>&lt;footer&gt;</code> সবসময় পেজে একবার হবে — না, একাধিক সেকশনেও হতে পারে</li>
+        <li>❌ <code>&lt;nav&gt;</code>-এর ভিতরে non-navigation লিংক রাখা</li>
+        <li>❌ <code>&lt;section&gt;</code>-এ শিরোনাম (<code>&lt;h2&gt;</code>) না দেওয়া</li>
+      </ul>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 নিয়ম:</strong>
+      <code>&lt;section&gt;</code>-এর ভিতরে সাধারণত একটি শিরোনাম (<code>&lt;h2&gt;</code>-<code>&lt;h6&gt;</code>) থাকা উচিত — এটি সেকশনের বিষয় বোঝায়। শিরোনাম ছাড়া <code>&lt;div&gt;</code> ব্যবহার করা ভালো।
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>div:</strong> Block কনটেইনার (পুরো প্রস্থ)</li>
+        <li><strong>span:</strong> Inline কনটেইনার (টেক্সটের অংশ)</li>
+        <li><strong>&lt;header&gt;:</strong> পেজ/সেকশনের হেডার</li>
+        <li><strong>&lt;nav&gt;:</strong> নেভিগেশন মেনু</li>
+        <li><strong>&lt;main&gt;:</strong> মূল কনটেন্ট (একবার)</li>
+        <li><strong>&lt;section&gt;:</strong> থিমভিত্তিক সেকশন</li>
+        <li><strong>&lt;article&gt;:</strong> স্বতন্ত্র কনটেন্ট</li>
+        <li><strong>&lt;aside&gt;:</strong> সাইডবার</li>
+        <li><strong>&lt;footer&gt;:</strong> ফুটার</li>
+        <li><strong>&lt;figure&gt; + &lt;figcaption&gt;:</strong> ক্যাপশনসহ ছবি</li>
+        <li><strong>&lt;time&gt;:</strong> তারিখ/সময়</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

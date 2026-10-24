@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৪: টেক্সট ও হেডিং</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📝'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+}
+.live-demo .inner h1,
+.live-demo .inner h2,
+.live-demo .inner h3,
+.live-demo .inner h4,
+.live-demo .inner h5,
+.live-demo .inner h6{
+  margin-bottom:10px; color:var(--dark);
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* হেডিং প্রিভিউ */
+.heading-preview{
+  display:flex; flex-direction:column;
+  gap:8px; padding:16px;
+  background:#f8fafc; border-radius:12px;
+  border:1px solid var(--border);
+}
+.heading-preview .row{
+  display:flex; align-items:center; gap:14px;
+  padding:8px 0; border-bottom:1px dashed var(--border);
+}
+.heading-preview .row:last-child{border-bottom:none;}
+.heading-preview .tag-label{
+  flex:0 0 60px;
+  background:var(--primary); color:#fff;
+  padding:3px 10px; border-radius:6px;
+  font-size:.75rem; text-align:center;
+  font-family:monospace;
+}
+.heading-preview .preview-text{
+  flex:1; color:var(--dark);
+}
+
+/* ফরম্যাটিং গ্রিড */
+.format-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px; margin:16px 0;
+}
+.format-card{
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:10px; padding:14px;
+  text-align:center;
+  transition:.25s;
+}
+.format-card:hover{
+  border-color:var(--primary);
+  box-shadow:0 4px 12px rgba(99,102,241,.12);
+}
+.format-card code{
+  display:inline-block;
+  background:var(--primary); color:#fff;
+  padding:3px 10px; border-radius:6px;
+  font-size:.78rem; margin-bottom:8px;
+}
+.format-card .output{
+  font-size:1rem; color:var(--dark);
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .heading-preview .row{flex-direction:column;align-items:flex-start;gap:4px;}
+  .heading-preview .tag-label{flex:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="04-text-headings">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৪</span>
+    <h1>📝 টেক্সট ও হেডিং</h1>
+    <p>হেডিং, প্যারাগ্রাফ, লাইন ব্রেক থেকে শুরু করে সব ধরনের টেক্সট ফরম্যাটিং — সবকিছু লাইভ উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১: হেডিং -->
+  <section class="ict-topic">
+    <h2>🔠 হেডিং ট্যাগ (Headings)</h2>
+    <p>HTML-এ মোট <strong>৬টি হেডিং ট্যাগ</strong> আছে — <code>&lt;h1&gt;</code> থেকে <code>&lt;h6&gt;</code>। <code>&lt;h1&gt;</code> সবচেয়ে বড় ও গুরুত্বপূর্ণ, <code>&lt;h6&gt;</code> সবচেয়ে ছোট।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;h1&gt;</span>এটি H1 — সবচেয়ে বড়<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>এটি H2<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>এটি H3<span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;</span>এটি H4<span class="tag">&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;</span>এটি H5<span class="tag">&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;</span>এটি H6 — সবচেয়ে ছোট<span class="tag">&lt;/h6&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <h1 style="font-size:2rem;">এটি H1 — সবচেয়ে বড়</h1>
+        <h2 style="font-size:1.6rem;">এটি H2</h2>
+        <h3 style="font-size:1.35rem;">এটি H3</h3>
+        <h4 style="font-size:1.15rem;">এটি H4</h4>
+        <h5 style="font-size:1rem;">এটি H5</h5>
+        <h6 style="font-size:.88rem;">এটি H6 — সবচেয়ে ছোট</h6>
+      </div>
+    </div>
+
+    <h3>📌 হেডিং ব্যবহারের নিয়ম</h3>
+    <ul>
+      <li>✅ একটি পেজে সাধারণত একটি <code>&lt;h1&gt;</code> রাখা ভালো (SEO-র জন্য)</li>
+      <li>✅ হেডিংগুলো ক্রমানুসারে ব্যবহার করুন (<code>h1 → h2 → h3</code>)</li>
+      <li>✅ শুধু ফন্ট বড় করতে হেডিং ব্যবহার করবেন না — এর জন্য CSS</li>
+      <li>✅ স্ক্রিন রিডার হেডিং দিয়ে পেজ স্ক্যান করে — তাই সঠিক ক্রম জরুরি</li>
+    </ul>
+
+    <div class="ict-note">
+      <strong>💡 SEO টিপস:</strong>
+      সার্চ ইঞ্জিন (Google) পেজের মূল বিষয় বোঝার জন্য <code>&lt;h1&gt;</code> ও <code>&lt;h2&gt;</code> পড়ে। তাই মূল শিরোনাম <code>&lt;h1&gt;</code>-এ রাখুন।
+    </div>
+  </section>
+
+  <!-- টপিক ২: প্যারাগ্রাফ -->
+  <section class="ict-topic">
+    <h2>📄 প্যারাগ্রাফ (Paragraph)</h2>
+    <p><code>&lt;p&gt;</code> ট্যাগ দিয়ে প্যারাগ্রাফ বা অনুচ্ছেদ তৈরি করা হয়। ব্রাউজার প্রতিটি প্যারাগ্রাফের আগে-পরে স্বয়ংক্রিয়ভাবে ফাঁকা জায়গা রাখে।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;p&gt;</span>এটি প্রথম প্যারাগ্রাফ। HTML শেখা সহজ।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>এটি দ্বিতীয় প্যারাগ্রাফ। ব্রাউজার নিজেই ফাঁকা জায়গা দেয়।<span class="tag">&lt;/p&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p>এটি প্রথম প্যারাগ্রাফ। HTML শেখা সহজ।</p>
+        <p>এটি দ্বিতীয় প্যারাগ্রাফ। ব্রাউজার নিজেই ফাঁকা জায়গা দেয়।</p>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      HTML-এ আপনি যতগুলো স্পেস বা এন্টার দেবেন, ব্রাউজার সেগুলোকে একটি স্পেস হিসেবে দেখায়। একাধিক স্পেস দেখাতে চাইলে <code>&amp;nbsp;</code> ব্যবহার করুন।
+    </div>
+  </section>
+
+  <!-- টপিক ৩: লাইন ব্রেক ও অনুভূমিক রেখা -->
+  <section class="ict-topic">
+    <h2>➖ লাইন ব্রেক ও অনুভূমিক রেখা</h2>
+
+    <h3>🔹 &lt;br&gt; — লাইন ব্রেক</h3>
+    <p>একটি লাইন ভেঙে পরের লাইনে যেতে <code>&lt;br&gt;</code> ব্যবহার করা হয়। এটি Void ট্যাগ (Closing নেই)।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;p&gt;</span>প্রথম লাইন<span class="tag">&lt;br&gt;</span>দ্বিতীয় লাইন<span class="tag">&lt;br&gt;</span>তৃতীয় লাইন<span class="tag">&lt;/p&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p>প্রথম লাইন<br>দ্বিতীয় লাইন<br>তৃতীয় লাইন</p>
+      </div>
+    </div>
+
+    <h3>🔹 &lt;hr&gt; — অনুভূমিক রেখা</h3>
+    <p>দুটি সেকশনের মাঝে একটি অনুভূমিক রেখা আঁকতে <code>&lt;hr&gt;</code> ব্যবহার করা হয়। এটিও Void ট্যাগ।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;p&gt;</span>সেকশন ১<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;hr&gt;</span>
+<span class="tag">&lt;p&gt;</span>সেকশন ২<span class="tag">&lt;/p&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p>সেকশন ১</p>
+        <hr>
+        <p>সেকশন ২</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৪: টেক্সট ফরম্যাটিং -->
+  <section class="ict-topic">
+    <h2>🎨 টেক্সট ফরম্যাটিং ট্যাগ</h2>
+    <p>HTML-এ টেক্সটকে বিভিন্নভাবে সাজানোর জন্য অনেক ট্যাগ আছে। নিচে সবচেয়ে বেশি ব্যবহৃতগুলো দেখানো হলো:</p>
+
+    <h3>📋 বেসিক ফরম্যাটিং</h3>
+    <div class="format-grid">
+      <div class="format-card">
+        <code>&lt;b&gt;</code>
+        <div class="output"><b>বোল্ড টেক্সট</b></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;strong&gt;</code>
+        <div class="output"><strong>গুরুত্বপূর্ণ</strong></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;i&gt;</code>
+        <div class="output"><i>ইটালিক টেক্সট</i></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;em&gt;</code>
+        <div class="output"><em>জোর দেওয়া</em></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;u&gt;</code>
+        <div class="output"><u>আন্ডারলাইন</u></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;mark&gt;</code>
+        <div class="output"><mark>হাইলাইট</mark></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;small&gt;</code>
+        <div class="output"><small>ছোট টেক্সট</small></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;del&gt;</code>
+        <div class="output"><del>কাটা টেক্সট</del></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;ins&gt;</code>
+        <div class="output"><ins>নতুন যোগ</ins></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;sub&gt;</code>
+        <div class="output">H<sub>2</sub>O</div>
+      </div>
+      <div class="format-card">
+        <code>&lt;sup&gt;</code>
+        <div class="output">x<sup>2</sup></div>
+      </div>
+      <div class="format-card">
+        <code>&lt;code&gt;</code>
+        <div class="output"><code>let x = 5;</code></div>
+      </div>
+    </div>
+
+    <h3>🔍 প্রতিটি ট্যাগের বিস্তারিত</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th><th>কখন ব্যবহার করবেন</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;b&gt;</code></td><td>শুধু বোল্ড দেখায়</td><td>শুধু দৃষ্টিগত গুরুত্ব</td></tr>
+        <tr><td><code>&lt;strong&gt;</code></td><td>বোল্ড + সিম্যান্টিক গুরুত্ব</td><td>সত্যিই গুরুত্বপূর্ণ টেক্সট</td></tr>
+        <tr><td><code>&lt;i&gt;</code></td><td>শুধু ইটালিক</td><td>শব্দ বা বিদেশি নাম</td></tr>
+        <tr><td><code>&lt;em&gt;</code></td><td>ইটালিক + জোর</td><td>বাক্যে জোর দিতে</td></tr>
+        <tr><td><code>&lt;mark&gt;</code></td><td>হলুদ হাইলাইট</td><td>সার্চ রেজাল্ট, গুরুত্বপূর্ণ শব্দ</td></tr>
+        <tr><td><code>&lt;del&gt;</code></td><td>কাটা টেক্সট</td><td>পুরনো মূল্য, বাতিল</td></tr>
+        <tr><td><code>&lt;ins&gt;</code></td><td>আন্ডারলাইন (নতুন)</td><td>নতুন যোগ করা টেক্সট</td></tr>
+        <tr><td><code>&lt;sub&gt;</code></td><td>নিচে ছোট</td><td>রাসায়নিক সূত্র (H₂O)</td></tr>
+        <tr><td><code>&lt;sup&gt;</code></td><td>উপরে ছোট</td><td>গণিত সূত্র (x²)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ict-note">
+      <strong>💡 b vs strong পার্থক্য:</strong>
+      দেখতে একই মনে হলেও <code>&lt;strong&gt;</code> ব্রাউজার ও স্ক্রিন রিডারকে বলে এটি <em>গুরুত্বপূর্ণ</em>। SEO ও অ্যাক্সেসিবিলিটির জন্য <code>&lt;strong&gt;</code> ভালো।
+    </div>
+  </section>
+
+  <!-- টপিক ৫: ব্লক ও প্রি -->
+  <section class="ict-topic">
+    <h2>📦 ব্লককোট, প্রি ও কোড</h2>
+
+    <h3>🔹 &lt;blockquote&gt; — উদ্ধৃতি</h3>
+    <p>কারো কথা বা বইয়ের উদ্ধৃতি দেখাতে ব্যবহার হয়।</p>
+    <div class="code-block">
+<span class="tag">&lt;blockquote&gt;</span>
+  "শিক্ষাই জাতির মেরুদণ্ড।"
+<span class="tag">&lt;/blockquote&gt;</span>
+    </div>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <blockquote style="border-left:4px solid #6366f1;padding-left:16px;font-style:italic;color:#475569;">
+          "শিক্ষাই জাতির মেরুদণ্ড।"
+        </blockquote>
+      </div>
+    </div>
+
+    <h3>🔹 &lt;pre&gt; — প্রি-ফরম্যাটেড টেক্সট</h3>
+    <p><code>&lt;pre&gt;</code> ট্যাগের ভেতরের স্পেস, এন্টার ও ইন্ডেন্টেশন সবই ঠিক যেমন লিখেছেন তেমন দেখায়। কোড দেখানোর জন্য আদর্শ।</p>
+    <div class="code-block">
+<span class="tag">&lt;pre&gt;</span>
+  নাম:   রহিম
+  রোল:   ০১
+  শ্রেণি: একাদশ
+<span class="tag">&lt;/pre&gt;</span>
+    </div>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <pre style="font-family:monospace;color:#1e293b;">  নাম:   রহিম
+  রোল:   ০১
+  শ্রেণি: একাদশ</pre>
+      </div>
+    </div>
+
+    <h3>🔹 &lt;code&gt; — কোড দেখানো</h3>
+    <p>ছোট কোড স্নিপেট দেখাতে ব্যবহার হয়। সাধারণত এক লাইনের কোডের জন্য।</p>
+    <div class="code-block">
+<span class="tag">&lt;p&gt;</span>ব্রাউজারে <span class="tag">&lt;code&gt;</span>alert("হ্যালো")<span class="tag">&lt;/code&gt;</span> লিখলে পপআপ আসে।<span class="tag">&lt;/p&gt;</span>
+    </div>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p>ব্রাউজারে <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">alert("হ্যালো")</code> লিখলে পপআপ আসে।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৬: বিশেষ ক্যারেক্টার -->
+  <section class="ict-topic">
+    <h2>🔣 বিশেষ ক্যারেক্টার (HTML Entities)</h2>
+    <p>HTML-এ কিছু চিহ্ন সরাসরি লেখা যায় না কারণ সেগুলো ট্যাগের অংশ। এসব দেখাতে <strong>entity</strong> ব্যবহার করতে হয়।</p>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>দেখতে</th><th>Entity Code</th><th>কখন লাগে</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;</td><td><code>&amp;lt;</code></td><td>কম-দাঁড়ি দেখাতে</td></tr>
+        <tr><td>&gt;</td><td><code>&amp;gt;</code></td><td>বেশি-দাঁড়ি দেখাতে</td></tr>
+        <tr><td>&amp;</td><td><code>&amp;amp;</code></td><td>অ্যাম্পারস্যান্ড</td></tr>
+        <tr><td>"</td><td><code>&amp;quot;</code></td><td>ডাবল কোট</td></tr>
+        <tr><td>'</td><td><code>&amp;apos;</code></td><td>সিঙ্গেল কোট</td></tr>
+        <tr><td>&nbsp;</td><td><code>&amp;nbsp;</code></td><td>নন-ব্রেকিং স্পেস</td></tr>
+        <tr><td>©</td><td><code>&amp;copy;</code></td><td>কপিরাইট</td></tr>
+        <tr><td>®</td><td><code>&amp;reg;</code></td><td>রেজিস্টার্ড</td></tr>
+        <tr><td>৳</td><td><code>&amp;#2547;</code></td><td>টাকা চিহ্ন</td></tr>
+      </tbody>
+    </table>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p>দাম: ৳ ৫০০</p>
+        <p>কপিরাইট: © ২০২৪</p>
+        <p>ট্যাগ উদাহরণ: &lt;h1&gt;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৭: সব ফরম্যাটিং একসাথে -->
+  <section class="ict-topic">
+    <h2>🎯 সব একসাথে — সম্পূর্ণ ডেমো</h2>
+    <p>নিচে সব টেক্সট ফরম্যাটিং একসাথে দেখানো হলো যাতে বুঝতে সহজ হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;h1&gt;</span>আমার প্রথম পেজ<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;p&gt;</span>এটি একটি <span class="tag">&lt;b&gt;</span>বোল্ড<span class="tag">&lt;/b&gt;</span> শব্দ এবং <span class="tag">&lt;i&gt;</span>ইটালিক<span class="tag">&lt;/i&gt;</span> শব্দ।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="tag">&lt;strong&gt;</span>গুরুত্বপূর্ণ<span class="tag">&lt;/strong&gt;</span> তথ্য এখানে।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="tag">&lt;mark&gt;</span>হাইলাইট<span class="tag">&lt;/mark&gt;</span> করা অংশ।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>আগের মূল্য <span class="tag">&lt;del&gt;</span>১০০ টাকা<span class="tag">&lt;/del&gt;</span>, এখন <span class="tag">&lt;ins&gt;</span>৭০ টাকা<span class="tag">&lt;/ins&gt;</span>।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>পানি: H<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span>O, গণিত: x<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span><span class="tag">&lt;/p&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <h1 style="font-size:1.6rem;margin-bottom:10px;">আমার প্রথম পেজ</h1>
+        <p style="margin-bottom:8px;">এটি একটি <b>বোল্ড</b> শব্দ এবং <i>ইটালিক</i> শব্দ।</p>
+        <p style="margin-bottom:8px;"><strong>গুরুত্বপূর্ণ</strong> তথ্য এখানে।</p>
+        <p style="margin-bottom:8px;"><mark>হাইলাইট</mark> করা অংশ।</p>
+        <p style="margin-bottom:8px;">আগের মূল্য <del>১০০ টাকা</del>, এখন <ins>৭০ টাকা</ins>।</p>
+        <p>পানি: H<sub>2</sub>O, গণিত: x<sup>2</sup></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৮: সাধারণ ভুল -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ শুধু বড় ফন্টের জন্য হেডিং ব্যবহার — বড় ফন্টের জন্য CSS</li>
+        <li>❌ একাধিক <code>&lt;h1&gt;</code> একটি পেজে — সাধারণত একটি রাখাই ভালো</li>
+        <li>❌ হেডিং স্কিপ করা — <code>h1 → h3</code> লাফ দেওয়া উচিত নয়</li>
+        <li>❌ <code>&lt;b&gt;</code> ও <code>&lt;strong&gt;</code>-এর পার্থক্য না বোঝা</li>
+        <li>❌ <code>&lt;br&gt;&lt;br&gt;&lt;br&gt;</code> দিয়ে বড় ফাঁকা — CSS margin ব্যবহার করুন</li>
+        <li>❌ <code>&lt;pre&gt;</code>-র ভেতরে ট্যাব/স্পেস ভুলভাবে দেওয়া</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>হেডিং:</strong> <code>&lt;h1&gt;</code> থেকে <code>&lt;h6&gt;</code> — ৬টি লেভেল</li>
+        <li><strong>প্যারাগ্রাফ:</strong> <code>&lt;p&gt;</code></li>
+        <li><strong>লাইন ব্রেক:</strong> <code>&lt;br&gt;</code>, <strong>রেখা:</strong> <code>&lt;hr&gt;</code></li>
+        <li><strong>ফরম্যাটিং:</strong> <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code></li>
+        <li><strong>উদ্ধৃতি:</strong> <code>&lt;blockquote&gt;</code></li>
+        <li><strong>প্রি-ফরম্যাটেড:</strong> <code>&lt;pre&gt;</code>, <strong>কোড:</strong> <code>&lt;code&gt;</code></li>
+        <li><strong>বিশেষ চিহ্ন:</strong> <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;nbsp;</code>, <code>&amp;copy;</code></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

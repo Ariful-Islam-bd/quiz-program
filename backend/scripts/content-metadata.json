@@ -912,6 +912,175 @@
       },
       "filePath": "KSC-Suggestions/Physics/physics_2nd_paper/phy_2nd_ch4/phy_2nd_ch4_sq1.html",
       "tags": ["ksc", "physics", "2nd-paper", "ch4", "sq"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-01-Introduction",
+      "name": "ICT অধ্যায় ৪ - ০১. HTML পরিচিতি",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০১. HTML পরিচিতি"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/01-introduction.html",
+      "tags": ["ict", "html", "ch4", "module-1"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-02-SetupTools",
+      "name": "ICT অধ্যায় ৪ - ০২. সেটআপ ও টুলস",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০২. সেটআপ ও টুলস"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/02-setup-tools.html",
+      "tags": ["ict", "html", "ch4", "module-2"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-03-TagsElements",
+      "name": "ICT অধ্যায় ৪ - ০৩. ট্যাগ, এলিমেন্ট, অ্যাট্রিবিউট",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৩. ট্যাগ, এলিমেন্ট, অ্যাট্রিবিউট"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/03-tags-elements.html",
+      "tags": ["ict", "html", "ch4", "module-3"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-04-TextHeadings",
+      "name": "ICT অধ্যায় ৪ - ০৪. টেক্সট ও হেডিং",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৪. টেক্সট ও হেডিং"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/04-text-headings.html",
+      "tags": ["ict", "html", "ch4", "module-4"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-05-Links",
+      "name": "ICT অধ্যায় ৪ - ০৫. লিংক ও নেভিগেশন",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৫. লিংক ও নেভিগেশন"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/05-links.html",
+      "tags": ["ict", "html", "ch4", "module-5"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-06-Images",
+      "name": "ICT অধ্যায় ৪ - ০৬. ইমেজ",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৬. ইমেজ"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/06-images.html",
+      "tags": ["ict", "html", "ch4", "module-6"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-07-Lists",
+      "name": "ICT অধ্যায় ৪ - ০৭. লিস্ট",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৭. লিস্ট"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/07-lists.html",
+      "tags": ["ict", "html", "ch4", "module-7"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-08-Tables",
+      "name": "ICT অধ্যায় ৪ - ০৮. টেবিল",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৮. টেবিল"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/08-tables.html",
+      "tags": ["ict", "html", "ch4", "module-8"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-09-Forms",
+      "name": "ICT অধ্যায় ৪ - ০৯. ফর্ম",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "০৯. ফর্ম"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/09-forms.html",
+      "tags": ["ict", "html", "ch4", "module-9"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-10-Semantic",
+      "name": "ICT অধ্যায় ৪ - ১০. সিম্যান্টিক ও লেআউট",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "১০. সিম্যান্টিক ও লেআউট"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/10-semantic.html",
+      "tags": ["ict", "html", "ch4", "module-10"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-11-Flexbox",
+      "name": "ICT অধ্যায় ৪ - ১১. Flexbox পরিচিতি",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "১১. Flexbox পরিচিতি"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/11-flexbox.html",
+      "tags": ["ict", "html", "ch4", "module-11"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-12-ProjectCalendar",
+      "name": "ICT অধ্যায় ৪ - ১২. প্রজেক্ট: ক্যালেন্ডার",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "১২. প্রজেক্ট: ক্যালেন্ডার"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/12-project-calendar.html",
+      "tags": ["ict", "html", "ch4", "module-12"]
+    },
+    {
+      "topicId": "HSC-ICT-Ch4-13-Cheatsheet",
+      "name": "ICT অধ্যায় ৪ - ১৩. চিটশিট ও সারসংক্ষেপ",
+      "category": {
+        "board": "HSC",
+        "className": "তথ্য ও যোগাযোগ প্রযুক্তি",
+        "subject": "ওয়েব ডিজাইন ও HTML",
+        "chapter": "অধ্যায় ৪",
+        "topic": "১৩. চিটশিট ও সারসংক্ষেপ"
+      },
+      "filePath": "HSC/ICT/HTML-Lesson/13-cheatsheet.html",
+      "tags": ["ict", "html", "ch4", "module-13"]
     }
   ]
 }

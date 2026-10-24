@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৫: লিংক ও নেভিগেশন</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'🔗'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+}
+.live-demo a{
+  color:var(--primary); text-decoration:underline;
+  font-weight:600;
+}
+.live-demo a:hover{color:var(--secondary);}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* অ্যানাটমি */
+.anatomy{
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:14px; padding:24px;
+  text-align:center; margin:20px 0;
+  overflow-x:auto;
+}
+.anatomy .line{
+  display:inline-flex; align-items:center;
+  font-family:'Courier New',monospace;
+  font-size:1.1rem; font-weight:bold;
+  white-space:nowrap;
+}
+.anatomy .opening{color:#ec4899;}
+.anatomy .attr{color:#f59e0b;}
+.anatomy .value{color:#10b981;}
+.anatomy .content{color:#1e293b;background:#fef3c7;padding:0 4px;border-radius:4px;}
+.anatomy .closing{color:#ec4899;}
+.anatomy .labels{
+  display:flex; justify-content:space-around;
+  margin-top:20px; flex-wrap:wrap; gap:10px;
+}
+.anatomy .label-item{
+  font-size:.8rem; text-align:center;
+  padding:6px 10px; border-radius:8px;
+  background:#fff; border:1px solid var(--border);
+  flex:1; min-width:100px;
+}
+.anatomy .label-item .dot{
+  display:inline-block; width:10px; height:10px;
+  border-radius:50%; margin-right:4px;
+  vertical-align:middle;
+}
+
+/* লিংক টাইপ কার্ড */
+.link-types{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px; margin:16px 0;
+}
+.link-card{
+  background:#f8fafc; border-radius:12px;
+  padding:18px; border:1px solid var(--border);
+  transition:.25s;
+}
+.link-card:hover{
+  border-color:var(--primary);
+  box-shadow:0 6px 16px rgba(99,102,241,.12);
+}
+.link-card .ico{
+  font-size:1.8rem; margin-bottom:8px;
+}
+.link-card h4{
+  font-size:1rem; color:var(--dark);
+  margin-bottom:6px;
+}
+.link-card p{
+  font-size:.85rem; color:var(--muted);
+  margin-bottom:8px;
+}
+.link-card code{
+  background:var(--primary); color:#fff;
+  padding:3px 8px; border-radius:6px;
+  font-size:.75rem;
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .anatomy .line{font-size:.85rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="05-links">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৫</span>
+    <h1>🔗 লিংক ও নেভিগেশন</h1>
+    <p>ওয়েবের মূল শক্তি — লিংক। ইন্টারনাল, এক্সটার্নাল, ইমেইল, ফোন, অ্যাংকর লিংক — সব ধরনের লিংক শিখুন উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১ -->
+  <section class="ict-topic">
+    <h2>🔰 লিংক কী? (What is a Link?)</h2>
+    <p>লিংক হলো এক পেজ থেকে অন্য পেজে বা একই পেজের একটি অংশে যাওয়ার সেতু। HTML-এ লিংক তৈরি করা হয় <code>&lt;a&gt;</code> (anchor) ট্যাগ দিয়ে।</p>
+
+    <div class="anatomy">
+      <div class="line">
+        <span class="opening">&lt;a&nbsp;</span> <span class="attr">href</span>=<span class="value">"about.html"</span><span class="opening">&gt;</span><span class="content">আমার সম্পর্কে</span><span class="closing">&lt;/a&gt;</span>
+      </div>
+      <div class="labels">
+        <div class="label-item"><span class="dot" style="background:#ec4899;"></span> Anchor ট্যাগ</div>
+        <div class="label-item"><span class="dot" style="background:#f59e0b;"></span> href (গন্তব্য)</div>
+        <div class="label-item"><span class="dot" style="background:#10b981;"></span> Value</div>
+        <div class="label-item"><span class="dot" style="background:#f59e0b;"></span> ক্লিকযোগ্য টেক্সট</div>
+      </div>
+    </div>
+
+    <div class="code-block">
+<span class="tag">&lt;a </span> <span class="attr">href</span>=<span class="val">"about.html"</span><span class="tag">&gt;</span>আমার সম্পর্কে<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <a href="#">আমার সম্পর্কে</a>
+        <p style="margin-top:10px;font-size:.85rem;color:#64748b;">↑ এখানে ক্লিক করলে (একটি নকল লিংক) কোনো পাতা খুলবে না।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ২ -->
+  <section class="ict-topic">
+    <h2>🗺️ লিংকের ধরন</h2>
+    <p>HTML-এ বিভিন্ন ধরনের লিংক ব্যবহার করা যায়। প্রতিটির আলাদা কাজ:</p>
+
+    <div class="link-types">
+      <div class="link-card">
+        <div class="ico">📄</div>
+        <h4>ইন্টারনাল লিংক</h4>
+        <p>একই ওয়েবসাইটের অন্য পেজে যায়</p>
+        <code>href="about.html"</code>
+      </div>
+      <div class="link-card">
+        <div class="ico">🌐</div>
+        <h4>এক্সটার্নাল লিংক</h4>
+        <p>অন্য ওয়েবসাইটে যায় (সম্পূর্ণ URL)</p>
+        <code>href="https://google.com"</code>
+      </div>
+      <div class="link-card">
+        <div class="ico">📧</div>
+        <h4>ইমেইল লিংক</h4>
+        <p>ইমেইল অ্যাপ ওপেন করে</p>
+        <code>href="mailto:a@b.com"</code>
+      </div>
+      <div class="link-card">
+        <div class="ico">📱</div>
+        <h4>ফোন লিংক</h4>
+        <p>মোবাইলে কল ডায়াল করে</p>
+        <code>href="tel:+880..."</code>
+      </div>
+      <div class="link-card">
+        <div class="ico">📍</div>
+        <h4>অ্যাংকর লিংক</h4>
+        <p>একই পেজের নির্দিষ্ট অংশে যায়</p>
+        <code>href="#section1"</code>
+      </div>
+      <div class="link-card">
+        <div class="ico">⬇️</div>
+        <h4>ডাউনলোড লিংক</h4>
+        <p>ফাইল ডাউনলোড করতে দেয়</p>
+        <code>href="file.pdf" download</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৩ -->
+  <section class="ict-topic">
+    <h2>📄 ইন্টারনাল ও এক্সটার্নাল লিংক</h2>
+
+    <h3>🔹 ইন্টারনাল লিংক</h3>
+    <p>একই ওয়েবসাইটের অন্য পেজে যেতে শুধু ফাইলের নাম/পাথ দিলেই হয়:</p>
+
+    <div class="code-block">
+<span class="cmt">&lt;!-- একই ফোল্ডারে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"about.html"</span><span class="tag">&gt;</span>আমার সম্পর্কে<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- সাব-ফোল্ডারে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"pages/contact.html"</span><span class="tag">&gt;</span>যোগাযোগ<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- প্যারেন্ট ফোল্ডারে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"../index.html"</span><span class="tag">&gt;</span>হোম<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <h3>🔹 এক্সটার্নাল লিংক</h3>
+    <p>অন্য ওয়েবসাইটে যেতে সম্পূর্ণ URL দিতে হয় (<code>https://</code> সহ):</p>
+
+    <div class="code-block">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"https://www.google.com"</span><span class="tag">&gt;</span>Google<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- নতুন ট্যাবে খুলতে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"https://www.google.com"</span>
+   <span class="attr">target</span>=<span class="val">"_blank"</span>
+   <span class="attr">rel</span>=<span class="val">"noopener noreferrer"</span><span class="tag">&gt;</span>
+  Google (নতুন ট্যাবে)
+<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p style="margin-bottom:10px;">
+          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google (নতুন ট্যাবে যাবে)</a>
+        </p>
+        <p>
+          <a href="https://bn.wikipedia.org" target="_blank" rel="noopener noreferrer">উইকিপিডিয়া বাংলা</a>
+        </p>
+      </div>
+    </div>
+
+    <h3>🎯 target অ্যাট্রিবিউট</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>মান</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>_self</code></td><td>একই ট্যাবে খোলে (ডিফল্ট)</td></tr>
+        <tr><td><code>_blank</code></td><td>নতুন ট্যাবে খোলে</td></tr>
+        <tr><td><code>_parent</code></td><td>প্যারেন্ট ফ্রেমে খোলে</td></tr>
+        <tr><td><code>_top</code></td><td>পুরো উইন্ডোতে খোলে</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ict-warning">
+      <strong>⚠️ নিরাপত্তা:</strong>
+      <code>target="_blank"</code> ব্যবহার করলে সাথে <code>rel="noopener noreferrer"</code> দিতে ভুলবেন না — এটি নিরাপত্তা ঝুঁকি (Tabnabbing) থেকে বাঁচায়।
+    </div>
+  </section>
+
+  <!-- টপিক ৪ -->
+  <section class="ict-topic">
+    <h2>📧 ইমেইল ও ফোন লিংক</h2>
+
+    <h3>🔹 mailto: — ইমেইল লিংক</h3>
+    <p>ক্লিক করলে ব্যবহারকারীর ডিফল্ট ইমেইল অ্যাপ খুলে যাবে:</p>
+
+    <div class="code-block">
+<span class="cmt">&lt;!-- সাধারণ ইমেইল --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"mailto:info@example.com"</span><span class="tag">&gt;</span>ইমেইল করুন<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- বিষয় সহ --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"mailto:info@example.com?subject=সাহায্য চাই"</span><span class="tag">&gt;</span>
+  সাহায্যের জন্য ইমেইল
+<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <h3>🔹 tel: — ফোন লিংক</h3>
+    <p>মোবাইলে ক্লিক করলে সরাসরি কল ডায়াল হবে:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"tel:+8801700000000"</span><span class="tag">&gt;</span>📞 কল করুন<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p style="margin-bottom:10px;">
+          📧 <a href="mailto:info@example.com">ইমেইল করুন</a>
+        </p>
+        <p>
+          📱 <a href="tel:+8801700000000">কল করুন</a>
+        </p>
+        <p style="margin-top:10px;font-size:.85rem;color:#64748b;">
+          ⚠️ মোবাইলে ক্লিক করলে ইমেইল অ্যাপ বা ডায়ালার খুলবে।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৫ -->
+  <section class="ict-topic">
+    <h2>📍 অ্যাংকর লিংক (একই পেজের অংশে যাওয়া)</h2>
+    <p>লম্বা পেজে দ্রুত নির্দিষ্ট সেকশনে যেতে অ্যাংকর লিংক ব্যবহার করা যায়। দুটি ধাপ:</p>
+
+    <ol>
+      <li>গন্তব্য এলিমেন্টে <code>id</code> অ্যাট্রিবিউট দিন: <code>&lt;h2 id="section1"&gt;</code></li>
+      <li>লিংকে <code>#id</code> ব্যবহার করুন: <code>href="#section1"</code></li>
+    </ol>
+
+    <div class="code-block">
+<span class="cmt">&lt;!-- গন্তব্য --&gt;</span>
+<span class="tag">&lt;h2</span> <span class="attr">id</span>=<span class="val">"chapter3"</span><span class="tag">&gt;</span>অধ্যায় ৩: HTML লিংক<span class="tag">&lt;/h2&gt;</span>
+
+<span class="cmt">&lt;!-- লিংক --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#chapter3"</span><span class="tag">&gt;</span>অধ্যায় ৩-এ যান<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- পেজের একেবারে উপরে যেতে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">&gt;</span>উপরে ফিরুন<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 টিপস:</strong>
+      <code>href="#"</code> শুধু পেজের একেবারে উপরে নিয়ে যায়। <code>href="#top"</code> দিয়ে একটি <code>id="top"</code> এলিমেন্টেও যাওয়া যায়।
+    </div>
+  </section>
+
+  <!-- টপিক ৬ -->
+  <section class="ict-topic">
+    <h2>⬇️ ডাউনলোড লিংক</h2>
+    <p>একটি ফাইল (PDF, ZIP, ছবি) ডাউনলোড করাতে <code>download</code> অ্যাট্রিবিউট ব্যবহার করা হয়:</p>
+
+    <div class="code-block">
+<span class="cmt">&lt;!-- ডাউনলোড হবে, নাম হবে "lesson.pdf" --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"files/lesson.pdf"</span>
+   <span class="attr">download</span>=<span class="val">"HTML-Lesson.pdf"</span><span class="tag">&gt;</span>
+  📥 লেসন ডাউনলোড
+<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- কোনো নাম না দিলে আসল নামেই হবে --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"files/notes.pdf"</span> <span class="attr">download</span><span class="tag">&gt;</span>
+  ডাউনলোড
+<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      <code>download</code> শুধু একই সার্ভারের ফাইলে কাজ করে। অন্য সাইটের ফাইলে কাজ নাও করতে পারে।
+    </div>
+  </section>
+
+  <!-- টপিক ৭ -->
+  <section class="ict-topic">
+    <h2>🖼️ ছবিকে লিংক বানানো</h2>
+    <p><code>&lt;a&gt;</code> ট্যাগের ভেতরে <code>&lt;img&gt;</code> রাখলে ছবি ক্লিকযোগ্য হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"https://example.com"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"logo.png"</span>
+       <span class="attr">alt</span>=<span class="val">"লোগো"</span>
+       <span class="attr">width</span>=<span class="val">"100"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/a&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-decoration:none;">
+          <div style="padding:14px 24px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:12px;font-weight:600;">
+            🔗 ক্লিকযোগ্য বাটন
+          </div>
+        </a>
+        <p style="margin-top:10px;font-size:.85rem;color:#64748b;">↑ ছবি/বাটন লিংক হিসেবে ব্যবহৃত হচ্ছে</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৮ -->
+  <section class="ict-topic">
+    <h2>📋 সব ধরনের লিংক একসাথে</h2>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ উদাহরণ</span>
+      <div class="inner">
+        <h3 style="margin-bottom:14px;color:#1e293b;">আমার লিংক সংগ্রহ</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="margin-bottom:10px;">
+            🌐 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a> — এক্সটার্নাল লিংক
+          </li>
+          <li style="margin-bottom:10px;">
+            📄 <a href="#">আমার সম্পর্কে</a> — ইন্টারনাল লিংক
+          </li>
+          <li style="margin-bottom:10px;">
+            📧 <a href="mailto:test@example.com">test@example.com</a> — ইমেইল
+          </li>
+          <li style="margin-bottom:10px;">
+            📱 <a href="tel:+8801700000000">+৮৮০ ১৭০০-০০০০০০</a> — ফোন
+          </li>
+          <li style="margin-bottom:10px;">
+            ⬇️ <a href="#" download>লেসন ডাউনলোড</a> — ডাউনলোড
+          </li>
+          <li>
+            📍 <a href="#top">উপরে ফিরুন</a> — অ্যাংকর
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৯ -->
+  <section class="ict-topic">
+    <h2>🎨 লিংকের স্টাইলিং (CSS)</h2>
+    <p>ডিফল্টভাবে লিংক নীল ও আন্ডারলাইন থাকে। CSS দিয়ে সুন্দর করা যায়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  <span class="cmt">/* সাধারণ লিংক */</span>
+  a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  <span class="cmt">/* হোভার */</span>
+  a:hover {
+    color: #8b5cf6;
+    text-decoration: underline;
+  }
+
+  <span class="cmt">/* ভিজিট করা লিংক */</span>
+  a:visited {
+    color: #64748b;
+  }
+
+  <span class="cmt">/* অ্যাক্টিভ (ক্লিকের সময়) */</span>
+  a:active {
+    color: #ef4444;
+  }
+
+  <span class="cmt">/* বাটন স্টাইল লিংক */</span>
+  a.btn {
+    background: #6366f1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <p style="margin-bottom:12px;">
+          <a href="#">সাধারণ লিংক</a>
+        </p>
+        <p>
+          <a href="#" style="background:#6366f1;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;">
+            🔘 বাটন স্টাইল লিংক
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ১০ -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>href</code> অ্যাট্রিবিউট ভুলে যাওয়া — লিংক কাজ করবে না</li>
+        <li>❌ <code>target="_blank"</code> এর সাথে <code>rel="noopener"</code> না দেওয়া</li>
+        <li>❌ এক্সটার্নাল URL-এ <code>https://</code> না দেওয়া — ব্রাউজার ভুল পাথে যাবে</li>
+        <li>❌ "এখানে ক্লিক করুন" লেখা — বর্ণনামূলক লেখা ভালো (<strong>"লেসন ডাউনলোড করুন"</strong>)</li>
+        <li>❌ একই পেজে একাধিক এলিমেন্টে একই <code>id</code> দিয়ে অ্যাংকর লিংক</li>
+        <li>❌ ফাইলের নামে স্পেস — <code>about page.html</code> ভুল, <code>about-page.html</code> ঠিক</li>
+      </ul>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 অ্যাক্সেসিবিলিটি টিপস:</strong>
+      লিংকের লেখা বর্ণনামূলক রাখুন। স্ক্রিন রিডার ব্যবহারকারীরা শুনে বুঝতে পারেন কোথায় যাবে। "ক্লিক করুন" নয় — "HTML লেসন ডাউনলোড করুন"।
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>Anchor ট্যাগ:</strong> <code>&lt;a href="..."&gt;লেখা&lt;/a&gt;</code></li>
+        <li><strong>ইন্টারনাল লিংক:</strong> <code>href="page.html"</code></li>
+        <li><strong>এক্সটার্নাল লিংক:</strong> <code>href="https://..."</code></li>
+        <li><strong>নতুন ট্যাব:</strong> <code>target="_blank"</code> + <code>rel="noopener"</code></li>
+        <li><strong>ইমেইল:</strong> <code>href="mailto:..."</code>, <strong>ফোন:</strong> <code>href="tel:..."</code></li>
+        <li><strong>অ্যাংকর লিংক:</strong> <code>href="#id"</code> + <code>id="..."</code></li>
+        <li><strong>ডাউনলোড:</strong> <code>download</code> অ্যাট্রিবিউট</li>
+        <li><strong>ছবিকে লিংক:</strong> <code>&lt;a&gt;&lt;img&gt;&lt;/a&gt;</code></li>
+        <li><strong>CSS স্টাইলিং:</strong> <code>:hover</code>, <code>:visited</code>, <code>:active</code></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

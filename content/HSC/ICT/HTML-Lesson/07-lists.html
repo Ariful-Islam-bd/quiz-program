@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৭: লিস্ট</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📋'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+}
+.live-demo .inner ul,
+.live-demo .inner ol{
+  margin:8px 0 0 24px;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* ডেমো গ্রিড (দুই পাশে) */
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px; margin:16px 0;
+}
+.demo-box{
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:12px; padding:16px;
+}
+.demo-box h4{
+  font-size:.9rem; color:var(--primary);
+  margin-bottom:8px; padding-bottom:6px;
+  border-bottom:2px dashed #e0e7ff;
+}
+.demo-box ul,.demo-box ol{margin-left:20px;}
+
+/* টাইপ প্রিভিউ */
+.type-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px; margin:16px 0;
+}
+.type-card{
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:12px; padding:16px;
+  transition:.25s;
+}
+.type-card:hover{
+  border-color:var(--primary);
+  box-shadow:0 6px 16px rgba(99,102,241,.12);
+}
+.type-card code{
+  display:inline-block;
+  background:var(--primary); color:#fff;
+  padding:3px 10px; border-radius:6px;
+  font-size:.75rem; margin-bottom:8px;
+}
+.type-card ul,.type-card ol{margin-left:20px;}
+
+/* টু-ডু ডেমো */
+.todo-list{
+  list-style:none; padding:0; margin:0;
+}
+.todo-list li{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:10px;
+  margin:0;
+}
+.todo-list li:last-child{border-bottom:none;}
+.todo-list li input{width:18px;height:18px;accent-color:var(--primary);}
+.todo-list li.done{text-decoration:line-through;color:var(--muted);}
+
+/* মেনু ডেমো */
+.menu-list{
+  list-style:none; padding:0; margin:0;
+}
+.menu-list li{
+  padding:12px 16px;
+  border-bottom:1px dashed var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  margin:0;
+}
+.menu-list li:last-child{border-bottom:none;}
+.menu-list .item-name{font-weight:600;}
+.menu-list .price{color:var(--primary);font-weight:700;}
+.menu-list .tag-hot{
+  background:var(--danger); color:#fff;
+  font-size:.7rem; padding:2px 8px;
+  border-radius:10px; margin-left:8px;
+}
+
+/* স্টেপ ডেমো */
+.step-list{
+  list-style:none; padding:0; margin:0;
+  counter-reset:step;
+}
+.step-list li{
+  counter-increment:step;
+  padding:14px 14px 14px 55px;
+  margin:10px 0; background:#f8fafc;
+  border-radius:10px; position:relative;
+  border-left:4px solid var(--primary);
+}
+.step-list li::before{
+  content:counter(step);
+  position:absolute; left:10px; top:50%;
+  transform:translateY(-50%);
+  width:32px; height:32px;
+  background:var(--primary); color:#fff;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700;
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .two-col{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="07-lists">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৭</span>
+    <h1>📋 লিস্ট (Lists)</h1>
+    <p>Unordered, Ordered, Nested, Description লিস্ট — সব ধরনের লিস্ট এবং CSS স্টাইলিং শিখুন উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১: বেসিক লিস্ট -->
+  <section class="ict-topic">
+    <h2>🔰 লিস্টের প্রকারভেদ</h2>
+    <p>HTML-এ প্রধানত <strong>৩ ধরনের লিস্ট</strong> আছে:</p>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <code>&lt;ul&gt;</code>
+        <h4 style="font-size:.9rem;color:var(--dark);margin-bottom:6px;">Unordered List</h4>
+        <p style="font-size:.82rem;color:var(--muted);">বুলেট পয়েন্ট (ক্রম নেই)</p>
+        <ul>
+          <li>আইটেম</li>
+          <li>আইটেম</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <code>&lt;ol&gt;</code>
+        <h4 style="font-size:.9rem;color:var(--dark);margin-bottom:6px;">Ordered List</h4>
+        <p style="font-size:.82rem;color:var(--muted);">নম্বর/অক্ষর (ক্রম আছে)</p>
+        <ol>
+          <li>প্রথম</li>
+          <li>দ্বিতীয়</li>
+        </ol>
+      </div>
+      <div class="type-card">
+        <code>&lt;dl&gt;</code>
+        <h4 style="font-size:.9rem;color:var(--dark);margin-bottom:6px;">Description List</h4>
+        <p style="font-size:.82rem;color:var(--muted);">শব্দ-সংজ্ঞা জোড়া</p>
+        <dl style="margin:0;">
+          <dt style="font-weight:700;">HTML</dt>
+          <dd style="margin-left:16px;font-size:.85rem;">মার্কআপ ল্যাংগুয়েজ</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ২: Unordered List -->
+  <section class="ict-topic">
+    <h2>🔵 Unordered List (&lt;ul&gt;)</h2>
+    <p><code>&lt;ul&gt;</code> ট্যাগ বুলেট পয়েন্টের তালিকা তৈরি করে। প্রতিটি আইটেম <code>&lt;li&gt;</code> ট্যাগে থাকে।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>আম<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>জাম<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>কাঁঠাল<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ul>
+          <li>আম</li>
+          <li>জাম</li>
+          <li>কাঁঠাল</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>🔹 type অ্যাট্রিবিউট</h3>
+    <p>বুলেটের চেহারা বদলাতে <code>type</code> ব্যবহার করুন:</p>
+
+    <div class="two-col">
+      <div class="demo-box">
+        <h4>type="disc" (ডিফল্ট)</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ul type="disc"&gt;</code>
+        <ul type="disc" style="margin-top:10px;">
+          <li>পূর্ণ বৃত্ত</li>
+          <li>বুলেট</li>
+        </ul>
+      </div>
+      <div class="demo-box">
+        <h4>type="circle"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ul type="circle"&gt;</code>
+        <ul type="circle" style="margin-top:10px;">
+          <li>ফাঁপা বৃত্ত</li>
+          <li>সার্কেল</li>
+        </ul>
+      </div>
+      <div class="demo-box">
+        <h4>type="square"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ul type="square"&gt;</code>
+        <ul type="square" style="margin-top:10px;">
+          <li>বর্গাকার</li>
+          <li>স্কয়ার</li>
+        </ul>
+      </div>
+      <div class="demo-box">
+        <h4>type="none"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ul type="none"&gt;</code>
+        <ul type="none" style="margin-top:10px;">
+          <li>বুলেট নেই</li>
+          <li>শুধু টেক্সট</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৩: Ordered List -->
+  <section class="ict-topic">
+    <h2>🔢 Ordered List (&lt;ol&gt;)</h2>
+    <p><code>&lt;ol&gt;</code> ট্যাগ নম্বরযুক্ত তালিকা তৈরি করে — যেখানে ক্রম গুরুত্বপূর্ণ।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>প্রথম ধাপ<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>দ্বিতীয় ধাপ<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>তৃতীয় ধাপ<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ol>
+          <li>প্রথম ধাপ</li>
+          <li>দ্বিতীয় ধাপ</li>
+          <li>তৃতীয় ধাপ</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>🔹 type অ্যাট্রিবিউট</h3>
+    <div class="two-col">
+      <div class="demo-box">
+        <h4>type="1" (ডিফল্ট)</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol type="1"&gt;</code>
+        <ol type="1" style="margin-top:10px;">
+          <li>সংখ্যা</li>
+          <li>১, ২, ৩</li>
+        </ol>
+      </div>
+      <div class="demo-box">
+        <h4>type="A"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol type="A"&gt;</code>
+        <ol type="A" style="margin-top:10px;">
+          <li>বড়</li>
+          <li>A, B, C</li>
+        </ol>
+      </div>
+      <div class="demo-box">
+        <h4>type="a"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol type="a"&gt;</code>
+        <ol type="a" style="margin-top:10px;">
+          <li>ছোট</li>
+          <li>a, b, c</li>
+        </ol>
+      </div>
+      <div class="demo-box">
+        <h4>type="I"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol type="I"&gt;</code>
+        <ol type="I" style="margin-top:10px;">
+          <li>রোমান</li>
+          <li>I, II, III</li>
+        </ol>
+      </div>
+      <div class="demo-box">
+        <h4>type="i"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol type="i"&gt;</code>
+        <ol type="i" style="margin-top:10px;">
+          <li>রোমান ছোট</li>
+          <li>i, ii, iii</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>🔹 start ও reversed</h3>
+    <div class="two-col">
+      <div class="demo-box">
+        <h4>start="5"</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol start="5"&gt;</code>
+        <ol start="5" style="margin-top:10px;">
+          <li>পাঁচ</li>
+          <li>ছয়</li>
+          <li>সাত</li>
+        </ol>
+      </div>
+      <div class="demo-box">
+        <h4>reversed</h4>
+        <code style="font-size:.72rem;background:#f1f5f9;padding:2px 6px;border-radius:4px;">&lt;ol reversed&gt;</code>
+        <ol reversed style="margin-top:10px;">
+          <li>তিন</li>
+          <li>দুই</li>
+          <li>এক</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      <code>start="5"</code> দিলে ৫ থেকে শুরু হবে। <code>reversed</code> দিলে উল্টো ক্রমে দেখাবে। একসাথে দিলে — ৫, ৪, ৩... ইত্যাদি।
+    </div>
+  </section>
+
+  <!-- টপিক ৪: Nested List -->
+  <section class="ict-topic">
+    <h2>📚 নেস্টেড লিস্ট (ভিতরে-বাইরে)</h2>
+    <p>একটি লিস্টের ভিতরে আরেকটি লিস্ট রাখা যায়। যেমন একটি মেনুতে সাব-মেনু:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>ফল
+    <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>আম<span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>জাম<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>সবজি
+    <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>আলু<span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>পটল<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ul>
+          <li>ফল
+            <ul>
+              <li>আম</li>
+              <li>জাম</li>
+            </ul>
+          </li>
+          <li>সবজি
+            <ul>
+              <li>আলু</li>
+              <li>পটল</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>🔹 মিশ্র লিস্ট (ol + ul)</h3>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ol>
+          <li>প্রথম ধাপ
+            <ul>
+              <li>বিস্তারিত ১</li>
+              <li>বিস্তারিত ২</li>
+            </ul>
+          </li>
+          <li>দ্বিতীয় ধাপ
+            <ol type="a">
+              <li>উপ-ধাপ ক</li>
+              <li>উপ-ধাপ খ</li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৫: Description List -->
+  <section class="ict-topic">
+    <h2>📖 Description List (&lt;dl&gt;)</h2>
+    <p>শব্দ ও তার সংজ্ঞা জোড়া আকারে দেখানোর জন্য <code>&lt;dl&gt;</code> ব্যবহার করা হয়। এতে থাকে:</p>
+    <ul>
+      <li><code>&lt;dt&gt;</code> — Definition Term (শব্দ)</li>
+      <li><code>&lt;dd&gt;</code> — Definition Description (সংজ্ঞা)</li>
+    </ul>
+
+    <div class="code-block">
+<span class="tag">&lt;dl&gt;</span>
+  <span class="tag">&lt;dt&gt;</span>HTML<span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span>HyperText Markup Language — ওয়েবপেজের কাঠামো<span class="tag">&lt;/dd&gt;</span>
+
+  <span class="tag">&lt;dt&gt;</span>CSS<span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span>Cascading Style Sheets — ডিজাইন<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <dl>
+          <dt style="font-weight:700;color:var(--primary);">HTML</dt>
+          <dd style="margin-left:20px;margin-bottom:10px;">HyperText Markup Language — ওয়েবপেজের কাঠামো</dd>
+
+          <dt style="font-weight:700;color:var(--primary);">CSS</dt>
+          <dd style="margin-left:20px;">Cascading Style Sheets — ডিজাইন</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 কখন ব্যবহার করবেন:</strong>
+      গ্লোসারি, FAQ, শব্দকোষ, প্রোডাক্ট স্পেসিফিকেশন — যেখানে শব্দ-সংজ্ঞা জোড়া লাগে।
+    </div>
+  </section>
+
+  <!-- টপিক ৬: CSS স্টাইলিং -->
+  <section class="ict-topic">
+    <h2>🎨 CSS দিয়ে লিস্ট স্টাইলিং</h2>
+
+    <h3>🔹 list-style-type</h3>
+    <p>বুলেটের ধরন CSS দিয়ে বদলানো যায়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  ul.disc    { list-style-type: disc; }
+  ul.circle  { list-style-type: circle; }
+  ul.square  { list-style-type: square; }
+  ol.decimal { list-style-type: decimal; }
+  ol.alpha   { list-style-type: lower-alpha; }
+  ol.roman   { list-style-type: upper-roman; }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <h3>🔹 list-style-position</h3>
+    <div class="two-col">
+      <div class="demo-box">
+        <h4>outside (ডিফল্ট)</h4>
+        <ul style="list-style-position:outside;max-width:180px;border:1px solid #ccc;padding:10px;">
+          <li>লম্বা টেক্সট যাতে বোঝা যায় বুলেট বাইরে আছে</li>
+        </ul>
+      </div>
+      <div class="demo-box">
+        <h4>inside</h4>
+        <ul style="list-style-position:inside;max-width:180px;border:1px solid #ccc;padding:10px;">
+          <li>লম্বা টেক্সট যাতে বোঝা যায় বুলেট ভিতরে</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>🔹 বুলেট সরানো ও কাস্টমাইজ</h3>
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  <span class="cmt">/* বুলেট সরানো */</span>
+  ul.no-bullet {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  <span class="cmt">/* ইমোজি বুলেট */</span>
+  ul.emoji {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.emoji li::before {
+    content: "✅ ";
+    margin-right: 6px;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ul style="list-style:none;padding:0;">
+          <li style="padding:6px 0;">✅ কাজ সম্পন্ন</li>
+          <li style="padding:6px 0;">✅ আরেকটি কাজ</li>
+          <li style="padding:6px 0;">✅ তৃতীয় কাজ</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৭: বাস্তব উদাহরণ -->
+  <section class="ict-topic">
+    <h2>💡 বাস্তব উদাহরণ</h2>
+
+    <h3>🔹 To-Do List</h3>
+    <div class="code-block">
+<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="val">"todo-list"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;input</span> <span class="attr">type</span>=<span class="val">"checkbox"</span><span class="tag">&gt;</span> পড়া শেষ করা<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;input</span> <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="attr">checked</span><span class="tag">&gt;</span> নাস্তা করা<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;input</span> <span class="attr">type</span>=<span class="val">"checkbox"</span><span class="tag">&gt;</span> ব্যায়াম করা<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner" style="padding:0;">
+        <ul class="todo-list">
+          <li><input type="checkbox"> পড়া শেষ করা</li>
+          <li class="done"><input type="checkbox" checked> নাস্তা করা</li>
+          <li><input type="checkbox"> ব্যায়াম করা</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- রেস্টুরেন্ট মেনুর কোড যোগ করা হলো -->
+    <h3>🔹 রেস্টুরেন্ট মেনু</h3>
+    <div class="code-block">
+<span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="val">"menu-list"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;li&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"item-name"</span><span class="tag">&gt;</span>🍕 পিৎজা<span class="tag">&lt;/span&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"price"</span><span class="tag">&gt;</span>৳২৫০<span class="tag">&lt;/span&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"item-name"</span><span class="tag">&gt;</span>🍔 বার্গার <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"tag-hot"</span><span class="tag">&gt;</span>জনপ্রিয়<span class="tag">&lt;/span&gt;&lt;/span&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"price"</span><span class="tag">&gt;</span>৳১৮০<span class="tag">&lt;/span&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"item-name"</span><span class="tag">&gt;</span>🥗 সালাদ<span class="tag">&lt;/span&gt;</span>
+    <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="val">"price"</span><span class="tag">&gt;</span>৳১২০<span class="tag">&lt;/span&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner" style="padding:0;">
+        <ul class="menu-list">
+          <li>
+            <span class="item-name">🍕 পিৎজা</span>
+            <span class="price">৳২৫০</span>
+          </li>
+          <li>
+            <span class="item-name">🍔 বার্গার <span class="tag-hot">জনপ্রিয়</span></span>
+            <span class="price">৳১৮০</span>
+          </li>
+          <li>
+            <span class="item-name">🥗 সালাদ</span>
+            <span class="price">৳১২০</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ধাপে ধাপে নির্দেশিকার কোড যোগ করা হলো -->
+    <h3>🔹 ধাপে ধাপে নির্দেশিকা</h3>
+    <div class="code-block">
+<span class="tag">&lt;ol</span> <span class="attr">class</span>=<span class="val">"step-list"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;strong&gt;</span>রেজিস্ট্রেশন:<span class="tag">&lt;/strong&gt;</span> প্রথমে অ্যাকাউন্ট খুলুন<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;strong&gt;</span>ভেরিফিকেশন:<span class="tag">&lt;/strong&gt;</span> ইমেইল ভেরিফাই করুন<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;&lt;strong&gt;</span>লগইন:<span class="tag">&lt;/strong&gt;</span> অ্যাকাউন্টে প্রবেশ করুন<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <ol class="step-list">
+          <li><strong>রেজিস্ট্রেশন:</strong> প্রথমে অ্যাকাউন্ট খুলুন</li>
+          <li><strong>ভেরিফিকেশন:</strong> ইমেইল ভেরিফাই করুন</li>
+          <li><strong>লগইন:</strong> অ্যাকাউন্টে প্রবেশ করুন</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৮: তুলনা টেবিল -->
+  <section class="ict-topic">
+    <h2>📋 লিস্ট ট্যাগের সারসংক্ষেপ</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ/অ্যাট্রিবিউট</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;ul&gt;</code></td><td>আনঅর্ডারড লিস্ট</td><td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td></tr>
+        <tr><td><code>&lt;ol&gt;</code></td><td>অর্ডারড লিস্ট</td><td><code>&lt;ol&gt;...&lt;/ol&gt;</code></td></tr>
+        <tr><td><code>&lt;li&gt;</code></td><td>লিস্ট আইটেম</td><td><code>&lt;li&gt;আইটেম&lt;/li&gt;</code></td></tr>
+        <tr><td><code>&lt;dl&gt;</code></td><td>ডেসক্রিপশন লিস্ট</td><td><code>&lt;dl&gt;...&lt;/dl&gt;</code></td></tr>
+        <tr><td><code>&lt;dt&gt;</code></td><td>টার্ম (শব্দ)</td><td><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td></tr>
+        <tr><td><code>&lt;dd&gt;</code></td><td>ডেসক্রিপশন</td><td><code>&lt;dd&gt;মার্কআপ...&lt;/dd&gt;</code></td></tr>
+        <tr><td><code>type</code></td><td>বুলেট/নম্বরের ধরন</td><td><code>type="square"</code></td></tr>
+        <tr><td><code>start</code></td><td>শুরুর নম্বর</td><td><code>start="5"</code></td></tr>
+        <tr><td><code>reversed</code></td><td>উল্টো ক্রম</td><td><code>&lt;ol reversed&gt;</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৯: সাধারণ ভুল -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>&lt;li&gt;</code> ট্যাগ <code>&lt;ul&gt;/&lt;ol&gt;</code>-এর বাইরে ব্যবহার</li>
+        <li>❌ <code>&lt;ul&gt;</code>-এর ভেতরে সরাসরি টেক্সট রাখা (আইটেম <code>&lt;li&gt;</code>-তে রাখতে হবে)</li>
+        <li>❌ নেস্টেড লিস্ট <code>&lt;li&gt;</code>-এর ভেতরে না রেখে বাইরে রাখা</li>
+        <li>❌ <code>&lt;dd&gt;</code> ছাড়া <code>&lt;dt&gt;</code> ব্যবহার</li>
+        <li>❌ শুধু সাজানোর জন্য টেবিল ব্যবহার (লিস্টই যথেষ্ট)</li>
+        <li>❌ মোবাইল রেসপন্সিভের জন্য padding ঠিক না করা</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>Unordered List:</strong> <code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code> (বুলেট)</li>
+        <li><strong>Ordered List:</strong> <code>&lt;ol&gt;</code> + <code>&lt;li&gt;</code> (নম্বর)</li>
+        <li><strong>Description List:</strong> <code>&lt;dl&gt;</code> + <code>&lt;dt&gt;</code> + <code>&lt;dd&gt;</code></li>
+        <li><strong>type:</strong> disc, circle, square / 1, A, a, I, i</li>
+        <li><strong>start/reversed:</strong> শুরু ও ক্রম নিয়ন্ত্রণ</li>
+        <li><strong>Nested List:</strong> ভিতরে-বাইরে লিস্ট</li>
+        <li><strong>CSS:</strong> <code>list-style-type</code>, <code>list-style-position</code>, <code>::before</code></li>
+        <li><strong>বাস্তব উদাহরণ:</strong> To-Do, মেনু, স্টেপ</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

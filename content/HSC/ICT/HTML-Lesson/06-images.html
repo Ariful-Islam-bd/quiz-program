@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৬: ইমেজ</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'🖼️'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px; text-align:center;
+}
+.live-demo .inner img{
+  max-width:100%; height:auto;
+  border-radius:8px;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* অ্যানাটমি */
+.anatomy{
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:14px; padding:24px;
+  text-align:center; margin:20px 0;
+  overflow-x:auto;
+}
+.anatomy .line{
+  display:inline-flex; align-items:center;
+  font-family:'Courier New',monospace;
+  font-size:1rem; font-weight:bold;
+  white-space:nowrap;
+}
+.anatomy .opening{color:#ec4899;}
+.anatomy .attr{color:#f59e0b;}
+.anatomy .value{color:#10b981;}
+.anatomy .closing{color:#ec4899;}
+.anatomy .labels{
+  display:flex; justify-content:space-around;
+  margin-top:20px; flex-wrap:wrap; gap:8px;
+}
+.anatomy .label-item{
+  font-size:.78rem; text-align:center;
+  padding:6px 10px; border-radius:8px;
+  background:#fff; border:1px solid var(--border);
+  flex:1; min-width:100px;
+}
+.anatomy .label-item .dot{
+  display:inline-block; width:8px; height:8px;
+  border-radius:50%; margin-right:4px;
+  vertical-align:middle;
+}
+
+/* ফোল্ডার ট্রি */
+.folder-tree{
+  background:#1e293b; color:#e2e8f0;
+  padding:20px; border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; line-height:1.5;
+  margin:16px 0; overflow-x:auto; white-space:pre;
+}
+.folder-tree .folder{color:#fbbf24;}
+.folder-tree .file{color:#34d399;}
+
+/* ইমেজ সাইজ ডেমো গ্রিড */
+.size-demo{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:14px; margin:16px 0;
+}
+.size-card{
+  text-align:center; padding:14px;
+  background:#f8fafc; border:1px solid var(--border);
+  border-radius:12px;
+}
+.size-card .box{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 8px;
+  font-size:.8rem; font-weight:600;
+}
+.size-card code{
+  font-size:.75rem;
+  background:var(--dark); color:#e2e8f0;
+  padding:2px 8px; border-radius:5px;
+}
+
+/* স্টাইল ইফেক্ট কার্ড */
+.effect-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px; margin:16px 0;
+}
+.effect-card{
+  text-align:center;
+}
+.effect-card .box{
+  width:100%; height:100px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:600;
+  margin-bottom:8px;
+  transition:.3s;
+}
+.effect-card p{
+  font-size:.78rem; color:var(--muted);
+  margin:0;
+}
+
+/* ইমেজ কার্ড */
+.img-card{
+  background:#f8fafc; border-radius:12px;
+  overflow:hidden; border:1px solid var(--border);
+  max-width:300px; margin:14px auto;
+}
+.img-card .img-area{
+  height:140px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-size:2.5rem;
+}
+.img-card .caption{
+  padding:12px 16px; text-align:center;
+  font-size:.9rem; color:var(--text);
+  font-style:italic;
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .anatomy .line{font-size:.75rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="tab-bar">
+  <a href="index.html">🏠 মূল পাতা</a>
+  <a href="01-introduction.html">১. পরিচিতি</a>
+  <a href="02-setup-tools.html">২. সেটআপ</a>
+  <a href="03-tags-elements.html">৩. ট্যাগ</a>
+  <a href="04-text-headings.html">৪. টেক্সট</a>
+  <a href="05-links.html">৫. লিংক</a>
+  <a href="06-images.html" class="active">৬. ইমেজ</a>
+  <a href="07-lists.html">৭. লিস্ট</a>
+  <a href="08-tables.html">৮. টেবিল</a>
+  <a href="09-forms.html">৯. ফর্ম</a>
+  <a href="10-semantic.html">১০. সিম্যান্টিক</a>
+  <a href="11-flexbox.html">১১. Flexbox</a>
+  <a href="12-project-calendar.html">১২. প্রজেক্ট</a>
+  <a href="13-cheatsheet.html">১৩. চিটশিট</a>
+</nav>
+
+<main class="ict-container" data-html-module="06-images">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৬</span>
+    <h1>🖼️ ইমেজ</h1>
+    <p>ছবি যুক্ত করা, ফাইল পাথ, ইমেজ ফরম্যাট, figure ও picture এলিমেন্ট — সবকিছু উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১: বেসিক ইমেজ -->
+  <section class="ict-topic">
+    <h2>🔰 ইমেজ ট্যাগের মৌলিক গঠন</h2>
+    <p>HTML-এ ছবি যুক্ত করতে <code>&lt;img&gt;</code> ট্যাগ ব্যবহার করা হয়। এটি একটি Void ট্যাগ — Closing লাগে না।</p>
+
+    <div class="anatomy">
+      <div class="line">
+        <span class="opening">&lt;img</span>
+        <span class="attr">src</span>=<span class="value">"photo.jpg"</span>
+        <span class="attr">alt</span>=<span class="value">"ছবির বর্ণনা"</span><span class="opening">&gt;</span>
+      </div>
+      <div class="labels">
+        <div class="label-item"><span class="dot" style="background:#ec4899;"></span> img ট্যাগ</div>
+        <div class="label-item"><span class="dot" style="background:#f59e0b;"></span> src (সোর্স)</div>
+        <div class="label-item"><span class="dot" style="background:#10b981;"></span> alt (বিকল্প)</div>
+      </div>
+    </div>
+
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"সূর্যাস্তের ছবি"</span><span class="tag">&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট (উদাহরণ)</span>
+      <div class="inner">
+        <div style="max-width:300px;margin:0 auto;">
+          <div style="height:180px;background:linear-gradient(135deg,#f59e0b,#ef4444);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;">
+            🌅
+          </div>
+          <p style="margin-top:8px;font-size:.85rem;color:#64748b;">↑ ছবির জায়গায় ডেমো</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>📋 ইমেজের গুরুত্বপূর্ণ অ্যাট্রিবিউট</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>অ্যাট্রিবিউট</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>src</code></td><td>ছবির উৎস (পাথ/URL)</td><td><code>src="images/photo.jpg"</code></td></tr>
+        <tr><td><code>alt</code></td><td>বিকল্প টেক্সট (ছবি না এলেই দেখায়)</td><td><code>alt="লাল গোলাপ"</code></td></tr>
+        <tr><td><code>width</code></td><td>ছবির প্রস্থ</td><td><code>width="300"</code></td></tr>
+        <tr><td><code>height</code></td><td>ছবির উচ্চতা</td><td><code>height="200"</code></td></tr>
+        <tr><td><code>loading</code></td><td>লেজি লোডিং</td><td><code>loading="lazy"</code></td></tr>
+        <tr><td><code>title</code></td><td>টুলটিপ</td><td><code>title="বিস্তারিত"</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="ict-note">
+      <strong>💡 alt অ্যাট্রিবিউট কেন জরুরি?</strong>
+      • স্ক্রিন রিডার ব্যবহারকারীদের ছবি বর্ণনা দেয়<br>
+      • ছবি লোড না হলে বিকল্প টেক্সট দেখায়<br>
+      • SEO-তে সাহায্য করে (Google ছবি বুঝতে পারে)
+    </div>
+  </section>
+
+  <!-- টপিক ২: ফাইল পাথ -->
+  <section class="ict-topic">
+    <h2>📁 ফাইল পাথ (File Path)</h2>
+    <p>ছবির সোর্স দিতে হয় সঠিক <strong>পাথ</strong>। তিন ধরনের পাথ আছে:</p>
+
+    <h3>🔹 ১. একই ফোল্ডারে</h3>
+    <p>HTML ফাইল ও ছবি একই ফোল্ডারে থাকলে শুধু নাম দিলেই হয়:</p>
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"ছবি"</span><span class="tag">&gt;</span>
+    </div>
+
+    <h3>🔹 ২. সাব-ফোল্ডারে</h3>
+    <p>ছবি কোনো ফোল্ডারের ভেতরে থাকলে ফোল্ডারের নাম/ছবির নাম দিতে হয়:</p>
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"images/photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"ছবি"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"images/gallery/sunset.jpg"</span> <span class="attr">alt</span>=<span class="val">"সূর্যাস্ত"</span><span class="tag">&gt;</span>
+    </div>
+
+    <h3>🔹 ৩. প্যারেন্ট ফোল্ডারে</h3>
+    <p>উপরের ফোল্ডারে ছবি থাকলে <code>../</code> ব্যবহার করতে হয়:</p>
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"../photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"ছবি"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"../../logo.png"</span> <span class="attr">alt</span>=<span class="val">"লোগো"</span><span class="tag">&gt;</span>
+    </div>
+
+    <h3>📂 আদর্শ ফোল্ডার গঠন</h3>
+    <div class="folder-tree">
+<span class="folder">📁 my-project/</span>
+├── <span class="file">index.html</span>         ← HTML ফাইল
+├── <span class="folder">📁 images/</span>           ← ছবির ফোল্ডার
+│   ├── <span class="file">profile.jpg</span>
+│   ├── <span class="file">banner.png</span>
+│   └── <span class="folder">📁 gallery/</span>
+│       ├── <span class="file">photo1.jpg</span>
+│       └── <span class="file">photo2.jpg</span>
+└── <span class="folder">📁 assets/</span>
+    └── <span class="file">logo.svg</span>
+    </div>
+
+    <div class="code-block">
+<span class="cmt">&lt;!-- images ফোল্ডার থেকে --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"images/profile.jpg"</span> <span class="attr">alt</span>=<span class="val">"প্রোফাইল"</span><span class="tag">&gt;</span>
+
+<span class="cmt">&lt;!-- gallery সাব-ফোল্ডার থেকে --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"images/gallery/photo1.jpg"</span> <span class="attr">alt</span>=<span class="val">"গ্যালারি"</span><span class="tag">&gt;</span>
+
+<span class="cmt">&lt;!-- assets ফোল্ডার থেকে --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"assets/logo.svg"</span> <span class="attr">alt</span>=<span class="val">"লোগো"</span><span class="tag">&gt;</span>
+    </div>
+
+    <div class="ict-warning">
+      <strong>⚠️ সাধারণ ভুল:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>src="photo.jpg"</code> — অথচ ছবি <code>images/</code> ফোল্ডারে</li>
+        <li>❌ ফাইলের নামে স্পেস — <code>my photo.jpg</code> (ভুল), <code>my_photo.jpg</code> (ঠিক)</li>
+        <li>❌ এক্সটেনশন ভুল — <code>photo.png</code>-এর জায়গায় <code>photo.jpg</code></li>
+        <li>❌ বড়-ছোট অক্ষর ভুল — <code>Photo.JPG</code> ≠ <code>photo.jpg</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- টপিক ৩: ইমেজ সাইজ -->
+  <section class="ict-topic">
+    <h2>📏 ইমেজের সাইজ (width ও height)</h2>
+    <p><code>width</code> ও <code>height</code> দিয়ে ছবির আকার নিয়ন্ত্রণ করা যায়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"photo.jpg"</span> <span class="attr">width</span>=<span class="val">"300"</span> <span class="attr">height</span>=<span class="val">"200"</span> <span class="attr">alt</span>=<span class="val">"ছবি"</span><span class="tag">&gt;</span>
+    </div>
+
+    <div class="size-demo">
+      <div class="size-card">
+        <div class="box" style="width:60px;height:40px;">60×40</div>
+        <code>width="60" height="40"</code>
+      </div>
+      <div class="size-card">
+        <div class="box" style="width:100px;height:60px;">100×60</div>
+        <code>width="100" height="60"</code>
+      </div>
+      <div class="size-card">
+        <div class="box" style="width:130px;height:80px;">130×80</div>
+        <code>width="130" height="80"</code>
+      </div>
+    </div>
+
+    <h3>🎯 সাইজ দেওয়ার নিয়ম</h3>
+    <ul>
+      <li>✅ সবসময় <strong>width ও height দুটোই</strong> দিন (লেআউট শিফট কমে)</li>
+      <li>✅ CSS দিয়ে সাইজ দিলে বেশি কন্ট্রোল পাওয়া যায়: <code>img { width: 100%; height: auto; }</code></li>
+      <li>✅ রেসপন্সিভ ছবির জন্য <code>max-width: 100%</code> ব্যবহার করুন</li>
+      <li>✅ একই অনুপাত রাখলে ছবি বিকৃত হয় না</li>
+    </ul>
+  </section>
+
+  <!-- টপিক ৪: ইমেজ ফরম্যাট -->
+  <section class="ict-topic">
+    <h2>🎯 ইমেজ ফরম্যাট সমূহ</h2>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ফরম্যাট</th><th>এক্সটেনশন</th><th>কখন ব্যবহার করবেন</th><th>ট্রান্সপারেন্সি</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>JPEG</strong></td><td><code>.jpg</code>, <code>.jpeg</code></td><td>ফটোগ্রাফ, রিয়ালিস্টিক ছবি</td><td>❌ নেই</td></tr>
+        <tr><td><strong>PNG</strong></td><td><code>.png</code></td><td>লোগো, আইকন, স্বচ্ছতা দরকার</td><td>✅ আছে</td></tr>
+        <tr><td><strong>GIF</strong></td><td><code>.gif</code></td><td>অ্যানিমেশন, ছোট মুভি</td><td>✅ আছে</td></tr>
+        <tr><td><strong>SVG</strong></td><td><code>.svg</code></td><td>ভেক্টর লোগো, আইকন (যেকোনো সাইজে ঝকঝকে)</td><td>✅ আছে</td></tr>
+        <tr><td><strong>WebP</strong></td><td><code>.webp</code></td><td>ওয়েবের জন্য সেরা (ছোট সাইজ)</td><td>✅ আছে</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ict-note">
+      <strong>💡 ফরম্যাট বাছাই:</strong>
+      • ফটোগ্রাফ → <strong>JPEG</strong> বা <strong>WebP</strong><br>
+      • লোগো/আইকন → <strong>SVG</strong> বা <strong>PNG</strong><br>
+      • অ্যানিমেশন → <strong>GIF</strong><br>
+      • ছোট ফাইল, ভালো কোয়ালিটি → <strong>WebP</strong>
+    </div>
+  </section>
+
+  <!-- টপিক ৫: figure ও figcaption -->
+  <section class="ict-topic">
+    <h2>📸 figure ও figcaption</h2>
+    <p>ছবির সাথে ক্যাপশন (বর্ণনা) দিতে <code>&lt;figure&gt;</code> ও <code>&lt;figcaption&gt;</code> ব্যবহার করা হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;figure&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"sunset.jpg"</span>
+       <span class="attr">alt</span>=<span class="val">"সূর্যাস্তের দৃশ্য"</span>
+       <span class="attr">width</span>=<span class="val">"300"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;figcaption&gt;</span>চিত্র ১: কক্সবাজারের সূর্যাস্ত<span class="tag">&lt;/figcaption&gt;</span>
+<span class="tag">&lt;/figure&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner" style="text-align:center;">
+        <figure style="margin:0;display:inline-block;max-width:300px;">
+          <div style="width:100%;height:140px;background:linear-gradient(180deg,#f59e0b,#ef4444);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:#fff;">🌅</div>
+          <figcaption style="margin-top:10px;font-style:italic;color:#64748b;font-size:.9rem;">
+            চিত্র ১: কক্সবাজারের সূর্যাস্ত
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 কেন figure ব্যবহার করব?</strong>
+      <code>&lt;figure&gt;</code> সিম্যান্টিক ট্যাগ — ব্রাউজার ও সার্চ ইঞ্জিন বুঝতে পারে ছবিটি একটি স্বতন্ত্র কনটেন্ট যা ক্যাপশন দিয়ে ব্যাখ্যা করা হয়েছে। SEO-তে সাহায্য করে।
+    </div>
+  </section>
+
+  <!-- টপিক ৬: picture এলিমেন্ট -->
+  <section class="ict-topic">
+    <h2>🖼️ picture ও source (রেস্পন্সিভ ইমেজ)</h2>
+    <p>বিভিন্ন ডিভাইসের জন্য বিভিন্ন সাইজের ছবি দিতে <code>&lt;picture&gt;</code> ব্যবহার করা হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;picture&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attr">media</span>=<span class="val">"(min-width: 1024px)"</span> <span class="attr">srcset</span>=<span class="val">"large.jpg"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attr">media</span>=<span class="val">"(min-width: 768px)"</span> <span class="attr">srcset</span>=<span class="val">"medium.jpg"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"small.jpg"</span> <span class="attr">alt</span>=<span class="val">"রেসপন্সিভ ছবি"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/picture&gt;</span>
+    </div>
+
+    <p>ব্রাউজার স্ক্রিনের সাইজ অনুযায়ী সঠিক ছবি বেছে নেয় — বড় স্ক্রিনে বড় ছবি, ছোট স্ক্রিনে ছোট ছবি।</p>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      <code>&lt;picture&gt;</code>-এর ভেতরে শেষে অবশ্যই একটি <code>&lt;img&gt;</code> থাকতে হবে — এটিই ফলব্যাক।
+    </div>
+  </section>
+
+  <!-- টপিক ৭: CSS ইফেক্ট -->
+  <section class="ict-topic">
+    <h2>🎨 CSS দিয়ে ছবির ইফেক্ট</h2>
+
+    <h3>🔹 সাধারণ স্টাইল</h3>
+    <div class="effect-grid">
+      <div class="effect-card">
+        <div class="box" style="border-radius:20px;">বর্ডার রেডিয়াস</div>
+        <p>border-radius: 20px</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="border-radius:50%;width:100px;height:100px;margin:0 auto 8px;">সার্কেল</div>
+        <p>border-radius: 50%</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="border:4px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.25);">শ্যাডো</div>
+        <p>box-shadow</p>
+      </div>
+    </div>
+
+    <h3>🔹 CSS Filter ইফেক্ট</h3>
+    <div class="effect-grid">
+      <div class="effect-card">
+        <div class="box" style="filter:grayscale(100%);">গ্রেস্কেল</div>
+        <p>grayscale(100%)</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="filter:blur(2px);">ব্লার</div>
+        <p>blur(2px)</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="filter:brightness(1.4);">উজ্জ্বল</div>
+        <p>brightness(1.4)</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="filter:sepia(100%);">সেপিয়া</div>
+        <p>sepia(100%)</p>
+      </div>
+    </div>
+
+    <h3>🔹 হোভার ইফেক্ট</h3>
+    <div class="effect-grid">
+      <div class="effect-card">
+        <div class="box" style="transition:.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">জুম</div>
+        <p>transform: scale()</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="transition:.3s;" onmouseover="this.style.transform='rotate(5deg)'" onmouseout="this.style.transform='rotate(0)'">ঘোরানো</div>
+        <p>transform: rotate()</p>
+      </div>
+      <div class="effect-card">
+        <div class="box" style="transition:.3s;" onmouseover="this.style.boxShadow='0 0 30px #6366f1'" onmouseout="this.style.boxShadow='none'">গ্লো</div>
+        <p>box-shadow (hover)</p>
+      </div>
+    </div>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  <span class="cmt">/* সার্কেল ছবি */</span>
+  .circle-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  <span class="cmt">/* হোভার জুম */</span>
+  .zoom-img {
+    transition: transform .3s;
+  }
+  .zoom-img:hover {
+    transform: scale(1.1);
+  }
+
+  <span class="cmt">/* রেসপন্সিভ ছবি */</span>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+  </section>
+
+  <!-- টপিক ৮: লেজি লোডিং -->
+  <section class="ict-topic">
+    <h2>⚡ লেজি লোডিং</h2>
+    <p>অনেকগুলো ছবি একসাথে থাকলে সব একবারে লোড না হয়ে স্ক্রল করলে যেটা দেখা যায় সেটাই লোড হবে — এতে পেজ দ্রুত হয়।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"photo.jpg"</span>
+     <span class="attr">alt</span>=<span class="val">"ছবি"</span>
+     <span class="attr">loading</span>=<span class="val">"lazy"</span><span class="tag">&gt;</span>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 loading-এর মান:</strong>
+      • <code>loading="lazy"</code> → স্ক্রল করলে লোড হবে<br>
+      • <code>loading="eager"</code> → সাথে সাথে লোড হবে (ডিফল্ট)
+    </div>
+  </section>
+
+  <!-- টপিক ৯: চেকলিস্ট -->
+  <section class="ict-topic">
+    <h2>✅ নিজের ছবি ব্যবহারের চেকলিস্ট</h2>
+    <div class="ict-success-box">
+      <strong>নিজের ছবি যুক্ত করার আগে যা যা দেখবেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>☐ ছবি কি সঠিক ফোল্ডারে আছে?</li>
+        <li>☐ পাথ কি ঠিক দিয়েছেন? (<code>images/photo.jpg</code>)</li>
+        <li>☐ এক্সটেনশন কি ঠিক? (<code>.jpg</code>, <code>.png</code>)</li>
+        <li>☐ ফাইলের নামে কি স্পেস আছে? (স্পেস থাকলে <code>%20</code>)</li>
+        <li>☐ বড়-ছোট অক্ষর ঠিক আছে? (সব ছোট হাতের হলে ভালো)</li>
+        <li>☐ <code>alt</code> অ্যাট্রিবিউট দিয়েছেন?</li>
+        <li>☐ <code>width</code> ও <code>height</code> দিয়েছেন?</li>
+        <li>☐ একাধিক ছবি থাকলে <code>loading="lazy"</code> দিয়েছেন?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- টপিক ১০: সাধারণ ভুল -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>alt</code> না দেওয়া — অ্যাক্সেসিবিলিটি ও SEO নষ্ট</li>
+        <li>❌ ভুল পাথ — ছবি লোড হবে না</li>
+        <li>❌ ছবির অনুপাত না মেনে width/height দেওয়া — ছবি বিকৃত</li>
+        <li>❌ খুব বড় সাইজের ছবি ব্যবহার করা — পেজ ধীর হবে</li>
+        <li>❌ <code>width</code>/<code>height</code> না দেওয়া — লেআউট শিফট হয়</li>
+        <li>❌ একই ছবি বারবার বড় সাইজে ব্যবহার — আলাদা সাইজ রাখুন</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>img ট্যাগ:</strong> <code>&lt;img src="..." alt="..."&gt;</code></li>
+        <li><strong>মূল অ্যাট্রিবিউট:</strong> <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code></li>
+        <li><strong>ফাইল পাথ:</strong> একই ফোল্ডার, সাব-ফোল্ডার, প্যারেন্ট (<code>../</code>)</li>
+        <li><strong>ইমেজ ফরম্যাট:</strong> JPEG, PNG, GIF, SVG, WebP</li>
+        <li><strong>figure + figcaption:</strong> ক্যাপশনসহ ছবি</li>
+        <li><strong>picture + source:</strong> রেসপন্সিভ ইমেজ</li>
+        <li><strong>CSS ইফেক্ট:</strong> border-radius, filter, hover</li>
+        <li><strong>লেজি লোডিং:</strong> <code>loading="lazy"</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- নেভিগেশন -->
+  <div class="nav-footer">
+    <a href="05-links.html" class="nav-btn nav-prev">⬅️ আগের: লিংক</a>
+    <a href="07-lists.html" class="nav-btn nav-next">পরের: লিস্ট ➡️</a>
+  </div>
+
+</main>
+
+</body>
+</html>

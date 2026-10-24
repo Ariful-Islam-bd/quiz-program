@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ১২: প্রজেক্ট — ক্যালেন্ডার</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📅'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+  overflow-x:auto;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* ক্যালেন্ডার */
+.calendar-table{
+  width:100%;
+  max-width:600px;
+  margin:0 auto;
+  border-collapse:collapse;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+}
+.calendar-table caption{
+  font-size:1.3em;
+  padding:14px;
+  font-weight:700;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;
+}
+.calendar-table th{
+  background:#4f46e5;
+  color:#fff;
+  border:1px solid #e2e8f0;
+  padding:10px 4px;
+  text-align:center;
+  font-size:.85em;
+  font-weight:600;
+}
+.calendar-table td{
+  border:1px solid #e2e8f0;
+  padding:10px 4px;
+  text-align:center;
+  font-size:1.1em;
+  height:44px;
+  vertical-align:middle;
+}
+.calendar-table td.weekend{
+  background:#ffe4e6;
+  color:#ef4444;
+  font-weight:700;
+}
+.calendar-table td.today{
+  background:#fef3c7;
+  border:2px solid #f59e0b;
+  font-weight:700;
+  color:#92400e;
+}
+.calendar-table td.empty{
+  background:#f8fafc;
+}
+.calendar-table .weekendth{
+  background:#db2777;
+}
+
+/* স্টেপ */
+.ict-step {
+  display:flex; gap:14px; margin:14px 0;
+  background:#f8fafc; padding:14px 16px;
+  border-radius:10px; border:1px solid var(--border);
+}
+.ict-step-num {
+  flex:0 0 36px; height:36px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:bold; font-size:1rem;
+}
+.ict-step-body {flex:1;}
+.step-body h4{
+  font-size:.95rem; color:var(--dark);
+  margin-bottom:4px;
+}
+.step-body p{font-size:.88rem;color:var(--text);margin:0;}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; flex-direction:column; gap:8px;}
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .calendar-table th,
+  .calendar-table td{font-size:.75em; padding:6px 2px; height:34px; }
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="12-project-calendar">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ১২ • প্রজেক্ট</span>
+    <h1>📅 ক্যালেন্ডার তৈরি</h1>
+    <p>এখন পর্যন্ত শেখা টেবিল, CSS ও স্টাইলিং একসাথে প্রয়োগ করে একটি সম্পূর্ণ ক্যালেন্ডার তৈরি করব।</p>
+  </div>
+
+  <!-- টপিক ১: প্রজেক্ট পরিচিতি -->
+  <section class="ict-topic">
+    <h2>🎯 প্রজেক্টের লক্ষ্য</h2>
+    <p>এই প্রজেক্টে আমরা একটি মাসিক ক্যালেন্ডার তৈরি করব যা:</p>
+    <ul>
+      <li>✅ টেবিল দিয়ে তৈরি (৭ কলাম — সপ্তাহের ৭ দিন)</li>
+      <li>✅ ৫–৬ সারি (মাসের দিনগুলো)</li>
+      <li>✅ শুক্র ও শনিবার সাপ্তাহিক ছুটি হিসেবে হাইলাইট</li>
+      <li>✅ "আজকের দিন" বিশেষভাবে চিহ্নিত</li>
+      <li>✅ মোবাইল রেসপন্সিভ</li>
+    </ul>
+
+    <div class="ict-note">
+      <strong>💡 কী শিখব?</strong>
+      এই প্রজেক্টে প্রয়োগ হবে — টেবিল গঠন, CSS স্টাইলিং, pseudo-class, রেসপন্সিভ ডিজাইন, কালার স্কিম।
+    </div>
+  </section>
+
+  <!-- টপিক ২: ধাপে ধাপে -->
+  <section class="ict-topic">
+    <h2>🛠️ ধাপে ধাপে নির্মাণ</h2>
+
+    <div class="ict-step">
+      <div class="ict-step-num">১</div>
+      <div class="ict-step-body">
+        <h4>টেবিলের কাঠামো তৈরি</h4>
+        <p><code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> তৈরি করব।</p>
+      </div>
+    </div>
+
+    <div class="ict-step">
+      <div class="ict-step-num">২</div>
+      <div class="ict-step-body">
+        <h4>সপ্তাহের ৭ দিনের হেডার</h4>
+        <p>রবি থেকে শনি — ৭টি <code>&lt;th&gt;</code> তৈরি করব।</p>
+      </div>
+    </div>
+
+    <div class="ict-step">
+      <div class="ict-step-num">৩</div>
+      <div class="ict-step-body">
+        <h4>দিনগুলো সাজানো</h4>
+        <p>মার্চ ২০২৬-এর জন্য রবিবার দিয়ে শুরু। ৩১ দিন, ৫ সারিতে।</p>
+      </div>
+    </div>
+
+    <div class="ict-step">
+      <div class="ict-step-num">৪</div>
+      <div class="ict-step-body">
+        <h4>CSS দিয়ে স্টাইল</h4>
+        <p>হেডার গ্রেডিয়েন্ট, সপ্তাহান্তে লাল, "আজকের দিন" হলুদ হাইলাইট।</p>
+      </div>
+    </div>
+
+    <div class="ict-step">
+      <div class="ict-step-num">৫</div>
+      <div class="ict-step-body">
+        <h4>রেসপন্সিভ করা</h4>
+        <p>মোবাইলে ফন্ট ছোট করে <code>media query</code> দিয়ে সাজাব।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৩: সম্পূর্ণ কোড -->
+  <section class="ict-topic">
+    <h2>💻 সম্পূর্ণ HTML কোড</h2>
+    <p>নিচের কোড কপি করে <code>calendar.html</code> নামে সেভ করুন এবং ব্রাউজারে খুলুন:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"bn"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;title&gt;</span>মার্চ ২০২৬ ক্যালেন্ডার<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;style&gt;</span>
+    body {
+      font-family: 'Segoe UI', 'Noto Sans Bengali', sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    caption {
+      font-size: 1.4em;
+      padding: 14px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+    }
+
+    th {
+      background: #4f46e5;
+      color: white;
+      border: 1px solid #e2e8f0;
+      padding: 10px 4px;
+      text-align: center;
+      font-size: 0.85em;
+    }
+
+    td {
+      border: 1px solid #e2e8f0;
+      padding: 10px 4px;
+      text-align: center;
+      font-size: 1.1em;
+      height: 44px;
+    }
+
+    .weekend {
+      background: #ffe4e6;
+      color: #ef4444;
+      font-weight: bold;
+    }
+
+    .weekendth {
+      background: #db2777;
+    }
+
+    .today {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+      font-weight: bold;
+      color: #92400e;
+    }
+
+    .empty {
+      background: #f8fafc;
+    }
+
+    @media (max-width: 600px) {
+      td { font-size: 0.85em; height: 34px; padding: 6px 2px; }
+      th { font-size: 0.7em; padding: 6px 2px; }
+      caption { font-size: 1.1em; padding: 10px; }
+    }
+  <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;</span>মার্চ ২০২৬<span class="tag">&lt;/caption&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th&gt;</span>রবি<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span>সোম<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span>মঙ্গল<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span>বুধ<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span>বৃহঃ<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">class</span>=<span class="val">"weekendth"</span><span class="tag">&gt;</span>শুক্র<span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th</span> <span class="attr">class</span>=<span class="val">"weekendth"</span><span class="tag">&gt;</span>শনি<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+  <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৩<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"today"</span><span class="tag">&gt;</span>৪<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৫<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>৬<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>৭<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৮<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৯<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১০<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১১<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১২<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>১৩<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>১৪<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১৫<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১৬<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১৭<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১৮<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>১৯<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>২০<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>২১<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২২<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২৩<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২৪<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২৫<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২৬<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>২৭<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;</span>২৮<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span>২৯<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৩০<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span>৩১<span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"empty"</span><span class="tag">&gt;&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"empty"</span><span class="tag">&gt;&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;&lt;/td&gt;</span>
+      <span class="tag">&lt;td</span> <span class="attr">class</span>=<span class="val">"weekend"</span><span class="tag">&gt;&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+    </div>
+  </section>
+
+  <!-- টপিক ৪: লাইভ ডেমো -->
+  <section class="ict-topic">
+    <h2>👀 লাইভ আউটপুট</h2>
+    <p>উপরের কোডটি ব্রাউজারে চালালে নিচের মতো ক্যালেন্ডার দেখাবে:</p>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ক্যালেন্ডার</span>
+      <div class="inner" style="padding:10px;">
+        <table class="calendar-table">
+          <caption>মার্চ ২০২৬</caption>
+          <thead>
+            <tr>
+              <th>রবি</th>
+              <th>সোম</th>
+              <th>মঙ্গল</th>
+              <th>বুধ</th>
+              <th>বৃহঃ</th>
+              <th class="weekendth">শুক্র</th>
+              <th class="weekendth">শনি</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>১</td>
+              <td>২</td>
+              <td>৩</td>
+              <td class="today">৪</td>
+              <td>৫</td>
+              <td class="weekend">৬</td>
+              <td class="weekend">৭</td>
+            </tr>
+            <tr>
+              <td>৮</td>
+              <td>৯</td>
+              <td>১০</td>
+              <td>১১</td>
+              <td>১২</td>
+              <td class="weekend">১৩</td>
+              <td class="weekend">১৪</td>
+            </tr>
+            <tr>
+              <td>১৫</td>
+              <td>১৬</td>
+              <td>১৭</td>
+              <td>১৮</td>
+              <td>১৯</td>
+              <td class="weekend">২০</td>
+              <td class="weekend">২১</td>
+            </tr>
+            <tr>
+              <td>২২</td>
+              <td>২৩</td>
+              <td>২৪</td>
+              <td>২৫</td>
+              <td>২৬</td>
+              <td class="weekend">২৭</td>
+              <td class="weekend">২৮</td>
+            </tr>
+            <tr>
+              <td>২৯</td>
+              <td>৩০</td>
+              <td>৩১</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="weekend"></td>
+              <td class="weekend"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৫: কোড ব্যাখ্যা -->
+  <section class="ict-topic">
+    <h2>🔍 কোড ব্যাখ্যা</h2>
+
+    <h3>🔹 টেবিলের কাঠামো</h3>
+    <table class="cmp-table" style="width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem;border-radius:10px;overflow:hidden;">
+      <thead>
+        <tr><th style="background:var(--primary);color:#fff;padding:12px;text-align:left;">অংশ</th><th style="background:var(--primary);color:#fff;padding:12px;text-align:left;">কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);"><code>&lt;caption&gt;</code></td><td style="padding:10px;border-bottom:1px solid var(--border);">মাসের নাম শিরোনাম</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);"><code>&lt;thead&gt;</code></td><td style="padding:10px;border-bottom:1px solid var(--border);">সপ্তাহের দিনগুলো</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);"><code>&lt;tbody&gt;</code></td><td style="padding:10px;border-bottom:1px solid var(--border);">মাসের তারিখগুলো</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);"><code>&lt;td class="today"&gt;</code></td><td style="padding:10px;border-bottom:1px solid var(--border);">আজকের তারিখ হাইলাইট</td></tr>
+        <tr><td style="padding:10px;border-bottom:1px solid var(--border);"><code>&lt;td class="weekend"&gt;</code></td><td style="padding:10px;border-bottom:1px solid var(--border);">শুক্র-শনি লাল হাইলাইট</td></tr>
+        <tr><td style="padding:10px;"><code>&lt;td class="empty"&gt;</code></td><td style="padding:10px;">ফাঁকা ঘর</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🔹 CSS-এর গুরুত্বপূর্ণ অংশ</h3>
+
+    <p><strong>border-collapse: collapse;</strong> — টেবিলের সেলের বর্ডার একসাথে লেগে যায় (ডাবল বর্ডার হয় না)।</p>
+
+    <p><strong>caption-এ gradient:</strong></p>
+    <div class="code-block">
+caption {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 14px;
+  font-size: 1.4em;
+}
+    </div>
+
+    <p><strong>.weekend এবং .weekendth:</strong></p>
+    <div class="code-block">
+.weekend {
+  background: #ffe4e6;
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.weekendth {
+  background: #db2777;  <span class="cmt">/* শুক্র-শনির হেডার */</span>
+}
+    </div>
+
+    <p><strong>.today:</strong></p>
+    <div class="code-block">
+.today {
+  background: #fef3c7;    <span class="cmt">/* হলুদ ব্যাকগ্রাউন্ড */</span>
+  border: 2px solid #f59e0b;  <span class="cmt">/* কমলা বর্ডার */</span>
+  font-weight: bold;
+}
+    </div>
+
+    <p><strong>রেসপন্সিভ:</strong></p>
+    <div class="code-block">
+@media (max-width: 600px) {
+  td { font-size: 0.85em; height: 34px; padding: 6px 2px; }
+  th { font-size: 0.7em; padding: 6px 2px; }
+  caption { font-size: 1.1em; }
+}
+    </div>
+  </section>
+
+  <!-- টপিক ৬: চ্যালেঞ্জ -->
+  <section class="ict-topic">
+    <h2>🚀 আপনার চ্যালেঞ্জ</h2>
+    <p>এই ক্যালেন্ডার তৈরি করার পর নিচের কাজগুলো নিজে নিজে করুন:</p>
+
+    <div class="ict-note" style="background:#fef3c7;border-color:var(--warning);">
+      <strong>🎯 চ্যালেঞ্জ ১:</strong> অন্য একটি মাসের (যেমন এপ্রিল ২০২৬) ক্যালেন্ডার বানান। মনে রাখবেন — এপ্রিল ১ তারিখ কোন বার?
+    </div>
+
+    <div class="ict-note" style="background:#e0e7ff;border-color:var(--primary);">
+      <strong>🎯 চ্যালেঞ্জ ২:</strong> প্রতিটি দিনের নিচে ছোট করে তারিখ লেখার বদলে তার সাথে ছুটির নাম বা বিশেষ দিন যোগ করুন (যেমন: ২৬ মার্চ — স্বাধীনতা দিবস)।
+    </div>
+
+    <div class="ict-note" style="background:#fce7f3;border-color:#ec4899;">
+      <strong>🎯 চ্যালেঞ্জ ৩:</strong> ক্যালেন্ডারের উপরে একটি "আগের মাস / পরের মাস" বাটন যোগ করুন (CSS দিয়ে সাজান)।
+    </div>
+
+    <div class="ict-note" style="background:#d1fae5;border-color:var(--success);">
+      <strong>🎯 চ্যালেঞ্জ ৪:</strong> দিনগুলোতে হোভার করলে হালকা ব্যাকগ্রাউন্ড আসে — এই ইফেক্ট যোগ করুন <code>:hover</code> দিয়ে।
+    </div>
+
+    <div class="ict-note" style="background:#fee2e2;border-color:var(--danger);">
+      <strong>🎯 চ্যালেঞ্জ ৫ (অ্যাডভান্সড):</strong> JavaScript দিয়ে আজকের তারিখ স্বয়ংক্রিয়ভাবে হাইলাইট করুন — <code>new Date()</code> ব্যবহার করে।
+    </div>
+  </section>
+
+  <!-- টপিক ৭: নতুন কী শিখলেন -->
+  <section class="ict-topic">
+    <h2>✨ এই প্রজেক্টে নতুন কী শিখলেন</h2>
+
+    <div class="ict-success-box">
+      <strong>✅ কোডিং দক্ষতা:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>টেবিল দিয়ে ক্যালেন্ডারের মতো জটিল লেআউট তৈরি</li>
+        <li>একাধিক CSS ক্লাস দিয়ে আলাদা অংশ স্টাইল করা</li>
+        <li>গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড ব্যবহার</li>
+        <li>মোবাইল রেসপন্সিভ টেবিল ডিজাইন</li>
+        <li>ক্লাসের নামকরণের সঠিক পদ্ধতি (weekend, today, empty)</li>
+      </ul>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 বাস্তব ব্যবহার:</strong>
+      এই কৌশল ব্যবহার করে আপনি বানাতে পারবেন — সময়সূচি, উপস্থিতি শীট, বুকিং ক্যালেন্ডার, ট্রেন/বাসের সময়সূচি, পরীক্ষার রুটিন ইত্যাদি।
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

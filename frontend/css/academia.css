@@ -1005,3 +1005,88 @@ body.dark .publisher-paper-count {
         padding: 12px 14px;
     }
 }
+
+
+
+/* ============================================================
+   ICT HTML Lesson — Module Tab Bar
+   ============================================================ */
+.ict-html-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 8px;
+    background: var(--card);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px var(--shadow);
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ict-html-tabbar::-webkit-scrollbar {
+    height: 4px;
+}
+.ict-html-tabbar::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.ict-html-tab {
+    flex: 0 0 auto;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.ict-html-tab:hover {
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.ict-html-tab.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark, #1565c0));
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.35);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    .ict-html-tabbar {
+        padding: 8px 6px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+    }
+    .ict-html-tab {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Dark mode */
+body.dark .ict-html-tabbar {
+    background: #2d2d2d;
+}
+body.dark .ict-html-tab {
+    background: #1a1a1a;
+    color: var(--text-light);
+    border-color: #404040;
+}
+body.dark .ict-html-tab:hover {
+    background: rgba(100, 181, 246, 0.15);
+    color: #64b5f6;
+}

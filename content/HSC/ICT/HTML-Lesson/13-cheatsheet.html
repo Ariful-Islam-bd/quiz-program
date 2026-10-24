@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ১৩: চিটশিট ও সারসংক্ষেপ</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📌'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ইনলাইন */
+.topic code,
+.cmp-table code{
+  background:#f1f5f9;
+  color:var(--danger);
+  padding:2px 6px;
+  border-radius:4px;
+  font-size:.88em;
+  font-family:'Courier New',monospace;
+}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.88rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:11px 12px; text-align:left;
+  font-size:.85rem;
+}
+.cmp-table td{
+  padding:9px 12px; border-bottom:1px solid var(--border);
+  vertical-align:top;
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table tr:last-child td{border-bottom:none;}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* চেকলিস্ট */
+.checklist{
+  list-style:none;
+  padding:0; margin:12px 0;
+}
+.checklist li{
+  padding:8px 0 8px 32px;
+  position:relative;
+  border-bottom:1px dashed var(--border);
+  font-size:.92rem;
+}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{
+  content:"☐";
+  position:absolute;
+  left:4px;
+  color:var(--primary);
+  font-size:1.2rem;
+  font-weight:bold;
+}
+
+/* কুইক লিংক কার্ড */
+.quick-links{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px;
+  margin:16px 0;
+}
+.quick-card{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px 16px;
+  text-decoration:none;
+  color:var(--text);
+  transition:.25s;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.quick-card:hover{
+  border-color:var(--primary);
+  background:#e0e7ff;
+  transform:translateY(-2px);
+}
+.quick-card .num{
+  flex:0 0 32px; height:32px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:.85rem;
+}
+.quick-card .txt{
+  font-weight:600;
+  font-size:.9rem;
+}
+
+/* ফুটার সারসংক্ষেপ */
+.final-box{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;
+  border-radius:20px;
+  padding:36px 28px;
+  text-align:center;
+  margin:36px 0 20px;
+  position:relative;
+  overflow:hidden;
+}
+.final-box::before{
+  content:'🎓';
+  position:absolute;
+  right:-10px; bottom:-20px;
+  font-size:8rem;
+  opacity:.15;
+}
+.final-box h2{
+  font-size:clamp(1.3rem,4vw,1.8rem);
+  margin-bottom:12px;
+}
+.final-box p{
+  opacity:.95;
+  margin-bottom:20px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:.95rem;
+}
+.final-box .next-btn{
+  display:inline-block;
+  background:#fff;
+  color:var(--primary);
+  padding:12px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.95rem;
+  transition:.25s;
+}
+.final-box .next-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-home{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-home:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .cmp-table{font-size:.78rem;}
+  .cmp-table th,
+  .cmp-table td{padding:8px 8px;}
+  .final-box{padding:26px 20px;}
+  .final-box::before{font-size:5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="13-cheatsheet">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ১৩ • শেষ মডিউল</span>
+    <h1>📌 চিটশিট ও সারসংক্ষেপ</h1>
+    <p>সম্পূর্ণ HTML-এর একনজরে চিটশিট, গুরুত্বপূর্ণ ট্যাগ, সাধারণ ভুল এবং পরবর্তী শেখার পথ।</p>
+  </div>
+
+  <!-- টপিক ১ -->
+  <section class="ict-topic">
+    <h2>📄 HTML ফাইলের মূল গঠন</h2>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>ট্যাগ</th><th>কাজ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>HTML5 ঘোষণা</td></tr>
+          <tr><td><code>&lt;html&gt;</code></td><td>সম্পূর্ণ ডকুমেন্ট</td></tr>
+          <tr><td><code>&lt;head&gt;</code></td><td>মেটাডেটা (শিরোনাম, এনকোডিং)</td></tr>
+          <tr><td><code>&lt;meta charset="UTF-8"&gt;</code></td><td>বাংলা অক্ষরের জন্য</td></tr>
+          <tr><td><code>&lt;title&gt;</code></td><td>ব্রাউজার ট্যাবে শিরোনাম</td></tr>
+          <tr><td><code>&lt;body&gt;</code></td><td>দৃশ্যমান কনটেন্ট</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- টপিক ২ -->
+  <section class="ict-topic">
+    <h2>📝 টেক্সট ও হেডিং</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code></td><td>৬ লেভেলের হেডিং</td></tr>
+        <tr><td><code>&lt;p&gt;</code></td><td>প্যারাগ্রাফ</td></tr>
+        <tr><td><code>&lt;br&gt;</code></td><td>লাইন ব্রেক</td></tr>
+        <tr><td><code>&lt;hr&gt;</code></td><td>অনুভূমিক রেখা</td></tr>
+        <tr><td><code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code></td><td>বোল্ড</td></tr>
+        <tr><td><code>&lt;i&gt;</code>, <code>&lt;em&gt;</code></td><td>ইটালিক</td></tr>
+        <tr><td><code>&lt;u&gt;</code></td><td>আন্ডারলাইন</td></tr>
+        <tr><td><code>&lt;mark&gt;</code></td><td>হাইলাইট</td></tr>
+        <tr><td><code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code></td><td>কাটা ও নতুন টেক্সট</td></tr>
+        <tr><td><code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code></td><td>নিচে/উপরে ছোট</td></tr>
+        <tr><td><code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code></td><td>প্রি-ফরম্যাটেড ও কোড</td></tr>
+        <tr><td><code>&lt;blockquote&gt;</code></td><td>উদ্ধৃতি</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৩ -->
+  <section class="ict-topic">
+    <h2>🔗 লিংক</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ধরন</th><th>কোড</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>সাধারণ লিংক</td><td><code>&lt;a href="page.html"&gt;</code></td></tr>
+        <tr><td>এক্সটার্নাল</td><td><code>&lt;a href="https://..."&gt;</code></td></tr>
+        <tr><td>নতুন ট্যাব</td><td><code>target="_blank"</code> + <code>rel="noopener"</code></td></tr>
+        <tr><td>ইমেইল</td><td><code>&lt;a href="mailto:a@b.com"&gt;</code></td></tr>
+        <tr><td>ফোন</td><td><code>&lt;a href="tel:+880..."&gt;</code></td></tr>
+        <tr><td>অ্যাংকর</td><td><code>&lt;a href="#id"&gt;</code></td></tr>
+        <tr><td>ডাউনলোড</td><td><code>&lt;a href="file.pdf" download&gt;</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৪ -->
+  <section class="ict-topic">
+    <h2>🖼️ ইমেজ</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>অ্যাট্রিবিউট</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>src</code></td><td>ছবির উৎস</td></tr>
+        <tr><td><code>alt</code></td><td>বিকল্প টেক্সট (আবশ্যক)</td></tr>
+        <tr><td><code>width</code>, <code>height</code></td><td>সাইজ</td></tr>
+        <tr><td><code>loading="lazy"</code></td><td>লেজি লোডিং</td></tr>
+        <tr><td><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></td><td>ক্যাপশনসহ ছবি</td></tr>
+        <tr><td><code>&lt;picture&gt;</code> + <code>&lt;source&gt;</code></td><td>রেসপন্সিভ ইমেজ</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🔹 ফরম্যাট</h3>
+    <p><strong>JPEG</strong> → ছবি · <strong>PNG</strong> → লোগো/আইকন · <strong>GIF</strong> → অ্যানিমেশন · <strong>SVG</strong> → ভেক্টর · <strong>WebP</strong> → ওয়েবের সেরা</p>
+  </section>
+
+  <!-- টপিক ৫ -->
+  <section class="ict-topic">
+    <h2>📋 লিস্ট</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;ul&gt;</code></td><td>আনঅর্ডারড (বুলেট)</td><td><code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+        <tr><td><code>&lt;ol&gt;</code></td><td>অর্ডারড (নম্বর)</td><td><code>&lt;ol type="A" start="3"&gt;</code></td></tr>
+        <tr><td><code>&lt;li&gt;</code></td><td>লিস্ট আইটেম</td><td><code>&lt;li&gt;আইটেম&lt;/li&gt;</code></td></tr>
+        <tr><td><code>&lt;dl&gt;</code></td><td>ডেসক্রিপশন লিস্ট</td><td><code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৬ -->
+  <section class="ict-topic">
+    <h2>📊 টেবিল</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ/অ্যাট্রিবিউট</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></td><td>মূল টেবিল ট্যাগ</td></tr>
+        <tr><td><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code></td><td>সেকশন</td></tr>
+        <tr><td><code>&lt;caption&gt;</code></td><td>টেবিলের শিরোনাম</td></tr>
+        <tr><td><code>colspan="2"</code></td><td>কলাম মার্জ</td></tr>
+        <tr><td><code>rowspan="2"</code></td><td>সারি মার্জ</td></tr>
+        <tr><td><code>scope="col"</code> / <code>"row"</code></td><td>অ্যাক্সেসিবিলিটি</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৭ -->
+  <section class="ict-topic">
+    <h2>📝 ফর্ম</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ/টাইপ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;form&gt;</code></td><td>ফর্ম ধারক</td></tr>
+        <tr><td><code>&lt;input type="text"&gt;</code></td><td>টেক্সট</td></tr>
+        <tr><td><code>email</code>, <code>password</code>, <code>tel</code></td><td>বিশেষ ইনপুট</td></tr>
+        <tr><td><code>number</code>, <code>range</code></td><td>সংখ্যা</td></tr>
+        <tr><td><code>date</code>, <code>time</code></td><td>তারিখ/সময়</td></tr>
+        <tr><td><code>checkbox</code>, <code>radio</code></td><td>নির্বাচন</td></tr>
+        <tr><td><code>file</code>, <code>color</code></td><td>ফাইল/কালার</td></tr>
+        <tr><td><code>&lt;label for="id"&gt;</code></td><td>লেবেল</td></tr>
+        <tr><td><code>&lt;select&gt;</code>, <code>&lt;option&gt;</code></td><td>ড্রপডাউন</td></tr>
+        <tr><td><code>&lt;textarea&gt;</code></td><td>বহু-লাইন টেক্সট</td></tr>
+        <tr><td><code>&lt;button&gt;</code></td><td>বাটন</td></tr>
+        <tr><td><code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code></td><td>ভ্যালিডেশন</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৮ -->
+  <section class="ict-topic">
+    <h2>🧱 সিম্যান্টিক ট্যাগ</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;header&gt;</code></td><td>হেডার</td></tr>
+        <tr><td><code>&lt;nav&gt;</code></td><td>নেভিগেশন</td></tr>
+        <tr><td><code>&lt;main&gt;</code></td><td>মূল কনটেন্ট (একবার)</td></tr>
+        <tr><td><code>&lt;section&gt;</code></td><td>থিমভিত্তিক সেকশন</td></tr>
+        <tr><td><code>&lt;article&gt;</code></td><td>স্বতন্ত্র কনটেন্ট</td></tr>
+        <tr><td><code>&lt;aside&gt;</code></td><td>সাইডবার</td></tr>
+        <tr><td><code>&lt;footer&gt;</code></td><td>ফুটার</td></tr>
+        <tr><td><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></td><td>ছবি + ক্যাপশন</td></tr>
+        <tr><td><code>&lt;time&gt;</code></td><td>তারিখ/সময়</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৯ -->
+  <section class="ict-topic">
+    <h2>⚡ Flexbox (সংক্ষেপে)</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>প্রোপার্টি</th><th>কাজ</th><th>সাধারণ মান</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>display</code></td><td>Flexbox চালু</td><td><code>flex</code></td></tr>
+        <tr><td><code>flex-direction</code></td><td>দিক</td><td>row, column</td></tr>
+        <tr><td><code>justify-content</code></td><td>মূল অক্ষ</td><td>center, space-between</td></tr>
+        <tr><td><code>align-items</code></td><td>লম্ব অক্ষ</td><td>center, flex-start</td></tr>
+        <tr><td><code>gap</code></td><td>মাঝে ফাঁকা</td><td>16px</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ১০ -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল ও সমাধান</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ভুল</th><th>সমাধান</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ট্যাগ বন্ধ না করা</td><td><code>&lt;h1&gt;</code> খুললে <code>&lt;/h1&gt;</code> দিন</td></tr>
+        <tr><td>বাংলা ভাঙা দেখানো</td><td><code>&lt;meta charset="UTF-8"&gt;</code> যোগ করুন</td></tr>
+        <tr><td>ছবি লোড হচ্ছে না</td><td>ফাইল পাথ যাচাই করুন (<code>images/photo.jpg</code>)</td></tr>
+        <tr><td>ফাইলের নামে স্পেস</td><td><code>my_photo.jpg</code> বা <code>my-photo.jpg</code> ব্যবহার করুন</td></tr>
+        <tr><td>লিংক কাজ করছে না</td><td><code>href</code> ঠিক আছে কিনা দেখুন</td></tr>
+        <tr><td>রেডিও-তে একাধিক সিলেক্ট</td><td>সব radio-তে একই <code>name</code> দিন</td></tr>
+        <tr><td>মোবাইলে টেবিল বেরিয়ে যাচ্ছে</td><td>wrapper-এ <code>overflow-x:auto</code> দিন</td></tr>
+        <tr><td>ফর্মের label কাজ করছে না</td><td><code>for="id"</code> ও <code>id</code> মিলিয়ে দিন</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ১১ -->
+  <section class="ict-topic">
+    <h2>✅ ফাইনাল চেকলিস্ট</h2>
+    <p>নিজে যাচাই করুন — আপনি কি এই সব পারেন?</p>
+    <ul class="checklist">
+      <li>একটি সম্পূর্ণ HTML ফাইল তৈরি করতে পারি</li>
+      <li>হেডিং, প্যারাগ্রাফ, লিস্ট, টেবিল লিখতে পারি</li>
+      <li>লিংক ও ছবি যুক্ত করতে পারি</li>
+      <li>ফর্ম তৈরি করতে পারি (ইনপুট, লেবেল, বাটন)</li>
+      <li>সিম্যান্টিক ট্যাগ ব্যবহার করতে পারি</li>
+      <li>মৌলিক Flexbox দিয়ে লেআউট বানাতে পারি</li>
+      <li>মোবাইল রেসপন্সিভ ডিজাইন করতে পারি</li>
+      <li>HTML5 ভ্যালিডেশন যোগ করতে পারি</li>
+      <li>ক্যালেন্ডারের মতো প্রজেক্ট বানাতে পারি</li>
+      <li>সাধারণ ভুল চিনতে ও ঠিক করতে পারি</li>
+    </ul>
+  </section>
+
+  <!-- টপিক ১২ -->
+  <section class="ict-topic">
+    <h2>🚀 পরবর্তী শেখার পথ</h2>
+    <p>HTML শেখা শেষ — এবার কী শিখবেন?</p>
+    <ol>
+      <li><strong>CSS:</strong> HTML-কে সুন্দর করে সাজানোর জন্য (রং, ফন্ট, লেআউট, অ্যানিমেশন)</li>
+      <li><strong>Flexbox ও Grid:</strong> আধুনিক লেআউট সিস্টেম</li>
+      <li><strong>JavaScript:</strong> পেজকে ইন্টারঅ্যাকটিভ করা</li>
+      <li><strong>Responsive Design:</strong> সব ডিভাইসে সুন্দর দেখানোর কৌশল</li>
+      <li><strong>Git ও GitHub:</strong> কোড সংরক্ষণ ও শেয়ার</li>
+      <li><strong>Framework:</strong> React, Vue, বা Tailwind CSS</li>
+    </ol>
+
+    <div class="ict-note">
+      <strong>💡 পরামর্শ:</strong>
+      প্রতিদিন কমপক্ষে ৩০ মিনিট প্র্যাকটিস করুন। ছোট ছোট প্রজেক্ট বানান — টু-ডু লিস্ট, পোর্টফোলিও পেজ, ব্লগ। শুধু পড়ে না, নিজে কোড লিখে শিখুন।
+    </div>
+  </section>
+
+  <!-- টপিক ১৩: দ্রুত লিংক -->
+  <section class="ict-topic">
+    <h2>🔗 মডিউল দ্রুত লিংক</h2>
+    <p>যেকোনো মডিউলে ফিরে যেতে নিচের কার্ডে ক্লিক করুন:</p>
+
+    <div class="quick-links">
+      <a href="01-introduction.html" class="quick-card"><span class="num">১</span><span class="txt">HTML পরিচিতি</span></a>
+      <a href="02-setup-tools.html" class="quick-card"><span class="num">২</span><span class="txt">সেটআপ ও টুলস</span></a>
+      <a href="03-tags-elements.html" class="quick-card"><span class="num">৩</span><span class="txt">ট্যাগ ও এলিমেন্ট</span></a>
+      <a href="04-text-headings.html" class="quick-card"><span class="num">৪</span><span class="txt">টেক্সট ও হেডিং</span></a>
+      <a href="05-links.html" class="quick-card"><span class="num">৫</span><span class="txt">লিংক</span></a>
+      <a href="06-images.html" class="quick-card"><span class="num">৬</span><span class="txt">ইমেজ</span></a>
+      <a href="07-lists.html" class="quick-card"><span class="num">৭</span><span class="txt">লিস্ট</span></a>
+      <a href="08-tables.html" class="quick-card"><span class="num">৮</span><span class="txt">টেবিল</span></a>
+      <a href="09-forms.html" class="quick-card"><span class="num">৯</span><span class="txt">ফর্ম</span></a>
+      <a href="10-semantic.html" class="quick-card"><span class="num">১০</span><span class="txt">সিম্যান্টিক</span></a>
+      <a href="11-flexbox.html" class="quick-card"><span class="num">১১</span><span class="txt">Flexbox</span></a>
+      <a href="12-project-calendar.html" class="quick-card"><span class="num">১২</span><span class="txt">প্রজেক্ট</span></a>
+    </div>
+  </section>
+
+  <!-- ফাইনাল কার্ড -->
+  <div class="final-box">
+    <h2>🎓 অভিনন্দন!</h2>
+    <p>আপনি সফলভাবে ১৩টি মডিউলের সম্পূর্ণ HTML লেসন শেষ করেছেন। এখন আপনি নিজেই ওয়েবপেজ তৈরি করতে পারবেন। শেখা চালিয়ে যান, প্র্যাকটিস করুন, আর স্বপ্ন দেখুন।</p>
+    <a href="index.html" class="next-btn">🏠 মূল পাতায় ফিরুন</a>
+  </div>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

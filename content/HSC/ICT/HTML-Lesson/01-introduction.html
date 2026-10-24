@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০১: HTML পরিচিতি</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📖'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:6px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo h1{border-bottom:2px solid #ccc;padding-bottom:6px;}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px; margin-top:10px;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+
+/* ত্রি-ব্লক ডায়াগ্রাম */
+.trio{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:14px; margin:20px 0;
+}
+.trio-card{
+  text-align:center; padding:20px 14px;
+  border-radius:14px; color:#fff;
+}
+.trio-card .ico{font-size:2rem;margin-bottom:8px;}
+.trio-card h4{font-size:1rem;margin-bottom:6px;}
+.trio-card p{font-size:.82rem;opacity:.95;line-height:1.5;}
+.trio-card:nth-child(1){background:linear-gradient(135deg,#6366f1,#8b5cf6);}
+.trio-card:nth-child(2){background:linear-gradient(135deg,#3b82f6,#0ea5e9);}
+.trio-card:nth-child(3){background:linear-gradient(135deg,#f59e0b,#f97316);}
+
+/* ফ্লো ডায়াগ্রাম */
+.flow{
+  display:flex; align-items:center;
+  justify-content:center; flex-wrap:wrap;
+  gap:8px; margin:20px 0; padding:16px;
+  background:#f1f5f9; border-radius:12px;
+}
+.flow-step{
+  background:#fff; border:2px solid var(--primary);
+  color:var(--primary); padding:10px 16px;
+  border-radius:10px; font-weight:600;
+  font-size:.85rem;
+}
+.flow-arrow{color:var(--primary);font-size:1.3rem;font-weight:bold;}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{
+  background:#e2e8f0; color:var(--muted);
+}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .trio{grid-template-columns:1fr;}
+  .flow{flex-direction:column;}
+  .flow-arrow{transform:rotate(90deg);}
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="01-introduction">
+
+  <!-- হেডার -->
+  <div class="module-header">
+    <span class="tag">মডিউল ০১</span>
+    <h1>📖 HTML পরিচিতি</h1>
+    <p>HTML কী, কেন শিখব, ওয়েবপেজ কীভাবে কাজ করে এবং HTML ফাইলের মূল গঠন — সবকিছু এই মডিউলে।</p>
+  </div>
+
+  <!-- টপিক ১ -->
+  <section class="ict-topic">
+    <h2>🔰 HTML কী? (What is HTML?)</h2>
+    <p><strong>HTML</strong> এর পূর্ণরূপ <strong>HyperText Markup Language</strong>। এটি একটি <strong>মার্কআপ ল্যাংগুয়েজ</strong> — প্রোগ্রামিং ল্যাংগুয়েজ নয়। HTML দিয়ে আমরা ওয়েবপেজের <strong>কাঠামো (structure)</strong> তৈরি করি — কী শিরোনাম হবে, কোথায় ছবি থাকবে, কোথায় লিংক থাকবে ইত্যাদি।</p>
+    <ul>
+      <li>🔹 <strong>HyperText:</strong> এক পেজ থেকে অন্য পেজে লিংকের মাধ্যমে যাওয়া</li>
+      <li>🔹 <strong>Markup:</strong> ট্যাগ দিয়ে কনটেন্ট চিহ্নিত করা</li>
+      <li>🔹 <strong>Language:</strong> নির্দিষ্ট নিয়ম-কানুনের ভাষা</li>
+    </ul>
+    <div class="ict-note">
+      <strong>💡 সহজ কথায়:</strong>
+      HTML হলো ওয়েবপেজের "হাড়গোড়" বা কাঠামো। যেমন একটি বাড়ির ইট-পাথর হলো HTML, রং-রূপ হলো CSS, আর দরজা-জানালার মতো কাজ হলো JavaScript।
+    </div>
+  </section>
+
+  <!-- টপিক ২ -->
+  <section class="ict-topic">
+    <h2>🎯 কেন HTML শিখব? (Why Learn HTML?)</h2>
+    <ul>
+      <li>✅ <strong>ওয়েবের ভিত্তি:</strong> পৃথিবীর প্রতিটি ওয়েবপেজ HTML দিয়ে তৈরি</li>
+      <li>✅ <strong>সহজ ও শেখার যোগ্য:</strong>প্রোগ্রামিং লজিক ছাড়াই কাঠামো তৈরি করা যায়</li>
+      <li>✅ <strong>CSS ও JavaScript-এর ভিত্তি:</strong> এগুলো শিখতে HTML জানা বাধ্যতামূলক</li>
+      <li>✅ <strong>ক্যারিয়ার:</strong> ওয়েব ডেভেলপমেন্টের প্রথম ধাপ</li>
+      <li>✅ <strong>নিজের সাইট:</strong> ব্লগ, পোর্টফোলিও, ব্যবসার সাইট তৈরি করা যায়</li>
+      <li>✅ <strong>SEO:</strong> সিম্যান্টিক HTML সার্চ ইঞ্জিনে র‍্যাংকিং উন্নত করে</li>
+    </ul>
+  </section>
+
+  <!-- টপিক ৩ -->
+  <section class="ict-topic">
+    <h2>🧩 HTML, CSS, JavaScript — তিনটির সম্পর্ক</h2>
+    <p>একটি ওয়েবপেজ তৈরি হয় তিনটি মূল প্রযুক্তির সমন্বয়ে। এদেরকে একটি মানবদেহের সাথে তুলনা করা যায়:</p>
+    <div class="trio">
+      <div class="trio-card">
+        <div class="ico">🦴</div>
+        <h4>HTML</h4>
+        <p>কাঠামো<br>(হাড়গোড়)</p>
+      </div>
+      <div class="trio-card">
+        <div class="ico">🎨</div>
+        <h4>CSS</h4>
+        <p>ডিজাইন<br>(রং-রূপ)</p>
+      </div>
+      <div class="trio-card">
+        <div class="ico">⚡</div>
+        <h4>JavaScript</h4>
+        <p>কাজ/ইন্টারঅ্যাকশন<br>(মগজ ও পেশি)</p>
+      </div>
+    </div>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>প্রযুক্তি</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>HTML</strong></td><td>কাঠামো তৈরি</td><td>শিরোনাম, অনুচ্ছেদ, ছবি, লিংক</td></tr>
+        <tr><td><strong>CSS</strong></td><td>সাজসজ্জা</td><td>রং, ফন্ট, স্পেসিং, লেআউট</td></tr>
+        <tr><td><strong>JavaScript</strong></td><td>ইন্টারঅ্যাকশন</td><td>বাটনে ক্লিক, ফর্ম ভ্যালিডেশন</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৪ -->
+  <section class="ict-topic">
+    <h2>🌐 ওয়েবপেজ কীভাবে কাজ করে?</h2>
+    <p>আপনি যখন ব্রাউজারে কোনো ঠিকানা লেখেন, তখন পর্দার পিছনে ধাপে ধাপে কিছু কাজ হয়:</p>
+    <div class="flow">
+      <span class="flow-step">👤 আপনি URL লেখেন</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">🌍 সার্ভারে অনুরোধ</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">📄 HTML ফাইল আসে</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">🖥️ ব্রাউজার রেন্ডার করে</span>
+    </div>
+    <ul>
+      <li><strong>১.</strong> আপনি ব্রাউজারে <code>example.com</code> লেখেন</li>
+      <li><strong>২.</strong> ব্রাউজার সার্ভারে অনুরোধ পাঠায় (HTTP Request)</li>
+      <li><strong>৩.</strong> সার্ভার HTML ফাইল ফেরত পাঠায়</li>
+      <li><strong>৪.</strong> ব্রাউজার HTML পড়ে, বিশ্লেষণ করে (Parse) এবং পর্দায় দেখায় (Render)</li>
+    </ul>
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      ব্রাউজার HTML-কে "পড়ে" বোঝে না — এটি ট্যাগগুলোকে নির্দেশ হিসেবে ব্যবহার করে পেজ সাজায়। যেমন <code>&lt;h1&gt;</code> দেখলে ব্রাউজার বোঝে এটি একটি বড় শিরোনাম।
+    </div>
+  </section>
+
+  <!-- টপিক ৫ -->
+  <section class="ict-topic">
+    <h2>🏗️ HTML ফাইলের মূল গঠন</h2>
+    <p>প্রতিটি HTML ফাইলের একটি নির্দিষ্ট কাঠামো থাকে। নিচের কোডটি একটি সম্পূর্ণ HTML পেজের উদাহরণ:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;!DOCTYPE html&gt;</span> <span class="cmt">&lt;!-- ডকুমেন্ট টাইপ: HTML5 বোঝায় --&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"bn"</span><span class="tag">&gt;</span> <span class="cmt">&lt;!-- মূল ট্যাগ, ভাষা বাংলা --&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">&gt;</span> <span class="cmt">&lt;!-- বাংলা অক্ষরের জন্য --&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;title&gt;</span>আমার প্রথম পেজ<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>স্বাগতম!<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>এটি আমার প্রথম HTML পেজ।<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+    </div>
+
+    <h3>🔍 প্রতিটি অংশের ব্যাখ্যা</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>ডকুমেন্টটি HTML5 — ব্রাউজারকে জানায়</td></tr>
+        <tr><td><code>&lt;html&gt;</code></td><td>পুরো ডকুমেন্টের মূল ধারক</td></tr>
+        <tr><td><code>&lt;head&gt;</code></td><td>পেজের মেটাডেটা (শিরোনাম, এনকোডিং) — ব্যবহারকারী দেখে না</td></tr>
+        <tr><td><code>&lt;meta&gt;</code></td><td>অতিরিক্ত তথ্য (অক্ষর এনকোডিং, ভিউপোর্ট)</td></tr>
+        <tr><td><code>&lt;title&gt;</code></td><td>ব্রাউজার ট্যাবে যে শিরোনাম দেখায়</td></tr>
+        <tr><td><code>&lt;body&gt;</code></td><td>পেজের দৃশ্যমান অংশ — এখানে সব কনটেন্ট থাকে</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ict-warning">
+      <strong>⚠️ গুরুত্বপূর্ণ:</strong>
+      <code>&lt;meta charset="UTF-8"&gt;</code> না দিলে বাংলা লেখা ভাঙা দেখাবে (যেমন: à¦¬à¦¾à¦‚à¦²à¦¾)। তাই সবসময় এটি যুক্ত করবেন।
+    </div>
+  </section>
+
+  <!-- টপিক ৬ -->
+  <section class="ict-topic">
+    <h2>👀 লাইভ ডেমো — আপনার প্রথম HTML পেজ</h2>
+    <p>উপরের কোডটি যদি একটি ফাইলে সেভ করে ব্রাউজারে খোলেন, তাহলে নিচের মতো দেখাবে:</p>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <h1 style="font-size:2rem;color:#1e293b;margin-bottom:10px;">স্বাগতম!</h1>
+        <p style="font-size:1rem;color:#334155;">এটি আমার প্রথম HTML পেজ।</p>
+      </div>
+    </div>
+    <p>ব্রাউজারের ট্যাবে <strong>"আমার প্রথম পেজ"</strong> লেখাটি দেখা যাবে — সেটি <code>&lt;title&gt;</code> ট্যাগ থেকে আসছে।</p>
+  </section>
+
+  <!-- টপিক ৭ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>HTML = HyperText Markup Language — ওয়েবপেজের কাঠামো</li>
+        <li>HTML প্রোগ্রামিং ল্যাংগুয়েজ নয়, মার্কআপ ল্যাংগুয়েজ</li>
+        <li>HTML + CSS + JS = সম্পূর্ণ ওয়েবপেজ</li>
+        <li>ব্রাউজার সার্ভার থেকে HTML নিয়ে রেন্ডার করে</li>
+        <li>HTML ফাইলের মূল গঠন: <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code></li>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code> বাংলার জন্য অপরিহার্য</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৮: টেবিল</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📊'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+  overflow-x:auto;
+}
+.live-demo table{
+  width:100%; border-collapse:collapse;
+  font-size:.9rem;
+}
+.live-demo th,
+.live-demo td{
+  padding:10px 12px;
+  border:1px solid var(--border);
+  text-align:left;
+}
+.live-demo th{
+  background:var(--primary); color:#fff;
+  font-weight:600;
+}
+.live-demo tr:nth-child(even) td{
+  background:#f8fafc;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল স্টাইল (মডিউলের জন্য) */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* স্ট্রাকচার ডায়াগ্রাম */
+.structure{
+  background:#1e293b; color:#e2e8f0;
+  padding:20px; border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; line-height:1.9;
+  margin:16px 0; overflow-x:auto;
+}
+.structure .l1{color:#f472b6;}
+.structure .l2{color:#fbbf24;}
+.structure .l3{color:#34d399;}
+.structure .content{color:#e2e8f0;}
+
+/* colspan/rowspan ভিজুয়াল */
+.visual-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.85rem;
+  background:#fff;
+}
+.visual-table td{
+  border:2px solid var(--primary);
+  padding:14px; text-align:center;
+  background:#e0e7ff; color:var(--dark);
+  font-weight:600;
+}
+.visual-table td.highlight{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff;
+}
+
+/* স্টাইলড টেবিল ডেমো */
+.styled-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.85rem;
+  border-radius:10px; overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.styled-table th{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; padding:12px; text-align:left;
+  font-weight:600;
+}
+.styled-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.styled-table tbody tr:hover{
+  background:#f1f5f9; transition:.2s;
+}
+.styled-table tbody tr:nth-child(even){
+  background:#f8fafc;
+}
+
+/* Pricing table */
+.price-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; text-align:center;
+  border-radius:12px; overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+  font-size:.85rem;
+}
+.price-table th{
+  background:var(--dark); color:#fff;
+  padding:14px 10px;
+}
+.price-table td{
+  padding:12px 10px;
+  border-bottom:1px solid var(--border);
+}
+.price-table .pop{
+  background:linear-gradient(135deg,#f59e0b,#f97316);
+  color:#fff; font-weight:700;
+}
+.price-table .price{
+  font-size:1.2rem; font-weight:700;
+  color:var(--primary);
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+  .structure{font-size:.72rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="08-tables">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৮</span>
+    <h1>📊 টেবিল (Tables)</h1>
+    <p>টেবিল তৈরি, rowspan/colspan, CSS দিয়ে ডিজাইন, রেসপন্সিভ টেবিল ও অ্যাক্সেসিবিলিটি — সবকিছু উদাহরণ সহ।</p>
+  </div>
+
+  <!-- টপিক ১: বেসিক টেবিল -->
+  <section class="ict-topic">
+    <h2>🔰 টেবিলের মৌলিক গঠন</h2>
+    <p>HTML টেবিল তৈরি হয় কয়েকটি মূল ট্যাগ দিয়ে:</p>
+
+    <div class="code-block structure">
+<span class="l1">&lt;table&gt;</span>                          <span class="content">&lt;!-- পুরো টেবিল --&gt;</span>
+  <span class="l2">&lt;tr&gt;</span>                             <span class="content">&lt;!-- Table Row (সারি) --&gt;</span>
+    <span class="l3">&lt;th&gt;</span><span class="content">নাম&lt;/th&gt;</span>                    <span class="content">&lt;!-- Header Cell --&gt;</span>
+    <span class="l3">&lt;th&gt;</span><span class="content">রোল&lt;/th&gt;</span>
+  <span class="l2">&lt;/tr&gt;</span>
+  <span class="l2">&lt;tr&gt;</span>
+    <span class="l3">&lt;td&gt;</span><span class="content">রহিম&lt;/td&gt;</span>                   <span class="content">&lt;!-- Data Cell --&gt;</span>
+    <span class="l3">&lt;td&gt;</span><span class="content">০১&lt;/td&gt;</span>
+  <span class="l2">&lt;/tr&gt;</span>
+<span class="l1">&lt;/table&gt;</span>
+    </div>
+
+    <div class="code-block">
+<span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th&gt;</span>নাম<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;th&gt;</span>রোল<span class="tag">&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;</span>রহিম<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;</span>০১<span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;td&gt;</span>করিম<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;td&gt;</span>০২<span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <table>
+          <tr>
+            <th>নাম</th>
+            <th>রোল</th>
+          </tr>
+          <tr>
+            <td>রহিম</td>
+            <td>০১</td>
+          </tr>
+          <tr>
+            <td>করিম</td>
+            <td>০২</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <h3>📋 মূল ট্যাগসমূহ</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>ট্যাগ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;table&gt;</code></td><td>পুরো টেবিল ধারণ করে</td></tr>
+        <tr><td><code>&lt;tr&gt;</code></td><td>Table Row — একটি সারি</td></tr>
+        <tr><td><code>&lt;th&gt;</code></td><td>Table Header — হেডার সেল (বোল্ড, সেন্টার)</td></tr>
+        <tr><td><code>&lt;td&gt;</code></td><td>Table Data — সাধারণ ডেটা সেল</td></tr>
+        <tr><td><code>&lt;caption&gt;</code></td><td>টেবিলের শিরোনাম/বর্ণনা</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ২: section ট্যাগ -->
+  <section class="ict-topic">
+    <h2>🏗️ thead, tbody, tfoot</h2>
+    <p>বড় টেবিলে ডেটা গুছিয়ে রাখতে তিনটি সেকশন ট্যাগ ব্যবহার করা হয়:</p>
+
+    <div class="code-block structure">
+<span class="l1">&lt;table&gt;</span>
+  <span class="l2">&lt;caption&gt;</span><span class="content">ছাত্রদের তথ্য&lt;/caption&gt;</span>
+  <span class="l2">&lt;thead&gt;</span>                          <span class="content">&lt;!-- হেডার সেকশন --&gt;</span>
+    <span class="l3">&lt;tr&gt;&lt;th&gt;</span><span class="content">নাম&lt;/th&gt;&lt;th&gt;রোল&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="l2">&lt;/thead&gt;</span>
+  <span class="l2">&lt;tbody&gt;</span>                          <span class="content">&lt;!-- মূল ডেটা --&gt;</span>
+    <span class="l3">&lt;tr&gt;&lt;td&gt;</span><span class="content">রহিম&lt;/td&gt;&lt;td&gt;০১&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="l2">&lt;/tbody&gt;</span>
+  <span class="l2">&lt;tfoot&gt;</span>                          <span class="content">&lt;!-- ফুটার সেকশন --&gt;</span>
+    <span class="l3">&lt;tr&gt;&lt;td&gt;</span><span class="content">মোট: ১ জন&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="l2">&lt;/tfoot&gt;</span>
+<span class="l1">&lt;/table&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <table>
+          <caption style="caption-side:top;font-weight:700;color:var(--primary);margin-bottom:8px;text-align:left;">ছাত্রদের তথ্য</caption>
+          <thead>
+            <tr><th>নাম</th><th>রোল</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>রহিম</td><td>০১</td></tr>
+            <tr><td>করিম</td><td>০২</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="2" style="background:#e0e7ff;font-weight:700;color:var(--primary);">মোট: ২ জন</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 কেন sectioning জরুরি?</strong>
+      <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> দিলে স্ক্রিন রিডার টেবিলের গঠন বুঝতে পারে। ব্রাউজারে হেডার আলাদা দেখানো বা প্রিন্টে প্রতিটি পেজে হেডার পুনরাবৃত্তি করা যায়।
+    </div>
+  </section>
+
+  <!-- টপিক ৩: colspan/rowspan -->
+  <section class="ict-topic">
+    <h2>🔀 colspan ও rowspan</h2>
+    <p>একাধিক কলাম বা সারি একসাথে জোড়া লাগাতে ব্যবহার হয়:</p>
+
+    <h3>🔹 colspan — কলাম মার্জ</h3>
+    <p>একটি সেল কয়টি কলাম জুড়ে থাকবে তা নির্ধারণ করে।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;td</span> <span class="attr">colspan</span>=<span class="val">"2"</span><span class="tag">&gt;</span>২ কলাম জুড়ে<span class="tag">&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+    </div>
+
+    <div class="visual-table-wrap">
+      <table class="visual-table">
+        <tr>
+          <td>সেল ১</td>
+          <td colspan="2" class="highlight">colspan=2</td>
+        </tr>
+        <tr>
+          <td>সেল ৩</td>
+          <td>সেল ৪</td>
+          <td>সেল ৫</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>🔹 rowspan — সারি মার্জ</h3>
+    <p>একটি সেল কয়টি সারি জুড়ে থাকবে তা নির্ধারণ করে।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;td</span> <span class="attr">rowspan</span>=<span class="val">"2"</span><span class="tag">&gt;</span>২ সারি জুড়ে<span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;td&gt;</span>সেল ২<span class="tag">&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;td&gt;</span>সেল ৩<span class="tag">&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span>
+    </div>
+
+    <div class="visual-table-wrap">
+      <table class="visual-table">
+        <tr>
+          <td rowspan="2" class="highlight">rowspan=2</td>
+          <td>সেল ২</td>
+        </tr>
+        <tr>
+          <td>সেল ৩</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 ব্যবহার:</strong>
+      colspan দিয়ে টেবিলের শিরোনাম পুরো প্রস্থ জুড়ে দেখানো হয়, rowspan দিয়ে সময়সূচি (একটি ইভেন্ট কয়েক ঘণ্টা চললে) দেখানো হয়।
+    </div>
+  </section>
+
+  <!-- টপিক ৪: scope অ্যাট্রিবিউট -->
+  <section class="ict-topic">
+    <h2>🎯 scope অ্যাট্রিবিউট (অ্যাক্সেসিবিলিটি)</h2>
+    <p>হেডার সেল (<code>&lt;th&gt;</code>) কোন দিকের জন্য কাজ করছে তা scope দিয়ে বোঝানো হয় — স্ক্রিন রিডারের জন্য জরুরি।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;th</span> <span class="attr">scope</span>=<span class="val">"col"</span><span class="tag">&gt;</span>কলাম হেডার<span class="tag">&lt;/th&gt;</span>
+<span class="tag">&lt;th</span> <span class="attr">scope</span>=<span class="val">"row"</span><span class="tag">&gt;</span>সারি হেডার<span class="tag">&lt;/th&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <table>
+          <tr>
+            <th scope="col">নাম</th>
+            <th scope="col">বয়স</th>
+            <th scope="col">শহর</th>
+          </tr>
+          <tr>
+            <th scope="row">রহিম</th>
+            <td>২৮</td>
+            <td>ঢাকা</td>
+          </tr>
+          <tr>
+            <th scope="row">করিম</th>
+            <td>৩২</td>
+            <td>চট্টগ্রাম</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>scope মান</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>col</code></td><td>কলামের হেডার</td></tr>
+        <tr><td><code>row</code></td><td>সারির হেডার</td></tr>
+        <tr><td><code>colgroup</code></td><td>একাধিক কলামের গ্রুপ হেডার</td></tr>
+        <tr><td><code>rowgroup</code></td><td>একাধিক সারির গ্রুপ হেডার</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৫: CSS স্টাইলিং -->
+  <section class="ict-topic">
+    <h2>🎨 CSS দিয়ে টেবিল ডিজাইন</h2>
+
+    <h3>🔹 border-collapse</h3>
+    <p>ডিফল্টভাবে টেবিলের সেলের বর্ডার আলাদা থাকে (ডাবল দেখায়)। <code>border-collapse: collapse;</code> দিলে একক বর্ডার হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  table {
+    border-collapse: collapse;  <span class="cmt">/* একক বর্ডার */</span>
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <h3>🔹 জেব্রা স্ট্রাইপিং</h3>
+    <p>সারিগুলো এক-এক করে আলাদা রঙে দেখালে পড়তে সহজ হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  tbody tr:nth-child(even) {
+    background: #f8fafc;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <h3>🔹 হোভার ইফেক্ট</h3>
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  tbody tr:hover {
+    background: #e0e7ff;
+    cursor: pointer;
+  }
+<span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <h3>🔹 সম্পূর্ণ স্টাইলড টেবিল</h3>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো (হোভার করুন)</span>
+      <div class="inner">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>আইডি</th>
+              <th>নাম</th>
+              <th>পদবি</th>
+              <th>বেতন</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>১০১</td><td>রহিম</td><td>ম্যানেজার</td><td>৫০,০০০</td></tr>
+            <tr><td>১০২</td><td>করিম</td><td>ডেভেলপার</td><td>৪০,০০০</td></tr>
+            <tr><td>১০৩</td><td>সুমন</td><td>ডিজাইনার</td><td>৩৫,০০০</td></tr>
+            <tr><td>১০৪</td><td>নাসরিন</td><td>এইচআর</td><td>৪৫,০০০</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৬: প্রাইসিং টেবিল -->
+  <section class="ict-topic">
+    <h2>💰 প্রাইসিং টেবিলের উদাহরণ</h2>
+    <p>প্রাইসিং টেবিলে কলাম হাইলাইট করে জনপ্রিয় প্ল্যান দেখানো হয়:</p>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট</span>
+      <div class="inner">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>ফিচার</th>
+              <th>বেসিক</th>
+              <th class="pop">প্রিমিয়াম ⭐</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>মূল্য</td>
+              <td class="price">৳৯৯</td>
+              <td class="pop price">৳২৯৯</td>
+            </tr>
+            <tr>
+              <td>স্টোরেজ</td>
+              <td>১০ জিবি</td>
+              <td>আনলিমিটেড</td>
+            </tr>
+            <tr>
+              <td>সাপোর্ট</td>
+              <td>ইমেইল</td>
+              <td>২৪/৭ ফোন</td>
+            </tr>
+            <tr>
+              <td>ডোমেইন</td>
+              <td>❌</td>
+              <td>✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 টিপস:</strong>
+      একটি কলাম হাইলাইট করতে সেই কলামের প্রতিটি সেলে একটি ক্লাস (যেমন <code>.pop</code>) দিন এবং CSS দিয়ে ব্যাকগ্রাউন্ড সেট করুন।
+    </div>
+  </section>
+
+  <!-- টপিক ৭: রেসপন্সিভ টেবিল -->
+  <section class="ict-topic">
+    <h2>📱 রেসপন্সিভ টেবিল</h2>
+    <p>মোবাইলে বড় টেবিল স্ক্রিনের বাইরে চলে যায়। সমাধান — একটি wrapper-এ <code>overflow-x: auto</code> দিন:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;style&gt;</span>
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  .table-wrapper table {
+    min-width: 600px;  <span class="cmt">/* মোবাইলেও টেবিলের ন্যূনতম প্রস্থ */</span>
+  }
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="val">"table-wrapper"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;table&gt;</span>...<span class="tag">&lt;/table&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ আউটপুট — মোবাইলে ডানে-বামে স্ক্রল করুন</span>
+      <div class="inner" style="overflow-x:auto;">
+        <table style="min-width:600px;">
+          <thead>
+            <tr>
+              <th>পণ্য</th>
+              <th>ব্র্যান্ড</th>
+              <th>দাম</th>
+              <th>স্টক</th>
+              <th>রেটিং</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>স্মার্টফোন</td><td>Samsung</td><td>৳২৫,০০০</td><td>৫০</td><td>⭐⭐⭐⭐</td></tr>
+            <tr><td>ল্যাপটপ</td><td>HP</td><td>৳৭৫,০০০</td><td>২০</td><td>⭐⭐⭐⭐⭐</td></tr>
+            <tr><td>ট্যাবলেট</td><td>Lenovo</td><td>৳৩৫,০০০</td><td>১৫</td><td>⭐⭐⭐</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৮: সাধারণ ভুল -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>&lt;td&gt;</code> ট্যাগ <code>&lt;tr&gt;</code>-এর বাইরে রাখা</li>
+        <li>❌ টেবিল লেআউটের জন্য ব্যবহার (বর্তমানে CSS Flexbox/Grid ভালো)</li>
+        <li>❌ colspan/rowspan-এর মান ভুল দেওয়া — টেবিল ভেঙে যায়</li>
+        <li>❌ <code>&lt;th&gt;</code> ব্যবহার না করে <code>&lt;td&gt;</code>-কেই হেডার বানানো</li>
+        <li>❌ মোবাইল রেসপন্সিভ না করা — টেবিল স্ক্রিনের বাইরে যায়</li>
+        <li>❌ <code>scope</code> না দেওয়া — অ্যাক্সেসিবিলিটি কমে</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>বেসিক ট্যাগ:</strong> <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
+        <li><strong>সেকশন:</strong> <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;caption&gt;</code></li>
+        <li><strong>colspan:</strong> একাধিক কলাম জোড়া</li>
+        <li><strong>rowspan:</strong> একাধিক সারি জোড়া</li>
+        <li><strong>scope:</strong> অ্যাক্সেসিবিলিটির জন্য</li>
+        <li><strong>CSS:</strong> border-collapse, striping, hover</li>
+        <li><strong>রেসপন্সিভ:</strong> wrapper + overflow-x</li>
+        <li><strong>প্রাইসিং টেবিল:</strong> কলাম হাইলাইট</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

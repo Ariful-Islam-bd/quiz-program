@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মডিউল ০৯: ফর্ম</title>
+<style>
+:root{
+  --primary:#6366f1; --secondary:#8b5cf6;
+  --success:#10b981; --danger:#ef4444;
+  --warning:#f59e0b; --bg:#f8fafc;
+  --dark:#1e293b; --border:#e2e8f0;
+  --text:#334155; --muted:#64748b;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI','Noto Sans Bengali',sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.8;
+}
+
+/* ট্যাব বার */
+.tab-bar{
+  position:sticky; top:0; z-index:100;
+  display:flex; gap:8px;
+  overflow-x:auto; white-space:nowrap;
+  padding:12px 16px; background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  scrollbar-width:thin;
+}
+.tab-bar::-webkit-scrollbar{height:5px;}
+.tab-bar::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+.tab-bar a{
+  flex:0 0 auto; padding:8px 16px; border-radius:30px;
+  font-size:.88rem; font-weight:600; text-decoration:none;
+  color:var(--muted); background:#f1f5f9;
+  transition:.25s; border:1px solid transparent;
+}
+.tab-bar a:hover{background:#e0e7ff;color:var(--primary);}
+.tab-bar a.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff; border-color:transparent;
+  box-shadow:0 4px 12px rgba(99,102,241,.35);
+}
+
+/* কনটেইনার */
+.ict-container {max-width:900px;margin:0 auto;padding:30px 20px 60px;}
+
+/* হেডার */
+.module-header{
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:#fff; border-radius:20px;
+  padding:36px 30px; margin-bottom:30px;
+  position:relative; overflow:hidden;
+}
+.module-header::after{
+  content:'📝'; position:absolute;
+  right:20px; bottom:-10px; font-size:6rem; opacity:.15;
+}
+.module-header .tag{
+  display:inline-block; background:rgba(255,255,255,.2);
+  padding:4px 14px; border-radius:20px;
+  font-size:.8rem; font-weight:600; margin-bottom:12px;
+}
+.module-header h1{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:10px;}
+.module-header p{opacity:.95;font-size:1rem;}
+
+/* টপিক */
+.ict-topic {
+  background:#fff; border-radius:16px;
+  padding:26px 24px; margin-bottom:26px;
+  border:1px solid var(--border);
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.topic h2{
+  font-size:clamp(1.15rem,3vw,1.4rem);
+  color:var(--dark); margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:3px solid #e0e7ff;
+  display:flex; align-items:center; gap:10px;
+}
+.topic h3{
+  font-size:1.05rem; color:var(--primary);
+  margin:20px 0 10px;
+}
+.topic p{margin-bottom:12px;}
+.topic ul,.topic ol{margin:10px 0 14px 24px;}
+.topic li{margin-bottom:8px;}
+
+/* কোড ব্লক */
+.code-block{
+  background:#1e293b; color:#e2e8f0;
+  padding: 36px 20px 20px 20px; /* উপরে বেশি প্যাডিং, যাতে লেবেল ঠিক জায়গায় বসে */
+  border-radius:12px;
+  font-family:'Courier New',monospace;
+  font-size:.85rem; 
+  line-height:1.7;
+  margin:20px 0; 
+  overflow-x:auto;
+  border-left:5px solid var(--primary);
+  position:relative;
+  white-space:pre; /* কোড ভাঙা রোধ করে */
+}
+
+.code-block::before{
+  content:'HTML';
+  position:absolute; 
+  top: 10px;       /* বক্সের ভেতরে উপরে বসানো হলো */
+  right: 14px;
+  background:var(--primary); color:#fff;
+  padding: 2px 10px; 
+  border-radius: 6px;
+  font-size:.7rem; 
+  font-family:'Segoe UI',sans-serif;
+  letter-spacing:1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.code-block .tag{color:#f472b6;}
+.code-block .attr{color:#fbbf24;}
+.code-block .val{color:#34d399;}
+.code-block .cmt{color:#94a3b8;font-style:italic;}
+
+/* লাইভ ডেমো */
+.live-demo{
+  background:#f1f5f9; border:2px dashed var(--primary);
+  border-radius:12px; padding:20px; margin:14px 0;
+}
+.live-demo .label{
+  display:inline-block; background:var(--success); color:#fff;
+  padding:2px 12px; border-radius:12px;
+  font-size:.75rem; font-weight:600;
+  margin-bottom:12px;
+}
+.live-demo .inner{
+  background:#fff; border-radius:8px;
+  padding:20px;
+}
+
+/* ফর্ম এলিমেন্ট */
+.form-group{
+  margin-bottom:16px;
+}
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+  color:var(--dark);
+  font-size:.92rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:10px 14px;
+  border:2px solid var(--border);
+  border-radius:8px;
+  font-size:.95rem;
+  font-family:inherit;
+  background:#fff;
+  transition:.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(99,102,241,.15);
+}
+.form-group input:invalid:not(:placeholder-shown){
+  border-color:var(--danger);
+}
+
+.btn{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  border:none;
+  padding:12px 26px;
+  border-radius:8px;
+  font-size:.95rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s;
+  font-family:inherit;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(99,102,241,.35);
+}
+.btn-secondary{
+  background:#e2e8f0; color:var(--dark);
+}
+.btn-secondary:hover{background:#cbd5e1;box-shadow:none;}
+
+/* চেকবক্স ও রেডিও */
+.checkbox-group,
+.radio-group{
+  display:flex; flex-wrap:wrap; gap:16px;
+  margin:8px 0;
+}
+.check-item,
+.radio-item{
+  display:flex; align-items:center; gap:8px;
+  cursor:pointer;
+  font-size:.92rem;
+}
+.check-item input,
+.radio-item input{
+  width:18px; height:18px;
+  accent-color:var(--primary);
+  cursor:pointer;
+}
+
+/* নোট বক্স */
+.note,.warning,.ict-success-box {
+  border-radius:12px; padding:16px 20px;
+  margin:16px 0; border-left:5px solid;
+}
+.ict-note {background:#fef3c7;border-color:var(--warning);}
+.ict-warning {background:#fee2e2;border-color:var(--danger);}
+.ict-success-box {background:#d1fae5;border-color:var(--success);}
+.note strong,.warning strong,.success-box strong{display:block;margin-bottom:6px;}
+
+/* টেবিল */
+.cmp-table{
+  width:100%; border-collapse:collapse;
+  margin:14px 0; font-size:.9rem;
+  border-radius:10px; overflow:hidden;
+}
+.cmp-table th{
+  background:var(--primary); color:#fff;
+  padding:12px; text-align:left;
+}
+.cmp-table td{
+  padding:10px 12px; border-bottom:1px solid var(--border);
+}
+.cmp-table tr:nth-child(even){background:#f8fafc;}
+.cmp-table code{
+  background:#f1f5f9; color:var(--danger);
+  padding:2px 6px; border-radius:4px;
+  font-size:.85em;
+}
+
+/* input টাইপ গ্রিড */
+.type-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px; margin:14px 0;
+}
+.type-card{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px 14px;
+}
+.type-card code{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:2px 8px;
+  border-radius:5px;
+  font-size:.72rem;
+  margin-bottom:6px;
+}
+.type-card p{
+  font-size:.82rem;
+  color:var(--muted);
+  margin:0;
+}
+
+/* fieldset */
+.fieldset-demo{
+  border:2px solid var(--primary);
+  border-radius:10px;
+  padding:16px 20px;
+  margin:10px 0;
+}
+.fieldset-demo legend{
+  padding:0 10px;
+  font-weight:700;
+  color:var(--primary);
+  font-size:.92rem;
+}
+
+/* নেভিগেশন */
+.nav-footer{
+  display:flex; justify-content:space-between;
+  gap:12px; margin-top:36px; flex-wrap:wrap;
+}
+.nav-btn{
+  flex:1; min-width:140px;
+  text-decoration:none; text-align:center;
+  padding:14px 20px; border-radius:12px;
+  font-weight:600; font-size:.9rem;
+  transition:.25s;
+}
+.nav-prev{background:#e2e8f0;color:var(--muted);}
+.nav-prev:hover{background:#cbd5e1;color:var(--dark);}
+.nav-next{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+}
+.nav-next:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(99,102,241,.4);}
+
+@media(max-width:600px){
+  body {padding: 0; line-height: 1.5;}
+  .ict-container {padding:15px 2px 40px; width: 100%;}
+  .module-header{padding:26px 20px;}
+  .ict-topic {padding:15px 10px; margin-bottom: 15px; border-radius: 8px;}
+  .ict-topic p, 
+  .ict-topic ul, 
+  .ict-topic ol {padding-left: 25px; font-size: 0.88rem; line-height: 1.6; }
+  .editors {grid-template-columns: 1fr !important; gap: 10px; }
+  .editor-card {padding: 12px; }
+  .ict-step { padding: 12px 10px; gap: 10px; }
+  .ict-step-num { flex: 0 0 32px; height: 32px; width: 32px; font-size: 0.9rem; }
+  .live-demo { padding: 8px; margin: 10px 0; }
+  .code-block{padding: 30px 10px 15px 10px; font-size: 0.75rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- tab-bar removed: injected dynamically by academia.js -->
+
+<main class="ict-container" data-html-module="09-forms">
+
+  <div class="module-header">
+    <span class="tag">মডিউল ০৯</span>
+    <h1>📝 ফর্ম (Forms)</h1>
+    <p>ইনপুট টাইপ, লেবেল, সিলেক্ট, ভ্যালিডেশন ও প্রফেশনাল ফর্ম ডিজাইন — সবকিছু লাইভ ডেমো সহ।</p>
+  </div>
+
+  <!-- টপিক ১ -->
+  <section class="ict-topic">
+    <h2>🔰 ফর্মের মৌলিক গঠন</h2>
+    <p>HTML ফর্ম ব্যবহারকারীর কাছ থেকে ডেটা সংগ্রহ করে। মূল ট্যাগ <code>&lt;form&gt;</code>, এর ভেতরে <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code> ইত্যাদি থাকে।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="val">"/submit"</span> <span class="attr">method</span>=<span class="val">"POST"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="val">"name"</span><span class="tag">&gt;</span>নাম:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">id</span>=<span class="val">"name"</span> <span class="attr">name</span>=<span class="val">"name"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="val">"submit"</span><span class="tag">&gt;</span>জমা দিন<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+    </div>
+
+    <h3>⚙️ form ট্যাগের গুরুত্বপূর্ণ অ্যাট্রিবিউট</h3>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>অ্যাট্রিবিউট</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>action</code></td><td>ডেটা কোথায় পাঠাবে</td><td><code>action="/submit"</code></td></tr>
+        <tr><td><code>method</code></td><td>GET বা POST</td><td><code>method="POST"</code></td></tr>
+        <tr><td><code>target</code></td><td>রেসপন্স কোথায় দেখাবে</td><td><code>target="_blank"</code></td></tr>
+        <tr><td><code>autocomplete</code></td><td>অটোকমপ্লিট</td><td><code>autocomplete="off"</code></td></tr>
+        <tr><td><code>novalidate</code></td><td>ভ্যালিডেশন বন্ধ</td><td><code>novalidate</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ২ -->
+  <section class="ict-topic">
+    <h2>⌨️ ইনপুট টাইপসমূহ</h2>
+    <p><code>&lt;input&gt;</code> ট্যাগের <code>type</code> অ্যাট্রিবিউট দিয়ে বিভিন্ন ধরনের ফিল্ড তৈরি করা যায়:</p>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <code>text</code>
+        <p>সাধারণ টেক্সট</p>
+      </div>
+      <div class="type-card">
+        <code>email</code>
+        <p>ইমেইল (ভ্যালিডেশন সহ)</p>
+      </div>
+      <div class="type-card">
+        <code>password</code>
+        <p>পাসওয়ার্ড (লুকানো)</p>
+      </div>
+      <div class="type-card">
+        <code>number</code>
+        <p>সংখ্যা (তীর দিয়ে বাড়ানো)</p>
+      </div>
+      <div class="type-card">
+        <code>tel</code>
+        <p>ফোন নম্বর</p>
+      </div>
+      <div class="type-card">
+        <code>date</code>
+        <p>তারিখ (ক্যালেন্ডার)</p>
+      </div>
+      <div class="type-card">
+        <code>time</code>
+        <p>সময়</p>
+      </div>
+      <div class="type-card">
+        <code>checkbox</code>
+        <p>একাধিক নির্বাচন</p>
+      </div>
+      <div class="type-card">
+        <code>radio</code>
+        <p>একটি নির্বাচন</p>
+      </div>
+      <div class="type-card">
+        <code>file</code>
+        <p>ফাইল আপলোড</p>
+      </div>
+      <div class="type-card">
+        <code>color</code>
+        <p>কালার পিকার</p>
+      </div>
+      <div class="type-card">
+        <code>range</code>
+        <p>স্লাইডার</p>
+      </div>
+      <div class="type-card">
+        <code>url</code>
+        <p>ওয়েব ঠিকানা</p>
+      </div>
+      <div class="type-card">
+        <code>search</code>
+        <p>সার্চ বক্স</p>
+      </div>
+      <div class="type-card">
+        <code>hidden</code>
+        <p>লুকানো ডেটা</p>
+      </div>
+      <div class="type-card">
+        <code>submit</code>
+        <p>সাবমিট বাটন</p>
+      </div>
+    </div>
+
+    <h3>🔹 লাইভ ডেমো</h3>
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ইনপুট ফিল্ড</span>
+      <div class="inner">
+        <div class="form-group">
+          <label>টেক্সট</label>
+          <input type="text" placeholder="আপনার নাম">
+        </div>
+        <div class="form-group">
+          <label>ইমেইল</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>পাসওয়ার্ড</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <div class="form-group">
+          <label>সংখ্যা</label>
+          <input type="number" min="1" max="100" value="18">
+        </div>
+        <div class="form-group">
+          <label>তারিখ</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>কালার</label>
+          <input type="color" value="#6366f1" style="height:44px;padding:4px;">
+        </div>
+        <div class="form-group">
+          <label>রেঞ্জ</label>
+          <input type="range" min="0" max="100" value="50">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৩ -->
+  <section class="ict-topic">
+    <h2>🏷️ label ও for</h2>
+    <p>প্রতিটি ইনপুটের সাথে <code>&lt;label&gt;</code> যুক্ত করা উচিত। <code>for</code> অ্যাট্রিবিউট ও ইনপুটের <code>id</code> মিলিয়ে দিলে লেবেলে ক্লিক করলেও ইনপুট ফোকাস হয়।</p>
+
+    <div class="code-block">
+<span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="val">"username"</span><span class="tag">&gt;</span>ইউজারনেম:<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">id</span>=<span class="val">"username"</span><span class="tag">&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <div class="form-group">
+          <label for="demo-user">👤 ইউজারনেম (এখানে ক্লিক করুন):</label>
+          <input type="text" id="demo-user" placeholder="ইনপুটে ফোকাস যাবে">
+        </div>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 অ্যাক্সেসিবিলিটি:</strong>
+      <code>&lt;label&gt;</code> স্ক্রিন রিডার ব্যবহারকারীদের জানায় ইনপুটটি কীসের জন্য। লেবেল ছাড়া ফর্ম অ্যাক্সেসিবল নয়।
+    </div>
+  </section>
+
+  <!-- টপিক ৪ -->
+  <section class="ict-topic">
+    <h2>✅ checkbox ও radio</h2>
+
+    <h3>🔹 checkbox — একাধিক নির্বাচন</h3>
+    <div class="code-block">
+<span class="tag">&lt;label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="attr">name</span>=<span class="val">"hobby"</span> <span class="attr">value</span>=<span class="val">"reading"</span><span class="tag">&gt;</span>
+  পড়া
+<span class="tag">&lt;/label&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <p style="margin-bottom:10px;font-weight:600;color:var(--dark);">আপনার শখ:</p>
+        <div class="checkbox-group">
+          <label class="check-item"><input type="checkbox" checked> পড়া</label>
+          <label class="check-item"><input type="checkbox"> খেলা</label>
+          <label class="check-item"><input type="checkbox"> গান</label>
+          <label class="check-item"><input type="checkbox"> ছবি আঁকা</label>
+        </div>
+      </div>
+    </div>
+
+    <h3>🔹 radio — একটি নির্বাচন</h3>
+    <p>একই <code>name</code> দেওয়া radio-গুলোর মধ্যে শুধু একটি নির্বাচন করা যায়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"radio"</span> <span class="attr">name</span>=<span class="val">"gender"</span> <span class="attr">value</span>=<span class="val">"male"</span><span class="tag">&gt;</span>
+  পুরুষ
+<span class="tag">&lt;/label&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <p style="margin-bottom:10px;font-weight:600;color:var(--dark);">লিঙ্গ:</p>
+        <div class="radio-group">
+          <label class="radio-item"><input type="radio" name="gender-demo" value="male" checked> পুরুষ</label>
+          <label class="radio-item"><input type="radio" name="gender-demo" value="female"> মহিলা</label>
+          <label class="radio-item"><input type="radio" name="gender-demo" value="other"> অন্যান্য</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৫ -->
+  <section class="ict-topic">
+    <h2>📋 select ও option</h2>
+    <p>ড্রপডাউন তালিকা তৈরি করতে <code>&lt;select&gt;</code> ও প্রতিটি অপশনের জন্য <code>&lt;option&gt;</code> ব্যবহার করা হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;select</span> <span class="attr">name</span>=<span class="val">"country"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="val">"bd"</span><span class="tag">&gt;</span>বাংলাদেশ<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="val">"in"</span> <span class="attr">selected</span><span class="tag">&gt;</span>পাকিস্তান<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="val">"pk"</span> <span class="attr">disabled</span><span class="tag">&gt;</span>ভারত<span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <div class="form-group">
+          <label>দেশ নির্বাচন করুন:</label>
+          <select>
+            <option selected>বাংলাদেশ</option>
+            <option>পাকিস্তান</option>
+            <option>নেপাল</option>
+            <option>ভুটান</option>
+            <option disabled>ভারত (নিষ্ক্রিয়)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>অ্যাট্রিবিউট</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>selected</code></td><td>ডিফল্ট নির্বাচিত অপশন</td></tr>
+        <tr><td><code>disabled</code></td><td>অপশন নিষ্ক্রিয়</td></tr>
+        <tr><td><code>multiple</code></td><td>একাধিক নির্বাচন (select-এ)</td></tr>
+        <tr><td><code>size</code></td><td>কতটি অপশন একসাথে দেখাবে</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- টপিক ৬ -->
+  <section class="ict-topic">
+    <h2>📄 textarea</h2>
+    <p>বহু-লাইন টেক্সট লেখার জন্য <code>&lt;textarea&gt;</code> ব্যবহার করা হয়:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;textarea</span> <span class="attr">rows</span>=<span class="val">"4"</span> <span class="attr">cols</span>=<span class="val">"50"</span> <span class="attr">placeholder</span>=<span class="val">"আপনার মন্তব্য..."</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/textarea&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <div class="form-group">
+          <label>আপনার মন্তব্য:</label>
+          <textarea rows="4" placeholder="এখানে লিখুন..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 মনে রাখবেন:</strong>
+      <code>&lt;textarea&gt;</code>-এর Closing ট্যাগ লাগে (Void ট্যাগ নয়)। একাধিক লাইন লেখা যায়।
+    </div>
+  </section>
+
+  <!-- টপিক ৭ -->
+  <section class="ict-topic">
+    <h2>🔘 বাটনের প্রকারভেদ</h2>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>টাইপ</th><th>কাজ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>type="submit"</code></td><td>ফর্ম জমা দেয়</td></tr>
+        <tr><td><code>type="reset"</code></td><td>ফর্ম রিসেট করে</td></tr>
+        <tr><td><code>type="button"</code></td><td>সাধারণ বাটন (JS দিয়ে কাজ)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <button class="btn" type="submit">✅ সাবমিট</button>
+        <button class="btn btn-secondary" type="reset" style="margin-left:8px;">🔄 রিসেট</button>
+        <button class="btn btn-secondary" type="button" style="margin-left:8px;" disabled>❌ ডিজেবলড</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৮ -->
+  <section class="ict-topic">
+    <h2>🗂️ fieldset ও legend</h2>
+    <p>সংশ্লিষ্ট ফিল্ডগুলোকে একটি গ্রুপে বাঁধতে <code>&lt;fieldset&gt;</code> ব্যবহার করা হয়, আর গ্রুপের শিরোনাম হয় <code>&lt;legend&gt;</code>:</p>
+
+    <div class="code-block">
+<span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;</span>ব্যক্তিগত তথ্য<span class="tag">&lt;/legend&gt;</span>
+
+  <span class="tag">&lt;label&gt;</span>নাম: <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"text"</span><span class="tag">&gt;&lt;/label&gt;</span>
+  <span class="tag">&lt;label&gt;</span>ইমেইল: <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"email"</span><span class="tag">&gt;&lt;/label&gt;</span>
+<span class="tag">&lt;/fieldset&gt;</span>
+    </div>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <fieldset class="fieldset-demo">
+          <legend>👤 ব্যক্তিগত তথ্য</legend>
+          <div class="form-group">
+            <label>নাম</label>
+            <input type="text" placeholder="আপনার নাম">
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label>ইমেইল</label>
+            <input type="email" placeholder="you@example.com">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ৯ -->
+  <section class="ict-topic">
+    <h2>✅ HTML5 ভ্যালিডেশন</h2>
+    <p>জাভাস্ক্রিপ্ট ছাড়াই ব্রাউজার নিজেই ফর্ম যাচাই করতে পারে:</p>
+
+    <table class="cmp-table">
+      <thead>
+        <tr><th>অ্যাট্রিবিউট</th><th>কাজ</th><th>উদাহরণ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>required</code></td><td>ফিল্ড আবশ্যক</td><td><code>required</code></td></tr>
+        <tr><td><code>minlength</code></td><td>ন্যূনতম অক্ষর</td><td><code>minlength="3"</code></td></tr>
+        <tr><td><code>maxlength</code></td><td>সর্বোচ্চ অক্ষর</td><td><code>maxlength="20"</code></td></tr>
+        <tr><td><code>min / max</code></td><td>সংখ্যার সীমা</td><td><code>min="1" max="100"</code></td></tr>
+        <tr><td><code>pattern</code></td><td>রেগুলার এক্সপ্রেশন</td><td><code>pattern="[0-9]{11}"</code></td></tr>
+        <tr><td><code>placeholder</code></td><td>সাহায্যকারী লেখা</td><td><code>placeholder="নাম লিখুন"</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো (ভুল ইনপুট দিলে লাল বর্ডার)</span>
+      <div class="inner">
+        <div class="form-group">
+          <label>ইমেইল (আবশ্যক):</label>
+          <input type="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>বয়স (১৮–৬০):</label>
+          <input type="number" min="18" max="60" placeholder="১৮ থেকে ৬০">
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label>মোবাইল (১১ ডিজিট):</label>
+          <input type="text" pattern="[0-9]{11}" placeholder="01XXXXXXXXX">
+        </div>
+      </div>
+    </div>
+
+    <div class="ict-note">
+      <strong>💡 কীভাবে কাজ করে?</strong>
+      ইনপুট ভুল হলে ব্রাউজার নিজেই সাবমিট আটকে দেয় এবং একটি বার্তা দেখায়। <code>:invalid</code> সিউডো-ক্লাস দিয়ে CSS দিয়েও স্টাইল করা যায়।
+    </div>
+  </section>
+
+  <!-- টপিক ১০: সম্পূর্ণ উদাহরণ -->
+  <section class="ict-topic">
+    <h2>🎯 সম্পূর্ণ রেজিস্ট্রেশন ফর্ম</h2>
+    <p>এখন পর্যন্ত শেখা সবকিছু একসাথে ব্যবহার করে একটি রেজিস্ট্রেশন ফর্ম:</p>
+
+    <div class="live-demo">
+      <span class="label">✅ লাইভ ডেমো</span>
+      <div class="inner">
+        <form onsubmit="event.preventDefault(); alert('ফর্ম সাবমিট হয়েছে!');">
+          <fieldset class="fieldset-demo">
+            <legend>📝 নতুন অ্যাকাউন্ট</legend>
+
+            <div class="form-group">
+              <label for="reg-name">👤 পূর্ণ নাম *</label>
+              <input type="text" id="reg-name" placeholder="রহিম উদ্দিন" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-email">📧 ইমেইল *</label>
+              <input type="email" id="reg-email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-pass">🔒 পাসওয়ার্ড *</label>
+              <input type="password" id="reg-pass" placeholder="কমপক্ষে ৬ অক্ষর" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-dob">🎂 জন্ম তারিখ</label>
+              <input type="date" id="reg-dob">
+            </div>
+
+            <div class="form-group">
+              <label>🚻 লিঙ্গ</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="reg-gender" checked> পুরুষ</label>
+                <label class="radio-item"><input type="radio" name="reg-gender"> মহিলা</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-country">🌍 দেশ</label>
+              <select id="reg-country">
+                <option selected>বাংলাদেশ</option>
+                <option>পাকিস্তান</option>
+                <option>নেপাল</option>
+                <option>ভুটান</option>
+                <option disabled>ভারত (নিষ্ক্রিয়)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>🎯 আগ্রহ (একাধিক)</label>
+              <div class="checkbox-group">
+                <label class="check-item"><input type="checkbox"> HTML</label>
+                <label class="check-item"><input type="checkbox"> CSS</label>
+                <label class="check-item"><input type="checkbox"> JavaScript</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-bio">📝 নিজের সম্পর্কে</label>
+              <textarea id="reg-bio" rows="3" placeholder="সংক্ষিপ্ত বর্ণনা..."></textarea>
+            </div>
+
+            <div style="margin-top:16px;">
+              <button type="submit" class="btn" style="width:100%;">✅ রেজিস্ট্রেশন করুন</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- টপিক ১১ -->
+  <section class="ict-topic">
+    <h2>⚠️ সাধারণ ভুল</h2>
+    <div class="ict-warning">
+      <strong>সতর্ক থাকুন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li>❌ <code>&lt;label&gt;</code> না দেওয়া — অ্যাক্সেসিবিলিটি নষ্ট</li>
+        <li>❌ <code>for</code> ও <code>id</code>-এর মান না মেলানো</li>
+        <li>❌ একই <code>name</code> না দেওয়া radio-গুলোতে — একাধিক সিলেক্ট হয়ে যায়</li>
+        <li>❌ <code>type</code> না দেওয়া — ডিফল্ট <code>text</code> হয়, কিন্তু ভুল ধরনের ডেটা আসে</li>
+        <li>❌ <code>required</code> না দেওয়া — খালি ফর্ম সাবমিট হয়ে যায়</li>
+        <li>❌ <code>placeholder</code>-কে label হিসেবে ব্যবহার (ভুল)</li>
+        <li>❌ পাসওয়ার্ডে <code>type="text"</code> ব্যবহার — পাসওয়ার্ড দেখা যায়</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- সারসংক্ষেপ -->
+  <section class="ict-topic">
+    <h2>📝 সারসংক্ষেপ</h2>
+    <div class="ict-success-box">
+      <strong>✅ এই মডিউলে যা শিখলেন:</strong>
+      <ul style="margin:10px 0 0 20px;">
+        <li><strong>form ট্যাগ:</strong> <code>action</code>, <code>method</code></li>
+        <li><strong>ইনপুট টাইপ:</strong> text, email, password, number, date, color, range, file, checkbox, radio</li>
+        <li><strong>label:</strong> <code>for</code> + <code>id</code> জোড়া</li>
+        <li><strong>select + option:</strong> ড্রপডাউন</li>
+        <li><strong>textarea:</strong> বহু-লাইন টেক্সট</li>
+        <li><strong>button:</strong> submit, reset, button</li>
+        <li><strong>fieldset + legend:</strong> ফিল্ড গ্রুপ</li>
+        <li><strong>ভ্যালিডেশন:</strong> required, min, max, pattern, minlength</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- nav-footer removed: prev/next handled by tab-bar -->
+
+</main>
+
+</body>
+</html>

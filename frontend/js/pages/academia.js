@@ -206,7 +206,28 @@ const CHAPTER_DATA = {
         type: 'flat',
         chapters: [
             { id: 'ict-ch1', number: 1, name: 'বিশ্ব ও বাংলাদেশ প্রেক্ষিত', icon: '🌍', topics: [{ id: 'ict-ch1-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] },
-            { id: 'ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি', icon: '🔢', topics: [{ id: 'ict-ch3-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] }
+            { id: 'ict-ch3', number: 3, name: 'সংখ্যা পদ্ধতি', icon: '🔢', topics: [{ id: 'ict-ch3-q', name: 'সকল প্রশ্ন', icon: '📝', type: 'quiz' }] },
+            {
+                id: 'ict-ch4',
+                number: 4,
+                name: 'ওয়েব ডিজাইন ও HTML',
+                icon: '🌐',
+                topics: [
+                    { id: 'HSC-ICT-Ch4-01-Introduction', name: '০১. HTML পরিচিতি', icon: '📖', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-02-SetupTools', name: '০২. সেটআপ ও টুলস', icon: '🛠️', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-03-TagsElements', name: '০৩. ট্যাগ ও এলিমেন্ট', icon: '🏷️', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-04-TextHeadings', name: '০৪. টেক্সট ও হেডিং', icon: '📝', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-05-Links', name: '০৫. লিংক', icon: '🔗', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-06-Images', name: '০৬. ইমেজ', icon: '🖼️', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-07-Lists', name: '০৭. লিস্ট', icon: '📋', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-08-Tables', name: '০৮. টেবিল', icon: '📊', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-09-Forms', name: '০৯. ফর্ম', icon: '📝', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-10-Semantic', name: '১০. সিম্যান্টিক', icon: '🧱', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-11-Flexbox', name: '১১. Flexbox', icon: '⚡', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-12-ProjectCalendar', name: '১২. প্রজেক্ট', icon: '📅', type: 'note' },
+                    { id: 'HSC-ICT-Ch4-13-Cheatsheet', name: '১৩. চিটশিট', icon: '📌', type: 'note' }
+                ]
+            }            
         ]
     },
 
@@ -758,6 +779,63 @@ export class AcademiaPage {
         `;
 
         this.attachBreadcrumbEvents(container);
+
+        // ═══════════════════════════════════════════════════════
+        // 🆕 ICT HTML Lesson: inject module tab-bar for 13 modules
+        // ═══════════════════════════════════════════════════════
+        const ICT_HTML_TOPICS = [
+            { id: 'HSC-ICT-Ch4-01-Introduction', name: '১. পরিচিতি' },
+            { id: 'HSC-ICT-Ch4-02-SetupTools', name: '২. সেটআপ' },
+            { id: 'HSC-ICT-Ch4-03-TagsElements', name: '৩. ট্যাগ' },
+            { id: 'HSC-ICT-Ch4-04-TextHeadings', name: '৪. টেক্সট' },
+            { id: 'HSC-ICT-Ch4-05-Links', name: '৫. লিংক' },
+            { id: 'HSC-ICT-Ch4-06-Images', name: '৬. ইমেজ' },
+            { id: 'HSC-ICT-Ch4-07-Lists', name: '৭. লিস্ট' },
+            { id: 'HSC-ICT-Ch4-08-Tables', name: '৮. টেবিল' },
+            { id: 'HSC-ICT-Ch4-09-Forms', name: '৯. ফর্ম' },
+            { id: 'HSC-ICT-Ch4-10-Semantic', name: '১০. সিম্যান্টিক' },
+            { id: 'HSC-ICT-Ch4-11-Flexbox', name: '১১. Flexbox' },
+            { id: 'HSC-ICT-Ch4-12-ProjectCalendar', name: '১২. প্রজেক্ট' },
+            { id: 'HSC-ICT-Ch4-13-Cheatsheet', name: '১৩. চিটশিট' }
+        ];
+
+        if (ICT_HTML_TOPICS.some(t => t.id === topicId)) {
+            const contentViewer = container.querySelector('.content-viewer');
+            if (contentViewer) {
+                const tabbar = document.createElement('div');
+                tabbar.className = 'ict-html-tabbar';
+                tabbar.innerHTML = ICT_HTML_TOPICS.map(t => `
+                    <button class="ict-html-tab ${t.id === topicId ? 'active' : ''}" data-target="${t.id}">
+                        ${t.name}
+                    </button>
+                `).join('');
+                contentViewer.parentNode.insertBefore(tabbar, contentViewer);
+
+                // Click handler for tab navigation
+                tabbar.querySelectorAll('.ict-html-tab').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetTopic = btn.dataset.target;
+                        if (targetTopic === topicId) return;
+
+                        // Push history for back navigation
+                        this.history.push({
+                            type: 'topics',
+                            subjectId: this.currentSubject,
+                            publisherId: this.currentPublisher,
+                            paperId: this.currentPaper
+                        });
+
+                        this.renderContent(container, targetTopic);
+                    });
+                });
+            }
+
+            // নতুন লাইন: ডাইনামিকালি ট্যাববারের নিচের কন্টেইনারে ক্লাস অ্যাড করা
+            const contentBody = container.querySelector('#contentBody');
+            if (contentBody) {
+                contentBody.classList.add('ict-content-body');
+            }
+        }
 
         const reloadBtn = container.querySelector('#reloadContentBtn');
         if (reloadBtn) {
